@@ -4,6 +4,7 @@
    ========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Quicksand:wght@500;600;700;800&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/lxgwwenkai-regular.css');
+@import url('header.css');   /* header + chân trang chung, tách riêng để học liệu dựng riêng dùng lại được */
 
 :root{
   --brand:#0b5a2a; --brand-soft:#eaf8ef; --gold:#e2ad28; --red:#b31916;
@@ -18,109 +19,6 @@
 body{margin:0;background:var(--surface-2);color:var(--ink);font-family:var(--font-ui);font-weight:600}
 .hanzi{font-family:var(--font-cn);font-weight:700}
 a{color:var(--brand)}
-
-/* ================= HEADER CHUNG =================
-   Phần 1: băng rôn (giữ nguyên thiết kế gốc của cô)
-   Phần 2: thanh menu bên dưới (dính trên đầu khi cuộn) */
-.sh-banner{background:linear-gradient(135deg,#eaf8ef 0%,#b9e0c6 55%,#f0c766 100%);position:relative;overflow:hidden}
-.sh-banner::before{content:'';position:absolute;inset:0;pointer-events:none;
-  background-image:radial-gradient(circle at 12% 45%,rgba(255,255,255,.28) 0%,transparent 42%),radial-gradient(circle at 88% 55%,rgba(240,199,102,.18) 0%,transparent 45%)}
-.header-top{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;padding:14px 48px 16px;gap:22px;min-height:126px}
-.logo-block{display:flex;align-items:center;gap:16px;flex-shrink:0;text-decoration:none}
-.logo-img-wrap{width:118px;height:118px;border-radius:50%;border:3px solid #0b5a2a;box-shadow:0 0 0 4px #e2ad28,0 5px 18px rgba(0,0,0,.25);overflow:hidden;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.logo-img-wrap img{width:100%;height:100%;object-fit:contain}
-.logo-text{display:flex;flex-direction:column;align-items:center;gap:5px}
-.logo-chinese{font-family:'Noto Serif SC',serif;font-size:32px;font-weight:700;color:#0b5a2a;letter-spacing:5px;line-height:1.1;text-shadow:0 2px 0 rgba(255,255,255,.75)}
-.logo-divider{display:flex;align-items:center;gap:5px;width:100%}
-.logo-divider-line{height:1.5px;flex:1;background:linear-gradient(90deg,transparent,#0b5a2a,transparent)}
-.logo-divider-dot{width:5px;height:5px;border-radius:50%;background:#b31916}
-.logo-viet{font-size:13px;font-weight:800;color:#b31916;letter-spacing:3.5px;text-transform:uppercase}
-.slogan-block{flex:1;text-align:center;padding:0 12px}
-.slogan-wrap{display:flex;align-items:center;justify-content:center;gap:14px;white-space:nowrap}
-.slogan-deco{color:#b31916;font-size:18px}.slogan-deco.flip{display:inline-block;transform:scaleX(-1)}
-.slogan-main{font-family:'Noto Serif SC',serif;font-size:20px;font-weight:700;color:#0b5a2a;letter-spacing:3px;text-shadow:0 2px 0 rgba(255,255,255,.7)}
-.slogan-line{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:10px}
-.slogan-line-bar{height:1.5px;width:58px;background:linear-gradient(90deg,transparent,#b31916,transparent)}
-.slogan-line-dot{width:5px;height:5px;border-radius:50%;background:#b31916}
-.slogan-teacher{margin-top:10px;display:flex;align-items:center;justify-content:center;gap:10px}
-.teacher-badge{font-size:13px;font-weight:700;color:#4d3b19;letter-spacing:1px;white-space:nowrap}
-.teacher-name{font-size:14px;font-weight:800;color:#b31916;letter-spacing:1.5px;white-space:nowrap}
-.teacher-sep{width:1px;height:14px;background:rgba(11,90,42,.55)}
-.contact-block{display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0}
-.contact-btn{display:flex;align-items:center;gap:9px;padding:8px 16px;border-radius:24px;text-decoration:none;font-size:13px;font-weight:800;min-width:175px;border:1.5px solid rgba(255,255,255,.55);box-shadow:0 3px 10px rgba(0,0,0,.16)}
-.btn-zalo{background:#0068ff;color:#fff}.btn-facebook{background:#1877f2;color:#fff}
-.btn-icon{width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;flex-shrink:0}
-.btn-label{display:flex;flex-direction:column;line-height:1.3}.btn-label small{font-size:10px;opacity:.9;font-weight:600}
-
-/* ----- Thanh menu ----- */
-.sh-nav-bar{position:relative;background:#0b5a2a;box-shadow:0 4px 14px rgba(18,84,51,.22)}
-.sh-nav-bar::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:3px;background:linear-gradient(90deg,#e2ad28,#f0c766,#e2ad28)}
-.sh-nav{max-width:1180px;margin:0 auto;padding:0 16px;display:flex;justify-content:center;align-items:center;gap:6px;min-height:50px}
-.sh-link{display:flex;align-items:center;gap:5px;padding:9px 18px;border-radius:999px;color:#eaf8ef;text-decoration:none;font-weight:800;font-size:15px;
-  white-space:nowrap;border:0;background:none;cursor:pointer;font-family:inherit;letter-spacing:.3px;transition:.15s}
-.sh-link:hover{background:rgba(255,255,255,.12);color:#fff}
-.sh-link.active{background:#e2ad28;color:#3b2a00}
-.sh-caret{font-size:9px;opacity:.8}
-.sh-drop{position:relative}
-.sh-menu{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%) translateY(6px);min-width:260px;background:#fff;
-  border:1px solid var(--line);border-top:4px solid #e2ad28;border-radius:14px;box-shadow:var(--shadow);padding:8px;opacity:0;visibility:hidden;transition:.15s}
-.sh-menu::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
-.sh-drop:hover .sh-menu,.sh-drop.open .sh-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
-.sh-menu a{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:700;font-size:14.5px}
-.sh-menu a:hover,.sh-menu a.active{background:var(--brand-soft);color:var(--brand)}
-.sh-ico{width:30px;height:30px;border-radius:50%;background:var(--surface-2);border:1px solid var(--line);display:grid;place-items:center;font-size:15px;flex-shrink:0}
-.sh-burger{display:none;width:100%;padding:12px;border:0;background:none;color:#fff;font-family:inherit;font-weight:800;font-size:15px;cursor:pointer;letter-spacing:.5px}
-
-@media (max-width:850px){
-  .header-top{padding:14px 18px;flex-wrap:wrap;justify-content:center}
-  .contact-block{flex-direction:row;align-items:center}
-  .logo-img-wrap{width:104px;height:104px}
-}
-@media (max-width:600px){
-  .header-top{gap:12px;min-height:0}
-  .logo-img-wrap{width:84px;height:84px}
-  .logo-chinese{font-size:26px;letter-spacing:4px}
-  .logo-viet{font-size:11px;letter-spacing:2.5px}
-  .slogan-main{font-size:16px;letter-spacing:2px}.slogan-wrap{gap:8px}
-  .contact-btn{min-width:0;padding:7px 12px}
-  .sh-burger{display:block}
-  .sh-nav{display:none;flex-direction:column;align-items:stretch;gap:2px;padding:0 12px 12px}
-  .sh-nav.open{display:flex}
-  .sh-link{border-radius:10px;justify-content:space-between}
-  .sh-menu{position:static;transform:none;opacity:1;visibility:visible;display:none;min-width:0;margin:4px 0 6px;border-top-width:3px}
-  .sh-drop.open .sh-menu{display:block;transform:none}
-}
-
-/* ----- Header luôn hiện khi cuộn ----- */
-.sh-header{position:sticky;top:0;z-index:1000}
-.header-top,.logo-img-wrap,.logo-chinese,.logo-viet,.slogan-main,.contact-btn{transition:all .25s ease}
-.slogan-line,.slogan-teacher{transition:all .25s ease;max-height:40px;overflow:hidden}
-.sh-compact .header-top{min-height:0;padding-top:6px;padding-bottom:6px}
-.sh-compact .logo-img-wrap{width:52px;height:52px;border-width:2px;box-shadow:0 0 0 2px #e2ad28,0 2px 8px rgba(0,0,0,.2)}
-.sh-compact .logo-chinese{font-size:22px;letter-spacing:3px}
-.sh-compact .logo-divider{display:none}
-.sh-compact .logo-viet{font-size:10.5px;letter-spacing:2.5px}
-.sh-compact .logo-text{gap:2px}
-.sh-compact .slogan-main{font-size:16px}
-.sh-compact .slogan-line,.sh-compact .slogan-teacher{max-height:0;margin-top:0;opacity:0}
-.sh-compact .contact-block{flex-direction:row;align-items:center}
-.sh-compact .contact-btn{min-width:0;padding:5px 12px}
-.sh-compact .btn-label small{display:none}
-.sh-compact .btn-icon{width:22px;height:22px}
-.sh-compact .sh-nav{min-height:42px}
-.sh-compact .sh-link{padding:7px 16px}
-@media (max-width:850px){
-  .sh-compact .header-top{flex-wrap:nowrap;justify-content:space-between;padding:6px 14px}
-  .sh-compact .slogan-block{display:none}
-  .sh-compact .contact-btn .btn-label{display:none}
-  .sh-compact .contact-btn{padding:5px}
-}
-@media (max-width:600px){
-  .sh-compact .logo-img-wrap{width:44px;height:44px}
-  .sh-compact .logo-chinese{font-size:19px}
-  .sh-compact .sh-burger{padding:8px}
-  .sh-header .sh-nav.open{max-height:65vh;overflow-y:auto}
-}
 
 /* =========================================================
    KHỐI DÙNG CHUNG CHO CÁC TRANG
@@ -327,56 +225,6 @@ body::after{content:"";position:fixed;left:50%;top:56%;width:min(72vw,560px);asp
 .gf h3{margin-bottom:18px}
 
 
-
-/* =========================================================
-   THANH CUỐI TRANG (luôn hiện) + BẢNG ỦNG HỘ TRÀ SỮA
-   ========================================================= */
-body.co-sf{padding-bottom:54px}
-.sf-end{text-align:center;font-size:12.5px;font-weight:700;color:var(--muted);padding:22px 16px 14px}
-.sf{position:fixed;left:0;right:0;bottom:0;z-index:1000;background:#0b5a2a;box-shadow:0 -4px 14px rgba(18,84,51,.22)}
-.sf::before{content:"";position:absolute;left:0;right:0;top:-3px;height:3px;background:linear-gradient(90deg,#e2ad28,#f0c766,#e2ad28)}
-.sf-in{max-width:1180px;margin:0 auto;padding:0 16px;height:48px;display:flex;align-items:center;gap:14px}
-.sf-brand{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0}
-.sf-brand img{width:34px;height:34px;border-radius:50%;background:#fff;border:2px solid #fff;box-shadow:0 0 0 2px #e2ad28}
-.sf-name{display:flex;flex-direction:column;line-height:1.05}
-.sf-name b{font-family:var(--font-cn);font-weight:700;color:#fff;font-size:16px;letter-spacing:2px}
-.sf-name small{font-size:9.5px;font-weight:800;color:#f0c766;letter-spacing:1.8px;text-transform:uppercase}
-.sf-tea{flex:1;min-width:0;display:flex;align-items:center;justify-content:center;gap:10px;border:0;background:none;cursor:pointer;
-  color:#eaf8ef;font:inherit;font-size:14.5px;font-weight:700;padding:6px 8px;border-radius:999px;transition:.15s}
-.sf-tea:hover{background:rgba(255,255,255,.08)}
-.sf-tea:hover .sf-tea-txt{color:#fff;text-decoration:underline;text-decoration-color:#f0c766;text-underline-offset:4px}
-.sf-tea-txt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.sf-ngan{display:none}
-.sf-orn{color:#f0c766;font-size:15px}.sf-orn.lat{display:inline-block;transform:scaleX(-1)}
-.sf-cup{width:30px;height:30px;border-radius:50%;background:#f0c766;display:grid;place-items:center;font-size:17px;flex-shrink:0;
-  box-shadow:0 0 0 3px rgba(240,199,102,.25);animation:sf-lac 3.5s ease-in-out infinite}
-@keyframes sf-lac{0%,86%,100%{transform:rotate(0)}90%{transform:rotate(-12deg)}95%{transform:rotate(10deg)}}
-.sf-social{display:flex;gap:7px;flex-shrink:0}
-.sf-ic{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:#f0c766;text-decoration:none;font-weight:900;font-size:13.5px;border:1.5px solid rgba(240,199,102,.7)}
-.sf-ic:hover{background:#f0c766;color:#0b5a2a}
-@media(max-width:900px){.sf-dai{display:none}.sf-ngan{display:inline}}
-@media(max-width:560px){.sf-name,.sf-orn{display:none}.sf-tea{font-size:14px;gap:8px}.sf-in{gap:10px}}
-@media (prefers-reduced-motion:reduce){.sf-cup{animation:none}}
-
-.sf-pop{position:fixed;inset:0;z-index:3000;background:rgba(10,30,18,.6);display:none;align-items:center;justify-content:center;padding:16px;overflow-y:auto}
-.sf-pop.on{display:flex}
-.sf-pop-in{position:relative;width:100%;max-width:380px;margin:auto;background:#fff;border-radius:22px;padding:22px 22px 18px;text-align:center;
-  border-top:5px solid var(--gold);box-shadow:0 24px 60px rgba(0,0,0,.3)}
-.sf-pop-x{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;border:0;background:var(--surface-2);color:var(--muted);cursor:pointer}
-.sf-pop-ico{font-size:34px;line-height:1}
-.sf-pop-loi{margin:8px 0 12px;color:#0b5a2a;font-weight:800;font-size:15.5px;line-height:1.5}
-.sf-pop-qr{width:min(230px,70vw);border-radius:14px;border:2px solid #0b5a2a;box-shadow:0 0 0 4px #e2ad28;padding:6px;background:#fff}
-.sf-bank{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 10px;margin:14px 0 10px;font-size:14px;font-weight:700;color:#4d3b19}
-.sf-bank b{color:#0b5a2a}
-.sf-pop-btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:8px}
-.sf-dl{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:999px;background:#fff;border:1.5px solid #0b5a2a;color:#0b5a2a;
-  font:inherit;font-size:13px;font-weight:800;cursor:pointer;text-decoration:none}
-.sf-dl:hover{background:#0b5a2a;color:#fff}
-.sf-pop-in small{display:block;color:var(--muted);font-size:12px;font-weight:600;line-height:1.5}
-.sf-pop-cam{margin-top:10px;color:var(--red);font-weight:800;font-size:14px}
-@media(max-width:560px){.sf-orn.lat{display:none}.sf-tea-txt{white-space:normal;line-height:1.25;font-size:13.5px;text-align:center}}
-.sf-xngan{display:none}
-@media(max-width:560px){.sf-ngan{display:none}.sf-xngan{display:inline}.sf-tea-txt{white-space:nowrap;font-size:14px}}
 
 /* ----- Ảnh trong cảm nhận ----- */
 .gf-anh{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:-4px 0 14px}
