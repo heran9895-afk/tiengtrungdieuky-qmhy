@@ -22,13 +22,15 @@
 
   var MENU = [
     { ten: 'Trang chủ', link: 'index.html' },
+    // Mục nào chưa có trang: để "sapCo: true" (menu hiện mờ "Sắp có", mọi nút/thẻ trỏ tới mục đó trên web tự khoá lại).
+    // Có trang rồi: xoá "sapCo: true" là mở ở mọi nơi. "mota" là dòng mô tả hiện trên thẻ ở trang Thư viện và trang chủ.
     { ten: 'Thư viện', link: 'thu-vien/', con: [
-      { ten: 'Kho từ vựng 9 cấp',       link: 'thu-vien/tu-vung/',   ico: '📚' },
-      { ten: 'Luyện từ vựng',           link: 'thu-vien/tu-vung/luyen-tap/', ico: '🧠' },
-      { ten: 'Tiếng Trung theo chủ đề', link: 'thu-vien/chu-de/',    ico: '🗂️' },
-      { ten: 'Phân biệt từ',            link: 'thu-vien/phan-biet/', ico: '⚖️' },
-      { ten: 'Sách hay',                link: 'thu-vien/sach-hay/',  ico: '📖' },
-      { ten: 'Chơi vui, học thật',      link: 'thu-vien/tro-choi/',  ico: '🎮' }
+      { ten: 'Kho từ vựng 9 cấp',       link: 'thu-vien/tu-vung/',   ico: '📚', mota: 'Toàn bộ từ vựng HSK 3.0: tra cứu, nghe phát âm, xem thẻ lật.' },
+      { ten: 'Luyện từ vựng',           link: 'thu-vien/tu-vung/luyen-tap/', ico: '🧠', mota: 'Nghe chọn từ, chọn pinyin, ghép cặp, điền từ, sắp xếp câu theo từng cấp.' },
+      { ten: 'Tiếng Trung theo chủ đề', link: 'thu-vien/chu-de/',    ico: '🗂️', mota: 'Từ vựng và mẫu câu cho từng tình huống trong đời sống, công việc.', sapCo: true },
+      { ten: 'Phân biệt từ',            link: 'thu-vien/phan-biet/', ico: '⚖️', mota: 'Gỡ rối những cặp từ dễ nhầm, có ví dụ và bài luyện kèm theo.', sapCo: true },
+      { ten: 'Sách hay',                link: 'thu-vien/sach-hay/',  ico: '📖', mota: 'Những cuốn sách cô chọn lọc giới thiệu, giúp học tiếng Trung hiệu quả hơn.', sapCo: true },
+      { ten: 'Chơi vui, học thật',      link: 'thu-vien/tro-choi/',  ico: '🎮', mota: 'Trò chơi ôn từ vựng, vừa giải trí vừa nhớ bài lâu hơn.', sapCo: true }
     ]},
     // Cấp nào chưa có bài: để "sapCo: true" (hiện mờ, chữ "Sắp có"). Có bài rồi: xoá "sapCo: true" là mở.
     { ten: 'Chương trình HSK 3.0', link: 'chuong-trinh-hsk/', con: [
@@ -121,6 +123,18 @@
       '</span>' +
     '</div></footer>';
   document.body.insertAdjacentHTML('beforeend', footer);
+
+  // Mọi nút / thẻ trên trang trỏ tới mục còn "Sắp có" thì tự khoá lại (không bấm vào trang 404)
+  var SAP_CO = {};
+  MENU.forEach(function (m) { (m.con || []).forEach(function (c) { if (c.sapCo) SAP_CO[(ROOT + c.link).replace(/index\.html$/, '')] = 1; }); });
+  document.querySelectorAll('a[href]').forEach(function (a) {
+    if (!SAP_CO[a.href.split('#')[0].split('?')[0].replace(/index\.html$/, '')]) return;
+    a.removeAttribute('href'); a.classList.add('sap-co'); a.setAttribute('aria-disabled', 'true'); a.title = 'Sắp có';
+    var go = a.querySelector('.go');
+    if (go) go.textContent = 'Sắp có';
+    else if (a.classList.contains('card')) a.insertAdjacentHTML('beforeend', '<span class="go">Sắp có</span>');
+    else a.insertAdjacentHTML('beforeend', ' <small>(Sắp có)</small>');
+  });
   document.body.classList.add('co-sf');
 
   // Bảng ủng hộ (bấm nút trà sữa mới hiện)

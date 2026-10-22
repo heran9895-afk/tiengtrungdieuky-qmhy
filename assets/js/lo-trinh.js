@@ -1,4 +1,23 @@
 /* =========================================================
+   MỤC LỤC DỰNG TỪ MENU — Tiếng Trung Diệu Kỳ
+   1) Thẻ các mục Thư viện vào chỗ có <div id="ds-thu-vien"></div> (trang chủ, trang Thư viện).
+   2) Lộ trình HSK 3.0 (bên dưới) vào chỗ có <div id="lo-trinh-hsk"></div>.
+   Danh sách, mô tả và trạng thái "Sắp có" lấy từ MENU trong assets/js/header.js: sửa một chỗ, mọi trang tự cập nhật.
+   ========================================================= */
+(function () {
+  var hop = document.getElementById('ds-thu-vien');
+  if (!hop || !window.QM_MENU) return;
+  var src = document.currentScript.src, ROOT = src.substring(0, src.indexOf('assets/js/lo-trinh.js'));
+  var tv = window.QM_MENU.filter(function (m) { return m.link === 'thu-vien/'; })[0];
+  function esc(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  hop.innerHTML = '<div class="grid g3">' + tv.con.map(function (c) {
+    var ben = '<div class="ico-big">' + c.ico + '</div><h3>' + esc(c.ten) + '</h3><p>' + esc(c.mota) + '</p>';
+    return c.sapCo ? '<div class="card sap-co" aria-disabled="true">' + ben + '<span class="go">Sắp có</span></div>'
+      : '<a class="card" href="' + ROOT + c.link + '">' + ben + '<span class="go">Vào xem →</span></a>';
+  }).join('') + '</div>';
+})();
+
+/* =========================================================
    LỘ TRÌNH HSK 3.0 — Tiếng Trung Diệu Kỳ
    Dựng các ô Nhập môn, HSK 1 … HSK 7–9 vào chỗ có <div id="lo-trinh-hsk"></div>.
    Danh sách cấp và trạng thái "Sắp có" lấy từ MENU trong assets/js/header.js
