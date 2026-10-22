@@ -24,6 +24,7 @@
     { ten: 'Trang chủ', link: 'index.html' },
     { ten: 'Thư viện', link: 'thu-vien/', con: [
       { ten: 'Kho từ vựng 9 cấp',       link: 'thu-vien/tu-vung/',   ico: '📚' },
+      { ten: 'Luyện từ vựng',           link: 'thu-vien/tu-vung/luyen-tap/', ico: '🧠' },
       { ten: 'Tiếng Trung theo chủ đề', link: 'thu-vien/chu-de/',    ico: '🗂️' },
       { ten: 'Phân biệt từ',            link: 'thu-vien/phan-biet/', ico: '⚖️' },
       { ten: 'Sách hay',                link: 'thu-vien/sach-hay/',  ico: '📖' },
@@ -46,11 +47,16 @@
 
   // Đánh dấu mục đang mở
   var here = location.href.split('#')[0].split('?')[0].replace(/index\.html$/, '');
-  function dangO(link) {
+  function dangO(link, laCon) {
     var full = (ROOT + link).replace(/index\.html$/, '');
     if (link === 'index.html') return here === full;
-    return here.indexOf(full) === 0;
+    if (here.indexOf(full) !== 0) return false;
+    if (!laCon) return true;
+    // mục con: có mục con khác dài hơn cũng khớp (vd "Luyện từ vựng" nằm trong "Kho từ vựng") thì nhường cho mục đó
+    return !MENU.some(function (m) { return (m.con || []).some(function (c) {
+      var f = (ROOT + c.link).replace(/index\.html$/, ''); return f.length > full.length && here.indexOf(f) === 0 && f.indexOf(full) === 0; }); });
   }
+
 
   var navHTML = MENU.map(function (m) {
     if (!m.con) {
@@ -59,7 +65,7 @@
     var conHTML = m.con.map(function (c) {
       var ico = '<span class="sh-ico' + (c.ico.length > 2 ? ' nho' : '') + '">' + c.ico + '</span>';
       if (c.sapCo) return '<span class="sh-soon" aria-disabled="true">' + ico + c.ten + '<em class="sh-pill">Sắp có</em></span>';
-      return '<a href="' + ROOT + c.link + '"' + (dangO(c.link) ? ' class="active"' : '') + '>' + ico + c.ten + '</a>';
+      return '<a href="' + ROOT + c.link + '"' + (dangO(c.link, true) ? ' class="active"' : '') + '>' + ico + c.ten + '</a>';
     }).join('');
     return '<div class="sh-drop">' +
       '<button class="sh-link' + (dangO(m.link) ? ' active' : '') + '" type="button">' + m.ten + '<span class="sh-caret">▼</span></button>' +
