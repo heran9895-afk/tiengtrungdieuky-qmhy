@@ -336,7 +336,7 @@
       dap: function (w) { return [dA(w.ma, hanO(w), 1)].concat(dapAnNhieu(w, S.kho).map(function (x) { return dA(x.ma, hanO(x)); })); },
       giai: function (w) { return cauDayDu(cauDien(w), w); },
       anDeKhiXong: true },
-    ghep: { ten: 'Ghép cặp (Hán · pinyin · nghĩa)', ico: '🧩', nhom: 5 },
+    ghep: { ten: 'Ghép cặp', ico: '🧩', nhom: 5 },
     xep: { ten: 'Sắp xếp câu', ico: '🪜', dungDuoc: function (w) { return !!cauXep(w); } }
   };
   var DANG_DS = ['tron', 'chu', 'nghe', 'py', 'ghep', 'dien', 'xep'];
@@ -436,43 +436,51 @@
     hienNutTiep();
   }
 
-  // ---------- Ghép cặp 3 cột: Chữ Hán · Pinyin · Nghĩa — chọn mỗi cột một ô để ghép thành bộ ba của cùng một từ ----------
-  // (một lượt gồm 4–5 từ; chọn theo thứ tự nào cũng được; từ trùng pinyin / trùng nghĩa chính vẫn tính đúng)
-  var COT = ['han', 'py', 'ng'];
+  // ---------- Ghép cặp 2 cột: mỗi lượt 4–5 từ, ngẫu nhiên một trong 3 kiểu, lượt sau không lặp kiểu lượt trước ----------
+  // Chạm một ô bên trái rồi một ô bên phải (thứ tự nào cũng được). Từ trùng pinyin / trùng nghĩa chính vẫn tính đúng.
+  var KIEU_GHEP = [
+    { trai: 'han', phai: 'ng', ten: 'Chữ Hán ↔ Nghĩa' },
+    { trai: 'han', phai: 'py', ten: 'Chữ Hán ↔ Pinyin' },
+    { trai: 'py',  phai: 'ng', ten: 'Pinyin ↔ Nghĩa' }
+  ];
+  var TEN_COT = { han: 'Chữ Hán', py: 'Pinyin', ng: 'Nghĩa' }, TEN_COT_NHO = { han: 'chữ Hán', py: 'pinyin', ng: 'nghĩa' };
+  var kieuGhepTruoc = -1;
+  function noiDungO(w, loai) { return loai === 'han' ? '<span class="hanzi">' + esc(w.han) + '</span>' : loai === 'py' ? esc(w.py) : esc(w.nghia); }
+  function giongNhau(a, b, loai) { return a === b || (loai === 'han' ? a.han === b.han : loai === 'py' ? pyGon(a.py) === pyGon(b.py) : nghiaGon(a) === nghiaGon(b)); }
   function veGhep() {
     var n = Math.min(DANG.ghep.nhom, B.hang.length - B.i);
     var ds = B.hang.slice(B.i, B.i + n);
-    B.ghep = { ds: ds, sai: {}, xong: 0, chon: {} };
-    function cot(loai, thuTu) {
-      return '<div class="lt-gh-cot ' + loai + '">' + thuTu.map(function (i) {
-        var w = ds[i], nd = loai === 'han' ? '<span class="hanzi">' + esc(w.han) + '</span>' : loai === 'py' ? esc(w.py) : esc(w.nghia);
-        return '<button type="button" class="lt-gh-o" data-cot="' + loai + '" data-i="' + i + '">' + nd + '</button>';
-      }).join('') + '</div>';
-    }
+    var chon = [0, 1, 2].filter(function (k) { return k !== kieuGhepTruoc; }), ki = chon[Math.floor(Math.random() * chon.length)];
+    kieuGhepTruoc = ki;
+    var K = KIEU_GHEP[ki];
+    B.ghep = { ds: ds, K: K, sai: {}, xong: 0, a: null, b: null };
     var stt = ds.map(function (_, i) { return i; });
-    khuBai.innerHTML = '<div class="lt-dau-bai"><span class="lt-dem">' + (S.dang === 'tron' ? '🔀 ' : '') + 'Ghép cặp · từ ' + (B.i + 1) + '–' + (B.i + n) + '/' + B.hang.length + '</span><span></span></div>' +
+    function cot(ben, loai, thuTu) {
+      return '<div class="lt-gh-cot ' + loai + '">' + thuTu.map(function (i) {
+        return '<button type="button" class="lt-gh-o" data-ben="' + ben + '" data-i="' + i + '">' + noiDungO(ds[i], loai) + '</button>'; }).join('') + '</div>';
+    }
+    khuBai.innerHTML = '<div class="lt-dau-bai"><span class="lt-dem">' + (S.dang === 'tron' ? '🔀 ' : '') + 'Ghép cặp · ' + K.ten + ' · từ ' + (B.i + 1) + '–' + (B.i + n) + '/' + B.hang.length + '</span><span></span></div>' +
       '<div class="lt-vach lt-vach-bai"><i class="thuoc" style="width:' + (B.i / B.hang.length * 100) + '%"></i></div>' +
-      '<p class="lt-hoi lt-hoi-ghep">Chọn ở mỗi cột một ô của cùng một từ: chữ Hán · pinyin · nghĩa</p>' +
-      '<div class="lt-ghep"><div class="lt-gh-nhan">Chữ Hán</div><div class="lt-gh-nhan">Pinyin</div><div class="lt-gh-nhan">Nghĩa</div>' +
-        cot('han', stt) + cot('py', tron(stt)) + cot('ng', tron(stt)) + '</div>' +
+      '<p class="lt-hoi lt-hoi-ghep">Chạm một ô <b>' + TEN_COT_NHO[K.trai] + '</b> rồi chạm ô <b>' + TEN_COT_NHO[K.phai] + '</b> tương ứng</p>' +
+      '<div class="lt-ghep k-' + K.trai + '-' + K.phai + '"><div class="lt-gh-nhan">' + TEN_COT[K.trai] + '</div><div class="lt-gh-nhan">' + TEN_COT[K.phai] + '</div>' +
+        cot('a', K.trai, stt) + cot('b', K.phai, tron(stt)) + '</div>' +
       '<div class="lt-nut-the lt-nut-tiep" hidden><button type="button" class="btn solid lt-tiep"></button></div>';
   }
   function chamGhep(nut) {
     var G = B.ghep; if (!G || nut.disabled) return;
-    var c = nut.dataset.cot;
-    if (G.chon[c] === nut) { nut.classList.remove('chon'); delete G.chon[c]; return; }   // chạm lại ô đang chọn: bỏ chọn
-    if (G.chon[c]) G.chon[c].classList.remove('chon');
-    G.chon[c] = nut; nut.classList.add('chon');
-    if (!COT.every(function (k) { return G.chon[k]; })) return;
-    var o3 = COT.map(function (k) { return G.chon[k]; }); G.chon = {};
-    o3.forEach(function (x) { x.classList.remove('chon'); });
-    var w = G.ds[+o3[0].dataset.i], wp = G.ds[+o3[1].dataset.i], wn = G.ds[+o3[2].dataset.i];
-    if (pyGon(wp.py) === pyGon(w.py) && nghiaGon(wn) === nghiaGon(w)) {
-      o3.forEach(function (x) { x.disabled = true; x.classList.add('dung'); });
+    var ben = nut.dataset.ben;
+    if (G[ben] === nut) { nut.classList.remove('chon'); G[ben] = null; return; }   // chạm lại ô đang chọn: bỏ chọn
+    if (G[ben]) G[ben].classList.remove('chon');
+    G[ben] = nut; nut.classList.add('chon');
+    if (!G.a || !G.b) return;
+    var a = G.a, b = G.b; G.a = G.b = null; a.classList.remove('chon'); b.classList.remove('chon');
+    var wa = G.ds[+a.dataset.i], wb = G.ds[+b.dataset.i];
+    if (giongNhau(wa, wb, G.K.phai) && giongNhau(wa, wb, G.K.trai)) {
+      a.disabled = b.disabled = true; a.classList.add('dung'); b.classList.add('dung');
       if (++G.xong === G.ds.length) xongGhep();
     } else {
-      G.sai[w.ma] = 1;
-      o3.forEach(function (x) { x.classList.add('sai'); setTimeout(function () { x.classList.remove('sai'); }, 650); });
+      G.sai[wa.ma] = 1;
+      [a, b].forEach(function (x) { x.classList.add('sai'); setTimeout(function () { x.classList.remove('sai'); }, 650); });
     }
   }
   function xongGhep() {

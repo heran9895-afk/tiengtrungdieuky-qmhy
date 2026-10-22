@@ -499,7 +499,9 @@ body::after{content:"";position:fixed;left:50%;top:56%;width:min(72vw,560px);asp
 .lt-dap.hv .lt-dap-o{font-size:15px;font-weight:800;letter-spacing:.4px;color:#7a5a12}
 .lt-hoi-ghep{text-align:center;margin:0 0 10px}
 .lt-ket.lt-hoi-ghep{font-size:15px}
-.lt-ghep{display:grid;grid-template-columns:.75fr 1fr 1.45fr;gap:4px 8px}
+.lt-ghep{display:grid;grid-template-columns:.8fr 1.2fr;gap:4px 10px}
+.lt-ghep.k-han-py{grid-template-columns:1fr 1fr}
+.lt-ghep.k-py-ng{grid-template-columns:.85fr 1.15fr}
 .lt-gh-nhan{text-align:center;font-size:11.5px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
 .lt-gh-cot{display:grid;gap:8px;align-content:start}
 .lt-gh-o{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:54px;border:1.5px solid var(--line-soft);background:#fff;border-radius:14px;padding:6px 8px;font:inherit;font-weight:700;font-size:14px;line-height:1.3;color:var(--ink);cursor:pointer;transition:.15s;text-align:center;min-width:0;word-break:break-word}
@@ -511,7 +513,7 @@ body::after{content:"";position:fixed;left:50%;top:56%;width:min(72vw,560px);asp
 .lt-gh-o.sai{border-color:var(--no);background:var(--no-bg);animation:lt-lac .35s}
 @keyframes lt-lac{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
 @media (prefers-reduced-motion:reduce){.lt-gh-o.sai{animation:none}}
-@media(max-width:600px){.lt-ghep{grid-template-columns:.7fr .95fr 1.35fr;gap:4px 6px}.lt-gh-cot{gap:6px}.lt-gh-o{min-height:50px;font-size:12.5px;padding:4px 5px;border-radius:12px}.lt-gh-cot.han .hanzi{font-size:20px}.lt-gh-cot.py .lt-gh-o{font-size:13px}.lt-dap.py .lt-dap-o{font-size:17px}}
+@media(max-width:600px){.lt-ghep{gap:4px 8px}.lt-gh-cot{gap:6px}.lt-gh-o{min-height:50px;font-size:12.5px;padding:4px 5px;border-radius:12px}.lt-gh-cot.han .hanzi{font-size:20px}.lt-gh-cot.py .lt-gh-o{font-size:13px}.lt-dap.py .lt-dap-o{font-size:17px}}
 .lt-de.xong .lt-de-nghe small{display:none}
 .lt-de.xong .lt-de-nghe .lt-nghe{width:44px;height:44px}.lt-de.xong .lt-de-nghe .lt-nghe svg{width:22px;height:22px}
 .lt-de.xong .lt-de-chu .hanzi{font-size:40px}
