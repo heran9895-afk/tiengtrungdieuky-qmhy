@@ -23,6 +23,7 @@
 
   window.QM_TIENDO = {
     hop: hop,
+    chiTiet: function (ma) { var t = D.tu[ma]; return t ? { h: t.h, d: t.d, s: t.s, t: t.t } : null; },   // số lần đúng/sai, lần cuối luyện
     trangThai: trangThai,
     // Ghi một lần trả lời. w: từ (cần .ma, .cap). dung: đúng/sai.
     ghi: function (w, dung) {

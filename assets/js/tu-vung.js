@@ -22,8 +22,17 @@
     '<p class="tv-mr-note" hidden>Mục <b>Mở rộng</b>: từ và cụm từ hay gặp nằm ngoài danh sách chuẩn HSK 3.0, không chia cấp. Phiên âm theo tài liệu của cô.</p>' +
     '<div class="tv-thanh"><input type="search" class="tv-tim" placeholder="Tìm trong cả 9 cấp: chữ Hán, pinyin, nghĩa, Hán Việt…"><span class="tv-dem"></span>' +
       '<a class="btn solid tv-luyen" href="' + ROOT + 'thu-vien/tu-vung/luyen-tap/">✍️ Luyện tập</a></div>' +
+    '<div class="tv-che-do" role="group" aria-label="Cách xem từ vựng"><button type="button" data-cd="luoi">▦ Danh sách</button><button type="button" data-cd="the">🃏 Thẻ lật</button></div>' +
     '<div class="tv-luoi"></div>';
   var luoi = el.querySelector('.tv-luoi'), dem = el.querySelector('.tv-dem'), tim = el.querySelector('.tv-tim'), nutLuyen = el.querySelector('.tv-luyen');
+  // Cách xem: danh sách thẻ nhỏ hoặc thẻ lật (flashcard) từng từ; nhớ lựa chọn trên máy
+  var cheDo = 'luoi';
+  try { if (localStorage.getItem('qm-tv-che-do') === 'the') cheDo = 'the'; } catch (e) {}
+  function datCheDo(c) {
+    cheDo = c; try { localStorage.setItem('qm-tv-che-do', c); } catch (e) {}
+    el.querySelectorAll('.tv-che-do button').forEach(function (b) { b.classList.toggle('on', b.dataset.cd === c); b.setAttribute('aria-pressed', b.dataset.cd === c); });
+    fc.thuTu = null; veLuoi();
+  }
   // Nút ⭐ từ khó (dùng chung bộ lưu tiến độ với trang luyện tập)
   function nutSao(w) {
     if (!TD) return '';
@@ -54,6 +63,8 @@
     dem.textContent = k ? hien.length + ' từ · cả 9 cấp' : hien.length + ' từ';
     if (!k && !ds.length) { luoi.innerHTML = '<div class="tv-trong">Cấp này đang được cô cập nhật, bạn quay lại sau nhé! 🌱</div>'; return; }
     if (!hien.length) { luoi.innerHTML = '<div class="tv-trong">Không tìm thấy từ nào phù hợp.</div>'; return; }
+    luoi.classList.toggle('tv-luoi-the', cheDo === 'the');
+    if (cheDo === 'the') { if (!them) fc.thuTu = null; return veThe(); }
     luoi.innerHTML = hien.slice(0, soHien).map(function (w, j) {
       return '<div class="tv-the" role="button" tabindex="0" data-i="' + j + '">' +
         nutLoa(w.han, false, w.doc) + (k ? '<span class="tv-the-cap">' + esc(tenCap(w.cap)) + '</span>' : '') +
@@ -62,7 +73,58 @@
         '<div class="tv-nghia">' + esc(w.nghia) + '</div></div>';
     }).join('') + (hien.length > soHien ? '<button type="button" class="tv-them">Xem thêm ' + Math.min(MOI_TRANG, hien.length - soHien) + ' từ (còn ' + (hien.length - soHien) + ')</button>' : '');
   }
-  luoi.addEventListener('click', function (e) { if (e.target.closest('.tv-them')) { soHien += MOI_TRANG; veLuoi(true); } });
+  luoi.addEventListener('click', function (e) {
+    var t = e.target;
+    if (t.closest('.tv-them')) { soHien += MOI_TRANG; veLuoi(true); return; }
+    if (t.closest('.tv-loa')) return;
+    var sao = t.closest('.tv-sao');
+    if (sao && TD) { var w = hien[fcViTri()]; TD.datKho(w, !TD.laKho(w.ma)); sao.outerHTML = nutSao(w); return; }
+    if (t.closest('.tv-fc-the') || t.closest('.tv-fc-lat')) return latThe();
+    if (t.closest('.tv-fc-truoc')) return chuyenThe(-1);
+    if (t.closest('.tv-fc-sau')) return chuyenThe(1);
+    if (t.closest('.tv-fc-tron')) { fc.tron = !fc.tron; fc.thuTu = null; return veThe(); }
+    if (t.closest('.tv-fc-ct')) return moTu(fcViTri());
+  });
+
+  // ---------- Thẻ lật (flashcard): mặt trước chữ Hán, mặt sau phiên âm + nghĩa; bấm thẻ lật qua lại ----------
+  var fc = { i: 0, thuTu: null, tron: false };
+  function fcViTri() { return fc.thuTu[fc.i]; }
+  function veThe() {
+    if (!fc.thuTu) {
+      fc.thuTu = hien.map(function (_, j) { return j; }); fc.i = 0;
+      if (fc.tron) for (var a = fc.thuTu.length - 1; a > 0; a--) { var b = Math.floor(Math.random() * (a + 1)), x = fc.thuTu[a]; fc.thuTu[a] = fc.thuTu[b]; fc.thuTu[b] = x; }
+    }
+    var w = hien[fcViTri()], n = fc.thuTu.length;
+    luoi.innerHTML = '<div class="tv-fc">' +
+      '<div class="tv-fc-dau"><span class="tv-fc-dem">Thẻ ' + (fc.i + 1) + ' / ' + n + (loc ? ' · ' + esc(tenCap(w.cap)) : '') + '</span>' +
+        '<button type="button" class="tv-fc-tron' + (fc.tron ? ' on' : '') + '" aria-pressed="' + fc.tron + '">🔀 Trộn thẻ</button>' + nutSao(w) + '</div>' +
+      '<div class="tv-fc-the" tabindex="0" role="button" aria-label="Lật thẻ"><div class="tv-fc-trong">' +
+        '<div class="tv-fc-mat truoc"><span class="hanzi tv-fc-han">' + esc(w.han) + '</span><small>Bấm vào thẻ để lật</small></div>' +
+        '<div class="tv-fc-mat sau"><div class="tv-fc-chu"><span class="hanzi">' + esc(w.han) + '</span>' + nutLoa(w.han, true, w.doc) + '</div>' +
+          '<div class="tv-fc-py">' + esc(w.py) + '</div><div class="tv-fc-nghia">' + esc(w.nghia) + '</div>' +
+          '<div class="tv-the-tag">' + (w.hv ? '<span class="tag gold">Hán Việt: ' + esc(w.hv) + '</span>' : '') + (w.loai ? '<span class="tag">' + esc(w.loai) + '</span>' : '') + '</div>' +
+          '<small>Bấm vào thẻ để lật lại</small></div>' +
+      '</div></div>' +
+      '<div class="tv-fc-nut"><button type="button" class="btn tv-fc-truoc"' + (fc.i ? '' : ' disabled') + '>‹ Trước</button>' +
+        '<button type="button" class="btn solid tv-fc-lat">Lật thẻ</button>' +
+        '<button type="button" class="btn tv-fc-sau"' + (fc.i < n - 1 ? '' : ' disabled') + '>Sau ›</button></div>' +
+      '<p class="tv-fc-phu"><button type="button" class="tv-fc-ct">Xem cụm từ, câu ví dụ, thuận bút ›</button></p>' +
+      '</div>';
+  }
+  function latThe() { var t = luoi.querySelector('.tv-fc-the'); if (t) t.classList.toggle('lat'); }
+  function chuyenThe(d) {
+    var j = fc.i + d; if (!fc.thuTu || j < 0 || j >= fc.thuTu.length) return;
+    fc.i = j; TV.dungDoc(); veThe();
+  }
+  // Bàn phím ở chế độ thẻ: Space lật · ← → chuyển thẻ (khi không mở bảng chi tiết, không gõ trong ô tìm)
+  document.addEventListener('keydown', function (e) {
+    if (cheDo !== 'the' || !luoi.querySelector('.tv-fc') || (hop && hop.classList.contains('on')) || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+    if (e.key === ' ') { e.preventDefault(); latThe(); }
+    else if (e.key === 'ArrowLeft') chuyenThe(-1);
+    else if (e.key === 'ArrowRight') chuyenThe(1);
+  });
+  el.querySelector('.tv-che-do').addEventListener('click', function (e) { var b = e.target.closest('button'); if (b && b.dataset.cd !== cheDo) datCheDo(b.dataset.cd); });
+  el.querySelectorAll('.tv-che-do button').forEach(function (b) { b.classList.toggle('on', b.dataset.cd === cheDo); b.setAttribute('aria-pressed', b.dataset.cd === cheDo); });
 
   function chonCap(c) {
     capDang = c;
