@@ -454,16 +454,14 @@
     kieuGhepTruoc = ki;
     var K = KIEU_GHEP[ki];
     B.ghep = { ds: ds, K: K, sai: {}, xong: 0, a: null, b: null };
-    var stt = ds.map(function (_, i) { return i; });
-    function cot(ben, loai, thuTu) {
-      return '<div class="lt-gh-cot ' + loai + '">' + thuTu.map(function (i) {
-        return '<button type="button" class="lt-gh-o" data-ben="' + ben + '" data-i="' + i + '">' + noiDungO(ds[i], loai) + '</button>'; }).join('') + '</div>';
-    }
+    // Một lưới duy nhất, xếp xen kẽ ô trái – ô phải theo từng hàng: hai ô cùng hàng luôn cao bằng nhau, tiêu đề thẳng cột với ô
+    var trai = ds.map(function (_, i) { return i; }), phai = tron(trai);
+    function o(ben, loai, i) { return '<button type="button" class="lt-gh-o ' + loai + '" data-ben="' + ben + '" data-i="' + i + '">' + noiDungO(ds[i], loai) + '</button>'; }
+    var hang = trai.map(function (i, r) { return o('a', K.trai, i) + o('b', K.phai, phai[r]); }).join('');
     khuBai.innerHTML = '<div class="lt-dau-bai"><span class="lt-dem">' + (S.dang === 'tron' ? '🔀 ' : '') + 'Ghép cặp · ' + K.ten + ' · từ ' + (B.i + 1) + '–' + (B.i + n) + '/' + B.hang.length + '</span><span></span></div>' +
       '<div class="lt-vach lt-vach-bai"><i class="thuoc" style="width:' + (B.i / B.hang.length * 100) + '%"></i></div>' +
-      '<p class="lt-hoi lt-hoi-ghep">Chạm một ô <b>' + TEN_COT_NHO[K.trai] + '</b> rồi chạm ô <b>' + TEN_COT_NHO[K.phai] + '</b> tương ứng</p>' +
-      '<div class="lt-ghep k-' + K.trai + '-' + K.phai + '"><div class="lt-gh-nhan">' + TEN_COT[K.trai] + '</div><div class="lt-gh-nhan">' + TEN_COT[K.phai] + '</div>' +
-        cot('a', K.trai, stt) + cot('b', K.phai, tron(stt)) + '</div>' +
+      '<p class="lt-hoi lt-hoi-ghep">Ghép mỗi <b>' + TEN_COT_NHO[K.trai] + '</b> với <b>' + TEN_COT_NHO[K.phai] + '</b> tương ứng</p>' +
+      '<div class="lt-ghep k-' + K.trai + '-' + K.phai + '"><div class="lt-gh-nhan ' + K.trai + '">' + TEN_COT[K.trai] + '</div><div class="lt-gh-nhan ' + K.phai + '">' + TEN_COT[K.phai] + '</div>' + hang + '</div>' +
       '<div class="lt-nut-the lt-nut-tiep" hidden><button type="button" class="btn solid lt-tiep"></button></div>';
   }
   function chamGhep(nut) {
@@ -477,6 +475,7 @@
     var wa = G.ds[+a.dataset.i], wb = G.ds[+b.dataset.i];
     if (giongNhau(wa, wb, G.K.phai) && giongNhau(wa, wb, G.K.trai)) {
       a.disabled = b.disabled = true; a.classList.add('dung'); b.classList.add('dung');
+      setTimeout(function () { a.classList.add('an'); b.classList.add('an'); }, 450);   // mờ đi nhưng giữ chỗ để ô khác không nhảy vị trí
       if (++G.xong === G.ds.length) xongGhep();
     } else {
       G.sai[wa.ma] = 1;
