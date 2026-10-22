@@ -116,9 +116,18 @@
     var l = e.target.closest('.tv-loa'); if (l) { e.stopPropagation(); doc(l.dataset.doc, l); }
   }, true);
 
+  // Máy có đọc được từ này không: file ghi âm thì luôn được; giọng máy thì cần giọng tiếng Trung
+  // (danh sách giọng chưa tải xong thì tạm coi là có, tránh chặn nhầm)
+  function coGiong(docThay) {
+    if (docThay && laFileAm(docThay)) return true;
+    if (!window.speechSynthesis) return false;
+    var v = speechSynthesis.getVoices();
+    return !v.length || v.some(function (x) { return /^(zh|cmn)/i.test(x.lang); });
+  }
+
   window.QM_TV = {
     ROOT: ROOT, CAP: CAP, tenCap: tenCap, taiCap: taiCap, taiTatCa: taiTatCa, KHO: KHO,
     esc: esc, boDau: boDau, doc: doc, dungDoc: dungDoc, baoLoi: baoLoi, nutLoa: nutLoa,
-    coNhiHoa: coNhiHoa, GHI_NHI: GHI_NHI
+    coNhiHoa: coNhiHoa, GHI_NHI: GHI_NHI, LOA: LOA, coGiong: coGiong
   };
 })();

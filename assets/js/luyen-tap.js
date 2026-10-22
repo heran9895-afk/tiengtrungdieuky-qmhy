@@ -125,17 +125,27 @@
       return;
     }
     var ds = tron(dsRieng || dsLuot());
+    var D = DANG[S.dang];
+    if (D.dungDuoc) {
+      var truoc = ds.length; ds = ds.filter(D.dungDuoc);
+      if (!ds.length) {
+        khuBai.innerHTML = '<div class="tv-trong">' + (S.dang === 'nghe' ? 'Máy này chưa có giọng đọc tiếng Trung nên chưa làm được dạng Nghe. Bạn thử mở bằng Chrome hoặc chọn dạng bài khác nhé.' : 'Các từ trong chặng này chưa có dữ liệu cho dạng bài này, bạn chọn dạng khác nhé.') + '</div>';
+        return;
+      }
+      if (ds.length < truoc) TV.baoLoi('Đã bỏ qua ' + (truoc - ds.length) + ' từ chưa có dữ liệu cho dạng bài này.');
+    }
     B = { goc: ds, hang: ds.slice(), i: 0, dung: 0, sai: 0, daSai: {}, lapLai: {}, kieu: [] };
     TV.dungDoc(); veCau();
   }
-  function kieuCau(i) {                                      // dạng của câu thứ i (trộn: chọn ngẫu nhiên, nhớ lại để không đổi khi vẽ lại)
+  function kieuCau(i) {                                      // dạng của câu thứ i (trộn: bốc theo tỉ lệ của tầng, nhớ lại để không đổi khi vẽ lại)
     if (S.dang !== 'tron') return S.dang;
-    return B.kieu[i] || (B.kieu[i] = ['the', 'nghia', 'chu'][Math.floor(Math.random() * 3)]);
+    return B.kieu[i] || (B.kieu[i] = boc(B.hang[i], i));
   }
   function veCau() {
     if (B.i >= B.hang.length) return veKetQua();
     var w = B.hang[B.i], k = kieuCau(B.i);
-    DANG[k].ve(w, k);
+    if (k === 'ghep') return veGhep();
+    if (DANG[k].ve) DANG[k].ve(w, k); else veTracNghiem(w, k);
   }
   function dauCau(w, k) {                                    // hàng trên của mỗi câu: tiến độ lượt + dạng + nút ⭐
     var tong = B.hang.length;
@@ -172,8 +182,59 @@
   }
 
   // ---------- Các dạng bài ----------
+  // Dạng trắc nghiệm khai báo theo một khuôn: de (đề) · hoi (câu hỏi) · dap (4 đáp án, đáp án đúng có dung:true) · giai (lời giải) · lop (kiểu ô đáp án)
+  // dungDuoc(w): từ này có đủ dữ liệu cho dạng bài không (thiếu thì dạng Trộn tự bỏ qua, dạng riêng tự lọc khỏi lượt)
+  var TONE = { 'ā': ['a', 1], 'á': ['a', 2], 'ǎ': ['a', 3], 'à': ['a', 4], 'ē': ['e', 1], 'é': ['e', 2], 'ě': ['e', 3], 'è': ['e', 4], 'ī': ['i', 1], 'í': ['i', 2], 'ǐ': ['i', 3], 'ì': ['i', 4],
+    'ō': ['o', 1], 'ó': ['o', 2], 'ǒ': ['o', 3], 'ò': ['o', 4], 'ū': ['u', 1], 'ú': ['u', 2], 'ǔ': ['u', 3], 'ù': ['u', 4], 'ǖ': ['ü', 1], 'ǘ': ['ü', 2], 'ǚ': ['ü', 3], 'ǜ': ['ü', 4],
+    'Ā': ['A', 1], 'Á': ['A', 2], 'Ǎ': ['A', 3], 'À': ['A', 4], 'Ē': ['E', 1], 'É': ['E', 2], 'Ě': ['E', 3], 'È': ['E', 4], 'Ō': ['O', 1], 'Ó': ['O', 2], 'Ǒ': ['O', 3], 'Ò': ['O', 4] };
+  var DAU = {};                                              // ngược lại: 'a3' -> 'ǎ'
+  Object.keys(TONE).forEach(function (k) { DAU[TONE[k][0] + TONE[k][1]] = k; });
+  function pyGon(py) { return String(py || '').toLowerCase().replace(/[\s·'’-]/g, ''); }
+  // Đổi thanh điệu: giữ nguyên âm, thay dấu thanh ở một âm tiết → ra các phương án "gần đúng" để luyện tai, luyện mắt
+  function bienThePy(py) {
+    var ch = Array.from(py), vt = [];
+    ch.forEach(function (c, i) { if (TONE[c]) vt.push(i); });
+    var kq = [], daCo = {}; daCo[py] = 1;
+    tron(vt).forEach(function (i) {
+      var goc = TONE[ch[i]];
+      tron([1, 2, 3, 4].filter(function (t) { return t !== goc[1]; })).forEach(function (t) {
+        var moi = ch.slice(); moi[i] = DAU[goc[0] + t] || ch[i];
+        var s = moi.join(''); if (!daCo[s]) { daCo[s] = 1; kq.push(s); }
+      });
+    });
+    // nhiều âm tiết: xen phương án đổi 2 âm tiết cho đa dạng
+    if (vt.length > 1) {
+      var m2 = ch.slice(); vt.slice(0, 2).forEach(function (i) { var g = TONE[ch[i]]; m2[i] = DAU[g[0] + (g[1] % 4 + 1)] || ch[i]; });
+      var s2 = m2.join(''); if (!daCo[s2]) kq.unshift(s2);
+    }
+    return kq;
+  }
+  function soChu(w) { return Array.from(w.han || '').length; }
+  // Đáp án nhiễu cho dạng Nghe: ưu tiên từ đọc gần giống (cùng phụ âm/vần, khác thanh); loại hẳn từ đọc y hệt (他/她/它 đều là tā)
+  function nhieuNghe(w) {
+    var goc = TV.boDau(w.py), dau = goc.slice(0, 2), pg = pyGon(w.py);
+    var hop = S.kho.filter(function (x) { return x.ma !== w.ma && x.han !== w.han && pyGon(x.py) !== pg && x.doc !== '-'; });
+    var gan = tron(hop.filter(function (x) { return TV.boDau(x.py) === goc || (TV.boDau(x.py).slice(0, 2) === dau && soChu(x) === soChu(w)); }));
+    var cungDo = tron(hop.filter(function (x) { return soChu(x) === soChu(w); }));
+    var chon = [], daCo = {};
+    gan.concat(cungDo, tron(hop)).some(function (x) { if (daCo[x.ma] || daCo[pyGon(x.py)]) return false; daCo[x.ma] = daCo[pyGon(x.py)] = 1; chon.push(x); return chon.length === 3; });
+    return chon;
+  }
+  function nhieuHV(w) {
+    var hv = String(w.hv).toUpperCase(), n = soChu(w);
+    var hop = S.kho.filter(function (x) { return x.hv && x.han !== w.han && String(x.hv).toUpperCase() !== hv; });
+    var chon = [], daCo = {}; daCo[hv] = 1;
+    tron(hop.filter(function (x) { return soChu(x) === n; })).concat(tron(hop)).some(function (x) {
+      var k = String(x.hv).toUpperCase(); if (daCo[k]) return false; daCo[k] = 1; chon.push(k); return chon.length === 3; });
+    return chon;
+  }
+  function coAm(w) { return w.doc !== '-' && TV.coGiong(w.doc); }
+  function nutNghe(w) { return '<button type="button" class="tv-loa lt-nghe" data-doc="' + esc(w.doc || w.han) + '" aria-label="Nghe lại">' + TV.LOA + '</button>'; }
+  var dA = function (k, html, dung) { return { k: k, html: html, dung: !!dung }; };   // một ô đáp án
+  var hanO = function (x) { return '<span class="lt-dap-chu hanzi">' + esc(x.han) + '</span><span class="lt-dap-py">' + esc(x.py) + '</span>'; };
+
   var DANG = {
-    tron:  { ten: 'Trộn 3 dạng', ico: '🔀' },
+    tron:  { ten: 'Trộn tất cả', ico: '🔀' },
     the: {
       ten: 'Flashcard', ico: '🃏',
       ve: function (w, k) {
@@ -202,45 +263,130 @@
         tiep();
       }
     },
-    nghia: { ten: 'Chọn nghĩa', ico: '📝', ve: function (w, k) { veTracNghiem(w, k); } },
-    chu:   { ten: 'Chọn chữ Hán', ico: '✍️', ve: function (w, k) { veTracNghiem(w, k); } }
+    nghia: { ten: 'Chọn nghĩa', ico: '📝', lop: 'chu-viet',
+      de: function (w) { return '<div class="lt-de-chu"><span class="hanzi">' + esc(w.han) + '</span>' + TV.nutLoa(w.han, false, w.doc) + '</div><div class="lt-tu-py lt-py-de">' + esc(w.py) + '</div>'; },
+      hoi: function () { return 'Nghĩa của từ này là gì?'; },
+      dap: function (w) { return [dA(w.ma, esc(w.nghia), 1)].concat(dapAnNhieu(w, S.kho).map(function (x) { return dA(x.ma, esc(x.nghia)); })); },
+      giai: function (w) { return '<div class="tv-the-tag"><span class="lt-giai-py">' + esc(w.py) + '</span>' + tags(w) + '</div>'; } },
+    chu: { ten: 'Chọn chữ Hán', ico: '✍️', lop: 'chu',
+      de: function (w) { return '<div class="lt-de-nghia">' + esc(w.nghia) + '</div>'; },
+      hoi: function (w) { return 'Chữ Hán nào mang nghĩa này?' + (w.loai ? ' <span class="tag">' + esc(w.loai) + '</span>' : ''); },
+      dap: function (w) { return [dA(w.ma, hanO(w), 1)].concat(dapAnNhieu(w, S.kho).map(function (x) { return dA(x.ma, hanO(x)); })); },
+      giai: function (w) { return giaiTu(w); } },
+    nghe: { ten: 'Nghe chọn từ', ico: '🎧', lop: 'chu', dungDuoc: coAm,
+      de: function (w) { return '<div class="lt-de-nghe">' + nutNghe(w) + '<small>Bấm loa để nghe lại</small></div>'; },
+      hoi: function () { return 'Bạn nghe thấy từ nào?'; },
+      dap: function (w) { return [dA(w.ma, hanO(w), 1)].concat(nhieuNghe(w).map(function (x) { return dA(x.ma, hanO(x)); })); },
+      giai: function (w) { return giaiTu(w) + '<div class="lt-tu-nghia nho">' + esc(w.nghia) + '</div>'; },
+      sauKhiVe: function (w) { setTimeout(function () { var n = khuBai.querySelector('.lt-nghe'); if (n) TV.doc(w.doc || w.han, n); }, 250); } },
+    py: { ten: 'Chọn pinyin', ico: '🔤', lop: 'py',
+      de: function (w) { return '<div class="lt-de-chu"><span class="hanzi">' + esc(w.han) + '</span></div><div class="lt-de-phu">' + esc(w.nghia) + '</div>'; },
+      hoi: function () { return 'Chọn phiên âm đúng (chú ý thanh điệu)'; },
+      dap: function (w) {
+        var bt = bienThePy(w.py).slice(0, 3);
+        if (bt.length < 3) dapAnNhieu(w, S.kho).some(function (x) { if (bt.indexOf(x.py) < 0 && x.py !== w.py) bt.push(x.py); return bt.length === 3; });
+        return [dA(w.py, esc(w.py), 1)].concat(bt.map(function (p) { return dA(p, esc(p)); }));
+      },
+      giai: function (w) { return '<div class="lt-giai-tu">' + TV.nutLoa(w.han, false, w.doc) + '<span class="lt-tu-py">' + esc(w.py) + '</span></div>'; } },
+    hv: { ten: 'Chọn âm Hán Việt', ico: '📜', lop: 'hv', dungDuoc: function (w) { return !!w.hv; },
+      de: function (w) { return '<div class="lt-de-chu"><span class="hanzi">' + esc(w.han) + '</span>' + TV.nutLoa(w.han, false, w.doc) + '</div><div class="lt-tu-py lt-py-de">' + esc(w.py) + '</div>'; },
+      hoi: function () { return 'Âm Hán Việt của từ này là gì?'; },
+      dap: function (w) { var hv = String(w.hv).toUpperCase(); return [dA(hv, esc(hv), 1)].concat(nhieuHV(w).map(function (h) { return dA(h, esc(h)); })); },
+      giai: function (w) { return '<div class="lt-tu-nghia nho">' + esc(w.nghia) + '</div>'; } },
+    ghep: { ten: 'Ghép cặp', ico: '🧩', nhom: 5 }
   };
-  var DANG_DS = ['tron', 'the', 'nghia', 'chu'];
+  var DANG_DS = ['tron', 'the', 'nghia', 'chu', 'nghe', 'py', 'hv', 'ghep'];
   var NUT_CHAM = '<button type="button" class="btn lt-chua">😕 Chưa nhớ</button><button type="button" class="btn solid lt-nho">😊 Đã nhớ</button>';
+  function giaiTu(w) { return '<div class="lt-giai-tu"><span class="hanzi">' + esc(w.han) + '</span>' + TV.nutLoa(w.han, false, w.doc) + '<span class="lt-tu-py">' + esc(w.py) + '</span></div>'; }
+
+  // Trộn tất cả: tỉ lệ các dạng theo tầng (sơ cấp nặng phát âm, cao cấp nặng Hán Việt)
+  var TI_LE = {
+    so:    { the: 1, nghia: 2, chu: 2, nghe: 2, py: 2, hv: 1, ghep: 1 },
+    trung: { the: 1, nghia: 2, chu: 2, nghe: 1, py: 1, hv: 1, ghep: 1 },
+    cao:   { the: 1, nghia: 2, chu: 2, nghe: 1, py: 1, hv: 2, ghep: 1 }
+  };
+  function tang() { return SO_CAP.indexOf(S.cap) >= 0 ? 'so' : ['4', '5', '6'].indexOf(S.cap) >= 0 ? 'trung' : 'cao'; }
+  function boc(w, i) {
+    var tl = TI_LE[tang()], tui = [];
+    Object.keys(tl).forEach(function (k) {
+      if (k === 'ghep' && B.hang.length - i < 4) return;               // ghép cần ít nhất 4 từ còn lại
+      if (DANG[k].dungDuoc && !DANG[k].dungDuoc(w)) return;
+      for (var n = 0; n < tl[k]; n++) tui.push(k);
+    });
+    return tui[Math.floor(Math.random() * tui.length)] || 'the';
+  }
 
   // Trắc nghiệm gọn: đề + 4 đáp án 2×2 + nút "Câu tiếp" ngay dưới; lời giải hiện ngay trong khung đề
   function veTracNghiem(w, kieu) {
-    var dap = B.dap && B.dap.i === B.i ? B.dap.ds : tron([w].concat(dapAnNhieu(w, S.kho)));
-    B.dap = { i: B.i, ds: dap };
-    var de = kieu === 'nghia'
-      ? '<div class="lt-de-chu"><span class="hanzi">' + esc(w.han) + '</span>' + TV.nutLoa(w.han, false, w.doc) + '</div><div class="lt-tu-py lt-py-de">' + esc(w.py) + '</div>'
-      : '<div class="lt-de-nghia">' + esc(w.nghia) + '</div>';
+    var D = DANG[kieu];
+    var dap = B.dap && B.dap.i === B.i ? B.dap.ds : tron(D.dap(w));
+    B.dap = { i: B.i, ds: dap, kieu: kieu };
     khuBai.innerHTML = dauCau(w, kieu) +
-      '<div class="lt-de">' + de + '<p class="lt-hoi">' + (kieu === 'nghia' ? 'Nghĩa của từ này là gì?' : 'Chữ Hán nào mang nghĩa này?') + (w.loai && kieu === 'chu' ? ' <span class="tag">' + esc(w.loai) + '</span>' : '') + '</p></div>' +
-      '<div class="lt-dap ' + kieu + '">' + dap.map(function (x, k) {
-        return '<button type="button" class="lt-dap-o" data-ma="' + esc(x.ma) + '"><span class="lt-so">' + (k + 1) + '</span>' +
-          (kieu === 'nghia' ? '<span class="lt-dap-chu">' + esc(x.nghia) + '</span>' : '<span class="lt-dap-chu hanzi">' + esc(x.han) + '</span><span class="lt-dap-py">' + esc(x.py) + '</span>') + '</button>';
+      '<div class="lt-de">' + D.de(w) + '<p class="lt-hoi">' + D.hoi(w) + '</p></div>' +
+      '<div class="lt-dap ' + D.lop + '">' + dap.map(function (x, k) {
+        return '<button type="button" class="lt-dap-o" data-k="' + k + '"><span class="lt-so">' + (k + 1) + '</span>' + x.html + '</button>';
       }).join('') + '</div>' +
       '<div class="lt-nut-the lt-nut-tiep" hidden><button type="button" class="btn solid lt-tiep"></button></div>';
+    if (D.sauKhiVe) D.sauKhiVe(w);
   }
   function traLoi(nut) {
     var w = B.hang[B.i], hop = khuBai.querySelector('.lt-dap');
     if (!hop || hop.classList.contains('xong')) return;
     hop.classList.add('xong');
-    var dung = nut.dataset.ma === w.ma, kieu = hop.classList.contains('nghia') ? 'nghia' : 'chu';
-    hop.querySelectorAll('.lt-dap-o').forEach(function (b) { b.disabled = true; if (b.dataset.ma === w.ma) b.classList.add('dung'); });
+    var ds = B.dap.ds, D = DANG[B.dap.kieu], dung = ds[+nut.dataset.k].dung;
+    hop.querySelectorAll('.lt-dap-o').forEach(function (b) { b.disabled = true; if (ds[+b.dataset.k].dung) b.classList.add('dung'); });
     if (!dung) nut.classList.add('sai');
     var themKho = ghiKetQua(w, dung, true);
     khuBai.querySelector('.lt-sao').outerHTML = nutSao(w);
-    // lời giải gọn, thay cho câu hỏi trong khung đề
-    var giai = '<div class="lt-ket ' + (dung ? 'dung' : 'sai') + '">' + (dung ? '🎉 Chính xác!' : '❌ Chưa đúng' + (themKho ? ' · đã thêm vào ⭐ Từ khó' : '')) + '</div>' +
-      (kieu === 'chu' ? '<div class="lt-giai-tu"><span class="hanzi">' + esc(w.han) + '</span>' + TV.nutLoa(w.han, false, w.doc) + '<span class="lt-tu-py">' + esc(w.py) + '</span></div>' : '') +
-      '<div class="tv-the-tag">' + (kieu === 'nghia' ? '<span class="lt-giai-py">' + esc(w.py) + '</span>' : '') + tags(w) + '</div>';
-    khuBai.querySelector('.lt-hoi').outerHTML = '<div class="lt-giai">' + giai + '</div>';
+    khuBai.querySelector('.lt-de').classList.add('xong');            // thu gọn đề để lời giải không đẩy nút Câu tiếp xuống
+    khuBai.querySelector('.lt-hoi').outerHTML = '<div class="lt-giai"><div class="lt-ket ' + (dung ? 'dung' : 'sai') + '">' +
+      (dung ? '🎉 Chính xác!' : '❌ Chưa đúng' + (themKho ? ' · đã thêm vào ⭐ Từ khó' : '')) + '</div>' + D.giai(w) + '</div>';
+    hienNutTiep();
+  }
+  function hienNutTiep() {
     var nt = khuBai.querySelector('.lt-nut-tiep'); nt.hidden = false;
     nt.querySelector('.lt-tiep').textContent = B.i + 1 < B.hang.length ? 'Câu tiếp ›' : 'Xem kết quả ›';
     nt.querySelector('.lt-tiep').focus({ preventScroll: true });
     if (nt.getBoundingClientRect().bottom > khuatDuoi()) giuTrongManHinh();   // nút Câu tiếp bị khuất thì đưa khung bài lên
+  }
+
+  // ---------- Ghép cặp: một lượt 4–5 từ, chạm chữ Hán rồi chạm nghĩa tương ứng (thứ tự nào cũng được) ----------
+  function veGhep() {
+    var n = Math.min(DANG.ghep.nhom, B.hang.length - B.i);
+    var ds = B.hang.slice(B.i, B.i + n);
+    B.ghep = { ds: ds, sai: {}, xong: 0, a: null, b: null };
+    var trai = ds.map(function (w, i) { return '<button type="button" class="lt-gh-o trai" data-i="' + i + '"><span class="hanzi">' + esc(w.han) + '</span><span class="lt-gh-py lt-py-de">' + esc(w.py) + '</span></button>'; });
+    var phai = tron(ds.map(function (w, i) { return '<button type="button" class="lt-gh-o phai" data-i="' + i + '">' + esc(w.nghia) + '</button>'; }));
+    khuBai.innerHTML = '<div class="lt-dau-bai"><span class="lt-dem">' + (S.dang === 'tron' ? '🔀 ' : '') + 'Ghép cặp · từ ' + (B.i + 1) + '–' + (B.i + n) + '/' + B.hang.length + '</span><span></span></div>' +
+      '<div class="lt-vach lt-vach-bai"><i class="thuoc" style="width:' + (B.i / B.hang.length * 100) + '%"></i></div>' +
+      '<p class="lt-hoi lt-hoi-ghep">Chạm một chữ Hán rồi chạm nghĩa đúng của nó</p>' +
+      '<div class="lt-ghep"><div class="lt-gh-cot">' + trai.join('') + '</div><div class="lt-gh-cot">' + phai.join('') + '</div></div>' +
+      '<div class="lt-nut-the lt-nut-tiep" hidden><button type="button" class="btn solid lt-tiep"></button></div>';
+  }
+  function chamGhep(nut) {
+    var G = B.ghep; if (!G || nut.disabled) return;
+    var ben = nut.classList.contains('trai') ? 'a' : 'b';
+    if (G[ben]) G[ben].classList.remove('chon');
+    G[ben] = nut; nut.classList.add('chon');
+    if (!G.a || !G.b) return;
+    var wa = G.ds[+G.a.dataset.i], wb = G.ds[+G.b.dataset.i], a = G.a, b = G.b;
+    G.a = G.b = null; a.classList.remove('chon'); b.classList.remove('chon');
+    if (wa === wb || nghiaGon(wa) === nghiaGon(wb)) {                  // đúng (hai từ trùng nghĩa chính cũng tính đúng)
+      a.disabled = b.disabled = true; a.classList.add('dung'); b.classList.add('dung');
+      if (++G.xong === G.ds.length) xongGhep();
+    } else {
+      G.sai[wa.ma] = 1;
+      [a, b].forEach(function (x) { x.classList.add('sai'); setTimeout(function () { x.classList.remove('sai'); }, 650); });
+    }
+  }
+  function xongGhep() {
+    var G = B.ghep;
+    G.ds.forEach(function (w) { ghiKetQua(w, !G.sai[w.ma], true); });
+    var soSai = Object.keys(G.sai).length;
+    khuBai.querySelector('.lt-hoi-ghep').outerHTML = '<div class="lt-ket ' + (soSai ? 'sai' : 'dung') + ' lt-hoi-ghep">' + (soSai ? '🧩 Xong! Ghép nhầm ' + soSai + ' từ (đã thêm vào ⭐ Từ khó)' : '🎉 Ghép đúng hết ngay lần đầu!') + '</div>';
+    khuBai.querySelectorAll('.lt-gh-o.trai').forEach(function (x) { x.classList.add('hien-py'); });
+    B.i += G.ds.length - 1;                                            // nhóm ghép tính là nhiều từ; tiep() cộng thêm 1
+    hienNutTiep();
   }
 
   // ---------- Kết quả ----------
@@ -275,6 +421,7 @@
     if (t.closest('.lt-nho')) return DANG.the.cham(true);
     if (t.closest('.lt-chua')) return DANG.the.cham(false);
     var o = t.closest('.lt-dap-o'); if (o) return traLoi(o);
+    var g = t.closest('.lt-gh-o'); if (g) return chamGhep(g);
     if (t.closest('.lt-tiep')) return tiep();
     if (t.closest('.lt-lam-sai')) { batDau(Object.keys(B.daSai).map(function (k) { return B.daSai[k]; })); return giuTrongManHinh(); }
     if (t.closest('.lt-lai')) { batDau(B.goc); return giuTrongManHinh(); }

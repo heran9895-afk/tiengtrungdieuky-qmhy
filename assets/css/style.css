@@ -499,3 +499,36 @@ body::after{content:"";position:fixed;left:50%;top:56%;width:min(72vw,560px);asp
 .lt-sao-ds span{display:none}
 @media(max-width:600px){.lt-ds-sai li{grid-template-columns:auto 1fr auto}.lt-ds-py{display:none}}
 .lt-nut-kq{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:18px}
+/* --- Giai đoạn 2: Nghe chọn từ · Chọn pinyin · Chọn âm Hán Việt · Ghép cặp --- */
+.lt-de-nghe{display:flex;flex-direction:column;align-items:center;gap:6px;padding:4px 0}
+.lt-de-nghe .lt-nghe{width:76px;height:76px}
+.lt-de-nghe .lt-nghe svg{width:36px;height:36px}
+.lt-de-nghe small{color:var(--muted);font-weight:700;font-size:12.5px}
+.lt-de-phu{color:var(--muted);font-weight:800;font-size:14px;margin-top:2px}
+.lt-tu-nghia.nho{font-size:14px;margin:4px 0 0}
+.lt-dap.py .lt-dap-o,.lt-dap.hv .lt-dap-o{justify-content:center;text-align:center;position:relative}
+.lt-dap.py .lt-so,.lt-dap.hv .lt-so{position:absolute;top:50%;left:10px;transform:translateY(-50%)}
+.lt-dap.py .lt-dap-o{font-size:19px;font-weight:800;color:var(--red)}
+.lt-dap.hv .lt-dap-o{font-size:15px;font-weight:800;letter-spacing:.4px;color:#7a5a12}
+.lt-hoi-ghep{text-align:center;margin:0 0 10px}
+.lt-ket.lt-hoi-ghep{font-size:15px}
+.lt-ghep{display:grid;grid-template-columns:.8fr 1.2fr;gap:10px}
+.lt-gh-cot{display:grid;gap:8px;align-content:start}
+.lt-gh-o{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:54px;border:1.5px solid var(--line-soft);background:#fff;border-radius:14px;padding:6px 10px;font:inherit;font-weight:700;font-size:14px;line-height:1.35;color:var(--ink);cursor:pointer;transition:.15s;text-align:center}
+.lt-gh-o .hanzi{font-size:24px;color:var(--brand);line-height:1.2}
+.lt-gh-py{color:var(--red);font-size:12.5px;font-weight:800}
+.lt-bai.an-py .lt-gh-o.hien-py .lt-py-de{visibility:visible}
+.lt-gh-o:hover:not(:disabled){border-color:var(--brand)}
+.lt-gh-o.chon{border-color:var(--gold);background:#fff7d6;box-shadow:0 0 0 2px var(--gold) inset}
+.lt-gh-o.dung{border-color:var(--ok);background:var(--ok-bg);cursor:default}
+.lt-gh-o.sai{border-color:var(--no);background:var(--no-bg);animation:lt-lac .35s}
+@keyframes lt-lac{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+@media (prefers-reduced-motion:reduce){.lt-gh-o.sai{animation:none}}
+@media(max-width:600px){.lt-ghep{grid-template-columns:.75fr 1.25fr;gap:8px}.lt-gh-o{min-height:50px;font-size:13px;padding:5px 8px}.lt-gh-o .hanzi{font-size:21px}.lt-dap.py .lt-dap-o{font-size:17px}}
+.lt-de.xong .lt-de-nghe small{display:none}
+.lt-de.xong .lt-de-nghe .lt-nghe{width:44px;height:44px}.lt-de.xong .lt-de-nghe .lt-nghe svg{width:22px;height:22px}
+.lt-de.xong .lt-de-chu .hanzi{font-size:40px}
+@media(max-width:600px){.lt-de-nghe .lt-nghe{width:64px;height:64px}.lt-de-nghe .lt-nghe svg{width:30px;height:30px}.lt-de.xong .lt-de-chu .hanzi{font-size:36px}}
+/* điện thoại màn thấp (vd 360×640): thu nhỏ thêm để nút Câu tiếp không bị khuất */
+@media(max-width:600px) and (max-height:700px){.lt-de{padding:10px 12px 8px}.lt-de-chu .hanzi{font-size:38px}.lt-de.xong .lt-de-chu .hanzi{font-size:30px}.lt-dap{gap:6px;margin-top:8px}.lt-dap-o{min-height:44px;padding:6px 8px;font-size:13px}.lt-vach-bai{margin-bottom:8px}.lt-nut-the{margin-top:8px}.lt-the-trong{height:210px}}
+.lt-dap.py .lt-dap-o,.lt-dap.hv .lt-dap-o{padding-left:38px;padding-right:12px}
