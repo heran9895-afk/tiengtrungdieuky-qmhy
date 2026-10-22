@@ -29,9 +29,20 @@
       { ten: 'Sách hay',                link: 'thu-vien/sach-hay/',  ico: '📖' },
       { ten: 'Chơi vui, học thật',      link: 'thu-vien/tro-choi/',  ico: '🎮' }
     ]},
-    { ten: 'Chương trình HSK 3.0', link: 'chuong-trinh-hsk/' },
+    // Cấp nào chưa có bài: để "sapCo: true" (hiện mờ, chữ "Sắp có"). Có bài rồi: xoá "sapCo: true" là mở.
+    { ten: 'Chương trình HSK 3.0', link: 'chuong-trinh-hsk/', con: [
+      { ten: 'Nhập môn tiếng Trung', link: 'chuong-trinh-hsk/nhap-mon/', ico: '🌱' },
+      { ten: 'HSK 1',   link: 'chuong-trinh-hsk/hsk1/',   ico: '1',   sapCo: true },
+      { ten: 'HSK 2',   link: 'chuong-trinh-hsk/hsk2/',   ico: '2',   sapCo: true },
+      { ten: 'HSK 3',   link: 'chuong-trinh-hsk/hsk3/',   ico: '3',   sapCo: true },
+      { ten: 'HSK 4',   link: 'chuong-trinh-hsk/hsk4/',   ico: '4',   sapCo: true },
+      { ten: 'HSK 5',   link: 'chuong-trinh-hsk/hsk5/',   ico: '5',   sapCo: true },
+      { ten: 'HSK 6',   link: 'chuong-trinh-hsk/hsk6/',   ico: '6',   sapCo: true },
+      { ten: 'HSK 7–9', link: 'chuong-trinh-hsk/hsk7-9/', ico: '7–9', sapCo: true }
+    ]},
     { ten: 'Giới thiệu & Liên hệ', link: 'gioi-thieu.html' }
   ];
+  window.QM_MENU = MENU;   // dùng chung: assets/js/lo-trinh.js đọc danh sách cấp HSK từ đây, chỉ cần sửa một chỗ
 
   // Đánh dấu mục đang mở
   var here = location.href.split('#')[0].split('?')[0].replace(/index\.html$/, '');
@@ -46,8 +57,9 @@
       return '<a class="sh-link' + (dangO(m.link) ? ' active' : '') + '" href="' + ROOT + m.link + '">' + m.ten + '</a>';
     }
     var conHTML = m.con.map(function (c) {
-      return '<a href="' + ROOT + c.link + '"' + (dangO(c.link) ? ' class="active"' : '') + '>' +
-             '<span class="sh-ico">' + c.ico + '</span>' + c.ten + '</a>';
+      var ico = '<span class="sh-ico' + (c.ico.length > 2 ? ' nho' : '') + '">' + c.ico + '</span>';
+      if (c.sapCo) return '<span class="sh-soon" aria-disabled="true">' + ico + c.ten + '<em class="sh-pill">Sắp có</em></span>';
+      return '<a href="' + ROOT + c.link + '"' + (dangO(c.link) ? ' class="active"' : '') + '>' + ico + c.ten + '</a>';
     }).join('');
     return '<div class="sh-drop">' +
       '<button class="sh-link' + (dangO(m.link) ? ' active' : '') + '" type="button">' + m.ten + '<span class="sh-caret">▼</span></button>' +
@@ -135,10 +147,18 @@
 
   // Khi cuộn xuống: header vẫn dính trên đầu nhưng thu gọn lại cho đỡ chiếm chỗ
   var hdr = document.querySelector('.sh-header');
+  // Thu gọn làm header thấp đi một đoạn (gọi là "co"). Chỉ thu gọn khi đã cuộn quá đoạn co đó và trang còn đủ dài,
+  // nếu không: header co lại -> trình duyệt kéo trang về sát đầu -> header mở ra -> lại co... thành vòng nhấp nháy.
+  var caoGon = 100;                                        // chiều cao khi thu gọn, đo lại sau lần thu gọn đầu tiên
   function thuGon() {
-    var y = window.scrollY;
-    if (y > 120) hdr.classList.add('sh-compact');
-    else if (y < 20) hdr.classList.remove('sh-compact');
+    var y = window.scrollY, cuonDuoc = document.documentElement.scrollHeight - window.innerHeight;
+    if (hdr.classList.contains('sh-compact')) {
+      caoGon = hdr.offsetHeight;
+      if (y < 20) hdr.classList.remove('sh-compact');
+    } else {
+      var co = hdr.offsetHeight - caoGon;
+      if (y > co + 40 && cuonDuoc - co > 60) hdr.classList.add('sh-compact');
+    }
   }
   window.addEventListener('scroll', thuGon, { passive: true });
   thuGon();
@@ -146,7 +166,7 @@
   // Nút menu trên điện thoại
   var nav = wrap.querySelector('.sh-nav');
   wrap.querySelector('.sh-burger').addEventListener('click', function () { nav.classList.toggle('open'); });
-  // Bấm "Thư viện" để mở/đóng danh sách con (cần cho điện thoại)
+  // Bấm "Thư viện" / "Chương trình HSK 3.0" để mở/đóng danh sách con (cần cho điện thoại)
   wrap.querySelectorAll('.sh-drop > button').forEach(function (b) {
     b.addEventListener('click', function () { b.parentNode.classList.toggle('open'); });
   });

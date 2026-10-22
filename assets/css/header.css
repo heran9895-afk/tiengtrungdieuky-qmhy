@@ -53,9 +53,15 @@
   border:1px solid var(--line);border-top:4px solid #e2ad28;border-radius:14px;box-shadow:var(--shadow);padding:8px;opacity:0;visibility:hidden;transition:.15s}
 .sh-menu::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
 .sh-drop:hover .sh-menu,.sh-drop.open .sh-menu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
-.sh-menu a{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:700;font-size:14.5px}
+.sh-menu a,.sh-menu .sh-soon{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:10px;text-decoration:none;color:var(--ink);font-weight:700;font-size:14.5px}
 .sh-menu a:hover,.sh-menu a.active{background:var(--brand-soft);color:var(--brand)}
 .sh-ico{width:30px;height:30px;border-radius:50%;background:var(--surface-2);border:1px solid var(--line);display:grid;place-items:center;font-size:15px;flex-shrink:0}
+/* Mục chưa có bài: hiện mờ, không bấm được, kèm nhãn "Sắp có" (sửa trong MENU của header.js) */
+.sh-ico.nho{font-size:11px;letter-spacing:-.5px}
+.sh-menu a,.sh-menu .sh-soon{white-space:nowrap}
+.sh-menu .sh-soon{color:var(--muted);cursor:default}
+.sh-soon .sh-ico{opacity:.55}
+.sh-pill{margin-left:auto;font-style:normal;font-size:11px;font-weight:800;padding:2px 9px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);color:var(--muted);white-space:nowrap}
 .sh-burger{display:none;width:100%;padding:12px;border:0;background:none;color:#fff;font-family:inherit;font-weight:800;font-size:15px;cursor:pointer;letter-spacing:.5px}
 
 @media (max-width:850px){
