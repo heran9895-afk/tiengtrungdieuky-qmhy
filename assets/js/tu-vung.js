@@ -8,6 +8,7 @@
   if (!TV) return;
   var ROOT = TV.ROOT, CAP = TV.CAP, tenCap = TV.tenCap, taiCap = TV.taiCap, taiTatCa = TV.taiTatCa, KHO = TV.KHO;
   var esc = TV.esc, boDau = TV.boDau, nutLoa = TV.nutLoa, coNhiHoa = TV.coNhiHoa, GHI_NHI = TV.GHI_NHI;
+  var MOT_KHO = CAP.length === 1;                            // trang bài học: một kho riêng, không có 9 cấp
   var MOI_TRANG = 60;   // số thẻ hiện mỗi lần, bấm "Xem thêm" để hiện tiếp
 
   var el = document.getElementById('kho-tu-vung');
@@ -20,16 +21,34 @@
     '<div class="tv-cap" role="tablist">' + CAP.map(function (c) {
       return '<button type="button" role="tab" data-cap="' + c + '"' + (c === 'MR' ? ' class="tv-cap-mr"' : '') + '>' + tenCap(c) + '</button>'; }).join('') + '</div>' +
     '<p class="tv-mr-note" hidden>Mục <b>Mở rộng</b>: từ và cụm từ hay gặp nằm ngoài danh sách chuẩn HSK 3.0, không chia cấp. Phiên âm theo tài liệu của cô.</p>' +
-    '<div class="tv-thanh"><input type="search" class="tv-tim" placeholder="Tìm trong cả 9 cấp: chữ Hán, pinyin, nghĩa, Hán Việt…"><span class="tv-dem"></span>' +
-      '<a class="btn solid tv-luyen" href="' + ROOT + 'thu-vien/tu-vung/luyen-tap/">✍️ Luyện tập</a></div>' +
-    '<div class="tv-che-do" role="group" aria-label="Cách xem từ vựng"><button type="button" data-cd="luoi">▦ Danh sách</button><button type="button" data-cd="the">🃏 Thẻ lật</button></div>' +
+    '<div class="tv-thanh"><input type="search" class="tv-tim" placeholder="' + (MOT_KHO ? 'Tìm trong bài' : 'Tìm trong cả 9 cấp') + ': chữ Hán, pinyin, nghĩa, Hán Việt…"><span class="tv-dem"></span>' +
+      (MOT_KHO ? '' : '<a class="btn solid tv-luyen" href="' + ROOT + 'thu-vien/tu-vung/luyen-tap/">✍️ Luyện tập</a>') + '</div>' +
+    '<div class="tv-che-do" role="group" aria-label="Cách xem từ vựng"><button type="button" data-cd="luoi">▦ Danh sách</button><button type="button" data-cd="the">🃏 Thẻ lật</button>' +
+      (MOT_KHO ? '<button type="button" data-cd="bo" hidden>🀄 Thẻ bộ thủ</button>' : '') + '</div>' +
     '<div class="tv-luoi"></div>';
   var luoi = el.querySelector('.tv-luoi'), dem = el.querySelector('.tv-dem'), tim = el.querySelector('.tv-tim'), nutLuyen = el.querySelector('.tv-luyen');
+  // Cấu tạo chữ: chữ nào trong từ đã có dữ liệu tách bộ thủ (HSK 1–3, cô đã duyệt) thì hiện cách ghép + giải thích từng thành phần
+  var CT = { chu: {}, tp: {} };
+  TV.taiCauTao().then(function (d) { CT = d; });
+  function cauTaoHTML(w) {
+    var chu = Array.from(new Set(Array.from(w.han))).filter(function (c) { return CT.chu[c]; });
+    if (!chu.length) return '';
+    var ghi = {};
+    var dong = chu.map(function (c) {
+      var e = CT.chu[c];
+      return '<div class="ctz"><span class="hanzi ctz-chu">' + esc(c) + '</span><span class="ctz-bang">=</span>' + e.p.map(function (p) {
+        var t = CT.tp[p] || {}; if (t.ghiChu) ghi[t.ghiChu] = 1;
+        return '<span class="ctz-p"><b class="hanzi">' + esc(p) + '</b><small>' + esc(t.ten || '') + (t.py ? ' · ' + esc(t.py) : '') + (t.nghia ? '<br>' + esc(t.nghia) : '') + '</small></span>';
+      }).join('<i>+</i>') + '<small class="ctz-kieu">' + esc(e.k) + '</small></div>';
+    }).join('');
+    return '<div class="tv-muc tv-muc-ctz"><span class="tv-nhan">Cấu tạo chữ</span>' + dong +
+      Object.keys(ghi).map(function (g) { return '<p class="ctz-ghi">💡 ' + esc(g) + '</p>'; }).join('') + '</div>';
+  }
   // Cách xem: danh sách thẻ nhỏ hoặc thẻ lật (flashcard) từng từ; nhớ lựa chọn trên máy
   var cheDo = 'luoi';
   try { if (localStorage.getItem('qm-tv-che-do') === 'the') cheDo = 'the'; } catch (e) {}
   function datCheDo(c) {
-    cheDo = c; try { localStorage.setItem('qm-tv-che-do', c); } catch (e) {}
+    cheDo = c; try { if (c !== 'bo') localStorage.setItem('qm-tv-che-do', c); } catch (e) {}
     el.querySelectorAll('.tv-che-do button').forEach(function (b) { b.classList.toggle('on', b.dataset.cd === c); b.setAttribute('aria-pressed', b.dataset.cd === c); });
     fc.thuTu = null; veLuoi();
   }
@@ -60,10 +79,11 @@
           .sort(function (a, b) { return a[0] - b[0] || a[1] - b[1]; }).map(function (x) { return x[2]; });
       }
     }
-    dem.textContent = k ? hien.length + ' từ · cả 9 cấp' : hien.length + ' từ';
+    dem.textContent = k && !MOT_KHO ? hien.length + ' từ · cả 9 cấp' : hien.length + ' từ';
     if (!k && !ds.length) { luoi.innerHTML = '<div class="tv-trong">Cấp này đang được cô cập nhật, bạn quay lại sau nhé! 🌱</div>'; return; }
     if (!hien.length) { luoi.innerHTML = '<div class="tv-trong">Không tìm thấy từ nào phù hợp.</div>'; return; }
     luoi.classList.toggle('tv-luoi-the', cheDo === 'the');
+    if (cheDo === 'bo' && boThu().length) { if (!them) fc.thuTu = null; return veThe(); }
     if (cheDo === 'the') { if (!them) fc.thuTu = null; return veThe(); }
     luoi.innerHTML = hien.slice(0, soHien).map(function (w, j) {
       return '<div class="tv-the" role="button" tabindex="0" data-i="' + j + '">' +
@@ -78,7 +98,7 @@
     if (t.closest('.tv-them')) { soHien += MOI_TRANG; veLuoi(true); return; }
     if (t.closest('.tv-loa')) return;
     var sao = t.closest('.tv-sao');
-    if (sao && TD) { var w = hien[fcViTri()]; TD.datKho(w, !TD.laKho(w.ma)); sao.outerHTML = nutSao(w); return; }
+    if (sao && TD && cheDo !== 'bo') { var w = hien[fcViTri()]; TD.datKho(w, !TD.laKho(w.ma)); sao.outerHTML = nutSao(w); return; }
     if (t.closest('.tv-fc-the') || t.closest('.tv-fc-lat')) return latThe();
     if (t.closest('.tv-fc-truoc')) return chuyenThe(-1);
     if (t.closest('.tv-fc-sau')) return chuyenThe(1);
@@ -89,11 +109,32 @@
   // ---------- Thẻ lật (flashcard): mặt trước chữ Hán, mặt sau phiên âm + nghĩa; bấm thẻ lật qua lại ----------
   var fc = { i: 0, thuTu: null, tron: false };
   function fcViTri() { return fc.thuTu[fc.i]; }
+  // Cỗ thẻ bộ thủ (trang bài học): mặt trước bộ thủ, mặt sau tên gọi, nghĩa, các chữ đã học có bộ này
+  function boThu() { var d = (TV.DL || {})[capDang]; return (d && d.boThu) || []; }
+  function veTheBo() {
+    var ds = boThu(), b = ds[fc.thuTu[fc.i]], n = fc.thuTu.length;
+    luoi.innerHTML = '<div class="tv-fc">' +
+      '<div class="tv-fc-dau"><span class="tv-fc-dem">Bộ thủ ' + (fc.i + 1) + ' / ' + n + '</span>' +
+        '<button type="button" class="tv-fc-tron' + (fc.tron ? ' on' : '') + '" aria-pressed="' + fc.tron + '">🔀 Trộn thẻ</button></div>' +
+      '<div class="tv-fc-the" tabindex="0" role="button" aria-label="Lật thẻ"><div class="tv-fc-trong">' +
+        '<div class="tv-fc-mat truoc"><span class="hanzi tv-fc-han">' + esc(b.boThu) + '</span><small>Bấm vào thẻ để lật</small></div>' +
+        '<div class="tv-fc-mat sau tv-fc-bo"><div class="tv-fc-chu"><span class="hanzi">' + esc(b.boThu) + '</span>' + nutLoa(b.docAm || b.boThu, true) + '</div>' +
+          '<div class="tv-fc-py">' + esc(b.pinyin) + '</div><div class="tv-fc-nghia">' + esc(b.ten) + ' · ' + esc(b.nghia) + '</div>' +
+          (b.tenGoi ? '<div class="tv-fc-goi">Tên gọi khi dạy chữ: <span class="hanzi">' + esc(b.tenGoi) + '</span> ' + esc(b.tenGoiPinyin || '') + '</div>' : '') +
+          '<div class="tv-fc-chua">' + (b.chuChua || []).map(function (c) { return '<span><b class="hanzi">' + esc(c.hanzi) + '</b>' + nutLoa(c.hanzi, false) + '<small>' + esc(c.pinyin) + ' · ' + esc(c.nghia) + '</small></span>'; }).join('') + '</div>' +
+          '<small>Bấm vào thẻ để lật lại</small></div>' +
+      '</div></div>' +
+      '<div class="tv-fc-nut"><button type="button" class="btn tv-fc-truoc"' + (fc.i ? '' : ' disabled') + '>‹ Trước</button>' +
+        '<button type="button" class="btn solid tv-fc-lat">Lật thẻ</button>' +
+        '<button type="button" class="btn tv-fc-sau"' + (fc.i < n - 1 ? '' : ' disabled') + '>Sau ›</button></div></div>';
+  }
   function veThe() {
+    var laBo = cheDo === 'bo';
     if (!fc.thuTu) {
-      fc.thuTu = hien.map(function (_, j) { return j; }); fc.i = 0;
+      fc.thuTu = (laBo ? boThu() : hien).map(function (_, j) { return j; }); fc.i = 0;
       if (fc.tron) for (var a = fc.thuTu.length - 1; a > 0; a--) { var b = Math.floor(Math.random() * (a + 1)), x = fc.thuTu[a]; fc.thuTu[a] = fc.thuTu[b]; fc.thuTu[b] = x; }
     }
+    if (laBo) return veTheBo();
     var w = hien[fcViTri()], n = fc.thuTu.length;
     luoi.innerHTML = '<div class="tv-fc">' +
       '<div class="tv-fc-dau"><span class="tv-fc-dem">Thẻ ' + (fc.i + 1) + ' / ' + n + (loc ? ' · ' + esc(tenCap(w.cap)) : '') + '</span>' +
@@ -118,7 +159,7 @@
   }
   // Bàn phím ở chế độ thẻ: Space lật · ← → chuyển thẻ (khi không mở bảng chi tiết, không gõ trong ô tìm)
   document.addEventListener('keydown', function (e) {
-    if (cheDo !== 'the' || !luoi.querySelector('.tv-fc') || (hop && hop.classList.contains('on')) || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
+    if ((cheDo !== 'the' && cheDo !== 'bo') || !luoi.querySelector('.tv-fc') || (hop && hop.classList.contains('on')) || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName)) return;
     if (e.key === ' ') { e.preventDefault(); latThe(); }
     else if (e.key === 'ArrowLeft') chuyenThe(-1);
     else if (e.key === 'ArrowRight') chuyenThe(1);
@@ -176,7 +217,8 @@
       '</div>' +
       (coNhiHoa(w.han, w.doc) ? GHI_NHI : '') +
       (w.but ? '<div class="tv-muc tv-muc-but"><span class="tv-nhan">Thuận bút</span>' +
-        '<div class="tv-but">' + w.but.split('').map(function (c, k) { return '<button type="button" class="tv-but-o" data-k="' + k + '" data-chu="' + c + '" aria-label="Xem lại thuận bút chữ ' + c + '"><span class="hanzi">' + c + '</span></button>'; }).join('') + '</div></div>' : '') +
+        '<div class="tv-but">' + w.but.split('').map(function (c, k) { return '<button type="button" class="tv-but-o" data-k="' + k + '" data-chu="' + c + '" aria-label="Xem lại thuận bút chữ ' + c + '"><span class="hanzi">' + c + '</span></button>'; }).join('') + '</div></div>' : (MOT_KHO ? '<div class="tv-muc tv-muc-but"><span class="tv-nhan">Thuận bút</span><p class="tv-but-ghi">Các chữ của từ này đã có thuận bút ở từ phía trước trong bài.</p></div>' : '')) +
+      cauTaoHTML(w) +
       (!w.cum.length && !w.cau.length ? '<p class="tv-cho-nd">Cụm kết hợp và câu ví dụ của từ này đang được cô cập nhật 🌱</p>' : '') +
       (w.cum.length ? '<div class="tv-muc"><span class="tv-nhan">Cụm kết hợp</span><ul class="tv-cum">' + w.cum.map(function (c) {
         return '<li class="tv-mo-py" tabindex="0"><span class="hanzi">' + esc(c.han) + '</span>' + (c.py ? '<i class="tv-py-an">' + esc(c.py) + '</i>' : '') + '</li>'; }).join('') + '</ul></div>' : '') +
@@ -233,6 +275,12 @@
   el.addEventListener('keydown', function (e) { var t = e.target.closest('.tv-the'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); moTu(+t.dataset.i); } });
   tim.addEventListener('input', function () { loc = tim.value; veLuoi(); });
 
+  if (/(^#|[#&])the\b/.test(location.hash)) { cheDo = 'the'; el.querySelectorAll('.tv-che-do button').forEach(function (b) { b.classList.toggle('on', b.dataset.cd === 'the'); }); }   // link "#the": mở sẵn thẻ lật
   var h = (location.hash.match(/hsk([\dMR-]+)/) || [])[1];
-  chonCap(CAP.indexOf(h) >= 0 ? h : '1');
+  chonCap(CAP.indexOf(h) >= 0 ? h : CAP[0]);
+  if (MOT_KHO) TV.taiCap(CAP[0]).then(function () {
+    var nb = el.querySelector('.tv-che-do [data-cd="bo"]'); if (!nb || !boThu().length) return;
+    nb.hidden = false;
+    if (/(^#|[#&])bo\b/.test(location.hash)) datCheDo('bo');
+  });
 })();

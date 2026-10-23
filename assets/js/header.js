@@ -26,7 +26,7 @@
     // Có trang rồi: xoá "sapCo: true" là mở ở mọi nơi. "mota" là dòng mô tả hiện trên thẻ ở trang Thư viện và trang chủ.
     { ten: 'Thư viện', link: 'thu-vien/', con: [
       { ten: 'Kho từ vựng 9 cấp',       link: 'thu-vien/tu-vung/',   ico: '📚', mota: 'Toàn bộ từ vựng HSK 3.0: tra cứu, nghe phát âm, xem thẻ lật.' },
-      { ten: 'Luyện từ vựng',           link: 'thu-vien/tu-vung/luyen-tap/', ico: '🧠', mota: 'Nghe chọn từ, chọn pinyin, ghép cặp, điền từ, sắp xếp câu theo từng cấp.' },
+      { ten: 'Luyện từ vựng',           link: 'thu-vien/tu-vung/luyen-tap/', ico: '🧠', mota: 'Nghe chọn từ, chọn pinyin, ghép cặp, điền từ, sắp xếp câu, gõ chữ Hán theo từng cấp.' },
       { ten: 'Tiếng Trung theo chủ đề', link: 'thu-vien/chu-de/',    ico: '🗂️', mota: 'Từ vựng và mẫu câu cho từng tình huống trong đời sống, công việc.', sapCo: true },
       { ten: 'Phân biệt từ',            link: 'thu-vien/phan-biet/', ico: '⚖️', mota: 'Gỡ rối những cặp từ dễ nhầm, có ví dụ và bài luyện kèm theo.', sapCo: true },
       { ten: 'Sách hay',                link: 'thu-vien/sach-hay/',  ico: '📖', mota: 'Những cuốn sách cô chọn lọc giới thiệu, giúp học tiếng Trung hiệu quả hơn.', sapCo: true },
@@ -35,7 +35,7 @@
     // Cấp nào chưa có bài: để "sapCo: true" (hiện mờ, chữ "Sắp có"). Có bài rồi: xoá "sapCo: true" là mở.
     { ten: 'Chương trình HSK 3.0', link: 'chuong-trinh-hsk/', con: [
       { ten: 'Nhập môn tiếng Trung', link: 'chuong-trinh-hsk/nhap-mon/', ico: '🌱' },
-      { ten: 'HSK 1',   link: 'chuong-trinh-hsk/hsk1/',   ico: '1',   sapCo: true },
+      { ten: 'HSK 1',   link: 'chuong-trinh-hsk/hsk1/',   ico: '1' },
       { ten: 'HSK 2',   link: 'chuong-trinh-hsk/hsk2/',   ico: '2',   sapCo: true },
       { ten: 'HSK 3',   link: 'chuong-trinh-hsk/hsk3/',   ico: '3',   sapCo: true },
       { ten: 'HSK 4',   link: 'chuong-trinh-hsk/hsk4/',   ico: '4',   sapCo: true },

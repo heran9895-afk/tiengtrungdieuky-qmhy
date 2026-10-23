@@ -4,7 +4,7 @@
    ========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Quicksand:wght@500;600;700;800&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/lxgwwenkai-regular.css');
-@import url('header.css?v=20261023f');   /* header + chân trang chung, tách riêng để học liệu dựng riêng dùng lại được */
+@import url('header.css?v=20261023m');   /* header + chân trang chung, tách riêng để học liệu dựng riêng dùng lại được */
 /* Phông Quicksand không có 4 chữ ǖ ǘ ǚ ǜ (ü mang dấu thanh): gói phông 3 KB vẽ sẵn 4 chữ này theo nét Quicksand Bold,
    chỉ áp dụng đúng 4 ký tự đó (unicode-range), các chữ khác vẫn dùng Quicksand. Trang Nhập môn dùng cùng phông này. */
 @font-face{font-family:'PyTone';src:url(data:font/woff2;base64,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) format('woff2');font-weight:100 900;unicode-range:U+01D6,U+01D8,U+01DA,U+01DC}
@@ -598,3 +598,103 @@ body::after{content:"";position:fixed;left:50%;top:56%;width:min(72vw,560px);asp
 .card.sap-co:hover{transform:none;box-shadow:none}
 .btn.sap-co{opacity:.55;cursor:default}
 .btn.sap-co:hover{background:#fff;color:var(--brand)}
+/* đường dẫn phân cấp ở đầu trang bài học: Chương trình HSK 3.0 › HSK 1 › Bài 1 */
+.duong-dan{font-size:13.5px;font-weight:700;color:var(--muted);margin:0 0 6px}
+.duong-dan a{color:var(--brand);text-decoration:none}
+.duong-dan a:hover{text-decoration:underline}
+.card .meta{display:flex;gap:8px;align-items:center}
+
+/* =========================================================
+   BÀI HỌC (Chương trình HSK): bài tập có chấm điểm, ghép bộ thủ, gõ chữ Hán, bảng xếp hạng, thẻ bộ thủ
+   ========================================================= */
+/* hội thoại A/B trong câu ví dụ: mỗi lượt một dòng */
+.tv-cau .hanzi,.tv-cau-py,.tv-cau-viet,.lt-cau-han .hanzi,.lt-cau-py,.lt-cau-viet{white-space:pre-line}
+.tv-but-ghi{margin:4px 0 0;color:var(--muted);font-size:13px;font-weight:700}
+/* ô họ tên + lớp */
+.lt-hs{display:grid;grid-template-columns:1.4fr 1fr;gap:6px 10px;max-width:760px;margin:0 auto 12px;background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:10px 12px}
+.lt-hs label{display:flex;flex-direction:column;gap:3px;font-size:11.5px;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+.lt-hs input{font:inherit;font-size:15px;font-weight:700;text-transform:none;letter-spacing:0;color:var(--ink);border:1.5px solid var(--line-soft);border-radius:10px;padding:7px 10px;background:var(--surface-2)}
+.lt-hs input:focus{outline:none;border-color:var(--brand)}
+.lt-hs-ghi{grid-column:1/-1;margin:0;font-size:12.5px;color:var(--muted);font-weight:700}
+.lt-diem-nho{margin-left:6px;color:var(--brand)}
+/* ghép bộ thủ */
+.lt-bo{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.lt-bo-o{border:1.5px solid var(--line-soft);background:#fff;border-radius:14px;min-height:58px;font:inherit;cursor:pointer;transition:.15s}
+.lt-bo-o .hanzi{font-size:30px;color:var(--brand)}
+.lt-bo-o.chon{border-color:var(--gold);background:#fff7d6;box-shadow:0 0 0 2px var(--gold) inset}
+.lt-bo-o.dung{border-color:var(--ok);background:var(--ok-bg);box-shadow:0 0 0 2px var(--ok) inset}
+.lt-bo-o.sai{border-color:var(--no);background:var(--no-bg);box-shadow:0 0 0 2px var(--no) inset}
+.lt-bo-giai{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;margin-top:4px}
+.lt-bo-giai>.hanzi{font-size:28px;color:var(--brand)}
+.lt-bo-giai i{font-style:normal;color:var(--muted);font-weight:800}
+.lt-bo-phan{display:inline-flex;flex-direction:column;align-items:center;background:var(--surface-2);border:1px solid var(--line-soft);border-radius:10px;padding:3px 8px}
+.lt-bo-phan b{font-size:22px;color:var(--brand);font-weight:400}
+.lt-bo-phan small{font-size:11.5px;color:var(--muted);font-weight:700;text-align:center;max-width:150px}
+/* gõ chữ Hán */
+.lt-go-py{font-size:24px}
+.lt-go{display:flex;gap:8px;margin-top:12px}
+.lt-go-o{flex:1;min-width:0;font:inherit;font-family:var(--font-cn);font-size:24px;border:2px solid var(--line);border-radius:14px;padding:8px 14px;background:#fff;color:var(--ink)}
+.lt-go-o:focus{outline:none;border-color:var(--brand)}
+.lt-go-o.dung{border-color:var(--ok);background:var(--ok-bg)}.lt-go-o.sai{border-color:var(--no);background:var(--no-bg)}
+.lt-go-bao{min-height:0;margin:6px 0 0;font-size:13.5px;font-weight:700;color:#8a6414}
+.lt-go-bao:empty{display:none}
+.lt-go-phu{text-align:center;margin-top:8px}
+.lt-go-giup{border:0;background:none;color:var(--brand);font:inherit;font-weight:800;font-size:13.5px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.lt-go-chu{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.lt-go-c,.lt-go-xoa{min-width:46px;height:46px;border:1.5px solid var(--line);background:#fff;border-radius:12px;font-size:22px;color:var(--brand);cursor:pointer}
+.lt-go-xoa{color:var(--muted);font-size:18px}
+/* lưu điểm, xem lại bài */
+.lt-luu{margin:8px 0}
+.lt-luu-ghi{color:var(--muted);font-weight:700;font-size:13.5px;margin:4px 0}
+.lt-luu-ok{color:var(--ok);font-weight:800;font-size:14px}
+.lt-luu-loi{color:var(--no);font-weight:800;font-size:14px;margin:4px 0}
+.lt-luu-form{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;align-items:center}
+.lt-luu-form p{flex-basis:100%;margin:0 0 4px;font-weight:700;font-size:13.5px;color:var(--ink)}
+.lt-luu-form input{font:inherit;border:1.5px solid var(--line);border-radius:10px;padding:7px 10px;min-width:0;flex:1 1 140px}
+.lt-xem-ct{margin-top:14px;text-align:left;display:grid;gap:6px}
+.lt-xem-ct[hidden]{display:none}
+.lt-ct{border-left:4px solid var(--ok);background:var(--surface-2);border-radius:8px;padding:6px 10px;font-size:13.5px;line-height:1.5}
+.lt-ct.sai{border-left-color:var(--no)}
+.lt-ct .hanzi{font-size:15px}
+@media(max-width:600px){.lt-hs{grid-template-columns:1fr 1fr;padding:8px 10px}.lt-hs input{font-size:14px;padding:6px 8px}.lt-bo-o .hanzi{font-size:26px}.lt-go-o{font-size:21px}}
+/* thẻ bộ thủ */
+.tv-fc-bo .tv-fc-goi{font-size:13px;color:var(--muted);font-weight:700}
+.tv-fc-chua{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:4px}
+.tv-fc-chua span{display:inline-flex;align-items:center;gap:4px;background:var(--surface-2);border:1px solid var(--line-soft);border-radius:10px;padding:3px 8px}
+.tv-fc-chua b{font-size:20px;color:var(--brand);font-weight:400}
+.tv-fc-chua small{font-size:12px;color:var(--muted);font-weight:700}
+.tv-fc-chua .tv-loa{width:26px;height:26px}
+/* bảng xếp hạng */
+.bxh-thanh{display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;justify-content:center;max-width:860px;margin:0 auto 14px}
+.bxh-thanh .lt-o{min-width:220px}
+.bxh-xep{display:flex;gap:6px;align-items:center}
+.bxh-xep button{border:1.5px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:8px 14px;font:inherit;font-weight:800;font-size:13.5px;cursor:pointer}
+.bxh-xep button.on{background:var(--brand-soft);border-color:var(--brand);color:var(--brand)}
+.bxh-bang{max-width:860px;margin:0 auto}
+.bxh-cuon{overflow-x:auto;background:#fff;border:1px solid var(--line-soft);border-radius:16px;box-shadow:var(--shadow)}
+.bxh-cuon table{width:100%;border-collapse:collapse;font-size:14px}
+.bxh-cuon th{background:var(--brand);color:#fff;text-align:left;padding:10px;font-size:13px;white-space:nowrap}
+.bxh-cuon th.on{background:#09481f;box-shadow:inset 0 -3px 0 var(--gold)}
+.bxh-cuon td{padding:9px 10px;border-top:1px solid var(--line-soft);vertical-align:middle}
+.bxh-cuon td b{color:var(--brand)}.bxh-cuon td small{display:block;color:var(--muted);font-weight:700;font-size:12px}
+.bxh-cuon tr.top1{background:#fff7d6}.bxh-cuon tr.top2{background:#f4f4f4}.bxh-cuon tr.top3{background:#fbeee3}
+.bxh-ghi{text-align:center;color:var(--muted);font-size:13px;font-weight:700}
+.bxh-gv{max-width:860px;margin:18px auto 0;color:var(--muted);font-size:13.5px;font-weight:700}
+.bxh-gv summary{cursor:pointer}
+.bxh-gv-in{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.bxh-gv-in input{font:inherit;border:1.5px solid var(--line);border-radius:10px;padding:7px 10px}
+.lt-hs input{width:100%;min-width:0;box-sizing:border-box}
+.lt-hs label{min-width:0}
+.lt-cap[hidden]{display:none}   /* .tv-cap có display:flex nên phải ẩn rõ ràng (trang bài học không dùng hàng chọn cấp) */
+/* cấu tạo chữ (bảng chi tiết từ) */
+.ctz{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:4px 0 8px}
+.ctz-chu{font-size:30px;color:var(--brand)}
+.ctz-bang,.ctz i{font-style:normal;color:var(--muted);font-weight:800}
+.ctz-p{display:inline-flex;align-items:center;gap:6px;background:var(--surface-2);border:1px solid var(--line-soft);border-radius:10px;padding:3px 9px}
+.ctz-p b{font-size:22px;color:var(--brand);font-weight:400}
+.ctz-p small{font-size:11.5px;line-height:1.35;color:var(--muted);font-weight:700}
+.ctz-kieu{flex-basis:100%;margin-left:44px;color:var(--muted);font-size:12px;font-weight:700}
+.ctz-ghi,.lt-bo-ghi{margin:6px 0 0;font-size:12.5px;line-height:1.5;color:#7a5a12;background:#fff7d6;border-radius:8px;padding:5px 9px;font-weight:700}
+.lt-de.lt-de-bo .lt-de-chu{display:none}
+.lt-de.lt-de-bo .lt-giai{margin-top:0;padding-top:0;border-top:0}
+@media(max-width:600px) and (max-height:700px){.lt-bo-o{min-height:48px}.lt-bo-o .hanzi{font-size:24px}.ctz-ghi,.lt-bo-ghi{font-size:11.5px;padding:4px 7px}}

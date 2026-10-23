@@ -11,8 +11,12 @@
   var NGUON = {
     '1': '', '2': '', '3': '', '4': '', '5': '', '6': '', '7-9': ''
   };
-  var CAP = ['1', '2', '3', '4', '5', '6', '7-9', 'MR'];   // MR = Mở rộng (ngoài danh sách chuẩn, không phân cấp)
-  function tenCap(c) { return c === 'MR' ? 'Mở rộng' : 'HSK ' + c; }
+  // Trang bài học (Chương trình HSK) đặt TRƯỚC khi nhúng file này:
+  //   window.QM_CAP = ['BAI']; window.QM_TEN_CAP = { BAI: 'Bài 1' }; window.QM_TEP = { BAI: '<đường dẫn>/data/bai/bai-1.json' };
+  // để dùng kho từ riêng của bài thay cho 9 cấp. Không đặt thì chạy y như cũ.
+  var CAP = window.QM_CAP || ['1', '2', '3', '4', '5', '6', '7-9', 'MR'];   // MR = Mở rộng (ngoài danh sách chuẩn, không phân cấp)
+  var TEP = window.QM_TEP || {};                             // cấp → file JSON riêng (mảng từ, hoặc đối tượng có khoá "tu")
+  function tenCap(c) { return (window.QM_TEN_CAP || {})[c] || (c === 'MR' ? 'Mở rộng' : 'HSK ' + c); }
 
   // ---------- Đọc CSV (hỗ trợ ô có xuống dòng, dấu phẩy, dấu ngoặc kép) ----------
   function docCSV(txt) {
@@ -52,16 +56,23 @@
   function esc(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function boDau(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/\s+/g, ''); }
 
-  var KHO = {};
+  var KHO = {}, DL = {};                                     // DL: dữ liệu gốc của bài (bộ thủ, chữ ghép…) khi file là đối tượng
   function chuanBi(cap, d) { d.forEach(function (w, i) { w.cap = w.cap || cap; w._i = i; w._tim = boDau([w.han, w.py, w.nghia, w.hv].join(' ')); }); return d; }
   function taiCap(cap) {
     if (KHO[cap]) return Promise.resolve(KHO[cap]);
     var url = NGUON[cap];
     var nhung = (window.TU_VUNG_MAU || {})[cap];
     if (!url && nhung) return Promise.resolve(KHO[cap] = chuanBi(cap, nhung.map(chuanHoa)));
+    if (TEP[cap]) return fetch(TEP[cap]).then(function (r) { if (!r.ok) throw r; return r.json(); })
+      .then(function (d) { if (!Array.isArray(d)) DL[cap] = d; return (KHO[cap] = chuanBi(cap, (Array.isArray(d) ? d : d.tu).map(chuanHoa))); });
     if (!url) return fetch(ROOT + 'data/tu-vung/cap-' + cap + '.json').then(function (r) { if (!r.ok) throw r; return r.json(); })
       .then(function (d) { return (KHO[cap] = chuanBi(cap, d.map(chuanHoa))); });
     return fetch(url).then(function (r) { return r.text(); }).then(function (t) { return (KHO[cap] = chuanBi(cap, docCSV(t).map(chuanHoa))); });
+  }
+  // Cấu tạo chữ HSK 1–3 (data/tu-vung/cau-tao.json): { chu: {字: {k: kết cấu, p: [thành phần], cap}}, tp: {thành phần: {py, ten, nghia, ghiChu}} }
+  var CT = null;
+  function taiCauTao() {
+    return CT || (CT = fetch(ROOT + 'data/tu-vung/cau-tao.json').then(function (r) { if (!r.ok) throw r; return r.json(); }).catch(function () { return { chu: {}, tp: {} }; }));
   }
   function taiTatCa() { return Promise.all(CAP.map(function (c) { return taiCap(c).catch(function () { return []; }); })); }
 
@@ -126,7 +137,7 @@
   }
 
   window.QM_TV = {
-    ROOT: ROOT, CAP: CAP, tenCap: tenCap, taiCap: taiCap, taiTatCa: taiTatCa, KHO: KHO,
+    ROOT: ROOT, CAP: CAP, tenCap: tenCap, taiCap: taiCap, taiTatCa: taiTatCa, taiCauTao: taiCauTao, KHO: KHO, DL: DL,
     esc: esc, boDau: boDau, doc: doc, dungDoc: dungDoc, baoLoi: baoLoi, nutLoa: nutLoa,
     coNhiHoa: coNhiHoa, GHI_NHI: GHI_NHI, LOA: LOA, coGiong: coGiong
   };
