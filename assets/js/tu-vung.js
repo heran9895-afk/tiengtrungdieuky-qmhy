@@ -82,7 +82,7 @@
     dem.textContent = k && !MOT_KHO ? hien.length + ' từ · cả 9 cấp' : hien.length + ' từ';
     if (!k && !ds.length) { luoi.innerHTML = '<div class="tv-trong">Cấp này đang được cô cập nhật, bạn quay lại sau nhé! 🌱</div>'; return; }
     if (!hien.length) { luoi.innerHTML = '<div class="tv-trong">Không tìm thấy từ nào phù hợp.</div>'; return; }
-    luoi.classList.toggle('tv-luoi-the', cheDo === 'the');
+    luoi.classList.toggle('tv-luoi-the', cheDo === 'the' || cheDo === 'bo');   // chế độ thẻ: một thẻ chiếm cả bề ngang, không chia cột
     if (cheDo === 'bo' && boThu().length) { if (!them) fc.thuTu = null; return veThe(); }
     if (cheDo === 'the') { if (!them) fc.thuTu = null; return veThe(); }
     luoi.innerHTML = hien.slice(0, soHien).map(function (w, j) {
@@ -118,10 +118,14 @@
         '<button type="button" class="tv-fc-tron' + (fc.tron ? ' on' : '') + '" aria-pressed="' + fc.tron + '">🔀 Trộn thẻ</button></div>' +
       '<div class="tv-fc-the" tabindex="0" role="button" aria-label="Lật thẻ"><div class="tv-fc-trong">' +
         '<div class="tv-fc-mat truoc"><span class="hanzi tv-fc-han">' + esc(b.boThu) + '</span><small>Bấm vào thẻ để lật</small></div>' +
-        '<div class="tv-fc-mat sau tv-fc-bo"><div class="tv-fc-chu"><span class="hanzi">' + esc(b.boThu) + '</span>' + nutLoa(b.docAm || b.boThu, true) + '</div>' +
-          '<div class="tv-fc-py">' + esc(b.pinyin) + '</div><div class="tv-fc-nghia">' + esc(b.ten) + ' · ' + esc(b.nghia) + '</div>' +
-          (b.tenGoi ? '<div class="tv-fc-goi">Tên gọi khi dạy chữ: <span class="hanzi">' + esc(b.tenGoi) + '</span> ' + esc(b.tenGoiPinyin || '') + '</div>' : '') +
-          '<div class="tv-fc-chua">' + (b.chuChua || []).map(function (c) { return '<span><b class="hanzi">' + esc(c.hanzi) + '</b>' + nutLoa(c.hanzi, false) + '<small>' + esc(c.pinyin) + ' · ' + esc(c.nghia) + '</small></span>'; }).join('') + '</div>' +
+        '<div class="tv-fc-mat sau tv-fc-bo">' +
+          '<div class="tvb-dau"><span class="hanzi tvb-bo">' + esc(b.boThu) + '</span><div class="tvb-tt">' +
+            '<div class="tvb-py">' + esc(b.pinyin) + nutLoa(b.docAm || b.boThu, false) + '</div>' +
+            '<div class="tvb-ten">' + esc(b.ten) + '</div><div class="tvb-nghia">' + esc(b.nghia) + '</div></div></div>' +
+          (b.tenGoi ? '<div class="tvb-goi">Tên gọi khi dạy chữ: <span class="hanzi">' + esc(b.tenGoi) + '</span> <i>' + esc(b.tenGoiPinyin || '') + '</i></div>' : '') +
+          ((b.chuChua || []).length ? '<div class="tvb-nhan">Chữ đã học có bộ này</div><div class="tvb-chua">' + b.chuChua.map(function (c) {
+            return '<div class="tvb-o"><span class="hanzi tvb-chu">' + esc(c.hanzi) + '</span><span class="tvb-o-py">' + esc(c.pinyin) + '</span><span class="tvb-o-ng">' + esc(c.nghia) + '</span>' + nutLoa(c.hanzi, false) + '</div>';
+          }).join('') + '</div>' : '') +
           '<small>Bấm vào thẻ để lật lại</small></div>' +
       '</div></div>' +
       '<div class="tv-fc-nut"><button type="button" class="btn tv-fc-truoc"' + (fc.i ? '' : ' disabled') + '>‹ Trước</button>' +
@@ -275,12 +279,13 @@
   el.addEventListener('keydown', function (e) { var t = e.target.closest('.tv-the'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); moTu(+t.dataset.i); } });
   tim.addEventListener('input', function () { loc = tim.value; veLuoi(); });
 
-  if (/(^#|[#&])the\b/.test(location.hash)) { cheDo = 'the'; el.querySelectorAll('.tv-che-do button').forEach(function (b) { b.classList.toggle('on', b.dataset.cd === 'the'); }); }   // link "#the": mở sẵn thẻ lật
+  var hashDau = location.hash;                                // nhớ đường dẫn lúc mở trang (chonCap sẽ đổi địa chỉ thành #hsk…)
+  if (/(^#|[#&])the\b/.test(hashDau)) { cheDo = 'the'; el.querySelectorAll('.tv-che-do button').forEach(function (b) { b.classList.toggle('on', b.dataset.cd === 'the'); }); }   // link "#the": mở sẵn thẻ lật
   var h = (location.hash.match(/hsk([\dMR-]+)/) || [])[1];
   chonCap(CAP.indexOf(h) >= 0 ? h : CAP[0]);
   if (MOT_KHO) TV.taiCap(CAP[0]).then(function () {
     var nb = el.querySelector('.tv-che-do [data-cd="bo"]'); if (!nb || !boThu().length) return;
     nb.hidden = false;
-    if (/(^#|[#&])bo\b/.test(location.hash)) datCheDo('bo');
+    if (/(^#|[#&])bo\b/.test(hashDau)) datCheDo('bo');
   });
 })();
