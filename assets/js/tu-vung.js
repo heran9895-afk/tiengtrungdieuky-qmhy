@@ -31,6 +31,15 @@
   var CT = { chu: {}, tp: {} };
   TV.taiCauTao().then(function (d) { CT = d; });
   function cauTaoHTML(w) {
+    // Trang bài học: ưu tiên cách tách cô dạy trong bài (ghepChu), giải thích theo bộ thủ của bài; còn lại dùng dữ liệu chung
+    var raw = MOT_KHO ? (TV.DL || {})[capDang] || {} : {}, GB = {}, BT = {};
+    (raw.ghepChu || []).forEach(function (g) { GB[g.chu] = { k: '', p: g.phan }; });
+    (raw.boThu || []).forEach(function (b) { BT[b.boThu] = { ten: b.ten, py: b.pinyin, nghia: b.nghia }; });
+    var CTg = { chu: Object.assign({}, CT.chu, GB), tp: Object.assign({}, CT.tp, BT) };
+    var CT0 = CT; CT = CTg;
+    try { return cauTaoHTML0(w); } finally { CT = CT0; }
+  }
+  function cauTaoHTML0(w) {
     var chu = Array.from(new Set(Array.from(w.han))).filter(function (c) { return CT.chu[c]; });
     if (!chu.length) return '';
     var ghi = {};
@@ -39,7 +48,7 @@
       return '<div class="ctz"><span class="hanzi ctz-chu">' + esc(c) + '</span><span class="ctz-bang">=</span>' + e.p.map(function (p) {
         var t = CT.tp[p] || {}; if (t.ghiChu) ghi[t.ghiChu] = 1;
         return '<span class="ctz-p"><b class="hanzi">' + esc(p) + '</b><small>' + esc(t.ten || '') + (t.py ? ' · ' + esc(t.py) : '') + (t.nghia ? '<br>' + esc(t.nghia) : '') + '</small></span>';
-      }).join('<i>+</i>') + '<small class="ctz-kieu">' + esc(e.k) + '</small></div>';
+      }).join('<i>+</i>') + (e.k ? '<small class="ctz-kieu">' + esc(e.k) + '</small>' : '') + '</div>';
     }).join('');
     return '<div class="tv-muc tv-muc-ctz"><span class="tv-nhan">Cấu tạo chữ</span>' + dong +
       Object.keys(ghi).map(function (g) { return '<p class="ctz-ghi">💡 ' + esc(g) + '</p>'; }).join('') + '</div>';

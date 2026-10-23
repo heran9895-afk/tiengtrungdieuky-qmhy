@@ -2,7 +2,7 @@
    BẢNG XẾP HẠNG — Tiếng Trung Diệu Kỳ (theo quy chuẩn Bảng xếp hạng)
    Đặt <div id="bang-xep-hang" data-lesson="bai1-bai-tap"></div>. Địa chỉ máy chủ: window.QM_API (assets/js/cau-hinh.js).
    Chỉ tải dữ liệu khi bấm "Cập nhật". Một học sinh (họ tên + lớp) một dòng: lượt đầu, lượt tốt nhất, số lượt.
-   Xếp hạng: điểm cao trước; bằng điểm thì ai nhanh hơn trước; vẫn bằng thì ai nộp sớm hơn trước.
+   Xếp hạng: điểm cao trước; bằng điểm thì chuỗi đúng dài hơn; rồi ai nhanh hơn; vẫn bằng thì ai nộp sớm hơn.
    ========================================================= */
 (function () {
   var el = document.getElementById('bang-xep-hang'); if (!el) return;
@@ -29,8 +29,9 @@
       selBai.value = macDinh || ds[0];
     }).catch(function () {});
   }
-  function hon(a, b) {                                        // a tốt hơn b?
+  function hon(a, b) {                                        // a tốt hơn b? điểm → chuỗi đúng → thời gian → nộp sớm
     if (+a.score !== +b.score) return +a.score > +b.score;
+    if ((+a.bestStreak || 0) !== (+b.bestStreak || 0)) return (+a.bestStreak || 0) > (+b.bestStreak || 0);
     if (+a.durationSeconds !== +b.durationSeconds) return +a.durationSeconds < +b.durationSeconds;
     return String(a.thoiDiem) < String(b.thoiDiem);
   }
@@ -67,12 +68,18 @@
   });
   el.querySelector('.bxh-xoa').addEventListener('click', function () {
     var bao = el.querySelector('.bxh-gv-bao'), bai = selBai.value;
-    if (!confirm('Xoá TOÀN BỘ điểm của bài "' + bai + '"? Không khôi phục được.')) return;
+    fetch(API + '?action=attempts&lesson=' + encodeURIComponent(bai)).then(function (r) { return r.json(); }).catch(function () { return {}; }).then(function (d) {
+      var n = d && d.attempts ? d.attempts.length : '?';
+      if (!confirm('Xoá ' + n + ' lượt nộp của bài "' + bai + '"? Không khôi phục được.')) return;
+      xoa(bai, bao);
+    });
+  });
+  function xoa(bai, bao) {
     bao.textContent = '⏳ Đang xoá…';
     fetch(API, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action: 'reset', lesson: bai, matKhau: el.querySelector('.bxh-mk').value }) })
       .then(function (r) { return r.json(); })
       .then(function (d) { if (!d.ok) throw new Error(d.loi); bao.textContent = '✅ Đã xoá ' + d.soDongXoa + ' lượt nộp của bài ' + bai + '.'; DL = []; ve(); })
       .catch(function (e) { bao.textContent = '⚠️ ' + (e.message || 'Lỗi mạng'); });
-  });
+  }
   taiDsBai();
 })();

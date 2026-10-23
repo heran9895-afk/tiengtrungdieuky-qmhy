@@ -1,0 +1,1278 @@
+{
+ "bai": 2,
+ "ten": "第二课：我叫李文",
+ "tenViet": "Bài 2: Tôi tên Lý Văn",
+ "pinyinTen": "Dì èr kè: Wǒ jiào Lǐ Wén",
+ "tenRieng": [
+  "陈天中",
+  "安妮",
+  "白家月",
+  "李文"
+ ],
+ "maBaiTap": "bai2-bai-tap",
+ "tu": [
+  {
+   "Mã": "1-0299",
+   "Chữ Hán": "请问",
+   "Pinyin": "qǐngwèn",
+   "Âm Hán Việt": "THỈNH VẤN",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "xin hỏi",
+   "Cấp HSK": "1",
+   "Thuận bút": "请问",
+   "Cụm từ": "",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "请问，您叫什么名字？",
+   "Pinyin câu 1": "Qǐngwèn, nín jiào shénme míngzi?",
+   "Nghĩa câu 1": "Xin hỏi, thầy/cô tên là gì ạ?",
+   "Đọc câu 1": "",
+   "Câu 2": "请问，你是不是学生？",
+   "Pinyin câu 2": "Qǐngwèn, nǐ shì bu shì xué·shēng?",
+   "Nghĩa câu 2": "Xin hỏi, bạn có phải là học sinh không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0271",
+   "Chữ Hán": "你",
+   "Pinyin": "nǐ",
+   "Âm Hán Việt": "NỄ",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "bạn, anh, chị",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "你们 | nǐmen\n你老师 | nǐ lǎoshī\n你学生 | nǐ xué·shēng",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你同学叫什么名字？",
+   "Pinyin câu 1": "Nǐ tóngxué jiào shénme míngzi?",
+   "Nghĩa câu 1": "Bạn học của bạn tên là gì?",
+   "Đọc câu 1": "",
+   "Câu 2": "你们也很好。",
+   "Pinyin câu 2": "Nǐmen yě hěn hǎo.",
+   "Nghĩa câu 2": "Các bạn cũng rất khỏe.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0176",
+   "Chữ Hán": "叫",
+   "Pinyin": "jiào",
+   "Âm Hán Việt": "KHIẾU",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "gọi, tên là",
+   "Cấp HSK": "1",
+   "Thuận bút": "叫",
+   "Cụm từ": "不叫 | bú jiào\n叫你 | jiào nǐ\n叫我 | jiào wǒ",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "老师叫我。",
+   "Pinyin câu 1": "Lǎoshī jiào wǒ.",
+   "Nghĩa câu 1": "Thầy/cô gọi tôi.",
+   "Đọc câu 1": "",
+   "Câu 2": "我叫陈天中。",
+   "Pinyin câu 2": "Wǒ jiào Chén Tiānzhōng.",
+   "Nghĩa câu 2": "Tôi tên là Trần Thiên Trung.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0328",
+   "Chữ Hán": "什么",
+   "Pinyin": "shénme",
+   "Âm Hán Việt": "THẬP MA",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "cái gì, gì",
+   "Cấp HSK": "1",
+   "Thuận bút": "什么",
+   "Cụm từ": "什么名字 | shénme míngzi\n叫什么 | jiào shénme",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你叫什么？",
+   "Pinyin câu 1": "Nǐ jiào shénme?",
+   "Nghĩa câu 1": "Bạn tên là gì?",
+   "Đọc câu 1": "",
+   "Câu 2": "你老师叫什么名字？",
+   "Pinyin câu 2": "Nǐ lǎoshī jiào shénme míngzi?",
+   "Nghĩa câu 2": "Thầy/cô của bạn tên là gì?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0245",
+   "Chữ Hán": "名字",
+   "Pinyin": "míngzi",
+   "Âm Hán Việt": "DANH TỰ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "tên",
+   "Cấp HSK": "1",
+   "Thuận bút": "名字",
+   "Cụm từ": "什么名字 | shénme míngzi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你学生叫什么名字？",
+   "Pinyin câu 1": "Nǐ xué·shēng jiào shénme míngzi?",
+   "Nghĩa câu 1": "Học sinh của thầy/cô tên là gì?",
+   "Đọc câu 1": "",
+   "Câu 2": "同学，你叫什么名字？",
+   "Pinyin câu 2": "Tóngxué, nǐ jiào shénme míngzi?",
+   "Nghĩa câu 2": "Bạn ơi, bạn tên là gì?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0380",
+   "Chữ Hán": "我",
+   "Pinyin": "wǒ",
+   "Âm Hán Việt": "NGÃ",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "tôi, mình",
+   "Cấp HSK": "1",
+   "Thuận bút": "我",
+   "Cụm từ": "我们 | wǒmen\n我同学 | wǒ tóngxué\n我老师 | wǒ lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我们是学生。",
+   "Pinyin câu 1": "Wǒmen shì xué·shēng.",
+   "Nghĩa câu 1": "Chúng tôi là học sinh.",
+   "Đọc câu 1": "",
+   "Câu 2": "你不是我老师。",
+   "Pinyin câu 2": "Nǐ bú shì wǒ lǎoshī.",
+   "Nghĩa câu 2": "Bạn không phải là thầy/cô của tôi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0034",
+   "Chữ Hán": "不",
+   "Pinyin": "bù",
+   "Âm Hán Việt": "BẤT",
+   "Từ loại": "phó từ",
+   "Nghĩa tiếng Việt": "không",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "不好 | bù hǎo\n不认识 | bú rènshi\n不高兴 | bù gāoxìng",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我不是老师，我是学生。",
+   "Pinyin câu 1": "Wǒ bú shì lǎoshī, wǒ shì xué·shēng.",
+   "Nghĩa câu 1": "Tôi không phải giáo viên, tôi là học sinh.",
+   "Đọc câu 1": "",
+   "Câu 2": "我不认识白家月。",
+   "Pinyin câu 2": "Wǒ bú rènshi Bái Jiāyuè.",
+   "Nghĩa câu 2": "Tôi không quen Bạch Gia Nguyệt.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0337",
+   "Chữ Hán": "是",
+   "Pinyin": "shì",
+   "Âm Hán Việt": "THỊ",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "là, phải",
+   "Cấp HSK": "1",
+   "Thuận bút": "是",
+   "Cụm từ": "不是 | bú shì\n是你老师 | shì nǐ lǎoshī\n是我同学 | shì wǒ tóngxué",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你们是不是学生？",
+   "Pinyin câu 1": "Nǐmen shì bu shì xué·shēng?",
+   "Nghĩa câu 1": "Các bạn có phải là học sinh không?",
+   "Đọc câu 1": "",
+   "Câu 2": "我是你老师。",
+   "Pinyin câu 2": "Wǒ shì nǐ lǎoshī.",
+   "Nghĩa câu 2": "Tôi là giáo viên của bạn.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0093",
+   "Chữ Hán": "对不起",
+   "Pinyin": "duìbuqǐ",
+   "Âm Hán Việt": "ĐỐI BẤT KHỞI",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "xin lỗi",
+   "Cấp HSK": "1",
+   "Thuận bút": "对起",
+   "Cụm từ": "",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "老师，对不起您。",
+   "Pinyin câu 1": "Lǎoshī, duìbuqǐ nín.",
+   "Nghĩa câu 1": "Thưa thầy/cô, em xin lỗi ạ.",
+   "Đọc câu 1": "",
+   "Câu 2": "同学，对不起你。",
+   "Pinyin câu 2": "Tóngxué, duìbuqǐ nǐ.",
+   "Nghĩa câu 2": "Bạn ơi, mình xin lỗi bạn.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0233",
+   "Chữ Hán": "没关系",
+   "Pinyin": "méi guānxi",
+   "Âm Hán Việt": "MỘT QUAN HỆ",
+   "Từ loại": "cụm đáp lời",
+   "Nghĩa tiếng Việt": "không sao, không có gì",
+   "Cấp HSK": "1",
+   "Thuận bút": "没关系",
+   "Cụm từ": "",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：对不起您。\nB：没关系。",
+   "Pinyin câu 1": "A: Duìbuqǐ nín.\nB: Méi guānxi.",
+   "Nghĩa câu 1": "A: Em xin lỗi thầy/cô.\nB: Không sao.",
+   "Đọc câu 1": "对不起您。没关系。",
+   "Câu 2": "A：白家月同学，对不起你！\nB：没关系！",
+   "Pinyin câu 2": "A: Bái Jiāyuè tóngxué, duìbuqǐ nǐ!\nB: Méi guānxi!",
+   "Nghĩa câu 2": "A: Bạn Bạch Gia Nguyệt, mình xin lỗi bạn!\nB: Không sao!",
+   "Đọc câu 2": "白家月同学，对不起你！没关系！"
+  },
+  {
+   "Mã": "bai2-没事",
+   "Chữ Hán": "没事",
+   "Pinyin": "méishì",
+   "Âm Hán Việt": "MỘT SỰ",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "không sao, ổn mà",
+   "Cấp HSK": "NK",
+   "Thuận bút": "事",
+   "Cụm từ": "",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：李文，对不起你。\nB：没事。",
+   "Pinyin câu 1": "A: Lǐ Wén, duìbuqǐ nǐ.\nB: Méishì.",
+   "Nghĩa câu 1": "A: Lý Văn, mình xin lỗi bạn.\nB: Không sao.",
+   "Đọc câu 1": "李文，对不起你。没事。",
+   "Câu 2": "A：王老师，对不起您！\nB：没事！",
+   "Pinyin câu 2": "A: Wáng lǎoshī, duìbuqǐ nín!\nB: Méishì!",
+   "Nghĩa câu 2": "A: Thầy Vương, em xin lỗi thầy!\nB: Không sao!",
+   "Đọc câu 2": "王老师，对不起您！没事！"
+  },
+  {
+   "Mã": "1-0146",
+   "Chữ Hán": "很",
+   "Pinyin": "hěn",
+   "Âm Hán Việt": "NGẬN",
+   "Từ loại": "phó từ",
+   "Nghĩa tiếng Việt": "rất",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "很好 | hěn hǎo\n很高兴 | hěn gāoxìng\n很小 | hěn xiǎo\n很大 | hěn dà",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我老师很好。",
+   "Pinyin câu 1": "Wǒ lǎoshī hěn hǎo.",
+   "Nghĩa câu 1": "Thầy/cô của tôi rất tốt.",
+   "Đọc câu 1": "",
+   "Câu 2": "我很高兴。",
+   "Pinyin câu 2": "Wǒ hěn gāoxìng.",
+   "Nghĩa câu 2": "Tôi rất vui.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0116",
+   "Chữ Hán": "高兴",
+   "Pinyin": "gāoxìng",
+   "Âm Hán Việt": "CAO HỨNG",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "vui, vui mừng",
+   "Cấp HSK": "1",
+   "Thuận bút": "高兴",
+   "Cụm từ": "很高兴 | hěn gāoxìng\n不高兴 | bù gāoxìng",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "很高兴认识你。",
+   "Pinyin câu 1": "Hěn gāoxìng rènshi nǐ.",
+   "Nghĩa câu 1": "Rất vui được làm quen với bạn.",
+   "Đọc câu 1": "",
+   "Câu 2": "我们也很高兴。",
+   "Pinyin câu 2": "Wǒmen yě hěn gāoxìng.",
+   "Nghĩa câu 2": "Chúng tôi cũng rất vui.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0306",
+   "Chữ Hán": "认识",
+   "Pinyin": "rènshi",
+   "Âm Hán Việt": "NHẬN THỨC",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "quen biết, nhận biết",
+   "Cấp HSK": "1",
+   "Thuận bút": "认识",
+   "Cụm từ": "认识你 | rènshi nǐ\n不认识 | bú rènshi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我认识你。",
+   "Pinyin câu 1": "Wǒ rènshi nǐ.",
+   "Nghĩa câu 1": "Tôi biết bạn.",
+   "Đọc câu 1": "",
+   "Câu 2": "我不认识李文。",
+   "Pinyin câu 2": "Wǒ bú rènshi Lǐ Wén.",
+   "Nghĩa câu 2": "Tôi không quen Lý Văn.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0425",
+   "Chữ Hán": "也",
+   "Pinyin": "yě",
+   "Âm Hán Việt": "DÃ",
+   "Từ loại": "phó từ",
+   "Nghĩa tiếng Việt": "cũng",
+   "Cấp HSK": "1",
+   "Thuận bút": "也",
+   "Cụm từ": "也好 | yě hǎo\n也高兴 | yě gāoxìng\n也认识 | yě rènshi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我也很高兴认识你。",
+   "Pinyin câu 1": "Wǒ yě hěn gāoxìng rènshi nǐ.",
+   "Nghĩa câu 1": "Tôi cũng rất vui được làm quen với bạn.",
+   "Đọc câu 1": "",
+   "Câu 2": "我们也认识王老师。",
+   "Pinyin câu 2": "Wǒmen yě rènshi Wáng lǎoshī.",
+   "Nghĩa câu 2": "Chúng tôi cũng quen thầy Vương.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0381",
+   "Chữ Hán": "我们",
+   "Pinyin": "wǒmen",
+   "Âm Hán Việt": "NGÃ MÔN",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "chúng tôi, chúng ta",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我们很好。",
+   "Pinyin câu 1": "Wǒmen hěn hǎo.",
+   "Nghĩa câu 1": "Chúng tôi rất khỏe.",
+   "Đọc câu 1": "",
+   "Câu 2": "我们认识王老师。",
+   "Pinyin câu 2": "Wǒmen rènshi Wáng lǎoshī.",
+   "Nghĩa câu 2": "Chúng tôi quen thầy Vương.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0379",
+   "Chữ Hán": "问",
+   "Pinyin": "wèn",
+   "Âm Hán Việt": "VẤN",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "hỏi",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "老师问 | lǎoshī wèn\n同学问 | tóngxué wèn\n问你 | wèn nǐ\n问我 | wèn wǒ",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "学生问我：“请问，您是不是王老师？”",
+   "Pinyin câu 1": "Xué·shēng wèn wǒ: “Qǐngwèn, nín shì bu shì Wáng lǎoshī?”",
+   "Nghĩa câu 1": "Học sinh hỏi tôi: “Xin hỏi, thầy có phải là thầy Vương không ạ?”",
+   "Đọc câu 1": "",
+   "Câu 2": "老师问你。",
+   "Pinyin câu 2": "Lǎoshī wèn nǐ.",
+   "Nghĩa câu 2": "Thầy/cô hỏi bạn.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0296",
+   "Chữ Hán": "请",
+   "Pinyin": "qǐng",
+   "Âm Hán Việt": "THỈNH",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "mời; xin (lịch sự)",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "请进 | qǐng jìn\n请坐 | qǐng zuò\n请说 | qǐng shuō",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "王老师，您好！请进！",
+   "Pinyin câu 1": "Wáng lǎoshī, nín hǎo! Qǐng jìn!",
+   "Nghĩa câu 1": "Chào thầy Vương! Mời thầy vào!",
+   "Đọc câu 1": "",
+   "Câu 2": "请你说。",
+   "Pinyin câu 2": "Qǐng nǐ shuō.",
+   "Nghĩa câu 2": "Mời bạn nói.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0182",
+   "Chữ Hán": "进",
+   "Pinyin": "jìn",
+   "Âm Hán Việt": "TIẾN",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "vào",
+   "Cấp HSK": "1",
+   "Thuận bút": "进",
+   "Cụm từ": "请进 | qǐng jìn",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "请进！",
+   "Pinyin câu 1": "Qǐng jìn!",
+   "Nghĩa câu 1": "Mời vào!",
+   "Đọc câu 1": "",
+   "Câu 2": "老师，请进！",
+   "Pinyin câu 2": "Lǎoshī, qǐng jìn!",
+   "Nghĩa câu 2": "Thầy/cô mời vào ạ!",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0498",
+   "Chữ Hán": "坐",
+   "Pinyin": "zuò",
+   "Âm Hán Việt": "TỌA",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "ngồi",
+   "Cấp HSK": "1",
+   "Thuận bút": "坐",
+   "Cụm từ": "请坐 | qǐng zuò",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "请坐！",
+   "Pinyin câu 1": "Qǐng zuò!",
+   "Nghĩa câu 1": "Mời ngồi!",
+   "Đọc câu 1": "",
+   "Câu 2": "同学们，请坐！",
+   "Pinyin câu 2": "Tóngxuémen, qǐng zuò!",
+   "Nghĩa câu 2": "Các em, mời ngồi!",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0349",
+   "Chữ Hán": "说",
+   "Pinyin": "shuō",
+   "Âm Hán Việt": "THUYẾT",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "nói",
+   "Cấp HSK": "1",
+   "Thuận bút": "说",
+   "Cụm từ": "说什么 | shuō shénme",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "你说什么？",
+   "Pinyin câu 1": "Nǐ shuō shénme?",
+   "Nghĩa câu 1": "Bạn nói gì?",
+   "Đọc câu 1": "",
+   "Câu 2": "老师说什么？",
+   "Pinyin câu 2": "Lǎoshī shuō shénme?",
+   "Nghĩa câu 2": "Thầy/cô nói gì?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0730",
+   "Chữ Hán": "只",
+   "Pinyin": "zhǐ",
+   "Âm Hán Việt": "CHỈ",
+   "Từ loại": "phó từ",
+   "Nghĩa tiếng Việt": "chỉ",
+   "Cấp HSK": "2",
+   "Thuận bút": "只",
+   "Cụm từ": "只认识 | zhǐ rènshi",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我只认识你，不认识陈天中。",
+   "Pinyin câu 1": "Wǒ zhǐ rènshi nǐ, bú rènshi Chén Tiānzhōng.",
+   "Nghĩa câu 1": "Tôi chỉ quen bạn, không quen Trần Thiên Trung.",
+   "Đọc câu 1": "",
+   "Câu 2": "我只认识安妮。",
+   "Pinyin câu 2": "Wǒ zhǐ rènshi Ānnī.",
+   "Nghĩa câu 2": "Tôi chỉ quen Annie.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0477",
+   "Chữ Hán": "中国",
+   "Pinyin": "Zhōngguó",
+   "Âm Hán Việt": "TRUNG QUỐC",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "Trung Quốc",
+   "Cấp HSK": "1",
+   "Thuận bút": "中国",
+   "Cụm từ": "中国老师 | Zhōngguó lǎoshī\n中国学生 | Zhōngguó xué·shēng",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "王老师是中国老师。",
+   "Pinyin câu 1": "Wáng lǎoshī shì Zhōngguó lǎoshī.",
+   "Nghĩa câu 1": "Thầy Vương là giáo viên người Trung Quốc.",
+   "Đọc câu 1": "",
+   "Câu 2": "你是不是中国学生？",
+   "Pinyin câu 2": "Nǐ shì bu shì Zhōngguó xué·shēng?",
+   "Nghĩa câu 2": "Bạn có phải là học sinh Trung Quốc không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "bai2-英国",
+   "Chữ Hán": "英国",
+   "Pinyin": "Yīngguó",
+   "Âm Hán Việt": "ANH QUỐC",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "nước Anh",
+   "Cấp HSK": "NK",
+   "Thuận bút": "英",
+   "Cụm từ": "英国老师 | Yīngguó lǎoshī\n英国学生 | Yīngguó xué·shēng",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我是英国学生。",
+   "Pinyin câu 1": "Wǒ shì Yīngguó xué·shēng.",
+   "Nghĩa câu 1": "Tôi là học sinh người Anh.",
+   "Đọc câu 1": "",
+   "Câu 2": "你是不是英国老师？",
+   "Pinyin câu 2": "Nǐ shì bu shì Yīngguó lǎoshī?",
+   "Nghĩa câu 2": "Bạn có phải là giáo viên người Anh không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "bai2-美国",
+   "Chữ Hán": "美国",
+   "Pinyin": "Měiguó",
+   "Âm Hán Việt": "MỸ QUỐC",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "nước Mỹ",
+   "Cấp HSK": "NK",
+   "Thuận bút": "美",
+   "Cụm từ": "美国学生 | Měiguó xué·shēng",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我不是美国学生。",
+   "Pinyin câu 1": "Wǒ bú shì Měiguó xué·shēng.",
+   "Nghĩa câu 1": "Tôi không phải là học sinh người Mỹ.",
+   "Đọc câu 1": "",
+   "Câu 2": "你们是不是美国学生？",
+   "Pinyin câu 2": "Nǐmen shì bu shì Měiguó xué·shēng?",
+   "Nghĩa câu 2": "Các bạn có phải là học sinh người Mỹ không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "bai2-日本",
+   "Chữ Hán": "日本",
+   "Pinyin": "Rìběn",
+   "Âm Hán Việt": "NHẬT BẢN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "Nhật Bản",
+   "Cấp HSK": "NK",
+   "Thuận bút": "日本",
+   "Cụm từ": "日本老师 | Rìběn lǎoshī\n日本学生 | Rìběn xué·shēng",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我是日本学生。",
+   "Pinyin câu 1": "Wǒ shì Rìběn xué·shēng.",
+   "Nghĩa câu 1": "Tôi là học sinh người Nhật.",
+   "Đọc câu 1": "",
+   "Câu 2": "我们也是日本学生。",
+   "Pinyin câu 2": "Wǒmen yě shì Rìběn xué·shēng.",
+   "Nghĩa câu 2": "Chúng tôi cũng là học sinh người Nhật.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "bai2-俄罗斯",
+   "Chữ Hán": "俄罗斯",
+   "Pinyin": "Éluósī",
+   "Âm Hán Việt": "NGA LA TƯ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "nước Nga",
+   "Cấp HSK": "NK",
+   "Thuận bút": "俄罗斯",
+   "Cụm từ": "俄罗斯老师 | Éluósī lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我是俄罗斯学生。",
+   "Pinyin câu 1": "Wǒ shì Éluósī xué·shēng.",
+   "Nghĩa câu 1": "Tôi là học sinh người Nga.",
+   "Đọc câu 1": "",
+   "Câu 2": "你是不是俄罗斯老师？",
+   "Pinyin câu 2": "Nǐ shì bu shì Éluósī lǎoshī?",
+   "Nghĩa câu 2": "Bạn có phải là giáo viên người Nga không?",
+   "Đọc câu 2": ""
+  }
+ ],
+ "boThu": [
+  {
+   "boThu": "戈",
+   "ten": "Bộ qua",
+   "pinyin": "gē",
+   "nghia": "vũ khí, cây mác",
+   "docAm": "戈",
+   "chuChua": [
+    {
+     "hanzi": "我",
+     "pinyin": "wǒ",
+     "nghia": "tôi"
+    }
+   ]
+  },
+  {
+   "boThu": "手",
+   "ten": "Bộ thủ",
+   "pinyin": "shǒu",
+   "nghia": "tay",
+   "docAm": "手",
+   "chuChua": [
+    {
+     "hanzi": "我",
+     "pinyin": "wǒ",
+     "nghia": "tôi"
+    }
+   ]
+  },
+  {
+   "boThu": "亻",
+   "ten": "Bộ nhân đứng",
+   "pinyin": "rén",
+   "nghia": "chỉ con người",
+   "docAm": "单人旁",
+   "chuChua": [
+    {
+     "hanzi": "你",
+     "pinyin": "nǐ",
+     "nghia": "bạn"
+    },
+    {
+     "hanzi": "什",
+     "pinyin": "shén",
+     "nghia": "gì (trong 什么)"
+    }
+   ],
+   "tenGoi": "单人旁",
+   "tenGoiPinyin": "dānrénpáng"
+  },
+  {
+   "boThu": "夕",
+   "ten": "Bộ tịch",
+   "pinyin": "xī",
+   "nghia": "đêm, tối",
+   "docAm": "夕",
+   "chuChua": [
+    {
+     "hanzi": "名",
+     "pinyin": "míng",
+     "nghia": "tên"
+    }
+   ]
+  },
+  {
+   "boThu": "口",
+   "ten": "Bộ khẩu",
+   "pinyin": "kǒu",
+   "nghia": "cái miệng",
+   "docAm": "口",
+   "chuChua": [
+    {
+     "hanzi": "名",
+     "pinyin": "míng",
+     "nghia": "tên"
+    },
+    {
+     "hanzi": "叫",
+     "pinyin": "jiào",
+     "nghia": "gọi, tên là"
+    },
+    {
+     "hanzi": "问",
+     "pinyin": "wèn",
+     "nghia": "hỏi"
+    }
+   ]
+  },
+  {
+   "boThu": "宀",
+   "ten": "Bộ miên",
+   "pinyin": "mián",
+   "nghia": "mái nhà",
+   "docAm": "宝盖头",
+   "chuChua": [
+    {
+     "hanzi": "字",
+     "pinyin": "zì",
+     "nghia": "chữ"
+    },
+    {
+     "hanzi": "安",
+     "pinyin": "ān",
+     "nghia": "an, bình an"
+    }
+   ],
+   "tenGoi": "宝盖头",
+   "tenGoiPinyin": "bǎogàitóu"
+  },
+  {
+   "boThu": "子",
+   "ten": "Bộ tử",
+   "pinyin": "zǐ",
+   "nghia": "chỉ con cái",
+   "docAm": "子",
+   "chuChua": [
+    {
+     "hanzi": "字",
+     "pinyin": "zì",
+     "nghia": "chữ"
+    },
+    {
+     "hanzi": "李",
+     "pinyin": "Lǐ",
+     "nghia": "họ Lý"
+    }
+   ]
+  },
+  {
+   "boThu": "讠",
+   "ten": "Bộ ngôn",
+   "pinyin": "yán",
+   "nghia": "lời nói, nói năng",
+   "docAm": "言字旁",
+   "chuChua": [
+    {
+     "hanzi": "请",
+     "pinyin": "qǐng",
+     "nghia": "mời"
+    },
+    {
+     "hanzi": "认",
+     "pinyin": "rèn",
+     "nghia": "nhận biết"
+    },
+    {
+     "hanzi": "识",
+     "pinyin": "shí",
+     "nghia": "biết"
+    }
+   ],
+   "tenGoi": "言字旁",
+   "tenGoiPinyin": "yánzìpáng"
+  },
+  {
+   "boThu": "青",
+   "ten": "Bộ thanh",
+   "pinyin": "qīng",
+   "nghia": "màu xanh",
+   "docAm": "青",
+   "chuChua": [
+    {
+     "hanzi": "请",
+     "pinyin": "qǐng",
+     "nghia": "mời"
+    }
+   ]
+  },
+  {
+   "boThu": "门",
+   "ten": "Bộ môn",
+   "pinyin": "mén",
+   "nghia": "cái cửa",
+   "docAm": "门",
+   "chuChua": [
+    {
+     "hanzi": "问",
+     "pinyin": "wèn",
+     "nghia": "hỏi"
+    }
+   ]
+  },
+  {
+   "boThu": "女",
+   "ten": "Bộ nữ",
+   "pinyin": "nǚ",
+   "nghia": "chỉ con gái, phụ nữ",
+   "docAm": "女",
+   "chuChua": [
+    {
+     "hanzi": "安",
+     "pinyin": "ān",
+     "nghia": "an, bình an"
+    }
+   ]
+  },
+  {
+   "boThu": "木",
+   "ten": "Bộ mộc",
+   "pinyin": "mù",
+   "nghia": "cây cối",
+   "docAm": "木",
+   "chuChua": [
+    {
+     "hanzi": "李",
+     "pinyin": "Lǐ",
+     "nghia": "họ Lý"
+    }
+   ]
+  },
+  {
+   "boThu": "日",
+   "ten": "Bộ nhật",
+   "pinyin": "rì",
+   "nghia": "mặt trời",
+   "docAm": "日",
+   "chuChua": [
+    {
+     "hanzi": "是",
+     "pinyin": "shì",
+     "nghia": "là"
+    }
+   ]
+  },
+  {
+   "boThu": "人",
+   "ten": "Bộ nhân",
+   "pinyin": "rén",
+   "nghia": "con người",
+   "docAm": "人",
+   "chuChua": [
+    {
+     "hanzi": "是",
+     "pinyin": "shì",
+     "nghia": "là"
+    },
+    {
+     "hanzi": "认",
+     "pinyin": "rèn",
+     "nghia": "nhận biết"
+    }
+   ]
+  }
+ ],
+ "ghepChu": [
+  {
+   "chu": "什",
+   "phan": [
+    "亻",
+    "十"
+   ]
+  },
+  {
+   "chu": "名",
+   "phan": [
+    "夕",
+    "口"
+   ]
+  },
+  {
+   "chu": "字",
+   "phan": [
+    "宀",
+    "子"
+   ]
+  },
+  {
+   "chu": "我",
+   "phan": [
+    "手",
+    "戈"
+   ]
+  },
+  {
+   "chu": "是",
+   "phan": [
+    "日",
+    "下",
+    "人"
+   ]
+  },
+  {
+   "chu": "请",
+   "phan": [
+    "讠",
+    "青"
+   ]
+  },
+  {
+   "chu": "问",
+   "phan": [
+    "门",
+    "口"
+   ]
+  },
+  {
+   "chu": "认",
+   "phan": [
+    "讠",
+    "人"
+   ]
+  },
+  {
+   "chu": "识",
+   "phan": [
+    "讠",
+    "只"
+   ]
+  },
+  {
+   "chu": "安",
+   "phan": [
+    "宀",
+    "女"
+   ]
+  },
+  {
+   "chu": "李",
+   "phan": [
+    "木",
+    "子"
+   ]
+  }
+ ],
+ "chang": [
+  {
+   "so": 1,
+   "ten": "Ôn tập từ vựng 1",
+   "tu": [
+    "请问",
+    "你",
+    "叫",
+    "什么",
+    "名字",
+    "我",
+    "我们",
+    "问",
+    "请",
+    "进",
+    "坐",
+    "说"
+   ],
+   "ghepChu": [
+    "什",
+    "名",
+    "字",
+    "我",
+    "请",
+    "问"
+   ]
+  },
+  {
+   "so": 2,
+   "ten": "Ôn tập từ vựng 2",
+   "tu": [
+    "不",
+    "是",
+    "对不起",
+    "没关系",
+    "没事"
+   ],
+   "ghepChu": [
+    "是"
+   ]
+  },
+  {
+   "so": 3,
+   "ten": "Ôn tập từ vựng 3",
+   "tu": [
+    "很",
+    "高兴",
+    "认识",
+    "也",
+    "只"
+   ],
+   "ghepChu": [
+    "认",
+    "识"
+   ]
+  }
+ ],
+ "nguPhap": [
+  {
+   "id": "shi",
+   "ten": "A 是 B",
+   "congThuc": [
+    [
+     [
+      "A",
+      "dt"
+     ],
+     [
+      "是",
+      "codinh"
+     ],
+     [
+      "B",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "A",
+      "dt"
+     ],
+     [
+      "不是",
+      "codinh"
+     ],
+     [
+      "B",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "A",
+      "dt"
+     ],
+     [
+      "是不是",
+      "codinh"
+     ],
+     [
+      "B",
+      "dt"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "Câu giới thiệu, xác nhận A là ai, là gì. 是 nghĩa là \"là\"; phủ định thêm 不 thành 不是; hỏi \"có phải… không\" dùng 是不是.",
+   "y": [
+    {
+     "noiDung": "Khẳng định: A là B",
+     "viDu": [
+      [
+       "我是老师，你们是学生。",
+       "Wǒ shì lǎoshī, nǐmen shì xué·shēng.",
+       "Tôi là giáo viên, các bạn là học sinh."
+      ]
+     ]
+    },
+    {
+     "noiDung": "Phủ định: A không phải là B",
+     "viDu": [
+      [
+       "我不是白家月。",
+       "Wǒ bú shì Bái Jiāyuè.",
+       "Tôi không phải là Bạch Gia Nguyệt."
+      ]
+     ]
+    },
+    {
+     "noiDung": "Câu hỏi: A có phải là B không?",
+     "viDu": [
+      [
+       "你是不是陈天中同学？",
+       "Nǐ shì bu shì Chén Tiānzhōng tóngxué?",
+       "Bạn có phải là bạn Trần Thiên Trung không?"
+      ]
+     ]
+    }
+   ],
+   "luuY": "Trong 不是, 不 đọc thanh 2 (bú shì); trong 是不是, 不 đọc nhẹ (shì bu shì)."
+  },
+  {
+   "id": "bu",
+   "ten": "不 + ĐT / TT",
+   "congThuc": [
+    [
+     [
+      "不",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ]
+    ],
+    [
+     [
+      "不",
+      "codinh"
+     ],
+     [
+      "TT",
+      "tt"
+     ]
+    ]
+   ],
+   "giaiThich": "不 đặt trước động từ hoặc tính từ để phủ định, nghĩa là \"không\".",
+   "y": [
+    {
+     "noiDung": "Phủ định động từ, tính từ",
+     "viDu": [
+      [
+       "我是老师，不是学生。",
+       "Wǒ shì lǎoshī, bú shì xué·shēng.",
+       "Tôi là giáo viên, không phải học sinh."
+      ],
+      [
+       "我不认识白家月。",
+       "Wǒ bú rènshi Bái Jiāyuè.",
+       "Tôi không quen Bạch Gia Nguyệt."
+      ]
+     ]
+    }
+   ],
+   "luuY": "不 đứng trước chữ mang thanh 4 thì đọc thanh 2: 不是 bú shì, 不认识 bú rènshi."
+  },
+  {
+   "id": "ye",
+   "ten": "也 + ĐT / TT",
+   "congThuc": [
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "也",
+      "pho"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ]
+    ],
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "也",
+      "pho"
+     ],
+     [
+      "TT",
+      "tt"
+     ]
+    ]
+   ],
+   "giaiThich": "也 nghĩa là \"cũng\", đặt sau chủ ngữ và trước động từ hoặc tính từ.",
+   "y": [
+    {
+     "noiDung": "Người sau cũng giống người trước",
+     "viDu": [
+      [
+       "我是老师，王一飞也是老师。",
+       "Wǒ shì lǎoshī, Wáng Yīfēi yě shì lǎoshī.",
+       "Tôi là giáo viên, Vương Nhất Phi cũng là giáo viên."
+      ],
+      [
+       "我们很好，你们也很好。",
+       "Wǒmen hěn hǎo, nǐmen yě hěn hǎo.",
+       "Chúng tôi rất khỏe, các bạn cũng rất khỏe."
+      ]
+     ]
+    }
+   ],
+   "luuY": "也 luôn đứng sau chủ ngữ, không đứng đầu câu như \"cũng\" trong một số câu tiếng Việt."
+  },
+  {
+   "id": "shenme",
+   "ten": "ĐT + 什么 · 什么 + DT",
+   "congThuc": [
+    [
+     [
+      "ĐT",
+      "dgt"
+     ],
+     [
+      "什么",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "什么",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "什么 nghĩa là \"gì, cái gì\", dùng để hỏi. Đứng sau động từ để hỏi đối tượng của hành động, đứng trước danh từ để hỏi \"… gì\".",
+   "y": [
+    {
+     "noiDung": "ĐT + 什么: hỏi đối tượng của hành động",
+     "viDu": [
+      [
+       "我叫陈天中，你叫什么？",
+       "Wǒ jiào Chén Tiānzhōng, nǐ jiào shénme?",
+       "Tôi tên là Trần Thiên Trung, bạn tên gì?"
+      ]
+     ]
+    },
+    {
+     "noiDung": "什么 + DT: hỏi \"… gì\"",
+     "viDu": [
+      [
+       "同学，你叫什么名字？",
+       "Tóngxué, nǐ jiào shénme míngzi?",
+       "Bạn ơi, bạn tên là gì?"
+      ]
+     ]
+    }
+   ],
+   "luuY": "Trả lời thì thay 什么 bằng thông tin cần trả lời, giữ nguyên trật tự câu: 你叫什么名字？ → 我叫李文。"
+  },
+  {
+   "id": "qing",
+   "ten": "请 + ĐT",
+   "congThuc": [
+    [
+     [
+      "请",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ]
+    ]
+   ],
+   "giaiThich": "请 đặt trước động từ để mời hoặc đề nghị ai đó làm gì một cách lịch sự, nghĩa là \"mời…, xin…\".",
+   "y": [
+    {
+     "noiDung": "Mời ai đó làm gì",
+     "viDu": [
+      [
+       "王老师，您好！请进！",
+       "Wáng lǎoshī, nín hǎo! Qǐng jìn!",
+       "Chào thầy Vương! Mời thầy vào!"
+      ]
+     ]
+    },
+    {
+     "noiDung": "请问: xin hỏi (mở đầu câu hỏi lịch sự)",
+     "viDu": [
+      [
+       "请问，你是不是白家月同学？",
+       "Qǐngwèn, nǐ shì bu shì Bái Jiāyuè tóngxué?",
+       "Xin hỏi, bạn có phải là bạn Bạch Gia Nguyệt không?"
+      ]
+     ]
+    }
+   ],
+   "luuY": "请问 là cụm cố định \"xin hỏi\", lịch sự hơn hẳn chỉ dùng 问."
+  },
+  {
+   "id": "hen",
+   "ten": "很 + TT",
+   "congThuc": [
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "很",
+      "pho"
+     ],
+     [
+      "TT",
+      "tt"
+     ]
+    ]
+   ],
+   "giaiThich": "很 nghĩa là \"rất\", đặt trước tính từ (và một số động từ chỉ tình cảm như 爱).",
+   "y": [
+    {
+     "noiDung": "Miêu tả trạng thái, tính chất",
+     "viDu": [
+      [
+       "我很高兴。",
+       "Wǒ hěn gāoxìng.",
+       "Tôi rất vui."
+      ],
+      [
+       "很高兴认识你。",
+       "Hěn gāoxìng rènshi nǐ.",
+       "Rất vui được làm quen với bạn."
+      ]
+     ]
+    }
+   ],
+   "luuY": "Tính từ làm vị ngữ thường đi kèm 很; lúc đó 很 không còn nhấn mạnh \"rất\" nhiều: 我很好 = Tôi khỏe."
+  }
+ ]
+}

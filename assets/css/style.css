@@ -4,7 +4,7 @@
    ========================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=Quicksand:wght@500;600;700;800&display=swap');
 @import url('https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/lxgwwenkai-regular.css');
-@import url('header.css?v=20261023o');   /* header + chân trang chung, tách riêng để học liệu dựng riêng dùng lại được */
+@import url('header.css?v=20261023r');   /* header + chân trang chung, tách riêng để học liệu dựng riêng dùng lại được */
 /* Phông Quicksand không có 4 chữ ǖ ǘ ǚ ǜ (ü mang dấu thanh): gói phông 3 KB vẽ sẵn 4 chữ này theo nét Quicksand Bold,
    chỉ áp dụng đúng 4 ký tự đó (unicode-range), các chữ khác vẫn dùng Quicksand. Trang Nhập môn dùng cùng phông này. */
 @font-face{font-family:'PyTone';src:url(data:font/woff2;base64,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) format('woff2');font-weight:100 900;unicode-range:U+01D6,U+01D8,U+01DA,U+01DC}
@@ -729,3 +729,58 @@ body::after{content:"";position:fixed;left:50%;top:56%;width:min(72vw,560px);asp
 @media(max-width:600px){.tvb-chua{grid-template-columns:repeat(2,1fr)}.tvb-bo{font-size:50px;min-width:54px}}
 .tv-che-do button{white-space:nowrap}
 @media(max-width:600px){.tv-che-do{gap:4px}.tv-che-do button{padding:6px 10px;font-size:12.5px}}
+
+/* =========================================================
+   NGỮ PHÁP · LƯỢT NHANH (đồng hồ) · TỔNG KẾT LỚP
+   ========================================================= */
+:root{--np-codinh:#b31916;--np-dt:#0b5a2a;--np-dgt:#a8530d;--np-tt:#8a6414;--np-st:#6b6257;--np-pho:#6d4c8c}   /* màu thành phần công thức (Quy chuẩn Ngữ pháp) */
+.np-chu-giai{max-width:760px;margin:0 auto 12px;font-size:12.5px;font-weight:700;color:var(--muted);line-height:2;text-align:center}
+.np-chu-giai .np-o{padding:1px 6px;font-size:12px}
+.np-nut{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.np-tron{width:36px;height:36px;border-radius:50%;border:2px solid var(--line);background:#fff;color:var(--muted);font:inherit;font-weight:800;cursor:pointer}
+.np-tron.qua{border-color:var(--brand);color:var(--brand)}
+.np-tron.on{background:var(--brand);border-color:var(--brand);color:#fff}
+.np-vach{max-width:760px;margin:0 auto 14px}
+#ngu-phap{max-width:760px;margin:0 auto}
+.np-the{padding:20px 18px}
+.np-dau{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.np-so{width:30px;height:30px;border-radius:50%;background:var(--gold);color:#3b2a00;display:grid;place-items:center;font-weight:800;flex-shrink:0}
+.np-ten{margin:0;color:var(--brand);font-size:24px}
+.np-ct{display:flex;flex-direction:column;gap:8px;background:var(--surface-2);border:1px solid var(--line-soft);border-radius:14px;padding:12px;margin-bottom:12px}
+.np-dong{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.np-dong i{font-style:normal;color:var(--muted);font-weight:800}
+.np-o{display:inline-block;border-radius:8px;padding:5px 10px;font-weight:800;font-size:15px;color:#fff}
+.np-codinh{background:var(--np-codinh);font-family:var(--font-cn)}.np-dt{background:var(--np-dt)}.np-dgt{background:var(--np-dgt)}.np-tt{background:var(--np-tt)}.np-st{background:var(--np-st)}.np-pho{background:var(--np-pho);font-family:var(--font-cn)}
+.np-giai{font-weight:700;color:var(--ink);line-height:1.6;margin:0 0 12px}
+.np-y{margin-top:12px}
+.np-y-nd{font-weight:800;color:var(--brand);font-size:14.5px;margin-bottom:6px}
+.np-vd{display:flex;align-items:flex-start;gap:8px;background:#fff;border:1px solid var(--line-soft);border-radius:12px;padding:8px 10px;margin-bottom:6px}
+.np-vd-chu{flex:1;min-width:0}
+.np-vd-chu .hanzi{font-size:19px;line-height:1.5;color:var(--ink)}
+.np-vd-py{color:var(--red);font-weight:700;font-size:13.5px}
+.np-vd-vi{color:var(--muted);font-weight:700;font-size:13.5px}
+.np-hien{flex-shrink:0;border:1px solid var(--line);background:var(--surface-2);border-radius:999px;padding:3px 10px;font:inherit;font-size:12px;font-weight:800;color:var(--brand);cursor:pointer}
+.np-luu-y{margin:14px 0 0;background:#fff7d6;border-radius:10px;padding:8px 12px;font-weight:700;font-size:14px;color:#7a5a12;line-height:1.55}
+.np-dieu-huong{max-width:760px;margin:14px auto 0}
+.np-xong{max-width:560px;margin:0 auto;text-align:center;padding:26px 18px}
+.np-xong-ico{font-size:46px}
+@media(max-width:600px){.np-ten{font-size:21px}.np-o{font-size:14px;padding:4px 8px}.np-vd-chu .hanzi{font-size:17px}}
+/* đồng hồ lượt nhanh */
+.lt-dong-ho{font-weight:800;font-size:14px;color:var(--brand);background:var(--brand-soft);border-radius:999px;padding:4px 10px;font-variant-numeric:tabular-nums}
+.lt-dong-ho.gap{color:#fff;background:var(--no)}
+.lt-het-gio{margin:0 0 10px;font-weight:800;color:var(--no)}
+/* tổng kết lớp */
+.tk-hop{max-width:860px;margin:22px auto 0;background:#fff;border:1px solid var(--line-soft);border-radius:16px;padding:12px 14px}
+.tk-hop summary{cursor:pointer;font-weight:800;color:var(--brand)}
+.tk-ghi{font-size:13px;color:var(--muted);font-weight:700;line-height:1.5}
+.tk-thanh{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-end;margin-bottom:10px}
+.tk-thanh label{display:flex;flex-direction:column;font-size:12px;font-weight:800;color:var(--muted);gap:3px}
+.tk-thanh input{font:inherit;border:1.5px solid var(--line);border-radius:10px;padding:7px 9px}
+.tk-tom{font-weight:800;color:var(--ink);margin:4px 0 8px}
+/* thẻ nhiều liên kết (Ôn tập từ vựng 1, 2, 3) trên trang bài */
+.card .lien-ket-nho{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.card .lien-ket-nho a{border:1.5px solid var(--brand);border-radius:999px;padding:5px 12px;font-weight:800;font-size:13px;text-decoration:none;color:var(--brand)}
+.card .lien-ket-nho a:hover{background:var(--brand);color:#fff}
+/* hàng đầu câu trên điện thoại: gọn lại khi có đồng hồ */
+.lt-dong-ho{white-space:nowrap}
+@media(max-width:600px){.lt-dau-nut{gap:4px}.lt-dau-nut .tv-sao{padding:5px 9px}.lt-dau-nut .tv-sao span{display:none}.lt-dong-ho{padding:3px 8px;font-size:13px}.lt-dem{font-size:12.5px}}
