@@ -482,13 +482,13 @@
    "Cụm từ": "去中国 | qù Zhōngguó\n去泰国 | qù Tàiguó\n去法国 | qù Fǎguó\n去越南 | qù Yuènán",
    "Đọc từ": "",
    "_nhom": "moRong",
-   "Câu 1": "我去泰国，不去法国。",
-   "Pinyin câu 1": "Wǒ qù Tàiguó, bú qù Fǎguó.",
-   "Nghĩa câu 1": "Tôi đi Thái Lan, không đi Pháp.",
+   "Câu 1": "我们去越南。",
+   "Pinyin câu 1": "Wǒmen qù Yuènán.",
+   "Nghĩa câu 1": "Chúng tôi đi Việt Nam.",
    "Đọc câu 1": "",
-   "Câu 2": "妹妹很想去中国。",
-   "Pinyin câu 2": "Mèimei hěn xiǎng qù Zhōngguó.",
-   "Nghĩa câu 2": "Em gái rất muốn đi Trung Quốc.",
+   "Câu 2": "你去哪国？",
+   "Pinyin câu 2": "Nǐ qù nǎ guó?",
+   "Nghĩa câu 2": "Bạn đi nước nào?",
    "Đọc câu 2": ""
   },
   {
@@ -507,9 +507,9 @@
    "Pinyin câu 1": "Zhōngguó hěn dà, Yuènán hěn xiǎo.",
    "Nghĩa câu 1": "Trung Quốc rất lớn, Việt Nam rất nhỏ.",
    "Đọc câu 1": "",
-   "Câu 2": "我的学生是越南人。",
-   "Pinyin câu 2": "Wǒ de xué·shēng shì Yuènán rén.",
-   "Nghĩa câu 2": "Học sinh của tôi là người Việt Nam.",
+   "Câu 2": "我是越南人。",
+   "Pinyin câu 2": "Wǒ shì Yuènán rén.",
+   "Nghĩa câu 2": "Tôi là người Việt Nam.",
    "Đọc câu 2": ""
   },
   {
@@ -566,9 +566,9 @@
    "Cụm từ": "好朋友 | hǎo péngyou\n朋友们 | péngyoumen\n我的朋友 | wǒ de péngyou\n这个朋友 | zhè ge péngyou",
    "Đọc từ": "",
    "_nhom": "moRong",
-   "Câu 1": "我的朋友是泰国人。",
-   "Pinyin câu 1": "Wǒ de péngyou shì Tàiguó rén.",
-   "Nghĩa câu 1": "Bạn tôi là người Thái Lan.",
+   "Câu 1": "这是我的好朋友。",
+   "Pinyin câu 1": "Zhè shì wǒ de hǎo péngyou.",
+   "Nghĩa câu 1": "Đây là bạn thân của tôi.",
    "Đọc câu 1": "",
    "Câu 2": "他不是你的朋友吗？",
    "Pinyin câu 2": "Tā bú shì nǐ de péngyou ma?",
@@ -584,16 +584,16 @@
    "Nghĩa tiếng Việt": "bạn trai",
    "Cấp HSK": "1",
    "Thuận bút": "男",
-   "Cụm từ": "她的男朋友 | tā de nánpéngyou",
+   "Cụm từ": "她的男朋友 | tā de nánpéngyou\n我的男朋友 | wǒ de nánpéngyou\n有男朋友 | yǒu nánpéngyou",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "我是白家月的男朋友。",
    "Pinyin câu 1": "Wǒ shì Bái Jiāyuè de nánpéngyou.",
    "Nghĩa câu 1": "Tôi là bạn trai của Bạch Gia Nguyệt.",
    "Đọc câu 1": "",
-   "Câu 2": "她的男朋友是中文老师。",
-   "Pinyin câu 2": "Tā de nánpéngyou shì Zhōngwén lǎoshī.",
-   "Nghĩa câu 2": "Bạn trai của cô ấy là giáo viên tiếng Trung.",
+   "Câu 2": "你有男朋友吗？",
+   "Pinyin câu 2": "Nǐ yǒu nánpéngyou ma?",
+   "Nghĩa câu 2": "Bạn có bạn trai không?",
    "Đọc câu 2": ""
   },
   {
@@ -605,7 +605,7 @@
    "Nghĩa tiếng Việt": "đàn ông",
    "Cấp HSK": "1",
    "Thuận bút": "",
-   "Cụm từ": "",
+   "Cụm từ": "这个男人 | zhè ge nánrén\n那个男人 | nà ge nánrén\n好男人 | hǎo nánrén",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "那个男人是我爸爸。",
@@ -626,7 +626,7 @@
    "Nghĩa tiếng Việt": "phụ nữ, đàn bà",
    "Cấp HSK": "1",
    "Thuận bút": "",
-   "Cụm từ": "",
+   "Cụm từ": "这个女人 | zhè ge nǚrén\n那个女人 | nà ge nǚrén",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "那个女人是我妈妈。",
@@ -647,7 +647,7 @@
    "Nghĩa tiếng Việt": "nam sinh, học sinh nam",
    "Cấp HSK": "1",
    "Thuận bút": "",
-   "Cụm từ": "男生们 | nánshēngmen",
+   "Cụm từ": "男生们 | nánshēngmen\n这个男生 | zhè ge nánshēng",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "这个男生是我同学。",
@@ -668,7 +668,7 @@
    "Nghĩa tiếng Việt": "nữ sinh, học sinh nữ",
    "Cấp HSK": "1",
    "Thuận bút": "",
-   "Cụm từ": "女生们 | nǚshēngmen",
+   "Cụm từ": "女生们 | nǚshēngmen\n那个女生 | nà ge nǚshēng",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "那个女生是我的同学。",
@@ -710,7 +710,7 @@
    "Nghĩa tiếng Việt": "họ, bọn họ",
    "Cấp HSK": "1",
    "Thuận bút": "",
-   "Cụm từ": "",
+   "Cụm từ": "他们的老师 | tāmen de lǎoshī\n他们的国家 | tāmen de guójiā",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "他们是哪国人？",
@@ -734,9 +734,9 @@
    "Cụm từ": "我爸爸 | wǒ bàba\n爸爸妈妈 | bàba māma",
    "Đọc từ": "",
    "_nhom": "moRong",
-   "Câu 1": "我爸爸很忙，我不忙。",
-   "Pinyin câu 1": "Wǒ bàba hěn máng, wǒ bù máng.",
-   "Nghĩa câu 1": "Bố tôi rất bận, tôi không bận.",
+   "Câu 1": "我爸爸是中文老师。",
+   "Pinyin câu 1": "Wǒ bàba shì Zhōngwén lǎoshī.",
+   "Nghĩa câu 1": "Bố tôi là giáo viên tiếng Trung.",
    "Đọc câu 1": "",
    "Câu 2": "他爸爸妈妈很好。",
    "Pinyin câu 2": "Tā bàba māma hěn hǎo.",
@@ -755,13 +755,13 @@
    "Cụm từ": "我妈妈 | wǒ māma\n爸爸妈妈 | bàba māma",
    "Đọc từ": "",
    "_nhom": "moRong",
-   "Câu 1": "妈妈不太高兴。",
-   "Pinyin câu 1": "Māma bú tài gāoxìng.",
-   "Nghĩa câu 1": "Mẹ không vui lắm.",
+   "Câu 1": "我妈妈工作很忙。",
+   "Pinyin câu 1": "Wǒ māma gōngzuò hěn máng.",
+   "Nghĩa câu 1": "Mẹ tôi công việc rất bận.",
    "Đọc câu 1": "",
-   "Câu 2": "白家月很想她的爸爸妈妈。",
-   "Pinyin câu 2": "Bái Jiāyuè hěn xiǎng tā de bàba māma.",
-   "Nghĩa câu 2": "Bạch Gia Nguyệt rất nhớ bố mẹ cô ấy.",
+   "Câu 2": "妈妈，我很想你！",
+   "Pinyin câu 2": "Māma, wǒ hěn xiǎng nǐ!",
+   "Nghĩa câu 2": "Mẹ ơi, con nhớ mẹ lắm!",
    "Đọc câu 2": ""
   },
   {
@@ -773,7 +773,7 @@
    "Nghĩa tiếng Việt": "ông nội",
    "Cấp HSK": "1",
    "Thuận bút": "爷",
-   "Cụm từ": "爷爷奶奶 | yéye nǎinai",
+   "Cụm từ": "爷爷奶奶 | yéye nǎinai\n我爷爷 | wǒ yéye",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "我爷爷奶奶是老师。",
@@ -794,12 +794,12 @@
    "Nghĩa tiếng Việt": "bà nội",
    "Cấp HSK": "1",
    "Thuận bút": "奶",
-   "Cụm từ": "爷爷奶奶 | yéye nǎinai",
+   "Cụm từ": "爷爷奶奶 | yéye nǎinai\n我奶奶 | wǒ nǎinai",
    "Đọc từ": "",
    "_nhom": "moRong",
-   "Câu 1": "我爷爷奶奶是老师。",
-   "Pinyin câu 1": "Wǒ yéye nǎinai shì lǎoshī.",
-   "Nghĩa câu 1": "Ông bà nội tôi là giáo viên.",
+   "Câu 1": "奶奶，您好！",
+   "Pinyin câu 1": "Nǎinai, nín hǎo!",
+   "Nghĩa câu 1": "Cháu chào bà ạ!",
    "Đọc câu 1": "",
    "Câu 2": "奶奶的工作不忙。",
    "Pinyin câu 2": "Nǎinai de gōngzuò bù máng.",
@@ -815,7 +815,7 @@
    "Nghĩa tiếng Việt": "bà ngoại",
    "Cấp HSK": "7-9",
    "Thuận bút": "姥",
-   "Cụm từ": "姥姥姥爷 | lǎolao lǎoye",
+   "Cụm từ": "姥姥姥爷 | lǎolao lǎoye\n我姥姥 | wǒ lǎolao",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "姥姥很高兴。",
@@ -836,7 +836,7 @@
    "Nghĩa tiếng Việt": "ông ngoại",
    "Cấp HSK": "7-9",
    "Thuận bút": "",
-   "Cụm từ": "姥姥姥爷 | lǎolao lǎoye",
+   "Cụm từ": "姥姥姥爷 | lǎolao lǎoye\n我姥爷 | wǒ lǎoye",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "姥爷是中文老师。",
@@ -857,7 +857,7 @@
    "Nghĩa tiếng Việt": "anh trai",
    "Cấp HSK": "1",
    "Thuận bút": "哥",
-   "Cụm từ": "我哥哥 | wǒ gēge",
+   "Cụm từ": "我哥哥 | wǒ gēge\n有哥哥 | yǒu gēge\n哥哥的工作 | gēge de gōngzuò",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "你有哥哥、姐姐、弟弟、妹妹吗？",
@@ -878,12 +878,12 @@
    "Nghĩa tiếng Việt": "em trai",
    "Cấp HSK": "1",
    "Thuận bút": "弟",
-   "Cụm từ": "我弟弟 | wǒ dìdi",
+   "Cụm từ": "我弟弟 | wǒ dìdi\n有弟弟 | yǒu dìdi",
    "Đọc từ": "",
    "_nhom": "moRong",
-   "Câu 1": "你有哥哥、姐姐、弟弟、妹妹吗？",
-   "Pinyin câu 1": "Nǐ yǒu gēge, jiějie, dìdi, mèimei ma?",
-   "Nghĩa câu 1": "Bạn có anh trai, chị gái, em trai, em gái không?",
+   "Câu 1": "弟弟是我的好朋友。",
+   "Pinyin câu 1": "Dìdi shì wǒ de hǎo péngyou.",
+   "Nghĩa câu 1": "Em trai là bạn thân của tôi.",
    "Đọc câu 1": "",
    "Câu 2": "弟弟是学生，不工作。",
    "Pinyin câu 2": "Dìdi shì xué·shēng, bù gōngzuò.",
@@ -899,12 +899,12 @@
    "Nghĩa tiếng Việt": "em gái",
    "Cấp HSK": "1",
    "Thuận bút": "妹",
-   "Cụm từ": "我妹妹 | wǒ mèimei",
+   "Cụm từ": "我妹妹 | wǒ mèimei\n有妹妹 | yǒu mèimei",
    "Đọc từ": "",
    "_nhom": "moRong",
-   "Câu 1": "妹妹很想去中国。",
-   "Pinyin câu 1": "Mèimei hěn xiǎng qù Zhōngguó.",
-   "Nghĩa câu 1": "Em gái rất muốn đi Trung Quốc.",
+   "Câu 1": "我妹妹是学生。",
+   "Pinyin câu 1": "Wǒ mèimei shì xué·shēng.",
+   "Nghĩa câu 1": "Em gái tôi là học sinh.",
    "Đọc câu 1": "",
    "Câu 2": "我妹妹是中文老师。",
    "Pinyin câu 2": "Wǒ mèimei shì Zhōngwén lǎoshī.",
@@ -920,7 +920,7 @@
    "Nghĩa tiếng Việt": "có",
    "Cấp HSK": "1",
    "Thuận bút": "有",
-   "Cụm từ": "",
+   "Cụm từ": "有哥哥 | yǒu gēge\n有姐姐 | yǒu jiějie\n有朋友 | yǒu péngyou\n有工作 | yǒu gōngzuò",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "你家有谁？",
@@ -941,7 +941,7 @@
    "Nghĩa tiếng Việt": "không có",
    "Cấp HSK": "1",
    "Thuận bút": "",
-   "Cụm từ": "没有哥哥 | méi·yǒu gēge",
+   "Cụm từ": "没有哥哥 | méi·yǒu gēge\n没有工作 | méi·yǒu gōngzuò\n没有朋友 | méi·yǒu péngyou",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "我没有哥哥。",
@@ -962,7 +962,7 @@
    "Nghĩa tiếng Việt": "làm",
    "Cấp HSK": "1",
    "Thuận bút": "做",
-   "Cụm từ": "做什么工作 | zuò shénme gōngzuò",
+   "Cụm từ": "做什么工作 | zuò shénme gōngzuò\n做什么 | zuò shénme",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "你们做什么工作？",
@@ -977,36 +977,6 @@
  ],
  "boThu": [
   {
-   "boThu": "囗",
-   "ten": "Bộ vi",
-   "pinyin": "wéi",
-   "nghia": "vây quanh",
-   "docAm": "国字框",
-   "chuChua": [
-    {
-     "hanzi": "国",
-     "pinyin": "guó",
-     "nghia": "nước, quốc gia"
-    }
-   ],
-   "tenGoi": "国字框",
-   "tenGoiPinyin": "guózìkuàng"
-  },
-  {
-   "boThu": "玉",
-   "ten": "Bộ ngọc",
-   "pinyin": "yù",
-   "nghia": "ngọc, đá quý",
-   "docAm": "玉",
-   "chuChua": [
-    {
-     "hanzi": "国",
-     "pinyin": "guó",
-     "nghia": "nước, quốc gia"
-    }
-   ]
-  },
-  {
    "boThu": "氵",
    "ten": "Bộ ba chấm thủy",
    "pinyin": "shuǐ",
@@ -1017,11 +987,6 @@
      "hanzi": "法",
      "pinyin": "fǎ",
      "nghia": "pháp (trong 法国)"
-    },
-    {
-     "hanzi": "汉",
-     "pinyin": "hàn",
-     "nghia": "Hán (trong 汉语)"
     }
    ],
    "tenGoi": "三点水",
@@ -1066,30 +1031,6 @@
      "hanzi": "谁",
      "pinyin": "shéi",
      "nghia": "ai"
-    }
-   ]
-  },
-  {
-   "boThu": "口",
-   "ten": "Bộ khẩu",
-   "pinyin": "kǒu",
-   "nghia": "miệng",
-   "docAm": "口",
-   "chuChua": [
-    {
-     "hanzi": "吗",
-     "pinyin": "ma",
-     "nghia": "không? à?"
-    },
-    {
-     "hanzi": "哪",
-     "pinyin": "nǎ",
-     "nghia": "nào"
-    },
-    {
-     "hanzi": "喂",
-     "pinyin": "wèi",
-     "nghia": "a lô, này"
     }
    ]
   },
@@ -1150,34 +1091,6 @@
    "tenGoiPinyin": "zǒuzhī"
   },
   {
-   "boThu": "又",
-   "ten": "Bộ hựu",
-   "pinyin": "yòu",
-   "nghia": "tay; lại",
-   "docAm": "又",
-   "chuChua": [
-    {
-     "hanzi": "对",
-     "pinyin": "duì",
-     "nghia": "đúng"
-    }
-   ]
-  },
-  {
-   "boThu": "寸",
-   "ten": "Bộ thốn",
-   "pinyin": "cùn",
-   "nghia": "tấc (đơn vị đo)",
-   "docAm": "寸",
-   "chuChua": [
-    {
-     "hanzi": "对",
-     "pinyin": "duì",
-     "nghia": "đúng"
-    }
-   ]
-  },
-  {
    "boThu": "目",
    "ten": "Bộ mục",
    "pinyin": "mù",
@@ -1226,13 +1139,6 @@
  },
  "ghepChu": [
   {
-   "chu": "国",
-   "phan": [
-    "囗",
-    "玉"
-   ]
-  },
-  {
    "chu": "法",
    "phan": [
     "氵",
@@ -1275,13 +1181,6 @@
    ]
   },
   {
-   "chu": "对",
-   "phan": [
-    "又",
-    "寸"
-   ]
-  },
-  {
    "chu": "想",
    "phan": [
     "相",
@@ -1305,8 +1204,7 @@
    ],
    "ghepChu": [
     "的",
-    "法",
-    "国"
+    "法"
    ]
   },
   {
@@ -1372,7 +1270,6 @@
     "吗",
     "忙",
     "还",
-    "对",
     "想"
    ]
   }

@@ -104,7 +104,7 @@
    "Nghĩa tiếng Việt": "tên",
    "Cấp HSK": "1",
    "Thuận bút": "名字",
-   "Cụm từ": "什么名字 | shénme míngzi",
+   "Cụm từ": "什么名字 | shénme míngzi\n叫什么名字 | jiào shénme míngzi",
    "Đọc từ": "",
    "_nhom": "tuVung",
    "Câu 1": "你学生叫什么名字？",
@@ -188,7 +188,7 @@
    "Nghĩa tiếng Việt": "xin lỗi",
    "Cấp HSK": "1",
    "Thuận bút": "对起",
-   "Cụm từ": "",
+   "Cụm từ": "对不起你 | duìbuqǐ nǐ\n对不起您 | duìbuqǐ nín",
    "Đọc từ": "",
    "_nhom": "tuVung",
    "Câu 1": "老师，对不起您。",
@@ -335,7 +335,7 @@
    "Nghĩa tiếng Việt": "chúng tôi, chúng ta",
    "Cấp HSK": "1",
    "Thuận bút": "",
-   "Cụm từ": "",
+   "Cụm từ": "我们老师 | wǒmen lǎoshī\n我们同学 | wǒmen tóngxué",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "我们很好。",
@@ -398,7 +398,7 @@
    "Nghĩa tiếng Việt": "vào",
    "Cấp HSK": "1",
    "Thuận bút": "进",
-   "Cụm từ": "请进 | qǐng jìn",
+   "Cụm từ": "请进 | qǐng jìn\n不进 | bú jìn",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "请进！",
@@ -419,7 +419,7 @@
    "Nghĩa tiếng Việt": "ngồi",
    "Cấp HSK": "1",
    "Thuận bút": "坐",
-   "Cụm từ": "请坐 | qǐng zuò",
+   "Cụm từ": "请坐 | qǐng zuò\n不坐 | bú zuò",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "请坐！",
@@ -440,7 +440,7 @@
    "Nghĩa tiếng Việt": "nói",
    "Cấp HSK": "1",
    "Thuận bút": "说",
-   "Cụm từ": "说什么 | shuō shénme",
+   "Cụm từ": "说什么 | shuō shénme\n说汉语 | shuō Hànyǔ\n请说 | qǐng shuō",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "你说什么？",
@@ -461,7 +461,7 @@
    "Nghĩa tiếng Việt": "chỉ",
    "Cấp HSK": "2",
    "Thuận bút": "只",
-   "Cụm từ": "只认识 | zhǐ rènshi",
+   "Cụm từ": "只认识 | zhǐ rènshi\n只说汉语 | zhǐ shuō Hànyǔ",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "我只认识你，不认识陈天中。",
@@ -524,7 +524,7 @@
    "Nghĩa tiếng Việt": "nước Mỹ",
    "Cấp HSK": "TR",
    "Thuận bút": "美",
-   "Cụm từ": "美国学生 | Měiguó xué·shēng",
+   "Cụm từ": "美国学生 | Měiguó xué·shēng\n美国老师 | Měiguó lǎoshī",
    "Đọc từ": "",
    "_nhom": "moRong",
    "Câu 1": "我不是美国学生。",
@@ -588,27 +588,6 @@
    ]
   },
   {
-   "boThu": "亻",
-   "ten": "Bộ nhân đứng",
-   "pinyin": "rén",
-   "nghia": "chỉ con người",
-   "docAm": "单人旁",
-   "chuChua": [
-    {
-     "hanzi": "你",
-     "pinyin": "nǐ",
-     "nghia": "bạn"
-    },
-    {
-     "hanzi": "什",
-     "pinyin": "shén",
-     "nghia": "gì (trong 什么)"
-    }
-   ],
-   "tenGoi": "单人旁",
-   "tenGoiPinyin": "dānrénpáng"
-  },
-  {
    "boThu": "夕",
    "ten": "Bộ tịch",
    "pinyin": "xī",
@@ -623,96 +602,6 @@
    ]
   },
   {
-   "boThu": "口",
-   "ten": "Bộ khẩu",
-   "pinyin": "kǒu",
-   "nghia": "cái miệng",
-   "docAm": "口",
-   "chuChua": [
-    {
-     "hanzi": "名",
-     "pinyin": "míng",
-     "nghia": "tên"
-    },
-    {
-     "hanzi": "叫",
-     "pinyin": "jiào",
-     "nghia": "gọi, tên là"
-    },
-    {
-     "hanzi": "问",
-     "pinyin": "wèn",
-     "nghia": "hỏi"
-    }
-   ]
-  },
-  {
-   "boThu": "宀",
-   "ten": "Bộ miên",
-   "pinyin": "mián",
-   "nghia": "mái nhà",
-   "docAm": "宝盖头",
-   "chuChua": [
-    {
-     "hanzi": "字",
-     "pinyin": "zì",
-     "nghia": "chữ"
-    },
-    {
-     "hanzi": "安",
-     "pinyin": "ān",
-     "nghia": "an, bình an"
-    }
-   ],
-   "tenGoi": "宝盖头",
-   "tenGoiPinyin": "bǎogàitóu"
-  },
-  {
-   "boThu": "子",
-   "ten": "Bộ tử",
-   "pinyin": "zǐ",
-   "nghia": "chỉ con cái",
-   "docAm": "子",
-   "chuChua": [
-    {
-     "hanzi": "字",
-     "pinyin": "zì",
-     "nghia": "chữ"
-    },
-    {
-     "hanzi": "李",
-     "pinyin": "Lǐ",
-     "nghia": "họ Lý"
-    }
-   ]
-  },
-  {
-   "boThu": "讠",
-   "ten": "Bộ ngôn",
-   "pinyin": "yán",
-   "nghia": "lời nói, nói năng",
-   "docAm": "言字旁",
-   "chuChua": [
-    {
-     "hanzi": "请",
-     "pinyin": "qǐng",
-     "nghia": "mời"
-    },
-    {
-     "hanzi": "认",
-     "pinyin": "rèn",
-     "nghia": "nhận biết"
-    },
-    {
-     "hanzi": "识",
-     "pinyin": "shí",
-     "nghia": "biết"
-    }
-   ],
-   "tenGoi": "言字旁",
-   "tenGoiPinyin": "yánzìpáng"
-  },
-  {
    "boThu": "青",
    "ten": "Bộ thanh",
    "pinyin": "qīng",
@@ -723,34 +612,6 @@
      "hanzi": "请",
      "pinyin": "qǐng",
      "nghia": "mời"
-    }
-   ]
-  },
-  {
-   "boThu": "门",
-   "ten": "Bộ môn",
-   "pinyin": "mén",
-   "nghia": "cái cửa",
-   "docAm": "门",
-   "chuChua": [
-    {
-     "hanzi": "问",
-     "pinyin": "wèn",
-     "nghia": "hỏi"
-    }
-   ]
-  },
-  {
-   "boThu": "女",
-   "ten": "Bộ nữ",
-   "pinyin": "nǚ",
-   "nghia": "chỉ con gái, phụ nữ",
-   "docAm": "女",
-   "chuChua": [
-    {
-     "hanzi": "安",
-     "pinyin": "ān",
-     "nghia": "an, bình an"
     }
    ]
   },

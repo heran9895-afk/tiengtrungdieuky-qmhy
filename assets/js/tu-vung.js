@@ -35,12 +35,14 @@
     var raw = MOT_KHO ? (TV.DL || {})[capDang] || {} : {}, GB = {}, BT = {};
     (raw.ghepChu || []).forEach(function (g) { GB[g.chu] = { k: '', p: g.phan }; });
     (raw.boThu || []).forEach(function (b) { BT[b.boThu] = { ten: b.ten, py: b.pinyin, nghia: b.nghia }; });
+    Object.keys(raw.thanhPhan || {}).forEach(function (k) { var t = raw.thanhPhan[k]; BT[k] = { ten: t.ten, py: t.pinyin, nghia: t.nghia }; });   // thành phần không phải bộ thủ (相, 亡…) theo bài giảng
     var CTg = { chu: Object.assign({}, CT.chu, GB), tp: Object.assign({}, CT.tp, BT) };
     var CT0 = CT; CT = CTg;
     try { return cauTaoHTML0(w); } finally { CT = CT0; }
   }
   function cauTaoHTML0(w) {
-    var chu = Array.from(new Set(Array.from(w.han))).filter(function (c) { return CT.chu[c]; });
+    // Trang bài học: chỉ chữ MỚI của từ (đúng những chữ có ô thuận bút) — chữ lặp trong bài hoặc đã học ở bài trước không hiện lại
+    var chu = Array.from(new Set(Array.from(w.han))).filter(function (c) { return CT.chu[c] && (!MOT_KHO || (w.but || '').indexOf(c) >= 0); });
     if (!chu.length) return '';
     var ghi = {};
     var dong = chu.map(function (c) {
