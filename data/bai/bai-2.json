@@ -852,7 +852,7 @@
      ]
     ]
    ],
-   "giaiThich": "Câu giới thiệu, xác nhận A là ai, là gì. 是 nghĩa là \"là\"; phủ định thêm 不 thành 不是; hỏi \"có phải… không\" dùng 是不是.",
+   "giaiThich": "Câu giới thiệu, xác nhận A **là ai, là gì**. 是 nghĩa là **\"là\"**; phủ định thêm 不 thành **不是**; hỏi \"có phải … không\" dùng **是不是**.",
    "y": [
     {
      "noiDung": "Khẳng định: A là B",
@@ -860,19 +860,73 @@
       [
        "是老师",
        "shì lǎoshī",
-       ""
+       "",
+       [
+        [
+         "是",
+         "codinh"
+        ],
+        [
+         "老师",
+         "dt"
+        ]
+       ]
       ],
       [
        "是学生",
        "shì xué·shēng",
-       ""
+       "",
+       [
+        [
+         "是",
+         "codinh"
+        ],
+        [
+         "学生",
+         "dt"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "我是老师，你们是学生。",
        "Wǒ shì lǎoshī, nǐmen shì xué·shēng.",
-       ""
+       "",
+       [
+        [
+         "我",
+         "dt"
+        ],
+        [
+         "是",
+         "codinh"
+        ],
+        [
+         "老师",
+         "dt"
+        ],
+        [
+         "，",
+         null
+        ],
+        [
+         "你们",
+         "dt"
+        ],
+        [
+         "是",
+         "codinh"
+        ],
+        [
+         "学生",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
       ]
      ]
     },
@@ -882,19 +936,57 @@
       [
        "不是老师",
        "bú shì lǎoshī",
-       ""
+       "",
+       [
+        [
+         "不是",
+         "codinh"
+        ],
+        [
+         "老师",
+         "dt"
+        ]
+       ]
       ],
       [
        "不是学生",
        "bú shì xué·shēng",
-       ""
+       "",
+       [
+        [
+         "不是",
+         "codinh"
+        ],
+        [
+         "学生",
+         "dt"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "我不是白家月。",
        "Wǒ bú shì Bái Jiāyuè.",
-       ""
+       "",
+       [
+        [
+         "我",
+         "dt"
+        ],
+        [
+         "不是",
+         "codinh"
+        ],
+        [
+         "白家月",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
       ]
      ]
     },
@@ -904,24 +996,65 @@
       [
        "是不是老师",
        "shì bu shì lǎoshī",
-       ""
+       "",
+       [
+        [
+         "是不是",
+         "codinh"
+        ],
+        [
+         "老师",
+         "dt"
+        ]
+       ]
       ],
       [
        "是不是学生",
        "shì bu shì xué·shēng",
-       ""
+       "",
+       [
+        [
+         "是不是",
+         "codinh"
+        ],
+        [
+         "学生",
+         "dt"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "你是不是陈天中同学？",
        "Nǐ shì bu shì Chén Tiānzhōng tóngxué?",
-       ""
+       "",
+       [
+        [
+         "你",
+         "dt"
+        ],
+        [
+         "是不是",
+         "codinh"
+        ],
+        [
+         "陈天中",
+         "dt"
+        ],
+        [
+         "同学？",
+         null
+        ]
+       ]
       ]
      ]
     }
    ],
-   "luuY": "Trong 不是, 不 đọc thanh 2 (bú shì); trong 是不是, 不 đọc nhẹ (shì bu shì)."
+   "luuY": [
+    "Trong **不是**, 不 đọc thanh 2: bú shì.",
+    "Trong **是不是**, 不 đọc nhẹ: shì bu shì."
+   ]
   },
   {
    "id": "bu",
@@ -948,7 +1081,7 @@
      ]
     ]
    ],
-   "giaiThich": "不 đặt trước động từ hoặc tính từ để phủ định, nghĩa là \"không\".",
+   "giaiThich": "不 đặt **trước động từ hoặc tính từ** để phủ định, nghĩa là **\"không\"**.",
    "y": [
     {
      "noiDung": "Phủ định động từ, tính từ",
@@ -956,39 +1089,117 @@
       [
        "不是",
        "bú shì",
-       ""
+       "",
+       [
+        [
+         "不",
+         "codinh"
+        ],
+        [
+         "是",
+         "dgt"
+        ]
+       ]
       ],
       [
        "不认识",
        "bú rènshi",
-       ""
+       "",
+       [
+        [
+         "不",
+         "codinh"
+        ],
+        [
+         "认识",
+         "dgt"
+        ]
+       ]
       ],
       [
        "不好",
        "bù hǎo",
-       ""
+       "",
+       [
+        [
+         "不",
+         "codinh"
+        ],
+        [
+         "好",
+         "tt"
+        ]
+       ]
       ],
       [
        "不高兴",
        "bù gāoxìng",
-       ""
+       "",
+       [
+        [
+         "不",
+         "codinh"
+        ],
+        [
+         "高兴",
+         "tt"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "我是老师，不是学生。",
        "Wǒ shì lǎoshī, bú shì xué·shēng.",
-       ""
+       "",
+       [
+        [
+         "我是老师，",
+         null
+        ],
+        [
+         "不",
+         "codinh"
+        ],
+        [
+         "是",
+         "dgt"
+        ],
+        [
+         "学生。",
+         null
+        ]
+       ]
       ],
       [
        "我不认识白家月。",
        "Wǒ bú rènshi Bái Jiāyuè.",
-       ""
+       "",
+       [
+        [
+         "我",
+         null
+        ],
+        [
+         "不",
+         "codinh"
+        ],
+        [
+         "认识",
+         "dgt"
+        ],
+        [
+         "白家月。",
+         null
+        ]
+       ]
       ]
      ]
     }
    ],
-   "luuY": "不 đứng trước chữ mang thanh 4 thì đọc thanh 2: 不是 bú shì, 不认识 bú rènshi."
+   "luuY": [
+    "不 đứng trước chữ **mang thanh 4** thì đọc **thanh 2**: 不是 bú shì, 不认识 bú rènshi."
+   ]
   },
   {
    "id": "ye",
@@ -1023,7 +1234,7 @@
      ]
     ]
    ],
-   "giaiThich": "也 nghĩa là \"cũng\", đặt sau chủ ngữ và trước động từ hoặc tính từ.",
+   "giaiThich": "也 nghĩa là **\"cũng\"**, đặt **sau chủ ngữ, trước động từ hoặc tính từ**.",
    "y": [
     {
      "noiDung": "Người sau cũng giống người trước",
@@ -1031,34 +1242,107 @@
       [
        "也是",
        "yě shì",
-       ""
+       "",
+       [
+        [
+         "也",
+         "pho"
+        ],
+        [
+         "是",
+         "dgt"
+        ]
+       ]
       ],
       [
        "也认识",
        "yě rènshi",
-       ""
+       "",
+       [
+        [
+         "也",
+         "pho"
+        ],
+        [
+         "认识",
+         "dgt"
+        ]
+       ]
       ],
       [
        "也很好",
        "yě hěn hǎo",
-       ""
+       "",
+       [
+        [
+         "也",
+         "pho"
+        ],
+        [
+         "很",
+         "pho"
+        ],
+        [
+         "好",
+         null
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "我是老师，王一飞也是老师。",
        "Wǒ shì lǎoshī, Wáng Yīfēi yě shì lǎoshī.",
-       ""
+       "",
+       [
+        [
+         "我是老师，王一飞",
+         null
+        ],
+        [
+         "也",
+         "pho"
+        ],
+        [
+         "是",
+         "dgt"
+        ],
+        [
+         "老师。",
+         null
+        ]
+       ]
       ],
       [
        "我们很好，你们也很好。",
        "Wǒmen hěn hǎo, nǐmen yě hěn hǎo.",
-       ""
+       "",
+       [
+        [
+         "我们很好，你们",
+         null
+        ],
+        [
+         "也",
+         "pho"
+        ],
+        [
+         "很",
+         "pho"
+        ],
+        [
+         "好。",
+         null
+        ]
+       ]
       ]
      ]
     }
    ],
-   "luuY": "也 luôn đứng sau chủ ngữ, không đứng đầu câu như \"cũng\" trong một số câu tiếng Việt."
+   "luuY": [
+    "也 luôn đứng **sau chủ ngữ**.",
+    "Không đặt 也 ở đầu câu như \"cũng\" trong một số câu tiếng Việt."
+   ]
   },
   {
    "id": "shenme",
@@ -1085,7 +1369,7 @@
      ]
     ]
    ],
-   "giaiThich": "什么 nghĩa là \"gì, cái gì\", dùng để hỏi. Đứng sau động từ để hỏi đối tượng của hành động, đứng trước danh từ để hỏi \"… gì\".",
+   "giaiThich": "什么 nghĩa là **\"gì, cái gì\"**, dùng để hỏi. Đứng **sau động từ** để hỏi đối tượng của hành động; đứng **trước danh từ** để hỏi \"… gì\".",
    "y": [
     {
      "noiDung": "ĐT + 什么: hỏi đối tượng của hành động",
@@ -1093,19 +1377,57 @@
       [
        "叫什么",
        "jiào shénme",
-       ""
+       "",
+       [
+        [
+         "叫",
+         "dgt"
+        ],
+        [
+         "什么",
+         "codinh"
+        ]
+       ]
       ],
       [
        "说什么",
        "shuō shénme",
-       ""
+       "",
+       [
+        [
+         "说",
+         "dgt"
+        ],
+        [
+         "什么",
+         "codinh"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "我叫陈天中，你叫什么？",
        "Wǒ jiào Chén Tiānzhōng, nǐ jiào shénme?",
-       ""
+       "",
+       [
+        [
+         "我叫陈天中，你",
+         null
+        ],
+        [
+         "叫",
+         "dgt"
+        ],
+        [
+         "什么",
+         "codinh"
+        ],
+        [
+         "？",
+         null
+        ]
+       ]
       ]
      ]
     },
@@ -1115,19 +1437,54 @@
       [
        "什么名字",
        "shénme míngzi",
-       ""
+       "",
+       [
+        [
+         "什么",
+         "codinh"
+        ],
+        [
+         "名字",
+         "dt"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "同学，你叫什么名字？",
        "Tóngxué, nǐ jiào shénme míngzi?",
-       ""
+       "",
+       [
+        [
+         "同学，你",
+         null
+        ],
+        [
+         "叫",
+         "dgt"
+        ],
+        [
+         "什么",
+         "codinh"
+        ],
+        [
+         "名字",
+         "dt"
+        ],
+        [
+         "？",
+         null
+        ]
+       ]
       ]
      ]
     }
    ],
-   "luuY": "Trả lời thì thay 什么 bằng thông tin cần trả lời, giữ nguyên trật tự câu: 你叫什么名字？ → 我叫李文。"
+   "luuY": [
+    "Trả lời thì **thay 什么 bằng thông tin** cần trả lời.",
+    "Giữ **nguyên trật tự câu**: 你叫什么名字？ → 我叫李文。"
+   ]
   },
   {
    "id": "qing",
@@ -1144,7 +1501,7 @@
      ]
     ]
    ],
-   "giaiThich": "请 đặt trước động từ để mời hoặc đề nghị ai đó làm gì một cách lịch sự, nghĩa là \"mời…, xin…\".",
+   "giaiThich": "请 đặt **trước động từ** để mời hoặc đề nghị một cách **lịch sự**, nghĩa là \"mời…, xin…\".",
    "y": [
     {
      "noiDung": "Mời ai đó làm gì",
@@ -1152,24 +1509,72 @@
       [
        "请进",
        "qǐng jìn",
-       ""
+       "",
+       [
+        [
+         "请",
+         "codinh"
+        ],
+        [
+         "进",
+         "dgt"
+        ]
+       ]
       ],
       [
        "请坐",
        "qǐng zuò",
-       ""
+       "",
+       [
+        [
+         "请",
+         "codinh"
+        ],
+        [
+         "坐",
+         "dgt"
+        ]
+       ]
       ],
       [
        "请说",
        "qǐng shuō",
-       ""
+       "",
+       [
+        [
+         "请",
+         "codinh"
+        ],
+        [
+         "说",
+         "dgt"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "王老师，您好！请进！",
        "Wáng lǎoshī, nín hǎo! Qǐng jìn!",
-       ""
+       "",
+       [
+        [
+         "王老师，您好！",
+         null
+        ],
+        [
+         "请",
+         "codinh"
+        ],
+        [
+         "进",
+         "dgt"
+        ],
+        [
+         "！",
+         null
+        ]
+       ]
       ]
      ]
     },
@@ -1179,19 +1584,38 @@
       [
        "请问",
        "qǐngwèn",
-       ""
+       "",
+       [
+        [
+         "请问",
+         "codinh"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "请问，你是不是白家月同学？",
        "Qǐngwèn, nǐ shì bu shì Bái Jiāyuè tóngxué?",
-       ""
+       "",
+       [
+        [
+         "请问",
+         "codinh"
+        ],
+        [
+         "，你是不是白家月同学？",
+         null
+        ]
+       ]
       ]
      ]
     }
    ],
-   "luuY": "请问 là cụm cố định \"xin hỏi\", lịch sự hơn hẳn chỉ dùng 问."
+   "luuY": [
+    "**请问** là cụm cố định \"xin hỏi\".",
+    "请问 lịch sự hơn hẳn chỉ dùng 问."
+   ]
   },
   {
    "id": "hen",
@@ -1212,7 +1636,7 @@
      ]
     ]
    ],
-   "giaiThich": "很 nghĩa là \"rất\", đặt trước tính từ (và một số động từ chỉ tình cảm như 爱).",
+   "giaiThich": "很 nghĩa là **\"rất\"**, đặt **trước tính từ** (và một số động từ chỉ tình cảm).",
    "y": [
     {
      "noiDung": "Miêu tả trạng thái, tính chất",
@@ -1220,39 +1644,114 @@
       [
        "很好",
        "hěn hǎo",
-       ""
+       "",
+       [
+        [
+         "很",
+         "pho"
+        ],
+        [
+         "好",
+         "tt"
+        ]
+       ]
       ],
       [
        "很高兴",
        "hěn gāoxìng",
-       ""
+       "",
+       [
+        [
+         "很",
+         "pho"
+        ],
+        [
+         "高兴",
+         "tt"
+        ]
+       ]
       ],
       [
        "很大",
        "hěn dà",
-       ""
+       "",
+       [
+        [
+         "很",
+         "pho"
+        ],
+        [
+         "大",
+         "tt"
+        ]
+       ]
       ],
       [
        "很小",
        "hěn xiǎo",
-       ""
+       "",
+       [
+        [
+         "很",
+         "pho"
+        ],
+        [
+         "小",
+         "tt"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "我很高兴。",
        "Wǒ hěn gāoxìng.",
-       ""
+       "",
+       [
+        [
+         "我",
+         null
+        ],
+        [
+         "很",
+         "pho"
+        ],
+        [
+         "高兴",
+         "tt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
       ],
       [
        "很高兴认识你。",
        "Hěn gāoxìng rènshi nǐ.",
-       ""
+       "",
+       [
+        [
+         "很",
+         "pho"
+        ],
+        [
+         "高兴",
+         "tt"
+        ],
+        [
+         "认识你。",
+         null
+        ]
+       ]
       ]
      ]
     }
    ],
-   "luuY": "Tính từ làm vị ngữ thường đi kèm 很; lúc đó 很 không còn nhấn mạnh \"rất\" nhiều: 我很好 = Tôi khỏe."
+   "luuY": [
+    "Tính từ làm vị ngữ **thường đi kèm 很**.",
+    "Lúc đó 很 **không còn nhấn mạnh \"rất\" nhiều**: 我很好 = Tôi khỏe."
+   ]
   }
  ]
 }

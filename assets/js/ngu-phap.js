@@ -7,6 +7,10 @@
   var el = document.getElementById('ngu-phap'), TV = window.QM_TV; if (!el || !TV) return;
   var esc = TV.esc, DS = [], i = 0, xong = false;
   // Chuỗi trộn chữ Hán + chữ Việt (vd "不 + ĐT / TT"): chỉ bọc phần chữ Hán bằng font chữ Hán, phần còn lại giữ font giao diện
+  // **chữ đậm** trong giải thích, lưu ý → nhấn mạnh màu; chữ Hán giữ font chữ Hán
+  function dam(t) { return tron(t).replace(/\*\*(.+?)\*\*/g, '<strong class="np-nb">$1</strong>'); }
+  // cụm từ, câu ví dụ đã tách sẵn [chữ, loại]: tô màu theo ô công thức
+  function toMau(v) { return v[3] ? v[3].map(function (p) { return p[1] ? '<span class="np-t np-t-' + p[1] + '">' + esc(p[0]) + '</span>' : esc(p[0]); }).join('') : esc(v[0]); }
   function tron(t) { return esc(t).replace(/[\u3400-\u9fff\uff0c\u3002\uff1f\uff01]+/g, function (m) { return '<span class="hanzi">' + m + '</span>'; }); }
   var LOAI = { codinh: 'Từ cố định', dt: 'Danh từ, đại từ (DT)', dgt: 'Động từ (ĐT)', tt: 'Tính từ (TT)', st: 'Số từ, lượng từ (ST, LT)', pho: 'Phó từ, trợ từ', cau: 'Cả câu, vế câu' };
   function ve() {
@@ -23,18 +27,18 @@
         '<div class="np-dau"><span class="np-so">' + (i + 1) + '</span><h3 class="np-ten">' + tron(g.ten) + '</h3></div>' +
         '<div class="np-ct">' + g.congThuc.map(function (dong) {
           return '<div class="np-dong">' + dong.map(function (o) { return '<span class="np-o np-' + o[1] + '" title="' + esc(LOAI[o[1]] || '') + '">' + tron(o[0]) + '</span>'; }).join('<i>+</i>') + '</div>'; }).join('') + '</div>' +
-        '<p class="np-giai">' + esc(g.giaiThich) + '</p>' +
+        '<p class="np-giai">' + dam(g.giaiThich) + '</p>' +
         g.y.map(function (y, k) {
-          return '<div class="np-y">' + (g.y.length > 1 ? '<div class="np-y-nd"><b>' + String.fromCharCode(9312 + k) + '</b> ' + esc(y.noiDung) + '</div>' : '<div class="np-y-nd">' + esc(y.noiDung) + '</div>') +
+          return '<div class="np-y">' + (g.y.length > 1 ? '<div class="np-y-nd"><b>' + String.fromCharCode(9312 + k) + '</b> ' + dam(y.noiDung) + '</div>' : '<div class="np-y-nd">' + dam(y.noiDung) + '</div>') +
             ((y.cum || []).length ? '<div class="np-nhan">Cụm từ · bấm để xem phiên âm</div><div class="np-cum-ds">' + y.cum.map(function (c) {
-              return '<button type="button" class="np-cum" data-doc="' + esc(c[0]) + '"><span class="hanzi">' + esc(c[0]) + '</span><small hidden>' + esc(c[1]) + (c[2] ? ' · ' + esc(c[2]) : '') + '</small></button>'; }).join('') + '</div>' +
-              '<div class="np-nhan">Câu ví dụ</div>' : '') +
+              return '<button type="button" class="np-cum" data-doc="' + esc(c[0]) + '"><span class="hanzi">' + toMau(c) + '</span><small hidden>' + esc(c[1]) + (c[2] ? ' · ' + esc(c[2]) : '') + '</small></button>'; }).join('') + '</div>' +
+              (y.viDu.length ? '<div class="np-nhan">Câu ví dụ</div>' : '') : '') +
             y.viDu.map(function (v) {
-              return '<div class="np-vd">' + TV.nutLoa(v[0]) + '<div class="np-vd-chu"><div class="hanzi">' + esc(v[0]) + '</div><div class="np-vd-an" hidden><div class="np-vd-py">' + esc(v[1]) + '</div>' + (v[2] ? '<div class="np-vd-vi">' + esc(v[2]) + '</div>' : '') + '</div></div>' +
+              return '<div class="np-vd">' + TV.nutLoa(v[0]) + '<div class="np-vd-chu"><div class="hanzi">' + toMau(v) + '</div><div class="np-vd-an" hidden><div class="np-vd-py">' + esc(v[1]) + '</div>' + (v[2] ? '<div class="np-vd-vi">' + esc(v[2]) + '</div>' : '') + '</div></div>' +
                 '<button type="button" class="np-hien">Hiện pinyin</button></div>';
             }).join('') + '</div>';
         }).join('') +
-        (g.luuY ? '<p class="np-luu-y">💡 ' + esc(g.luuY) + '</p>' : '') +
+        (g.luuY ? '<div class="np-luu-y"><b>💡 Lưu ý</b>' + (Array.isArray(g.luuY) ? '<ul>' + g.luuY.map(function (x) { return '<li>' + dam(x) + '</li>'; }).join('') + '</ul>' : '<p>' + dam(g.luuY) + '</p>') + '</div>' : '') +
       '</article>' +
       '<div class="tv-fc-nut np-dieu-huong"><button type="button" class="btn np-truoc"' + (i ? '' : ' disabled') + '>‹ Trước</button>' +
         '<button type="button" class="btn solid np-tiep">' + (i < DS.length - 1 ? 'Tiếp theo ›' : 'Hoàn thành 🎉') + '</button></div>';

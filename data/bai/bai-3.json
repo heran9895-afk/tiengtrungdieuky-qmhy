@@ -1294,7 +1294,7 @@
      ]
     ]
    ],
-   "giaiThich": "的 đứng giữa chủ sở hữu (A) và đối tượng được sở hữu (B), nghĩa là \"của\". Dịch sang tiếng Việt phải đảo lại: A 的 B = B của A.",
+   "giaiThich": "的 đứng giữa **chủ sở hữu (A)** và **đối tượng được sở hữu (B)**, nghĩa là **\"của\"**. Dịch sang tiếng Việt phải **đảo lại**: A 的 B = B của A.",
    "y": [
     {
      "noiDung": "A 的 B: B của A",
@@ -1302,24 +1302,84 @@
       [
        "我的同学",
        "wǒ de tóngxué",
-       ""
+       "",
+       [
+        [
+         "我",
+         "dt"
+        ],
+        [
+         "的",
+         "codinh"
+        ],
+        [
+         "同学",
+         "dt"
+        ]
+       ]
       ],
       [
        "你们的国家",
        "nǐmen de guójiā",
-       ""
+       "",
+       [
+        [
+         "你们",
+         "dt"
+        ],
+        [
+         "的",
+         "codinh"
+        ],
+        [
+         "国家",
+         "dt"
+        ]
+       ]
       ],
       [
        "王一飞的学生",
        "Wáng Yīfēi de xué·shēng",
-       ""
+       "",
+       [
+        [
+         "王一飞",
+         "dt"
+        ],
+        [
+         "的",
+         "codinh"
+        ],
+        [
+         "学生",
+         "dt"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "我的学生是越南人。",
        "Wǒ de xué·shēng shì Yuènán rén.",
-       ""
+       "",
+       [
+        [
+         "我",
+         "dt"
+        ],
+        [
+         "的",
+         "codinh"
+        ],
+        [
+         "学生",
+         "dt"
+        ],
+        [
+         "是越南人。",
+         null
+        ]
+       ]
       ]
      ]
     },
@@ -1329,29 +1389,83 @@
       [
        "我爸爸",
        "wǒ bàba",
-       ""
+       "",
+       [
+        [
+         "我",
+         "dt"
+        ],
+        [
+         "爸爸",
+         "dt"
+        ]
+       ]
       ],
       [
        "你老师",
        "nǐ lǎoshī",
-       ""
+       "",
+       [
+        [
+         "你",
+         "dt"
+        ],
+        [
+         "老师",
+         "dt"
+        ]
+       ]
       ],
       [
        "我女朋友",
        "wǒ nǚpéngyou",
-       ""
+       "",
+       [
+        [
+         "我",
+         "dt"
+        ],
+        [
+         "女朋友",
+         "dt"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "这是我女朋友。",
        "Zhè shì wǒ nǚpéngyou.",
-       ""
+       "",
+       [
+        [
+         "这",
+         "dt"
+        ],
+        [
+         "是",
+         null
+        ],
+        [
+         "我",
+         "dt"
+        ],
+        [
+         "女朋友",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
       ]
      ]
     }
    ],
-   "luuY": "Nếu trước 的 là đại từ nhân xưng, sau 的 là từ chỉ quan hệ thân thuộc hoặc danh từ chỉ người, có thể lược bỏ 的."
+   "luuY": [
+    "Nếu trước 的 là **đại từ nhân xưng**, sau 的 là **từ chỉ quan hệ thân thuộc** hoặc **danh từ chỉ người**, có thể **lược bỏ 的**."
+   ]
   },
   {
    "id": "ma",
@@ -1372,7 +1486,7 @@
      ]
     ]
    ],
-   "giaiThich": "吗 là trợ từ ngữ khí, đặt cuối câu trần thuật để tạo câu hỏi có / không, nghĩa như \"… không?\", \"… à?\", \"… hả?\".",
+   "giaiThich": "吗 là trợ từ ngữ khí, đặt **cuối câu trần thuật** để tạo **câu hỏi có / không**, nghĩa như \"… không?\", \"… à?\".",
    "y": [
     {
      "noiDung": "Câu trần thuật + 吗？",
@@ -1380,24 +1494,68 @@
       [
        "好吗",
        "hǎo ma",
-       ""
+       "",
+       [
+        [
+         "好",
+         null
+        ],
+        [
+         "吗",
+         "codinh"
+        ]
+       ]
       ],
       [
        "忙吗",
        "máng ma",
-       ""
+       "",
+       [
+        [
+         "忙",
+         null
+        ],
+        [
+         "吗",
+         "codinh"
+        ]
+       ]
       ],
       [
        "是吗",
        "shì ma",
-       ""
+       "",
+       [
+        [
+         "是",
+         null
+        ],
+        [
+         "吗",
+         "codinh"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "你的老师好吗？",
        "Nǐ de lǎoshī hǎo ma?",
-       ""
+       "",
+       [
+        [
+         "你的老师好",
+         null
+        ],
+        [
+         "吗",
+         "codinh"
+        ],
+        [
+         "？",
+         null
+        ]
+       ]
       ]
      ]
     },
@@ -1407,24 +1565,53 @@
       [
        "好不好",
        "hǎo bu hǎo",
-       ""
+       "",
+       [
+        [
+         "好不好",
+         "codinh"
+        ]
+       ]
       ],
       [
        "是不是",
        "shì bu shì",
-       ""
+       "",
+       [
+        [
+         "是不是",
+         "codinh"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "这个人是不是李文的女朋友？",
        "Zhè ge rén shì bu shì Lǐ Wén de nǚpéngyou?",
-       "Người này có phải là bạn gái của Lý Văn không?"
+       "Người này có phải là bạn gái của Lý Văn không?",
+       [
+        [
+         "这个人",
+         null
+        ],
+        [
+         "是不是",
+         "codinh"
+        ],
+        [
+         "李文的女朋友？",
+         null
+        ]
+       ]
       ]
      ]
     }
    ],
-   "luuY": "Câu đã dùng 吗 thì không dùng thêm dạng chính phản: nói 你是学生吗？ hoặc 你是不是学生？, không nói 你是不是学生吗？"
+   "luuY": [
+    "Câu đã dùng **吗** thì **không dùng thêm dạng chính phản**.",
+    "Nói 你是学生吗？ hoặc 你是不是学生？, không nói 你是不是学生吗？"
+   ]
   },
   {
    "id": "zhenana",
@@ -1445,7 +1632,7 @@
      ]
     ]
    ],
-   "giaiThich": "这 = này, đây (gần); 那 = kia, đó (xa); 哪 = nào (để hỏi). Khi đi với danh từ thường có lượng từ ở giữa, hay dùng nhất là 个.",
+   "giaiThich": "这 = **này, đây** (gần); 那 = **kia, đó** (xa); 哪 = **nào** (để hỏi). Khi đi với danh từ thường có **lượng từ** ở giữa, hay dùng nhất là 个.",
    "y": [
     {
      "noiDung": "这 / 那: chỉ người, vật gần hoặc xa",
@@ -1453,24 +1640,84 @@
       [
        "这个人",
        "zhè ge rén",
-       "người này"
+       "người này",
+       [
+        [
+         "这",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "人",
+         "dt"
+        ]
+       ]
       ],
       [
        "那个老师",
        "nà ge lǎoshī",
-       "thầy/cô kia"
+       "thầy/cô kia",
+       [
+        [
+         "那",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "老师",
+         "dt"
+        ]
+       ]
       ],
       [
        "这个学生",
        "zhè ge xué·shēng",
-       "học sinh này"
+       "học sinh này",
+       [
+        [
+         "这",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "学生",
+         "dt"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "那个人是我的中文老师。",
        "Nà ge rén shì wǒ de Zhōngwén lǎoshī.",
-       "Người kia là giáo viên tiếng Trung của tôi."
+       "Người kia là giáo viên tiếng Trung của tôi.",
+       [
+        [
+         "那",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "人",
+         "dt"
+        ],
+        [
+         "是我的中文老师。",
+         null
+        ]
+       ]
       ]
      ]
     },
@@ -1480,33 +1727,92 @@
       [
        "哪个老师",
        "nǎ ge lǎoshī",
-       "thầy/cô nào"
+       "thầy/cô nào",
+       [
+        [
+         "哪",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "老师",
+         "dt"
+        ]
+       ]
       ],
       [
        "哪国",
        "nǎ guó",
-       ""
+       "",
+       [
+        [
+         "哪",
+         "codinh"
+        ],
+        [
+         "国",
+         "dt"
+        ]
+       ]
       ],
       [
        "哪国人",
        "nǎ guó rén",
-       ""
+       "",
+       [
+        [
+         "哪",
+         "codinh"
+        ],
+        [
+         "国",
+         "dt"
+        ],
+        [
+         "人",
+         null
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "哪个老师是你的中文老师？",
        "Nǎ ge lǎoshī shì nǐ de Zhōngwén lǎoshī?",
-       "Thầy/cô nào là giáo viên tiếng Trung của bạn?"
+       "Thầy/cô nào là giáo viên tiếng Trung của bạn?",
+       [
+        [
+         "哪",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "老师",
+         "dt"
+        ],
+        [
+         "是你的中文老师？",
+         null
+        ]
+       ]
       ]
      ]
     }
    ],
-   "luuY": "这, 那 còn đứng một mình làm chủ ngữ: 这是谁？ 那是我家。 Hỏi quốc tịch dùng 哪国人, không có lượng từ ở giữa."
+   "luuY": [
+    "这, 那 còn **đứng một mình làm chủ ngữ**: 这是谁？ 那是我家。",
+    "Hỏi quốc tịch dùng **哪国人**, không có lượng từ ở giữa."
+   ]
   },
   {
    "id": "tai",
-   "ten": "太 + TT + 了 · 不太 + TT",
+   "ten": "太 + TT / ĐT tâm lý + 了 · 不太",
    "congThuc": [
     [
      [
@@ -1524,16 +1830,30 @@
     ],
     [
      [
+      "太",
+      "pho"
+     ],
+     [
+      "ĐT tâm lý",
+      "dgt"
+     ],
+     [
+      "了",
+      "codinh"
+     ]
+    ],
+    [
+     [
       "不太",
       "pho"
      ],
      [
-      "TT",
+      "TT / ĐT tâm lý",
       "tt"
      ]
     ]
    ],
-   "giaiThich": "太……了 nghĩa là \"… quá\", \"… lắm\", nhấn mạnh mức độ cao. Dạng phủ định 不太 nghĩa là \"không … lắm\".",
+   "giaiThich": "太……了 nghĩa là **\"… quá\"**, nhấn mạnh mức độ cao; đi với **tính từ** hoặc **động từ tâm lý, cảm xúc** (想, 爱…). Phủ định 不太 nghĩa là **\"không … lắm\"**.",
    "y": [
     {
      "noiDung": "太 + TT + 了: … quá",
@@ -1541,56 +1861,229 @@
       [
        "太好了",
        "tài hǎo le",
-       "tốt quá"
+       "tốt quá",
+       [
+        [
+         "太",
+         "pho"
+        ],
+        [
+         "好",
+         "tt"
+        ],
+        [
+         "了",
+         "codinh"
+        ]
+       ]
       ],
       [
        "太高兴了",
        "tài gāoxìng le",
-       "vui quá"
+       "vui quá",
+       [
+        [
+         "太",
+         "pho"
+        ],
+        [
+         "高兴",
+         "tt"
+        ],
+        [
+         "了",
+         "codinh"
+        ]
+       ]
       ],
       [
        "太忙了",
        "tài máng le",
-       "bận quá"
+       "bận quá",
+       [
+        [
+         "太",
+         "pho"
+        ],
+        [
+         "忙",
+         "tt"
+        ],
+        [
+         "了",
+         "codinh"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "我的中文老师太忙了。",
        "Wǒ de Zhōngwén lǎoshī tài máng le.",
-       "Giáo viên tiếng Trung của tôi bận quá."
+       "Giáo viên tiếng Trung của tôi bận quá.",
+       [
+        [
+         "我的中文老师",
+         null
+        ],
+        [
+         "太",
+         "pho"
+        ],
+        [
+         "忙",
+         "tt"
+        ],
+        [
+         "了",
+         "codinh"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
       ]
      ]
     },
     {
-     "noiDung": "不太 + TT: không … lắm",
+     "noiDung": "太 + ĐT tâm lý, cảm xúc + 了: … quá",
      "cum": [
       [
-       "不太好",
-       "bú tài hǎo",
-       ""
-      ],
-      [
-       "不太高兴",
-       "bú tài gāoxìng",
-       ""
-      ],
-      [
-       "不太忙",
-       "bú tài máng",
-       ""
+       "太想你了",
+       "tài xiǎng nǐ le",
+       "nhớ bạn quá",
+       [
+        [
+         "太",
+         "pho"
+        ],
+        [
+         "想",
+         "dgt"
+        ],
+        [
+         "你",
+         null
+        ],
+        [
+         "了",
+         "codinh"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
-       "妈妈不太高兴。",
-       "Māma bú tài gāoxìng.",
-       ""
+       "我们太想你了！",
+       "Wǒmen tài xiǎng nǐ le!",
+       "Chúng tôi nhớ bạn quá!",
+       [
+        [
+         "我们",
+         null
+        ],
+        [
+         "太",
+         "pho"
+        ],
+        [
+         "想",
+         "dgt"
+        ],
+        [
+         "你",
+         null
+        ],
+        [
+         "了",
+         "codinh"
+        ],
+        [
+         "！",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "不太 + TT / ĐT tâm lý: không … lắm",
+     "cum": [
+      [
+       "太想你了",
+       "tài xiǎng nǐ le",
+       "",
+       [
+        [
+         "太",
+         "pho"
+        ],
+        [
+         "想",
+         "dgt"
+        ],
+        [
+         "你",
+         null
+        ],
+        [
+         "了",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "不太想你",
+       "bú tài xiǎng nǐ",
+       "",
+       [
+        [
+         "不太",
+         "pho"
+        ],
+        [
+         "想",
+         "dgt"
+        ],
+        [
+         "你",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我们不太想你。",
+       "Wǒmen bú tài xiǎng nǐ.",
+       "",
+       [
+        [
+         "我们",
+         null
+        ],
+        [
+         "不太",
+         "pho"
+        ],
+        [
+         "想",
+         "dgt"
+        ],
+        [
+         "你。",
+         null
+        ]
+       ]
       ]
      ]
     }
    ],
-   "luuY": "不太 + TT không kèm 了: nói 不太好, không nói 不太好了. Trong 不太, 不 đọc thanh 2 (bú tài)."
+   "luuY": [
+    "**不太 + TT** không kèm 了: nói 不太好, không nói 不太好了.",
+    "Trong 不太, 不 đọc **thanh 2**: bú tài."
+   ]
   },
   {
    "id": "hai",
@@ -1617,7 +2110,7 @@
      ]
     ]
    ],
-   "giaiThich": "还 nghĩa là \"còn\", \"vẫn\", đặt sau chủ ngữ, trước động từ hoặc tính từ: còn làm thêm việc gì, hoặc trạng thái vẫn tiếp diễn.",
+   "giaiThich": "还 nghĩa là **\"còn, vẫn\"**, đặt **sau chủ ngữ, trước động từ hoặc tính từ**: còn làm thêm việc gì, hoặc trạng thái **vẫn tiếp diễn**.",
    "y": [
     {
      "noiDung": "Còn …, vẫn …",
@@ -1625,38 +2118,107 @@
       [
        "还认识",
        "hái rènshi",
-       ""
+       "",
+       [
+        [
+         "还",
+         "pho"
+        ],
+        [
+         "认识",
+         "dgt"
+        ]
+       ]
       ],
       [
        "还工作",
        "hái gōngzuò",
-       ""
+       "",
+       [
+        [
+         "还",
+         "pho"
+        ],
+        [
+         "工作",
+         "dgt"
+        ]
+       ]
       ],
       [
        "还忙",
        "hái máng",
-       ""
+       "",
+       [
+        [
+         "还",
+         "pho"
+        ],
+        [
+         "忙",
+         "tt"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "我认识他，还认识他的女朋友。",
        "Wǒ rènshi tā, hái rènshi tā de nǚpéngyou.",
-       ""
+       "",
+       [
+        [
+         "我认识他，",
+         null
+        ],
+        [
+         "还",
+         "pho"
+        ],
+        [
+         "认识",
+         "dgt"
+        ],
+        [
+         "他的女朋友。",
+         null
+        ]
+       ]
       ],
       [
        "姐姐的工作还很忙。",
        "Jiějie de gōngzuò hái hěn máng.",
-       ""
+       "",
+       [
+        [
+         "姐姐的工作",
+         null
+        ],
+        [
+         "还",
+         "pho"
+        ],
+        [
+         "很",
+         "pho"
+        ],
+        [
+         "忙。",
+         null
+        ]
+       ]
       ]
      ]
     }
    ],
-   "luuY": "还 đứng sau chủ ngữ, không đứng đầu câu: 姐姐还很忙, không nói 还姐姐很忙."
+   "luuY": [
+    "还 đứng **sau chủ ngữ**, không đứng đầu câu.",
+    "Nói 姐姐还很忙, không nói 还姐姐很忙."
+   ]
   },
   {
    "id": "xiang",
-   "ten": "想 + người · 想 + ĐT",
+   "ten": "想 + tân ngữ · 想 + ĐT",
    "congThuc": [
     [
      [
@@ -1664,7 +2226,7 @@
       "codinh"
      ],
      [
-      "người",
+      "TN",
       "dt"
      ]
     ],
@@ -1679,32 +2241,80 @@
      ]
     ]
    ],
-   "giaiThich": "想 đi với người nghĩa là \"nhớ\"; đi với động từ nghĩa là \"muốn\" làm gì.",
+   "giaiThich": "想 đi với **tân ngữ** (người, nơi chốn…) nghĩa là **\"nhớ\"**; đi với **động từ** nghĩa là **\"muốn\"** làm gì.",
    "y": [
     {
-     "noiDung": "想 + người: nhớ",
+     "noiDung": "想 + tân ngữ (người, nơi chốn…): nhớ",
      "cum": [
       [
        "想你",
        "xiǎng nǐ",
-       ""
+       "",
+       [
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "你",
+         "dt"
+        ]
+       ]
       ],
       [
        "很想",
        "hěn xiǎng",
-       ""
+       "",
+       [
+        [
+         "很",
+         null
+        ],
+        [
+         "想",
+         "codinh"
+        ]
+       ]
       ],
       [
        "不想",
        "bù xiǎng",
-       ""
+       "",
+       [
+        [
+         "不",
+         null
+        ],
+        [
+         "想",
+         "codinh"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "白家月很想她的爸爸妈妈。",
        "Bái Jiāyuè hěn xiǎng tā de bàba māma.",
-       ""
+       "",
+       [
+        [
+         "白家月很",
+         null
+        ],
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "她",
+         "dt"
+        ],
+        [
+         "的爸爸妈妈。",
+         null
+        ]
+       ]
       ]
      ]
     },
@@ -1714,29 +2324,79 @@
       [
        "想学",
        "xiǎng xué",
-       "muốn học"
+       "muốn học",
+       [
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "学",
+         null
+        ]
+       ]
       ],
       [
        "想去",
        "xiǎng qù",
-       ""
+       "",
+       [
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "去",
+         "dgt"
+        ]
+       ]
       ],
       [
        "想说",
        "xiǎng shuō",
-       ""
+       "",
+       [
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "说",
+         "dgt"
+        ]
+       ]
       ]
      ],
      "viDu": [
       [
        "妹妹很想去中国。",
        "Mèimei hěn xiǎng qù Zhōngguó.",
-       ""
+       "",
+       [
+        [
+         "妹妹很",
+         null
+        ],
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "去",
+         "dgt"
+        ],
+        [
+         "中国。",
+         null
+        ]
+       ]
       ]
      ]
     }
    ],
-   "luuY": "Phủ định dùng 不想: 他不想学泰语。 (Anh ấy không muốn học tiếng Thái.)"
+   "luuY": [
+    "Phủ định dùng **不想**: 他不想学泰语。"
+   ]
   }
  ]
 }
