@@ -556,27 +556,6 @@
    "Pinyin câu 2": "Wǒmen yě shì Rìběn xué·shēng.",
    "Nghĩa câu 2": "Chúng tôi cũng là học sinh người Nhật.",
    "Đọc câu 2": ""
-  },
-  {
-   "Mã": "bai2-俄罗斯",
-   "Chữ Hán": "俄罗斯",
-   "Pinyin": "Éluósī",
-   "Âm Hán Việt": "NGA LA TƯ",
-   "Từ loại": "danh từ",
-   "Nghĩa tiếng Việt": "nước Nga",
-   "Cấp HSK": "NK",
-   "Thuận bút": "俄罗斯",
-   "Cụm từ": "俄罗斯老师 | Éluósī lǎoshī",
-   "Đọc từ": "",
-   "_nhom": "moRong",
-   "Câu 1": "我是俄罗斯学生。",
-   "Pinyin câu 1": "Wǒ shì Éluósī xué·shēng.",
-   "Nghĩa câu 1": "Tôi là học sinh người Nga.",
-   "Đọc câu 1": "",
-   "Câu 2": "你是不是俄罗斯老师？",
-   "Pinyin câu 2": "Nǐ shì bu shì Éluósī lǎoshī?",
-   "Nghĩa câu 2": "Bạn có phải là giáo viên người Nga không?",
-   "Đọc câu 2": ""
   }
  ],
  "boThu": [
@@ -1016,6 +995,18 @@
    "y": [
     {
      "noiDung": "Khẳng định: A là B",
+     "cum": [
+      [
+       "是老师",
+       "shì lǎoshī",
+       "là giáo viên"
+      ],
+      [
+       "是学生",
+       "shì xué·shēng",
+       "là học sinh"
+      ]
+     ],
      "viDu": [
       [
        "我是老师，你们是学生。",
@@ -1026,6 +1017,18 @@
     },
     {
      "noiDung": "Phủ định: A không phải là B",
+     "cum": [
+      [
+       "不是老师",
+       "bú shì lǎoshī",
+       "không phải là giáo viên"
+      ],
+      [
+       "不是学生",
+       "bú shì xué·shēng",
+       "không phải là học sinh"
+      ]
+     ],
      "viDu": [
       [
        "我不是白家月。",
@@ -1036,6 +1039,18 @@
     },
     {
      "noiDung": "Câu hỏi: A có phải là B không?",
+     "cum": [
+      [
+       "是不是老师",
+       "shì bu shì lǎoshī",
+       "có phải là giáo viên không"
+      ],
+      [
+       "是不是学生",
+       "shì bu shì xué·shēng",
+       "có phải là học sinh không"
+      ]
+     ],
      "viDu": [
       [
        "你是不是陈天中同学？",
@@ -1076,6 +1091,28 @@
    "y": [
     {
      "noiDung": "Phủ định động từ, tính từ",
+     "cum": [
+      [
+       "不是",
+       "bú shì",
+       "không phải"
+      ],
+      [
+       "不认识",
+       "bú rènshi",
+       "không quen"
+      ],
+      [
+       "不好",
+       "bù hǎo",
+       "không tốt"
+      ],
+      [
+       "不高兴",
+       "bù gāoxìng",
+       "không vui"
+      ]
+     ],
      "viDu": [
       [
        "我是老师，不是学生。",
@@ -1129,6 +1166,23 @@
    "y": [
     {
      "noiDung": "Người sau cũng giống người trước",
+     "cum": [
+      [
+       "也是",
+       "yě shì",
+       "cũng là"
+      ],
+      [
+       "也认识",
+       "yě rènshi",
+       "cũng quen"
+      ],
+      [
+       "也很好",
+       "yě hěn hǎo",
+       "cũng rất tốt"
+      ]
+     ],
      "viDu": [
       [
        "我是老师，王一飞也是老师。",
@@ -1174,6 +1228,18 @@
    "y": [
     {
      "noiDung": "ĐT + 什么: hỏi đối tượng của hành động",
+     "cum": [
+      [
+       "叫什么",
+       "jiào shénme",
+       "tên là gì"
+      ],
+      [
+       "说什么",
+       "shuō shénme",
+       "nói gì"
+      ]
+     ],
      "viDu": [
       [
        "我叫陈天中，你叫什么？",
@@ -1184,6 +1250,13 @@
     },
     {
      "noiDung": "什么 + DT: hỏi \"… gì\"",
+     "cum": [
+      [
+       "什么名字",
+       "shénme míngzi",
+       "tên gì"
+      ]
+     ],
      "viDu": [
       [
        "同学，你叫什么名字？",
@@ -1214,6 +1287,23 @@
    "y": [
     {
      "noiDung": "Mời ai đó làm gì",
+     "cum": [
+      [
+       "请进",
+       "qǐng jìn",
+       "mời vào"
+      ],
+      [
+       "请坐",
+       "qǐng zuò",
+       "mời ngồi"
+      ],
+      [
+       "请说",
+       "qǐng shuō",
+       "mời nói"
+      ]
+     ],
      "viDu": [
       [
        "王老师，您好！请进！",
@@ -1224,6 +1314,13 @@
     },
     {
      "noiDung": "请问: xin hỏi (mở đầu câu hỏi lịch sự)",
+     "cum": [
+      [
+       "请问",
+       "qǐngwèn",
+       "xin hỏi"
+      ]
+     ],
      "viDu": [
       [
        "请问，你是不是白家月同学？",
@@ -1258,6 +1355,28 @@
    "y": [
     {
      "noiDung": "Miêu tả trạng thái, tính chất",
+     "cum": [
+      [
+       "很好",
+       "hěn hǎo",
+       "rất tốt"
+      ],
+      [
+       "很高兴",
+       "hěn gāoxìng",
+       "rất vui"
+      ],
+      [
+       "很大",
+       "hěn dà",
+       "rất to"
+      ],
+      [
+       "很小",
+       "hěn xiǎo",
+       "rất nhỏ"
+      ]
+     ],
      "viDu": [
       [
        "我很高兴。",

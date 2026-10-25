@@ -845,7 +845,9 @@
         khu.innerHTML = '<p class="lt-luu-ok">✅ Đã lưu kết quả (lượt ' + d.attemptNo + ', ' + d.soCau + ' câu).' + (/bai-tap$/.test(BAI.ma) ? ' <a href="bang-xep-hang.html">Xem Bảng xếp hạng ›</a>' : '') + '</p>';
       })
       .catch(function (e) {
-        khu.innerHTML = '<p class="lt-luu-loi">⚠️ Chưa lưu được kết quả: ' + esc(e.message || 'lỗi mạng') + '</p><button type="button" class="btn lt-luu-lai">Gửi lại</button>';
+        var m = e.message || 'lỗi mạng';
+        if (/Mã bài/.test(m)) m += ' — máy chủ điểm đang chạy bản cũ, giáo viên cần triển khai phiên bản mới của Apps Script';
+        khu.innerHTML = '<p class="lt-luu-loi">⚠️ Chưa lưu được kết quả: ' + esc(m) + '</p><button type="button" class="btn lt-luu-lai">Gửi lại</button>';
       });
   }
 
