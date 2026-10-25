@@ -16,7 +16,8 @@
   // để dùng kho từ riêng của bài thay cho 9 cấp. Không đặt thì chạy y như cũ.
   var CAP = window.QM_CAP || ['1', '2', '3', '4', '5', '6', '7-9', 'MR'];   // MR = Mở rộng (ngoài danh sách chuẩn, không phân cấp)
   var TEP = window.QM_TEP || {};                             // cấp → file JSON riêng (mảng từ, hoặc đối tượng có khoá "tu")
-  function tenCap(c) { return (window.QM_TEN_CAP || {})[c] || (c === 'MR' ? 'Mở rộng' : 'HSK ' + c); }
+  var NHAN = { MR: 'Mở rộng', NK: 'Ngoài khung', TR: 'Tên riêng' };   // nhãn ngoài thang HSK (TR: tên nước… không có trong kho)
+  function tenCap(c) { return (window.QM_TEN_CAP || {})[c] || NHAN[c] || 'HSK ' + c; }
 
   // ---------- Đọc CSV (hỗ trợ ô có xuống dòng, dấu phẩy, dấu ngoặc kép) ----------
   function docCSV(txt) {
@@ -63,6 +64,12 @@
     var url = NGUON[cap];
     var nhung = (window.TU_VUNG_MAU || {})[cap];
     if (!url && nhung) return Promise.resolve(KHO[cap] = chuanBi(cap, nhung.map(chuanHoa)));
+    if (Array.isArray(TEP[cap])) return Promise.all(TEP[cap].map(function (u) { return fetch(u).then(function (r) { if (!r.ok) throw r; return r.json(); }); }))
+      .then(function (ds) {
+        var gop = { tu: [], boThu: [], ghepChu: [], thanhPhan: {} };
+        ds.forEach(function (d) { gop.tu = gop.tu.concat(d.tu || []); gop.boThu = gop.boThu.concat(d.boThu || []); gop.ghepChu = gop.ghepChu.concat(d.ghepChu || []); Object.assign(gop.thanhPhan, d.thanhPhan || {}); });
+        DL[cap] = gop; return (KHO[cap] = chuanBi(cap, gop.tu.map(chuanHoa)));
+      });
     if (TEP[cap]) return fetch(TEP[cap]).then(function (r) { if (!r.ok) throw r; return r.json(); })
       .then(function (d) { if (!Array.isArray(d)) DL[cap] = d; return (KHO[cap] = chuanBi(cap, (Array.isArray(d) ? d : d.tu).map(chuanHoa))); });
     if (!url) return fetch(ROOT + 'data/tu-vung/cap-' + cap + '.json').then(function (r) { if (!r.ok) throw r; return r.json(); })

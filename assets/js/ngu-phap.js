@@ -8,7 +8,7 @@
   var esc = TV.esc, DS = [], i = 0, xong = false;
   // Chuỗi trộn chữ Hán + chữ Việt (vd "不 + ĐT / TT"): chỉ bọc phần chữ Hán bằng font chữ Hán, phần còn lại giữ font giao diện
   function tron(t) { return esc(t).replace(/[\u3400-\u9fff\uff0c\u3002\uff1f\uff01]+/g, function (m) { return '<span class="hanzi">' + m + '</span>'; }); }
-  var LOAI = { codinh: 'Từ cố định', dt: 'Danh từ, đại từ (DT)', dgt: 'Động từ (ĐT)', tt: 'Tính từ (TT)', st: 'Số từ, lượng từ (ST, LT)', pho: 'Phó từ, trợ từ' };
+  var LOAI = { codinh: 'Từ cố định', dt: 'Danh từ, đại từ (DT)', dgt: 'Động từ (ĐT)', tt: 'Tính từ (TT)', st: 'Số từ, lượng từ (ST, LT)', pho: 'Phó từ, trợ từ', cau: 'Cả câu, vế câu' };
   function ve() {
     if (xong) {
       el.innerHTML = '<div class="np-xong card"><div class="np-xong-ico">🎉</div><h3>Hoàn thành ' + DS.length + ' điểm ngữ pháp!</h3><p>Ôn lại bất cứ lúc nào bằng các nút tròn phía trên.</p>' +
@@ -53,7 +53,7 @@
     if (t.closest('.np-lai')) return den(0);
   });
   // Dòng chú giải viết tắt ở đầu phần
-  var chuGiai = '<p class="np-chu-giai">' + Object.keys(LOAI).map(function (k) { return '<span class="np-o np-' + k + '">' + (k === 'codinh' ? '是' : k === 'dt' ? 'DT' : k === 'dgt' ? 'ĐT' : k === 'tt' ? 'TT' : k === 'st' ? 'ST' : 'PT') + '</span> ' + LOAI[k]; }).join(' · ') + '</p>';
+  var chuGiai = '<p class="np-chu-giai">' + Object.keys(LOAI).map(function (k) { return '<span class="np-o np-' + k + '">' + (k === 'codinh' ? '是' : k === 'dt' ? 'DT' : k === 'dgt' ? 'ĐT' : k === 'tt' ? 'TT' : k === 'st' ? 'ST' : k === 'cau' ? 'Câu' : 'PT') + '</span> ' + LOAI[k]; }).join(' · ') + '</p>';
   el.innerHTML = '<div class="tv-trong">Đang tải ngữ pháp…</div>';
   TV.taiCap(TV.CAP[0]).then(function () {
     DS = ((TV.DL || {})[TV.CAP[0]] || {}).nguPhap || [];

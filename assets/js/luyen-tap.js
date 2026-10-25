@@ -97,6 +97,7 @@
       var raw = (TV.DL || {})[c] || {}, rawT = (TV.DL || {}).TRUOC || {};   // dữ liệu riêng của bài: chữ ghép, bộ thủ, chặng
       BO_THU = {};
       (rawT.boThu || []).concat(raw.boThu || []).forEach(function (b) { BO_THU[b.boThu] = b; });
+      [rawT.thanhPhan, raw.thanhPhan].forEach(function (tp) { Object.keys(tp || {}).forEach(function (k) { if (!BO_THU[k]) BO_THU[k] = tp[k]; }); });
       GHEP_BAI = raw.ghepChu || [];
       var ds = d, kho = truoc.concat(d);
       if (BAI.chang && raw.chang) {                          // Ôn tập: chỉ hỏi từ của chặng; nhiễu lấy từ bài trước + các chặng tới chặng này
@@ -351,6 +352,8 @@
     if (dung) B.dung++; else { B.sai++; B.daSai[w.ma] = w; if (tuThemKho && !w.laBo && !w.laGhep && !TD.laKho(w.ma)) { TD.datKho(w, true); return true; } }
     return false;
   }
+  // Chuỗi trộn chữ Hán + pinyin / chữ Việt: chỉ bọc phần chữ Hán bằng font chữ Hán (pinyin, chữ Việt giữ font giao diện)
+  function honHop(t) { return esc(t).replace(/[\u3400-\u9fff\uff0c\u3002\uff1f\uff01\uff1a]+/g, function (m) { return '<span class="hanzi">' + m + '</span>'; }); }
   function chu(html) { var d = document.createElement('div'); d.innerHTML = html; return d.textContent.trim(); }
   function tags(w) { return (w.hv ? '<span class="tag gold">Hán Việt: ' + esc(w.hv) + '</span>' : '') + (w.loai ? '<span class="tag">' + esc(w.loai) + '</span>' : ''); }
   function khuatDuoi() { var sf = document.querySelector('.sf'); return sf ? sf.getBoundingClientRect().top : innerHeight; }   // mép trên thanh cuối trang
@@ -823,8 +826,8 @@
       '<div class="lt-nut-kq">' + (sai.length ? '<button type="button" class="btn solid lt-lam-sai">Luyện lại ' + sai.length + ' từ sai</button>' : '') +
         (coChangSau ? '<button type="button" class="btn' + (sai.length ? '' : ' solid') + ' lt-chang-sau">Chặng ' + (S.chang + 2) + ' ›</button>' : '') +
         (BAI ? '<button type="button" class="btn lt-xem-lai">📋 Xem lại bài</button><button type="button" class="btn lt-luot-moi">Làm lượt mới</button>' : '<button type="button" class="btn lt-lai">Làm lại lượt này</button>') + '</div>' +
-      (BAI ? '<div class="lt-xem-ct" hidden>' + B.ct.map(function (c) { return '<div class="lt-ct ' + (c.dung ? 'dung' : 'sai') + '"><b>' + c.stt + '. ' + esc(c.dang) + '</b> · ' + esc(c.cauHoi) +
-        '<br>Đáp án: <span class="hanzi">' + esc(c.dapAn) + '</span>' + (c.dung ? ' ✓' : ' · Bạn chọn: <span class="hanzi">' + esc(c.chon || '—') + '</span>') + '</div>'; }).join('') + '</div>' : '') + '</div>';
+      (BAI ? '<div class="lt-xem-ct" hidden>' + B.ct.map(function (c) { return '<div class="lt-ct ' + (c.dung ? 'dung' : 'sai') + '"><b>' + c.stt + '. ' + esc(c.dang) + '</b> · ' + honHop(c.cauHoi) +
+        '<br>Đáp án: ' + honHop(c.dapAn) + '' + (c.dung ? ' ✓' : ' · Bạn chọn: ' + honHop(c.chon || '—') + '') + '</div>'; }).join('') + '</div>' : '') + '</div>';
     if (BAI) guiDiem();
     giuTrongManHinh();
   }
