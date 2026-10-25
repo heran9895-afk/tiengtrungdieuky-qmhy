@@ -33,9 +33,16 @@
   // Hai từ trùng nghĩa nếu có chung ít nhất một cụm nghĩa (北 "phương bắc" và 北边 "phía bắc, phương bắc")
   function trungNghia(a, b) { var cb = cumNghia(b); return cumNghia(a).some(function (x) { return cb.indexOf(x) >= 0; }); }
   // 3 đáp án nhiễu: cùng cấp, ưu tiên cùng từ loại; không trùng chữ, không trùng nghĩa chính
-  function dapAnNhieu(w, kho) {
+  function loaiChinh(w) {                                    // "đại từ / danh từ tập hợp" → nhóm "danh"; đại từ và danh từ cùng đứng được ở vị trí chủ ngữ, tân ngữ
+    var l = String(w.loai || '').split(/[\/,;(]/)[0].trim().toLowerCase();
+    return /^(đại từ|danh từ)/.test(l) ? 'danh' : l;
+  }
+  // khacLoai = true (dạng Điền từ): nhiễu phải KHÁC từ loại, vì cùng từ loại thì điền vào chỗ trống cũng hợp ngữ pháp (我 / 你 / 我们)
+  function dapAnNhieu(w, kho, khacLoai) {
     var hop = kho.filter(function (x) { return x.ma !== w.ma && x.han !== w.han && x.nghia && !trungNghia(x, w); });   // loại từ có chung nghĩa (北 / 北边)
-    var cung = tron(hop.filter(function (x) { return w.loai && x.loai === w.loai; })), khac = tron(hop.filter(function (x) { return !(w.loai && x.loai === w.loai); }));
+    var lw = loaiChinh(w);
+    var cung = tron(hop.filter(function (x) { return lw && loaiChinh(x) === lw; })), khac = tron(hop.filter(function (x) { return !(lw && loaiChinh(x) === lw); }));
+    if (khacLoai && lw) { var t = cung; cung = khac; khac = khac.length >= 3 ? [] : t; }
     var chon = [], daCo = {};
     cung.concat(khac).some(function (x) {
       if (daCo[x.han] || chon.some(function (y) { return trungNghia(x, y); })) return false;
@@ -498,7 +505,7 @@
     dien: { ten: 'Điền từ vào câu', ico: '🧱', lop: 'chu', dungDuoc: function (w) { return !!cauDien(w); },
       de: function (w) { var c = cauDien(w); return '<div class="lt-de-cau hanzi">' + c.han.split(w.han).map(esc).join('<span class="lt-o-trong">？</span>') + '</div>'; },
       hoi: function (w) { return 'Chọn từ điền vào chỗ trống' + nutGoiY(cauDien(w)); },
-      dap: function (w) { return [dA(w.ma, hanO(w), 1)].concat(dapAnNhieu(w, S.kho).map(function (x) { return dA(x.ma, hanO(x)); })); },
+      dap: function (w) { return [dA(w.ma, hanO(w), 1)].concat(dapAnNhieu(w, S.kho, true).map(function (x) { return dA(x.ma, hanO(x)); })); },
       giai: function (w) { return cauDayDu(cauDien(w), w); },
       anDeKhiXong: true },
     ghep: { ten: 'Ghép cặp', ico: '🧩', nhom: 5 },
