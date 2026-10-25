@@ -860,19 +860,19 @@
       [
        "是老师",
        "shì lǎoshī",
-       "là giáo viên"
+       ""
       ],
       [
        "是学生",
        "shì xué·shēng",
-       "là học sinh"
+       ""
       ]
      ],
      "viDu": [
       [
        "我是老师，你们是学生。",
        "Wǒ shì lǎoshī, nǐmen shì xué·shēng.",
-       "Tôi là giáo viên, các bạn là học sinh."
+       ""
       ]
      ]
     },
@@ -882,19 +882,19 @@
       [
        "不是老师",
        "bú shì lǎoshī",
-       "không phải là giáo viên"
+       ""
       ],
       [
        "不是学生",
        "bú shì xué·shēng",
-       "không phải là học sinh"
+       ""
       ]
      ],
      "viDu": [
       [
        "我不是白家月。",
        "Wǒ bú shì Bái Jiāyuè.",
-       "Tôi không phải là Bạch Gia Nguyệt."
+       ""
       ]
      ]
     },
@@ -904,19 +904,19 @@
       [
        "是不是老师",
        "shì bu shì lǎoshī",
-       "có phải là giáo viên không"
+       ""
       ],
       [
        "是不是学生",
        "shì bu shì xué·shēng",
-       "có phải là học sinh không"
+       ""
       ]
      ],
      "viDu": [
       [
        "你是不是陈天中同学？",
        "Nǐ shì bu shì Chén Tiānzhōng tóngxué?",
-       "Bạn có phải là bạn Trần Thiên Trung không?"
+       ""
       ]
      ]
     }
@@ -956,34 +956,34 @@
       [
        "不是",
        "bú shì",
-       "không phải"
+       ""
       ],
       [
        "不认识",
        "bú rènshi",
-       "không quen"
+       ""
       ],
       [
        "不好",
        "bù hǎo",
-       "không tốt"
+       ""
       ],
       [
        "不高兴",
        "bù gāoxìng",
-       "không vui"
+       ""
       ]
      ],
      "viDu": [
       [
        "我是老师，不是学生。",
        "Wǒ shì lǎoshī, bú shì xué·shēng.",
-       "Tôi là giáo viên, không phải học sinh."
+       ""
       ],
       [
        "我不认识白家月。",
        "Wǒ bú rènshi Bái Jiāyuè.",
-       "Tôi không quen Bạch Gia Nguyệt."
+       ""
       ]
      ]
     }
@@ -1031,29 +1031,29 @@
       [
        "也是",
        "yě shì",
-       "cũng là"
+       ""
       ],
       [
        "也认识",
        "yě rènshi",
-       "cũng quen"
+       ""
       ],
       [
        "也很好",
        "yě hěn hǎo",
-       "cũng rất tốt"
+       ""
       ]
      ],
      "viDu": [
       [
        "我是老师，王一飞也是老师。",
        "Wǒ shì lǎoshī, Wáng Yīfēi yě shì lǎoshī.",
-       "Tôi là giáo viên, Vương Nhất Phi cũng là giáo viên."
+       ""
       ],
       [
        "我们很好，你们也很好。",
        "Wǒmen hěn hǎo, nǐmen yě hěn hǎo.",
-       "Chúng tôi rất khỏe, các bạn cũng rất khỏe."
+       ""
       ]
      ]
     }
@@ -1093,19 +1093,19 @@
       [
        "叫什么",
        "jiào shénme",
-       "tên là gì"
+       ""
       ],
       [
        "说什么",
        "shuō shénme",
-       "nói gì"
+       ""
       ]
      ],
      "viDu": [
       [
        "我叫陈天中，你叫什么？",
        "Wǒ jiào Chén Tiānzhōng, nǐ jiào shénme?",
-       "Tôi tên là Trần Thiên Trung, bạn tên gì?"
+       ""
       ]
      ]
     },
@@ -1115,14 +1115,14 @@
       [
        "什么名字",
        "shénme míngzi",
-       "tên gì"
+       ""
       ]
      ],
      "viDu": [
       [
        "同学，你叫什么名字？",
        "Tóngxué, nǐ jiào shénme míngzi?",
-       "Bạn ơi, bạn tên là gì?"
+       ""
       ]
      ]
     }
@@ -1152,24 +1152,24 @@
       [
        "请进",
        "qǐng jìn",
-       "mời vào"
+       ""
       ],
       [
        "请坐",
        "qǐng zuò",
-       "mời ngồi"
+       ""
       ],
       [
        "请说",
        "qǐng shuō",
-       "mời nói"
+       ""
       ]
      ],
      "viDu": [
       [
        "王老师，您好！请进！",
        "Wáng lǎoshī, nín hǎo! Qǐng jìn!",
-       "Chào thầy Vương! Mời thầy vào!"
+       ""
       ]
      ]
     },
@@ -1179,14 +1179,14 @@
       [
        "请问",
        "qǐngwèn",
-       "xin hỏi"
+       ""
       ]
      ],
      "viDu": [
       [
        "请问，你是不是白家月同学？",
        "Qǐngwèn, nǐ shì bu shì Bái Jiāyuè tóngxué?",
-       "Xin hỏi, bạn có phải là bạn Bạch Gia Nguyệt không?"
+       ""
       ]
      ]
     }
@@ -1220,34 +1220,34 @@
       [
        "很好",
        "hěn hǎo",
-       "rất tốt"
+       ""
       ],
       [
        "很高兴",
        "hěn gāoxìng",
-       "rất vui"
+       ""
       ],
       [
        "很大",
        "hěn dà",
-       "rất to"
+       ""
       ],
       [
        "很小",
        "hěn xiǎo",
-       "rất nhỏ"
+       ""
       ]
      ],
      "viDu": [
       [
        "我很高兴。",
        "Wǒ hěn gāoxìng.",
-       "Tôi rất vui."
+       ""
       ],
       [
        "很高兴认识你。",
        "Hěn gāoxìng rènshi nǐ.",
-       "Rất vui được làm quen với bạn."
+       ""
       ]
      ]
     }

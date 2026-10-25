@@ -1302,24 +1302,24 @@
       [
        "我的同学",
        "wǒ de tóngxué",
-       "bạn học của tôi"
+       ""
       ],
       [
        "你们的国家",
        "nǐmen de guójiā",
-       "đất nước của các bạn"
+       ""
       ],
       [
        "王一飞的学生",
        "Wáng Yīfēi de xué·shēng",
-       "học sinh của Vương Nhất Phi"
+       ""
       ]
      ],
      "viDu": [
       [
        "我的学生是越南人。",
        "Wǒ de xué·shēng shì Yuènán rén.",
-       "Học sinh của tôi là người Việt Nam."
+       ""
       ]
      ]
     },
@@ -1329,24 +1329,24 @@
       [
        "我爸爸",
        "wǒ bàba",
-       "bố tôi"
+       ""
       ],
       [
        "你老师",
        "nǐ lǎoshī",
-       "giáo viên của bạn"
+       ""
       ],
       [
        "我女朋友",
        "wǒ nǚpéngyou",
-       "bạn gái tôi"
+       ""
       ]
      ],
      "viDu": [
       [
        "这是我女朋友。",
        "Zhè shì wǒ nǚpéngyou.",
-       "Đây là bạn gái tôi."
+       ""
       ]
      ]
     }
@@ -1380,24 +1380,24 @@
       [
        "好吗",
        "hǎo ma",
-       "có khỏe không"
+       ""
       ],
       [
        "忙吗",
        "máng ma",
-       "có bận không"
+       ""
       ],
       [
        "是吗",
        "shì ma",
-       "phải không"
+       ""
       ]
      ],
      "viDu": [
       [
        "你的老师好吗？",
        "Nǐ de lǎoshī hǎo ma?",
-       "Thầy/cô của bạn có khỏe không?"
+       ""
       ]
      ]
     },
@@ -1407,12 +1407,12 @@
       [
        "好不好",
        "hǎo bu hǎo",
-       "có khỏe không"
+       ""
       ],
       [
        "是不是",
        "shì bu shì",
-       "có phải không"
+       ""
       ]
      ],
      "viDu": [
@@ -1485,12 +1485,12 @@
       [
        "哪国",
        "nǎ guó",
-       "nước nào"
+       ""
       ],
       [
        "哪国人",
        "nǎ guó rén",
-       "người nước nào"
+       ""
       ]
      ],
      "viDu": [
@@ -1568,24 +1568,24 @@
       [
        "不太好",
        "bú tài hǎo",
-       "không tốt lắm"
+       ""
       ],
       [
        "不太高兴",
        "bú tài gāoxìng",
-       "không vui lắm"
+       ""
       ],
       [
        "不太忙",
        "bú tài máng",
-       "không bận lắm"
+       ""
       ]
      ],
      "viDu": [
       [
        "妈妈不太高兴。",
        "Māma bú tài gāoxìng.",
-       "Mẹ không vui lắm."
+       ""
       ]
      ]
     }
@@ -1625,29 +1625,29 @@
       [
        "还认识",
        "hái rènshi",
-       "còn quen"
+       ""
       ],
       [
        "还工作",
        "hái gōngzuò",
-       "vẫn làm việc"
+       ""
       ],
       [
        "还忙",
        "hái máng",
-       "vẫn bận"
+       ""
       ]
      ],
      "viDu": [
       [
        "我认识他，还认识他的女朋友。",
        "Wǒ rènshi tā, hái rènshi tā de nǚpéngyou.",
-       "Tôi quen anh ấy, còn quen cả bạn gái anh ấy."
+       ""
       ],
       [
        "姐姐的工作还很忙。",
        "Jiějie de gōngzuò hái hěn máng.",
-       "Công việc của chị gái vẫn rất bận."
+       ""
       ]
      ]
     }
@@ -1687,24 +1687,24 @@
       [
        "想你",
        "xiǎng nǐ",
-       "nhớ bạn"
+       ""
       ],
       [
        "很想",
        "hěn xiǎng",
-       "rất nhớ"
+       ""
       ],
       [
        "不想",
        "bù xiǎng",
-       "không nhớ, không muốn"
+       ""
       ]
      ],
      "viDu": [
       [
        "白家月很想她的爸爸妈妈。",
        "Bái Jiāyuè hěn xiǎng tā de bàba māma.",
-       "Bạch Gia Nguyệt rất nhớ bố mẹ cô ấy."
+       ""
       ]
      ]
     },
@@ -1719,19 +1719,19 @@
       [
        "想去",
        "xiǎng qù",
-       "muốn đi"
+       ""
       ],
       [
        "想说",
        "xiǎng shuō",
-       "muốn nói"
+       ""
       ]
      ],
      "viDu": [
       [
        "妹妹很想去中国。",
        "Mèimei hěn xiǎng qù Zhōngguó.",
-       "Em gái rất muốn đi Trung Quốc."
+       ""
       ]
      ]
     }

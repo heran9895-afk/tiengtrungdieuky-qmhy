@@ -26,7 +26,7 @@
         '<p class="np-giai">' + esc(g.giaiThich) + '</p>' +
         g.y.map(function (y, k) {
           return '<div class="np-y">' + (g.y.length > 1 ? '<div class="np-y-nd"><b>' + String.fromCharCode(9312 + k) + '</b> ' + esc(y.noiDung) + '</div>' : '<div class="np-y-nd">' + esc(y.noiDung) + '</div>') +
-            ((y.cum || []).length ? '<div class="np-nhan">Cụm từ · bấm để nghe và xem phiên âm</div><div class="np-cum-ds">' + y.cum.map(function (c) {
+            ((y.cum || []).length ? '<div class="np-nhan">Cụm từ · bấm để xem phiên âm</div><div class="np-cum-ds">' + y.cum.map(function (c) {
               return '<button type="button" class="np-cum" data-doc="' + esc(c[0]) + '"><span class="hanzi">' + esc(c[0]) + '</span><small hidden>' + esc(c[1]) + (c[2] ? ' · ' + esc(c[2]) : '') + '</small></button>'; }).join('') + '</div>' +
               '<div class="np-nhan">Câu ví dụ</div>' : '') +
             y.viDu.map(function (v) {
@@ -45,7 +45,7 @@
     if (t.closest('.tv-loa')) return;
     var n = t.closest('.np-tron'); if (n) return den(+n.dataset.k);
     var cu = t.closest('.np-cum');
-    if (cu) { var sm = cu.querySelector('small'); sm.hidden = !sm.hidden; cu.classList.toggle('mo', !sm.hidden); if (!sm.hidden) TV.doc(cu.dataset.doc); return; }
+    if (cu) { var sm = cu.querySelector('small'); sm.hidden = !sm.hidden; cu.classList.toggle('mo', !sm.hidden); return; }   // cụm từ: chỉ hiện phiên âm, không phát âm
     var h = t.closest('.np-hien');
     if (h) { var a = h.parentNode.querySelector('.np-vd-an'); a.hidden = !a.hidden; h.textContent = a.hidden ? 'Hiện pinyin' : 'Ẩn pinyin'; return; }
     if (t.closest('.np-truoc')) return den(i - 1);
