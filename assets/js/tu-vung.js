@@ -15,11 +15,17 @@
   if (!el) return;
 
   var capDang = '1', ds = [], loc = '', hien = [], soHien = MOI_TRANG, luotTim = 0;
+  // Trang bài học: 2 tab Từ vựng (词语表, _nhom "tuVung") / Từ vựng mở rộng (_nhom "moRong"); ô tìm vẫn tìm trong cả bài
+  var NHOM = [['tuVung', 'Từ vựng'], ['moRong', 'Từ vựng mở rộng']];
+  var nhomDang = MOT_KHO && /(^#|[#&])mo-rong\b/.test(location.hash) ? 'moRong' : 'tuVung', coMoRong = false;
+  function nhomCua(w) { return w.nhom === 'moRong' ? 'moRong' : 'tuVung'; }
+  function locNhom(d) { return MOT_KHO && coMoRong ? d.filter(function (w) { return nhomCua(w) === nhomDang; }) : d; }
 
   // ---------- Giao diện ----------
   el.innerHTML =
-    '<div class="tv-cap" role="tablist">' + CAP.map(function (c) {
-      return '<button type="button" role="tab" data-cap="' + c + '"' + (c === 'MR' ? ' class="tv-cap-mr"' : '') + '>' + tenCap(c) + '</button>'; }).join('') + '</div>' +
+    '<div class="tv-cap" role="tablist">' + (MOT_KHO ? NHOM.map(function (n) {
+      return '<button type="button" role="tab" data-nhom="' + n[0] + '"' + (n[0] === 'moRong' ? ' hidden' : '') + '>' + n[1] + '</button>'; }).join('') : CAP.map(function (c) {
+      return '<button type="button" role="tab" data-cap="' + c + '"' + (c === 'MR' ? ' class="tv-cap-mr"' : '') + '>' + tenCap(c) + '</button>'; }).join('')) + '</div>' +
     '<p class="tv-mr-note" hidden>Mục <b>Mở rộng</b>: từ và cụm từ hay gặp nằm ngoài danh sách chuẩn HSK 3.0, không chia cấp. Phiên âm theo tài liệu của cô.</p>' +
     '<div class="tv-thanh"><input type="search" class="tv-tim" placeholder="' + (MOT_KHO ? 'Tìm trong bài' : 'Tìm trong cả 9 cấp') + ': chữ Hán, pinyin, nghĩa, Hán Việt…"><span class="tv-dem"></span>' +
       (MOT_KHO ? '' : '<a class="btn solid tv-luyen" href="' + ROOT + 'thu-vien/tu-vung/luyen-tap/">✍️ Luyện tập</a>') + '</div>' +
@@ -61,9 +67,11 @@
   function datCheDo(c) {
     cheDo = c; try { if (c !== 'bo') localStorage.setItem('qm-tv-che-do', c); } catch (e) {}
     el.querySelectorAll('.tv-che-do button').forEach(function (b) { b.classList.toggle('on', b.dataset.cd === c); b.setAttribute('aria-pressed', b.dataset.cd === c); });
+    if (MOT_KHO) el.querySelector('.tv-cap').classList.toggle('tv-cap-mo', c === 'bo');   // thẻ bộ thủ là của cả bài, không theo tab
     fc.thuTu = null; veLuoi();
   }
   // Nút ⭐ từ khó (dùng chung bộ lưu tiến độ với trang luyện tập)
+  function nhanTu(w) { return MOT_KHO ? (coMoRong && nhomCua(w) === 'moRong' ? 'Mở rộng' : 'Từ vựng') : tenCap(w.cap); }
   function nutSao(w) {
     if (!TD) return '';
     var on = TD.laKho(w.ma);
@@ -98,7 +106,7 @@
     if (cheDo === 'the') { if (!them) fc.thuTu = null; return veThe(); }
     luoi.innerHTML = hien.slice(0, soHien).map(function (w, j) {
       return '<div class="tv-the" role="button" tabindex="0" data-i="' + j + '">' +
-        nutLoa(w.han, false, w.doc) + (k ? '<span class="tv-the-cap">' + esc(tenCap(w.cap)) + '</span>' : '') +
+        nutLoa(w.han, false, w.doc) + (k ? '<span class="tv-the-cap">' + esc(nhanTu(w)) + '</span>' : '') +
         (TD && TD.laKho(w.ma) ? '<span class="tv-sao-nho" title="Từ khó">★</span>' : '') +
         '<div class="tv-han hanzi">' + esc(w.han) + '</div><div class="tv-py">' + esc(w.py) + '</div>' +
         '<div class="tv-nghia">' + esc(w.nghia) + '</div></div>';
@@ -152,7 +160,7 @@
     if (laBo) return veTheBo();
     var w = hien[fcViTri()], n = fc.thuTu.length;
     luoi.innerHTML = '<div class="tv-fc">' +
-      '<div class="tv-fc-dau"><span class="tv-fc-dem">Thẻ ' + (fc.i + 1) + ' / ' + n + (loc ? ' · ' + esc(tenCap(w.cap)) : '') + '</span>' +
+      '<div class="tv-fc-dau"><span class="tv-fc-dem">Thẻ ' + (fc.i + 1) + ' / ' + n + (loc ? ' · ' + esc(nhanTu(w)) : '') + '</span>' +
         '<button type="button" class="tv-fc-tron' + (fc.tron ? ' on' : '') + '" aria-pressed="' + fc.tron + '">🔀 Trộn thẻ</button>' + nutSao(w) + '</div>' +
       '<div class="tv-fc-the" tabindex="0" role="button" aria-label="Lật thẻ"><div class="tv-fc-trong">' +
         '<div class="tv-fc-mat truoc"><span class="hanzi tv-fc-han">' + esc(w.han) + '</span><small>Bấm vào thẻ để lật</small></div>' +
@@ -185,13 +193,31 @@
   function chonCap(c) {
     capDang = c;
     el.querySelector('.tv-mr-note').hidden = c !== 'MR';
-    el.querySelectorAll('.tv-cap button').forEach(function (b) { b.classList.toggle('on', b.dataset.cap === c); });
+    el.querySelectorAll('.tv-cap button').forEach(function (b) { b.classList.toggle('on', MOT_KHO ? b.dataset.nhom === nhomDang : b.dataset.cap === c); });
     luoi.innerHTML = '<div class="tv-trong">Đang tải từ vựng…</div>';
     if (loc) { loc = ''; tim.value = ''; }
-    taiCap(c).then(function (d) { ds = d; veLuoi(); })
+    taiCap(c).then(function (d) {
+      if (MOT_KHO) {
+        coMoRong = d.some(function (w) { return nhomCua(w) === 'moRong'; });
+        el.querySelectorAll('.tv-cap button').forEach(function (b) {
+          var n = d.filter(function (w) { return nhomCua(w) === b.dataset.nhom; }).length;
+          b.hidden = !coMoRong; b.textContent = NHOM.filter(function (x) { return x[0] === b.dataset.nhom; })[0][1] + ' · ' + n;
+        });
+        if (!coMoRong) nhomDang = 'tuVung';
+      }
+      ds = locNhom(d); veLuoi(); })
       .catch(function () { ds = []; luoi.innerHTML = '<div class="tv-trong">Chưa tải được dữ liệu, bạn kiểm tra mạng rồi thử lại nhé.</div>'; });
     if (nutLuyen) nutLuyen.href = ROOT + 'thu-vien/tu-vung/luyen-tap/' + (c === 'MR' ? '#hskMR' : '#hsk' + c);
-    try { history.replaceState(null, '', '#hsk' + c); } catch (e) {}
+    if (!MOT_KHO) try { history.replaceState(null, '', '#hsk' + c); } catch (e) {}
+  }
+  function chonNhom(n) {
+    if (!KHO[capDang]) return;
+    nhomDang = n; ds = locNhom(KHO[capDang]);
+    el.querySelectorAll('.tv-cap button').forEach(function (b) { b.classList.toggle('on', b.dataset.nhom === n); b.setAttribute('aria-selected', b.dataset.nhom === n); });
+    if (loc) { loc = ''; tim.value = ''; }
+    try { history.replaceState(null, '', location.pathname + location.search + (n === 'moRong' ? '#mo-rong' : '')); } catch (e) {}
+    if (cheDo === 'bo') { var cu = 'luoi'; try { if (localStorage.getItem('qm-tv-che-do') === 'the') cu = 'the'; } catch (e) {} datCheDo(cu); }
+    else { fc.thuTu = null; veLuoi(); }
   }
 
   // ---------- Bảng chi tiết một từ ----------
@@ -226,7 +252,7 @@
         '<div class="tv-dau-tt"><div class="tv-ct-py">' + esc(w.py) + '</div>' +
           '<div class="tv-ct-nghia">' + esc(w.nghia) + '</div>' +
           '<div class="tv-the-tag">' + (w.hv ? '<span class="tag gold">Hán Việt: ' + esc(w.hv) + '</span>' : '') +
-            (w.loai ? '<span class="tag">' + esc(w.loai) + '</span>' : '') + '<span class="tag red">' + esc(tenCap(w.cap || capDang)) + '</span></div>' +
+            (w.loai ? '<span class="tag">' + esc(w.loai) + '</span>' : '') + '<span class="tag red">' + esc(tenCap(w.cap || capDang)) + '</span>' + (MOT_KHO && coMoRong && nhomCua(w) === 'moRong' ? '<span class="tag">Từ mở rộng</span>' : '') + '</div>' +
           '<div class="tv-sao-hang">' + nutSao(w) + '</div>' +
         '</div>' +
       '</div>' +
@@ -285,7 +311,7 @@
   document.addEventListener('click', function (e) {
     if (e.target.closest('.tv-loa')) return;   // nút loa: tu-vung-chung.js đã phát âm
     var t = e.target.closest('.tv-the'); if (t && el.contains(t)) moTu(+t.dataset.i);
-    var c = e.target.closest('.tv-cap button'); if (c) chonCap(c.dataset.cap);
+    var c = e.target.closest('.tv-cap button'); if (c && el.contains(c)) { if (c.dataset.nhom) chonNhom(c.dataset.nhom); else chonCap(c.dataset.cap); }
   }, true);
   el.addEventListener('keydown', function (e) { var t = e.target.closest('.tv-the'); if (t && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); moTu(+t.dataset.i); } });
   tim.addEventListener('input', function () { loc = tim.value; veLuoi(); });

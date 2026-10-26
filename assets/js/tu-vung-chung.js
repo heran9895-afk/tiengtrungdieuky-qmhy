@@ -43,7 +43,7 @@
 
   function chuanHoa(r) {
     return {
-      ma: r['Mã'], han: r['Chữ Hán'], py: r['Pinyin'], hv: r['Âm Hán Việt'], loai: r['Từ loại'],
+      ma: r['Mã'], nhom: r['_nhom'] || '', han: r['Chữ Hán'], py: r['Pinyin'], hv: r['Âm Hán Việt'], loai: r['Từ loại'],
       doc: r['Đọc từ'] || '',
       nghia: r['Nghĩa tiếng Việt'], cap: r['Cấp HSK'], but: (r['Thuận bút'] || '').replace(/[^\u3400-\u9fff]/g, ''),
       cum: (r['Cụm từ'] || '').split(/\n+/).map(function (d) {
