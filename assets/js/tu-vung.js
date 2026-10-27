@@ -262,7 +262,7 @@
       '</div>' +
       (coNhiHoa(w.han, w.doc) ? GHI_NHI : '') +
       (w.but ? '<div class="tv-muc tv-muc-but"><span class="tv-nhan">Thuận bút</span>' +
-        '<div class="tv-but">' + w.but.split('').map(function (c, k) { return '<button type="button" class="tv-but-o" data-k="' + k + '" data-chu="' + c + '" aria-label="Xem lại thuận bút chữ ' + c + '"><span class="hanzi">' + c + '</span></button>'; }).join('') + '</div></div>' : (MOT_KHO ? '<div class="tv-muc tv-muc-but"><span class="tv-nhan">Thuận bút</span><p class="tv-but-ghi">Các chữ của từ này đã có thuận bút ở từ phía trước trong bài.</p></div>' : '')) +
+        '<div class="tv-but">' + w.but.split('').map(function (c, k) { return '<button type="button" class="tv-but-o" data-k="' + k + '" data-chu="' + c + '" aria-label="Xem lại thuận bút chữ ' + c + '"><span class="hanzi">' + c + '</span></button>'; }).join('') + '</div></div>' : (MOT_KHO ? '<div class="tv-muc tv-muc-but"><span class="tv-nhan">Thuận bút</span><p class="tv-but-ghi">Các chữ của từ này đã có thuận bút ở từ phía trước trong bài hoặc ở bài trước.</p></div>' : '')) +
       cauTaoHTML(w) +
       (!w.cum.length && !w.cau.length ? '<p class="tv-cho-nd">Cụm kết hợp và câu ví dụ của từ này đang được cô cập nhật 🌱</p>' : '') +
       (w.cum.length ? '<div class="tv-muc"><span class="tv-nhan">Cụm kết hợp</span><ul class="tv-cum">' + w.cum.map(function (c) {

@@ -1,0 +1,1791 @@
+{
+ "bai": "1-2",
+ "chuongTrinh": "HSK 2.0",
+ "ten": "第一课：你好 · 第二课：谢谢你",
+ "tenViet": "Bài 1–2: Xin chào · Cảm ơn bạn",
+ "pinyinTen": "Dì yī kè: Nǐ hǎo · Dì èr kè: Xièxie nǐ",
+ "tenRieng": [],
+ "maBaiTap": "h2-bai1-2-bai-tap",
+ "tu": [
+  {
+   "Mã": "1-0271",
+   "Chữ Hán": "你",
+   "Pinyin": "nǐ",
+   "Âm Hán Việt": "NỄ",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "bạn, anh, chị… (ngôi 2 số ít)",
+   "Cấp HSK": "1",
+   "Thuận bút": "你",
+   "Cụm từ": "你们 | nǐmen\n谢谢你 | xièxie nǐ\n对不起你 | duìbuqǐ nǐ",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你好！",
+   "Pinyin câu 1": "Nǐ hǎo!",
+   "Nghĩa câu 1": "Xin chào!",
+   "Đọc câu 1": "",
+   "Câu 2": "你也很好。",
+   "Pinyin câu 2": "Nǐ yě hěn hǎo.",
+   "Nghĩa câu 2": "Bạn cũng rất khỏe.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0272",
+   "Chữ Hán": "你们",
+   "Pinyin": "nǐmen",
+   "Âm Hán Việt": "NỄ MÔN",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "các bạn, các anh chị",
+   "Cấp HSK": "1",
+   "Thuận bút": "们",
+   "Cụm từ": "谢谢你们 | xièxie nǐmen\n对不起你们 | duìbuqǐ nǐmen",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你们好！",
+   "Pinyin câu 1": "Nǐmen hǎo!",
+   "Nghĩa câu 1": "Chào các bạn!",
+   "Đọc câu 1": "",
+   "Câu 2": "你们很好。",
+   "Pinyin câu 2": "Nǐmen hěn hǎo.",
+   "Nghĩa câu 2": "Các bạn rất tốt.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0274",
+   "Chữ Hán": "您",
+   "Pinyin": "nín",
+   "Âm Hán Việt": "NÂM",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "ngài, ông, bà… (ngôi 2, trang trọng, lịch sự)",
+   "Cấp HSK": "1",
+   "Thuận bút": "您",
+   "Cụm từ": "谢谢您 | xièxie nín\n对不起您 | duìbuqǐ nín",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "您好！",
+   "Pinyin câu 1": "Nín hǎo!",
+   "Nghĩa câu 1": "Chào ông / bà ạ!",
+   "Đọc câu 1": "",
+   "Câu 2": "谢谢您！",
+   "Pinyin câu 2": "Xièxie nín!",
+   "Nghĩa câu 2": "Cảm ơn ông / bà ạ!",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0138",
+   "Chữ Hán": "好",
+   "Pinyin": "hǎo",
+   "Âm Hán Việt": "HẢO",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "tốt, đẹp, khỏe…",
+   "Cấp HSK": "1",
+   "Thuận bút": "好",
+   "Cụm từ": "很好 | hěn hǎo\n不好 | bù hǎo\n也好 | yě hǎo",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "老师好！",
+   "Pinyin câu 1": "Lǎoshī hǎo!",
+   "Nghĩa câu 1": "Chào thầy / cô ạ!",
+   "Đọc câu 1": "",
+   "Câu 2": "他也很好。",
+   "Pinyin câu 2": "Tā yě hěn hǎo.",
+   "Nghĩa câu 2": "Anh ấy cũng rất khỏe.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0454",
+   "Chữ Hán": "再见",
+   "Pinyin": "zàijiàn",
+   "Âm Hán Việt": "TÁI KIẾN",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "tạm biệt, hẹn gặp lại",
+   "Cấp HSK": "1",
+   "Thuận bút": "再见",
+   "Cụm từ": "",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "老师，再见！",
+   "Pinyin câu 1": "Lǎoshī, zàijiàn!",
+   "Nghĩa câu 1": "Tạm biệt thầy / cô!",
+   "Đọc câu 1": "",
+   "Câu 2": "同学们，再见！",
+   "Pinyin câu 2": "Tóngxuémen, zàijiàn!",
+   "Nghĩa câu 2": "Tạm biệt các bạn!",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0032",
+   "Chữ Hán": "不客气",
+   "Pinyin": "bú kèqi",
+   "Âm Hán Việt": "BẤT KHÁCH KHÍ",
+   "Từ loại": "cụm đáp lời",
+   "Nghĩa tiếng Việt": "đừng khách sáo, không có gì",
+   "Cấp HSK": "1",
+   "Thuận bút": "不客气",
+   "Cụm từ": "",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：谢谢你！\nB：不客气！",
+   "Pinyin câu 1": "A: Xièxie nǐ!\nB: Bú kèqi!",
+   "Nghĩa câu 1": "A: Cảm ơn bạn!\nB: Không có gì!",
+   "Đọc câu 1": "谢谢你！不客气！",
+   "Câu 2": "A：谢谢老师！\nB：不客气！",
+   "Pinyin câu 2": "A: Xièxie lǎoshī!\nB: Bú kèqi!",
+   "Nghĩa câu 2": "A: Em cảm ơn cô!\nB: Không có gì!",
+   "Đọc câu 2": "谢谢老师！不客气！"
+  },
+  {
+   "Mã": "1-0034",
+   "Chữ Hán": "不",
+   "Pinyin": "bù",
+   "Âm Hán Việt": "BẤT",
+   "Từ loại": "phó từ",
+   "Nghĩa tiếng Việt": "không",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "不好 | bù hǎo\n不大 | bú dà\n不小 | bù xiǎo\n不客气 | bú kèqi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你很好，他们不好。",
+   "Pinyin câu 1": "Nǐ hěn hǎo, tāmen bù hǎo.",
+   "Nghĩa câu 1": "Bạn rất tốt, họ không tốt.",
+   "Đọc câu 1": "",
+   "Câu 2": "它不大。",
+   "Pinyin câu 2": "Tā bú dà.",
+   "Nghĩa câu 2": "Nó không to.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0410",
+   "Chữ Hán": "谢谢",
+   "Pinyin": "xièxie",
+   "Âm Hán Việt": "TẠ TẠ",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "cảm ơn",
+   "Cấp HSK": "1",
+   "Thuận bút": "谢",
+   "Cụm từ": "谢谢你 | xièxie nǐ\n谢谢您 | xièxie nín\n谢谢老师 | xièxie lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "谢谢你们！",
+   "Pinyin câu 1": "Xièxie nǐmen!",
+   "Nghĩa câu 1": "Cảm ơn các bạn!",
+   "Đọc câu 1": "",
+   "Câu 2": "谢谢你！",
+   "Pinyin câu 2": "Xièxie nǐ!",
+   "Nghĩa câu 2": "Cảm ơn bạn!",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0233",
+   "Chữ Hán": "没关系",
+   "Pinyin": "méi guānxi",
+   "Âm Hán Việt": "MỘT QUAN HỆ",
+   "Từ loại": "cụm đáp lời",
+   "Nghĩa tiếng Việt": "không sao, không có gì",
+   "Cấp HSK": "1",
+   "Thuận bút": "没关系",
+   "Cụm từ": "",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：对不起您！\nB：没关系！",
+   "Pinyin câu 1": "A: Duìbuqǐ nín!\nB: Méi guānxi!",
+   "Nghĩa câu 1": "A: Xin lỗi ông / bà!\nB: Không sao!",
+   "Đọc câu 1": "对不起您！没关系！",
+   "Câu 2": "A：对不起，老师！\nB：没关系！",
+   "Pinyin câu 2": "A: Duìbuqǐ, lǎoshī!\nB: Méi guānxi!",
+   "Nghĩa câu 2": "A: Em xin lỗi cô!\nB: Không sao!",
+   "Đọc câu 2": "对不起，老师！没关系！"
+  },
+  {
+   "Mã": "1-0093",
+   "Chữ Hán": "对不起",
+   "Pinyin": "duìbuqǐ",
+   "Âm Hán Việt": "ĐỐI BẤT KHỞI",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "xin lỗi",
+   "Cấp HSK": "1",
+   "Thuận bút": "对起",
+   "Cụm từ": "对不起你 | duìbuqǐ nǐ\n对不起您 | duìbuqǐ nín",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "对不起你！",
+   "Pinyin câu 1": "Duìbuqǐ nǐ!",
+   "Nghĩa câu 1": "Xin lỗi bạn!",
+   "Đọc câu 1": "",
+   "Câu 2": "对不起！我不好！",
+   "Pinyin câu 2": "Duìbuqǐ! Wǒ bù hǎo!",
+   "Nghĩa câu 2": "Xin lỗi! Là em không ngoan!",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0146",
+   "Chữ Hán": "很",
+   "Pinyin": "hěn",
+   "Âm Hán Việt": "NGẬN",
+   "Từ loại": "phó từ",
+   "Nghĩa tiếng Việt": "rất",
+   "Cấp HSK": "1",
+   "Thuận bút": "很",
+   "Cụm từ": "很好 | hěn hǎo\n很大 | hěn dà\n很小 | hěn xiǎo\n很客气 | hěn kèqi",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "老师很好。",
+   "Pinyin câu 1": "Lǎoshī hěn hǎo.",
+   "Nghĩa câu 1": "Thầy / cô rất tốt.",
+   "Đọc câu 1": "",
+   "Câu 2": "它很大。",
+   "Pinyin câu 2": "Tā hěn dà.",
+   "Nghĩa câu 2": "Nó rất to.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0241",
+   "Chữ Hán": "们",
+   "Pinyin": "men",
+   "Âm Hán Việt": "MÔN",
+   "Từ loại": "hậu tố",
+   "Nghĩa tiếng Việt": "hậu tố chỉ số nhiều (sau đại từ, danh từ chỉ người)",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "你们 | nǐmen\n我们 | wǒmen\n他们 | tāmen\n同学们 | tóngxuémen\n老师们 | lǎoshīmen",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "同学们好！",
+   "Pinyin câu 1": "Tóngxuémen hǎo!",
+   "Nghĩa câu 1": "Chào các bạn!",
+   "Đọc câu 1": "",
+   "Câu 2": "老师们好！",
+   "Pinyin câu 2": "Lǎoshīmen hǎo!",
+   "Nghĩa câu 2": "Chào các thầy cô!",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0380",
+   "Chữ Hán": "我",
+   "Pinyin": "wǒ",
+   "Âm Hán Việt": "NGÃ",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "tôi, tớ, mình… (ngôi 1 số ít)",
+   "Cấp HSK": "1",
+   "Thuận bút": "我",
+   "Cụm từ": "我们 | wǒmen\n我老师 | wǒ lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我很好。",
+   "Pinyin câu 1": "Wǒ hěn hǎo.",
+   "Nghĩa câu 1": "Tôi rất khỏe.",
+   "Đọc câu 1": "",
+   "Câu 2": "我也不错。",
+   "Pinyin câu 2": "Wǒ yě búcuò.",
+   "Nghĩa câu 2": "Tôi cũng ổn.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0381",
+   "Chữ Hán": "我们",
+   "Pinyin": "wǒmen",
+   "Âm Hán Việt": "NGÃ MÔN",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "chúng tôi, chúng ta",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "我们老师 | wǒmen lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我们很好。",
+   "Pinyin câu 1": "Wǒmen hěn hǎo.",
+   "Nghĩa câu 1": "Chúng tôi rất khỏe.",
+   "Đọc câu 1": "",
+   "Câu 2": "我们也很不错。",
+   "Pinyin câu 2": "Wǒmen yě hěn búcuò.",
+   "Nghĩa câu 2": "Chúng tôi cũng khá ổn.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0354",
+   "Chữ Hán": "他",
+   "Pinyin": "tā",
+   "Âm Hán Việt": "THA",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "anh ấy, anh ta (ngôi 3 số ít, nam)",
+   "Cấp HSK": "1",
+   "Thuận bút": "他",
+   "Cụm từ": "他们 | tāmen\n谢谢他 | xièxie tā",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "他很好。",
+   "Pinyin câu 1": "Tā hěn hǎo.",
+   "Nghĩa câu 1": "Anh ấy rất tốt.",
+   "Đọc câu 1": "",
+   "Câu 2": "他也很客气。",
+   "Pinyin câu 2": "Tā yě hěn kèqi.",
+   "Nghĩa câu 2": "Anh ấy cũng rất khách sáo.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0356",
+   "Chữ Hán": "她",
+   "Pinyin": "tā",
+   "Âm Hán Việt": "THA",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "cô ấy, chị ấy (ngôi 3 số ít, nữ)",
+   "Cấp HSK": "1",
+   "Thuận bút": "她",
+   "Cụm từ": "她们 | tāmen\n谢谢她 | xièxie tā",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "她很小。",
+   "Pinyin câu 1": "Tā hěn xiǎo.",
+   "Nghĩa câu 1": "Cô bé rất nhỏ.",
+   "Đọc câu 1": "",
+   "Câu 2": "她也很好。",
+   "Pinyin câu 2": "Tā yě hěn hǎo.",
+   "Nghĩa câu 2": "Cô ấy cũng rất tốt.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0515",
+   "Chữ Hán": "它",
+   "Pinyin": "tā",
+   "Âm Hán Việt": "THA",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "nó (con vật, sự vật)",
+   "Cấp HSK": "2",
+   "Thuận bút": "它",
+   "Cụm từ": "它们 | tāmen",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "它很小。",
+   "Pinyin câu 1": "Tā hěn xiǎo.",
+   "Nghĩa câu 1": "Nó rất nhỏ.",
+   "Đọc câu 1": "",
+   "Câu 2": "它们不小。",
+   "Pinyin câu 2": "Tāmen bù xiǎo.",
+   "Nghĩa câu 2": "Chúng nó không nhỏ.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0355",
+   "Chữ Hán": "他们",
+   "Pinyin": "tāmen",
+   "Âm Hán Việt": "THA MÔN",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "họ, các anh ấy",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "谢谢他们 | xièxie tāmen",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "你们很好，他们也很好。",
+   "Pinyin câu 1": "Nǐmen hěn hǎo, tāmen yě hěn hǎo.",
+   "Nghĩa câu 1": "Các bạn rất tốt, họ cũng rất tốt.",
+   "Đọc câu 1": "",
+   "Câu 2": "他们很客气。",
+   "Pinyin câu 2": "Tāmen hěn kèqi.",
+   "Nghĩa câu 2": "Họ rất khách sáo.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0425",
+   "Chữ Hán": "也",
+   "Pinyin": "yě",
+   "Âm Hán Việt": "DÃ",
+   "Từ loại": "phó từ",
+   "Nghĩa tiếng Việt": "cũng",
+   "Cấp HSK": "1",
+   "Thuận bút": "也",
+   "Cụm từ": "也好 | yě hǎo\n也小 | yě xiǎo\n也很好 | yě hěn hǎo",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "她们也小。",
+   "Pinyin câu 1": "Tāmen yě xiǎo.",
+   "Nghĩa câu 1": "Các cô bé cũng nhỏ.",
+   "Đọc câu 1": "",
+   "Câu 2": "我也很好。",
+   "Pinyin câu 2": "Wǒ yě hěn hǎo.",
+   "Nghĩa câu 2": "Tôi cũng rất khỏe.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0401",
+   "Chữ Hán": "小",
+   "Pinyin": "xiǎo",
+   "Âm Hán Việt": "TIỂU",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "nhỏ, bé",
+   "Cấp HSK": "1",
+   "Thuận bút": "小",
+   "Cụm từ": "很小 | hěn xiǎo\n不小 | bù xiǎo\n也小 | yě xiǎo",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "它们很小。",
+   "Pinyin câu 1": "Tāmen hěn xiǎo.",
+   "Nghĩa câu 1": "Chúng nó rất nhỏ.",
+   "Đọc câu 1": "",
+   "Câu 2": "我们不小。",
+   "Pinyin câu 2": "Wǒmen bù xiǎo.",
+   "Nghĩa câu 2": "Chúng tôi không còn nhỏ.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0061",
+   "Chữ Hán": "大",
+   "Pinyin": "dà",
+   "Âm Hán Việt": "ĐẠI",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "to, lớn",
+   "Cấp HSK": "1",
+   "Thuận bút": "大",
+   "Cụm từ": "很大 | hěn dà\n不大 | bú dà",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "它们很大。",
+   "Pinyin câu 1": "Tāmen hěn dà.",
+   "Nghĩa câu 1": "Chúng nó rất to.",
+   "Đọc câu 1": "",
+   "Câu 2": "它也不大。",
+   "Pinyin câu 2": "Tā yě bú dà.",
+   "Nghĩa câu 2": "Nó cũng không to.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0030",
+   "Chữ Hán": "不错",
+   "Pinyin": "búcuò",
+   "Âm Hán Việt": "BẤT THÁC",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "không tệ, tốt, khá",
+   "Cấp HSK": "2",
+   "Thuận bút": "错",
+   "Cụm từ": "很不错 | hěn búcuò",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "你们也很不错。",
+   "Pinyin câu 1": "Nǐmen yě hěn búcuò.",
+   "Nghĩa câu 1": "Các bạn cũng rất khá.",
+   "Đọc câu 1": "",
+   "Câu 2": "你很不错。",
+   "Pinyin câu 2": "Nǐ hěn búcuò.",
+   "Nghĩa câu 2": "Bạn rất khá.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "5-0443",
+   "Chữ Hán": "客气",
+   "Pinyin": "kèqi",
+   "Âm Hán Việt": "KHÁCH KHÍ",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "khách sáo, khách khí",
+   "Cấp HSK": "5",
+   "Thuận bút": "",
+   "Cụm từ": "很客气 | hěn kèqi\n不客气 | bú kèqi",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "她们很客气。",
+   "Pinyin câu 1": "Tāmen hěn kèqi.",
+   "Nghĩa câu 1": "Các cô ấy rất khách sáo.",
+   "Đọc câu 1": "",
+   "Câu 2": "你们很客气。",
+   "Pinyin câu 2": "Nǐmen hěn kèqi.",
+   "Nghĩa câu 2": "Các bạn khách sáo quá.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0173",
+   "Chữ Hán": "见",
+   "Pinyin": "jiàn",
+   "Âm Hán Việt": "KIẾN",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "gặp",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "见你 | jiàn nǐ\n见老师 | jiàn lǎoshī\n明天见 | míngtiān jiàn",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "明天见！",
+   "Pinyin câu 1": "Míngtiān jiàn!",
+   "Nghĩa câu 1": "Mai gặp lại!",
+   "Đọc câu 1": "",
+   "Câu 2": "老师，明天见！",
+   "Pinyin câu 2": "Lǎoshī, míngtiān jiàn!",
+   "Nghĩa câu 2": "Cô ơi, mai gặp lại ạ!",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0209",
+   "Chữ Hán": "老师",
+   "Pinyin": "lǎoshī",
+   "Âm Hán Việt": "LÃO SƯ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "giáo viên, thầy / cô giáo",
+   "Cấp HSK": "1",
+   "Thuận bút": "老师",
+   "Cụm từ": "老师们 | lǎoshīmen\n谢谢老师 | xièxie lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "老师，谢谢您！",
+   "Pinyin câu 1": "Lǎoshī, xièxie nín!",
+   "Nghĩa câu 1": "Em cảm ơn cô ạ!",
+   "Đọc câu 1": "",
+   "Câu 2": "老师，对不起！",
+   "Pinyin câu 2": "Lǎoshī, duìbuqǐ!",
+   "Nghĩa câu 2": "Em xin lỗi cô!",
+   "Đọc câu 2": ""
+  }
+ ],
+ "boThu": [
+  {
+   "boThu": "亻",
+   "ten": "Bộ nhân đứng",
+   "pinyin": "rén",
+   "nghia": "chỉ con người",
+   "docAm": "单人旁",
+   "tenGoi": "单人旁",
+   "tenGoiPinyin": "dānrénpáng",
+   "bienThe": [
+    "人"
+   ],
+   "chuChua": [
+    {
+     "hanzi": "你",
+     "pinyin": "nǐ",
+     "nghia": "bạn, anh, chị… (ngôi 2 số ít)"
+    },
+    {
+     "hanzi": "们",
+     "pinyin": "men",
+     "nghia": "hậu tố chỉ số nhiều (sau đại từ, danh từ chỉ người)"
+    },
+    {
+     "hanzi": "他",
+     "pinyin": "tā",
+     "nghia": "anh ấy, anh ta (ngôi 3 số ít, nam)"
+    }
+   ]
+  },
+  {
+   "boThu": "小",
+   "ten": "Bộ tiểu",
+   "pinyin": "xiǎo",
+   "nghia": "nhỏ, bé",
+   "docAm": "小",
+   "chuChua": [
+    {
+     "hanzi": "你",
+     "pinyin": "nǐ",
+     "nghia": "bạn, anh, chị… (ngôi 2 số ít)"
+    }
+   ]
+  },
+  {
+   "boThu": "心",
+   "ten": "Bộ tâm",
+   "pinyin": "xīn",
+   "nghia": "trái tim, chỉ tình cảm và suy nghĩ",
+   "docAm": "心",
+   "chuChua": [
+    {
+     "hanzi": "您",
+     "pinyin": "nín",
+     "nghia": "ngài, ông, bà… (ngôi 2, trang trọng, lịch sự)"
+    }
+   ]
+  },
+  {
+   "boThu": "女",
+   "ten": "Bộ nữ",
+   "pinyin": "nǚ",
+   "nghia": "chỉ con gái, phụ nữ",
+   "docAm": "女",
+   "chuChua": [
+    {
+     "hanzi": "好",
+     "pinyin": "hǎo",
+     "nghia": "tốt, đẹp, khỏe…"
+    },
+    {
+     "hanzi": "她",
+     "pinyin": "tā",
+     "nghia": "cô ấy, chị ấy (ngôi 3 số ít, nữ)"
+    }
+   ]
+  },
+  {
+   "boThu": "子",
+   "ten": "Bộ tử",
+   "pinyin": "zǐ",
+   "nghia": "chỉ con cái",
+   "docAm": "子",
+   "chuChua": [
+    {
+     "hanzi": "好",
+     "pinyin": "hǎo",
+     "nghia": "tốt, đẹp, khỏe…"
+    }
+   ]
+  },
+  {
+   "boThu": "门",
+   "ten": "Bộ môn",
+   "pinyin": "mén",
+   "nghia": "cái cửa",
+   "docAm": "门",
+   "chuChua": [
+    {
+     "hanzi": "们",
+     "pinyin": "men",
+     "nghia": "hậu tố chỉ số nhiều (sau đại từ, danh từ chỉ người)"
+    }
+   ]
+  },
+  {
+   "boThu": "戈",
+   "ten": "Bộ qua",
+   "pinyin": "gē",
+   "nghia": "vũ khí, cây mác",
+   "docAm": "戈",
+   "chuChua": [
+    {
+     "hanzi": "我",
+     "pinyin": "wǒ",
+     "nghia": "tôi, tớ, mình… (ngôi 1 số ít)"
+    }
+   ]
+  },
+  {
+   "boThu": "手",
+   "ten": "Bộ thủ",
+   "pinyin": "shǒu",
+   "nghia": "tay",
+   "docAm": "手",
+   "chuChua": [
+    {
+     "hanzi": "我",
+     "pinyin": "wǒ",
+     "nghia": "tôi, tớ, mình… (ngôi 1 số ít)"
+    }
+   ]
+  },
+  {
+   "boThu": "宀",
+   "ten": "Bộ miên",
+   "pinyin": "mián",
+   "nghia": "mái nhà",
+   "docAm": "宝盖头",
+   "tenGoi": "宝盖头",
+   "tenGoiPinyin": "bǎogàitóu",
+   "chuChua": [
+    {
+     "hanzi": "它",
+     "pinyin": "tā",
+     "nghia": "nó (con vật, sự vật)"
+    }
+   ]
+  },
+  {
+   "boThu": "匕",
+   "ten": "Bộ chủy",
+   "pinyin": "bǐ",
+   "nghia": "cái muỗng",
+   "docAm": "匕",
+   "chuChua": [
+    {
+     "hanzi": "它",
+     "pinyin": "tā",
+     "nghia": "nó (con vật, sự vật)"
+    }
+   ]
+  },
+  {
+   "boThu": "讠",
+   "ten": "Bộ ngôn",
+   "pinyin": "yán",
+   "nghia": "lời nói, nói năng",
+   "docAm": "言字旁",
+   "tenGoi": "言字旁",
+   "tenGoiPinyin": "yánzìpáng",
+   "bienThe": [
+    "言"
+   ],
+   "chuChua": [
+    {
+     "hanzi": "谢",
+     "pinyin": "xiè",
+     "nghia": "cảm ơn"
+    }
+   ]
+  },
+  {
+   "boThu": "身",
+   "ten": "Bộ thân",
+   "pinyin": "shēn",
+   "nghia": "thân thể, cơ thể",
+   "docAm": "身",
+   "chuChua": [
+    {
+     "hanzi": "谢",
+     "pinyin": "xiè",
+     "nghia": "cảm ơn"
+    }
+   ]
+  },
+  {
+   "boThu": "寸",
+   "ten": "Bộ thốn",
+   "pinyin": "cùn",
+   "nghia": "tấc — đơn vị đo chiều dài",
+   "docAm": "寸",
+   "chuChua": [
+    {
+     "hanzi": "谢",
+     "pinyin": "xiè",
+     "nghia": "cảm ơn"
+    },
+    {
+     "hanzi": "对",
+     "pinyin": "duì",
+     "nghia": "đúng; đối với"
+    }
+   ]
+  },
+  {
+   "boThu": "又",
+   "ten": "Bộ hựu",
+   "pinyin": "yòu",
+   "nghia": "tay phải",
+   "docAm": "又",
+   "chuChua": [
+    {
+     "hanzi": "对",
+     "pinyin": "duì",
+     "nghia": "đúng; đối với"
+    }
+   ]
+  },
+  {
+   "boThu": "走",
+   "ten": "Bộ tẩu",
+   "pinyin": "zǒu",
+   "nghia": "đi",
+   "docAm": "走",
+   "chuChua": [
+    {
+     "hanzi": "起",
+     "pinyin": "qǐ",
+     "nghia": "dậy; (trong 对不起)"
+    }
+   ]
+  },
+  {
+   "boThu": "氵",
+   "ten": "Bộ ba chấm thủy",
+   "pinyin": "shuǐ",
+   "nghia": "nước",
+   "docAm": "三点水",
+   "tenGoi": "三点水",
+   "tenGoiPinyin": "sāndiǎnshuǐ",
+   "chuChua": [
+    {
+     "hanzi": "没",
+     "pinyin": "méi",
+     "nghia": "không (có)"
+    }
+   ]
+  },
+  {
+   "boThu": "殳",
+   "ten": "Bộ thù",
+   "pinyin": "shū",
+   "nghia": "ngọn giáo",
+   "docAm": "殳",
+   "chuChua": [
+    {
+     "hanzi": "没",
+     "pinyin": "méi",
+     "nghia": "không (có)"
+    }
+   ]
+  }
+ ],
+ "ghepChu": [
+  {
+   "chu": "你",
+   "phan": [
+    "亻",
+    "尔"
+   ]
+  },
+  {
+   "chu": "您",
+   "phan": [
+    "你",
+    "心"
+   ]
+  },
+  {
+   "chu": "好",
+   "phan": [
+    "女",
+    "子"
+   ]
+  },
+  {
+   "chu": "们",
+   "phan": [
+    "亻",
+    "门"
+   ]
+  },
+  {
+   "chu": "我",
+   "phan": [
+    "手",
+    "戈"
+   ]
+  },
+  {
+   "chu": "他",
+   "phan": [
+    "亻",
+    "也"
+   ]
+  },
+  {
+   "chu": "她",
+   "phan": [
+    "女",
+    "也"
+   ]
+  },
+  {
+   "chu": "它",
+   "phan": [
+    "宀",
+    "匕"
+   ]
+  },
+  {
+   "chu": "谢",
+   "phan": [
+    "讠",
+    "身",
+    "寸"
+   ]
+  },
+  {
+   "chu": "对",
+   "phan": [
+    "又",
+    "寸"
+   ]
+  },
+  {
+   "chu": "起",
+   "phan": [
+    "走",
+    "己"
+   ]
+  },
+  {
+   "chu": "没",
+   "phan": [
+    "氵",
+    "殳"
+   ]
+  }
+ ],
+ "thanhPhan": {
+  "尔": {
+   "pinyin": "ěr",
+   "ten": "Thành phần 尔",
+   "nghia": "phần bên phải của chữ 你"
+  },
+  "你": {
+   "pinyin": "nǐ",
+   "ten": "Chữ 你",
+   "nghia": "bạn, anh, chị… (ngôi thứ hai)"
+  },
+  "也": {
+   "pinyin": "yě",
+   "ten": "Chữ 也",
+   "nghia": "cũng"
+  },
+  "己": {
+   "pinyin": "jǐ",
+   "ten": "Chữ 己",
+   "nghia": "bản thân"
+  }
+ },
+ "chang": [
+  {
+   "so": "1",
+   "ten": "Ôn tập từ vựng 1 · Bài 1",
+   "tu": [
+    "你",
+    "你们",
+    "您",
+    "好",
+    "很",
+    "们",
+    "我",
+    "我们",
+    "他",
+    "她",
+    "它",
+    "他们",
+    "也",
+    "小",
+    "大"
+   ],
+   "ghepChu": [
+    "你",
+    "您",
+    "好",
+    "们",
+    "我",
+    "他",
+    "她",
+    "它"
+   ]
+  },
+  {
+   "so": "2",
+   "ten": "Ôn tập từ vựng 2 · Bài 2",
+   "tu": [
+    "不",
+    "不错",
+    "谢谢",
+    "不客气",
+    "客气",
+    "对不起",
+    "没关系",
+    "再见",
+    "见",
+    "老师"
+   ],
+   "ghepChu": [
+    "谢",
+    "对",
+    "起",
+    "没"
+   ]
+  }
+ ],
+ "nguPhap": [
+  {
+   "id": "bu",
+   "ten": "不 + ĐT / TT",
+   "congThuc": [
+    [
+     [
+      "不",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ]
+    ],
+    [
+     [
+      "不",
+      "codinh"
+     ],
+     [
+      "TT",
+      "tt"
+     ]
+    ]
+   ],
+   "giaiThich": "不 là phó từ phủ định, đặt **trước động từ hoặc tính từ**, nghĩa là **\"không\"**.",
+   "y": [
+    {
+     "noiDung": "不 + ĐT / TT: không …",
+     "cum": [
+      [
+       "不好",
+       "bù hǎo",
+       "",
+       [
+        [
+         "不",
+         "codinh"
+        ],
+        [
+         "好",
+         "tt"
+        ]
+       ]
+      ],
+      [
+       "不大",
+       "bú dà",
+       "",
+       [
+        [
+         "不",
+         "codinh"
+        ],
+        [
+         "大",
+         "tt"
+        ]
+       ]
+      ],
+      [
+       "不小",
+       "bù xiǎo",
+       "",
+       [
+        [
+         "不",
+         "codinh"
+        ],
+        [
+         "小",
+         "tt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你很好，他们不好。",
+       "Nǐ hěn hǎo, tāmen bù hǎo.",
+       "",
+       [
+        [
+         "你很好，他们",
+         null
+        ],
+        [
+         "不",
+         "codinh"
+        ],
+        [
+         "好",
+         "tt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ],
+      [
+       "它们不小。",
+       "Tāmen bù xiǎo.",
+       "",
+       [
+        [
+         "它们",
+         null
+        ],
+        [
+         "不",
+         "codinh"
+        ],
+        [
+         "小",
+         "tt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "不 luôn đứng **trước** từ bị phủ định: 不好, không nói 好不.",
+    "不 đọc **bú** khi đứng trước âm tiết thanh 4 (不大 bú dà, 不客气 bú kèqi); các trường hợp khác đọc **bù** (不好 bù hǎo, 不小 bù xiǎo)."
+   ]
+  }
+ ],
+ "hoiDap": [
+  {
+   "hoi": [
+    "你好！",
+    "Nǐ hǎo!",
+    "Xin chào!"
+   ],
+   "dap": [
+    "你好！",
+    "Nǐ hǎo!",
+    "Xin chào!"
+   ],
+   "nhieu": [
+    [
+     "没关系！",
+     "Méi guānxi!",
+     "Không sao!"
+    ],
+    [
+     "不客气！",
+     "Bú kèqi!",
+     "Không có gì!"
+    ],
+    [
+     "对不起！",
+     "Duìbuqǐ!",
+     "Xin lỗi!"
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "谢谢你！",
+    "Xièxie nǐ!",
+    "Cảm ơn bạn!"
+   ],
+   "dap": [
+    "不客气！",
+    "Bú kèqi!",
+    "Không có gì!"
+   ],
+   "nhieu": [
+    [
+     "你好！",
+     "Nǐ hǎo!",
+     "Xin chào!"
+    ],
+    [
+     "没关系！",
+     "Méi guānxi!",
+     "Không sao!"
+    ],
+    [
+     "对不起！",
+     "Duìbuqǐ!",
+     "Xin lỗi!"
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "对不起！",
+    "Duìbuqǐ!",
+    "Xin lỗi!"
+   ],
+   "dap": [
+    "没关系！",
+    "Méi guānxi!",
+    "Không sao!"
+   ],
+   "nhieu": [
+    [
+     "不客气！",
+     "Bú kèqi!",
+     "Không có gì!"
+    ],
+    [
+     "你好！",
+     "Nǐ hǎo!",
+     "Xin chào!"
+    ],
+    [
+     "谢谢你！",
+     "Xièxie nǐ!",
+     "Cảm ơn bạn!"
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "老师，再见！",
+    "Lǎoshī, zàijiàn!",
+    "Tạm biệt cô!"
+   ],
+   "dap": [
+    "再见！",
+    "Zàijiàn!",
+    "Tạm biệt!"
+   ],
+   "nhieu": [
+    [
+     "对不起！",
+     "Duìbuqǐ!",
+     "Xin lỗi!"
+    ],
+    [
+     "不客气！",
+     "Bú kèqi!",
+     "Không có gì!"
+    ],
+    [
+     "没关系！",
+     "Méi guānxi!",
+     "Không sao!"
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "老师好！",
+    "Lǎoshī hǎo!",
+    "Em chào cô ạ!"
+   ],
+   "dap": [
+    "同学们好！",
+    "Tóngxuémen hǎo!",
+    "Chào các em!"
+   ],
+   "nhieu": [
+    [
+     "没关系！",
+     "Méi guānxi!",
+     "Không sao!"
+    ],
+    [
+     "不客气！",
+     "Bú kèqi!",
+     "Không có gì!"
+    ],
+    [
+     "对不起！",
+     "Duìbuqǐ!",
+     "Xin lỗi!"
+    ]
+   ]
+  },
+  {
+   "hoi": [
+    "明天见！",
+    "Míngtiān jiàn!",
+    "Mai gặp lại!"
+   ],
+   "dap": [
+    "明天见！",
+    "Míngtiān jiàn!",
+    "Mai gặp lại!"
+   ],
+   "nhieu": [
+    [
+     "不客气！",
+     "Bú kèqi!",
+     "Không có gì!"
+    ],
+    [
+     "没关系！",
+     "Méi guānxi!",
+     "Không sao!"
+    ],
+    [
+     "对不起！",
+     "Duìbuqǐ!",
+     "Xin lỗi!"
+    ]
+   ]
+  }
+ ],
+ "cauLuyen": [
+  {
+   "han": "你好，老师！",
+   "py": "Nǐ hǎo, lǎoshī!",
+   "viet": "Em chào cô ạ!",
+   "tu": [
+    "你",
+    "好",
+    "老师"
+   ]
+  },
+  {
+   "han": "您也好！",
+   "py": "Nín yě hǎo!",
+   "viet": "Chào ông / bà ạ! (đáp lại)",
+   "tu": [
+    "您",
+    "也",
+    "好"
+   ]
+  },
+  {
+   "han": "你们好，我很好。",
+   "py": "Nǐmen hǎo, wǒ hěn hǎo.",
+   "viet": "Chào các bạn, tôi rất khỏe.",
+   "tu": [
+    "你们",
+    "好",
+    "我",
+    "很"
+   ]
+  },
+  {
+   "han": "我们也很好。",
+   "py": "Wǒmen yě hěn hǎo.",
+   "viet": "Chúng tôi cũng rất khỏe.",
+   "tu": [
+    "我们",
+    "也",
+    "很",
+    "好"
+   ]
+  },
+  {
+   "han": "他们不大，它们也不大。",
+   "py": "Tāmen bú dà, tāmen yě bú dà.",
+   "viet": "Họ không lớn, chúng nó cũng không lớn.",
+   "tu": [
+    "他们",
+    "不",
+    "大",
+    "也"
+   ],
+   "np": "bu"
+  },
+  {
+   "han": "她们很好，我们也很好。",
+   "py": "Tāmen hěn hǎo, wǒmen yě hěn hǎo.",
+   "viet": "Các cô ấy rất khỏe, chúng tôi cũng rất khỏe.",
+   "tu": [
+    "很",
+    "好",
+    "我们",
+    "也"
+   ]
+  },
+  {
+   "han": "你不小，我也不小。",
+   "py": "Nǐ bù xiǎo, wǒ yě bù xiǎo.",
+   "viet": "Bạn không nhỏ, tôi cũng không nhỏ.",
+   "tu": [
+    "你",
+    "不",
+    "小",
+    "我",
+    "也"
+   ],
+   "np": "bu"
+  },
+  {
+   "han": "谢谢你，老师！",
+   "py": "Xièxie nǐ, lǎoshī!",
+   "viet": "Em cảm ơn cô!",
+   "tu": [
+    "谢谢",
+    "你",
+    "老师"
+   ]
+  },
+  {
+   "han": "A：谢谢您！\nB：不客气！",
+   "py": "A: Xièxie nín!\nB: Bú kèqi!",
+   "viet": "A: Cảm ơn ông / bà!\nB: Không có gì!",
+   "tu": [
+    "谢谢",
+    "您",
+    "不客气"
+   ],
+   "doc": "谢谢您！不客气！"
+  },
+  {
+   "han": "A：对不起！\nB：没关系！",
+   "py": "A: Duìbuqǐ!\nB: Méi guānxi!",
+   "viet": "A: Xin lỗi!\nB: Không sao!",
+   "tu": [
+    "对不起",
+    "没关系"
+   ],
+   "doc": "对不起！没关系！"
+  },
+  {
+   "han": "A：谢谢你们！\nB：不客气！",
+   "py": "A: Xièxie nǐmen!\nB: Bú kèqi!",
+   "viet": "A: Cảm ơn các bạn!\nB: Không có gì!",
+   "tu": [
+    "谢谢",
+    "你们",
+    "不客气"
+   ],
+   "doc": "谢谢你们！不客气！"
+  },
+  {
+   "han": "A：对不起，同学们！\nB：没关系！",
+   "py": "A: Duìbuqǐ, tóngxuémen!\nB: Méi guānxi!",
+   "viet": "A: Xin lỗi các bạn!\nB: Không sao!",
+   "tu": [
+    "对不起",
+    "们",
+    "没关系"
+   ],
+   "doc": "对不起，同学们！没关系！"
+  },
+  {
+   "han": "A：谢谢你，老师！\nB：不客气！",
+   "py": "A: Xièxie nǐ, lǎoshī!\nB: Bú kèqi!",
+   "viet": "A: Em cảm ơn cô!\nB: Không có gì!",
+   "tu": [
+    "谢谢",
+    "你",
+    "老师",
+    "不客气"
+   ],
+   "doc": "谢谢你，老师！不客气！"
+  },
+  {
+   "han": "A：对不起，我不好！\nB：没关系！",
+   "py": "A: Duìbuqǐ, wǒ bù hǎo!\nB: Méi guānxi!",
+   "viet": "A: Xin lỗi, là lỗi của mình!\nB: Không sao!",
+   "tu": [
+    "对不起",
+    "我",
+    "不",
+    "好",
+    "没关系"
+   ],
+   "doc": "对不起，我不好！没关系！"
+  },
+  {
+   "han": "再见，老师！",
+   "py": "Zàijiàn, lǎoshī!",
+   "viet": "Tạm biệt cô!",
+   "tu": [
+    "再见",
+    "老师"
+   ]
+  },
+  {
+   "han": "同学们，明天见！",
+   "py": "Tóngxuémen, míngtiān jiàn!",
+   "viet": "Các bạn, mai gặp lại nhé!",
+   "tu": [
+    "们",
+    "见"
+   ]
+  },
+  {
+   "han": "我们明天见！",
+   "py": "Wǒmen míngtiān jiàn!",
+   "viet": "Mai chúng ta gặp nhau nhé!",
+   "tu": [
+    "我们",
+    "见"
+   ]
+  },
+  {
+   "han": "老师，同学们，再见！",
+   "py": "Lǎoshī, tóngxuémen, zàijiàn!",
+   "viet": "Chào cô, chào các bạn!",
+   "tu": [
+    "老师",
+    "们",
+    "再见"
+   ]
+  },
+  {
+   "han": "您很客气。",
+   "py": "Nín hěn kèqi.",
+   "viet": "Ông / bà khách sáo quá.",
+   "tu": [
+    "您",
+    "很",
+    "客气"
+   ]
+  },
+  {
+   "han": "他也不错。",
+   "py": "Tā yě búcuò.",
+   "viet": "Anh ấy cũng khá.",
+   "tu": [
+    "他",
+    "也",
+    "不错"
+   ]
+  },
+  {
+   "han": "她们很不错。",
+   "py": "Tāmen hěn búcuò.",
+   "viet": "Các cô ấy rất khá.",
+   "tu": [
+    "很",
+    "不错"
+   ]
+  },
+  {
+   "han": "它很好。",
+   "py": "Tā hěn hǎo.",
+   "viet": "Nó rất ngoan.",
+   "tu": [
+    "它",
+    "很",
+    "好"
+   ]
+  },
+  {
+   "han": "它们也很小。",
+   "py": "Tāmen yě hěn xiǎo.",
+   "viet": "Chúng nó cũng rất nhỏ.",
+   "tu": [
+    "也",
+    "很",
+    "小"
+   ]
+  },
+  {
+   "han": "我很小，它很大。",
+   "py": "Wǒ hěn xiǎo, tā hěn dà.",
+   "viet": "Tôi rất nhỏ, nó rất to.",
+   "tu": [
+    "我",
+    "很",
+    "小",
+    "它",
+    "大"
+   ]
+  },
+  {
+   "han": "你很大，我很小。",
+   "py": "Nǐ hěn dà, wǒ hěn xiǎo.",
+   "viet": "Bạn rất to, tôi rất nhỏ.",
+   "tu": [
+    "你",
+    "很",
+    "大",
+    "我",
+    "小"
+   ]
+  },
+  {
+   "han": "你们不小，他们也不小。",
+   "py": "Nǐmen bù xiǎo, tāmen yě bù xiǎo.",
+   "viet": "Các bạn không nhỏ, họ cũng không nhỏ.",
+   "tu": [
+    "你们",
+    "不",
+    "小",
+    "他们",
+    "也"
+   ],
+   "np": "bu"
+  },
+  {
+   "han": "我见同学们。",
+   "py": "Wǒ jiàn tóngxuémen.",
+   "viet": "Tôi gặp các bạn học.",
+   "tu": [
+    "我",
+    "见",
+    "们"
+   ]
+  },
+  {
+   "han": "他们很好，她们也很好。",
+   "py": "Tāmen hěn hǎo, tāmen yě hěn hǎo.",
+   "viet": "Họ rất khỏe, các cô ấy cũng rất khỏe.",
+   "tu": [
+    "他们",
+    "很",
+    "好",
+    "也"
+   ]
+  },
+  {
+   "han": "谢谢您，老师！",
+   "py": "Xièxie nín, lǎoshī!",
+   "viet": "Em cảm ơn cô ạ!",
+   "tu": [
+    "谢谢",
+    "您",
+    "老师"
+   ]
+  },
+  {
+   "han": "我们也不大。",
+   "py": "Wǒmen yě bú dà.",
+   "viet": "Chúng tôi cũng không lớn.",
+   "tu": [
+    "我们",
+    "也",
+    "不",
+    "大"
+   ],
+   "np": "bu"
+  },
+  {
+   "han": "他们不客气。",
+   "py": "Tāmen bú kèqi.",
+   "viet": "Họ không khách sáo.",
+   "tu": [
+    "他们",
+    "不客气"
+   ],
+   "np": "bu"
+  },
+  {
+   "han": "他很客气，她也很客气。",
+   "py": "Tā hěn kèqi, tā yě hěn kèqi.",
+   "viet": "Anh ấy rất khách sáo, cô ấy cũng rất khách sáo.",
+   "tu": [
+    "他",
+    "很",
+    "客气",
+    "她",
+    "也"
+   ]
+  },
+  {
+   "han": "她也不错。",
+   "py": "Tā yě búcuò.",
+   "viet": "Cô ấy cũng khá.",
+   "tu": [
+    "她",
+    "也",
+    "不错"
+   ]
+  },
+  {
+   "han": "他不好，她很好。",
+   "py": "Tā bù hǎo, tā hěn hǎo.",
+   "viet": "Anh ấy không khỏe, cô ấy rất khỏe.",
+   "tu": [
+    "他",
+    "不",
+    "好",
+    "她",
+    "很"
+   ]
+  },
+  {
+   "han": "对不起，老师，我不好！",
+   "py": "Duìbuqǐ, lǎoshī, wǒ bù hǎo!",
+   "viet": "Em xin lỗi cô, là em không ngoan!",
+   "tu": [
+    "对不起",
+    "老师",
+    "我",
+    "不",
+    "好"
+   ]
+  },
+  {
+   "han": "老师，对不起您！",
+   "py": "Lǎoshī, duìbuqǐ nín!",
+   "viet": "Cô ơi, em xin lỗi cô!",
+   "tu": [
+    "老师",
+    "对不起",
+    "您"
+   ]
+  }
+ ],
+ "hoiThoai": [
+  {
+   "ten": "Chào hỏi",
+   "luot": [
+    {
+     "han": "老师好！",
+     "py": "Lǎoshī hǎo!",
+     "viet": "Em chào cô ạ!"
+    },
+    {
+     "han": "你们好！",
+     "py": "Nǐmen hǎo!",
+     "viet": "Chào các em!"
+    },
+    {
+     "han": "老师，再见！",
+     "py": "Lǎoshī, zàijiàn!",
+     "viet": "Em chào cô ạ! (tạm biệt)"
+    },
+    {
+     "han": "再见！",
+     "py": "Zàijiàn!",
+     "viet": "Tạm biệt!"
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "没关系！",
+      "py": "Méi guānxi!"
+     },
+     {
+      "han": "不客气！",
+      "py": "Bú kèqi!"
+     },
+     {
+      "han": "对不起！",
+      "py": "Duìbuqǐ!"
+     }
+    ],
+    "3": [
+     {
+      "han": "不客气！",
+      "py": "Bú kèqi!"
+     },
+     {
+      "han": "没关系！",
+      "py": "Méi guānxi!"
+     },
+     {
+      "han": "谢谢你！",
+      "py": "Xièxie nǐ!"
+     }
+    ]
+   },
+   "chang": "2"
+  },
+  {
+   "ten": "Xin lỗi, cảm ơn",
+   "luot": [
+    {
+     "han": "对不起！",
+     "py": "Duìbuqǐ!",
+     "viet": "Xin lỗi!"
+    },
+    {
+     "han": "没关系！",
+     "py": "Méi guānxi!",
+     "viet": "Không sao!"
+    },
+    {
+     "han": "谢谢您！",
+     "py": "Xièxie nín!",
+     "viet": "Cảm ơn ông / bà!"
+    },
+    {
+     "han": "不客气！",
+     "py": "Bú kèqi!",
+     "viet": "Không có gì!"
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "不客气！",
+      "py": "Bú kèqi!"
+     },
+     {
+      "han": "你好！",
+      "py": "Nǐ hǎo!"
+     },
+     {
+      "han": "再见！",
+      "py": "Zàijiàn!"
+     }
+    ],
+    "3": [
+     {
+      "han": "没关系！",
+      "py": "Méi guānxi!"
+     },
+     {
+      "han": "对不起！",
+      "py": "Duìbuqǐ!"
+     },
+     {
+      "han": "你们好！",
+      "py": "Nǐmen hǎo!"
+     }
+    ]
+   },
+   "chang": "2"
+  }
+ ]
+}

@@ -47,6 +47,15 @@
       { ten: 'HSK 6',   link: 'chuong-trinh-hsk/hsk6/',   ico: '6',   sapCo: true },
       { ten: 'HSK 7–9', link: 'chuong-trinh-hsk/hsk7-9/', ico: '7–9', sapCo: true }
     ]},
+    // HSK 2.0: giáo trình HSK 标准教程, cho các lớp còn học theo khung 2.0. Cấp nào có bài thì xoá "sapCo: true".
+    { ten: 'Chương trình HSK 2.0', link: 'chuong-trinh-hsk-2/', con: [
+      { ten: 'HSK 1', link: 'chuong-trinh-hsk-2/hsk1/', ico: '1' },
+      { ten: 'HSK 2', link: 'chuong-trinh-hsk-2/hsk2/', ico: '2', sapCo: true },
+      { ten: 'HSK 3', link: 'chuong-trinh-hsk-2/hsk3/', ico: '3', sapCo: true },
+      { ten: 'HSK 4', link: 'chuong-trinh-hsk-2/hsk4/', ico: '4', sapCo: true },
+      { ten: 'HSK 5', link: 'chuong-trinh-hsk-2/hsk5/', ico: '5', sapCo: true },
+      { ten: 'HSK 6', link: 'chuong-trinh-hsk-2/hsk6/', ico: '6', sapCo: true }
+    ]},
     { ten: 'Giới thiệu & Liên hệ', link: 'gioi-thieu.html' }
   ];
   window.QM_MENU = MENU;   // dùng chung: assets/js/lo-trinh.js đọc danh sách cấp HSK từ đây, chỉ cần sửa một chỗ

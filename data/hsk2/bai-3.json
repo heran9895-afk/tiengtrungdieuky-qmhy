@@ -1,0 +1,2303 @@
+{
+ "bai": "3",
+ "chuongTrinh": "HSK 2.0",
+ "ten": "第三课：你叫什么名字？",
+ "tenViet": "Bài 3: Bạn tên là gì?",
+ "pinyinTen": "Dì sān kè: Nǐ jiào shénme míngzi?",
+ "tenRieng": [
+  "李月",
+  "小明",
+  "大卫",
+  "姚明",
+  "乔丹",
+  "阮何然",
+  "阮",
+  "何然"
+ ],
+ "maBaiTap": "h2-bai3-bai-tap",
+ "tu": [
+  {
+   "Mã": "1-0176",
+   "Chữ Hán": "叫",
+   "Pinyin": "jiào",
+   "Âm Hán Việt": "KHIẾU",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "gọi; tên là",
+   "Cấp HSK": "1",
+   "Thuận bút": "叫",
+   "Cụm từ": "叫我 | jiào wǒ\n叫他们 | jiào tāmen\n叫老师 | jiào lǎoshī\n叫什么 | jiào shénme",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我叫李月，你是小明吗？",
+   "Pinyin câu 1": "Wǒ jiào Lǐ Yuè, nǐ shì Xiǎomíng ma?",
+   "Nghĩa câu 1": "Mình tên là Lý Nguyệt, bạn là Tiểu Minh à?",
+   "Đọc câu 1": "",
+   "Câu 2": "李月老师叫你。",
+   "Pinyin câu 2": "Lǐ Yuè lǎoshī jiào nǐ.",
+   "Nghĩa câu 2": "Cô Lý Nguyệt gọi bạn.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0328",
+   "Chữ Hán": "什么",
+   "Pinyin": "shénme",
+   "Âm Hán Việt": "THẬP MA",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "gì, cái gì",
+   "Cấp HSK": "1",
+   "Thuận bút": "什么",
+   "Cụm từ": "叫什么 | jiào shénme\n什么名字 | shénme míngzi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "她叫什么？",
+   "Pinyin câu 1": "Tā jiào shénme?",
+   "Nghĩa câu 1": "Cô ấy tên là gì?",
+   "Đọc câu 1": "",
+   "Câu 2": "李月老师，您姓什么？",
+   "Pinyin câu 2": "Lǐ Yuè lǎoshī, nín xìng shénme?",
+   "Nghĩa câu 2": "Cô Lý Nguyệt ơi, cô họ gì ạ?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0245",
+   "Chữ Hán": "名字",
+   "Pinyin": "míngzi",
+   "Âm Hán Việt": "DANH TỰ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "tên",
+   "Cấp HSK": "1",
+   "Thuận bút": "名字",
+   "Cụm từ": "什么名字 | shénme míngzi\n叫什么名字 | jiào shénme míngzi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "老师，您叫什么名字？",
+   "Pinyin câu 1": "Lǎoshī, nín jiào shénme míngzi?",
+   "Nghĩa câu 1": "Thưa cô, cô tên là gì ạ?",
+   "Đọc câu 1": "",
+   "Câu 2": "A：你叫什么名字？\nB：我叫李月。",
+   "Pinyin câu 2": "A: Nǐ jiào shénme míngzi?\nB: Wǒ jiào Lǐ Yuè.",
+   "Nghĩa câu 2": "A: Bạn tên là gì?\nB: Mình tên là Lý Nguyệt.",
+   "Đọc câu 2": "你叫什么名字？我叫李月。"
+  },
+  {
+   "Mã": "1-0380",
+   "Chữ Hán": "我",
+   "Pinyin": "wǒ",
+   "Âm Hán Việt": "NGÃ",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "tôi, tớ, mình… (ngôi 1 số ít)",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "我们 | wǒmen\n叫我 | jiào wǒ",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我叫小明。",
+   "Pinyin câu 1": "Wǒ jiào Xiǎomíng.",
+   "Nghĩa câu 1": "Mình tên là Tiểu Minh.",
+   "Đọc câu 1": "",
+   "Câu 2": "我也是学生。",
+   "Pinyin câu 2": "Wǒ yě shì xué·shēng.",
+   "Nghĩa câu 2": "Mình cũng là học sinh.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0209",
+   "Chữ Hán": "老师",
+   "Pinyin": "lǎoshī",
+   "Âm Hán Việt": "LÃO SƯ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "giáo viên, thầy / cô giáo",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "老师们 | lǎoshīmen\n一个老师 | yí ge lǎoshī\n李月老师 | Lǐ Yuè lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "老师，您好！",
+   "Pinyin câu 1": "Lǎoshī, nín hǎo!",
+   "Nghĩa câu 1": "Em chào cô ạ!",
+   "Đọc câu 1": "",
+   "Câu 2": "李月老师，谢谢您！",
+   "Pinyin câu 2": "Lǐ Yuè lǎoshī, xièxie nín!",
+   "Nghĩa câu 2": "Cô Lý Nguyệt, em cảm ơn cô!",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0337",
+   "Chữ Hán": "是",
+   "Pinyin": "shì",
+   "Âm Hán Việt": "THỊ",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "là",
+   "Cấp HSK": "1",
+   "Thuận bút": "是",
+   "Cụm từ": "不是 | bú shì\n是老师 | shì lǎoshī\n是学生 | shì xué·shēng",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我是老师，你们是学生。",
+   "Pinyin câu 1": "Wǒ shì lǎoshī, nǐmen shì xué·shēng.",
+   "Nghĩa câu 1": "Tôi là giáo viên, các em là học sinh.",
+   "Đọc câu 1": "",
+   "Câu 2": "我不是李月老师。",
+   "Pinyin câu 2": "Wǒ bú shì Lǐ Yuè lǎoshī.",
+   "Nghĩa câu 2": "Tôi không phải cô Lý Nguyệt.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0227",
+   "Chữ Hán": "吗",
+   "Pinyin": "ma",
+   "Âm Hán Việt": "MA",
+   "Từ loại": "trợ từ",
+   "Nghĩa tiếng Việt": "không? à? hả? (cuối câu hỏi)",
+   "Cấp HSK": "1",
+   "Thuận bút": "吗",
+   "Cụm từ": "是吗 | shì ma\n好吗 | hǎo ma",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "她是李月老师吗？",
+   "Pinyin câu 1": "Tā shì Lǐ Yuè lǎoshī ma?",
+   "Nghĩa câu 1": "Cô ấy là cô Lý Nguyệt à?",
+   "Đọc câu 1": "",
+   "Câu 2": "你们是学生吗？",
+   "Pinyin câu 2": "Nǐmen shì xué·shēng ma?",
+   "Nghĩa câu 2": "Các bạn là học sinh à?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0419",
+   "Chữ Hán": "学生",
+   "Pinyin": "xué·shēng",
+   "Âm Hán Việt": "HỌC SINH",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "học sinh, sinh viên",
+   "Cấp HSK": "1",
+   "Thuận bút": "学生",
+   "Cụm từ": "学生们 | xué·shēngmen\n小学生 | xiǎoxué·shēng\n八个学生 | bā ge xué·shēng\n好学生 | hǎo xué·shēng",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我不是老师，我是学生。",
+   "Pinyin câu 1": "Wǒ bú shì lǎoshī, wǒ shì xué·shēng.",
+   "Nghĩa câu 1": "Mình không phải giáo viên, mình là học sinh.",
+   "Đọc câu 1": "",
+   "Câu 2": "他们是学生吗？",
+   "Pinyin câu 2": "Tāmen shì xué·shēng ma?",
+   "Nghĩa câu 2": "Họ là học sinh à?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0305",
+   "Chữ Hán": "人",
+   "Pinyin": "rén",
+   "Âm Hán Việt": "NHÂN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "người",
+   "Cấp HSK": "1",
+   "Thuận bút": "人",
+   "Cụm từ": "好人 | hǎo rén\n一个人 | yí ge rén\n中国人 | Zhōngguó rén\n美国人 | Měiguó rén\n越南人 | Yuènán rén",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "他是好人。",
+   "Pinyin câu 1": "Tā shì hǎo rén.",
+   "Nghĩa câu 1": "Anh ấy là người tốt.",
+   "Đọc câu 1": "",
+   "Câu 2": "我不是中国人，我是越南人。",
+   "Pinyin câu 2": "Wǒ bú shì Zhōngguó rén, wǒ shì Yuènán rén.",
+   "Nghĩa câu 2": "Mình không phải người Trung Quốc, mình là người Việt Nam.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0477",
+   "Chữ Hán": "中国",
+   "Pinyin": "Zhōngguó",
+   "Âm Hán Việt": "TRUNG QUỐC",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "Trung Quốc",
+   "Cấp HSK": "1",
+   "Thuận bút": "中国",
+   "Cụm từ": "中国人 | Zhōngguó rén\n中国老师 | Zhōngguó lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "中国很美。",
+   "Pinyin câu 1": "Zhōngguó hěn měi.",
+   "Nghĩa câu 1": "Trung Quốc rất đẹp.",
+   "Đọc câu 1": "",
+   "Câu 2": "你是中国人吗？",
+   "Pinyin câu 2": "Nǐ shì Zhōngguó rén ma?",
+   "Nghĩa câu 2": "Bạn là người Trung Quốc à?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "h23-美国",
+   "Chữ Hán": "美国",
+   "Pinyin": "Měiguó",
+   "Âm Hán Việt": "MỸ QUỐC",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "nước Mỹ",
+   "Cấp HSK": "TR",
+   "Thuận bút": "美",
+   "Cụm từ": "美国人 | Měiguó rén\n美国老师 | Měiguó lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "他叫乔丹，他是美国人。",
+   "Pinyin câu 1": "Tā jiào Qiáodān, tā shì Měiguó rén.",
+   "Nghĩa câu 1": "Anh ấy tên là Jordan, anh ấy là người Mỹ.",
+   "Đọc câu 1": "",
+   "Câu 2": "我不是中国人，我是美国人。",
+   "Pinyin câu 2": "Wǒ bú shì Zhōngguó rén, wǒ shì Měiguó rén.",
+   "Nghĩa câu 2": "Mình không phải người Trung Quốc, mình là người Mỹ.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0120",
+   "Chữ Hán": "个",
+   "Pinyin": "gè",
+   "Âm Hán Việt": "CÁ",
+   "Từ loại": "lượng từ",
+   "Nghĩa tiếng Việt": "cái, chiếc, người… (lượng từ chung)",
+   "Cấp HSK": "1",
+   "Thuận bút": "个",
+   "Cụm từ": "一个老师 | yí ge lǎoshī\n八个学生 | bā ge xué·shēng\n三个国家 | sān ge guójiā\n一个人 | yí ge rén",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "他是一个好老师。",
+   "Pinyin câu 1": "Tā shì yí ge hǎo lǎoshī.",
+   "Nghĩa câu 1": "Anh ấy là một giáo viên giỏi.",
+   "Đọc câu 1": "",
+   "Câu 2": "她是一个好学生。",
+   "Pinyin câu 2": "Tā shì yí ge hǎo xué·shēng.",
+   "Nghĩa câu 2": "Cô ấy là một học sinh giỏi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0129",
+   "Chữ Hán": "国家",
+   "Pinyin": "guójiā",
+   "Âm Hán Việt": "QUỐC GIA",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "quốc gia, đất nước",
+   "Cấp HSK": "1",
+   "Thuận bút": "家",
+   "Cụm từ": "三个国家 | sān ge guójiā\n我们国家 | wǒmen guójiā",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我们国家很美。",
+   "Pinyin câu 1": "Wǒmen guójiā hěn měi.",
+   "Nghĩa câu 1": "Đất nước chúng tôi rất đẹp.",
+   "Đọc câu 1": "",
+   "Câu 2": "你们国家大吗？",
+   "Pinyin câu 2": "Nǐmen guójiā dà ma?",
+   "Nghĩa câu 2": "Đất nước các bạn có lớn không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0128",
+   "Chữ Hán": "国",
+   "Pinyin": "guó",
+   "Âm Hán Việt": "QUỐC",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "quốc, nước",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "中国 | Zhōngguó\n美国 | Měiguó\n三国 | sān guó",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "中国是一个大国。",
+   "Pinyin câu 1": "Zhōngguó shì yí ge dàguó.",
+   "Nghĩa câu 1": "Trung Quốc là một nước lớn.",
+   "Đọc câu 1": "",
+   "Câu 2": "越南不是小国。",
+   "Pinyin câu 2": "Yuènán bú shì xiǎoguó.",
+   "Nghĩa câu 2": "Việt Nam không phải nước nhỏ.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "3-0479",
+   "Chữ Hán": "美",
+   "Pinyin": "měi",
+   "Âm Hán Việt": "MỸ",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "đẹp",
+   "Cấp HSK": "3",
+   "Thuận bút": "",
+   "Cụm từ": "很美 | hěn měi\n不美 | bù měi",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "你美，他们也很美。",
+   "Pinyin câu 1": "Nǐ měi, tāmen yě hěn měi.",
+   "Nghĩa câu 1": "Bạn đẹp, họ cũng rất đẹp.",
+   "Đọc câu 1": "",
+   "Câu 2": "越南很美。",
+   "Pinyin câu 2": "Yuènán hěn měi.",
+   "Nghĩa câu 2": "Việt Nam rất đẹp.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "h23-越南",
+   "Chữ Hán": "越南",
+   "Pinyin": "Yuènán",
+   "Âm Hán Việt": "VIỆT NAM",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "Việt Nam",
+   "Cấp HSK": "TR",
+   "Thuận bút": "越南",
+   "Cụm từ": "越南人 | Yuènán rén\n越南老师 | Yuènán lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "中国很大，越南很小。",
+   "Pinyin câu 1": "Zhōngguó hěn dà, Yuènán hěn xiǎo.",
+   "Nghĩa câu 1": "Trung Quốc rất lớn, Việt Nam rất nhỏ.",
+   "Đọc câu 1": "",
+   "Câu 2": "我是越南人。",
+   "Pinyin câu 2": "Wǒ shì Yuènán rén.",
+   "Nghĩa câu 2": "Mình là người Việt Nam.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "h23-英国",
+   "Chữ Hán": "英国",
+   "Pinyin": "Yīngguó",
+   "Âm Hán Việt": "ANH QUỐC",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "nước Anh",
+   "Cấp HSK": "TR",
+   "Thuận bút": "英",
+   "Cụm từ": "英国人 | Yīngguó rén\n英国老师 | Yīngguó lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "大卫是英国人。",
+   "Pinyin câu 1": "Dàwèi shì Yīngguó rén.",
+   "Nghĩa câu 1": "David là người Anh.",
+   "Đọc câu 1": "",
+   "Câu 2": "你是英国人吗？",
+   "Pinyin câu 2": "Nǐ shì Yīngguó rén ma?",
+   "Nghĩa câu 2": "Bạn là người Anh à?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "h23-韩国",
+   "Chữ Hán": "韩国",
+   "Pinyin": "Hánguó",
+   "Âm Hán Việt": "HÀN QUỐC",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "Hàn Quốc",
+   "Cấp HSK": "TR",
+   "Thuận bút": "韩",
+   "Cụm từ": "韩国人 | Hánguó rén\n韩国老师 | Hánguó lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "李月是韩国人。",
+   "Pinyin câu 1": "Lǐ Yuè shì Hánguó rén.",
+   "Nghĩa câu 1": "Lý Nguyệt là người Hàn Quốc.",
+   "Đọc câu 1": "",
+   "Câu 2": "韩国很美。",
+   "Pinyin câu 2": "Hánguó hěn měi.",
+   "Nghĩa câu 2": "Hàn Quốc rất đẹp.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "h23-日本",
+   "Chữ Hán": "日本",
+   "Pinyin": "Rìběn",
+   "Âm Hán Việt": "NHẬT BẢN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "Nhật Bản",
+   "Cấp HSK": "TR",
+   "Thuận bút": "日本",
+   "Cụm từ": "日本人 | Rìběn rén\n日本老师 | Rìběn lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "她是日本人。",
+   "Pinyin câu 1": "Tā shì Rìběn rén.",
+   "Nghĩa câu 1": "Cô ấy là người Nhật Bản.",
+   "Đọc câu 1": "",
+   "Câu 2": "他们是日本人吗？",
+   "Pinyin câu 2": "Tāmen shì Rìběn rén ma?",
+   "Nghĩa câu 2": "Họ là người Nhật Bản à?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "h23-贵姓",
+   "Chữ Hán": "贵姓",
+   "Pinyin": "guìxìng",
+   "Âm Hán Việt": "QUÝ TÍNH",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "quý danh (hỏi họ một cách lịch sự)",
+   "Cấp HSK": "NK",
+   "Thuận bút": "贵姓",
+   "Cụm từ": "",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "A：您贵姓？\nB：我姓阮。",
+   "Pinyin câu 1": "A: Nín guìxìng?\nB: Wǒ xìng Ruǎn.",
+   "Nghĩa câu 1": "A: Ông / bà họ gì ạ?\nB: Tôi họ Nguyễn.",
+   "Đọc câu 1": "您贵姓？我姓阮。",
+   "Câu 2": "老师，您贵姓？",
+   "Pinyin câu 2": "Lǎoshī, nín guìxìng?",
+   "Nghĩa câu 2": "Thưa thầy / cô, thầy / cô họ gì ạ?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0626",
+   "Chữ Hán": "姓",
+   "Pinyin": "xìng",
+   "Âm Hán Việt": "TÍNH",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "họ, mang họ",
+   "Cấp HSK": "2",
+   "Thuận bút": "",
+   "Cụm từ": "姓李 | xìng Lǐ\n姓阮 | xìng Ruǎn\n姓什么 | xìng shénme",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我姓阮，叫何然。",
+   "Pinyin câu 1": "Wǒ xìng Ruǎn, jiào Hérán.",
+   "Nghĩa câu 1": "Tôi họ Nguyễn, tên là Hà Nhiên.",
+   "Đọc câu 1": "",
+   "Câu 2": "她姓李，叫李月。",
+   "Pinyin câu 2": "Tā xìng Lǐ, jiào Lǐ Yuè.",
+   "Nghĩa câu 2": "Cô ấy họ Lý, tên là Lý Nguyệt.",
+   "Đọc câu 2": ""
+  }
+ ],
+ "boThu": [
+  {
+   "boThu": "日",
+   "ten": "Bộ nhật",
+   "pinyin": "rì",
+   "nghia": "mặt trời",
+   "docAm": "日",
+   "chuChua": [
+    {
+     "hanzi": "是",
+     "pinyin": "shì",
+     "nghia": "là"
+    }
+   ]
+  },
+  {
+   "boThu": "人",
+   "ten": "Bộ nhân",
+   "pinyin": "rén",
+   "nghia": "con người",
+   "docAm": "人",
+   "chuChua": [
+    {
+     "hanzi": "是",
+     "pinyin": "shì",
+     "nghia": "là"
+    }
+   ]
+  },
+  {
+   "boThu": "口",
+   "ten": "Bộ khẩu",
+   "pinyin": "kǒu",
+   "nghia": "cái miệng",
+   "docAm": "口",
+   "chuChua": [
+    {
+     "hanzi": "吗",
+     "pinyin": "ma",
+     "nghia": "không? à? hả? (cuối câu hỏi)"
+    },
+    {
+     "hanzi": "名",
+     "pinyin": "míng",
+     "nghia": "tên"
+    }
+   ]
+  },
+  {
+   "boThu": "马",
+   "ten": "Bộ mã",
+   "pinyin": "mǎ",
+   "nghia": "ngựa",
+   "docAm": "马",
+   "chuChua": [
+    {
+     "hanzi": "吗",
+     "pinyin": "ma",
+     "nghia": "không? à? hả? (cuối câu hỏi)"
+    }
+   ]
+  },
+  {
+   "boThu": "夕",
+   "ten": "Bộ tịch",
+   "pinyin": "xī",
+   "nghia": "đêm, tối",
+   "docAm": "夕",
+   "chuChua": [
+    {
+     "hanzi": "名",
+     "pinyin": "míng",
+     "nghia": "tên"
+    }
+   ]
+  },
+  {
+   "boThu": "木",
+   "ten": "Bộ mộc",
+   "pinyin": "mù",
+   "nghia": "cây cối",
+   "docAm": "木",
+   "chuChua": [
+    {
+     "hanzi": "李",
+     "pinyin": "Lǐ",
+     "nghia": "họ Lý"
+    }
+   ]
+  },
+  {
+   "boThu": "囗",
+   "ten": "Bộ vi",
+   "pinyin": "wéi",
+   "nghia": "vây quanh",
+   "docAm": "国字框",
+   "tenGoi": "国字框",
+   "tenGoiPinyin": "guózìkuàng",
+   "chuChua": [
+    {
+     "hanzi": "国",
+     "pinyin": "guó",
+     "nghia": "quốc, nước"
+    }
+   ]
+  },
+  {
+   "boThu": "玉",
+   "ten": "Bộ ngọc",
+   "pinyin": "yù",
+   "nghia": "đá quý (trong chữ viết dạng 王)",
+   "docAm": "玉",
+   "chuChua": [
+    {
+     "hanzi": "国",
+     "pinyin": "guó",
+     "nghia": "quốc, nước"
+    }
+   ]
+  },
+  {
+   "boThu": "羊",
+   "ten": "Bộ dương",
+   "pinyin": "yáng",
+   "nghia": "con dê, con cừu",
+   "docAm": "羊",
+   "chuChua": [
+    {
+     "hanzi": "美",
+     "pinyin": "měi",
+     "nghia": "đẹp"
+    }
+   ]
+  },
+  {
+   "boThu": "冂",
+   "ten": "Bộ quynh",
+   "pinyin": "jiōng",
+   "nghia": "vùng biên giới, hoang địa",
+   "docAm": "同字框",
+   "tenGoi": "同字框",
+   "tenGoiPinyin": "tóngzìkuàng",
+   "chuChua": [
+    {
+     "hanzi": "南",
+     "pinyin": "nán",
+     "nghia": "nam (phía nam)"
+    }
+   ]
+  }
+ ],
+ "ghepChu": [
+  {
+   "chu": "是",
+   "phan": [
+    "日",
+    "下",
+    "人"
+   ]
+  },
+  {
+   "chu": "吗",
+   "phan": [
+    "口",
+    "马"
+   ]
+  },
+  {
+   "chu": "什",
+   "phan": [
+    "亻",
+    "十"
+   ]
+  },
+  {
+   "chu": "名",
+   "phan": [
+    "夕",
+    "口"
+   ]
+  },
+  {
+   "chu": "字",
+   "phan": [
+    "宀",
+    "子"
+   ]
+  },
+  {
+   "chu": "李",
+   "phan": [
+    "木",
+    "子"
+   ]
+  },
+  {
+   "chu": "国",
+   "phan": [
+    "囗",
+    "玉"
+   ]
+  },
+  {
+   "chu": "美",
+   "phan": [
+    "羊",
+    "大"
+   ]
+  },
+  {
+   "chu": "越",
+   "phan": [
+    "走",
+    "戉"
+   ]
+  },
+  {
+   "chu": "南",
+   "phan": [
+    "十",
+    "冂"
+   ]
+  }
+ ],
+ "thanhPhan": {
+  "下": {
+   "pinyin": "xià",
+   "ten": "Hạ",
+   "nghia": "dưới"
+  },
+  "亻": {
+   "pinyin": "rén",
+   "ten": "Bộ nhân đứng",
+   "nghia": "chỉ con người"
+  },
+  "十": {
+   "pinyin": "shí",
+   "ten": "Chữ 十",
+   "nghia": "mười, số 10"
+  },
+  "宀": {
+   "pinyin": "mián",
+   "ten": "Bộ miên",
+   "nghia": "mái nhà"
+  },
+  "子": {
+   "pinyin": "zǐ",
+   "ten": "Bộ tử",
+   "nghia": "chỉ con cái"
+  },
+  "大": {
+   "pinyin": "dà",
+   "ten": "Chữ 大",
+   "nghia": "to, lớn; (tuổi) lớn"
+  },
+  "走": {
+   "pinyin": "zǒu",
+   "ten": "Bộ Tẩu",
+   "nghia": "đi"
+  },
+  "戉": {
+   "pinyin": "yuè",
+   "ten": "Việt",
+   "nghia": "cái búa"
+  }
+ },
+ "chang": [
+  {
+   "so": "1",
+   "ten": "Ôn tập từ vựng 1",
+   "tu": [
+    "我",
+    "老师",
+    "个",
+    "学生",
+    "是",
+    "吗",
+    "叫",
+    "什么",
+    "名字",
+    "贵姓",
+    "姓"
+   ],
+   "ghepChu": [
+    "是",
+    "吗",
+    "什",
+    "名",
+    "字"
+   ]
+  },
+  {
+   "so": "2",
+   "ten": "Ôn tập từ vựng 2",
+   "tu": [
+    "国",
+    "国家",
+    "中国",
+    "美国",
+    "美",
+    "越南",
+    "英国",
+    "韩国",
+    "日本",
+    "人"
+   ],
+   "ghepChu": [
+    "国",
+    "美",
+    "越",
+    "南"
+   ]
+  }
+ ],
+ "nguPhap": [
+  {
+   "id": "soLt",
+   "ten": "Số + LT + DT",
+   "congThuc": [
+    [
+     [
+      "Số từ",
+      "st"
+     ],
+     [
+      "LT",
+      "st"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "Giữa **số từ** và **danh từ** phải có **lượng từ** (LT). 个 là lượng từ dùng chung, hay gặp nhất.",
+   "y": [
+    {
+     "noiDung": "Số + 个 + DT",
+     "cum": [
+      [
+       "一个老师",
+       "yí ge lǎoshī",
+       "",
+       [
+        [
+         "一",
+         "st"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "老师",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "八个学生",
+       "bā ge xué·shēng",
+       "",
+       [
+        [
+         "八",
+         "st"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "学生",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "三个国家",
+       "sān ge guójiā",
+       "",
+       [
+        [
+         "三",
+         "st"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "国家",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "李月是一个好学生。",
+       "Lǐ Yuè shì yí ge hǎo xué·shēng.",
+       "",
+       [
+        [
+         "李月是",
+         null
+        ],
+        [
+         "一",
+         "st"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "好学生",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ],
+      [
+       "中国是一个大国。",
+       "Zhōngguó shì yí ge dàguó.",
+       "",
+       [
+        [
+         "中国是",
+         null
+        ],
+        [
+         "一",
+         "st"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "大国",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**Không nói** 一老师, 八学生: phải có lượng từ ở giữa.",
+    "个 làm lượng từ đọc nhẹ **ge**; 一 đứng trước 个 đọc **yí** (一个 yí ge)."
+   ]
+  },
+  {
+   "id": "shi",
+   "ten": "A 是 B · A 不是 B · 是不是",
+   "congThuc": [
+    [
+     [
+      "A",
+      "dt"
+     ],
+     [
+      "是",
+      "codinh"
+     ],
+     [
+      "B",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "A",
+      "dt"
+     ],
+     [
+      "不是",
+      "codinh"
+     ],
+     [
+      "B",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "A",
+      "dt"
+     ],
+     [
+      "是不是",
+      "codinh"
+     ],
+     [
+      "B",
+      "dt"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "是 nghĩa là **\"là\"**, nối hai danh từ / đại từ: A là B. Phủ định thêm 不 thành **不是**. Hỏi kiểu chính phản dùng **是不是**.",
+   "y": [
+    {
+     "noiDung": "A 是 B: A là B",
+     "cum": [
+      [
+       "是老师",
+       "shì lǎoshī",
+       "",
+       [
+        [
+         "是",
+         "codinh"
+        ],
+        [
+         "老师",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "是学生",
+       "shì xué·shēng",
+       "",
+       [
+        [
+         "是",
+         "codinh"
+        ],
+        [
+         "学生",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "是中国人",
+       "shì Zhōngguó rén",
+       "",
+       [
+        [
+         "是",
+         "codinh"
+        ],
+        [
+         "中国人",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我是老师，你们是学生。",
+       "Wǒ shì lǎoshī, nǐmen shì xué·shēng.",
+       "",
+       [
+        [
+         "我",
+         "dt"
+        ],
+        [
+         "是",
+         "codinh"
+        ],
+        [
+         "老师",
+         "dt"
+        ],
+        [
+         "，",
+         null
+        ],
+        [
+         "你们",
+         "dt"
+        ],
+        [
+         "是",
+         "codinh"
+        ],
+        [
+         "学生",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "A 不是 B: A không phải là B",
+     "cum": [
+      [
+       "不是老师",
+       "bú shì lǎoshī",
+       "",
+       [
+        [
+         "不是",
+         "codinh"
+        ],
+        [
+         "老师",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "不是中国人",
+       "bú shì Zhōngguó rén",
+       "",
+       [
+        [
+         "不是",
+         "codinh"
+        ],
+        [
+         "中国人",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我不是李月老师。",
+       "Wǒ bú shì Lǐ Yuè lǎoshī.",
+       "",
+       [
+        [
+         "我",
+         "dt"
+        ],
+        [
+         "不是",
+         "codinh"
+        ],
+        [
+         "李月老师",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "A 是不是 B？: A có phải là B không? (câu hỏi chính phản)",
+     "cum": [
+      [
+       "是不是学生",
+       "shì bu shì xué·shēng",
+       "",
+       [
+        [
+         "是不是",
+         "codinh"
+        ],
+        [
+         "学生",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "是不是老师",
+       "shì bu shì lǎoshī",
+       "",
+       [
+        [
+         "是不是",
+         "codinh"
+        ],
+        [
+         "老师",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "她是不是李月老师？",
+       "Tā shì bu shì Lǐ Yuè lǎoshī?",
+       "",
+       [
+        [
+         "她",
+         "dt"
+        ],
+        [
+         "是不是",
+         "codinh"
+        ],
+        [
+         "李月老师",
+         "dt"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "不是 đọc **bú shì**; 是不是 đọc **shì bu shì** (不 kẹp giữa đọc nhẹ).",
+    "Câu đã dùng **是不是** thì **không thêm 吗**: không nói 你是不是学生吗？"
+   ]
+  },
+  {
+   "id": "ma",
+   "ten": "Câu trần thuật + 吗？",
+   "congThuc": [
+    [
+     [
+      "Câu trần thuật",
+      "cau"
+     ],
+     [
+      "吗",
+      "codinh"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "吗 là trợ từ, đặt **cuối câu trần thuật** để thành **câu hỏi có / không**, nghĩa như \"… không?\", \"… à?\".",
+   "y": [
+    {
+     "noiDung": "Câu trần thuật + 吗？",
+     "cum": [
+      [
+       "是吗",
+       "shì ma",
+       "",
+       [
+        [
+         "是",
+         "cau"
+        ],
+        [
+         "吗",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "好吗",
+       "hǎo ma",
+       "",
+       [
+        [
+         "好",
+         "cau"
+        ],
+        [
+         "吗",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "他是中国人吗？",
+       "Tā shì Zhōngguó rén ma?",
+       "",
+       [
+        [
+         "他是中国人",
+         "cau"
+        ],
+        [
+         "吗",
+         "codinh"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "你们是学生吗？",
+       "Nǐmen shì xué·shēng ma?",
+       "",
+       [
+        [
+         "你们是学生",
+         "cau"
+        ],
+        [
+         "吗",
+         "codinh"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Trả lời: **是** (phải) hoặc **不是** (không phải), rồi nói lại câu đầy đủ.",
+    "Câu có 吗 thì **không dùng** thêm 是不是 hay 什么."
+   ]
+  },
+  {
+   "id": "shenme",
+   "ten": "ĐT + 什么 · 什么 + DT",
+   "congThuc": [
+    [
+     [
+      "ĐT",
+      "dgt"
+     ],
+     [
+      "什么",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "什么",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "什么 nghĩa là **\"gì, cái gì\"**. Đứng **sau động từ** để hỏi \"… gì?\", đứng **trước danh từ** để hỏi \"… gì?\" về danh từ đó.",
+   "y": [
+    {
+     "noiDung": "ĐT + 什么: … gì?",
+     "cum": [
+      [
+       "叫什么",
+       "jiào shénme",
+       "",
+       [
+        [
+         "叫",
+         "dgt"
+        ],
+        [
+         "什么",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "姓什么",
+       "xìng shénme",
+       "",
+       [
+        [
+         "姓",
+         "dgt"
+        ],
+        [
+         "什么",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "大卫姓什么？",
+       "Dàwèi xìng shénme?",
+       "",
+       [
+        [
+         "大卫",
+         null
+        ],
+        [
+         "姓",
+         "dgt"
+        ],
+        [
+         "什么",
+         "codinh"
+        ],
+        [
+         "？",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "什么 + DT: … gì?",
+     "cum": [
+      [
+       "什么名字",
+       "shénme míngzi",
+       "",
+       [
+        [
+         "什么",
+         "codinh"
+        ],
+        [
+         "名字",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "什么人",
+       "shénme rén",
+       "",
+       [
+        [
+         "什么",
+         "codinh"
+        ],
+        [
+         "人",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "老师，您叫什么名字？",
+       "Lǎoshī, nín jiào shénme míngzi?",
+       "",
+       [
+        [
+         "老师，您叫",
+         null
+        ],
+        [
+         "什么",
+         "codinh"
+        ],
+        [
+         "名字",
+         "dt"
+        ],
+        [
+         "？",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "什么 đứng **đúng chỗ thông tin cần hỏi**, không đưa lên đầu câu: 你叫什么名字？ → 我叫李月。",
+    "Câu có 什么 thì **không thêm 吗**."
+   ]
+  }
+ ],
+ "hoiDap": [
+  {
+   "hoi": [
+    "你叫什么名字？",
+    "Nǐ jiào shénme míngzi?",
+    "Bạn tên là gì?"
+   ],
+   "dap": [
+    "我叫李月。",
+    "Wǒ jiào Lǐ Yuè.",
+    "Mình tên là Lý Nguyệt."
+   ],
+   "nhieu": [
+    [
+     "我是学生。",
+     "Wǒ shì xué·shēng.",
+     "Mình là học sinh."
+    ],
+    [
+     "我是越南人。",
+     "Wǒ shì Yuènán rén.",
+     "Mình là người Việt Nam."
+    ],
+    [
+     "我很好。",
+     "Wǒ hěn hǎo.",
+     "Mình rất khỏe."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "您贵姓？",
+    "Nín guìxìng?",
+    "Ông / bà họ gì ạ?"
+   ],
+   "dap": [
+    "我姓李。",
+    "Wǒ xìng Lǐ.",
+    "Tôi họ Lý."
+   ],
+   "nhieu": [
+    [
+     "我是老师。",
+     "Wǒ shì lǎoshī.",
+     "Tôi là giáo viên."
+    ],
+    [
+     "我是美国人。",
+     "Wǒ shì Měiguó rén.",
+     "Tôi là người Mỹ."
+    ],
+    [
+     "我很好。",
+     "Wǒ hěn hǎo.",
+     "Tôi rất khỏe."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你是老师吗？",
+    "Nǐ shì lǎoshī ma?",
+    "Bạn là giáo viên à?"
+   ],
+   "dap": [
+    "我不是老师，我是学生。",
+    "Wǒ bú shì lǎoshī, wǒ shì xué·shēng.",
+    "Mình không phải giáo viên, mình là học sinh."
+   ],
+   "nhieu": [
+    [
+     "我叫小明。",
+     "Wǒ jiào Xiǎomíng.",
+     "Mình tên là Tiểu Minh."
+    ],
+    [
+     "她是韩国人。",
+     "Tā shì Hánguó rén.",
+     "Cô ấy là người Hàn Quốc."
+    ],
+    [
+     "谢谢你！",
+     "Xièxie nǐ!",
+     "Cảm ơn bạn!"
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你是中国人吗？",
+    "Nǐ shì Zhōngguó rén ma?",
+    "Bạn là người Trung Quốc à?"
+   ],
+   "dap": [
+    "我不是中国人，我是美国人。",
+    "Wǒ bú shì Zhōngguó rén, wǒ shì Měiguó rén.",
+    "Mình không phải người Trung Quốc, mình là người Mỹ."
+   ],
+   "nhieu": [
+    [
+     "我叫大卫。",
+     "Wǒ jiào Dàwèi.",
+     "Mình tên là David."
+    ],
+    [
+     "我是学生。",
+     "Wǒ shì xué·shēng.",
+     "Mình là học sinh."
+    ],
+    [
+     "我姓李。",
+     "Wǒ xìng Lǐ.",
+     "Mình họ Lý."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "她是李月老师吗？",
+    "Tā shì Lǐ Yuè lǎoshī ma?",
+    "Cô ấy là cô Lý Nguyệt à?"
+   ],
+   "dap": [
+    "是，她是李月老师。",
+    "Shì, tā shì Lǐ Yuè lǎoshī.",
+    "Phải, cô ấy là cô Lý Nguyệt."
+   ],
+   "nhieu": [
+    [
+     "我是学生。",
+     "Wǒ shì xué·shēng.",
+     "Mình là học sinh."
+    ],
+    [
+     "我叫小明。",
+     "Wǒ jiào Xiǎomíng.",
+     "Mình tên là Tiểu Minh."
+    ],
+    [
+     "你好！",
+     "Nǐ hǎo!",
+     "Xin chào!"
+    ]
+   ],
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "他叫什么？",
+    "Tā jiào shénme?",
+    "Anh ấy tên gì?"
+   ],
+   "dap": [
+    "他叫大卫。",
+    "Tā jiào Dàwèi.",
+    "Anh ấy tên là David."
+   ],
+   "nhieu": [
+    [
+     "他是英国人。",
+     "Tā shì Yīngguó rén.",
+     "Anh ấy là người Anh."
+    ],
+    [
+     "他是学生。",
+     "Tā shì xué·shēng.",
+     "Anh ấy là học sinh."
+    ],
+    [
+     "他很好。",
+     "Tā hěn hǎo.",
+     "Anh ấy rất tốt."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你们是学生吗？",
+    "Nǐmen shì xué·shēng ma?",
+    "Các bạn là học sinh à?"
+   ],
+   "dap": [
+    "是，我们是学生。",
+    "Shì, wǒmen shì xué·shēng.",
+    "Phải, chúng mình là học sinh."
+   ],
+   "nhieu": [
+    [
+     "我们是越南人。",
+     "Wǒmen shì Yuènán rén.",
+     "Chúng mình là người Việt Nam."
+    ],
+    [
+     "我们很好。",
+     "Wǒmen hěn hǎo.",
+     "Chúng mình rất khỏe."
+    ],
+    [
+     "我叫小明。",
+     "Wǒ jiào Xiǎomíng.",
+     "Mình tên là Tiểu Minh."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你是不是越南人？",
+    "Nǐ shì bu shì Yuènán rén?",
+    "Bạn có phải người Việt Nam không?"
+   ],
+   "dap": [
+    "是，我是越南人。",
+    "Shì, wǒ shì Yuènán rén.",
+    "Phải, mình là người Việt Nam."
+   ],
+   "nhieu": [
+    [
+     "我叫小明。",
+     "Wǒ jiào Xiǎomíng.",
+     "Mình tên là Tiểu Minh."
+    ],
+    [
+     "我是学生。",
+     "Wǒ shì xué·shēng.",
+     "Mình là học sinh."
+    ],
+    [
+     "我很好。",
+     "Wǒ hěn hǎo.",
+     "Mình rất khỏe."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "她姓什么？",
+    "Tā xìng shénme?",
+    "Cô ấy họ gì?"
+   ],
+   "dap": [
+    "她姓李。",
+    "Tā xìng Lǐ.",
+    "Cô ấy họ Lý."
+   ],
+   "nhieu": [
+    [
+     "她是中国人。",
+     "Tā shì Zhōngguó rén.",
+     "Cô ấy là người Trung Quốc."
+    ],
+    [
+     "她很美。",
+     "Tā hěn měi.",
+     "Cô ấy rất xinh."
+    ],
+    [
+     "她是老师。",
+     "Tā shì lǎoshī.",
+     "Cô ấy là giáo viên."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "大卫是美国人吗？",
+    "Dàwèi shì Měiguó rén ma?",
+    "David là người Mỹ à?"
+   ],
+   "dap": [
+    "不是，他是英国人。",
+    "Bú shì, tā shì Yīngguó rén.",
+    "Không phải, anh ấy là người Anh."
+   ],
+   "nhieu": [
+    [
+     "他是学生。",
+     "Tā shì xué·shēng.",
+     "Anh ấy là học sinh."
+    ],
+    [
+     "他叫大卫。",
+     "Tā jiào Dàwèi.",
+     "Anh ấy tên là David."
+    ],
+    [
+     "他很好。",
+     "Tā hěn hǎo.",
+     "Anh ấy rất tốt."
+    ]
+   ],
+   "chang": "2"
+  }
+ ],
+ "cauLuyen": [
+  {
+   "han": "他叫什么名字？",
+   "py": "Tā jiào shénme míngzi?",
+   "viet": "Anh ấy tên là gì?",
+   "tu": [
+    "叫",
+    "什么",
+    "名字"
+   ],
+   "np": "shenme"
+  },
+  {
+   "han": "她叫李月，她是老师。",
+   "py": "Tā jiào Lǐ Yuè, tā shì lǎoshī.",
+   "viet": "Cô ấy tên là Lý Nguyệt, cô ấy là giáo viên.",
+   "tu": [
+    "叫",
+    "是",
+    "老师"
+   ]
+  },
+  {
+   "han": "我叫大卫，我是英国人。",
+   "py": "Wǒ jiào Dàwèi, wǒ shì Yīngguó rén.",
+   "viet": "Tôi tên là David, tôi là người Anh.",
+   "tu": [
+    "我",
+    "叫",
+    "是",
+    "英国",
+    "人"
+   ]
+  },
+  {
+   "han": "你是老师吗？",
+   "py": "Nǐ shì lǎoshī ma?",
+   "viet": "Bạn là giáo viên à?",
+   "tu": [
+    "是",
+    "老师",
+    "吗"
+   ],
+   "np": "ma"
+  },
+  {
+   "han": "她是美国人吗？",
+   "py": "Tā shì Měiguó rén ma?",
+   "viet": "Cô ấy là người Mỹ à?",
+   "tu": [
+    "是",
+    "美国",
+    "人",
+    "吗"
+   ],
+   "np": "ma"
+  },
+  {
+   "han": "他是学生，不是老师。",
+   "py": "Tā shì xué·shēng, bú shì lǎoshī.",
+   "viet": "Anh ấy là học sinh, không phải giáo viên.",
+   "tu": [
+    "是",
+    "学生",
+    "老师"
+   ],
+   "np": "shi"
+  },
+  {
+   "han": "我们是学生，你们也是学生。",
+   "py": "Wǒmen shì xué·shēng, nǐmen yě shì xué·shēng.",
+   "viet": "Chúng tôi là học sinh, các bạn cũng là học sinh.",
+   "tu": [
+    "是",
+    "学生"
+   ],
+   "np": "shi"
+  },
+  {
+   "han": "你们是不是中国人？",
+   "py": "Nǐmen shì bu shì Zhōngguó rén?",
+   "viet": "Các bạn có phải người Trung Quốc không?",
+   "tu": [
+    "是",
+    "中国",
+    "人"
+   ],
+   "np": "shi"
+  },
+  {
+   "han": "他是不是老师？",
+   "py": "Tā shì bu shì lǎoshī?",
+   "viet": "Anh ấy có phải giáo viên không?",
+   "tu": [
+    "是",
+    "老师"
+   ],
+   "np": "shi"
+  },
+  {
+   "han": "A：你是越南人吗？\nB：是，我是越南人。",
+   "py": "A: Nǐ shì Yuènán rén ma?\nB: Shì, wǒ shì Yuènán rén.",
+   "viet": "A: Bạn là người Việt Nam à?\nB: Phải, mình là người Việt Nam.",
+   "tu": [
+    "是",
+    "越南",
+    "人",
+    "吗",
+    "我"
+   ],
+   "doc": "你是越南人吗？是，我是越南人。"
+  },
+  {
+   "han": "李月老师是中国人吗？",
+   "py": "Lǐ Yuè lǎoshī shì Zhōngguó rén ma?",
+   "viet": "Cô Lý Nguyệt là người Trung Quốc à?",
+   "tu": [
+    "老师",
+    "是",
+    "中国",
+    "人",
+    "吗"
+   ],
+   "np": "ma"
+  },
+  {
+   "han": "小明是小学生。",
+   "py": "Xiǎomíng shì xiǎoxué·shēng.",
+   "viet": "Tiểu Minh là học sinh tiểu học.",
+   "tu": [
+    "是"
+   ]
+  },
+  {
+   "han": "我是一个越南学生。",
+   "py": "Wǒ shì yí ge Yuènán xué·shēng.",
+   "viet": "Mình là một học sinh Việt Nam.",
+   "tu": [
+    "我",
+    "是",
+    "个",
+    "越南",
+    "学生"
+   ],
+   "np": "soLt"
+  },
+  {
+   "han": "她是一个好人。",
+   "py": "Tā shì yí ge hǎo rén.",
+   "viet": "Cô ấy là một người tốt.",
+   "tu": [
+    "是",
+    "个",
+    "人"
+   ],
+   "np": "soLt"
+  },
+  {
+   "han": "A：您贵姓？\nB：我姓李。",
+   "py": "A: Nín guìxìng?\nB: Wǒ xìng Lǐ.",
+   "viet": "A: Ông / bà họ gì ạ?\nB: Tôi họ Lý.",
+   "tu": [
+    "贵姓",
+    "我",
+    "姓"
+   ],
+   "doc": "您贵姓？我姓李。"
+  },
+  {
+   "han": "我们老师姓阮。",
+   "py": "Wǒmen lǎoshī xìng Ruǎn.",
+   "viet": "Cô giáo chúng tôi họ Nguyễn.",
+   "tu": [
+    "老师",
+    "姓"
+   ]
+  },
+  {
+   "han": "大卫姓什么？",
+   "py": "Dàwèi xìng shénme?",
+   "viet": "David họ gì?",
+   "tu": [
+    "姓",
+    "什么"
+   ],
+   "np": "shenme"
+  },
+  {
+   "han": "A：你叫什么？\nB：我叫小明。",
+   "py": "A: Nǐ jiào shénme?\nB: Wǒ jiào Xiǎomíng.",
+   "viet": "A: Bạn tên gì?\nB: Mình tên là Tiểu Minh.",
+   "tu": [
+    "叫",
+    "什么",
+    "我"
+   ],
+   "doc": "你叫什么？我叫小明。",
+   "np": "shenme"
+  },
+  {
+   "han": "美国很大。",
+   "py": "Měiguó hěn dà.",
+   "viet": "Nước Mỹ rất lớn.",
+   "tu": [
+    "美国"
+   ]
+  },
+  {
+   "han": "日本不大。",
+   "py": "Rìběn bú dà.",
+   "viet": "Nhật Bản không lớn.",
+   "tu": [
+    "日本"
+   ]
+  },
+  {
+   "han": "英国很美吗？",
+   "py": "Yīngguó hěn měi ma?",
+   "viet": "Nước Anh có đẹp không?",
+   "tu": [
+    "英国",
+    "美",
+    "吗"
+   ]
+  },
+  {
+   "han": "你们国家很美吗？",
+   "py": "Nǐmen guójiā hěn měi ma?",
+   "viet": "Đất nước các bạn có đẹp không?",
+   "tu": [
+    "国家",
+    "美",
+    "吗"
+   ]
+  },
+  {
+   "han": "我们国家不大。",
+   "py": "Wǒmen guójiā bú dà.",
+   "viet": "Đất nước chúng tôi không lớn.",
+   "tu": [
+    "国家"
+   ]
+  },
+  {
+   "han": "中国是大国，越南不是大国。",
+   "py": "Zhōngguó shì dàguó, Yuènán bú shì dàguó.",
+   "viet": "Trung Quốc là nước lớn, Việt Nam không phải nước lớn.",
+   "tu": [
+    "中国",
+    "是",
+    "国",
+    "越南"
+   ]
+  },
+  {
+   "han": "美国是一个大国。",
+   "py": "Měiguó shì yí ge dàguó.",
+   "viet": "Mỹ là một nước lớn.",
+   "tu": [
+    "美国",
+    "是",
+    "个",
+    "国"
+   ],
+   "np": "soLt"
+  },
+  {
+   "han": "乔丹是美国人，大卫是英国人。",
+   "py": "Qiáodān shì Měiguó rén, Dàwèi shì Yīngguó rén.",
+   "viet": "Jordan là người Mỹ, David là người Anh.",
+   "tu": [
+    "是",
+    "美国",
+    "人",
+    "英国"
+   ]
+  },
+  {
+   "han": "他们也是学生吗？",
+   "py": "Tāmen yě shì xué·shēng ma?",
+   "viet": "Họ cũng là học sinh à?",
+   "tu": [
+    "是",
+    "学生",
+    "吗"
+   ],
+   "np": "ma"
+  },
+  {
+   "han": "李月是韩国人吗？",
+   "py": "Lǐ Yuè shì Hánguó rén ma?",
+   "viet": "Lý Nguyệt là người Hàn Quốc à?",
+   "tu": [
+    "是",
+    "韩国",
+    "人",
+    "吗"
+   ]
+  },
+  {
+   "han": "你们是不是英国人？",
+   "py": "Nǐmen shì bu shì Yīngguó rén?",
+   "viet": "Các bạn có phải người Anh không?",
+   "tu": [
+    "是",
+    "英国",
+    "人"
+   ]
+  },
+  {
+   "han": "我是越南人，你也是越南人吗？",
+   "py": "Wǒ shì Yuènán rén, nǐ yě shì Yuènán rén ma?",
+   "viet": "Mình là người Việt Nam, bạn cũng là người Việt Nam à?",
+   "tu": [
+    "我",
+    "是",
+    "越南",
+    "人",
+    "吗"
+   ]
+  },
+  {
+   "han": "老师，您是中国人吗？",
+   "py": "Lǎoshī, nín shì Zhōngguó rén ma?",
+   "viet": "Thưa cô, cô là người Trung Quốc ạ?",
+   "tu": [
+    "老师",
+    "是",
+    "中国",
+    "人",
+    "吗"
+   ]
+  },
+  {
+   "han": "李月很美。",
+   "py": "Lǐ Yuè hěn měi.",
+   "viet": "Lý Nguyệt rất xinh.",
+   "tu": [
+    "美"
+   ]
+  },
+  {
+   "han": "她很美，也很客气。",
+   "py": "Tā hěn měi, yě hěn kèqi.",
+   "viet": "Cô ấy rất xinh, cũng rất lịch sự.",
+   "tu": [
+    "美"
+   ]
+  },
+  {
+   "han": "我不是韩国人，我是日本人。",
+   "py": "Wǒ bú shì Hánguó rén, wǒ shì Rìběn rén.",
+   "viet": "Tôi không phải người Hàn Quốc, tôi là người Nhật Bản.",
+   "tu": [
+    "我",
+    "是",
+    "韩国",
+    "人",
+    "日本"
+   ],
+   "np": "shi"
+  },
+  {
+   "han": "他们是日本学生。",
+   "py": "Tāmen shì Rìběn xué·shēng.",
+   "viet": "Họ là học sinh Nhật Bản.",
+   "tu": [
+    "是",
+    "日本",
+    "学生"
+   ]
+  },
+  {
+   "han": "他是韩国老师。",
+   "py": "Tā shì Hánguó lǎoshī.",
+   "viet": "Anh ấy là giáo viên người Hàn Quốc.",
+   "tu": [
+    "是",
+    "韩国",
+    "老师"
+   ]
+  },
+  {
+   "han": "小明，老师叫你！",
+   "py": "Xiǎomíng, lǎoshī jiào nǐ!",
+   "viet": "Tiểu Minh ơi, cô gọi em kìa!",
+   "tu": [
+    "老师",
+    "叫"
+   ]
+  },
+  {
+   "han": "大卫是一个英国老师。",
+   "py": "Dàwèi shì yí ge Yīngguó lǎoshī.",
+   "viet": "David là một giáo viên người Anh.",
+   "tu": [
+    "是",
+    "个",
+    "英国",
+    "老师"
+   ],
+   "np": "soLt"
+  },
+  {
+   "han": "老师叫什么名字？",
+   "py": "Lǎoshī jiào shénme míngzi?",
+   "viet": "Cô giáo tên là gì?",
+   "tu": [
+    "老师",
+    "叫",
+    "什么",
+    "名字"
+   ],
+   "np": "shenme"
+  },
+  {
+   "han": "A：老师，您贵姓？\nB：我姓阮，叫阮何然。",
+   "py": "A: Lǎoshī, nín guìxìng?\nB: Wǒ xìng Ruǎn, jiào Ruǎn Hérán.",
+   "viet": "A: Thưa cô, cô họ gì ạ?\nB: Cô họ Nguyễn, tên là Nguyễn Hà Nhiên.",
+   "tu": [
+    "老师",
+    "贵姓",
+    "我",
+    "姓",
+    "叫"
+   ],
+   "doc": "老师，您贵姓？我姓阮，叫阮何然。"
+  },
+  {
+   "han": "你们叫什么名字？",
+   "py": "Nǐmen jiào shénme míngzi?",
+   "viet": "Các bạn tên là gì?",
+   "tu": [
+    "叫",
+    "什么",
+    "名字"
+   ],
+   "np": "shenme"
+  }
+ ],
+ "hoiThoai": [
+  {
+   "ten": "Làm quen",
+   "luot": [
+    {
+     "han": "你好！我叫小明。你叫什么名字？",
+     "py": "Nǐ hǎo! Wǒ jiào Xiǎomíng. Nǐ jiào shénme míngzi?",
+     "viet": "Chào bạn! Mình tên là Tiểu Minh. Bạn tên là gì?"
+    },
+    {
+     "han": "我叫李月。",
+     "py": "Wǒ jiào Lǐ Yuè.",
+     "viet": "Mình tên là Lý Nguyệt."
+    },
+    {
+     "han": "你是老师吗？",
+     "py": "Nǐ shì lǎoshī ma?",
+     "viet": "Bạn là giáo viên à?"
+    },
+    {
+     "han": "我不是老师，我是学生。",
+     "py": "Wǒ bú shì lǎoshī, wǒ shì xué·shēng.",
+     "viet": "Mình không phải giáo viên, mình là học sinh."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我是学生。",
+      "py": "Wǒ shì xué·shēng."
+     },
+     {
+      "han": "我是越南人。",
+      "py": "Wǒ shì Yuènán rén."
+     },
+     {
+      "han": "我很好。",
+      "py": "Wǒ hěn hǎo."
+     }
+    ],
+    "3": [
+     {
+      "han": "我叫李月。",
+      "py": "Wǒ jiào Lǐ Yuè."
+     },
+     {
+      "han": "我是中国人。",
+      "py": "Wǒ shì Zhōngguó rén."
+     },
+     {
+      "han": "谢谢你！",
+      "py": "Xièxie nǐ!"
+     }
+    ]
+   },
+   "chang": "2"
+  },
+  {
+   "ten": "Hỏi họ",
+   "luot": [
+    {
+     "han": "老师，您贵姓？",
+     "py": "Lǎoshī, nín guìxìng?",
+     "viet": "Thưa cô, cô họ gì ạ?"
+    },
+    {
+     "han": "我姓阮。",
+     "py": "Wǒ xìng Ruǎn.",
+     "viet": "Cô họ Nguyễn."
+    },
+    {
+     "han": "您是中国人吗？",
+     "py": "Nín shì Zhōngguó rén ma?",
+     "viet": "Cô là người Trung Quốc ạ?"
+    },
+    {
+     "han": "我不是中国人，我是越南人。",
+     "py": "Wǒ bú shì Zhōngguó rén, wǒ shì Yuènán rén.",
+     "viet": "Cô không phải người Trung Quốc, cô là người Việt Nam."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我是老师。",
+      "py": "Wǒ shì lǎoshī."
+     },
+     {
+      "han": "我很好。",
+      "py": "Wǒ hěn hǎo."
+     },
+     {
+      "han": "我是越南人。",
+      "py": "Wǒ shì Yuènán rén."
+     }
+    ],
+    "3": [
+     {
+      "han": "我姓阮。",
+      "py": "Wǒ xìng Ruǎn."
+     },
+     {
+      "han": "我是老师。",
+      "py": "Wǒ shì lǎoshī."
+     },
+     {
+      "han": "不客气！",
+      "py": "Bú kèqi!"
+     }
+    ]
+   },
+   "chang": "2"
+  }
+ ]
+}

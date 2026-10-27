@@ -30,17 +30,28 @@
   // =====================================================================
   var PHAN = doc(K_PHAN); if (!PHAN || PHAN.v !== 1) PHAN = { v: 1, phan: {} };
   var TEN_PHAN = { 'test-dau-gio': 'Test đầu giờ', 'tu-vung': 'Từ vựng', 'ngu-phap': 'Ngữ pháp', 'bai-tap': 'Bài tập' };
-  // Trang thuộc phần nào: chuong-trinh-hsk/<cấp>/bai-<N>/<phần>.html  →  khoá "<cấp>/bai-<N>/<phần>"
+  // Trang thuộc phần nào: <chương trình>/<cấp>/bai-<N>/<phần>.html
+  //   HSK 3.0: chuong-trinh-hsk/hsk1/bai-3/tu-vung.html    →  khoá "hsk1/bai-3/tu-vung"
+  //   HSK 2.0: chuong-trinh-hsk-2/hsk1/bai-1-2/tu-vung.html →  khoá "h2/hsk1/bai-1-2/tu-vung"
+  var CT_KHOA = { 'chuong-trinh-hsk': '', 'chuong-trinh-hsk-2': 'h2/' };
+  var CT_DATA = { 'chuong-trinh-hsk': 'data/bai/', 'chuong-trinh-hsk-2': 'data/hsk2/' };
+  var RE_BAI = 'bai-\\d+(?:-\\d+)?';
   function khoaTuDuongDan(p) {
-    var m = String(p).split('#')[0].split('?')[0].match(/chuong-trinh-hsk\/(hsk[^\/]+)\/(bai-\d+)\/([a-z0-9-]+)\.html$/);
-    if (!m || m[3] === 'index' || m[3] === 'bang-xep-hang') return null;
-    return { khoa: m[1] + '/' + m[2] + '/' + m[3], bai: m[1] + '/' + m[2], phan: m[3], url: 'chuong-trinh-hsk/' + m[1] + '/' + m[2] + '/' + m[3] + '.html' };
+    var m = String(p).split('#')[0].split('?')[0].match(new RegExp('(chuong-trinh-hsk(?:-2)?)\\/(hsk[^\\/]+)\\/(' + RE_BAI + ')\\/([a-z0-9-]+)\\.html$'));
+    if (!m || m[4] === 'index' || m[4] === 'bang-xep-hang') return null;
+    var tien = CT_KHOA[m[1]];
+    return { khoa: tien + m[2] + '/' + m[3] + '/' + m[4], bai: tien + m[2] + '/' + m[3], phan: m[4], ct: m[1], cap: m[2], slug: m[3],
+      url: m[1] + '/' + m[2] + '/' + m[3] + '/' + m[4] + '.html' };
   }
+  function urlTuKhoa(k) { return (k.indexOf('h2/') === 0 ? 'chuong-trinh-hsk-2/' + k.slice(3) : 'chuong-trinh-hsk/' + k) + '.html'; }
+  function soBai(slug, cuoi) { var so = slug.match(/\d+/g) || ['0']; return +(cuoi ? so[so.length - 1] : so[0]); }
+  function tenBai(slug) { return 'Bài ' + slug.slice(4).replace('-', '–'); }
+  function tenCap(ct, cap) { return (ct === 'chuong-trinh-hsk-2' ? 'HSK 2.0 · ' : '') + cap.toUpperCase().replace('HSK', 'HSK '); }
   var TRANG_NAY = khoaTuDuongDan(location.pathname);
   function tenTrangNay() {                                   // "HSK 1 · Bài 3 · Ôn tập từ vựng 2" từ dòng đường dẫn
     var dd = document.querySelector('.duong-dan'); if (!dd) return '';
     var t = dd.textContent.split('›').map(function (x) { return x.trim(); }).filter(Boolean);
-    return t.slice(1).join(' · ');
+    return (/chuong-trinh-hsk-2\//.test(location.pathname) ? 'HSK 2.0 · ' : '') + t.slice(1).join(' · ');
   }
   function tenPhan(phan) { return TEN_PHAN[phan] || (/^on-tap-/.test(phan) ? 'Ôn tập từ vựng ' + phan.slice(7).replace('-', '.') : phan); }
   var phanBan = false;
@@ -66,24 +77,24 @@
 
   // Danh sách phần của một bài, theo dữ liệu bài (không phải khai tay ở đâu khác)
   var DL_BAI = {};
-  function taiBai(cap, n) {
-    var k = cap + '/' + n;
-    return DL_BAI[k] || (DL_BAI[k] = fetch(ROOT + 'data/bai/bai-' + n + '.json' + (V ? '?v=' + V : '')).then(function (r) { if (!r.ok) throw r; return r.json(); })
+  function taiBai(ct, cap, slug) {
+    var k = ct + '/' + cap + '/' + slug;
+    return DL_BAI[k] || (DL_BAI[k] = fetch(ROOT + CT_DATA[ct] + slug + '.json' + (V ? '?v=' + V : '')).then(function (r) { if (!r.ok) throw r; return r.json(); })
       .then(function (d) {
         var ds = [];
-        if (n > 1) ds.push('test-dau-gio');
+        if (soBai(slug) > 1) ds.push('test-dau-gio');
         ds.push('tu-vung');
         if ((d.nguPhap || []).length) ds.push('ngu-phap');
         (d.chang || []).forEach(function (c) { ds.push('on-tap-' + String(c.so).replace('.', '-')); });
         ds.push('bai-tap');
-        return { n: n, ten: d.tenViet || ('Bài ' + n), ds: ds };
+        return { slug: slug, ten: d.tenViet || tenBai(slug), ds: ds };
       }).catch(function () { return null; }));
   }
-  function demXong(cap, n, ds) { return ds.filter(function (p) { var x = PHAN.phan[cap + '/bai-' + n + '/' + p]; return x && x.tt === 'xong'; }).length; }
+  function demXong(baiKhoa, ds) { return ds.filter(function (p) { var x = PHAN.phan[baiKhoa + '/' + p]; return x && x.tt === 'xong'; }).length; }
 
   // Trang bài (…/bai-N/): dấu trạng thái trên từng thẻ / liên kết phần
   function veDauTich() {
-    if (!/\/bai-\d+\/(index\.html)?$/.test(location.pathname)) return;
+    if (!new RegExp('\\/' + RE_BAI + '\\/(index\\.html)?$').test(location.pathname)) return;
     document.querySelectorAll('.grid a[href]').forEach(function (a) {
       var k = khoaTuDuongDan(a.pathname); if (!k) return;
       var x = PHAN.phan[k.khoa], cu = a.querySelector('.tk-dau'); if (cu) cu.remove();
@@ -96,13 +107,14 @@
   }
   // Trang một cấp (…/hsk1/): mỗi bài "x/y phần đã xong"
   function veTienDoCap() {
-    var m = location.pathname.match(/chuong-trinh-hsk\/(hsk[^\/]+)\/(index\.html)?$/); if (!m) return;
+    var m = location.pathname.match(/(chuong-trinh-hsk(?:-2)?)\/(hsk[^\/]+)\/(index\.html)?$/); if (!m) return;
     document.querySelectorAll('.grid a.card[href]').forEach(function (a) {
-      var n = +((a.getAttribute('href') || '').match(/^bai-(\d+)\/?$/) || [])[1]; if (!n) return;
-      taiBai(m[1], n).then(function (b) {
+      var slug = ((a.getAttribute('href') || '').match(new RegExp('^(' + RE_BAI + ')\\/?$')) || [])[1]; if (!slug) return;
+      var baiKhoa = CT_KHOA[m[1]] + m[2] + '/' + slug;
+      taiBai(m[1], m[2], slug).then(function (b) {
         if (!b) return;
-        var xong = demXong(m[1], n, b.ds), cu = a.querySelector('.tk-tien'); if (cu) cu.remove();
-        var dang = b.ds.some(function (p) { return PHAN.phan[m[1] + '/bai-' + n + '/' + p]; });
+        var xong = demXong(baiKhoa, b.ds), cu = a.querySelector('.tk-tien'); if (cu) cu.remove();
+        var dang = b.ds.some(function (p) { return PHAN.phan[baiKhoa + '/' + p]; });
         if (!dang) return;
         var o = document.createElement('div'); o.className = 'tk-tien' + (xong === b.ds.length ? ' xong' : '');
         o.innerHTML = '<span>' + (xong === b.ds.length ? '✓ Đã xong cả ' + xong + ' phần' : xong + '/' + b.ds.length + ' phần đã xong') + '</span><i><b style="width:' + Math.round(xong / b.ds.length * 100) + '%"></b></i>';
@@ -110,15 +122,21 @@
       });
     });
   }
-  // Trang chủ + trang cấp: nút "Học tiếp" — phần đang dở gần nhất; xong rồi thì phần kế tiếp của bài, hết bài thì sang bài sau
+  // Trang chủ, trang chương trình, trang cấp: nút "Học tiếp" — phần đang dở gần nhất; xong rồi thì phần kế tiếp của bài, hết bài thì sang bài sau
   function veHocTiep() {
-    var laChu = !!document.getElementById('lo-trinh-hsk'), mCap = location.pathname.match(/chuong-trinh-hsk\/(hsk[^\/]+)\/(index\.html)?$/);
-    if (!laChu && !mCap) return;
-    var ds = Object.keys(PHAN.phan).map(function (k) { return { k: k, x: PHAN.phan[k] }; })
-      .filter(function (o) { return !mCap || o.k.indexOf(mCap[1] + '/') === 0; }).sort(function (a, b) { return (b.x.t || 0) - (a.x.t || 0); });
+    var laChu = !!document.querySelector('.hero-btns') && !!document.getElementById('lo-trinh-hsk');
+    var mCt = location.pathname.match(/(chuong-trinh-hsk(?:-2)?)\/(?:(hsk[^\/]+)\/)?(index\.html)?$/);
+    if (!laChu && !mCt) return;
+    var loc = function (k) {
+      if (!mCt) return true;
+      var h2 = k.indexOf('h2/') === 0;
+      if ((mCt[1] === 'chuong-trinh-hsk-2') !== h2) return false;
+      return !mCt[2] || (h2 ? k.slice(3) : k).indexOf(mCt[2] + '/') === 0;
+    };
+    var ds = Object.keys(PHAN.phan).filter(loc).map(function (k) { return { k: k, x: PHAN.phan[k] }; })
+      .sort(function (a, b) { return (b.x.t || 0) - (a.x.t || 0); });
     if (!ds.length) return;
-    var moi = ds[0], k = khoaTuDuongDan('chuong-trinh-hsk/' + moi.k + '.html'); if (!k) return;
-    var cap = k.bai.split('/')[0], n = +k.bai.split('-').pop();
+    var moi = ds[0], k = khoaTuDuongDan(urlTuKhoa(moi.k)); if (!k) return;
     var hien = function (url, ten, ghiChu) {
       var cu = document.querySelector('.tk-hoc-tiep'); if (cu) cu.remove();
       var o = document.createElement('a'); o.className = 'tk-hoc-tiep'; o.href = ROOT + url;
@@ -127,12 +145,13 @@
       if (cho) cho.parentNode.insertBefore(o, cho.nextSibling);
     };
     if (moi.x.tt !== 'xong') return hien(moi.x.url, moi.x.ten || tenPhan(k.phan), 'Đang học dở');
-    taiBai(cap, n).then(function (b) {
+    taiBai(k.ct, k.cap, k.slug).then(function (b) {
       if (!b) return;
-      var con = b.ds.filter(function (p) { var x = PHAN.phan[cap + '/bai-' + n + '/' + p]; return !x || x.tt !== 'xong'; })[0];
-      if (con) return hien('chuong-trinh-hsk/' + cap + '/bai-' + n + '/' + con + '.html', cap.toUpperCase().replace('HSK', 'HSK ') + ' · Bài ' + n + ' · ' + tenPhan(con), 'Phần tiếp theo');
-      taiBai(cap, n + 1).then(function (b2) {
-        if (b2) hien('chuong-trinh-hsk/' + cap + '/bai-' + (n + 1) + '/', cap.toUpperCase().replace('HSK', 'HSK ') + ' · Bài ' + (n + 1), 'Xong Bài ' + n + ' rồi 🎉 Sang bài mới');
+      var con = b.ds.filter(function (p) { var x = PHAN.phan[k.bai + '/' + p]; return !x || x.tt !== 'xong'; })[0];
+      if (con) return hien(k.ct + '/' + k.cap + '/' + k.slug + '/' + con + '.html', tenCap(k.ct, k.cap) + ' · ' + tenBai(k.slug) + ' · ' + tenPhan(con), 'Phần tiếp theo');
+      var sau = 'bai-' + (soBai(k.slug, true) + 1);
+      taiBai(k.ct, k.cap, sau).then(function (b2) {
+        if (b2) hien(k.ct + '/' + k.cap + '/' + sau + '/', tenCap(k.ct, k.cap) + ' · ' + tenBai(sau), 'Xong ' + tenBai(k.slug) + ' rồi 🎉 Sang bài mới');
       });
     });
   }
