@@ -110,11 +110,13 @@
       '<div class="bb-chip"><span>' + (S.dang === 'tron' ? '🔀 Trộn tất cả' : DANG[S.dang].ico + ' ' + DANG[S.dang].ten) + '</span>' +
         '<span>' + soBong + ' bóng</span><span>' + m.giay + ' giây / câu</span><span>' + SO_CAU + ' câu</span></div>' +
       (kl ? '<p class="bb-kl">🏆 Kỷ lục của bạn: <b>' + kl + '</b> điểm</p>' : '') +
+      (window.QM_DIEM ? (S.dang === 'tron' ? QM_DIEM.oNhap() : '<p class="dd-ghi">Chỉ dạng <b>🔀 Trộn tất cả</b> tính điểm lên Bảng xếp hạng. Dạng riêng để luyện thêm.</p>') : '') +
       '<button type="button" class="btn gold bb-bat-dau">▶ Bắt đầu</button>' +
       '<p class="bb-meo">Máy tính: bấm phím <b>1–5</b> để bắn bóng theo thứ tự từ trái sang, phím <b>cách</b> để nghe lại.</p>' +
     '</div>';
-    man.querySelector('.bb-bat-dau').addEventListener('click', batDau);
+    man.querySelector('.bb-bat-dau').addEventListener('click', function () { if (window.QM_DIEM) HS = QM_DIEM.docNhap(man); batDau(); });
   }
+  var HS = null;   // họ tên + lớp lúc bấm Bắt đầu
 
   // =========================================================
   // 6. LƯỢT CHƠI
@@ -145,7 +147,7 @@
         man.querySelector('.bb-ve').addEventListener('click', manChao);
         return;
       }
-      G = { dl: dl, ds: ds, i: -1, diem: 0, dung: 0, chuoi: 0, chuoiMax: 0, sai: [], dangChay: false, xong: false, laLai: Array.isArray(dsLai) };
+      G = { dl: dl, ds: ds, i: -1, diem: 0, dung: 0, chuoi: 0, chuoiMax: 0, sai: [], dangChay: false, xong: false, laLai: Array.isArray(dsLai), batDauLuc: Date.now(), ct: [] };
       thanh.classList.add('khoa');
       hud.hidden = false; deBai.hidden = false;
       capNhatHud();
@@ -333,6 +335,8 @@
     C.xong = true; G.dangChay = false; dungVong();
     C.troiQua += (performance.now() - C.batDau) / 1000;
     var iDung = C.dap.indexOf(C.c.dung), dung = i === iDung;
+    var bo = function (h) { return String(h || '').replace(/<[^>]+>/g, ''); };
+    G.ct.push({ stt: G.ct.length + 1, dang: DANG[C.q.dang].ten, cauHoi: '🎧 ' + (C.q.muc.chu || C.q.muc.han), dapAn: bo(C.c.dung.nhan), chon: i >= 0 ? bo(C.dap[i].nhan) : '(hết giờ)', dung: dung });
     if (dung) {
       var conLai = Math.max(0, 1 - C.troiQua / C.giay);
       G.chuoi++; G.chuoiMax = Math.max(G.chuoiMax, G.chuoi); G.dung++;
@@ -389,11 +393,22 @@
       '<p class="bb-loi">' + loi + '</p>' +
       '<div class="bb-chip"><span>✓ Đúng ' + G.dung + '/' + tong + '</span><span>🔥 Chuỗi dài nhất ' + G.chuoiMax + '</span></div>' +
       (G.laLai ? '<p class="bb-kl">Lượt luyện lại câu sai không tính kỷ lục.</p>' : '') +
+      '<div class="dd-khu"></div>' +
       '<div class="bb-nut-ket"><button type="button" class="btn gold bb-choi-lai">↻ Chơi lượt mới</button>' +
       (G.sai.length ? '<button type="button" class="btn bb-luyen-sai">🎯 Luyện lại ' + Object.keys(dsSai).length + ' câu sai</button>' : '') + '</div>' +
       (hangSai ? '<div class="bb-on-lai"><b>Cần ôn lại</b><ul>' + hangSai + '</ul></div>' : '') +
     '</div>';
     var sai = G.sai.slice();
+    // Bảng xếp hạng: chỉ lượt Trộn tất cả (không phải luyện lại câu sai), mỗi bài × mức một bảng
+    var khuDiem = man.querySelector('.dd-khu');
+    if (window.QM_DIEM && S.dang === 'tron' && !G.laLai) {
+      var n = nhomDangChon();
+      QM_DIEM.gui({ lesson: QM_DIEM.maBai(CF.maDiem || 'h2', n.tongHop ? (CF.tongHopDiem || 'tong-hop-bai0') : n.diem, 'bong-bay', S.muc),
+        lessonTitle: (CF.tenDiem || '') + n.ten + ' · Bắn bóng bay · ' + MUC[S.muc].ten,
+        score: G.diem, total: G.ds.length * 170, bestStreak: G.chuoiMax, durationSeconds: (Date.now() - G.batDauLuc) / 1000,
+        chiTiet: G.ct, hoTen: HS ? HS.hoTen : '', lop: HS ? HS.lop : '',
+        linkBxh: (CF.bxh || 'bang-xep-hang.html') + '?tro=bong-bay&bai=' + n.ma + '&muc=' + S.muc }, khuDiem);
+    }
     man.querySelector('.bb-choi-lai').addEventListener('click', function () { batDau(); });
     var ls = man.querySelector('.bb-luyen-sai');
     if (ls) ls.addEventListener('click', function () {

@@ -3,6 +3,8 @@
    Đặt <div id="bang-xep-hang" data-lesson="bai1-bai-tap"></div>. Địa chỉ máy chủ: window.QM_API (assets/js/cau-hinh.js).
    Chỉ tải dữ liệu khi bấm "Cập nhật". Một học sinh (họ tên + lớp) một dòng: lượt đầu, lượt tốt nhất, số lượt.
    Xếp hạng: điểm cao trước; bằng điểm thì chuỗi đúng dài hơn; rồi ai nhanh hơn; vẫn bằng thì ai nộp sớm hơn.
+   Trò chơi (trang tro-choi/bang-xep-hang.html): data-co-dinh="1" ẩn ô chọn mã bài, trang tự chọn bằng el.qmBxh.chon(mã, tên);
+   data-kieu="game" hiện điểm trò chơi (không có "/tổng").
    ========================================================= */
 (function () {
   var el = document.getElementById('bang-xep-hang'); if (!el) return;
@@ -18,6 +20,12 @@
     '<details class="bxh-gv"><summary>Dành cho giáo viên: xoá điểm của bài này</summary>' +
       '<div class="bxh-gv-in"><input type="password" class="bxh-mk" placeholder="Mật khẩu giáo viên" autocomplete="off"><button type="button" class="btn bxh-xoa">Xoá điểm bài này</button></div><p class="bxh-gv-bao"></p></details>';
   var selBai = el.querySelector('.bxh-bai'), bang = el.querySelector('.bxh-bang'), xepTheo = 'dau', DL = [];
+  var coDinh = !!el.dataset.coDinh, laGame = el.dataset.kieu === 'game';
+  if (coDinh) selBai.closest('.lt-o').style.display = 'none';
+  el.qmBxh = { chon: function (lesson, ten) {
+    selBai.innerHTML = '<option value="' + esc(lesson) + '">' + esc(lesson) + (ten ? ' · ' + esc(ten) : '') + '</option>';
+    selBai.value = lesson; DL = []; bang.innerHTML = '<p class="tv-trong">Bấm "Cập nhật" để tải bảng xếp hạng.</p>';
+  } };
   if (!API) { bang.innerHTML = '<p class="tv-trong">Bảng xếp hạng chưa được nối với Google Sheet.</p>'; el.querySelector('.bxh-cap-nhat').disabled = true; return; }
 
   function taiDsBai() {                                       // danh sách mã bài lấy từ dữ liệu đang có
@@ -49,7 +57,7 @@
   function ve() {
     if (!DL.length) { bang.innerHTML = '<p class="tv-trong">Chưa có ai nộp bài này.</p>'; return; }
     var hs = gop(DL).sort(function (a, b) { return hon(a[xepTheo], b[xepTheo]) ? -1 : hon(b[xepTheo], a[xepTheo]) ? 1 : 0; });
-    var o = function (r) { return '<b>' + r.score + '/' + r.total + '</b><small>' + giay(r.durationSeconds) + ' · 🔥' + (r.bestStreak || 0) + '</small>'; };
+    var o = function (r) { return '<b>' + r.score + (laGame ? ' điểm' : '/' + r.total) + '</b><small>' + giay(r.durationSeconds) + ' · 🔥' + (r.bestStreak || 0) + '</small>'; };
     bang.innerHTML = '<div class="bxh-cuon"><table><thead><tr><th>Hạng</th><th>Học sinh</th><th>Lớp</th><th' + (xepTheo === 'dau' ? ' class="on"' : '') + '>Lượt đầu</th><th' + (xepTheo === 'tot' ? ' class="on"' : '') + '>Lượt tốt nhất</th><th>Số lượt</th></tr></thead><tbody>' +
       hs.map(function (x, i) { return '<tr' + (i < 3 ? ' class="top top' + (i + 1) + '"' : '') + '><td>' + (['🥇', '🥈', '🥉'][i] || i + 1) + '</td><td>' + esc(x.hoTen) + '</td><td>' + esc(x.lop) + '</td><td>' + o(x.dau) + '</td><td>' + o(x.tot) + '</td><td>' + x.soLuot + '</td></tr>'; }).join('') +
       '</tbody></table></div><p class="bxh-ghi">' + hs.length + ' học sinh · ' + DL.length + ' lượt nộp</p>';
@@ -81,5 +89,5 @@
       .then(function (d) { if (!d.ok) throw new Error(d.loi); bao.textContent = '✅ Đã xoá ' + d.soDongXoa + ' lượt nộp của bài ' + bai + '.'; DL = []; ve(); })
       .catch(function (e) { bao.textContent = '⚠️ ' + (e.message || 'Lỗi mạng'); });
   }
-  taiDsBai();
+  if (!coDinh) taiDsBai();
 })();
