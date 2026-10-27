@@ -11,3 +11,7 @@ window.QM_API = 'https://script.google.com/macros/s/AKfycbx4bur__9sJBrGVRg_ujUFV
    Chỉ điền QM_TK_API: đếm lượt truy cập, chưa có đăng nhập. */
 window.QM_TK_API = 'https://script.google.com/macros/s/AKfycbyG-GAzZtfnWdmRwJAzY5-FKruv1Bc1BXDQOcL8mYMkR_9sgF8ldfGzANWFeda5-wO6/exec';
 window.QM_GOOGLE_CLIENT_ID = '652937304012-h7ijvhl27vkt0ffkkk1q5kt18tu5l7va.apps.googleusercontent.com';
+
+/* Máy chủ PHÒNG CHƠI (trò chơi cả lớp, mỗi đội một điện thoại) — Apps Script riêng "TTDK - Phong choi", quy chuẩn 13.
+   QM_PHONG_API: địa chỉ …/exec. Để trống: trò chơi cả lớp vẫn chơi được ở chế độ cô bấm chấm cho các đội (không dùng điện thoại). */
+window.QM_PHONG_API = 'https://script.google.com/macros/s/AKfycbyFqAqTeeCh6Y6Z_jfagY8mkpzu4fyufUQUsHAB1lzBZSs3bHIBa2kDAJUQLlWCg_lm/exec';
