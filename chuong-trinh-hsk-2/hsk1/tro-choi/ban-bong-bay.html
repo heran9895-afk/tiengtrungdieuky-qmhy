@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bắn bóng bay · HSK 1 (HSK 2.0) · Tiếng Trung Diệu Kỳ</title>
+<meta name="description" content="Trò chơi Bắn bóng bay HSK 1 (HSK 2.0): nghe và chọn thanh mẫu, vận mẫu, thanh điệu, phiên âm, chữ Hán. 3 mức Dễ, Trung bình, Khó.">
+<link rel="icon" href="../../../assets/img/logo.webp">
+<link rel="stylesheet" href="../../../assets/css/style.css?v=20261028a">
+<link rel="stylesheet" href="../../../assets/css/tro-choi.css?v=20261028a">
+</head>
+<body>
+
+<section class="section">
+  <div class="wrap">
+    <p class="duong-dan"><a href="../../">Chương trình HSK 2.0</a> › <a href="../">HSK 1</a> › <a href="./">Trò chơi</a> › Bắn bóng bay</p>
+    <div class="sec-head">
+      <div class="sec-kicker">射气球 · 听音游戏</div>
+      <h1 class="sec-title">🎈 Bắn bóng bay</h1>
+      <p class="sec-sub">Nghe máy đọc, bắn trúng quả bóng mang đáp án đúng. Chọn bài, dạng và mức độ rồi bấm <b>Bắt đầu</b>.</p>
+    </div>
+    <div id="ban-bong-bay"></div>
+    <p class="tc-luu-y">Kết quả chỉ hiện trên màn hình, không gửi lên Bảng xếp hạng. Kỷ lục của từng bài, dạng, mức độ được lưu trên máy bạn.</p>
+  </div>
+</section>
+
+<script>
+  // Nguồn từ của trò chơi: các bài HSK 1 (HSK 2.0). Thêm bài mới: chép một dòng, sửa mã, tên, đường dẫn.
+  window.QM_BB = {
+    phamVi: 'h2-hsk1',
+    tongHop: true,
+    nhom: [
+      { ma: 'bai-1-2', ten: 'Bài 1–2', tep: ['../../../data/hsk2/bai-1-2.json?v=20261028a'] },
+      { ma: 'bai-3',   ten: 'Bài 3',   tep: ['../../../data/hsk2/bai-3.json?v=20261028a'] },
+      { ma: 'bai-4',   ten: 'Bài 4',   tep: ['../../../data/hsk2/bai-4.json?v=20261028a'] },
+      { ma: 'bai-5',   ten: 'Bài 5',   tep: ['../../../data/hsk2/bai-5.json?v=20261028a'] }
+    ]
+  };
+</script>
+<script src="../../../assets/js/header.js?v=20261028a"></script>
+<script src="../../../assets/js/tu-vung-chung.js?v=20261028a"></script>
+<script src="../../../assets/js/ban-bong-bay.js?v=20261028a"></script>
+</body>
+</html>
