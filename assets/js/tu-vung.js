@@ -71,6 +71,8 @@
     fc.thuTu = null; veLuoi();
   }
   // Nút ⭐ từ khó (dùng chung bộ lưu tiến độ với trang luyện tập)
+  // Trang bài: xem đủ mọi từ của bài (bảng chi tiết hoặc thẻ lật) thì phần Từ vựng tính là xong (tiến độ học, quy chuẩn 12)
+  function daXem(w) { if (MOT_KHO && window.QM_PHAN && KHO[capDang]) QM_PHAN.xemTu(w.ma, KHO[capDang].length); }
   function nhanTu(w) { return MOT_KHO ? (coMoRong && nhomCua(w) === 'moRong' ? 'Mở rộng' : 'Từ vựng') : tenCap(w.cap); }
   function nutSao(w) {
     if (!TD) return '';
@@ -159,6 +161,7 @@
     }
     if (laBo) return veTheBo();
     var w = hien[fcViTri()], n = fc.thuTu.length;
+    daXem(w);
     luoi.innerHTML = '<div class="tv-fc">' +
       '<div class="tv-fc-dau"><span class="tv-fc-dem">Thẻ ' + (fc.i + 1) + ' / ' + n + (loc ? ' · ' + esc(nhanTu(w)) : '') + '</span>' +
         '<button type="button" class="tv-fc-tron' + (fc.tron ? ' on' : '') + '" aria-pressed="' + fc.tron + '">🔀 Trộn thẻ</button>' + nutSao(w) + '</div>' +
@@ -224,6 +227,7 @@
   var hop, viTri = 0;
   function moTu(i) {
     viTri = (i + hien.length) % hien.length; var w = hien[viTri];
+    daXem(w);
     if (!hop) {
       hop = document.createElement('div'); hop.className = 'tv-hop';
       document.body.appendChild(hop);

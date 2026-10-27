@@ -239,7 +239,7 @@
    "Đọc câu 1": "李文，对不起你。没事。",
    "Câu 2": "A：王老师，对不起您！\nB：没事！",
    "Pinyin câu 2": "A: Wáng lǎoshī, duìbuqǐ nín!\nB: Méishì!",
-   "Nghĩa câu 2": "A: Thầy Vương, em xin lỗi thầy!\nB: Không sao!",
+   "Nghĩa câu 2": "A: Cô Vương, em xin lỗi cô!\nB: Không sao!",
    "Đọc câu 2": "王老师，对不起您！没事！"
   },
   {
@@ -323,7 +323,7 @@
    "Đọc câu 1": "",
    "Câu 2": "我们也认识王老师。",
    "Pinyin câu 2": "Wǒmen yě rènshi Wáng lǎoshī.",
-   "Nghĩa câu 2": "Chúng tôi cũng quen thầy Vương.",
+   "Nghĩa câu 2": "Chúng tôi cũng quen cô Vương.",
    "Đọc câu 2": ""
   },
   {
@@ -344,7 +344,7 @@
    "Đọc câu 1": "",
    "Câu 2": "我们认识王老师。",
    "Pinyin câu 2": "Wǒmen rènshi Wáng lǎoshī.",
-   "Nghĩa câu 2": "Chúng tôi quen thầy Vương.",
+   "Nghĩa câu 2": "Chúng tôi quen cô Vương.",
    "Đọc câu 2": ""
   },
   {
@@ -361,7 +361,7 @@
    "_nhom": "moRong",
    "Câu 1": "学生问我：“请问，您是不是王老师？”",
    "Pinyin câu 1": "Xué·shēng wèn wǒ: “Qǐngwèn, nín shì bu shì Wáng lǎoshī?”",
-   "Nghĩa câu 1": "Học sinh hỏi tôi: “Xin hỏi, thầy có phải là thầy Vương không ạ?”",
+   "Nghĩa câu 1": "Học sinh hỏi tôi: “Xin hỏi, cô có phải là cô Vương không ạ?”",
    "Đọc câu 1": "",
    "Câu 2": "老师问你。",
    "Pinyin câu 2": "Lǎoshī wèn nǐ.",
@@ -382,7 +382,7 @@
    "_nhom": "moRong",
    "Câu 1": "王老师，您好！请进！",
    "Pinyin câu 1": "Wáng lǎoshī, nín hǎo! Qǐng jìn!",
-   "Nghĩa câu 1": "Chào thầy Vương! Mời thầy vào!",
+   "Nghĩa câu 1": "Chào cô Vương! Mời cô vào!",
    "Đọc câu 1": "",
    "Câu 2": "请你说。",
    "Pinyin câu 2": "Qǐng nǐ shuō.",
@@ -487,7 +487,7 @@
    "_nhom": "moRong",
    "Câu 1": "王老师是中国老师。",
    "Pinyin câu 1": "Wáng lǎoshī shì Zhōngguó lǎoshī.",
-   "Nghĩa câu 1": "Thầy Vương là giáo viên người Trung Quốc.",
+   "Nghĩa câu 1": "Cô Vương là giáo viên người Trung Quốc.",
    "Đọc câu 1": "",
    "Câu 2": "你是不是中国学生？",
    "Pinyin câu 2": "Nǐ shì bu shì Zhōngguó xué·shēng?",
@@ -2052,6 +2052,572 @@
      "Mình tên là Bạch Gia Nguyệt."
     ]
    ]
+  }
+ ],
+ "cauLuyen": [
+  {
+   "han": "我是学生。",
+   "py": "Wǒ shì xué·shēng.",
+   "viet": "Tôi là học sinh.",
+   "tu": [
+    "我",
+    "是"
+   ],
+   "np": "shi"
+  },
+  {
+   "han": "我不是老师。",
+   "py": "Wǒ bú shì lǎoshī.",
+   "viet": "Tôi không phải là giáo viên.",
+   "tu": [
+    "我",
+    "不",
+    "是"
+   ],
+   "np": "shi"
+  },
+  {
+   "han": "安妮是美国学生。",
+   "py": "Ānnī shì Měiguó xué·shēng.",
+   "viet": "Annie là học sinh Mỹ.",
+   "tu": [
+    "是",
+    "美国"
+   ],
+   "np": "shi"
+  },
+  {
+   "han": "白家月不是日本学生。",
+   "py": "Bái Jiāyuè bú shì Rìběn xué·shēng.",
+   "viet": "Bạch Gia Nguyệt không phải là học sinh Nhật Bản.",
+   "tu": [
+    "不",
+    "是",
+    "日本"
+   ],
+   "np": "shi"
+  },
+  {
+   "han": "我不叫安妮。",
+   "py": "Wǒ bú jiào Ānnī.",
+   "viet": "Tôi không tên là Annie.",
+   "tu": [
+    "我",
+    "不",
+    "叫"
+   ],
+   "np": "bu"
+  },
+  {
+   "han": "我们不是日本学生。",
+   "py": "Wǒmen bú shì Rìběn xué·shēng.",
+   "viet": "Chúng tôi không phải là học sinh Nhật Bản.",
+   "tu": [
+    "我们",
+    "不",
+    "是",
+    "日本"
+   ],
+   "np": "bu"
+  },
+  {
+   "han": "我不吃，也不喝。",
+   "py": "Wǒ bù chī, yě bù hē.",
+   "viet": "Tôi không ăn, cũng không uống.",
+   "tu": [
+    "我",
+    "不",
+    "也"
+   ],
+   "np": "bu"
+  },
+  {
+   "han": "李文不高兴。",
+   "py": "Lǐ Wén bù gāoxìng.",
+   "viet": "Lý Văn không vui.",
+   "tu": [
+    "不",
+    "高兴"
+   ],
+   "np": "bu"
+  },
+  {
+   "han": "我也是学生。",
+   "py": "Wǒ yě shì xué·shēng.",
+   "viet": "Tôi cũng là học sinh.",
+   "tu": [
+    "我",
+    "也",
+    "是"
+   ],
+   "np": "ye"
+  },
+  {
+   "han": "我也很高兴。",
+   "py": "Wǒ yě hěn gāoxìng.",
+   "viet": "Tôi cũng rất vui.",
+   "tu": [
+    "我",
+    "也",
+    "很",
+    "高兴"
+   ],
+   "np": "ye"
+  },
+  {
+   "han": "安妮也认识李文。",
+   "py": "Ānnī yě rènshi Lǐ Wén.",
+   "viet": "Annie cũng quen Lý Văn.",
+   "tu": [
+    "也",
+    "认识"
+   ],
+   "np": "ye"
+  },
+  {
+   "han": "我们也说汉语。",
+   "py": "Wǒmen yě shuō Hànyǔ.",
+   "viet": "Chúng tôi cũng nói tiếng Hán.",
+   "tu": [
+    "我们",
+    "也",
+    "说"
+   ],
+   "np": "ye"
+  },
+  {
+   "han": "陈天中也是英国学生。",
+   "py": "Chén Tiānzhōng yě shì Yīngguó xué·shēng.",
+   "viet": "Trần Thiên Trung cũng là học sinh Anh.",
+   "tu": [
+    "也",
+    "是",
+    "英国"
+   ],
+   "np": "ye"
+  },
+  {
+   "han": "你叫什么名字？",
+   "py": "Nǐ jiào shénme míngzi?",
+   "viet": "Bạn tên là gì?",
+   "tu": [
+    "你",
+    "叫",
+    "什么",
+    "名字"
+   ],
+   "np": "shenme"
+  },
+  {
+   "han": "老师叫什么名字？",
+   "py": "Lǎoshī jiào shénme míngzi?",
+   "viet": "Thầy/cô tên là gì?",
+   "tu": [
+    "叫",
+    "什么",
+    "名字"
+   ],
+   "np": "shenme"
+  },
+  {
+   "han": "你吃什么？",
+   "py": "Nǐ chī shénme?",
+   "viet": "Bạn ăn gì?",
+   "tu": [
+    "你",
+    "什么"
+   ],
+   "np": "shenme"
+  },
+  {
+   "han": "你问什么？",
+   "py": "Nǐ wèn shénme?",
+   "viet": "Bạn hỏi gì?",
+   "tu": [
+    "你",
+    "问",
+    "什么"
+   ],
+   "np": "shenme"
+  },
+  {
+   "han": "你们说什么？",
+   "py": "Nǐmen shuō shénme?",
+   "viet": "Các bạn nói gì?",
+   "tu": [
+    "你",
+    "说",
+    "什么"
+   ],
+   "np": "shenme"
+  },
+  {
+   "han": "大家请坐！",
+   "py": "Dàjiā qǐng zuò!",
+   "viet": "Mời mọi người ngồi!",
+   "tu": [
+    "请",
+    "坐"
+   ],
+   "np": "qing"
+  },
+  {
+   "han": "请问，你叫什么名字？",
+   "py": "Qǐngwèn, nǐ jiào shénme míngzi?",
+   "viet": "Xin hỏi, bạn tên là gì?",
+   "tu": [
+    "请问",
+    "你",
+    "叫",
+    "什么",
+    "名字"
+   ],
+   "np": "qing"
+  },
+  {
+   "han": "请问，您是不是王老师？",
+   "py": "Qǐngwèn, nín shì bu shì Wáng lǎoshī?",
+   "viet": "Xin hỏi, cô có phải là cô Vương không ạ?",
+   "tu": [
+    "请问",
+    "是",
+    "不"
+   ],
+   "np": "qing"
+  },
+  {
+   "han": "请说汉语。",
+   "py": "Qǐng shuō Hànyǔ.",
+   "viet": "Mời nói tiếng Hán.",
+   "tu": [
+    "请",
+    "说"
+   ],
+   "np": "qing"
+  },
+  {
+   "han": "认识你很高兴。",
+   "py": "Rènshi nǐ hěn gāoxìng.",
+   "viet": "Rất vui được làm quen với bạn.",
+   "tu": [
+    "认识",
+    "你",
+    "很",
+    "高兴"
+   ],
+   "np": "hen"
+  },
+  {
+   "han": "我很好。",
+   "py": "Wǒ hěn hǎo.",
+   "viet": "Tôi rất khỏe.",
+   "tu": [
+    "我",
+    "很"
+   ],
+   "np": "hen"
+  },
+  {
+   "han": "我们很高兴。",
+   "py": "Wǒmen hěn gāoxìng.",
+   "viet": "Chúng tôi rất vui.",
+   "tu": [
+    "我们",
+    "很",
+    "高兴"
+   ],
+   "np": "hen"
+  },
+  {
+   "han": "中国很大。",
+   "py": "Zhōngguó hěn dà.",
+   "viet": "Trung Quốc rất rộng lớn.",
+   "tu": [
+    "中国",
+    "很"
+   ],
+   "np": "hen"
+  },
+  {
+   "han": "我们老师很好。",
+   "py": "Wǒmen lǎoshī hěn hǎo.",
+   "viet": "Cô giáo của chúng tôi rất tốt.",
+   "tu": [
+    "我们",
+    "很"
+   ],
+   "np": "hen"
+  },
+  {
+   "han": "对不起，老师！",
+   "py": "Duìbuqǐ, lǎoshī!",
+   "viet": "Em xin lỗi cô!",
+   "tu": [
+    "对不起"
+   ]
+  },
+  {
+   "han": "对不起，我不认识你。",
+   "py": "Duìbuqǐ, wǒ bú rènshi nǐ.",
+   "viet": "Xin lỗi, tôi không quen bạn.",
+   "tu": [
+    "对不起",
+    "我",
+    "不",
+    "认识",
+    "你"
+   ]
+  },
+  {
+   "han": "没关系，请坐。",
+   "py": "Méi guānxi, qǐng zuò.",
+   "viet": "Không sao, mời ngồi.",
+   "tu": [
+    "没关系",
+    "请",
+    "坐"
+   ]
+  },
+  {
+   "han": "没关系，我们说汉语。",
+   "py": "Méi guānxi, wǒmen shuō Hànyǔ.",
+   "viet": "Không sao, chúng ta nói tiếng Hán.",
+   "tu": [
+    "没关系",
+    "我们",
+    "说"
+   ]
+  },
+  {
+   "han": "没事，我很好。",
+   "py": "Méishì, wǒ hěn hǎo.",
+   "viet": "Không sao, tôi khỏe.",
+   "tu": [
+    "没事",
+    "我",
+    "很"
+   ]
+  },
+  {
+   "han": "没事，你坐。",
+   "py": "Méishì, nǐ zuò.",
+   "viet": "Không sao, bạn ngồi đi.",
+   "tu": [
+    "没事",
+    "你",
+    "坐"
+   ]
+  },
+  {
+   "han": "我只认识李文。",
+   "py": "Wǒ zhǐ rènshi Lǐ Wén.",
+   "viet": "Tôi chỉ quen Lý Văn.",
+   "tu": [
+    "我",
+    "只",
+    "认识"
+   ]
+  },
+  {
+   "han": "我们只说汉语。",
+   "py": "Wǒmen zhǐ shuō Hànyǔ.",
+   "viet": "Chúng tôi chỉ nói tiếng Hán.",
+   "tu": [
+    "我们",
+    "只",
+    "说"
+   ]
+  },
+  {
+   "han": "老师问我。",
+   "py": "Lǎoshī wèn wǒ.",
+   "viet": "Cô hỏi tôi.",
+   "tu": [
+    "问",
+    "我"
+   ]
+  },
+  {
+   "han": "我问王老师。",
+   "py": "Wǒ wèn Wáng lǎoshī.",
+   "viet": "Tôi hỏi cô Vương.",
+   "tu": [
+    "我",
+    "问"
+   ]
+  },
+  {
+   "han": "美国很大。",
+   "py": "Měiguó hěn dà.",
+   "viet": "Nước Mỹ rất rộng lớn.",
+   "tu": [
+    "美国",
+    "很"
+   ]
+  },
+  {
+   "han": "同学们，请进！",
+   "py": "Tóngxuémen, qǐng jìn!",
+   "viet": "Các em, mời vào!",
+   "tu": [
+    "请",
+    "进"
+   ]
+  },
+  {
+   "han": "我是中国学生。",
+   "py": "Wǒ shì Zhōngguó xué·shēng.",
+   "viet": "Tôi là học sinh Trung Quốc.",
+   "tu": [
+    "我",
+    "是",
+    "中国"
+   ],
+   "np": "shi"
+  },
+  {
+   "han": "李文不是英国学生。",
+   "py": "Lǐ Wén bú shì Yīngguó xué·shēng.",
+   "viet": "Lý Văn không phải là học sinh Anh.",
+   "tu": [
+    "不",
+    "是",
+    "英国"
+   ],
+   "np": "bu"
+  },
+  {
+   "han": "大家请进！",
+   "py": "Dàjiā qǐng jìn!",
+   "viet": "Mời mọi người vào!",
+   "tu": [
+    "请",
+    "进"
+   ],
+   "np": "qing"
+  },
+  {
+   "han": "我认识你们老师。",
+   "py": "Wǒ rènshi nǐmen lǎoshī.",
+   "viet": "Tôi quen thầy/cô của các bạn.",
+   "tu": [
+    "我",
+    "认识",
+    "你"
+   ]
+  }
+ ],
+ "hoiThoai": [
+  {
+   "ten": "Làm quen",
+   "luot": [
+    {
+     "han": "你好！我叫李文。你叫什么名字？",
+     "py": "Nǐ hǎo! Wǒ jiào Lǐ Wén. Nǐ jiào shénme míngzi?",
+     "viet": "Chào bạn! Mình tên là Lý Văn. Bạn tên là gì?"
+    },
+    {
+     "han": "我叫安妮。",
+     "py": "Wǒ jiào Ānnī.",
+     "viet": "Mình tên là Annie."
+    },
+    {
+     "han": "你是不是英国学生？",
+     "py": "Nǐ shì bu shì Yīngguó xué·shēng?",
+     "viet": "Bạn có phải là học sinh Anh không?"
+    },
+    {
+     "han": "不是，我是美国学生。",
+     "py": "Bú shì, wǒ shì Měiguó xué·shēng.",
+     "viet": "Không phải, mình là học sinh Mỹ."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我很高兴。",
+      "py": "Wǒ hěn gāoxìng."
+     },
+     {
+      "han": "没关系。",
+      "py": "Méi guānxi."
+     },
+     {
+      "han": "我是学生。",
+      "py": "Wǒ shì xué·shēng."
+     }
+    ],
+    "3": [
+     {
+      "han": "我叫安妮。",
+      "py": "Wǒ jiào Ānnī."
+     },
+     {
+      "han": "对不起。",
+      "py": "Duìbuqǐ."
+     },
+     {
+      "han": "我们也说汉语。",
+      "py": "Wǒmen yě shuō Hànyǔ."
+     }
+    ]
+   }
+  },
+  {
+   "ten": "Vào lớp",
+   "luot": [
+    {
+     "han": "请问，您是不是王老师？",
+     "py": "Qǐngwèn, nín shì bu shì Wáng lǎoshī?",
+     "viet": "Xin hỏi, cô có phải là cô Vương không ạ?"
+    },
+    {
+     "han": "是。请进！请坐！",
+     "py": "Shì. Qǐng jìn! Qǐng zuò!",
+     "viet": "Phải. Mời vào! Mời ngồi!"
+    },
+    {
+     "han": "谢谢老师！我叫陈天中。",
+     "py": "Xièxie lǎoshī! Wǒ jiào Chén Tiānzhōng.",
+     "viet": "Em cảm ơn cô! Em tên là Trần Thiên Trung."
+    },
+    {
+     "han": "认识你很高兴。",
+     "py": "Rènshi nǐ hěn gāoxìng.",
+     "viet": "Rất vui được làm quen với em."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "没事。",
+      "py": "Méishì."
+     },
+     {
+      "han": "我叫白家月。",
+      "py": "Wǒ jiào Bái Jiāyuè."
+     },
+     {
+      "han": "我不吃，也不喝。",
+      "py": "Wǒ bù chī, yě bù hē."
+     }
+    ],
+    "3": [
+     {
+      "han": "我也是学生。",
+      "py": "Wǒ yě shì xué·shēng."
+     },
+     {
+      "han": "对不起，老师！",
+      "py": "Duìbuqǐ, lǎoshī!"
+     },
+     {
+      "han": "我只认识李文。",
+      "py": "Wǒ zhǐ rènshi Lǐ Wén."
+     }
+    ]
+   },
+   "chang": 3
   }
  ]
 }

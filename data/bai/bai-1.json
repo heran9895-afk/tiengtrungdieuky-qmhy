@@ -237,7 +237,7 @@
    "Đọc câu 1": "",
    "Câu 2": "王一飞老师，再见！",
    "Pinyin câu 2": "Wáng Yīfēi lǎoshī, zàijiàn!",
-   "Nghĩa câu 2": "Tạm biệt thầy Vương Nhất Phi!",
+   "Nghĩa câu 2": "Tạm biệt cô Vương Nhất Phi!",
    "Đọc câu 2": ""
   },
   {
@@ -380,7 +380,7 @@
    "_nhom": "moRong",
    "Câu 1": "王老师很客气。",
    "Pinyin câu 1": "Wáng lǎoshī hěn kèqi.",
-   "Nghĩa câu 1": "Thầy Vương rất khách sáo.",
+   "Nghĩa câu 1": "Cô Vương rất khách sáo.",
    "Đọc câu 1": "",
    "Câu 2": "你们很客气。",
    "Pinyin câu 2": "Nǐmen hěn kèqi.",
@@ -426,7 +426,7 @@
    "Đọc câu 1": "",
    "Câu 2": "王一飞老师见同学们。",
    "Pinyin câu 2": "Wáng Yīfēi lǎoshī jiàn tóngxuémen.",
-   "Nghĩa câu 2": "Thầy Vương Nhất Phi gặp các bạn học.",
+   "Nghĩa câu 2": "Cô Vương Nhất Phi gặp các bạn học.",
    "Đọc câu 2": ""
   },
   {
@@ -1013,6 +1013,381 @@
      "Rất tốt!"
     ]
    ]
+  }
+ ],
+ "cauLuyen": [
+  {
+   "han": "老师好！",
+   "py": "Lǎoshī hǎo!",
+   "viet": "Em chào thầy/cô ạ!",
+   "tu": [
+    "老师",
+    "好"
+   ]
+  },
+  {
+   "han": "学生们好！",
+   "py": "Xué·shēngmen hǎo!",
+   "viet": "Chào các em học sinh!",
+   "tu": [
+    "学生",
+    "们",
+    "好"
+   ]
+  },
+  {
+   "han": "老师，您好！",
+   "py": "Lǎoshī, nín hǎo!",
+   "viet": "Em chào thầy/cô ạ!",
+   "tu": [
+    "老师",
+    "您",
+    "好"
+   ]
+  },
+  {
+   "han": "谢谢大家！",
+   "py": "Xièxie dàjiā!",
+   "viet": "Cảm ơn mọi người!",
+   "tu": [
+    "谢谢",
+    "大家"
+   ]
+  },
+  {
+   "han": "谢谢你们！",
+   "py": "Xièxie nǐmen!",
+   "viet": "Cảm ơn các bạn!",
+   "tu": [
+    "谢谢",
+    "你们"
+   ]
+  },
+  {
+   "han": "老师，谢谢您！",
+   "py": "Lǎoshī, xièxie nín!",
+   "viet": "Em cảm ơn thầy/cô!",
+   "tu": [
+    "老师",
+    "谢谢",
+    "您"
+   ]
+  },
+  {
+   "han": "不客气！",
+   "py": "Bú kèqi!",
+   "viet": "Không có gì!",
+   "tu": [
+    "不客气"
+   ]
+  },
+  {
+   "han": "同学，不客气！",
+   "py": "Tóngxué, bú kèqi!",
+   "viet": "Bạn ơi, không có gì đâu!",
+   "tu": [
+    "同学",
+    "不客气"
+   ]
+  },
+  {
+   "han": "同学们再见！",
+   "py": "Tóngxuémen zàijiàn!",
+   "viet": "Tạm biệt các bạn!",
+   "tu": [
+    "同学",
+    "们",
+    "再见"
+   ]
+  },
+  {
+   "han": "老师，明天见！",
+   "py": "Lǎoshī, míngtiān jiàn!",
+   "viet": "Em chào thầy/cô, mai gặp lại ạ!",
+   "tu": [
+    "老师",
+    "见"
+   ]
+  },
+  {
+   "han": "学生们很好。",
+   "py": "Xué·shēngmen hěn hǎo.",
+   "viet": "Các em học sinh rất ngoan.",
+   "tu": [
+    "学生",
+    "们",
+    "很",
+    "好"
+   ]
+  },
+  {
+   "han": "老师家很小。",
+   "py": "Lǎoshī jiā hěn xiǎo.",
+   "viet": "Nhà thầy/cô rất nhỏ.",
+   "tu": [
+    "老师",
+    "家",
+    "很",
+    "小"
+   ]
+  },
+  {
+   "han": "你家不大。",
+   "py": "Nǐ jiā bú dà.",
+   "viet": "Nhà bạn không to.",
+   "tu": [
+    "你",
+    "家",
+    "不",
+    "大"
+   ]
+  },
+  {
+   "han": "猫不大，狗很大。",
+   "py": "Māo bú dà, gǒu hěn dà.",
+   "viet": "Con mèo không to, con chó rất to.",
+   "tu": [
+    "猫",
+    "不",
+    "大",
+    "狗",
+    "很"
+   ]
+  },
+  {
+   "han": "小狗不吃。",
+   "py": "Xiǎo gǒu bù chī.",
+   "viet": "Con chó con không ăn.",
+   "tu": [
+    "小",
+    "狗",
+    "不",
+    "吃"
+   ]
+  },
+  {
+   "han": "小猫不喝。",
+   "py": "Xiǎo māo bù hē.",
+   "viet": "Con mèo con không uống.",
+   "tu": [
+    "小",
+    "猫",
+    "不",
+    "喝"
+   ]
+  },
+  {
+   "han": "你再吃一个。",
+   "py": "Nǐ zài chī yí ge.",
+   "viet": "Bạn ăn thêm một cái nữa đi.",
+   "tu": [
+    "你",
+    "再",
+    "吃"
+   ]
+  },
+  {
+   "han": "您再喝！",
+   "py": "Nín zài hē!",
+   "viet": "Thầy/cô uống thêm đi ạ!",
+   "tu": [
+    "您",
+    "再",
+    "喝"
+   ]
+  },
+  {
+   "han": "你很客气。",
+   "py": "Nǐ hěn kèqi.",
+   "viet": "Bạn khách sáo quá.",
+   "tu": [
+    "你",
+    "很",
+    "客气"
+   ]
+  },
+  {
+   "han": "大家学汉语。",
+   "py": "Dàjiā xué Hànyǔ.",
+   "viet": "Mọi người học tiếng Hán.",
+   "tu": [
+    "大家",
+    "汉语"
+   ]
+  },
+  {
+   "han": "你们学汉语。",
+   "py": "Nǐmen xué Hànyǔ.",
+   "viet": "Các bạn học tiếng Hán.",
+   "tu": [
+    "你们",
+    "汉语"
+   ]
+  },
+  {
+   "han": "小学生很好。",
+   "py": "Xiǎo xué·shēng hěn hǎo.",
+   "viet": "Các em học sinh tiểu học rất ngoan.",
+   "tu": [
+    "小",
+    "学生",
+    "很",
+    "好"
+   ]
+  },
+  {
+   "han": "同学，再见！",
+   "py": "Tóngxué, zàijiàn!",
+   "viet": "Tạm biệt bạn nhé!",
+   "tu": [
+    "同学",
+    "再见"
+   ]
+  },
+  {
+   "han": "小语，再见！",
+   "py": "Xiǎoyǔ, zàijiàn!",
+   "viet": "Tiểu Ngữ, tạm biệt!",
+   "tu": [
+    "小",
+    "再见"
+   ]
+  },
+  {
+   "han": "老师很客气。",
+   "py": "Lǎoshī hěn kèqi.",
+   "viet": "Thầy/cô rất khách sáo.",
+   "tu": [
+    "老师",
+    "很",
+    "客气"
+   ]
+  },
+  {
+   "han": "大家明天见！",
+   "py": "Dàjiā míngtiān jiàn!",
+   "viet": "Mai gặp lại mọi người nhé!",
+   "tu": [
+    "大家",
+    "见"
+   ]
+  },
+  {
+   "han": "老师不喝。",
+   "py": "Lǎoshī bù hē.",
+   "viet": "Thầy/cô không uống.",
+   "tu": [
+    "老师",
+    "不",
+    "喝"
+   ]
+  }
+ ],
+ "hoiThoai": [
+  {
+   "ten": "Ở nhà bạn",
+   "luot": [
+    {
+     "han": "你家大不大？",
+     "py": "Nǐ jiā dà bu dà?",
+     "viet": "Nhà bạn có to không?"
+    },
+    {
+     "han": "不大，很小。",
+     "py": "Bú dà, hěn xiǎo.",
+     "viet": "Không to, rất nhỏ."
+    },
+    {
+     "han": "老师家大不大？",
+     "py": "Lǎoshī jiā dà bu dà?",
+     "viet": "Nhà thầy/cô có to không?"
+    },
+    {
+     "han": "老师家很大。",
+     "py": "Lǎoshī jiā hěn dà.",
+     "viet": "Nhà thầy/cô rất to."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "不客气！",
+      "py": "Bú kèqi!"
+     },
+     {
+      "han": "谢谢老师！",
+      "py": "Xièxie lǎoshī!"
+     },
+     {
+      "han": "再见！",
+      "py": "Zàijiàn!"
+     }
+    ],
+    "3": [
+     {
+      "han": "老师好！",
+      "py": "Lǎoshī hǎo!"
+     },
+     {
+      "han": "再见！",
+      "py": "Zàijiàn!"
+     },
+     {
+      "han": "你很客气。",
+      "py": "Nǐ hěn kèqi."
+     }
+    ]
+   }
+  },
+  {
+   "ten": "Mời uống",
+   "luot": [
+    {
+     "han": "您再喝！",
+     "py": "Nín zài hē!",
+     "viet": "Thầy/cô uống thêm đi ạ!"
+    },
+    {
+     "han": "谢谢！",
+     "py": "Xièxie!",
+     "viet": "Cảm ơn!"
+    },
+    {
+     "han": "不客气！",
+     "py": "Bú kèqi!",
+     "viet": "Không có gì!"
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "大家好！",
+      "py": "Dàjiā hǎo!"
+     },
+     {
+      "han": "小猫很小。",
+      "py": "Xiǎo māo hěn xiǎo."
+     },
+     {
+      "han": "同学们再见！",
+      "py": "Tóngxuémen zàijiàn!"
+     }
+    ],
+    "2": [
+     {
+      "han": "你们好！",
+      "py": "Nǐmen hǎo!"
+     },
+     {
+      "han": "老师家很大。",
+      "py": "Lǎoshī jiā hěn dà."
+     },
+     {
+      "han": "小狗不吃。",
+      "py": "Xiǎo gǒu bù chī."
+     }
+    ]
+   }
   }
  ]
 }

@@ -42,6 +42,13 @@
       var r = { moi: 0, dang: 0, thuoc: 0 };
       ds.forEach(function (w) { r[trangThai(w.ma)]++; }); return r;
     },
-    xoaHet: function () { D = { v: 1, tu: {}, kho: {}, capNhat: Date.now() }; luu(null); }
+    xoaHet: function () { D = { v: 1, tu: {}, kho: {}, capNhat: Date.now() }; luu(null); },
+    // Đồng bộ tài khoản (tai-khoan.js): thay toàn bộ bản ghi bằng bản đã trộn với máy chủ; báo "nap" để không bị coi là thay đổi mới
+    nap: function (moi) {
+      if (!moi || moi.v !== 1) return;
+      D = moi; D.tu = D.tu || {}; D.kho = D.kho || {};
+      try { localStorage.setItem(KHOA, JSON.stringify(D)); } catch (e) {}
+      document.dispatchEvent(new CustomEvent('qm-tien-do', { detail: { ma: null, nap: true } }));
+    }
   };
 })();

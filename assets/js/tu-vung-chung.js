@@ -66,8 +66,9 @@
     if (!url && nhung) return Promise.resolve(KHO[cap] = chuanBi(cap, nhung.map(chuanHoa)));
     if (Array.isArray(TEP[cap])) return Promise.all(TEP[cap].map(function (u) { return fetch(u).then(function (r) { if (!r.ok) throw r; return r.json(); }); }))
       .then(function (ds) {
-        var gop = { tu: [], boThu: [], ghepChu: [], thanhPhan: {} };
-        ds.forEach(function (d) { gop.tu = gop.tu.concat(d.tu || []); gop.boThu = gop.boThu.concat(d.boThu || []); gop.ghepChu = gop.ghepChu.concat(d.ghepChu || []); Object.assign(gop.thanhPhan, d.thanhPhan || {}); });
+        var gop = { tu: [], boThu: [], ghepChu: [], thanhPhan: {}, cauLuyen: [], tenRieng: [] };
+        ds.forEach(function (d) { gop.tu = gop.tu.concat(d.tu || []); gop.boThu = gop.boThu.concat(d.boThu || []); gop.ghepChu = gop.ghepChu.concat(d.ghepChu || []); Object.assign(gop.thanhPhan, d.thanhPhan || {});
+          gop.cauLuyen = gop.cauLuyen.concat(d.cauLuyen || []); gop.tenRieng = gop.tenRieng.concat(d.tenRieng || []); });
         DL[cap] = gop; return (KHO[cap] = chuanBi(cap, gop.tu.map(chuanHoa)));
       });
     if (TEP[cap]) return fetch(TEP[cap]).then(function (r) { if (!r.ok) throw r; return r.json(); })

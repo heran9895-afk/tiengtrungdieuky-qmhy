@@ -131,7 +131,7 @@
    "Đọc câu 1": "",
    "Câu 2": "这是王老师的学生。",
    "Pinyin câu 2": "Zhè shì Wáng lǎoshī de xué·shēng.",
-   "Nghĩa câu 2": "Đây là học sinh của thầy Vương.",
+   "Nghĩa câu 2": "Đây là học sinh của cô Vương.",
    "Đọc câu 2": ""
   },
   {
@@ -2835,6 +2835,1000 @@
      "Không sao."
     ]
    ],
+   "chang": "3.2"
+  }
+ ],
+ "cauLuyen": [
+  {
+   "han": "这是我的老师。",
+   "py": "Zhè shì wǒ de lǎoshī.",
+   "viet": "Đây là thầy/cô của tôi.",
+   "tu": [
+    "这",
+    "的"
+   ],
+   "np": "de"
+  },
+  {
+   "han": "她是我的中文老师。",
+   "py": "Tā shì wǒ de Zhōngwén lǎoshī.",
+   "viet": "Cô ấy là giáo viên tiếng Trung của tôi.",
+   "tu": [
+    "她",
+    "的",
+    "中文"
+   ],
+   "np": "de"
+  },
+  {
+   "han": "那是谁的猫？",
+   "py": "Nà shì shéi de māo?",
+   "viet": "Kia là con mèo của ai?",
+   "tu": [
+    "那",
+    "谁",
+    "的"
+   ],
+   "np": "de"
+  },
+  {
+   "han": "我的朋友是越南人。",
+   "py": "Wǒ de péngyou shì Yuènán rén.",
+   "viet": "Bạn của tôi là người Việt Nam.",
+   "tu": [
+    "的",
+    "朋友",
+    "越南",
+    "人"
+   ],
+   "np": "de"
+  },
+  {
+   "han": "李文的女朋友是法国人。",
+   "py": "Lǐ Wén de nǚpéngyou shì Fǎguó rén.",
+   "viet": "Bạn gái của Lý Văn là người Pháp.",
+   "tu": [
+    "的",
+    "女朋友",
+    "法国",
+    "人"
+   ],
+   "np": "de"
+  },
+  {
+   "han": "你是中国人吗？",
+   "py": "Nǐ shì Zhōngguó rén ma?",
+   "viet": "Bạn là người Trung Quốc à?",
+   "tu": [
+    "中国",
+    "人",
+    "吗"
+   ],
+   "np": "ma"
+  },
+  {
+   "han": "你爸爸忙吗？",
+   "py": "Nǐ bàba máng ma?",
+   "viet": "Bố bạn có bận không?",
+   "tu": [
+    "爸爸",
+    "忙",
+    "吗"
+   ],
+   "np": "ma"
+  },
+  {
+   "han": "她是你的姐姐吗？",
+   "py": "Tā shì nǐ de jiějie ma?",
+   "viet": "Cô ấy là chị gái của bạn à?",
+   "tu": [
+    "她",
+    "的",
+    "姐姐",
+    "吗"
+   ],
+   "np": "ma"
+  },
+  {
+   "han": "你有哥哥吗？",
+   "py": "Nǐ yǒu gēge ma?",
+   "viet": "Bạn có anh trai không?",
+   "tu": [
+    "有",
+    "哥哥",
+    "吗"
+   ],
+   "np": "ma"
+  },
+  {
+   "han": "她有男朋友吗？",
+   "py": "Tā yǒu nánpéngyou ma?",
+   "viet": "Cô ấy có bạn trai không?",
+   "tu": [
+    "她",
+    "有",
+    "男朋友",
+    "吗"
+   ],
+   "np": "ma"
+  },
+  {
+   "han": "这个人是谁？",
+   "py": "Zhè ge rén shì shéi?",
+   "viet": "Người này là ai?",
+   "tu": [
+    "这",
+    "人",
+    "谁"
+   ],
+   "np": "zhenana"
+  },
+  {
+   "han": "那个男生是我哥哥。",
+   "py": "Nà ge nánshēng shì wǒ gēge.",
+   "viet": "Bạn nam kia là anh trai tôi.",
+   "tu": [
+    "那",
+    "男生",
+    "哥哥"
+   ],
+   "np": "zhenana"
+  },
+  {
+   "han": "哪个女生是你的女朋友？",
+   "py": "Nǎ ge nǚshēng shì nǐ de nǚpéngyou?",
+   "viet": "Bạn nữ nào là bạn gái của bạn?",
+   "tu": [
+    "哪",
+    "女生",
+    "的",
+    "女朋友"
+   ],
+   "np": "zhenana"
+  },
+  {
+   "han": "这个女人是我妈妈。",
+   "py": "Zhè ge nǚrén shì wǒ māma.",
+   "viet": "Người phụ nữ này là mẹ tôi.",
+   "tu": [
+    "这",
+    "女人",
+    "妈妈"
+   ],
+   "np": "zhenana"
+  },
+  {
+   "han": "那个男人是哪国人？",
+   "py": "Nà ge nánrén shì nǎ guó rén?",
+   "viet": "Người đàn ông kia là người nước nào?",
+   "tu": [
+    "那",
+    "男人",
+    "哪",
+    "国",
+    "人"
+   ],
+   "np": "zhenana"
+  },
+  {
+   "han": "太好了！",
+   "py": "Tài hǎo le!",
+   "viet": "Tốt quá!",
+   "tu": [
+    "太"
+   ],
+   "np": "tai"
+  },
+  {
+   "han": "我爸爸的工作太忙了。",
+   "py": "Wǒ bàba de gōngzuò tài máng le.",
+   "viet": "Công việc của bố tôi bận quá.",
+   "tu": [
+    "爸爸",
+    "的",
+    "工作",
+    "太",
+    "忙"
+   ],
+   "np": "tai"
+  },
+  {
+   "han": "妈妈太想你了！",
+   "py": "Māma tài xiǎng nǐ le!",
+   "viet": "Mẹ nhớ con quá!",
+   "tu": [
+    "妈妈",
+    "太",
+    "想"
+   ],
+   "np": "tai"
+  },
+  {
+   "han": "我的工作不太忙。",
+   "py": "Wǒ de gōngzuò bú tài máng.",
+   "viet": "Công việc của tôi không bận lắm.",
+   "tu": [
+    "的",
+    "工作",
+    "太",
+    "忙"
+   ],
+   "np": "tai"
+  },
+  {
+   "han": "姐姐不太高兴。",
+   "py": "Jiějie bú tài gāoxìng.",
+   "viet": "Chị gái không vui lắm.",
+   "tu": [
+    "姐姐",
+    "太"
+   ],
+   "np": "tai"
+  },
+  {
+   "han": "我还认识他的妹妹。",
+   "py": "Wǒ hái rènshi tā de mèimei.",
+   "viet": "Tôi còn quen cả em gái của anh ấy.",
+   "tu": [
+    "还",
+    "他",
+    "的",
+    "妹妹"
+   ],
+   "np": "hai"
+  },
+  {
+   "han": "爷爷还工作。",
+   "py": "Yéye hái gōngzuò.",
+   "viet": "Ông nội vẫn còn làm việc.",
+   "tu": [
+    "爷爷",
+    "还",
+    "工作"
+   ],
+   "np": "hai"
+  },
+  {
+   "han": "他还很忙。",
+   "py": "Tā hái hěn máng.",
+   "viet": "Anh ấy vẫn rất bận.",
+   "tu": [
+    "他",
+    "还",
+    "忙"
+   ],
+   "np": "hai"
+  },
+  {
+   "han": "我有哥哥，还有弟弟。",
+   "py": "Wǒ yǒu gēge, hái yǒu dìdi.",
+   "viet": "Tôi có anh trai, còn có cả em trai.",
+   "tu": [
+    "有",
+    "哥哥",
+    "还",
+    "弟弟"
+   ],
+   "np": "hai"
+  },
+  {
+   "han": "奶奶还想去中国。",
+   "py": "Nǎinai hái xiǎng qù Zhōngguó.",
+   "viet": "Bà nội vẫn muốn đi Trung Quốc.",
+   "tu": [
+    "奶奶",
+    "还",
+    "想",
+    "去",
+    "中国"
+   ],
+   "np": "hai"
+  },
+  {
+   "han": "我很想妈妈。",
+   "py": "Wǒ hěn xiǎng māma.",
+   "viet": "Tôi rất nhớ mẹ.",
+   "tu": [
+    "想",
+    "妈妈"
+   ],
+   "np": "xiang"
+  },
+  {
+   "han": "我想去法国。",
+   "py": "Wǒ xiǎng qù Fǎguó.",
+   "viet": "Tôi muốn đi Pháp.",
+   "tu": [
+    "想",
+    "去",
+    "法国"
+   ],
+   "np": "xiang"
+  },
+  {
+   "han": "姥姥很想你。",
+   "py": "Lǎolao hěn xiǎng nǐ.",
+   "viet": "Bà ngoại rất nhớ cháu.",
+   "tu": [
+    "姥姥",
+    "想"
+   ],
+   "np": "xiang"
+  },
+  {
+   "han": "姥爷想去越南。",
+   "py": "Lǎoye xiǎng qù Yuènán.",
+   "viet": "Ông ngoại muốn đi Việt Nam.",
+   "tu": [
+    "姥爷",
+    "想",
+    "去",
+    "越南"
+   ],
+   "np": "xiang"
+  },
+  {
+   "han": "他们想学中文。",
+   "py": "Tāmen xiǎng xué Zhōngwén.",
+   "viet": "Họ muốn học tiếng Trung.",
+   "tu": [
+    "他们",
+    "想",
+    "中文"
+   ],
+   "np": "xiang"
+  },
+  {
+   "han": "喂，你好！",
+   "py": "Wèi, nǐ hǎo!",
+   "viet": "A lô, xin chào!",
+   "tu": [
+    "喂"
+   ]
+  },
+  {
+   "han": "喂，是王老师吗？",
+   "py": "Wèi, shì Wáng lǎoshī ma?",
+   "viet": "A lô, có phải cô Vương không ạ?",
+   "tu": [
+    "喂",
+    "吗"
+   ]
+  },
+  {
+   "han": "喂，妈妈！",
+   "py": "Wèi, māma!",
+   "viet": "A lô, mẹ ơi!",
+   "tu": [
+    "喂",
+    "妈妈"
+   ]
+  },
+  {
+   "han": "对，我是越南人。",
+   "py": "Duì, wǒ shì Yuènán rén.",
+   "viet": "Đúng, tôi là người Việt Nam.",
+   "tu": [
+    "对",
+    "越南",
+    "人"
+   ]
+  },
+  {
+   "han": "对，他是我弟弟。",
+   "py": "Duì, tā shì wǒ dìdi.",
+   "viet": "Đúng, cậu ấy là em trai tôi.",
+   "tu": [
+    "对",
+    "他",
+    "弟弟"
+   ]
+  },
+  {
+   "han": "对，这是我的猫。",
+   "py": "Duì, zhè shì wǒ de māo.",
+   "viet": "Đúng, đây là con mèo của tôi.",
+   "tu": [
+    "对",
+    "这",
+    "的"
+   ]
+  },
+  {
+   "han": "她是泰国人。",
+   "py": "Tā shì Tàiguó rén.",
+   "viet": "Cô ấy là người Thái Lan.",
+   "tu": [
+    "她",
+    "泰国",
+    "人"
+   ]
+  },
+  {
+   "han": "我想去泰国。",
+   "py": "Wǒ xiǎng qù Tàiguó.",
+   "viet": "Tôi muốn đi Thái Lan.",
+   "tu": [
+    "想",
+    "去",
+    "泰国"
+   ]
+  },
+  {
+   "han": "泰国很大吗？",
+   "py": "Tàiguó hěn dà ma?",
+   "viet": "Thái Lan có rộng không?",
+   "tu": [
+    "泰国",
+    "吗"
+   ]
+  },
+  {
+   "han": "越南是我的国家。",
+   "py": "Yuènán shì wǒ de guójiā.",
+   "viet": "Việt Nam là đất nước của tôi.",
+   "tu": [
+    "越南",
+    "的",
+    "国家"
+   ]
+  },
+  {
+   "han": "你想去哪个国家？",
+   "py": "Nǐ xiǎng qù nǎ ge guójiā?",
+   "viet": "Bạn muốn đi nước nào?",
+   "tu": [
+    "想",
+    "去",
+    "哪",
+    "国家"
+   ]
+  },
+  {
+   "han": "我没有姐姐。",
+   "py": "Wǒ méi·yǒu jiějie.",
+   "viet": "Tôi không có chị gái.",
+   "tu": [
+    "没有",
+    "姐姐"
+   ]
+  },
+  {
+   "han": "他没有女朋友。",
+   "py": "Tā méi·yǒu nǚpéngyou.",
+   "viet": "Anh ấy không có bạn gái.",
+   "tu": [
+    "他",
+    "没有",
+    "女朋友"
+   ]
+  },
+  {
+   "han": "我没有工作。",
+   "py": "Wǒ méi·yǒu gōngzuò.",
+   "viet": "Tôi không có việc làm.",
+   "tu": [
+    "没有",
+    "工作"
+   ]
+  },
+  {
+   "han": "你妈妈做什么工作？",
+   "py": "Nǐ māma zuò shénme gōngzuò?",
+   "viet": "Mẹ bạn làm nghề gì?",
+   "tu": [
+    "妈妈",
+    "做",
+    "工作"
+   ]
+  },
+  {
+   "han": "你想做什么？",
+   "py": "Nǐ xiǎng zuò shénme?",
+   "viet": "Bạn muốn làm gì?",
+   "tu": [
+    "想",
+    "做"
+   ]
+  },
+  {
+   "han": "王老师是中国人。",
+   "py": "Wáng lǎoshī shì Zhōngguó rén.",
+   "viet": "Cô Vương là người Trung Quốc.",
+   "tu": [
+    "中国",
+    "人"
+   ]
+  },
+  {
+   "han": "他们是我的同学。",
+   "py": "Tāmen shì wǒ de tóngxué.",
+   "viet": "Họ là bạn học của tôi.",
+   "tu": [
+    "他们",
+    "的"
+   ]
+  },
+  {
+   "han": "我姐姐的男朋友是法国人。",
+   "py": "Wǒ jiějie de nánpéngyou shì Fǎguó rén.",
+   "viet": "Bạn trai của chị gái tôi là người Pháp.",
+   "tu": [
+    "姐姐",
+    "的",
+    "男朋友",
+    "法国",
+    "人"
+   ]
+  },
+  {
+   "han": "这是我的女朋友。",
+   "py": "Zhè shì wǒ de nǚpéngyou.",
+   "viet": "Đây là bạn gái của tôi.",
+   "tu": [
+    "这",
+    "的",
+    "女朋友"
+   ]
+  },
+  {
+   "han": "那个人是我朋友。",
+   "py": "Nà ge rén shì wǒ péngyou.",
+   "viet": "Người kia là bạn tôi.",
+   "tu": [
+    "那",
+    "人",
+    "朋友"
+   ]
+  },
+  {
+   "han": "我们是好朋友。",
+   "py": "Wǒmen shì hǎo péngyou.",
+   "viet": "Chúng tôi là bạn tốt.",
+   "tu": [
+    "我们",
+    "朋友"
+   ]
+  },
+  {
+   "han": "这是我爸爸。",
+   "py": "Zhè shì wǒ bàba.",
+   "viet": "Đây là bố tôi.",
+   "tu": [
+    "这",
+    "爸爸"
+   ]
+  },
+  {
+   "han": "我爸爸是老师。",
+   "py": "Wǒ bàba shì lǎoshī.",
+   "viet": "Bố tôi là giáo viên.",
+   "tu": [
+    "爸爸"
+   ]
+  },
+  {
+   "han": "我们是越南人。",
+   "py": "Wǒmen shì Yuènán rén.",
+   "viet": "Chúng tôi là người Việt Nam.",
+   "tu": [
+    "我们",
+    "越南",
+    "人"
+   ]
+  },
+  {
+   "han": "我们想去泰国。",
+   "py": "Wǒmen xiǎng qù Tàiguó.",
+   "viet": "Chúng tôi muốn đi Thái Lan.",
+   "tu": [
+    "我们",
+    "想",
+    "去",
+    "泰国"
+   ]
+  },
+  {
+   "han": "她不是我的女朋友。",
+   "py": "Tā bú shì wǒ de nǚpéngyou.",
+   "viet": "Cô ấy không phải là bạn gái của tôi.",
+   "tu": [
+    "她",
+    "的",
+    "女朋友"
+   ]
+  },
+  {
+   "han": "谁是你的老师？",
+   "py": "Shéi shì nǐ de lǎoshī?",
+   "viet": "Ai là thầy/cô của bạn?",
+   "tu": [
+    "谁",
+    "的"
+   ]
+  },
+  {
+   "han": "你朋友是哪国人？",
+   "py": "Nǐ péngyou shì nǎ guó rén?",
+   "viet": "Bạn của bạn là người nước nào?",
+   "tu": [
+    "朋友",
+    "哪",
+    "国",
+    "人"
+   ]
+  },
+  {
+   "han": "她是哪国学生？",
+   "py": "Tā shì nǎ guó xué·shēng?",
+   "viet": "Cô ấy là học sinh nước nào?",
+   "tu": [
+    "她",
+    "哪",
+    "国"
+   ]
+  },
+  {
+   "han": "我们的中文老师是中国人。",
+   "py": "Wǒmen de Zhōngwén lǎoshī shì Zhōngguó rén.",
+   "viet": "Giáo viên tiếng Trung của chúng tôi là người Trung Quốc.",
+   "tu": [
+    "我们",
+    "的",
+    "中文",
+    "中国",
+    "人"
+   ]
+  },
+  {
+   "han": "那是我的狗。",
+   "py": "Nà shì wǒ de gǒu.",
+   "viet": "Kia là con chó của tôi.",
+   "tu": [
+    "那",
+    "的"
+   ]
+  },
+  {
+   "han": "这个男人是我爸爸。",
+   "py": "Zhè ge nánrén shì wǒ bàba.",
+   "viet": "Người đàn ông này là bố tôi.",
+   "tu": [
+    "这",
+    "男人",
+    "爸爸"
+   ]
+  },
+  {
+   "han": "那个男人很忙。",
+   "py": "Nà ge nánrén hěn máng.",
+   "viet": "Người đàn ông kia rất bận.",
+   "tu": [
+    "那",
+    "男人",
+    "忙"
+   ]
+  },
+  {
+   "han": "那个女人是谁？",
+   "py": "Nà ge nǚrén shì shéi?",
+   "viet": "Người phụ nữ kia là ai?",
+   "tu": [
+    "那",
+    "女人",
+    "谁"
+   ]
+  },
+  {
+   "han": "这个女人是泰国人。",
+   "py": "Zhè ge nǚrén shì Tàiguó rén.",
+   "viet": "Người phụ nữ này là người Thái Lan.",
+   "tu": [
+    "这",
+    "女人",
+    "泰国",
+    "人"
+   ]
+  },
+  {
+   "han": "这个男生是越南人。",
+   "py": "Zhè ge nánshēng shì Yuènán rén.",
+   "viet": "Bạn nam này là người Việt Nam.",
+   "tu": [
+    "这",
+    "男生",
+    "越南",
+    "人"
+   ]
+  },
+  {
+   "han": "男生们很高兴。",
+   "py": "Nánshēngmen hěn gāoxìng.",
+   "viet": "Các bạn nam rất vui.",
+   "tu": [
+    "男生"
+   ]
+  },
+  {
+   "han": "女生们好！",
+   "py": "Nǚshēngmen hǎo!",
+   "viet": "Chào các bạn nữ!",
+   "tu": [
+    "女生"
+   ]
+  },
+  {
+   "han": "我姥姥、姥爷很好。",
+   "py": "Wǒ lǎolao, lǎoye hěn hǎo.",
+   "viet": "Ông bà ngoại tôi rất khỏe.",
+   "tu": [
+    "姥姥",
+    "姥爷"
+   ]
+  },
+  {
+   "han": "爷爷奶奶很好。",
+   "py": "Yéye nǎinai hěn hǎo.",
+   "viet": "Ông bà nội rất khỏe.",
+   "tu": [
+    "爷爷",
+    "奶奶"
+   ]
+  },
+  {
+   "han": "我有一个弟弟。",
+   "py": "Wǒ yǒu yí ge dìdi.",
+   "viet": "Tôi có một em trai.",
+   "tu": [
+    "有",
+    "弟弟"
+   ]
+  },
+  {
+   "han": "我弟弟是小学生。",
+   "py": "Wǒ dìdi shì xiǎo xué·shēng.",
+   "viet": "Em trai tôi là học sinh tiểu học.",
+   "tu": [
+    "弟弟"
+   ]
+  },
+  {
+   "han": "哥哥是大学生。",
+   "py": "Gēge shì dà xué·shēng.",
+   "viet": "Anh trai là sinh viên đại học.",
+   "tu": [
+    "哥哥"
+   ]
+  },
+  {
+   "han": "姐姐想去泰国。",
+   "py": "Jiějie xiǎng qù Tàiguó.",
+   "viet": "Chị gái muốn đi Thái Lan.",
+   "tu": [
+    "姐姐",
+    "想",
+    "去",
+    "泰国"
+   ]
+  },
+  {
+   "han": "我姐姐是中文老师。",
+   "py": "Wǒ jiějie shì Zhōngwén lǎoshī.",
+   "viet": "Chị gái tôi là giáo viên tiếng Trung.",
+   "tu": [
+    "姐姐",
+    "中文"
+   ]
+  },
+  {
+   "han": "爸爸、妈妈，我很想你们！",
+   "py": "Bàba, māma, wǒ hěn xiǎng nǐmen!",
+   "viet": "Bố mẹ ơi, con rất nhớ bố mẹ!",
+   "tu": [
+    "爸爸",
+    "妈妈",
+    "想"
+   ]
+  },
+  {
+   "han": "这是我妹妹。",
+   "py": "Zhè shì wǒ mèimei.",
+   "viet": "Đây là em gái tôi.",
+   "tu": [
+    "这",
+    "妹妹"
+   ]
+  }
+ ],
+ "hoiThoai": [
+  {
+   "ten": "Gọi điện",
+   "luot": [
+    {
+     "han": "喂，你好！是李文吗？",
+     "py": "Wèi, nǐ hǎo! Shì Lǐ Wén ma?",
+     "viet": "A lô, xin chào! Có phải Lý Văn không?"
+    },
+    {
+     "han": "是，你是谁？",
+     "py": "Shì, nǐ shì shéi?",
+     "viet": "Phải, bạn là ai?"
+    },
+    {
+     "han": "我是王一雪。你忙吗？",
+     "py": "Wǒ shì Wáng Yīxuě. Nǐ máng ma?",
+     "viet": "Mình là Vương Nhất Tuyết. Bạn có bận không?"
+    },
+    {
+     "han": "不太忙。",
+     "py": "Bú tài máng.",
+     "viet": "Không bận lắm."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我是越南人。",
+      "py": "Wǒ shì Yuènán rén."
+     },
+     {
+      "han": "太好了！",
+      "py": "Tài hǎo le!"
+     },
+     {
+      "han": "她是我姐姐。",
+      "py": "Tā shì wǒ jiějie."
+     }
+    ],
+    "3": [
+     {
+      "han": "我是中国人。",
+      "py": "Wǒ shì Zhōngguó rén."
+     },
+     {
+      "han": "这是我妈妈。",
+      "py": "Zhè shì wǒ māma."
+     },
+     {
+      "han": "我想去法国。",
+      "py": "Wǒ xiǎng qù Fǎguó."
+     }
+    ]
+   }
+  },
+  {
+   "ten": "Xem ảnh gia đình",
+   "luot": [
+    {
+     "han": "这是谁？",
+     "py": "Zhè shì shéi?",
+     "viet": "Đây là ai?"
+    },
+    {
+     "han": "这是我姐姐。",
+     "py": "Zhè shì wǒ jiějie.",
+     "viet": "Đây là chị gái mình."
+    },
+    {
+     "han": "她做什么工作？",
+     "py": "Tā zuò shénme gōngzuò?",
+     "viet": "Chị ấy làm nghề gì?"
+    },
+    {
+     "han": "她是中文老师。",
+     "py": "Tā shì Zhōngwén lǎoshī.",
+     "viet": "Chị ấy là giáo viên tiếng Trung."
+    },
+    {
+     "han": "她的工作忙吗？",
+     "py": "Tā de gōngzuò máng ma?",
+     "viet": "Công việc của chị ấy có bận không?"
+    },
+    {
+     "han": "太忙了！",
+     "py": "Tài máng le!",
+     "viet": "Bận quá!"
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "她是法国人。",
+      "py": "Tā shì Fǎguó rén."
+     },
+     {
+      "han": "我想去泰国。",
+      "py": "Wǒ xiǎng qù Tàiguó."
+     },
+     {
+      "han": "我没有工作。",
+      "py": "Wǒ méi·yǒu gōngzuò."
+     }
+    ],
+    "3": [
+     {
+      "han": "她是越南人。",
+      "py": "Tā shì Yuènán rén."
+     },
+     {
+      "han": "她很想妈妈。",
+      "py": "Tā hěn xiǎng māma."
+     },
+     {
+      "han": "她有男朋友。",
+      "py": "Tā yǒu nánpéngyou."
+     }
+    ],
+    "5": [
+     {
+      "han": "她是中文老师。",
+      "py": "Tā shì Zhōngwén lǎoshī."
+     },
+     {
+      "han": "她想去中国。",
+      "py": "Tā xiǎng qù Zhōngguó."
+     },
+     {
+      "han": "这是我的猫。",
+      "py": "Zhè shì wǒ de māo."
+     }
+    ]
+   }
+  },
+  {
+   "ten": "Bạn nước ngoài",
+   "luot": [
+    {
+     "han": "你的朋友是哪国人？",
+     "py": "Nǐ de péngyou shì nǎ guó rén?",
+     "viet": "Bạn của bạn là người nước nào?"
+    },
+    {
+     "han": "他是法国人。",
+     "py": "Tā shì Fǎguó rén.",
+     "viet": "Bạn ấy là người Pháp."
+    },
+    {
+     "han": "他想去越南吗？",
+     "py": "Tā xiǎng qù Yuènán ma?",
+     "viet": "Bạn ấy có muốn đi Việt Nam không?"
+    },
+    {
+     "han": "想，他很想去越南。",
+     "py": "Xiǎng, tā hěn xiǎng qù Yuènán.",
+     "viet": "Có, bạn ấy rất muốn đi Việt Nam."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "他是我哥哥。",
+      "py": "Tā shì wǒ gēge."
+     },
+     {
+      "han": "他还很忙。",
+      "py": "Tā hái hěn máng."
+     },
+     {
+      "han": "他有女朋友。",
+      "py": "Tā yǒu nǚpéngyou."
+     }
+    ],
+    "3": [
+     {
+      "han": "他是越南人。",
+      "py": "Tā shì Yuènán rén."
+     },
+     {
+      "han": "对，他是我弟弟。",
+      "py": "Duì, tā shì wǒ dìdi."
+     },
+     {
+      "han": "他没有工作。",
+      "py": "Tā méi·yǒu gōngzuò."
+     }
+    ]
+   },
    "chang": "3.2"
   }
  ]

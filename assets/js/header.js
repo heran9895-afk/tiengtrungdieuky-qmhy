@@ -7,6 +7,10 @@
   // Tự tìm thư mục gốc của web dựa vào vị trí file này (…/assets/js/header.js)
   var src = document.currentScript.src;
   var ROOT = src.substring(0, src.indexOf('assets/js/header.js'));
+  // Trạng thái từng phần của bài: các trang gọi QM_PHAN.danhDau / xemTu bất cứ lúc nào; tai-khoan.js nạp xong sẽ xử lý hàng đợi này
+  window.QM_PHAN = window.QM_PHAN || { q: [],
+    danhDau: function () { this.q.push(['danhDau', [].slice.call(arguments)]); },
+    xemTu: function () { this.q.push(['xemTu', [].slice.call(arguments)]); } };
 
   var ZALO = 'https://zalo.me/0973754714';
   var FACEBOOK = 'https://www.facebook.com/profile.php?id=61595601028689';
@@ -190,4 +194,9 @@
   wrap.querySelectorAll('.sh-drop > button').forEach(function (b) {
     b.addEventListener('click', function () { b.parentNode.classList.toggle('open'); });
   });
+
+  // Tài khoản, tiến độ từng phần, lượt truy cập (quy chuẩn 12): nạp ở MỌI trang; trang chưa nạp cấu hình thì nạp cau-hinh.js trước
+  var phienBan = (src.match(/\?v=[^&#]+/) || [''])[0];
+  function napJs(ten, xong) { var s = document.createElement('script'); s.src = ROOT + 'assets/js/' + ten + phienBan; s.onload = s.onerror = xong || null; document.body.appendChild(s); }
+  if (typeof window.QM_TK_API === 'undefined') napJs('cau-hinh.js', function () { napJs('tai-khoan.js'); }); else napJs('tai-khoan.js');
 })();

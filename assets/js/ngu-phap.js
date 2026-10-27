@@ -15,6 +15,7 @@
   var LOAI = { codinh: 'Từ cố định', dt: 'Danh từ, đại từ (DT)', dgt: 'Động từ (ĐT)', tt: 'Tính từ (TT)', st: 'Số từ, lượng từ (ST, LT)', pho: 'Phó từ, trợ từ', cau: 'Cả câu, vế câu' };
   function ve() {
     if (xong) {
+      if (window.QM_PHAN) QM_PHAN.danhDau('xong');            // xem hết mọi điểm ngữ pháp: phần Ngữ pháp đã xong
       el.innerHTML = '<div class="np-xong card"><div class="np-xong-ico">🎉</div><h3>Hoàn thành ' + DS.length + ' điểm ngữ pháp!</h3><p>Ôn lại bất cứ lúc nào bằng các nút tròn phía trên.</p>' +
         '<div class="lt-nut-kq"><button type="button" class="btn np-lai">Xem lại từ đầu</button><a class="btn solid" href="bai-tap.html">Làm bài tập ›</a></div></div>';
       return;
