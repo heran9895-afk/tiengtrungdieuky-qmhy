@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bảng xếp hạng trò chơi · HSK 1 (HSK 3.0) · Tiếng Trung Diệu Kỳ</title>
+<meta name="description" content="Bảng xếp hạng các trò chơi cá nhân HSK 1 (HSK 3.0): Bắn bóng bay, Chém chữ Hán, Đỉnh luyện chữ.">
+<link rel="icon" href="../../../assets/img/logo.webp">
+<link rel="stylesheet" href="../../../assets/css/style.css?v=20261028a">
+<link rel="stylesheet" href="../../../assets/css/tro-choi.css?v=20261028a">
+</head>
+<body>
+
+<section class="section">
+  <div class="wrap">
+    <p class="duong-dan"><a href="../../">Chương trình HSK 3.0</a> › <a href="../">HSK 1</a> › <a href="./">Trò chơi</a> › Bảng xếp hạng</p>
+    <div class="sec-head">
+      <div class="sec-kicker">游戏排行榜</div>
+      <h1 class="sec-title">🏆 Bảng xếp hạng trò chơi</h1>
+      <p class="sec-sub">Chọn trò, bài (và mức độ với Bắn bóng bay) rồi bấm <b>Cập nhật</b>. Mỗi bạn một dòng: điểm lượt đầu và lượt tốt nhất.</p>
+    </div>
+    <div class="bxh-tc-chon">
+      <label class="lt-o"><span class="lt-o-nhan">Trò chơi</span><select class="bxh-tc-tro">
+        <option value="bong-bay">🎈 Bắn bóng bay</option><option value="chem-chu">🍉 Chém chữ Hán</option><option value="dinh-luyen-chu">🧩 Đỉnh luyện chữ</option></select></label>
+      <label class="lt-o"><span class="lt-o-nhan">Bài</span><select class="bxh-tc-bai"></select></label>
+      <label class="lt-o bxh-tc-o-muc"><span class="lt-o-nhan">Mức độ</span><select class="bxh-tc-muc">
+        <option value="de">Dễ</option><option value="tb">Trung bình</option><option value="kho">Khó</option></select></label>
+    </div>
+    <div id="bang-xep-hang" data-co-dinh="1" data-kieu="game"></div>
+    <p class="lt-luu-y"><a class="bxh-tc-choi" href="ban-bong-bay.html">🎮 Vào chơi ›</a> · Bắn bóng bay chỉ tính lượt 🔀 Trộn tất cả.</p>
+  </div>
+</section>
+
+<script src="nguon.js?v=20261028a"></script>
+<script src="../../../assets/js/cau-hinh.js?v=20261028a"></script>
+<script src="../../../assets/js/header.js?v=20261028a"></script>
+<script src="../../../assets/js/bang-xep-hang.js?v=20261028a"></script>
+<script>
+  // Chọn trò / bài / mức → mã bài trên máy chủ điểm (cùng cách diem-tro-choi.js tạo mã)
+  (function () {
+    var N = window.QM_NGUON_TC, C = N.CHUNG, el = document.getElementById('bang-xep-hang');
+    var sTro = document.querySelector('.bxh-tc-tro'), sBai = document.querySelector('.bxh-tc-bai'), sMuc = document.querySelector('.bxh-tc-muc'), oMuc = document.querySelector('.bxh-tc-o-muc');
+    var TEN = { 'bong-bay': 'Bắn bóng bay', 'chem-chu': 'Chém chữ Hán', 'dinh-luyen-chu': 'Đỉnh luyện chữ' };
+    var TRANG = { 'bong-bay': 'ban-bong-bay.html', 'chem-chu': 'chem-chu.html', 'dinh-luyen-chu': 'dinh-luyen-chu.html' };
+    sBai.innerHTML = N.BAI.map(function (b) { return '<option value="' + b.ma + '">' + b.ten + '</option>'; }).join('') + '<option value="tong-hop">Tổng hợp</option>';
+    var q = new URLSearchParams(location.search);
+    if (TEN[q.get('tro')]) sTro.value = q.get('tro');
+    if (q.get('bai') && sBai.querySelector('option[value="' + q.get('bai') + '"]')) sBai.value = q.get('bai');
+    if (['de', 'tb', 'kho'].indexOf(q.get('muc')) >= 0) sMuc.value = q.get('muc');
+    function doi() {
+      var tro = sTro.value, b = N.BAI.filter(function (x) { return x.ma === sBai.value; })[0];
+      oMuc.hidden = tro !== 'bong-bay';
+      var diem = b ? b.diem : C.tongHopDiem, ten = b ? b.ten : 'Tổng hợp';
+      var ma = [C.maDiem, diem, 'tro-choi', tro].concat(tro === 'bong-bay' ? [sMuc.value] : []).filter(Boolean).join('-');
+      el.qmBxh && el.qmBxh.chon(ma, C.tenDiem + ten + ' · ' + TEN[tro] + (tro === 'bong-bay' ? ' · ' + sMuc.selectedOptions[0].text : ''));
+      document.querySelector('.bxh-tc-choi').href = TRANG[tro] + '?bai=' + sBai.value;
+      history.replaceState(null, '', '?tro=' + tro + '&bai=' + sBai.value + (tro === 'bong-bay' ? '&muc=' + sMuc.value : ''));
+    }
+    [sTro, sBai, sMuc].forEach(function (s) { s.addEventListener('change', doi); });
+    doi();
+  })();
+</script>
+</body>
+</html>

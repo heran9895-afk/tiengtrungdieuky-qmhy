@@ -403,7 +403,7 @@
     var khuDiem = man.querySelector('.dd-khu');
     if (window.QM_DIEM && S.dang === 'tron' && !G.laLai) {
       var n = nhomDangChon();
-      QM_DIEM.gui({ lesson: QM_DIEM.maBai(CF.maDiem || 'h2', n.tongHop ? (CF.tongHopDiem || 'tong-hop-bai0') : n.diem, 'bong-bay', S.muc),
+      QM_DIEM.gui({ lesson: QM_DIEM.maBai((CF.maDiem == null ? 'h2' : CF.maDiem), n.tongHop ? (CF.tongHopDiem || 'tong-hop-bai0') : n.diem, 'bong-bay', S.muc),
         lessonTitle: (CF.tenDiem || '') + n.ten + ' · Bắn bóng bay · ' + MUC[S.muc].ten,
         score: G.diem, total: G.ds.length * 170, bestStreak: G.chuoiMax, durationSeconds: (Date.now() - G.batDauLuc) / 1000,
         chiTiet: G.ct, hoTen: HS ? HS.hoTen : '', lop: HS ? HS.lop : '',

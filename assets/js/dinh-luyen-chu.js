@@ -213,7 +213,7 @@
       <button class="btn solid" id="dl-again">↻ Chơi lại</button></div>`;
     $('dl-again').onclick = restart;
     const nh = NHOM.find(x => x.ma === maNhom);
-    if (window.QM_DIEM) QM_DIEM.gui({ lesson: QM_DIEM.maBai(CF.maDiem || 'h2', nh.tongHop ? (CF.tongHopDiem || 'tong-hop-bai0') : nh.diem, 'dinh-luyen-chu'),
+    if (window.QM_DIEM) QM_DIEM.gui({ lesson: QM_DIEM.maBai((CF.maDiem == null ? 'h2' : CF.maDiem), nh.tongHop ? (CF.tongHopDiem || 'tong-hop-bai0') : nh.diem, 'dinh-luyen-chu'),
       lessonTitle: (CF.tenDiem || '') + nh.ten + ' · Đỉnh luyện chữ', score, total: qs.length * (BASE + PER_SEC * Q_TIME), bestStreak,
       durationSeconds: (Date.now() - playStart) / 1000, chiTiet: log, hoTen: hs ? hs.hoTen : '', lop: hs ? hs.lop : '',
       linkBxh: (CF.bxh || 'bang-xep-hang.html') + '?tro=dinh-luyen-chu&bai=' + maNhom }, box.querySelector('.dd-khu'));

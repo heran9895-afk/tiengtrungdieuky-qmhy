@@ -9,21 +9,41 @@ Nguồn:
 Kết quả: data/hsk2/tro-choi/bai-*.json = { chem: {P, CONF, MEAN, TRANH}, ghep: {PART, CHARS} }
   P[từ] = {py, why} · MEAN[từ] = {vi, note} · CONF[từ] = quả nhiễu · TRANH[từ] = từ trùng nghĩa, không bao giờ làm nhiễu
   PART[bộ phận] = [pinyin, "Tên, nghĩa"] · CHARS = [{c, py, vi, word?, wpy?, parts, st, fake}]
-Chạy:  python3 tools/tro_choi_du_lieu.py   (in bảng đối chiếu: phần giữ / phần mới)
+Chạy:  python3 tools/tro_choi_du_lieu.py [hsk2|hsk3]   (mặc định hsk2; in bảng đối chiếu: phần giữ / phần mới)
+  hsk2: data/hsk2/bai-*.json → data/hsk2/tro-choi/   ·   hsk3: data/bai/bai-*.json → data/bai/tro-choi/
+  Với hsk3, đề / lời giải Nhiên soạn (cho bản HSK 2.0) chỉ dùng lại cho cùng một từ khi lời giải không có chữ Hán
+  ngoài vốn đã học của chương trình 3.0 tới bài đó; nếu có thì máy dựng lời giải mới từ dữ liệu bài.
 """
+import sys
 import json, os, random, re, unicodedata
 
 GOC = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
-BAI = ['bai-1-2', 'bai-3', 'bai-4', 'bai-5']
+CT_TRINH = (sys.argv[1] if len(sys.argv) > 1 else 'hsk2')
+if CT_TRINH == 'hsk3':
+    THU_MUC, BAI = 'data/bai', sorted([f[:-5] for f in os.listdir(os.path.join(GOC, 'data/bai')) if re.match(r'bai-\d+\.json$', f)], key=lambda x: int(x.split('-')[1]))
+else:
+    THU_MUC, BAI = 'data/hsk2', ['bai-1-2', 'bai-3', 'bai-4', 'bai-5']
 random.seed(13)
 
 def doc(p): return json.load(open(os.path.join(GOC, p), encoding='utf-8'))
 CU = doc('tools/tro-choi-du-lieu-cu.json')
 CT = doc('data/tu-vung/cau-tao.json')
-WEB = {b: doc('data/hsk2/%s.json' % b) for b in BAI}
+WEB = {b: doc('%s/%s.json' % (THU_MUC, b)) for b in BAI}
+# Vốn chữ đã học tới từng bài (chữ trong từ, câu ví dụ, kho câu, tên riêng của bài đó và các bài trước)
+VON = {}
+_von = set()
+for _b in BAI:
+    _d = WEB[_b]
+    _t = json.dumps([_d.get('tu'), _d.get('cauLuyen'), _d.get('tenRieng'), _d.get('hoiDap')], ensure_ascii=False)
+    _von |= set(re.findall(r'[\u3400-\u9fff]', _t))
+    VON[_b] = set(_von)
+BO_PHAN = set(CT['tp']) | {k for _b in BAI for k in (WEB[_b].get('thanhPhan') or {})} | {x['boThu'] for _b in BAI for x in WEB[_b].get('boThu', [])}
+def ngoai_von(txt, b):   # chữ Hán ngoài vốn đã học (bộ thủ, thành phần chữ được nhắc tới thì không tính). HSK 2.0: dữ liệu cũ soạn đúng cho bài, không lọc
+    if CT_TRINH == 'hsk2': return []
+    return [c for c in re.findall(r'[\u3400-\u9fff]', txt or '') if c not in VON[b] and c not in BO_PHAN]
 
 # Kết cấu chữ còn thiếu trong cấu tạo chung (theo cách tách đã duyệt ở ghepChu của bài)
-KET_CAU_THEM = {'的': 'trái – phải', '谁': 'trái – phải', '岁': 'trên – dưới', '爸': 'trên – dưới', '姐': 'trái – phải',
+KET_CAU_THEM = {'请': 'trái – phải', '忙': 'trái – phải', '的': 'trái – phải', '谁': 'trái – phải', '岁': 'trên – dưới', '爸': 'trên – dưới', '姐': 'trái – phải',
                 '奶': 'trái – phải', '南': 'trên – dưới', '国': 'bao toàn bộ (囗 bao quanh)', '是': 'trên – dưới',
                 '起': 'nửa bao (走 bao trái và dưới)', '越': 'nửa bao (走 bao trái và dưới)', '没': 'trái – phải',
                 '我': 'trái – phải', '它': 'trên – dưới', '名': 'trên – dưới', '美': 'trên – dưới'}
@@ -67,7 +87,7 @@ for _b in BAI:
         for _k, _v in CU.get(_b, {}).get('chem', {}).get(_t, {}).items(): CU_CHEM[_t].setdefault(_k, _v)
 
 def dung_chem(b):
-    web, cu0 = WEB[b], CU.get(b, {}).get('chem', {'P': {}, 'CONF': {}, 'MEAN': {}})
+    web, cu0 = WEB[b], (CU.get(b, {}) if CT_TRINH == 'hsk2' else {}).get('chem', {'P': {}, 'CONF': {}, 'MEAN': {}})
     cu = {'P': dict(CU_CHEM['P']), 'CONF': dict(CU_CHEM['CONF']), 'MEAN': dict(CU_CHEM['MEAN'])}
     for t in ('P', 'CONF', 'MEAN'): cu[t].update(cu0[t])
     P, MEAN, LOAI, NGHIA = {}, {}, {}, {}
@@ -78,8 +98,9 @@ def dung_chem(b):
         if w and ('/' in w['Pinyin']): continue                                # 谁 shéi / shuí: hai cách đọc, không làm đề chém
         py = w['Pinyin'] if w else cu['P'][k]['py']
         if k in cu['P'] and w and cu['P'][k]['py'] != py: bao_cao.append('%s %s: pinyin cũ %s → %s (theo web)' % (b, k, cu['P'][k]['py'], py))
-        if k in cu['MEAN']:
+        if k in cu['MEAN'] and not ngoai_von(cu['P'][k]['why'] + cu['MEAN'][k]['vi'] + cu['MEAN'][k].get('note', ''), b):
             MEAN[k] = cu['MEAN'][k]; P[k] = {'py': py, 'why': cu['P'][k]['why']}
+            if CT_TRINH != 'hsk2': bao_cao.append('%s %s: dùng lại đề cô soạn "%s"' % (b, k, MEAN[k]['vi']))
         else:
             vi, note = tach_nghia(w['Nghĩa tiếng Việt'])
             vd = cau_vi_du(w)
@@ -145,28 +166,36 @@ PART = {}
 def them_part(k, py, mo_ta, uu_tien):
     if k not in PART or uu_tien: PART[k] = [py, mo_ta]
 for k, v in CT['tp'].items(): them_part(k, v.get('py', ''), ', '.join(x for x in [v.get('ten', ''), v.get('nghia', '')] if x), False)
-for b in BAI:
+for b in CU:
     for k, v in (CU.get(b, {}).get('ghep', {}).get('PART', {}) or {}).items():
         if k not in PART: them_part(k, v[0], v[1], False)
 for b in BAI:
-    for k, v in WEB[b]['thanhPhan'].items(): them_part(k, v.get('pinyin', ''), ', '.join(x for x in [v.get('ten', ''), v.get('nghia', '')] if x), True)
+    for k, v in (WEB[b].get('thanhPhan') or {}).items(): them_part(k, v.get('pinyin', ''), ', '.join(x for x in [v.get('ten', ''), v.get('nghia', '')] if x), True)
     for v in WEB[b]['boThu']: them_part(v['boThu'], v.get('pinyin', ''), ', '.join(x for x in [v.get('ten', ''), v.get('nghia', '')] if x), True)
 
 def dung_ghep(b):
-    web, cu = WEB[b], CU.get(b, {}).get('ghep', {'CHARS': []})
-    cu_chu = {c['c']: c for c in CU.get(b, {}).get('ghep', {}).get('CHARS', [])}
+    web = WEB[b]
+    cu_chu = {c['c']: c for c in (CU.get(b, {}) if CT_TRINH == 'hsk2' else {}).get('ghep', {}).get('CHARS', [])}
     for bb in BAI:
         for c in CU.get(bb, {}).get('ghep', {}).get('CHARS', []): cu_chu.setdefault(c['c'], c)
     tu = web['tu']
     ds, phan_bai = [], set()
-    for g in web['ghepChu']: phan_bai.update(g['phan'])
-    for g in web['ghepChu']:
+    for g in web.get('ghepChu', []): phan_bai.update(g['phan'])
+    for g in web.get('ghepChu', []):
         c, parts = g['chu'], g['phan']
         o = dict(cu_chu.get(c, {}))
+        if o and CT_TRINH != 'hsk2' and (ngoai_von(o.get('word', '') + o.get('vi', ''), b) or (o.get('word') and o['word'].replace('□', c) not in [w['Chữ Hán'] for w in tu])):
+            o = {}                                                            # từ chứa chữ trong bản cũ không có ở bài này: dựng lại
         if o and o.get('parts') != parts: bao_cao.append('%s ghép %s: bộ phận cũ %s → %s (theo cấu tạo đã duyệt)' % (b, c, '+'.join(o['parts']), '+'.join(parts)))
         if not o:
             mot = [w for w in tu if w['Chữ Hán'] == c]
             if mot: w = mot[0]; o = {'c': c, 'py': w['Pinyin'], 'vi': w['Nghĩa tiếng Việt']}
+            elif not [w for w in tu if c in w['Chữ Hán']]:
+                # chữ chỉ có trong tên nhân vật (安妮, 李文): đề là tên với ô trống, phiên âm tên lấy theo câu ví dụ đã duyệt
+                ten = [t for t in web.get('tenRieng', []) if c in t][0]
+                i = ten.index(c)
+                o = {'c': c, 'py': '', 'vi': 'tên nhân vật trong bài', 'word': ten[:i] + '□' + ten[i + 1:], 'wpy': TEN_PY.get(ten, '')}
+                if not o['wpy']: bao_cao.append('THIẾU phiên âm tên ' + ten)
             else:
                 w = sorted([w for w in tu if c in w['Chữ Hán']], key=lambda x: len(x['Chữ Hán']))[0]
                 i = w['Chữ Hán'].index(c)
@@ -188,7 +217,8 @@ def dung_ghep(b):
 
 # Âm đọc của chữ nằm trong từ nhiều chữ (khi bài không có thẻ chữ đó đứng riêng): lấy từ thẻ chữ đứng riêng ở bài khác,
 # còn thiếu thì tra bảng dưới (âm đọc khi đứng riêng, theo 等级标准)
-AM_RIENG = {'谢': 'xiè', '对': 'duì', '起': 'qǐ', '没': 'méi', '什': 'shén', '名': 'míng', '字': 'zì', '李': 'lǐ', '越': 'yuè',
+TEN_PY = {'李文': 'Lǐ Wén', '安妮': 'Ānnī', '李月': 'Lǐ Yuè'}   # theo pinyin câu ví dụ đã duyệt
+AM_RIENG = {'安': 'ān', '请': 'qǐng', '认': 'rèn', '识': 'shí', '语': 'yǔ', '法': 'fǎ', '谢': 'xiè', '对': 'duì', '起': 'qǐ', '没': 'méi', '什': 'shén', '名': 'míng', '字': 'zì', '李': 'lǐ', '越': 'yuè',
             '南': 'nán', '爸': 'bà', '姐': 'jiě', '奶': 'nǎi'}
 MOT_CHU = {}
 for b in BAI:
@@ -205,7 +235,8 @@ for b in BAI:
             if not o['py']: bao_cao.append('THIẾU âm đọc chữ ' + o['c'])
     PART_BAI = {p: PART[p] for o in chars for p in o['parts'] + o['fake'] if p in PART}
     out[b] = {'chem': chem, 'ghep': {'PART': PART_BAI, 'CHARS': chars}}
-    json.dump(out[b], open(os.path.join(GOC, 'data/hsk2/tro-choi/%s.json' % b), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    os.makedirs(os.path.join(GOC, THU_MUC, 'tro-choi'), exist_ok=True)
+    json.dump(out[b], open(os.path.join(GOC, THU_MUC, 'tro-choi', '%s.json' % b), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 print('\n'.join(bao_cao))
 for b in BAI:

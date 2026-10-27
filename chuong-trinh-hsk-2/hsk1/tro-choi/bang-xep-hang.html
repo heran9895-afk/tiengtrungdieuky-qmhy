@@ -51,7 +51,7 @@
       var tro = sTro.value, b = N.BAI.filter(function (x) { return x.ma === sBai.value; })[0];
       oMuc.hidden = tro !== 'bong-bay';
       var diem = b ? b.diem : C.tongHopDiem, ten = b ? b.ten : 'Tổng hợp';
-      var ma = [C.maDiem, diem, 'tro-choi', tro].concat(tro === 'bong-bay' ? [sMuc.value] : []).join('-');
+      var ma = [C.maDiem, diem, 'tro-choi', tro].concat(tro === 'bong-bay' ? [sMuc.value] : []).filter(Boolean).join('-');
       el.qmBxh && el.qmBxh.chon(ma, C.tenDiem + ten + ' · ' + TEN[tro] + (tro === 'bong-bay' ? ' · ' + sMuc.selectedOptions[0].text : ''));
       document.querySelector('.bxh-tc-choi').href = TRANG[tro] + '?bai=' + sBai.value;
       history.replaceState(null, '', '?tro=' + tro + '&bai=' + sBai.value + (tro === 'bong-bay' ? '&muc=' + sMuc.value : ''));

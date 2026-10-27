@@ -364,7 +364,7 @@
     $('cc-end').hidden = false;
     $('cc-again').onclick = start;
     const n = NHOM.find(x => x.ma === maNhom);
-    if (window.QM_DIEM) QM_DIEM.gui({ lesson: QM_DIEM.maBai(CF.maDiem || 'h2', n.tongHop ? (CF.tongHopDiem || 'tong-hop-bai0') : n.diem, 'chem-chu'),
+    if (window.QM_DIEM) QM_DIEM.gui({ lesson: QM_DIEM.maBai((CF.maDiem == null ? 'h2' : CF.maDiem), n.tongHop ? (CF.tongHopDiem || 'tong-hop-bai0') : n.diem, 'chem-chu'),
       lessonTitle: (CF.tenDiem || '') + n.ten + ' · Chém chữ Hán', score, total: ROUND_TIME * 30, bestStreak: maxCombo,
       durationSeconds: (Date.now() - batDauLuc) / 1000, chiTiet: log, hoTen: hs ? hs.hoTen : '', lop: hs ? hs.lop : '',
       linkBxh: (CF.bxh || 'bang-xep-hang.html') + '?tro=chem-chu&bai=' + maNhom }, $('cc-end').querySelector('.dd-khu'));

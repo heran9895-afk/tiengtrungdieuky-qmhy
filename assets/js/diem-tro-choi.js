@@ -1,7 +1,8 @@
 /* =========================================================
    ĐIỂM TRÒ CHƠI CÁ NHÂN — ô họ tên + lớp, gửi điểm lên máy chủ điểm của web (QM_API, quy chuẩn 09)
    Dùng chung cho Bắn bóng bay, Chém chữ Hán, Đỉnh luyện chữ. Họ tên + lớp nhớ chung với trang Bài tập (khoá qmhy:hoSo).
-   Mã bài: <chương trình>-<bài>-tro-choi-<trò>[-<mức>], vd h2-bai3-tro-choi-bong-bay-tb · Tổng hợp HSK 1: h2-hsk1-tong-hop-bai0-…
+   Mã bài: <chương trình>-<bài>-tro-choi-<trò>[-<mức>], vd h2-bai3-tro-choi-bong-bay-tb (HSK 2.0) · bai3-tro-choi-bong-bay-tb (HSK 3.0, như mã Bài tập 3.0)
+   Tổng hợp HSK 1: h2-hsk1-tong-hop-bai0-… / hsk1-tong-hop-bai0-…
    (máy chủ điểm chỉ nhận mã có "bai<số>", nên Tổng hợp dùng "bai0").
    ========================================================= */
 (function () {
@@ -26,7 +27,7 @@
     return h;
   }
 
-  function maBai(goc, diem, tro, muc) { return [goc, diem, 'tro-choi', tro].concat(muc ? [muc] : []).join('-'); }
+  function maBai(goc, diem, tro, muc) { return [goc, diem, 'tro-choi', tro].concat(muc ? [muc] : []).filter(Boolean).join('-'); }   // HSK 3.0 không có tiền tố (bai1-tro-choi-…)
 
   // Gửi điểm. o = { lesson, lessonTitle, score, total, bestStreak, durationSeconds, chiTiet:[{stt,dang,cauHoi,dapAn,chon,dung}], hoTen, lop, linkBxh }
   // khu: phần tử hiện trạng thái (đang lưu / đã lưu / lỗi + Gửi lại / ô điền tên nếu thiếu)
