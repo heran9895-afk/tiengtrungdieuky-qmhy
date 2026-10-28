@@ -3831,5 +3831,31 @@
    },
    "chang": "3.2"
   }
- ]
+ ],
+ "ctTruoc": {
+  "对": {
+   "ma": "1-0093",
+   "han": "对不起",
+   "bai": "Bài 2",
+   "url": "chuong-trinh-hsk/hsk1/bai-2/tu-vung.html"
+  },
+  "我": {
+   "ma": "1-0380",
+   "han": "我",
+   "bai": "Bài 2",
+   "url": "chuong-trinh-hsk/hsk1/bai-2/tu-vung.html"
+  },
+  "们": {
+   "ma": "1-0241",
+   "han": "们",
+   "bai": "Bài 1",
+   "url": "chuong-trinh-hsk/hsk1/bai-1/tu-vung.html"
+  },
+  "家": {
+   "ma": "2-0093",
+   "han": "大家",
+   "bai": "Bài 1",
+   "url": "chuong-trinh-hsk/hsk1/bai-1/tu-vung.html"
+  }
+ }
 }

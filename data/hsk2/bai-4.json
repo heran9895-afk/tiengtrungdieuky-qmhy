@@ -1827,5 +1827,37 @@
    },
    "chang": "1"
   }
- ]
+ ],
+ "ctTruoc": {
+  "她": {
+   "ma": "1-0356",
+   "han": "她",
+   "bai": "Bài 1-2",
+   "url": "chuong-trinh-hsk-2/hsk1/bai-1-2/tu-vung.html"
+  },
+  "国": {
+   "ma": "1-0477",
+   "han": "中国",
+   "bai": "Bài 3",
+   "url": "chuong-trinh-hsk-2/hsk1/bai-3/tu-vung.html"
+  },
+  "他": {
+   "ma": "1-0354",
+   "han": "他",
+   "bai": "Bài 1-2",
+   "url": "chuong-trinh-hsk-2/hsk1/bai-1-2/tu-vung.html"
+  },
+  "越": {
+   "ma": "h23-越南",
+   "han": "越南",
+   "bai": "Bài 3",
+   "url": "chuong-trinh-hsk-2/hsk1/bai-3/tu-vung.html"
+  },
+  "南": {
+   "ma": "h23-越南",
+   "han": "越南",
+   "bai": "Bài 3",
+   "url": "chuong-trinh-hsk-2/hsk1/bai-3/tu-vung.html"
+  }
+ }
 }

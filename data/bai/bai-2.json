@@ -2619,5 +2619,19 @@
    },
    "chang": 3
   }
- ]
+ ],
+ "ctTruoc": {
+  "你": {
+   "ma": "1-0272",
+   "han": "你们",
+   "bai": "Bài 1",
+   "url": "chuong-trinh-hsk/hsk1/bai-1/tu-vung.html"
+  },
+  "们": {
+   "ma": "1-0241",
+   "han": "们",
+   "bai": "Bài 1",
+   "url": "chuong-trinh-hsk/hsk1/bai-1/tu-vung.html"
+  }
+ }
 }

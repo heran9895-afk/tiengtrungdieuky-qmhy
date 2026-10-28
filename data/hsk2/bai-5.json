@@ -3098,5 +3098,25 @@
    },
    "chang": "3"
   }
- ]
+ ],
+ "ctTruoc": {
+  "家": {
+   "ma": "1-0129",
+   "han": "国家",
+   "bai": "Bài 3",
+   "url": "chuong-trinh-hsk-2/hsk1/bai-3/tu-vung.html"
+  },
+  "没": {
+   "ma": "1-0233",
+   "han": "没关系",
+   "bai": "Bài 1-2",
+   "url": "chuong-trinh-hsk-2/hsk1/bai-1-2/tu-vung.html"
+  },
+  "朋": {
+   "ma": "1-0284",
+   "han": "朋友",
+   "bai": "Bài 4",
+   "url": "chuong-trinh-hsk-2/hsk1/bai-4/tu-vung.html"
+  }
+ }
 }

@@ -42,15 +42,53 @@
     (raw.ghepChu || []).forEach(function (g) { GB[g.chu] = { k: '', p: g.phan }; });
     (raw.boThu || []).forEach(function (b) { BT[b.boThu] = { ten: b.ten, py: b.pinyin, nghia: b.nghia }; });
     Object.keys(raw.thanhPhan || {}).forEach(function (k) { var t = raw.thanhPhan[k]; BT[k] = { ten: t.ten, py: t.pinyin, nghia: t.nghia }; });   // thành phần không phải bộ thủ (相, 亡…) theo bài giảng
-    var CTg = { chu: Object.assign({}, CT.chu, GB), tp: Object.assign({}, CT.tp, BT) };
+    var CTg = { chu: Object.assign({}, CT.chu, GB), tp: Object.assign({}, CT.tp, BT), tuDau: CT.tuDau };
     var CT0 = CT; CT = CTg;
     try { return cauTaoHTML0(w); } finally { CT = CT0; }
+  }
+  // Từ phía trước đã hiện cấu tạo của chữ c: trang bài tìm trong bài (theo thứ tự) rồi tới ctTruoc của bài; Thư viện dùng tuDau trong cau-tao.json
+  function tuTruocCua(c, w) {
+    if (MOT_KHO) {
+      var kho = KHO[capDang] || [];
+      for (var j = 0; j < kho.length; j++) {
+        var u = kho[j]; if (u === w) break;
+        if ((u.but || '').indexOf(c) >= 0 && CT.chu[c]) return { ma: u.ma, han: u.han };
+      }
+      var t = ((TV.DL || {})[capDang] || {}).ctTruoc || {};
+      return t[c] ? { ma: t[c].ma, han: t[c].han, bai: t[c].bai, url: ROOT + t[c].url + '#tu=' + encodeURIComponent(t[c].ma) } : null;
+    }
+    var d = (CT.tuDau || {})[c];
+    return d && d[0] !== w.ma ? { ma: d[0], han: d[1] } : null;
+  }
+  // Mở một từ theo mã (bấm dòng nhắc cấu tạo, hoặc đường dẫn #tu=<mã>)
+  function denTu(ma, han) {
+    if (MOT_KHO) {
+      var i = hien.map(function (x) { return x.ma; }).indexOf(ma);
+      if (i < 0 && coMoRong) { chonNhom(nhomDang === 'tuVung' ? 'moRong' : 'tuVung'); i = hien.map(function (x) { return x.ma; }).indexOf(ma); }
+      if (i >= 0) moTu(i);
+      return;
+    }
+    taiTatCa().then(function () {
+      loc = han; tim.value = han; veLuoi();
+      var i = hien.map(function (x) { return x.ma; }).indexOf(ma);
+      if (i >= 0) moTu(i);
+    });
   }
   function cauTaoHTML0(w) {
     // Chỉ hiện cấu tạo của chữ MỚI (đúng những chữ có ô thuận bút): chữ đã có cấu tạo ở chữ / từ phía trước thì không lặp lại.
     // Trang bài: tính theo bài và các bài trước; Thư viện: tính theo thứ tự kho HSK 1 → 7–9 (cột "Thuận bút" đã là chữ mới). Chốt 28/10/2026.
-    var chu = Array.from(new Set(Array.from(w.han))).filter(function (c) { return CT.chu[c] && (w.but || '').indexOf(c) >= 0; });
-    if (!chu.length) return '';
+    var tatCaChu = Array.from(new Set(Array.from(w.han)));
+    var chu = tatCaChu.filter(function (c) { return CT.chu[c] && (w.but || '').indexOf(c) >= 0; });
+    // Chữ đã có cấu tạo ở từ phía trước: ghi một dòng nhắc, bấm để mở lại từ đó (Nhiên chốt 28/10/2026)
+    var hv = String(w.hv || '').trim().split(/\s+/), hanArr = Array.from(w.han).filter(function (c) { return /[\u3400-\u9fff]/.test(c); });
+    var nhac = tatCaChu.filter(function (c) { return chu.indexOf(c) < 0 && /[\u3400-\u9fff]/.test(c); }).map(function (c) {
+      var ref = tuTruocCua(c, w); if (!ref) return '';
+      var i = hanArr.indexOf(c), am = hv.length === hanArr.length && hv[i] && hv[i] !== '_' ? ' (' + hv[i] + ')' : '';
+      var tu = '<b class="hanzi">' + esc(ref.han) + '</b> (' + esc(ref.ma) + (ref.bai ? ' · ' + esc(ref.bai) : '') + ')';
+      var nut = ref.url ? '<a class="ctz-xem" href="' + esc(ref.url) + '">' + tu + ' ›</a>' : '<button type="button" class="ctz-xem" data-ma="' + esc(ref.ma) + '" data-han="' + esc(ref.han) + '">' + tu + ' ›</button>';
+      return '<p class="ctz-nhac">Cấu tạo chữ <b class="hanzi">' + esc(c) + '</b>' + esc(am) + ': xem lại nội dung từ ' + nut + '</p>';
+    }).join('');
+    if (!chu.length) return nhac ? '<div class="tv-muc tv-muc-ctz"><span class="tv-nhan">Cấu tạo chữ</span>' + nhac + '</div>' : '';
     var ghi = {};
     var dong = chu.map(function (c) {
       var e = CT.chu[c];
@@ -60,7 +98,7 @@
       }).join('<i>+</i>') + (e.k ? '<small class="ctz-kieu">' + esc(e.k) + '</small>' : '') + '</div>';
     }).join('');
     return '<div class="tv-muc tv-muc-ctz"><span class="tv-nhan">Cấu tạo chữ</span>' + dong +
-      Object.keys(ghi).map(function (g) { return '<p class="ctz-ghi">💡 ' + esc(g) + '</p>'; }).join('') + '</div>';
+      Object.keys(ghi).map(function (g) { return '<p class="ctz-ghi">💡 ' + esc(g) + '</p>'; }).join('') + nhac + '</div>';
   }
   // Cách xem: danh sách thẻ nhỏ hoặc thẻ lật (flashcard) từng từ; nhớ lựa chọn trên máy
   var cheDo = 'luoi';
@@ -209,7 +247,9 @@
         });
         if (!coMoRong) nhomDang = 'tuVung';
       }
-      ds = locNhom(d); veLuoi(); })
+      ds = locNhom(d); veLuoi();
+      var mh = /(?:^#|[#&])tu=([^&]+)/.exec(location.hash);
+      if (mh) { var ma = decodeURIComponent(mh[1]), u = d.filter(function (x) { return x.ma === ma; })[0]; if (u) denTu(ma, u.han); } })
       .catch(function () { ds = []; luoi.innerHTML = '<div class="tv-trong">Chưa tải được dữ liệu, bạn kiểm tra mạng rồi thử lại nhé.</div>'; });
     if (nutLuyen) nutLuyen.href = ROOT + 'thu-vien/tu-vung/luyen-tap/' + (c === 'MR' ? '#hskMR' : '#hsk' + c);
     if (!MOT_KHO) try { history.replaceState(null, '', '#hsk' + c); } catch (e) {}
@@ -238,6 +278,7 @@
         if (e.target.closest('.tv-sau')) return moTu(viTri + 1);
         var o = e.target.closest('.tv-but-o');
         if (o && butHienTai[+o.dataset.k]) { butHienTai[+o.dataset.k].animateCharacter(); return; }
+        var xem = e.target.closest('button.ctz-xem'); if (xem) { denTu(xem.dataset.ma, xem.dataset.han); return; }
         var m = e.target.closest('.tv-mo-py'); if (m) { m.classList.toggle('hien'); return; }
         var sao = e.target.closest('.tv-sao');
         if (sao && TD) { var w0 = hien[viTri]; TD.datKho(w0, !TD.laKho(w0.ma)); sao.outerHTML = nutSao(w0); veLuoiGiuCho(); return; }

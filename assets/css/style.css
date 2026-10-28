@@ -851,3 +851,7 @@ body::after{content:"";position:fixed;left:50%;top:56%;width:min(72vw,560px);asp
 
 /* Dấu li hợp ∥ trong phiên âm từ mục: vẽ bằng 2 vạch mảnh (phông pinyin không có ký tự ∥) */
 .py-lh{display:inline-block;width:.22em;height:.78em;margin:0 .1em;border-left:1.5px solid currentColor;border-right:1.5px solid currentColor;opacity:.5;vertical-align:-.04em}
+
+/* Dòng nhắc: cấu tạo chữ đã có ở từ phía trước */
+.ctz-nhac{margin:6px 0 0;font-size:14px;line-height:1.5;color:var(--muted)}
+.ctz-xem{display:inline;border:0;background:none;padding:0;font:inherit;color:var(--brand);font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
