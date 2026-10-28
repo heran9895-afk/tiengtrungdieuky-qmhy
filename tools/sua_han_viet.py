@@ -1,5 +1,5 @@
-"""Sửa âm Hán Việt theo bảng (chữ, âm cũ) -> âm mới, và thống nhất cách bỏ dấu kiểu cũ
-(HOÁ, THUỶ, KHOẢ) cho mọi từ trong kho + dữ liệu bài.  python3 tools/sua_han_viet.py [--thu]"""
+"""Sửa âm Hán Việt theo bảng (chữ, âm cũ) -> âm mới, và thống nhất cách bỏ dấu
+HÓA · THỦY · KHÓA cho mọi từ trong kho + dữ liệu bài.  python3 tools/sua_han_viet.py [--thu]"""
 import json,re,sys,glob,unicodedata
 SUA={  # (chữ, âm sai) : âm đúng — đối chiếu Hán Việt tự điển Thiều Chửu
 ('冷','LẠNH'):'LÃNH',('丝','TƠ'):'TI',('读','ĐỌC'):'ĐỘC',('幕','MÀN'):'MẠC',('油','DẦU'):'DU',
@@ -16,27 +16,26 @@ SUA={  # (chữ, âm sai) : âm đúng — đối chiếu Hán Việt tự đi�
 ('摆','BÀI'):'BÃI',('旋','HOÀN'):'TOÀN',('晃','HOÀNG'):'HOẢNG',('撑','SANH'):'XANH',('傻','SỌA'):'XOẠ',
 }
 T={'̀','́','̃','̉','̣'}
-def kieu_cu(s):
-    """hóa->hoá, thủy->thuỷ, khỏa->khoả (chỉ vần oa/oe/uy mở, không có phụ âm cuối)."""
+def kieu_dau(s):
+    """Nhiên chốt 28/10/2026: bỏ dấu kiểu HÓA · THỦY · KHÓA (dấu trên nguyên âm đầu của
+    vần oa/oe/uy không có phụ âm cuối). hoá->hóa, thuỷ->thủy, khoả->khỏa. Không đụng QUY, GIA."""
     d=unicodedata.normalize('NFD',s); tone=[c for c in d if c in T]
     if len(tone)!=1: return s
     base=unicodedata.normalize('NFC',''.join(c for c in d if c not in T))
+    if base.startswith(('QU','GI')): return s
     m=re.match(r'^(.*?)(OA|OE|UY)$',base)
-    if not m or base.startswith('QU') and base.endswith('UY')==False: return s
-    if base.startswith('GI') : return s
-    new=m.group(1)+m.group(2)[0]+unicodedata.normalize('NFC',m.group(2)[1]+tone[0])
-    return new
+    if not m: return s
+    return m.group(1)+unicodedata.normalize('NFC',m.group(2)[0]+tone[0])+m.group(2)[1]
 HAN=re.compile(r'[㐀-鿿]')
 def sua(w,log,f):
     hv=w.get('Âm Hán Việt'); 
     if not hv: return
     cs=HAN.findall(w['Chữ Hán']); toks=hv.split(' ')
-    if len(cs)!=len(toks): return
+    if len(cs)!=len(toks): cs=['']*len(toks)
     out=[]
     for c,t in zip(cs,toks):
-        core=t.strip('()（）'); n=SUA.get((c,core),core)
-        if "--kieu-cu" in sys.argv: n=kieu_cu(n)
-        out.append(t.replace(core,n))
+        core=t.strip('()（）'); n=kieu_dau(SUA.get((c,core),core))
+        out.append(t.replace(core,n) if core else t)
     new=' '.join(out)
     if new!=hv: log.append((f,w.get('Mã'),w['Chữ Hán'],hv,new)); w['Âm Hán Việt']=new
 thu='--thu' in sys.argv; log=[]
