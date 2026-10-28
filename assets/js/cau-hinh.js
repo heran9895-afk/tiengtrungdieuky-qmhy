@@ -3,7 +3,7 @@
    QM_API: địa chỉ Web app của Apps Script "máy chủ điểm" (kết thúc bằng /exec).
    Để trống thì trang Bài tập vẫn làm được, chỉ là không lưu điểm; Bảng xếp hạng báo "chưa nối".
    ========================================================= */
-window.QM_API = 'https://script.google.com/macros/s/AKfycbx4bur__9sJBrGVRg_ujUFVysIigjffKQkMFnW1cvF4V1PwN9J43yicQEDmxFmLdQK9tA/exec';
+window.QM_API = 'https://script.google.com/macros/s/AKfycbw4J5FoHCBIXmujQDU7HXAQOaqk_grSYZorhbdCRIP4JXSsolhKOXg5_A-1txXyP-iqYQ/exec';
 
 /* Máy chủ TÀI KHOẢN (đăng nhập Google, hồ sơ, tiến độ, lượt truy cập) — Apps Script riêng, quy chuẩn 12.
    QM_TK_API: địa chỉ …/exec của máy chủ tài khoản. QM_GOOGLE_CLIENT_ID: mã ứng dụng OAuth (…apps.googleusercontent.com).
