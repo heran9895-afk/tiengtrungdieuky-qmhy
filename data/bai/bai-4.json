@@ -1,0 +1,4217 @@
+{
+ "bai": 4,
+ "ten": "第四课：我有两个孩子",
+ "tenViet": "Bài 4: Tôi có hai người con",
+ "pinyinTen": "Dì sì kè: Wǒ yǒu liǎng ge háizi",
+ "tenRieng": [
+  "刘明",
+  "杨同乐",
+  "小明"
+ ],
+ "maBaiTap": "bai4-bai-tap",
+ "tu": [
+  {
+   "Mã": "1-0441",
+   "Chữ Hán": "有",
+   "Pinyin": "yǒu",
+   "Âm Hán Việt": "HỮU",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "có",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "有中文老师 | yǒu Zhōngwén lǎoshī\n有女朋友 | yǒu nǚpéngyou\n有中国朋友 | yǒu Zhōngguó péngyou",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "他有女朋友，他的女朋友是法国人。",
+   "Pinyin câu 1": "Tā yǒu nǚpéngyou, tā de nǚpéngyou shì Fǎguó rén.",
+   "Nghĩa câu 1": "Anh ấy có bạn gái, bạn gái của anh ấy là người Pháp.",
+   "Đọc câu 1": "",
+   "Câu 2": "你有中文老师吗？",
+   "Pinyin câu 2": "Nǐ yǒu Zhōngwén lǎoshī ma?",
+   "Nghĩa câu 2": "Bạn có giáo viên tiếng Trung không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0095",
+   "Chữ Hán": "多少",
+   "Pinyin": "duōshao",
+   "Âm Hán Việt": "ĐA THIỂU",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "bao nhiêu",
+   "Cấp HSK": "1",
+   "Thuận bút": "多少",
+   "Cụm từ": "多少个学生 | duōshao ge xué·shēng\n多少老师 | duōshao lǎoshī\n多少朋友 | duōshao péngyou",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：王一飞老师有多少个学生？\nB：她的学生很多。",
+   "Pinyin câu 1": "A: Wáng Yīfēi lǎoshī yǒu duōshao ge xué·shēng?\nB: Tā de xué·shēng hěn duō.",
+   "Nghĩa câu 1": "A: Cô Vương Nhất Phi có bao nhiêu học sinh?\nB: Học sinh của cô ấy rất nhiều.",
+   "Đọc câu 1": "王一飞老师有多少个学生？她的学生很多。",
+   "Câu 2": "A：她有多少个学生？\nB：她有二十个学生。",
+   "Pinyin câu 2": "A: Tā yǒu duōshao ge xué·shēng?\nB: Tā yǒu èrshí ge xué·shēng.",
+   "Nghĩa câu 2": "A: Cô ấy có bao nhiêu học sinh?\nB: Cô ấy có hai mươi học sinh.",
+   "Đọc câu 2": "她有多少个学生？她有二十个学生。"
+  },
+  {
+   "Mã": "1-0120",
+   "Chữ Hán": "个",
+   "Pinyin": "gè",
+   "Âm Hán Việt": "CÁ",
+   "Từ loại": "lượng từ",
+   "Nghĩa tiếng Việt": "cái, chiếc, người (lượng từ dùng chung)",
+   "Cấp HSK": "1",
+   "Thuận bút": "个",
+   "Cụm từ": "一个人 | yí ge rén\n两个学生 | liǎng ge xué·shēng\n这个朋友 | zhè ge péngyou\n几个孩子 | jǐ ge háizi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我们有两个学生。",
+   "Pinyin câu 1": "Wǒmen yǒu liǎng ge xué·shēng.",
+   "Nghĩa câu 1": "Chúng tôi có hai học sinh.",
+   "Đọc câu 1": "",
+   "Câu 2": "我有一个哥哥。",
+   "Pinyin câu 2": "Wǒ yǒu yí ge gēge.",
+   "Nghĩa câu 2": "Tôi có một anh trai.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0118",
+   "Chữ Hán": "哥哥",
+   "Pinyin": "gēge",
+   "Âm Hán Việt": "CA CA",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "anh trai",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "两个哥哥 | liǎng ge gēge\n我哥哥 | wǒ gēge\n没有哥哥 | méi·yǒu gēge",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我有两个哥哥，你呢？",
+   "Pinyin câu 1": "Wǒ yǒu liǎng ge gēge, nǐ ne?",
+   "Nghĩa câu 1": "Tôi có hai anh trai, còn bạn?",
+   "Đọc câu 1": "",
+   "Câu 2": "我哥哥有两个孩子。",
+   "Pinyin câu 2": "Wǒ gēge yǒu liǎng ge háizi.",
+   "Nghĩa câu 2": "Anh trai tôi có hai đứa con.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0269",
+   "Chữ Hán": "呢",
+   "Pinyin": "ne",
+   "Âm Hán Việt": "NI",
+   "Từ loại": "trợ từ",
+   "Nghĩa tiếng Việt": "…thì sao? (hỏi lại); …đâu? (hỏi người, vật ở đâu)",
+   "Cấp HSK": "1",
+   "Thuận bút": "呢",
+   "Cụm từ": "你呢 | nǐ ne\n你家呢 | nǐ jiā ne\n明年呢 | míngnián ne",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我是越南人，你呢？",
+   "Pinyin câu 1": "Wǒ shì Yuènán rén, nǐ ne?",
+   "Nghĩa câu 1": "Tôi là người Việt Nam, còn bạn?",
+   "Đọc câu 1": "",
+   "Câu 2": "爸爸，我妈妈呢？",
+   "Pinyin câu 2": "Bàba, wǒ māma ne?",
+   "Nghĩa câu 2": "Bố ơi, mẹ con đâu ạ?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0236",
+   "Chữ Hán": "没有",
+   "Pinyin": "méi·yǒu",
+   "Âm Hán Việt": "MỘT HỮU",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "không có",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "没有哥哥 | méi·yǒu gēge\n没有孩子 | méi·yǒu háizi\n没有女朋友 | méi·yǒu nǚpéngyou",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你有没有中国朋友？",
+   "Pinyin câu 1": "Nǐ yǒu méi·yǒu Zhōngguó péngyou?",
+   "Nghĩa câu 1": "Bạn có bạn người Trung Quốc không?",
+   "Đọc câu 1": "",
+   "Câu 2": "我没有哥哥，也没有姐姐。",
+   "Pinyin câu 2": "Wǒ méi·yǒu gēge, yě méi·yǒu jiějie.",
+   "Nghĩa câu 2": "Tôi không có anh trai, cũng không có chị gái.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0169",
+   "Chữ Hán": "家",
+   "Pinyin": "jiā",
+   "Âm Hán Việt": "GIA",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "nhà, gia đình",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "我家 | wǒ jiā\n你家 | nǐ jiā\n他们家 | tāmen jiā",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：我家有四口人，你家呢？\nB：我家也有四口人。",
+   "Pinyin câu 1": "A: Wǒ jiā yǒu sì kǒu rén, nǐ jiā ne?\nB: Wǒ jiā yě yǒu sì kǒu rén.",
+   "Nghĩa câu 1": "A: Nhà mình có bốn người, còn nhà bạn?\nB: Nhà mình cũng có bốn người.",
+   "Đọc câu 1": "我家有四口人，你家呢？我家也有四口人。",
+   "Câu 2": "他们家有几口人？",
+   "Pinyin câu 2": "Tāmen jiā yǒu jǐ kǒu rén?",
+   "Nghĩa câu 2": "Nhà họ có mấy người?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0165",
+   "Chữ Hán": "几",
+   "Pinyin": "jǐ",
+   "Âm Hán Việt": "KỶ",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "mấy",
+   "Cấp HSK": "1",
+   "Thuận bút": "几",
+   "Cụm từ": "几个人 | jǐ ge rén\n几位老师 | jǐ wèi lǎoshī\n几口人 | jǐ kǒu rén\n几岁 | jǐ suì",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你有几个朋友？",
+   "Pinyin câu 1": "Nǐ yǒu jǐ ge péngyou?",
+   "Nghĩa câu 1": "Bạn có mấy người bạn?",
+   "Đọc câu 1": "",
+   "Câu 2": "他爸爸妈妈有几个孩子？",
+   "Pinyin câu 2": "Tā bàba māma yǒu jǐ ge háizi?",
+   "Nghĩa câu 2": "Bố mẹ cậu ấy có mấy người con?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0202",
+   "Chữ Hán": "口",
+   "Pinyin": "kǒu",
+   "Âm Hán Việt": "KHẨU",
+   "Từ loại": "lượng từ",
+   "Nghĩa tiếng Việt": "(lượng từ chỉ số người trong gia đình)",
+   "Cấp HSK": "1",
+   "Thuận bút": "口",
+   "Cụm từ": "几口人 | jǐ kǒu rén\n四口人 | sì kǒu rén\n五口人 | wǔ kǒu rén",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：你家有几口人？\nB：我家有四口人。",
+   "Pinyin câu 1": "A: Nǐ jiā yǒu jǐ kǒu rén?\nB: Wǒ jiā yǒu sì kǒu rén.",
+   "Nghĩa câu 1": "A: Nhà bạn có mấy người?\nB: Nhà mình có bốn người.",
+   "Đọc câu 1": "你家有几口人？我家有四口人。",
+   "Câu 2": "他家有六口人。",
+   "Pinyin câu 2": "Tā jiā yǒu liù kǒu rén.",
+   "Nghĩa câu 2": "Nhà anh ấy có sáu người.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0004",
+   "Chữ Hán": "爸爸",
+   "Pinyin": "bàba",
+   "Âm Hán Việt": "BA BA",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bố, ba",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "我爸爸 | wǒ bàba\n爸爸妈妈 | bàba māma\n李文的爸爸 | Lǐ Wén de bàba",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "这是李文的爸爸和妈妈。",
+   "Pinyin câu 1": "Zhè shì Lǐ Wén de bàba hé māma.",
+   "Nghĩa câu 1": "Đây là bố và mẹ của Lý Văn.",
+   "Đọc câu 1": "",
+   "Câu 2": "我爸爸妈妈工作很忙。",
+   "Pinyin câu 2": "Wǒ bàba māma gōngzuò hěn máng.",
+   "Nghĩa câu 2": "Bố mẹ tôi công việc rất bận.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0224",
+   "Chữ Hán": "妈妈",
+   "Pinyin": "māma",
+   "Âm Hán Việt": "MA MA",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "mẹ",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "我妈妈 | wǒ māma\n爸爸妈妈 | bàba māma\n你妈妈 | nǐ māma",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我妈妈今年四十五岁。",
+   "Pinyin câu 1": "Wǒ māma jīnnián sìshíwǔ suì.",
+   "Nghĩa câu 1": "Mẹ tôi năm nay bốn mươi lăm tuổi.",
+   "Đọc câu 1": "",
+   "Câu 2": "爸爸妈妈，再见！",
+   "Pinyin câu 2": "Bàba māma, zàijiàn!",
+   "Nghĩa câu 2": "Bố mẹ ơi, con chào bố mẹ!",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0237",
+   "Chữ Hán": "妹妹",
+   "Pinyin": "mèimei",
+   "Âm Hán Việt": "MUỘI MUỘI",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "em gái",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "我妹妹 | wǒ mèimei\n两个妹妹 | liǎng ge mèimei\n没有妹妹 | méi·yǒu mèimei",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我家有四口人，爸爸、妈妈、妹妹和我。",
+   "Pinyin câu 1": "Wǒ jiā yǒu sì kǒu rén, bàba, māma, mèimei hé wǒ.",
+   "Nghĩa câu 1": "Nhà tôi có bốn người: bố, mẹ, em gái và tôi.",
+   "Đọc câu 1": "",
+   "Câu 2": "我妹妹八岁，我弟弟两岁。",
+   "Pinyin câu 2": "Wǒ mèimei bā suì, wǒ dìdi liǎng suì.",
+   "Nghĩa câu 2": "Em gái tôi tám tuổi, em trai tôi hai tuổi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0145",
+   "Chữ Hán": "和",
+   "Pinyin": "hé",
+   "Âm Hán Việt": "HÒA",
+   "Từ loại": "liên từ",
+   "Nghĩa tiếng Việt": "và",
+   "Cấp HSK": "1",
+   "Thuận bút": "和",
+   "Cụm từ": "你和我 | nǐ hé wǒ\n老师和学生 | lǎoshī hé xué·shēng\n我们和老师 | wǒmen hé lǎoshī\n爸爸和妈妈 | bàba hé māma",
+   "Đọc từ": "河",
+   "_nhom": "tuVung",
+   "Câu 1": "小明家有五口人，爸爸、妈妈、哥哥、姐姐和他。",
+   "Pinyin câu 1": "Xiǎomíng jiā yǒu wǔ kǒu rén, bàba, māma, gēge, jiějie hé tā.",
+   "Nghĩa câu 1": "Nhà Tiểu Minh có năm người: bố, mẹ, anh trai, chị gái và cậu ấy.",
+   "Đọc câu 1": "",
+   "Câu 2": "A：他们家有几口人？\nB：他们家有四口人，爸爸、妈妈和两个孩子。",
+   "Pinyin câu 2": "A: Tāmen jiā yǒu jǐ kǒu rén?\nB: Tāmen jiā yǒu sì kǒu rén, bàba, māma hé liǎng ge háizi.",
+   "Nghĩa câu 2": "A: Nhà họ có mấy người?\nB: Nhà họ có bốn người: bố, mẹ và hai đứa con.",
+   "Đọc câu 2": "他们家有几口人？他们家有四口人，爸爸、妈妈和两个孩子。"
+  },
+  {
+   "Mã": "1-0097",
+   "Chữ Hán": "儿子",
+   "Pinyin": "érzi",
+   "Âm Hán Việt": "NHI TỬ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "con trai (của bố mẹ)",
+   "Cấp HSK": "1",
+   "Thuận bút": "儿子",
+   "Cụm từ": "一个儿子 | yí ge érzi\n我儿子 | wǒ érzi\n您儿子 | nín érzi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我儿子今年五岁。",
+   "Pinyin câu 1": "Wǒ érzi jīnnián wǔ suì.",
+   "Nghĩa câu 1": "Con trai tôi năm nay năm tuổi.",
+   "Đọc câu 1": "",
+   "Câu 2": "A：这是您儿子吗？\nB：是的。",
+   "Pinyin câu 2": "A: Zhè shì nín érzi ma?\nB: Shì de.",
+   "Nghĩa câu 2": "A: Đây là con trai chị à?\nB: Đúng vậy.",
+   "Đọc câu 2": "这是您儿子吗？是的。"
+  },
+  {
+   "Mã": "1-0135",
+   "Chữ Hán": "孩子",
+   "Pinyin": "háizi",
+   "Âm Hán Việt": "HÀI TỬ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "trẻ con; con cái",
+   "Cấp HSK": "1",
+   "Thuận bút": "孩",
+   "Cụm từ": "两个孩子 | liǎng ge háizi\n几个孩子 | jǐ ge háizi\n我的孩子 | wǒ de háizi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "这两个孩子是我的学生。",
+   "Pinyin câu 1": "Zhè liǎng ge háizi shì wǒ de xué·shēng.",
+   "Nghĩa câu 1": "Hai đứa trẻ này là học sinh của tôi.",
+   "Đọc câu 1": "",
+   "Câu 2": "他们有两个孩子，一个儿子、一个女儿。",
+   "Pinyin câu 2": "Tāmen yǒu liǎng ge háizi, yí ge érzi, yí ge nǚ'ér.",
+   "Nghĩa câu 2": "Họ có hai người con, một con trai, một con gái.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0277",
+   "Chữ Hán": "女儿",
+   "Pinyin": "nǚ'ér",
+   "Âm Hán Việt": "NỮ NHI",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "con gái (của bố mẹ)",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "一个女儿 | yí ge nǚ'ér\n我女儿 | wǒ nǚ'ér\n您女儿 | nín nǚ'ér",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你爸爸妈妈有几个儿子？几个女儿？",
+   "Pinyin câu 1": "Nǐ bàba māma yǒu jǐ ge érzi? Jǐ ge nǚ'ér?",
+   "Nghĩa câu 1": "Bố mẹ bạn có mấy người con trai? Mấy người con gái?",
+   "Đọc câu 1": "",
+   "Câu 2": "她女儿今年二十岁。",
+   "Pinyin câu 2": "Tā nǚ'ér jīnnián èrshí suì.",
+   "Nghĩa câu 2": "Con gái cô ấy năm nay hai mươi tuổi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0353",
+   "Chữ Hán": "岁",
+   "Pinyin": "suì",
+   "Âm Hán Việt": "TUẾ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "tuổi",
+   "Cấp HSK": "1",
+   "Thuận bút": "岁",
+   "Cụm từ": "几岁 | jǐ suì\n九岁 | jiǔ suì\n两岁 | liǎng suì\n二十岁 | èrshí suì",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：你弟弟今年几岁？\nB：他今年两岁了。",
+   "Pinyin câu 1": "A: Nǐ dìdi jīnnián jǐ suì?\nB: Tā jīnnián liǎng suì le.",
+   "Nghĩa câu 1": "A: Em trai bạn năm nay mấy tuổi?\nB: Năm nay em ấy hai tuổi rồi.",
+   "Đọc câu 1": "你弟弟今年几岁？他今年两岁了。",
+   "Câu 2": "我今年十岁了，是学生。",
+   "Pinyin câu 2": "Wǒ jīnnián shí suì le, shì xué·shēng.",
+   "Nghĩa câu 2": "Năm nay tôi mười tuổi rồi, là học sinh.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0354",
+   "Chữ Hán": "他",
+   "Pinyin": "tā",
+   "Âm Hán Việt": "THA",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "anh ấy, ông ấy, cậu ấy",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "他们 | tāmen\n他的孩子 | tā de háizi\n他家 | tā jiā",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：您儿子几岁？\nB：他今年五岁。",
+   "Pinyin câu 1": "A: Nín érzi jǐ suì?\nB: Tā jīnnián wǔ suì.",
+   "Nghĩa câu 1": "A: Con trai chị mấy tuổi?\nB: Năm nay cháu năm tuổi.",
+   "Đọc câu 1": "您儿子几岁？他今年五岁。",
+   "Câu 2": "他有两个妹妹。",
+   "Pinyin câu 2": "Tā yǒu liǎng ge mèimei.",
+   "Nghĩa câu 2": "Anh ấy có hai em gái.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0180",
+   "Chữ Hán": "今年",
+   "Pinyin": "jīnnián",
+   "Âm Hán Việt": "KIM NIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "năm nay",
+   "Cấp HSK": "1",
+   "Thuận bút": "今年",
+   "Cụm từ": "今年几岁 | jīnnián jǐ suì\n今年多大 | jīnnián duō dà\n今年二十岁 | jīnnián èrshí suì",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：今年是哪一年？\nB：今年是二〇二六年。",
+   "Pinyin câu 1": "A: Jīnnián shì nǎ yì nián?\nB: Jīnnián shì èrlíng'èrliù nián.",
+   "Nghĩa câu 1": "A: Năm nay là năm nào?\nB: Năm nay là năm 2026.",
+   "Đọc câu 1": "今年是哪一年？今年是二〇二六年。",
+   "Câu 2": "我今年二十岁。",
+   "Pinyin câu 2": "Wǒ jīnnián èrshí suì.",
+   "Nghĩa câu 2": "Năm nay tôi hai mươi tuổi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0094",
+   "Chữ Hán": "多",
+   "Pinyin": "duō",
+   "Âm Hán Việt": "ĐA",
+   "Từ loại": "tính từ / phó từ",
+   "Nghĩa tiếng Việt": "nhiều; bao (dùng để hỏi: 多大)",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "很多 | hěn duō\n不多 | bù duō\n多大 | duō dà\n多高 | duō gāo",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：你姐姐多高？\nB：她一米六。",
+   "Pinyin câu 1": "A: Nǐ jiějie duō gāo?\nB: Tā yì mǐ liù.",
+   "Nghĩa câu 1": "A: Chị gái bạn cao bao nhiêu?\nB: Chị ấy cao một mét sáu.",
+   "Đọc câu 1": "你姐姐多高？她一米六。",
+   "Câu 2": "他的中国朋友很多。",
+   "Pinyin câu 2": "Tā de Zhōngguó péngyou hěn duō.",
+   "Nghĩa câu 2": "Anh ấy có rất nhiều bạn người Trung Quốc.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0061",
+   "Chữ Hán": "大",
+   "Pinyin": "dà",
+   "Âm Hán Việt": "ĐẠI",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "to, lớn; (tuổi) lớn",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "多大 | duō dà\n多大年纪 | duō dà niánjì\n很大 | hěn dà",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：你哥哥多大？\nB：他今年二十岁。",
+   "Pinyin câu 1": "A: Nǐ gēge duō dà?\nB: Tā jīnnián èrshí suì.",
+   "Nghĩa câu 1": "A: Anh trai bạn bao nhiêu tuổi?\nB: Năm nay anh ấy hai mươi tuổi.",
+   "Đọc câu 1": "你哥哥多大？他今年二十岁。",
+   "Câu 2": "A：您女儿多大？\nB：她今年十二。",
+   "Pinyin câu 2": "A: Nín nǚ'ér duō dà?\nB: Tā jīnnián shí'èr.",
+   "Nghĩa câu 2": "A: Con gái chị bao nhiêu tuổi?\nB: Năm nay cháu mười hai.",
+   "Đọc câu 2": "您女儿多大？她今年十二。"
+  },
+  {
+   "Mã": "4-0933",
+   "Chữ Hán": "丈夫",
+   "Pinyin": "zhàngfu",
+   "Âm Hán Việt": "TRƯỢNG PHU",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "chồng",
+   "Cấp HSK": "4",
+   "Thuận bút": "丈夫",
+   "Cụm từ": "我丈夫 | wǒ zhàngfu\n她的丈夫 | tā de zhàngfu\n王一雪的丈夫 | Wáng Yīxuě de zhàngfu",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "刘明是王一雪的丈夫。",
+   "Pinyin câu 1": "Liú Míng shì Wáng Yīxuě de zhàngfu.",
+   "Nghĩa câu 1": "Lưu Minh là chồng của Vương Nhất Tuyết.",
+   "Đọc câu 1": "",
+   "Câu 2": "我丈夫是中国人。",
+   "Pinyin câu 2": "Wǒ zhàngfu shì Zhōngguó rén.",
+   "Nghĩa câu 2": "Chồng tôi là người Trung Quốc.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "4-0565",
+   "Chữ Hán": "妻子",
+   "Pinyin": "qīzi",
+   "Âm Hán Việt": "THÊ TỬ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "vợ",
+   "Cấp HSK": "4",
+   "Thuận bút": "妻",
+   "Cụm từ": "我妻子 | wǒ qīzi\n他的妻子 | tā de qīzi\n刘明的妻子 | Liú Míng de qīzi",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "王一雪是刘明的妻子。",
+   "Pinyin câu 1": "Wáng Yīxuě shì Liú Míng de qīzi.",
+   "Nghĩa câu 1": "Vương Nhất Tuyết là vợ của Lưu Minh.",
+   "Đọc câu 1": "",
+   "Câu 2": "他的妻子是老师。",
+   "Pinyin câu 2": "Tā de qīzi shì lǎoshī.",
+   "Nghĩa câu 2": "Vợ anh ấy là giáo viên.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "4-0459",
+   "Chữ Hán": "老公",
+   "Pinyin": "lǎogōng",
+   "Âm Hán Việt": "LÃO CÔNG",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "chồng (khẩu ngữ)",
+   "Cấp HSK": "4",
+   "Thuận bút": "公",
+   "Cụm từ": "我老公 | wǒ lǎogōng\n你老公 | nǐ lǎogōng",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我老公工作很忙。",
+   "Pinyin câu 1": "Wǒ lǎogōng gōngzuò hěn máng.",
+   "Nghĩa câu 1": "Chồng tôi công việc rất bận.",
+   "Đọc câu 1": "",
+   "Câu 2": "你老公是哪国人？",
+   "Pinyin câu 2": "Nǐ lǎogōng shì nǎ guó rén?",
+   "Nghĩa câu 2": "Chồng bạn là người nước nào?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "4-0461",
+   "Chữ Hán": "老婆",
+   "Pinyin": "lǎopo",
+   "Âm Hán Việt": "LÃO BÀ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "vợ (khẩu ngữ)",
+   "Cấp HSK": "4",
+   "Thuận bút": "婆",
+   "Cụm từ": "我老婆 | wǒ lǎopo\n他老婆 | tā lǎopo",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "这是我老婆。",
+   "Pinyin câu 1": "Zhè shì wǒ lǎopo.",
+   "Nghĩa câu 1": "Đây là vợ tôi.",
+   "Đọc câu 1": "",
+   "Câu 2": "我老婆是越南人。",
+   "Pinyin câu 2": "Wǒ lǎopo shì Yuènán rén.",
+   "Nghĩa câu 2": "Vợ tôi là người Việt Nam.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0547",
+   "Chữ Hán": "同事",
+   "Pinyin": "tóngshì",
+   "Âm Hán Việt": "ĐỒNG SỰ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "đồng nghiệp",
+   "Cấp HSK": "2",
+   "Thuận bút": "",
+   "Cụm từ": "我的同事 | wǒ de tóngshì\n她的同事 | tā de tóngshì\n两个同事 | liǎng ge tóngshì",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "杨同乐是王一雪的同事。",
+   "Pinyin câu 1": "Yáng Tónglè shì Wáng Yīxuě de tóngshì.",
+   "Nghĩa câu 1": "Dương Đồng Lạc là đồng nghiệp của Vương Nhất Tuyết.",
+   "Đọc câu 1": "",
+   "Câu 2": "这个人是我的同事。",
+   "Pinyin câu 2": "Zhè ge rén shì wǒ de tóngshì.",
+   "Nghĩa câu 2": "Người này là đồng nghiệp của tôi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0215",
+   "Chữ Hán": "两",
+   "Pinyin": "liǎng",
+   "Âm Hán Việt": "LƯỠNG",
+   "Từ loại": "số từ",
+   "Nghĩa tiếng Việt": "hai (dùng trước lượng từ)",
+   "Cấp HSK": "1",
+   "Thuận bút": "两",
+   "Cụm từ": "两个人 | liǎng ge rén\n两个学生 | liǎng ge xué·shēng\n两岁 | liǎng suì",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我有两个姐姐。",
+   "Pinyin câu 1": "Wǒ yǒu liǎng ge jiějie.",
+   "Nghĩa câu 1": "Tôi có hai chị gái.",
+   "Đọc câu 1": "",
+   "Câu 2": "我有两个好朋友。",
+   "Pinyin câu 2": "Wǒ yǒu liǎng ge hǎo péngyou.",
+   "Nghĩa câu 2": "Tôi có hai người bạn thân.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0075",
+   "Chữ Hán": "第",
+   "Pinyin": "dì",
+   "Âm Hán Việt": "ĐỆ",
+   "Từ loại": "tiền tố",
+   "Nghĩa tiếng Việt": "thứ (đặt trước số, chỉ thứ tự)",
+   "Cấp HSK": "1",
+   "Thuận bút": "第",
+   "Cụm từ": "第一 | dì-yī\n第二 | dì-èr\n第一个人 | dì-yī ge rén\n第二个学生 | dì-èr ge xué·shēng",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "她是我的第二个老师。",
+   "Pinyin câu 1": "Tā shì wǒ de dì-èr ge lǎoshī.",
+   "Nghĩa câu 1": "Cô ấy là giáo viên thứ hai của tôi.",
+   "Đọc câu 1": "",
+   "Câu 2": "他是我的第一个中国朋友。",
+   "Pinyin câu 2": "Tā shì wǒ de dì-yī ge Zhōngguó péngyou.",
+   "Nghĩa câu 2": "Anh ấy là người bạn Trung Quốc đầu tiên của tôi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0216",
+   "Chữ Hán": "零",
+   "Pinyin": "líng",
+   "Âm Hán Việt": "LINH",
+   "Từ loại": "số từ",
+   "Nghĩa tiếng Việt": "không, số 0; linh, lẻ (trong số)",
+   "Cấp HSK": "1",
+   "Thuận bút": "零",
+   "Cụm từ": "一百零一 | yìbǎi líng yī\n二百零八 | èrbǎi líng bā\n一千零一十 | yìqiān líng yīshí",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "他有一百零八个朋友。",
+   "Pinyin câu 1": "Tā yǒu yìbǎi líng bā ge péngyou.",
+   "Nghĩa câu 1": "Anh ấy có một trăm lẻ tám người bạn.",
+   "Đọc câu 1": "",
+   "Câu 2": "我们有一千零五十个学生。",
+   "Pinyin câu 2": "Wǒmen yǒu yìqiān líng wǔshí ge xué·shēng.",
+   "Nghĩa câu 2": "Chúng tôi có một nghìn không trăm năm mươi học sinh.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0008",
+   "Chữ Hán": "百",
+   "Pinyin": "bǎi",
+   "Âm Hán Việt": "BÁCH",
+   "Từ loại": "số từ",
+   "Nghĩa tiếng Việt": "trăm",
+   "Cấp HSK": "1",
+   "Thuận bút": "百",
+   "Cụm từ": "一百 | yìbǎi\n两百 | liǎngbǎi\n九百九十九 | jiǔbǎi jiǔshíjiǔ",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "王一飞老师有一百个学生。",
+   "Pinyin câu 1": "Wáng Yīfēi lǎoshī yǒu yìbǎi ge xué·shēng.",
+   "Nghĩa câu 1": "Cô Vương Nhất Phi có một trăm học sinh.",
+   "Đọc câu 1": "",
+   "Câu 2": "我们有四百八十六个学生。",
+   "Pinyin câu 2": "Wǒmen yǒu sìbǎi bāshíliù ge xué·shēng.",
+   "Nghĩa câu 2": "Chúng tôi có bốn trăm tám mươi sáu học sinh.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0433",
+   "Chữ Hán": "千",
+   "Pinyin": "qiān",
+   "Âm Hán Việt": "THIÊN",
+   "Từ loại": "số từ",
+   "Nghĩa tiếng Việt": "nghìn",
+   "Cấp HSK": "2",
+   "Thuận bút": "千",
+   "Cụm từ": "一千 | yìqiān\n两千 | liǎngqiān\n一千五百二十八 | yìqiān wǔbǎi èrshíbā",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我们有两千个学生。",
+   "Pinyin câu 1": "Wǒmen yǒu liǎngqiān ge xué·shēng.",
+   "Nghĩa câu 1": "Chúng tôi có hai nghìn học sinh.",
+   "Đọc câu 1": "",
+   "Câu 2": "他有一千五百个朋友。",
+   "Pinyin câu 2": "Tā yǒu yìqiān wǔbǎi ge péngyou.",
+   "Nghĩa câu 2": "Anh ấy có một nghìn năm trăm người bạn.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0565",
+   "Chữ Hán": "万",
+   "Pinyin": "wàn",
+   "Âm Hán Việt": "VẠN",
+   "Từ loại": "số từ",
+   "Nghĩa tiếng Việt": "vạn, mười nghìn",
+   "Cấp HSK": "2",
+   "Thuận bút": "万",
+   "Cụm từ": "一万 | yíwàn\n十万 | shíwàn\n两万 | liǎngwàn\n一百万 | yìbǎi wàn",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "十个一千是一万。",
+   "Pinyin câu 1": "Shí ge yìqiān shì yíwàn.",
+   "Nghĩa câu 1": "Mười cái nghìn là một vạn.",
+   "Đọc câu 1": "",
+   "Câu 2": "这个学生有一万个朋友吗？",
+   "Pinyin câu 2": "Zhè ge xué·shēng yǒu yíwàn ge péngyou ma?",
+   "Nghĩa câu 2": "Học sinh này có một vạn người bạn à?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0324",
+   "Chữ Hán": "少",
+   "Pinyin": "shǎo",
+   "Âm Hán Việt": "THIỂU",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "ít",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "很少 | hěn shǎo\n不少 | bù shǎo\n不多 | bù duō",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "李文有不少朋友。",
+   "Pinyin câu 1": "Lǐ Wén yǒu bù shǎo péngyou.",
+   "Nghĩa câu 1": "Lý Văn có không ít bạn.",
+   "Đọc câu 1": "",
+   "Câu 2": "我的中国朋友很少。",
+   "Pinyin câu 2": "Wǒ de Zhōngguó péngyou hěn shǎo.",
+   "Nghĩa câu 2": "Tôi có rất ít bạn người Trung Quốc.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0572",
+   "Chữ Hán": "位",
+   "Pinyin": "wèi",
+   "Âm Hán Việt": "VỊ",
+   "Từ loại": "lượng từ",
+   "Nghĩa tiếng Việt": "vị (lượng từ chỉ người, lịch sự)",
+   "Cấp HSK": "2",
+   "Thuận bút": "位",
+   "Cụm từ": "几位老师 | jǐ wèi lǎoshī\n一位老师 | yí wèi lǎoshī\n两位老师 | liǎng wèi lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "你有几位中文老师？",
+   "Pinyin câu 1": "Nǐ yǒu jǐ wèi Zhōngwén lǎoshī?",
+   "Nghĩa câu 1": "Bạn có mấy thầy cô dạy tiếng Trung?",
+   "Đọc câu 1": "",
+   "Câu 2": "我们有两位汉语老师。",
+   "Pinyin câu 2": "Wǒmen yǒu liǎng wèi Hànyǔ lǎoshī.",
+   "Nghĩa câu 2": "Chúng tôi có hai thầy cô dạy tiếng Trung.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "bai4-男孩子",
+   "Chữ Hán": "男孩子",
+   "Pinyin": "nánháizi",
+   "Âm Hán Việt": "NAM HÀI TỬ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bé trai, cậu bé",
+   "Cấp HSK": "NK",
+   "Thuận bút": "",
+   "Cụm từ": "这个男孩子 | zhè ge nánháizi\n两个男孩子 | liǎng ge nánháizi",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "这个男孩子是我弟弟。",
+   "Pinyin câu 1": "Zhè ge nánháizi shì wǒ dìdi.",
+   "Nghĩa câu 1": "Cậu bé này là em trai tôi.",
+   "Đọc câu 1": "",
+   "Câu 2": "那个男孩子叫什么名字？",
+   "Pinyin câu 2": "Nà ge nánháizi jiào shénme míngzi?",
+   "Nghĩa câu 2": "Cậu bé kia tên là gì?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "bai4-女孩子",
+   "Chữ Hán": "女孩子",
+   "Pinyin": "nǚháizi",
+   "Âm Hán Việt": "NỮ HÀI TỬ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bé gái, cô bé",
+   "Cấp HSK": "NK",
+   "Thuận bút": "",
+   "Cụm từ": "那个女孩子 | nà ge nǚháizi\n两个女孩子 | liǎng ge nǚháizi",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "那个女孩子是李文的女朋友。",
+   "Pinyin câu 1": "Nà ge nǚháizi shì Lǐ Wén de nǚpéngyou.",
+   "Nghĩa câu 1": "Cô gái kia là bạn gái của Lý Văn.",
+   "Đọc câu 1": "",
+   "Câu 2": "这个女孩子是哪国人？",
+   "Pinyin câu 2": "Zhè ge nǚháizi shì nǎ guó rén?",
+   "Nghĩa câu 2": "Cô bé này là người nước nào?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0273",
+   "Chữ Hán": "年",
+   "Pinyin": "nián",
+   "Âm Hán Việt": "NIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "năm",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "哪一年 | nǎ yì nián\n一年 | yì nián\n两年 | liǎng nián",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "一年有十二个月。",
+   "Pinyin câu 1": "Yì nián yǒu shí'èr ge yuè.",
+   "Nghĩa câu 1": "Một năm có mười hai tháng.",
+   "Đọc câu 1": "",
+   "Câu 2": "我学汉语两年了。",
+   "Pinyin câu 2": "Wǒ xué Hànyǔ liǎng nián le.",
+   "Nghĩa câu 2": "Tôi học tiếng Trung được hai năm rồi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0303",
+   "Chữ Hán": "去年",
+   "Pinyin": "qùnián",
+   "Âm Hán Việt": "KHỨ NIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "năm ngoái",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "去年十九岁 | qùnián shíjiǔ suì",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "去年是哪一年？明年呢？",
+   "Pinyin câu 1": "Qùnián shì nǎ yì nián? Míngnián ne?",
+   "Nghĩa câu 1": "Năm ngoái là năm nào? Còn năm sau?",
+   "Đọc câu 1": "",
+   "Câu 2": "我去年十九岁。",
+   "Pinyin câu 2": "Wǒ qùnián shíjiǔ suì.",
+   "Nghĩa câu 2": "Năm ngoái tôi mười chín tuổi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0247",
+   "Chữ Hán": "明年",
+   "Pinyin": "míngnián",
+   "Âm Hán Việt": "MINH NIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "năm sau, sang năm",
+   "Cấp HSK": "1",
+   "Thuận bút": "明",
+   "Cụm từ": "明年二十岁 | míngnián èrshí suì",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "明年他们想去中国。",
+   "Pinyin câu 1": "Míngnián tāmen xiǎng qù Zhōngguó.",
+   "Nghĩa câu 1": "Năm sau họ muốn đi Trung Quốc.",
+   "Đọc câu 1": "",
+   "Câu 2": "我明年二十岁。",
+   "Pinyin câu 2": "Wǒ míngnián èrshí suì.",
+   "Nghĩa câu 2": "Năm sau tôi hai mươi tuổi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "3-0512",
+   "Chữ Hán": "年纪",
+   "Pinyin": "niánjì",
+   "Âm Hán Việt": "NIÊN KỶ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "tuổi tác (hỏi người lớn tuổi)",
+   "Cấp HSK": "3",
+   "Thuận bút": "纪",
+   "Cụm từ": "多大年纪 | duō dà niánjì",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "你爷爷奶奶多大年纪？",
+   "Pinyin câu 1": "Nǐ yéye nǎinai duō dà niánjì?",
+   "Nghĩa câu 1": "Ông bà nội bạn bao nhiêu tuổi?",
+   "Đọc câu 1": "",
+   "Câu 2": "姥爷，您多大年纪了？",
+   "Pinyin câu 2": "Lǎoye, nín duō dà niánjì le?",
+   "Nghĩa câu 2": "Ông ngoại ơi, ông bao nhiêu tuổi rồi ạ?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0171",
+   "Chữ Hán": "家人",
+   "Pinyin": "jiārén",
+   "Âm Hán Việt": "GIA NHÂN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "người nhà, người trong gia đình",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "我的家人 | wǒ de jiārén\n他的家人 | tā de jiārén",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我很爱我的家人。",
+   "Pinyin câu 1": "Wǒ hěn ài wǒ de jiārén.",
+   "Nghĩa câu 1": "Tôi rất yêu gia đình của mình.",
+   "Đọc câu 1": "",
+   "Câu 2": "他们是我的家人。",
+   "Pinyin câu 2": "Tāmen shì wǒ de jiārén.",
+   "Nghĩa câu 2": "Họ là người nhà của tôi.",
+   "Đọc câu 2": ""
+  }
+ ],
+ "boThu": [
+  {
+   "boThu": "⺮",
+   "ten": "Bộ trúc",
+   "pinyin": "zhú",
+   "nghia": "tre, trúc; đồ làm từ tre, trúc",
+   "docAm": "竹字头",
+   "tenGoi": "竹字头",
+   "tenGoiPinyin": "zhúzìtóu",
+   "chuChua": [
+    {
+     "hanzi": "第",
+     "pinyin": "dì",
+     "nghia": "thứ (chỉ thứ tự)"
+    }
+   ]
+  },
+  {
+   "boThu": "禾",
+   "ten": "Bộ hòa",
+   "pinyin": "hé",
+   "nghia": "cây lúa",
+   "docAm": "禾",
+   "tenGoi": "禾木旁",
+   "tenGoiPinyin": "hémùpáng",
+   "chuChua": [
+    {
+     "hanzi": "和",
+     "pinyin": "hé",
+     "nghia": "và"
+    }
+   ]
+  },
+  {
+   "boThu": "山",
+   "ten": "Bộ sơn",
+   "pinyin": "shān",
+   "nghia": "núi",
+   "docAm": "山",
+   "chuChua": [
+    {
+     "hanzi": "岁",
+     "pinyin": "suì",
+     "nghia": "tuổi"
+    }
+   ]
+  }
+ ],
+ "thanhPhan": {
+  "弟": {
+   "pinyin": "dì",
+   "ten": "chữ 弟",
+   "nghia": "em trai (trong 第, phần 丷 trên đầu thay bằng bộ trúc)"
+  },
+  "口": {
+   "pinyin": "kǒu",
+   "ten": "Bộ khẩu",
+   "nghia": "cái miệng"
+  },
+  "夕": {
+   "pinyin": "xī",
+   "ten": "Bộ tịch",
+   "nghia": "đêm, tối"
+  }
+ },
+ "ghepChu": [
+  {
+   "chu": "第",
+   "phan": [
+    "⺮",
+    "弟"
+   ]
+  },
+  {
+   "chu": "和",
+   "phan": [
+    "禾",
+    "口"
+   ]
+  },
+  {
+   "chu": "岁",
+   "phan": [
+    "山",
+    "夕"
+   ]
+  }
+ ],
+ "chang": [
+  {
+   "so": 1,
+   "ten": "Ôn tập từ vựng 1",
+   "tu": [
+    "有",
+    "多少",
+    "个",
+    "丈夫",
+    "妻子",
+    "老公",
+    "老婆",
+    "同事",
+    "两",
+    "第",
+    "零",
+    "百",
+    "千",
+    "万",
+    "少"
+   ],
+   "ghepChu": [
+    "第"
+   ]
+  },
+  {
+   "so": 2,
+   "ten": "Ôn tập từ vựng 2",
+   "tu": [
+    "哥哥",
+    "呢",
+    "没有",
+    "家",
+    "几",
+    "口",
+    "爸爸",
+    "妈妈",
+    "妹妹",
+    "和",
+    "位"
+   ],
+   "ghepChu": [
+    "和"
+   ]
+  },
+  {
+   "so": 3,
+   "ten": "Ôn tập từ vựng 3",
+   "tu": [
+    "儿子",
+    "孩子",
+    "女儿",
+    "岁",
+    "他",
+    "今年",
+    "多",
+    "大",
+    "男孩子",
+    "女孩子",
+    "年",
+    "去年",
+    "明年",
+    "年纪",
+    "家人"
+   ],
+   "ghepChu": [
+    "岁"
+   ]
+  }
+ ],
+ "nguPhap": [
+  {
+   "id": "you",
+   "ten": "有 + DT · 没(有) + DT · 有没有 + DT？",
+   "congThuc": [
+    [
+     [
+      "有",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "没(有)",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "有没有",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "有 nghĩa là **\"có\"**, biểu thị **sở hữu**. Phủ định của 有 là **没有** hoặc nói gọn **没**. Hỏi kiểu chính phản dùng **有没有**.",
+   "y": [
+    {
+     "noiDung": "有 + DT: có …",
+     "cum": [
+      [
+       "有中文老师",
+       "yǒu Zhōngwén lǎoshī",
+       "",
+       [
+        [
+         "有",
+         "codinh"
+        ],
+        [
+         "中文老师",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "有女朋友",
+       "yǒu nǚpéngyou",
+       "",
+       [
+        [
+         "有",
+         "codinh"
+        ],
+        [
+         "女朋友",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "有中国朋友",
+       "yǒu Zhōngguó péngyou",
+       "",
+       [
+        [
+         "有",
+         "codinh"
+        ],
+        [
+         "中国朋友",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "王一雪有两个孩子。",
+       "Wáng Yīxuě yǒu liǎng ge háizi.",
+       "",
+       [
+        [
+         "王一雪",
+         null
+        ],
+        [
+         "有",
+         "codinh"
+        ],
+        [
+         "两个孩子",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "没(有) + DT: không có …",
+     "cum": [
+      [
+       "没有哥哥",
+       "méi·yǒu gēge",
+       "",
+       [
+        [
+         "没有",
+         "codinh"
+        ],
+        [
+         "哥哥",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "没有孩子",
+       "méi·yǒu háizi",
+       "",
+       [
+        [
+         "没有",
+         "codinh"
+        ],
+        [
+         "孩子",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "没姐姐",
+       "méi jiějie",
+       "không có chị gái",
+       [
+        [
+         "没",
+         "codinh"
+        ],
+        [
+         "姐姐",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "杨同乐没有哥哥。",
+       "Yáng Tónglè méi·yǒu gēge.",
+       "",
+       [
+        [
+         "杨同乐",
+         null
+        ],
+        [
+         "没有",
+         "codinh"
+        ],
+        [
+         "哥哥",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "有没有 + DT？: có … không?",
+     "cum": [
+      [
+       "有没有哥哥",
+       "yǒu méi·yǒu gēge",
+       "",
+       [
+        [
+         "有没有",
+         "codinh"
+        ],
+        [
+         "哥哥",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "有没有男朋友",
+       "yǒu méi·yǒu nánpéngyou",
+       "",
+       [
+        [
+         "有没有",
+         "codinh"
+        ],
+        [
+         "男朋友",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你有没有男朋友？",
+       "Nǐ yǒu méi·yǒu nánpéngyou?",
+       "",
+       [
+        [
+         "你",
+         null
+        ],
+        [
+         "有没有",
+         "codinh"
+        ],
+        [
+         "男朋友",
+         "dt"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Phủ định của 有 là **没有 / 没**, **không nói 不有**.",
+    "Câu đã dùng **有没有** thì **không thêm 吗**."
+   ]
+  },
+  {
+   "id": "so",
+   "ten": "Cách đọc số: 十 · 百 · 千 · 万 · 零",
+   "congThuc": [
+    [
+     [
+      "ST",
+      "st"
+     ],
+     [
+      "十",
+      "codinh"
+     ],
+     [
+      "ST",
+      "st"
+     ]
+    ],
+    [
+     [
+      "ST",
+      "st"
+     ],
+     [
+      "百",
+      "codinh"
+     ],
+     [
+      "ST",
+      "st"
+     ],
+     [
+      "十",
+      "codinh"
+     ],
+     [
+      "ST",
+      "st"
+     ]
+    ],
+    [
+     [
+      "ST",
+      "st"
+     ],
+     [
+      "千",
+      "codinh"
+     ],
+     [
+      "零",
+      "codinh"
+     ],
+     [
+      "ST",
+      "st"
+     ]
+    ]
+   ],
+   "giaiThich": "Số trong tiếng Trung đọc **theo đúng thứ tự viết**: hàng **万 (vạn)** → **千 (nghìn)** → **百 (trăm)** → **十 (chục)** → hàng đơn vị. Hàng ở giữa bị trống (số 0) thì đọc **零**.",
+   "y": [
+    {
+     "noiDung": "0 – 99: ST + 十 + ST",
+     "cum": [
+      [
+       "二十三",
+       "èrshísān",
+       "23",
+       [
+        [
+         "二",
+         "st"
+        ],
+        [
+         "十",
+         "codinh"
+        ],
+        [
+         "三",
+         "st"
+        ]
+       ]
+      ],
+      [
+       "六十九",
+       "liùshíjiǔ",
+       "69",
+       [
+        [
+         "六",
+         "st"
+        ],
+        [
+         "十",
+         "codinh"
+        ],
+        [
+         "九",
+         "st"
+        ]
+       ]
+      ],
+      [
+       "九十九",
+       "jiǔshíjiǔ",
+       "99",
+       [
+        [
+         "九",
+         "st"
+        ],
+        [
+         "十",
+         "codinh"
+        ],
+        [
+         "九",
+         "st"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "她有二十个学生。",
+       "Tā yǒu èrshí ge xué·shēng.",
+       "",
+       [
+        [
+         "她有",
+         null
+        ],
+        [
+         "二十",
+         "st"
+        ],
+        [
+         "个学生。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "百 · 千 · 万: đọc từ hàng lớn tới hàng nhỏ",
+     "cum": [
+      [
+       "九百九十九",
+       "jiǔbǎi jiǔshíjiǔ",
+       "999",
+       [
+        [
+         "九",
+         "st"
+        ],
+        [
+         "百",
+         "codinh"
+        ],
+        [
+         "九",
+         "st"
+        ],
+        [
+         "十",
+         "codinh"
+        ],
+        [
+         "九",
+         "st"
+        ]
+       ]
+      ],
+      [
+       "一千五百二十八",
+       "yìqiān wǔbǎi èrshíbā",
+       "1528",
+       [
+        [
+         "一",
+         "st"
+        ],
+        [
+         "千",
+         "codinh"
+        ],
+        [
+         "五",
+         "st"
+        ],
+        [
+         "百",
+         "codinh"
+        ],
+        [
+         "二",
+         "st"
+        ],
+        [
+         "十",
+         "codinh"
+        ],
+        [
+         "八",
+         "st"
+        ]
+       ]
+      ],
+      [
+       "两万七千三百五十六",
+       "liǎngwàn qīqiān sānbǎi wǔshíliù",
+       "27356",
+       [
+        [
+         "两",
+         "st"
+        ],
+        [
+         "万",
+         "codinh"
+        ],
+        [
+         "七",
+         "st"
+        ],
+        [
+         "千",
+         "codinh"
+        ],
+        [
+         "三",
+         "st"
+        ],
+        [
+         "百",
+         "codinh"
+        ],
+        [
+         "五",
+         "st"
+        ],
+        [
+         "十",
+         "codinh"
+        ],
+        [
+         "六",
+         "st"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我们有三百二十个学生。",
+       "Wǒmen yǒu sānbǎi èrshí ge xué·shēng.",
+       "",
+       [
+        [
+         "我们有",
+         null
+        ],
+        [
+         "三百二十",
+         "st"
+        ],
+        [
+         "个学生。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Hàng ở giữa bị trống: đọc 零",
+     "cum": [
+      [
+       "一百零一",
+       "yìbǎi líng yī",
+       "101",
+       [
+        [
+         "一",
+         "st"
+        ],
+        [
+         "百",
+         "codinh"
+        ],
+        [
+         "零",
+         "codinh"
+        ],
+        [
+         "一",
+         "st"
+        ]
+       ]
+      ],
+      [
+       "二百零八",
+       "èrbǎi líng bā",
+       "208",
+       [
+        [
+         "二",
+         "st"
+        ],
+        [
+         "百",
+         "codinh"
+        ],
+        [
+         "零",
+         "codinh"
+        ],
+        [
+         "八",
+         "st"
+        ]
+       ]
+      ],
+      [
+       "一千零一",
+       "yìqiān líng yī",
+       "1001",
+       [
+        [
+         "一",
+         "st"
+        ],
+        [
+         "千",
+         "codinh"
+        ],
+        [
+         "零",
+         "codinh"
+        ],
+        [
+         "一",
+         "st"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "他们有两百零五个学生。",
+       "Tāmen yǒu liǎngbǎi líng wǔ ge xué·shēng.",
+       "",
+       [
+        [
+         "他们有",
+         null
+        ],
+        [
+         "两百零五",
+         "st"
+        ],
+        [
+         "个学生。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Hàng chục và hàng đơn vị dùng **二**: 二十二. Hàng trăm trở lên dùng **两** hoặc **二** đều được: 两百 / 二百; 2000 thường nói **两千**.",
+    "Nhiều số 0 liền nhau **chỉ đọc một 零**: 1001 = 一千零一.",
+    "110 đọc **一百一十** (khẩu ngữ: 一百一).",
+    "Năm đọc **từng chữ số**: 2026 = 二〇二六年."
+   ]
+  },
+  {
+   "id": "stlt",
+   "ten": "ST + LT + DT",
+   "congThuc": [
+    [
+     [
+      "ST",
+      "st"
+     ],
+     [
+      "LT",
+      "st"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "两",
+      "codinh"
+     ],
+     [
+      "LT",
+      "st"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "Khi nói **số lượng**, giữa **số từ** và **danh từ** phải có **lượng từ**. **个** là lượng từ dùng chung (người, vật); **口** dùng khi đếm **số người trong gia đình**.",
+   "y": [
+    {
+     "noiDung": "ST + LT + DT",
+     "cum": [
+      [
+       "四口人",
+       "sì kǒu rén",
+       "",
+       [
+        [
+         "四",
+         "st"
+        ],
+        [
+         "口",
+         "st"
+        ],
+        [
+         "人",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "一个学生",
+       "yí ge xué·shēng",
+       "",
+       [
+        [
+         "一",
+         "st"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "学生",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "三个孩子",
+       "sān ge háizi",
+       "",
+       [
+        [
+         "三",
+         "st"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "孩子",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我家有五口人。",
+       "Wǒ jiā yǒu wǔ kǒu rén.",
+       "",
+       [
+        [
+         "我家有",
+         null
+        ],
+        [
+         "五",
+         "st"
+        ],
+        [
+         "口",
+         "st"
+        ],
+        [
+         "人",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Số 2 trước lượng từ: 两 + LT + DT",
+     "cum": [
+      [
+       "两个哥哥",
+       "liǎng ge gēge",
+       "",
+       [
+        [
+         "两",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "哥哥",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "两个人",
+       "liǎng ge rén",
+       "",
+       [
+        [
+         "两",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "人",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "两口人",
+       "liǎng kǒu rén",
+       "",
+       [
+        [
+         "两",
+         "codinh"
+        ],
+        [
+         "口",
+         "st"
+        ],
+        [
+         "人",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "李文有两个妹妹。",
+       "Lǐ Wén yǒu liǎng ge mèimei.",
+       "",
+       [
+        [
+         "李文有",
+         null
+        ],
+        [
+         "两",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "妹妹",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Không bỏ lượng từ: nói **三个学生**, không nói 三学生.",
+    "Số 2 đứng trước lượng từ dùng **两**: **两个哥哥**, không nói 二个哥哥.",
+    "**口** chỉ dùng đếm người trong gia đình: 我家有四口人. Đếm người nói chung dùng **个**: 四个人."
+   ]
+  },
+  {
+   "id": "di",
+   "ten": "第 + ST + LT + DT",
+   "congThuc": [
+    [
+     [
+      "第",
+      "codinh"
+     ],
+     [
+      "ST",
+      "st"
+     ],
+     [
+      "LT",
+      "st"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "第 đặt **trước số từ** để chỉ **thứ tự**: 第一 = thứ nhất, 第二 = thứ hai. Sau đó có thể thêm **lượng từ + danh từ**.",
+   "y": [
+    {
+     "noiDung": "第 + ST + LT + DT: … thứ …",
+     "cum": [
+      [
+       "第一个人",
+       "dì-yī ge rén",
+       "",
+       [
+        [
+         "第",
+         "codinh"
+        ],
+        [
+         "一",
+         "st"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "人",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "第二个学生",
+       "dì-èr ge xué·shēng",
+       "",
+       [
+        [
+         "第",
+         "codinh"
+        ],
+        [
+         "二",
+         "st"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "学生",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "第九十九个朋友",
+       "dì-jiǔshíjiǔ ge péngyou",
+       "",
+       [
+        [
+         "第",
+         "codinh"
+        ],
+        [
+         "九十九",
+         "st"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "朋友",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "王一飞老师是我的第一个中文老师。",
+       "Wáng Yīfēi lǎoshī shì wǒ de dì-yī ge Zhōngwén lǎoshī.",
+       "",
+       [
+        [
+         "王一飞老师是我的",
+         null
+        ],
+        [
+         "第",
+         "codinh"
+        ],
+        [
+         "一",
+         "st"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "中文老师",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ],
+      [
+       "第二个孩子是女儿。",
+       "Dì-èr ge háizi shì nǚ'ér.",
+       "Đứa con thứ hai là con gái.",
+       [
+        [
+         "第",
+         "codinh"
+        ],
+        [
+         "二",
+         "st"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "孩子",
+         "dt"
+        ],
+        [
+         "是女儿。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Thứ tự \"thứ hai\" dùng **二**: **第二个**, không nói 第两个. Số lượng \"hai cái\" mới dùng **两**: 两个."
+   ]
+  },
+  {
+   "id": "duoshao",
+   "ten": "多少 + (LT) + DT",
+   "congThuc": [
+    [
+     [
+      "多少",
+      "codinh"
+     ],
+     [
+      "LT",
+      "st"
+     ],
+     [
+      "DT",
+      "dt"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "多少",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "多少 nghĩa là **\"bao nhiêu\"**, hỏi số lượng **lớn hoặc chưa đoán được**. Lượng từ sau 多少 **có thể bỏ**.",
+   "y": [
+    {
+     "noiDung": "多少 + (LT) + DT: bao nhiêu …?",
+     "cum": [
+      [
+       "多少个学生",
+       "duōshao ge xué·shēng",
+       "",
+       [
+        [
+         "多少",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "学生",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "多少老师",
+       "duōshao lǎoshī",
+       "",
+       [
+        [
+         "多少",
+         "codinh"
+        ],
+        [
+         "老师",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "多少个朋友",
+       "duōshao ge péngyou",
+       "",
+       [
+        [
+         "多少",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "朋友",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你有多少个中国朋友？",
+       "Nǐ yǒu duōshao ge Zhōngguó péngyou?",
+       "",
+       [
+        [
+         "你有",
+         null
+        ],
+        [
+         "多少",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "中国朋友",
+         "dt"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "你们有多少学生？",
+       "Nǐmen yǒu duōshao xué·shēng?",
+       "",
+       [
+        [
+         "你们有",
+         null
+        ],
+        [
+         "多少",
+         "codinh"
+        ],
+        [
+         "学生",
+         "dt"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**几** hỏi số nhỏ, bắt buộc có lượng từ; **多少** hỏi số lớn, lượng từ có thể bỏ.",
+    "Câu có 多少 thì **không thêm 吗**."
+   ]
+  },
+  {
+   "id": "ji",
+   "ten": "几 + LT + DT",
+   "congThuc": [
+    [
+     [
+      "几",
+      "codinh"
+     ],
+     [
+      "LT",
+      "st"
+     ],
+     [
+      "DT",
+      "dt"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "几 nghĩa là **\"mấy\"**, hỏi **số lượng nhỏ** (thường dưới 10). Giữa 几 và danh từ **phải có lượng từ**.",
+   "y": [
+    {
+     "noiDung": "几 + LT + DT: mấy …?",
+     "cum": [
+      [
+       "几个人",
+       "jǐ ge rén",
+       "",
+       [
+        [
+         "几",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "人",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "几位老师",
+       "jǐ wèi lǎoshī",
+       "",
+       [
+        [
+         "几",
+         "codinh"
+        ],
+        [
+         "位",
+         "st"
+        ],
+        [
+         "老师",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "几口人",
+       "jǐ kǒu rén",
+       "",
+       [
+        [
+         "几",
+         "codinh"
+        ],
+        [
+         "口",
+         "st"
+        ],
+        [
+         "人",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "几个同学",
+       "jǐ ge tóngxué",
+       "",
+       [
+        [
+         "几",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "同学",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你有几个哥哥？",
+       "Nǐ yǒu jǐ ge gēge?",
+       "",
+       [
+        [
+         "你有",
+         null
+        ],
+        [
+         "几",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "哥哥",
+         "dt"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "王一雪有几个孩子？",
+       "Wáng Yīxuě yǒu jǐ ge háizi?",
+       "",
+       [
+        [
+         "王一雪有",
+         null
+        ],
+        [
+         "几",
+         "codinh"
+        ],
+        [
+         "个",
+         "st"
+        ],
+        [
+         "孩子",
+         "dt"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "几 hỏi **số nhỏ** (thường dưới 10); số lớn hoặc chưa đoán được thì dùng **多少**.",
+    "Sau 几 **bắt buộc có lượng từ**: 几个朋友, không nói 几朋友.",
+    "Câu có 几 thì **không thêm 吗**."
+   ]
+  },
+  {
+   "id": "hoiTuoi",
+   "ten": "Hỏi tuổi: 几岁 · 多大 · 多大年纪",
+   "congThuc": [
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "几岁",
+      "codinh"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "多大",
+      "codinh"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "多大年纪",
+      "codinh"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "Hỏi tuổi có **3 cách**, chọn theo **tuổi của người được hỏi**: trẻ nhỏ dùng **几岁**, người cùng lứa hoặc người lớn dùng **多大**, người cao tuổi dùng **多大年纪**. Trả lời: **CN + (今年) + số + 岁**.",
+   "y": [
+    {
+     "noiDung": "几岁: hỏi trẻ nhỏ (thường dưới 10 tuổi)",
+     "cum": [
+      [
+       "几岁",
+       "jǐ suì",
+       "",
+       [
+        [
+         "几岁",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "今年几岁",
+       "jīnnián jǐ suì",
+       "",
+       [
+        [
+         "今年",
+         null
+        ],
+        [
+         "几岁",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "小朋友，你几岁了？",
+       "Xiǎopéngyou, nǐ jǐ suì le?",
+       "Bé ơi, cháu mấy tuổi rồi?",
+       [
+        [
+         "小朋友，你",
+         "dt"
+        ],
+        [
+         "几岁",
+         "codinh"
+        ],
+        [
+         "了？",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "多大: hỏi người cùng lứa, người lớn",
+     "cum": [
+      [
+       "多大",
+       "duō dà",
+       "",
+       [
+        [
+         "多大",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "今年多大",
+       "jīnnián duō dà",
+       "",
+       [
+        [
+         "今年",
+         null
+        ],
+        [
+         "多大",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你今年多大？",
+       "Nǐ jīnnián duō dà?",
+       "",
+       [
+        [
+         "你",
+         "dt"
+        ],
+        [
+         "今年",
+         null
+        ],
+        [
+         "多大",
+         "codinh"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "多大年纪: hỏi người cao tuổi",
+     "cum": [
+      [
+       "多大年纪",
+       "duō dà niánjì",
+       "",
+       [
+        [
+         "多大年纪",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你姥姥多大年纪了？",
+       "Nǐ lǎolao duō dà niánjì le?",
+       "Bà ngoại bạn bao nhiêu tuổi rồi?",
+       [
+        [
+         "你姥姥",
+         "dt"
+        ],
+        [
+         "多大年纪",
+         "codinh"
+        ],
+        [
+         "了？",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Trả lời tuổi **không cần 是**: 我二十岁, không nói 我是二十岁.",
+    "Thêm **了** cuối câu để nói đã tới tuổi đó: 他今年两岁了。"
+   ]
+  },
+  {
+   "id": "ne",
+   "ten": "呢",
+   "congThuc": [
+    [
+     [
+      "Câu hỏi",
+      "cau"
+     ],
+     [
+      "呢",
+      "codinh"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "A……，",
+      "cau"
+     ],
+     [
+      "B",
+      "dt"
+     ],
+     [
+      "呢",
+      "codinh"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "DT",
+      "dt"
+     ],
+     [
+      "呢",
+      "codinh"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "呢 là **trợ từ** đặt **cuối câu hỏi**. Bài này học 3 cách dùng: làm câu hỏi **nhẹ nhàng hơn**; **hỏi lại** điều vừa nói ở trước (**A……，B呢？** = còn B thì sao?); hỏi **người, vật đang ở đâu**.",
+   "y": [
+    {
+     "noiDung": "Câu hỏi + 呢？: làm câu hỏi nhẹ nhàng, uyển chuyển",
+     "cum": [],
+     "viDu": [
+      [
+       "你叫什么名字呢？",
+       "Nǐ jiào shénme míngzi ne?",
+       "",
+       [
+        [
+         "你叫什么名字",
+         "cau"
+        ],
+        [
+         "呢",
+         "codinh"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "A……，B呢？: hỏi lại điều vừa nói ở trước (… còn B thì sao?)",
+     "cum": [
+      [
+       "你呢",
+       "nǐ ne",
+       "",
+       [
+        [
+         "你",
+         "dt"
+        ],
+        [
+         "呢",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "你家呢",
+       "nǐ jiā ne",
+       "",
+       [
+        [
+         "你家",
+         "dt"
+        ],
+        [
+         "呢",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "明年呢",
+       "míngnián ne",
+       "",
+       [
+        [
+         "明年",
+         "dt"
+        ],
+        [
+         "呢",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我叫白家月，你呢？",
+       "Wǒ jiào Bái Jiāyuè, nǐ ne?",
+       "",
+       [
+        [
+         "我叫白家月，",
+         "cau"
+        ],
+        [
+         "你",
+         "dt"
+        ],
+        [
+         "呢",
+         "codinh"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "DT + 呢？: hỏi người, vật đang ở đâu",
+     "cum": [],
+     "viDu": [
+      [
+       "我的猫呢？",
+       "Wǒ de māo ne?",
+       "Con mèo của tôi đâu rồi?",
+       [
+        [
+         "我的猫",
+         "dt"
+        ],
+        [
+         "呢",
+         "codinh"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**B呢？** chỉ dùng khi điều muốn hỏi **đã được nói ở trước**: 我是越南人，你呢？",
+    "Câu có 呢 thì **không thêm 吗**."
+   ]
+  }
+ ],
+ "hoiDap": [
+  {
+   "hoi": [
+    "你家有几口人？",
+    "Nǐ jiā yǒu jǐ kǒu rén?",
+    "Nhà bạn có mấy người?"
+   ],
+   "dap": [
+    "我家有五口人。",
+    "Wǒ jiā yǒu wǔ kǒu rén.",
+    "Nhà mình có năm người."
+   ],
+   "nhieu": [
+    [
+     "我有两个哥哥。",
+     "Wǒ yǒu liǎng ge gēge.",
+     "Mình có hai anh trai."
+    ],
+    [
+     "我是越南人。",
+     "Wǒ shì Yuènán rén.",
+     "Mình là người Việt Nam."
+    ],
+    [
+     "我没有妹妹。",
+     "Wǒ méi·yǒu mèimei.",
+     "Mình không có em gái."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你有哥哥吗？",
+    "Nǐ yǒu gēge ma?",
+    "Bạn có anh trai không?"
+   ],
+   "dap": [
+    "我没有哥哥，我有一个妹妹。",
+    "Wǒ méi·yǒu gēge, wǒ yǒu yí ge mèimei.",
+    "Mình không có anh trai, mình có một em gái."
+   ],
+   "nhieu": [
+    [
+     "我家有三口人。",
+     "Wǒ jiā yǒu sān kǒu rén.",
+     "Nhà mình có ba người."
+    ],
+    [
+     "我是中国人。",
+     "Wǒ shì Zhōngguó rén.",
+     "Mình là người Trung Quốc."
+    ],
+    [
+     "这是我爸爸。",
+     "Zhè shì wǒ bàba.",
+     "Đây là bố mình."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你有几个孩子？",
+    "Nǐ yǒu jǐ ge háizi?",
+    "Chị có mấy người con?"
+   ],
+   "dap": [
+    "我有两个孩子，一个儿子、一个女儿。",
+    "Wǒ yǒu liǎng ge háizi, yí ge érzi, yí ge nǚ'ér.",
+    "Tôi có hai người con, một con trai, một con gái."
+   ],
+   "nhieu": [
+    [
+     "我儿子今年五岁。",
+     "Wǒ érzi jīnnián wǔ suì.",
+     "Con trai tôi năm nay năm tuổi."
+    ],
+    [
+     "我是他们的老师。",
+     "Wǒ shì tāmen de lǎoshī.",
+     "Tôi là giáo viên của họ."
+    ],
+    [
+     "他们是我的同事。",
+     "Tāmen shì wǒ de tóngshì.",
+     "Họ là đồng nghiệp của tôi."
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你儿子今年几岁？",
+    "Nǐ érzi jīnnián jǐ suì?",
+    "Con trai chị năm nay mấy tuổi?"
+   ],
+   "dap": [
+    "他今年八岁。",
+    "Tā jīnnián bā suì.",
+    "Năm nay cháu tám tuổi."
+   ],
+   "nhieu": [
+    [
+     "我有一个儿子。",
+     "Wǒ yǒu yí ge érzi.",
+     "Tôi có một con trai."
+    ],
+    [
+     "他是学生。",
+     "Tā shì xué·shēng.",
+     "Cháu là học sinh."
+    ],
+    [
+     "他很好。",
+     "Tā hěn hǎo.",
+     "Cháu rất ngoan."
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你爷爷多大年纪？",
+    "Nǐ yéye duō dà niánjì?",
+    "Ông nội bạn bao nhiêu tuổi?"
+   ],
+   "dap": [
+    "他今年八十岁了。",
+    "Tā jīnnián bāshí suì le.",
+    "Năm nay ông tám mươi tuổi rồi."
+   ],
+   "nhieu": [
+    [
+     "我爷爷是中国人。",
+     "Wǒ yéye shì Zhōngguó rén.",
+     "Ông nội mình là người Trung Quốc."
+    ],
+    [
+     "他工作很忙。",
+     "Tā gōngzuò hěn máng.",
+     "Ông công việc rất bận."
+    ],
+    [
+     "他有三个孩子。",
+     "Tā yǒu sān ge háizi.",
+     "Ông có ba người con."
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "王老师有多少个学生？",
+    "Wáng lǎoshī yǒu duōshao ge xué·shēng?",
+    "Cô Vương có bao nhiêu học sinh?"
+   ],
+   "dap": [
+    "她有二十个学生。",
+    "Tā yǒu èrshí ge xué·shēng.",
+    "Cô ấy có hai mươi học sinh."
+   ],
+   "nhieu": [
+    [
+     "她是中文老师。",
+     "Tā shì Zhōngwén lǎoshī.",
+     "Cô ấy là giáo viên tiếng Trung."
+    ],
+    [
+     "她很忙。",
+     "Tā hěn máng.",
+     "Cô ấy rất bận."
+    ],
+    [
+     "她有一个姐姐。",
+     "Tā yǒu yí ge jiějie.",
+     "Cô ấy có một chị gái."
+    ]
+   ],
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "你哥哥多大？",
+    "Nǐ gēge duō dà?",
+    "Anh trai bạn bao nhiêu tuổi?"
+   ],
+   "dap": [
+    "他今年二十五岁。",
+    "Tā jīnnián èrshíwǔ suì.",
+    "Năm nay anh ấy hai mươi lăm tuổi."
+   ],
+   "nhieu": [
+    [
+     "我有两个哥哥。",
+     "Wǒ yǒu liǎng ge gēge.",
+     "Mình có hai anh trai."
+    ],
+    [
+     "他是我的同事。",
+     "Tā shì wǒ de tóngshì.",
+     "Anh ấy là đồng nghiệp của mình."
+    ],
+    [
+     "他有一个女儿。",
+     "Tā yǒu yí ge nǚ'ér.",
+     "Anh ấy có một con gái."
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "我是越南人，你呢？",
+    "Wǒ shì Yuènán rén, nǐ ne?",
+    "Mình là người Việt Nam, còn bạn?"
+   ],
+   "dap": [
+    "我是中国人。",
+    "Wǒ shì Zhōngguó rén.",
+    "Mình là người Trung Quốc."
+   ],
+   "nhieu": [
+    [
+     "我有一个姐姐。",
+     "Wǒ yǒu yí ge jiějie.",
+     "Mình có một chị gái."
+    ],
+    [
+     "我家有三口人。",
+     "Wǒ jiā yǒu sān kǒu rén.",
+     "Nhà mình có ba người."
+    ],
+    [
+     "我没有哥哥。",
+     "Wǒ méi·yǒu gēge.",
+     "Mình không có anh trai."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "我有两个妹妹，你呢？",
+    "Wǒ yǒu liǎng ge mèimei, nǐ ne?",
+    "Mình có hai em gái, còn bạn?"
+   ],
+   "dap": [
+    "我没有妹妹。",
+    "Wǒ méi·yǒu mèimei.",
+    "Mình không có em gái."
+   ],
+   "nhieu": [
+    [
+     "我是越南人。",
+     "Wǒ shì Yuènán rén.",
+     "Mình là người Việt Nam."
+    ],
+    [
+     "我很忙。",
+     "Wǒ hěn máng.",
+     "Mình rất bận."
+    ],
+    [
+     "我叫李文。",
+     "Wǒ jiào Lǐ Wén.",
+     "Mình tên là Lý Văn."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "杨同乐是谁？",
+    "Yáng Tónglè shì shéi?",
+    "Dương Đồng Lạc là ai?"
+   ],
+   "dap": [
+    "他是王一雪的同事。",
+    "Tā shì Wáng Yīxuě de tóngshì.",
+    "Anh ấy là đồng nghiệp của Vương Nhất Tuyết."
+   ],
+   "nhieu": [
+    [
+     "他家有四口人。",
+     "Tā jiā yǒu sì kǒu rén.",
+     "Nhà anh ấy có bốn người."
+    ],
+    [
+     "他很忙。",
+     "Tā hěn máng.",
+     "Anh ấy rất bận."
+    ],
+    [
+     "他没有哥哥。",
+     "Tā méi·yǒu gēge.",
+     "Anh ấy không có anh trai."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "今年是哪一年？",
+    "Jīnnián shì nǎ yì nián?",
+    "Năm nay là năm nào?"
+   ],
+   "dap": [
+    "今年是二〇二六年。",
+    "Jīnnián shì èrlíng'èrliù nián.",
+    "Năm nay là năm 2026."
+   ],
+   "nhieu": [
+    [
+     "我今年二十岁。",
+     "Wǒ jīnnián èrshí suì.",
+     "Năm nay mình hai mươi tuổi."
+    ],
+    [
+     "我明年想去中国。",
+     "Wǒ míngnián xiǎng qù Zhōngguó.",
+     "Năm sau mình muốn đi Trung Quốc."
+    ],
+    [
+     "我有两个孩子。",
+     "Wǒ yǒu liǎng ge háizi.",
+     "Mình có hai đứa con."
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你有中国朋友吗？",
+    "Nǐ yǒu Zhōngguó péngyou ma?",
+    "Bạn có bạn người Trung Quốc không?"
+   ],
+   "dap": [
+    "我有不少中国朋友。",
+    "Wǒ yǒu bù shǎo Zhōngguó péngyou.",
+    "Mình có khá nhiều bạn người Trung Quốc."
+   ],
+   "nhieu": [
+    [
+     "我想去中国。",
+     "Wǒ xiǎng qù Zhōngguó.",
+     "Mình muốn đi Trung Quốc."
+    ],
+    [
+     "他是我的同事。",
+     "Tā shì wǒ de tóngshì.",
+     "Anh ấy là đồng nghiệp của mình."
+    ],
+    [
+     "我是越南人。",
+     "Wǒ shì Yuènán rén.",
+     "Mình là người Việt Nam."
+    ]
+   ],
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "您女儿几岁了？",
+    "Nín nǚ'ér jǐ suì le?",
+    "Con gái chị mấy tuổi rồi?"
+   ],
+   "dap": [
+    "她今年三岁了。",
+    "Tā jīnnián sān suì le.",
+    "Năm nay cháu ba tuổi rồi."
+   ],
+   "nhieu": [
+    [
+     "我有一个女儿。",
+     "Wǒ yǒu yí ge nǚ'ér.",
+     "Tôi có một con gái."
+    ],
+    [
+     "她是我的女儿。",
+     "Tā shì wǒ de nǚ'ér.",
+     "Cháu là con gái tôi."
+    ],
+    [
+     "她很好。",
+     "Tā hěn hǎo.",
+     "Cháu rất ngoan."
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你家有谁？",
+    "Nǐ jiā yǒu shéi?",
+    "Nhà bạn có những ai?"
+   ],
+   "dap": [
+    "我家有爸爸、妈妈、哥哥和我。",
+    "Wǒ jiā yǒu bàba, māma, gēge hé wǒ.",
+    "Nhà mình có bố, mẹ, anh trai và mình."
+   ],
+   "nhieu": [
+    [
+     "我有两个孩子。",
+     "Wǒ yǒu liǎng ge háizi.",
+     "Mình có hai đứa con."
+    ],
+    [
+     "我是越南人。",
+     "Wǒ shì Yuènán rén.",
+     "Mình là người Việt Nam."
+    ],
+    [
+     "我哥哥今年二十岁。",
+     "Wǒ gēge jīnnián èrshí suì.",
+     "Anh trai mình năm nay hai mươi tuổi."
+    ]
+   ],
+   "chang": "3"
+  }
+ ],
+ "cauLuyen": [
+  {
+   "han": "我有一个姐姐，一个妹妹。",
+   "py": "Wǒ yǒu yí ge jiějie, yí ge mèimei.",
+   "viet": "Tôi có một chị gái, một em gái.",
+   "tu": [
+    "有",
+    "个",
+    "妹妹"
+   ],
+   "np": "you"
+  },
+  {
+   "han": "李文没有女朋友。",
+   "py": "Lǐ Wén méi·yǒu nǚpéngyou.",
+   "viet": "Lý Văn không có bạn gái.",
+   "tu": [
+    "没有"
+   ],
+   "np": "you"
+  },
+  {
+   "han": "你有没有孩子？",
+   "py": "Nǐ yǒu méi·yǒu háizi?",
+   "viet": "Bạn có con chưa?",
+   "tu": [
+    "有",
+    "没有",
+    "孩子"
+   ],
+   "np": "you"
+  },
+  {
+   "han": "我没有中国朋友。",
+   "py": "Wǒ méi·yǒu Zhōngguó péngyou.",
+   "viet": "Tôi không có bạn người Trung Quốc.",
+   "tu": [
+    "没有"
+   ],
+   "np": "you"
+  },
+  {
+   "han": "他们有中文老师吗？",
+   "py": "Tāmen yǒu Zhōngwén lǎoshī ma?",
+   "viet": "Họ có giáo viên tiếng Trung không?",
+   "tu": [
+    "有"
+   ],
+   "np": "you"
+  },
+  {
+   "han": "我们有九十九个学生。",
+   "py": "Wǒmen yǒu jiǔshíjiǔ ge xué·shēng.",
+   "viet": "Chúng tôi có chín mươi chín học sinh.",
+   "tu": [
+    "有",
+    "个"
+   ],
+   "np": "so"
+  },
+  {
+   "han": "中国有十四亿人。",
+   "py": "Zhōngguó yǒu shísì yì rén.",
+   "viet": "Trung Quốc có một tỷ bốn trăm triệu người.",
+   "tu": [
+    "有"
+   ],
+   "np": "so"
+  },
+  {
+   "han": "王一飞老师有一百二十个学生。",
+   "py": "Wáng Yīfēi lǎoshī yǒu yìbǎi èrshí ge xué·shēng.",
+   "viet": "Cô Vương Nhất Phi có một trăm hai mươi học sinh.",
+   "tu": [
+    "有",
+    "百",
+    "个"
+   ],
+   "np": "so"
+  },
+  {
+   "han": "我们有二百零八个学生。",
+   "py": "Wǒmen yǒu èrbǎi líng bā ge xué·shēng.",
+   "viet": "Chúng tôi có hai trăm lẻ tám học sinh.",
+   "tu": [
+    "有",
+    "百",
+    "零",
+    "个"
+   ],
+   "np": "so"
+  },
+  {
+   "han": "我家有三口人。",
+   "py": "Wǒ jiā yǒu sān kǒu rén.",
+   "viet": "Nhà tôi có ba người.",
+   "tu": [
+    "家",
+    "有",
+    "口"
+   ],
+   "np": "stlt"
+  },
+  {
+   "han": "我有两个中国朋友。",
+   "py": "Wǒ yǒu liǎng ge Zhōngguó péngyou.",
+   "viet": "Tôi có hai người bạn Trung Quốc.",
+   "tu": [
+    "有",
+    "两",
+    "个"
+   ],
+   "np": "stlt"
+  },
+  {
+   "han": "他们有三个孩子。",
+   "py": "Tāmen yǒu sān ge háizi.",
+   "viet": "Họ có ba người con.",
+   "tu": [
+    "有",
+    "个",
+    "孩子"
+   ],
+   "np": "stlt"
+  },
+  {
+   "han": "王一雪家有四口人。",
+   "py": "Wáng Yīxuě jiā yǒu sì kǒu rén.",
+   "viet": "Nhà Vương Nhất Tuyết có bốn người.",
+   "tu": [
+    "家",
+    "有",
+    "口"
+   ],
+   "np": "stlt"
+  },
+  {
+   "han": "她是我们家的第二个孩子。",
+   "py": "Tā shì wǒmen jiā de dì-èr ge háizi.",
+   "viet": "Cô ấy là đứa con thứ hai trong nhà chúng tôi.",
+   "tu": [
+    "家",
+    "第",
+    "个",
+    "孩子"
+   ],
+   "np": "di"
+  },
+  {
+   "han": "第三个孩子是男孩子。",
+   "py": "Dì-sān ge háizi shì nánháizi.",
+   "viet": "Đứa con thứ ba là con trai.",
+   "tu": [
+    "第",
+    "个",
+    "孩子",
+    "男孩子"
+   ],
+   "np": "di"
+  },
+  {
+   "han": "他是第一个学生。",
+   "py": "Tā shì dì-yī ge xué·shēng.",
+   "viet": "Cậu ấy là học sinh thứ nhất.",
+   "tu": [
+    "他",
+    "第",
+    "个"
+   ],
+   "np": "di"
+  },
+  {
+   "han": "你们国家有多少人？",
+   "py": "Nǐmen guójiā yǒu duōshao rén?",
+   "viet": "Đất nước các bạn có bao nhiêu người?",
+   "tu": [
+    "有",
+    "多少"
+   ],
+   "np": "duoshao"
+  },
+  {
+   "han": "他有多少个中国朋友？",
+   "py": "Tā yǒu duōshao ge Zhōngguó péngyou?",
+   "viet": "Anh ấy có bao nhiêu người bạn Trung Quốc?",
+   "tu": [
+    "他",
+    "有",
+    "多少",
+    "个"
+   ],
+   "np": "duoshao"
+  },
+  {
+   "han": "王老师有多少学生？",
+   "py": "Wáng lǎoshī yǒu duōshao xué·shēng?",
+   "viet": "Cô Vương có bao nhiêu học sinh?",
+   "tu": [
+    "有",
+    "多少"
+   ],
+   "np": "duoshao"
+  },
+  {
+   "han": "你有几个孩子？",
+   "py": "Nǐ yǒu jǐ ge háizi?",
+   "viet": "Bạn có mấy đứa con?",
+   "tu": [
+    "有",
+    "几",
+    "个",
+    "孩子"
+   ],
+   "np": "ji"
+  },
+  {
+   "han": "她有几个妹妹？",
+   "py": "Tā yǒu jǐ ge mèimei?",
+   "viet": "Cô ấy có mấy em gái?",
+   "tu": [
+    "有",
+    "几",
+    "个",
+    "妹妹"
+   ],
+   "np": "ji"
+  },
+  {
+   "han": "你们有几位中文老师？",
+   "py": "Nǐmen yǒu jǐ wèi Zhōngwén lǎoshī?",
+   "viet": "Các bạn có mấy thầy cô dạy tiếng Trung?",
+   "tu": [
+    "有",
+    "几",
+    "位"
+   ],
+   "np": "ji"
+  },
+  {
+   "han": "李文家有几口人？",
+   "py": "Lǐ Wén jiā yǒu jǐ kǒu rén?",
+   "viet": "Nhà Lý Văn có mấy người?",
+   "tu": [
+    "家",
+    "有",
+    "几",
+    "口"
+   ],
+   "np": "ji"
+  },
+  {
+   "han": "你妹妹今年几岁？",
+   "py": "Nǐ mèimei jīnnián jǐ suì?",
+   "viet": "Em gái bạn năm nay mấy tuổi?",
+   "tu": [
+    "妹妹",
+    "今年",
+    "几",
+    "岁"
+   ],
+   "np": "hoiTuoi"
+  },
+  {
+   "han": "你爸爸多大？",
+   "py": "Nǐ bàba duō dà?",
+   "viet": "Bố bạn bao nhiêu tuổi?",
+   "tu": [
+    "爸爸",
+    "多",
+    "大"
+   ],
+   "np": "hoiTuoi"
+  },
+  {
+   "han": "你奶奶多大年纪？",
+   "py": "Nǐ nǎinai duō dà niánjì?",
+   "viet": "Bà nội bạn bao nhiêu tuổi?",
+   "tu": [
+    "多",
+    "大",
+    "年纪"
+   ],
+   "np": "hoiTuoi"
+  },
+  {
+   "han": "你女儿多大了？",
+   "py": "Nǐ nǚ'ér duō dà le?",
+   "viet": "Con gái anh bao nhiêu tuổi rồi?",
+   "tu": [
+    "女儿",
+    "多",
+    "大"
+   ],
+   "np": "hoiTuoi"
+  },
+  {
+   "han": "我是学生，你呢？",
+   "py": "Wǒ shì xué·shēng, nǐ ne?",
+   "viet": "Tôi là học sinh, còn bạn?",
+   "tu": [
+    "呢"
+   ],
+   "np": "ne"
+  },
+  {
+   "han": "我今年二十岁，你呢？",
+   "py": "Wǒ jīnnián èrshí suì, nǐ ne?",
+   "viet": "Năm nay tôi hai mươi tuổi, còn bạn?",
+   "tu": [
+    "今年",
+    "岁",
+    "呢"
+   ],
+   "np": "ne"
+  },
+  {
+   "han": "我没有孩子，你呢？",
+   "py": "Wǒ méi·yǒu háizi, nǐ ne?",
+   "viet": "Tôi chưa có con, còn bạn?",
+   "tu": [
+    "没有",
+    "孩子",
+    "呢"
+   ],
+   "np": "ne"
+  },
+  {
+   "han": "我有两个孩子，你呢？",
+   "py": "Wǒ yǒu liǎng ge háizi, nǐ ne?",
+   "viet": "Tôi có hai đứa con, còn bạn?",
+   "tu": [
+    "有",
+    "两",
+    "个",
+    "孩子",
+    "呢"
+   ],
+   "np": "ne"
+  },
+  {
+   "han": "妈妈，我的猫呢？",
+   "py": "Māma, wǒ de māo ne?",
+   "viet": "Mẹ ơi, con mèo của con đâu ạ?",
+   "tu": [
+    "妈妈",
+    "呢"
+   ],
+   "np": "ne"
+  },
+  {
+   "han": "我丈夫是中文老师。",
+   "py": "Wǒ zhàngfu shì Zhōngwén lǎoshī.",
+   "viet": "Chồng tôi là giáo viên tiếng Trung.",
+   "tu": [
+    "丈夫"
+   ]
+  },
+  {
+   "han": "她丈夫工作很忙。",
+   "py": "Tā zhàngfu gōngzuò hěn máng.",
+   "viet": "Chồng cô ấy công việc rất bận.",
+   "tu": [
+    "丈夫"
+   ]
+  },
+  {
+   "han": "刘明的妻子是中国人。",
+   "py": "Liú Míng de qīzi shì Zhōngguó rén.",
+   "viet": "Vợ của Lưu Minh là người Trung Quốc.",
+   "tu": [
+    "妻子"
+   ]
+  },
+  {
+   "han": "他妻子今年三十岁。",
+   "py": "Tā qīzi jīnnián sānshí suì.",
+   "viet": "Vợ anh ấy năm nay ba mươi tuổi.",
+   "tu": [
+    "他",
+    "妻子",
+    "今年",
+    "岁"
+   ]
+  },
+  {
+   "han": "我老公今年三十五岁。",
+   "py": "Wǒ lǎogōng jīnnián sānshíwǔ suì.",
+   "viet": "Chồng tôi năm nay ba mươi lăm tuổi.",
+   "tu": [
+    "老公",
+    "今年",
+    "岁"
+   ]
+  },
+  {
+   "han": "你老公做什么工作？",
+   "py": "Nǐ lǎogōng zuò shénme gōngzuò?",
+   "viet": "Chồng bạn làm nghề gì?",
+   "tu": [
+    "老公"
+   ]
+  },
+  {
+   "han": "我老婆很忙。",
+   "py": "Wǒ lǎopo hěn máng.",
+   "viet": "Vợ tôi rất bận.",
+   "tu": [
+    "老婆"
+   ]
+  },
+  {
+   "han": "你老婆是中国人吗？",
+   "py": "Nǐ lǎopo shì Zhōngguó rén ma?",
+   "viet": "Vợ bạn là người Trung Quốc à?",
+   "tu": [
+    "老婆"
+   ]
+  },
+  {
+   "han": "我的同事是越南人。",
+   "py": "Wǒ de tóngshì shì Yuènán rén.",
+   "viet": "Đồng nghiệp của tôi là người Việt Nam.",
+   "tu": [
+    "同事"
+   ]
+  },
+  {
+   "han": "我有两个中国同事。",
+   "py": "Wǒ yǒu liǎng ge Zhōngguó tóngshì.",
+   "viet": "Tôi có hai đồng nghiệp người Trung Quốc.",
+   "tu": [
+    "有",
+    "两",
+    "个",
+    "同事"
+   ]
+  },
+  {
+   "han": "王一雪和杨同乐是同事。",
+   "py": "Wáng Yīxuě hé Yáng Tónglè shì tóngshì.",
+   "viet": "Vương Nhất Tuyết và Dương Đồng Lạc là đồng nghiệp.",
+   "tu": [
+    "和",
+    "同事"
+   ]
+  },
+  {
+   "han": "那两个女孩子是我的学生。",
+   "py": "Nà liǎng ge nǚháizi shì wǒ de xué·shēng.",
+   "viet": "Hai cô bé kia là học sinh của tôi.",
+   "tu": [
+    "两",
+    "个",
+    "女孩子"
+   ]
+  },
+  {
+   "han": "这两个男孩子是我的学生。",
+   "py": "Zhè liǎng ge nánháizi shì wǒ de xué·shēng.",
+   "viet": "Hai cậu bé này là học sinh của tôi.",
+   "tu": [
+    "两",
+    "个",
+    "男孩子"
+   ]
+  },
+  {
+   "han": "那个男孩子是我哥哥的儿子。",
+   "py": "Nà ge nánháizi shì wǒ gēge de érzi.",
+   "viet": "Cậu bé kia là con trai của anh trai tôi.",
+   "tu": [
+    "个",
+    "男孩子",
+    "哥哥",
+    "儿子"
+   ]
+  },
+  {
+   "han": "那个女孩子今年八岁。",
+   "py": "Nà ge nǚháizi jīnnián bā suì.",
+   "viet": "Cô bé kia năm nay tám tuổi.",
+   "tu": [
+    "个",
+    "女孩子",
+    "今年",
+    "岁"
+   ]
+  },
+  {
+   "han": "这个学生有两千个朋友。",
+   "py": "Zhè ge xué·shēng yǒu liǎngqiān ge péngyou.",
+   "viet": "Học sinh này có hai nghìn người bạn.",
+   "tu": [
+    "个",
+    "有",
+    "两",
+    "千"
+   ]
+  },
+  {
+   "han": "我们有一万个学生。",
+   "py": "Wǒmen yǒu yíwàn ge xué·shēng.",
+   "viet": "Chúng tôi có một vạn học sinh.",
+   "tu": [
+    "有",
+    "万",
+    "个"
+   ]
+  },
+  {
+   "han": "我们有三百个学生。",
+   "py": "Wǒmen yǒu sānbǎi ge xué·shēng.",
+   "viet": "Chúng tôi có ba trăm học sinh.",
+   "tu": [
+    "有",
+    "百",
+    "个"
+   ]
+  },
+  {
+   "han": "他们有一千个学生。",
+   "py": "Tāmen yǒu yìqiān ge xué·shēng.",
+   "viet": "Họ có một nghìn học sinh.",
+   "tu": [
+    "有",
+    "千",
+    "个"
+   ]
+  },
+  {
+   "han": "我的朋友不少。",
+   "py": "Wǒ de péngyou bù shǎo.",
+   "viet": "Bạn bè tôi không ít.",
+   "tu": [
+    "少"
+   ]
+  },
+  {
+   "han": "这个老师的学生很少。",
+   "py": "Zhè ge lǎoshī de xué·shēng hěn shǎo.",
+   "viet": "Học sinh của thầy/cô này rất ít.",
+   "tu": [
+    "个",
+    "少"
+   ]
+  },
+  {
+   "han": "这位老师是我的妈妈。",
+   "py": "Zhè wèi lǎoshī shì wǒ de māma.",
+   "viet": "Vị thầy/cô này là mẹ tôi.",
+   "tu": [
+    "位",
+    "妈妈"
+   ]
+  },
+  {
+   "han": "那位老师是哪国人？",
+   "py": "Nà wèi lǎoshī shì nǎ guó rén?",
+   "viet": "Vị thầy/cô kia là người nước nào?",
+   "tu": [
+    "位"
+   ]
+  },
+  {
+   "han": "我学中文一年了。",
+   "py": "Wǒ xué Zhōngwén yì nián le.",
+   "viet": "Tôi học tiếng Trung được một năm rồi.",
+   "tu": [
+    "年"
+   ]
+  },
+  {
+   "han": "去年我十九岁。",
+   "py": "Qùnián wǒ shíjiǔ suì.",
+   "viet": "Năm ngoái tôi mười chín tuổi.",
+   "tu": [
+    "去年",
+    "岁"
+   ]
+  },
+  {
+   "han": "她去年去越南了。",
+   "py": "Tā qùnián qù Yuènán le.",
+   "viet": "Năm ngoái cô ấy đã đi Việt Nam.",
+   "tu": [
+    "去年"
+   ]
+  },
+  {
+   "han": "明年我想去中国。",
+   "py": "Míngnián wǒ xiǎng qù Zhōngguó.",
+   "viet": "Năm sau tôi muốn đi Trung Quốc.",
+   "tu": [
+    "明年"
+   ]
+  },
+  {
+   "han": "他们明年想去中国。",
+   "py": "Tāmen míngnián xiǎng qù Zhōngguó.",
+   "viet": "Năm sau họ muốn đi Trung Quốc.",
+   "tu": [
+    "明年"
+   ]
+  },
+  {
+   "han": "这是我的家人。",
+   "py": "Zhè shì wǒ de jiārén.",
+   "viet": "Đây là người nhà của tôi.",
+   "tu": [
+    "家人"
+   ]
+  },
+  {
+   "han": "你的家人好吗？",
+   "py": "Nǐ de jiārén hǎo ma?",
+   "viet": "Người nhà của bạn có khỏe không?",
+   "tu": [
+    "家人"
+   ]
+  },
+  {
+   "han": "我和妹妹是学生。",
+   "py": "Wǒ hé mèimei shì xué·shēng.",
+   "viet": "Tôi và em gái là học sinh.",
+   "tu": [
+    "和",
+    "妹妹"
+   ]
+  },
+  {
+   "han": "爸爸和妈妈工作很忙。",
+   "py": "Bàba hé māma gōngzuò hěn máng.",
+   "viet": "Bố và mẹ công việc rất bận.",
+   "tu": [
+    "爸爸",
+    "和",
+    "妈妈"
+   ]
+  },
+  {
+   "han": "我有一个儿子。",
+   "py": "Wǒ yǒu yí ge érzi.",
+   "viet": "Tôi có một con trai.",
+   "tu": [
+    "有",
+    "个",
+    "儿子"
+   ]
+  },
+  {
+   "han": "她儿子是中文老师。",
+   "py": "Tā érzi shì Zhōngwén lǎoshī.",
+   "viet": "Con trai bà ấy là giáo viên tiếng Trung.",
+   "tu": [
+    "儿子"
+   ]
+  },
+  {
+   "han": "我女儿是学生。",
+   "py": "Wǒ nǚ'ér shì xué·shēng.",
+   "viet": "Con gái tôi là học sinh.",
+   "tu": [
+    "女儿"
+   ]
+  },
+  {
+   "han": "你的孩子几岁了？",
+   "py": "Nǐ de háizi jǐ suì le?",
+   "viet": "Con của bạn mấy tuổi rồi?",
+   "tu": [
+    "孩子",
+    "几",
+    "岁"
+   ]
+  },
+  {
+   "han": "他们的孩子很好。",
+   "py": "Tāmen de háizi hěn hǎo.",
+   "viet": "Con của họ rất ngoan.",
+   "tu": [
+    "孩子"
+   ]
+  },
+  {
+   "han": "她今年九岁了。",
+   "py": "Tā jīnnián jiǔ suì le.",
+   "viet": "Năm nay cô bé chín tuổi rồi.",
+   "tu": [
+    "今年",
+    "岁"
+   ]
+  },
+  {
+   "han": "他是我的丈夫。",
+   "py": "Tā shì wǒ de zhàngfu.",
+   "viet": "Anh ấy là chồng tôi.",
+   "tu": [
+    "他",
+    "丈夫"
+   ]
+  },
+  {
+   "han": "他今年多大？",
+   "py": "Tā jīnnián duō dà?",
+   "viet": "Năm nay anh ấy bao nhiêu tuổi?",
+   "tu": [
+    "他",
+    "今年",
+    "多",
+    "大"
+   ]
+  },
+  {
+   "han": "今年我二十五岁。",
+   "py": "Jīnnián wǒ èrshíwǔ suì.",
+   "viet": "Năm nay tôi hai mươi lăm tuổi.",
+   "tu": [
+    "今年",
+    "岁"
+   ]
+  },
+  {
+   "han": "我的同事很多。",
+   "py": "Wǒ de tóngshì hěn duō.",
+   "viet": "Đồng nghiệp của tôi rất nhiều.",
+   "tu": [
+    "同事",
+    "多"
+   ]
+  },
+  {
+   "han": "他的学生不多。",
+   "py": "Tā de xué·shēng bù duō.",
+   "viet": "Học sinh của anh ấy không nhiều.",
+   "tu": [
+    "他",
+    "多"
+   ]
+  },
+  {
+   "han": "我爸爸今年五十岁。",
+   "py": "Wǒ bàba jīnnián wǔshí suì.",
+   "viet": "Bố tôi năm nay năm mươi tuổi.",
+   "tu": [
+    "爸爸",
+    "今年",
+    "岁"
+   ]
+  },
+  {
+   "han": "我妈妈是中国人。",
+   "py": "Wǒ māma shì Zhōngguó rén.",
+   "viet": "Mẹ tôi là người Trung Quốc.",
+   "tu": [
+    "妈妈"
+   ]
+  },
+  {
+   "han": "我妹妹今年十岁。",
+   "py": "Wǒ mèimei jīnnián shí suì.",
+   "viet": "Em gái tôi năm nay mười tuổi.",
+   "tu": [
+    "妹妹",
+    "今年",
+    "岁"
+   ]
+  },
+  {
+   "han": "我哥哥有一个女儿。",
+   "py": "Wǒ gēge yǒu yí ge nǚ'ér.",
+   "viet": "Anh trai tôi có một con gái.",
+   "tu": [
+    "哥哥",
+    "有",
+    "个",
+    "女儿"
+   ]
+  },
+  {
+   "han": "他有一个女朋友。",
+   "py": "Tā yǒu yí ge nǚpéngyou.",
+   "viet": "Anh ấy có một người bạn gái.",
+   "tu": [
+    "他",
+    "有",
+    "个"
+   ]
+  },
+  {
+   "han": "他爷爷今年一百零一岁。",
+   "py": "Tā yéye jīnnián yìbǎi líng yī suì.",
+   "viet": "Ông nội anh ấy năm nay một trăm lẻ một tuổi.",
+   "tu": [
+    "他",
+    "今年",
+    "百",
+    "零",
+    "岁"
+   ],
+   "np": "so"
+  },
+  {
+   "han": "那个国家有两万个中国学生。",
+   "py": "Nà ge guójiā yǒu liǎngwàn ge Zhōngguó xué·shēng.",
+   "viet": "Nước kia có hai vạn học sinh Trung Quốc.",
+   "tu": [
+    "个",
+    "有",
+    "两",
+    "万"
+   ]
+  },
+  {
+   "han": "她学汉语三年了。",
+   "py": "Tā xué Hànyǔ sān nián le.",
+   "viet": "Cô ấy học tiếng Trung được ba năm rồi.",
+   "tu": [
+    "年"
+   ]
+  },
+  {
+   "han": "明年是哪一年？",
+   "py": "Míngnián shì nǎ yì nián?",
+   "viet": "Năm sau là năm nào?",
+   "tu": [
+    "明年",
+    "年"
+   ]
+  },
+  {
+   "han": "王一雪的爷爷多大年纪？",
+   "py": "Wáng Yīxuě de yéye duō dà niánjì?",
+   "viet": "Ông nội của Vương Nhất Tuyết bao nhiêu tuổi?",
+   "tu": [
+    "多",
+    "大",
+    "年纪"
+   ],
+   "np": "hoiTuoi"
+  },
+  {
+   "han": "我家有五口人，你家呢？",
+   "py": "Wǒ jiā yǒu wǔ kǒu rén, nǐ jiā ne?",
+   "viet": "Nhà tôi có năm người, còn nhà bạn?",
+   "tu": [
+    "家",
+    "有",
+    "口",
+    "呢"
+   ]
+  },
+  {
+   "han": "你家有几个孩子？",
+   "py": "Nǐ jiā yǒu jǐ ge háizi?",
+   "viet": "Nhà bạn có mấy đứa con?",
+   "tu": [
+    "家",
+    "有",
+    "几",
+    "个",
+    "孩子"
+   ]
+  }
+ ],
+ "hoiThoai": [
+  {
+   "ten": "Hỏi về gia đình",
+   "luot": [
+    {
+     "han": "你家有几口人？",
+     "py": "Nǐ jiā yǒu jǐ kǒu rén?",
+     "viet": "Nhà bạn có mấy người?"
+    },
+    {
+     "han": "我家有四口人。你家呢？",
+     "py": "Wǒ jiā yǒu sì kǒu rén. Nǐ jiā ne?",
+     "viet": "Nhà mình có bốn người. Còn nhà bạn?"
+    },
+    {
+     "han": "我家有三口人，爸爸、妈妈和我。",
+     "py": "Wǒ jiā yǒu sān kǒu rén, bàba, māma hé wǒ.",
+     "viet": "Nhà mình có ba người: bố, mẹ và mình."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我有两个哥哥。",
+      "py": "Wǒ yǒu liǎng ge gēge."
+     },
+     {
+      "han": "我是越南人。",
+      "py": "Wǒ shì Yuènán rén."
+     },
+     {
+      "han": "我很忙。",
+      "py": "Wǒ hěn máng."
+     }
+    ],
+    "2": [
+     {
+      "han": "我没有哥哥。",
+      "py": "Wǒ méi·yǒu gēge."
+     },
+     {
+      "han": "我是学生。",
+      "py": "Wǒ shì xué·shēng."
+     },
+     {
+      "han": "我哥哥很忙。",
+      "py": "Wǒ gēge hěn máng."
+     }
+    ]
+   },
+   "chang": "2"
+  },
+  {
+   "ten": "Hỏi tuổi con",
+   "luot": [
+    {
+     "han": "这是您女儿吗？",
+     "py": "Zhè shì nín nǚ'ér ma?",
+     "viet": "Đây là con gái chị à?"
+    },
+    {
+     "han": "是的，这是我女儿。",
+     "py": "Shì de, zhè shì wǒ nǚ'ér.",
+     "viet": "Đúng vậy, đây là con gái tôi."
+    },
+    {
+     "han": "她几岁了？",
+     "py": "Tā jǐ suì le?",
+     "viet": "Cháu mấy tuổi rồi?"
+    },
+    {
+     "han": "她今年六岁了。",
+     "py": "Tā jīnnián liù suì le.",
+     "viet": "Năm nay cháu sáu tuổi rồi."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我今年三十岁。",
+      "py": "Wǒ jīnnián sānshí suì."
+     },
+     {
+      "han": "我是老师。",
+      "py": "Wǒ shì lǎoshī."
+     },
+     {
+      "han": "我家有三口人。",
+      "py": "Wǒ jiā yǒu sān kǒu rén."
+     }
+    ],
+    "3": [
+     {
+      "han": "我有一个女儿。",
+      "py": "Wǒ yǒu yí ge nǚ'ér."
+     },
+     {
+      "han": "她是学生。",
+      "py": "Tā shì xué·shēng."
+     },
+     {
+      "han": "她很好。",
+      "py": "Tā hěn hǎo."
+     }
+    ]
+   },
+   "chang": "3"
+  },
+  {
+   "ten": "Hỏi về con cái",
+   "luot": [
+    {
+     "han": "你有孩子吗？",
+     "py": "Nǐ yǒu háizi ma?",
+     "viet": "Anh có con chưa?"
+    },
+    {
+     "han": "有，我有两个孩子。",
+     "py": "Yǒu, wǒ yǒu liǎng ge háizi.",
+     "viet": "Có, tôi có hai đứa con."
+    },
+    {
+     "han": "几个儿子？几个女儿？",
+     "py": "Jǐ ge érzi? Jǐ ge nǚ'ér?",
+     "viet": "Mấy con trai? Mấy con gái?"
+    },
+    {
+     "han": "一个儿子，一个女儿。",
+     "py": "Yí ge érzi, yí ge nǚ'ér.",
+     "viet": "Một con trai, một con gái."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我是老师。",
+      "py": "Wǒ shì lǎoshī."
+     },
+     {
+      "han": "他是我的同事。",
+      "py": "Tā shì wǒ de tóngshì."
+     },
+     {
+      "han": "我今年三十岁。",
+      "py": "Wǒ jīnnián sānshí suì."
+     }
+    ],
+    "3": [
+     {
+      "han": "我今年三十岁。",
+      "py": "Wǒ jīnnián sānshí suì."
+     },
+     {
+      "han": "他们是学生。",
+      "py": "Tāmen shì xué·shēng."
+     },
+     {
+      "han": "我没有哥哥。",
+      "py": "Wǒ méi·yǒu gēge."
+     }
+    ]
+   },
+   "chang": "3"
+  }
+ ]
+}

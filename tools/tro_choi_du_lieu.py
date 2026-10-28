@@ -46,7 +46,8 @@ def ngoai_von(txt, b):   # chữ Hán ngoài vốn đã học (bộ thủ, thàn
 KET_CAU_THEM = {'请': 'trái – phải', '忙': 'trái – phải', '的': 'trái – phải', '谁': 'trái – phải', '岁': 'trên – dưới', '爸': 'trên – dưới', '姐': 'trái – phải',
                 '奶': 'trái – phải', '南': 'trên – dưới', '国': 'bao toàn bộ (囗 bao quanh)', '是': 'trên – dưới',
                 '起': 'nửa bao (走 bao trái và dưới)', '越': 'nửa bao (走 bao trái và dưới)', '没': 'trái – phải',
-                '我': 'trái – phải', '它': 'trên – dưới', '名': 'trên – dưới', '美': 'trên – dưới'}
+                '我': 'trái – phải', '它': 'trên – dưới', '名': 'trên – dưới', '美': 'trên – dưới',
+                '第': 'trên – dưới', '和': 'trái – phải'}
 
 # ---------- Nghĩa: tách cụm nghĩa (cùng cách với web) ----------
 def gon(s): return re.sub(r'\s+', ' ', re.sub(r'[^\w ]', ' ', unicodedata.normalize('NFC', s))).strip()
