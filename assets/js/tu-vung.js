@@ -47,8 +47,9 @@
     try { return cauTaoHTML0(w); } finally { CT = CT0; }
   }
   function cauTaoHTML0(w) {
-    // Trang bài học: chỉ chữ MỚI của từ (đúng những chữ có ô thuận bút) — chữ lặp trong bài hoặc đã học ở bài trước không hiện lại
-    var chu = Array.from(new Set(Array.from(w.han))).filter(function (c) { return CT.chu[c] && (!MOT_KHO || (w.but || '').indexOf(c) >= 0); });
+    // Chỉ hiện cấu tạo của chữ MỚI (đúng những chữ có ô thuận bút): chữ đã có cấu tạo ở chữ / từ phía trước thì không lặp lại.
+    // Trang bài: tính theo bài và các bài trước; Thư viện: tính theo thứ tự kho HSK 1 → 7–9 (cột "Thuận bút" đã là chữ mới). Chốt 28/10/2026.
+    var chu = Array.from(new Set(Array.from(w.han))).filter(function (c) { return CT.chu[c] && (w.but || '').indexOf(c) >= 0; });
     if (!chu.length) return '';
     var ghi = {};
     var dong = chu.map(function (c) {
