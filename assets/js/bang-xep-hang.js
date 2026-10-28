@@ -31,11 +31,20 @@
   function taiDsBai() {                                       // danh sách mã bài lấy từ dữ liệu đang có
     fetch(API + '?action=lessons').then(function (r) { return r.json(); }).then(function (d) {
       if (!d.ok) return;
-      var ds = d.lessons.map(function (x) { return x.lesson; }); if (macDinh && ds.indexOf(macDinh) < 0) ds.unshift(macDinh);
+      // Chỉ liệt kê bài của cùng chương trình với trang (HSK 2.0: mã "h2-…"; HSK 3.0: mã không có tiền tố), bỏ mã trò chơi (có trang riêng)
+      var h2 = /^h2-/.test(macDinh);
+      var ds = d.lessons.map(function (x) { return x.lesson; })
+        .filter(function (l) { return /^h2-/.test(l) === h2 && !/-tro-choi-/.test(l); }).sort(thuTu);
+      if (macDinh && ds.indexOf(macDinh) < 0) ds.unshift(macDinh);
       var ten = {}; d.lessons.forEach(function (x) { ten[x.lesson] = x.lessonTitle; });
       selBai.innerHTML = ds.map(function (l) { return '<option value="' + esc(l) + '">' + esc(l) + (ten[l] ? ' · ' + esc(ten[l]) : '') + '</option>'; }).join('');
       selBai.value = macDinh || ds[0];
     }).catch(function () {});
+  }
+  function thuTu(a, b) {                                     // theo số bài, rồi Test đầu giờ → Ôn tập → Bài tập
+    var so = function (l) { var m = l.match(/bai(\d+)/); return m ? +m[1] : 0; };
+    var loai = function (l) { return /test-dau-gio/.test(l) ? 0 : /on-tap/.test(l) ? 1 : 2; };
+    return so(a) - so(b) || loai(a) - loai(b) || (a < b ? -1 : a > b ? 1 : 0);
   }
   function hon(a, b) {                                        // a tốt hơn b? điểm → chuỗi đúng → thời gian → nộp sớm
     if (+a.score !== +b.score) return +a.score > +b.score;

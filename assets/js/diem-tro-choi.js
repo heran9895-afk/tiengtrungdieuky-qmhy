@@ -55,7 +55,9 @@
         khu.innerHTML = '<p class="dd-bao ok">✅ Đã lưu điểm (lượt ' + d.attemptNo + ').' + (o.linkBxh ? ' <a href="' + esc(o.linkBxh) + '">Xem Bảng xếp hạng ›</a>' : '') + '</p>';
       })
       .catch(function (e) {
-        khu.innerHTML = '<p class="dd-bao loi">⚠️ Chưa lưu được điểm: ' + esc(e.message || 'lỗi mạng') + '</p><button type="button" class="btn dd-lai">Gửi lại</button>';
+        var m = e.message || 'lỗi mạng';
+        if (/không hợp lệ/.test(m)) m += ' — máy chủ điểm đang chạy bản cũ, giáo viên cần triển khai phiên bản mới của Apps Script (2026-10-28a)';
+        khu.innerHTML = '<p class="dd-bao loi">⚠️ Chưa lưu được điểm: ' + esc(m) + '</p><button type="button" class="btn dd-lai">Gửi lại</button>';
         khu.querySelector('.dd-lai').addEventListener('click', function () { gui(o, khu); });
       });
   }
