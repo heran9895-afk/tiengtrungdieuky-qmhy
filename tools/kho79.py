@@ -122,7 +122,7 @@ def py_moi_cach(c):
 def so_han(s):
     return HAN.findall(s)
 
-OK_AM = {('教', 'jiao', 1), ('片', 'pian', 4), ('卷', 'juan', 3), ('觉', 'jiao', 4), ('长', 'chang', 2), ('都', 'dou', 1), ('地', 'de', 0), ('谁', 'shei', 2), ('了', 'le', 0), ('得', 'de', 0), ('着', 'zhe', 0), ('为', 'wei', 4), ('为', 'wei', 2), ('更', 'geng', 4), ('处', 'chu', 4), ('肚', 'du', 4), ('当', 'dang', 1), ('的', 'de', 0), ('和', 'he', 2)}
+OK_AM = {('教', 'jiao', 1), ('片', 'pian', 4), ('卷', 'juan', 3), ('觉', 'jiao', 4), ('长', 'chang', 2), ('都', 'dou', 1), ('地', 'de', 0), ('谁', 'shei', 2), ('了', 'le', 0), ('得', 'de', 0), ('着', 'zhe', 0), ('为', 'wei', 4), ('为', 'wei', 2), ('更', 'geng', 4), ('处', 'chu', 4), ('肚', 'du', 4), ('当', 'dang', 1), ('的', 'de', 0), ('和', 'he', 2), ('发', 'fa', 1), ('汗', 'han', 4), ('场', 'chang', 3)}
 
 def kiem_py(han, py, nhan, canh):
     chu = so_han(han)
@@ -193,7 +193,7 @@ def cat(s, lv):
         _jieba = jieba
     return [t for t in _jieba.cut(re.sub(r'[%s\s]' % DAU, '', s)) if t]
 
-BO_TACH = {'不理', '都会', '以', '不知'}   # jieba cắt nhầm (不理解, 都会去)
+BO_TACH = {'不理', '都会', '以', '不知', '从来不', '好心', '有机'}   # jieba cắt nhầm (不理解, 都会去)
 DA_AM = {'好好': '毫好', '一场': '一厂', '指甲': '直甲', '待会': '呆会'}
 CAM = ['大夫', '处在', '地上', '和气', '看门诊', '穿着', '结果']          # tránh (bản bàn giao 22/10)
 CAM_PY = ['děi']                                          # 得 děi
@@ -307,6 +307,9 @@ def kiem(ten):
             la2 = [t for t in la if not ghep_duoc(t)]
             if la2 and not moi and not v:
                 canh.append(f'(gợi ý dịch) {nh}: từ ngoài danh sách {la2} — {s}')
+            e.setdefault('_bo', [False, False])
+            if v and not moi and not la2:
+                e['_bo'][n - 1] = True      # câu không có từ mới: khi gộp bỏ nghĩa (luật cô chốt 28/10)
             if moi and not v:
                 canh.append(f'{nh}: có từ 7–9 chưa học {moi} mà chưa dịch — {s}')
             if '儿' in s and not dd and re.search(r'(点|这|那|哪|会|块|一下)儿', s):
@@ -336,7 +339,7 @@ def kiem(ten):
 
 def gop(ten):
     dot, canh = kiem(ten)
-    nang = [c for c in canh if 'gợi ý' not in c]
+    nang = [c for c in canh if 'gợi ý' not in c and not c.startswith('(đa âm)')]
     if nang:
         print('\n'.join(nang))
         sys.exit(f'Còn {len(nang)} cảnh báo, chưa gộp.')
@@ -360,7 +363,7 @@ def gop(ten):
         for n, (s, p, v, dd) in enumerate(e['c'], 1):
             x['Câu %d' % n] = s
             x['Pinyin câu %d' % n] = p
-            if v:
+            if v and not e.get('_bo', [False, False])[n - 1]:
                 x['Nghĩa câu %d' % n] = v
             else:
                 x.pop('Nghĩa câu %d' % n, None)
