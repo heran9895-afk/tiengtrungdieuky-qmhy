@@ -12,7 +12,7 @@
   var PHIEN_BAN = '2026-10-29a', SO_ON = 3, KHOA_HANG = 'qmhy:npHang', KHOA_HS = 'qmhy:hoSo', KHOA_MAY = 'qmhy:maMay';
   var BAI = +el.dataset.bai || 0, MA_BAI = 'bai' + BAI;
   var esc = TV.esc, KHO = null, DD = {}, TEN_NP = {}, CHI_SO_NP = {}, SO_NP = 0, KHO_ON = [], L = null;
-  var TEN_DANG = { chon: '🎯 Chọn đúng', py: '🔤 Chọn phiên âm đúng', dungSai: '✅ Đúng hay sai', hoi: '💬 Hỏi gì để có câu trả lời này?', xep: '🧭 Xếp câu theo nghĩa' };
+  var TEN_DANG = { chon: '🎯 Chọn đúng', py: '🔤 Chọn phiên âm đúng', dungSai: '✅ Đúng hay sai', hoi: '💬 Hỏi gì để có câu trả lời này?', xep: '🧭 Xếp câu, thêm dấu câu' };
 
   // ---------- âm thanh: hiệu ứng tự tạo (Web Audio, như trang Bài tập) + tự đọc câu đúng sau khi trả lời ----------
   var AM = { bat: true, ctx: null }, DAU_CAU = ['，', '。', '？', '！'];
