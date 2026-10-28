@@ -55,6 +55,9 @@
   }
 
   function esc(s) { return String(s || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  // Phiên âm từ mục để hiển thị: dấu li hợp ∥ (phông chữ không có, hiện thành hai vạch xấu) vẽ bằng CSS (.py-lh);
+  // dữ liệu gốc vẫn giữ ∥. Dùng cho mọi chỗ hiện phiên âm của TỪ (không dùng cho câu, cụm — ở đó không có ∥).
+  function pyHtml(s) { return esc(s).replace(/\u2225/g, '<span class="py-lh" title="Từ li hợp: có thể tách ra, chen thành phần vào giữa" aria-hidden="true"></span>'); }
   function boDau(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/\s+/g, ''); }
 
   var KHO = {}, DL = {};                                     // DL: dữ liệu gốc của bài (bộ thủ, chữ ghép…) khi file là đối tượng
@@ -146,7 +149,7 @@
 
   window.QM_TV = {
     ROOT: ROOT, CAP: CAP, tenCap: tenCap, taiCap: taiCap, taiTatCa: taiTatCa, taiCauTao: taiCauTao, KHO: KHO, DL: DL,
-    esc: esc, boDau: boDau, doc: doc, dungDoc: dungDoc, baoLoi: baoLoi, nutLoa: nutLoa,
+    esc: esc, pyHtml: pyHtml, boDau: boDau, doc: doc, dungDoc: dungDoc, baoLoi: baoLoi, nutLoa: nutLoa,
     coNhiHoa: coNhiHoa, GHI_NHI: GHI_NHI, LOA: LOA, coGiong: coGiong
   };
 })();

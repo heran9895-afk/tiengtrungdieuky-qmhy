@@ -848,3 +848,6 @@ body::after{content:"";position:fixed;left:50%;top:56%;width:min(72vw,560px);asp
 .du-lieu p{margin:0 0 10px}
 .du-lieu ul{margin:0 0 10px;padding-left:20px}
 .du-lieu li{margin-bottom:4px}
+
+/* Dấu li hợp ∥ trong phiên âm từ mục: vẽ bằng 2 vạch mảnh (phông pinyin không có ký tự ∥) */
+.py-lh{display:inline-block;width:.22em;height:.78em;margin:0 .1em;border-left:1.5px solid currentColor;border-right:1.5px solid currentColor;opacity:.5;vertical-align:-.04em}

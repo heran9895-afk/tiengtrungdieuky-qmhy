@@ -110,7 +110,7 @@
       return '<div class="tv-the" role="button" tabindex="0" data-i="' + j + '">' +
         nutLoa(w.han, false, w.doc) + (k ? '<span class="tv-the-cap">' + esc(nhanTu(w)) + '</span>' : '') +
         (TD && TD.laKho(w.ma) ? '<span class="tv-sao-nho" title="Từ khó">★</span>' : '') +
-        '<div class="tv-han hanzi">' + esc(w.han) + '</div><div class="tv-py">' + esc(w.py) + '</div>' +
+        '<div class="tv-han hanzi">' + esc(w.han) + '</div><div class="tv-py">' + TV.pyHtml(w.py) + '</div>' +
         '<div class="tv-nghia">' + esc(w.nghia) + '</div></div>';
     }).join('') + (hien.length > soHien ? '<button type="button" class="tv-them">Xem thêm ' + Math.min(MOI_TRANG, hien.length - soHien) + ' từ (còn ' + (hien.length - soHien) + ')</button>' : '');
   }
@@ -168,7 +168,7 @@
       '<div class="tv-fc-the" tabindex="0" role="button" aria-label="Lật thẻ"><div class="tv-fc-trong">' +
         '<div class="tv-fc-mat truoc"><span class="hanzi tv-fc-han">' + esc(w.han) + '</span><small>Bấm vào thẻ để lật</small></div>' +
         '<div class="tv-fc-mat sau"><div class="tv-fc-chu"><span class="hanzi">' + esc(w.han) + '</span>' + nutLoa(w.han, true, w.doc) + '</div>' +
-          '<div class="tv-fc-py">' + esc(w.py) + '</div><div class="tv-fc-nghia">' + esc(w.nghia) + '</div>' +
+          '<div class="tv-fc-py">' + TV.pyHtml(w.py) + '</div><div class="tv-fc-nghia">' + esc(w.nghia) + '</div>' +
           '<div class="tv-the-tag">' + (w.hv ? '<span class="tag gold">Hán Việt: ' + esc(w.hv) + '</span>' : '') + (w.loai ? '<span class="tag">' + esc(w.loai) + '</span>' : '') + '</div>' +
           '<small>Bấm vào thẻ để lật lại</small></div>' +
       '</div></div>' +
@@ -253,7 +253,7 @@
       // Đầu: chữ + loa | pinyin, nghĩa, nhãn
       '<div class="tv-dau">' +
         '<div class="tv-dau-chu"><div class="tv-ct-han hanzi">' + esc(w.han) + '</div>' + nutLoa(w.han, true, w.doc) + '</div>' +
-        '<div class="tv-dau-tt"><div class="tv-ct-py">' + esc(w.py) + '</div>' +
+        '<div class="tv-dau-tt"><div class="tv-ct-py">' + TV.pyHtml(w.py) + '</div>' +
           '<div class="tv-ct-nghia">' + esc(w.nghia) + '</div>' +
           '<div class="tv-the-tag">' + (w.hv ? '<span class="tag gold">Hán Việt: ' + esc(w.hv) + '</span>' : '') +
             (w.loai ? '<span class="tag">' + esc(w.loai) + '</span>' : '') + '<span class="tag red">' + esc(tenCap(w.cap || capDang)) + '</span>' + (MOT_KHO && coMoRong && nhomCua(w) === 'moRong' ? '<span class="tag">Từ mở rộng</span>' : '') + '</div>' +
