@@ -905,3 +905,13 @@ body::after{content:"";position:fixed;left:50%;top:56%;width:min(72vw,560px);asp
 .lnp-hthoai b{font-size:15px;color:var(--muted);margin-right:2px}
 .lnp-goi-y{margin:2px 0 0;font-size:15px;color:var(--muted);font-weight:700}
 .lnp-goi-y b{color:var(--brand);font-size:18px;letter-spacing:.5px}
+.lnp-che-hang{display:flex;justify-content:center;gap:8px;margin-top:10px}
+.lnp-che{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;font:inherit;font-weight:800;font-size:14px;color:var(--muted);cursor:pointer}
+.lnp-che.on{border-color:var(--brand);background:var(--brand);color:#fff}
+.lnp-che:disabled{cursor:default;opacity:.6}
+.lnp-go-goi-y{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:10px 0 8px}
+.lnp-go-goi-y .hanzi{border:1px dashed var(--line);border-radius:10px;padding:3px 10px;font-size:20px;color:var(--brand);background:var(--surface-2)}
+.lnp-go-o{display:block;width:100%;box-sizing:border-box;font-size:22px;padding:10px 12px;border:2px solid var(--line);border-radius:14px;background:#fff;font-family:inherit}
+.lnp-go-o.dung{border-color:var(--ok);background:var(--ok-bg)}.lnp-go-o.sai{border-color:var(--no);background:var(--no-bg)}
+.lnp-go-bao{margin:6px 0 0;font-size:13.5px;font-weight:700;color:var(--no);min-height:0}
+.lnp-ban{margin:6px 0 0;font-size:14px;color:var(--muted)}.lnp-ban .hanzi{font-size:19px;color:var(--no)}

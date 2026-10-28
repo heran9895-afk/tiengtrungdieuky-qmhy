@@ -15,7 +15,7 @@
   var TEN_DANG = { chon: '🎯 Chọn đúng', py: '🔤 Chọn phiên âm đúng', dungSai: '✅ Đúng hay sai', hoi: '💬 Hỏi gì để có câu trả lời này?', xep: '🧭 Xếp câu, thêm dấu câu' };
 
   // ---------- âm thanh: hiệu ứng tự tạo (Web Audio, như trang Bài tập) + tự đọc câu đúng sau khi trả lời ----------
-  var AM = { bat: true, ctx: null }, DAU_CAU = ['，', '。', '？', '！'];
+  var AM = { bat: true, ctx: null }, DAU_CAU = ['，', '。', '？', '！'], KHOA_CHE = 'qmhy:npCheXep';
   try { AM.bat = localStorage.getItem('qm-am-hieu-ung') !== '0'; } catch (e) {}
   var NOT = { dung: [[880, .09], [1318.5, .16]], sai: [[233, .12], [196, .2]], cham: [[660, .045]], dau: [[990, .04]],
     batDau: [[523.3, .07], [784, .12]], xong: [[523.3, .1], [659.3, .1], [784, .1], [1046.5, .28]], xongVua: [[523.3, .12], [659.3, .22]] };
@@ -120,14 +120,26 @@
     } else {                                                  // xep
       var kh = c.khoi.map(function (t, k) { return { t: t, k: k }; }), tt;
       do { tt = tron1(kh); } while (kh.length > 1 && tt.map(function (o) { return o.t; }).join('') === c.khoi.join(''));
-      x.kh = tt; x.dat = [];
+      x.kh = tt; x.dat = []; x.che = docLS(KHOA_CHE, 'bam') === 'go' ? 'go' : 'bam';
       de = '<p class="lnp-hoi">Xếp các khối thành câu đúng, rồi <b>thêm dấu câu</b> vào đúng chỗ.</p>';
-      dap = '<div class="lt-xep-dong lnp-xep-dong"><span class="lt-xep-cho">Bấm các khối bên dưới theo thứ tự</span></div>' +
+      dap = '<div class="lnp-che-hang" role="group" aria-label="Cách làm"><button type="button" class="lnp-che" data-che="bam">🧱 Bấm khối</button><button type="button" class="lnp-che" data-che="go">⌨️ Tự gõ câu</button></div>' +
+        '<div class="lnp-che-go" hidden><div class="lnp-go-goi-y">' + tt.map(function (o) { return '<span class="hanzi">' + esc(o.t) + '</span>'; }).join('') + '</div>' +
+          '<input type="text" class="lt-go-o lnp-go-o" lang="zh-CN" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Gõ cả câu bằng bộ gõ tiếng Trung, có dấu câu">' +
+          '<p class="lnp-go-bao" aria-live="polite"></p>' +
+          '<div class="lt-nut-kq"><button type="button" class="btn solid lnp-go-kt" disabled>Kiểm tra</button></div></div>' +
+        '<div class="lnp-che-bam"><div class="lt-xep-dong lnp-xep-dong"><span class="lt-xep-cho">Bấm các khối bên dưới theo thứ tự</span></div>' +
         '<div class="lt-xep-kho">' + tt.map(function (o, k) { return '<button type="button" class="lt-khoi lnp-khoi" data-k="' + k + '"><span class="hanzi">' + esc(o.t) + '</span></button>'; }).join('') + '</div>' +
         '<div class="lnp-dau-hang"><span>Dấu câu:</span>' + DAU_CAU.map(function (d) { return '<button type="button" class="lnp-dau-nut" data-d="' + d + '" aria-label="Thêm dấu ' + d + '">' + d + '</button>'; }).join('') + '</div>' +
-        '<div class="lt-nut-kq"><button type="button" class="btn lnp-xep-xoa">Xếp lại</button><button type="button" class="btn solid lnp-xep-kt" disabled>Kiểm tra</button></div>';
+        '<div class="lt-nut-kq"><button type="button" class="btn lnp-xep-xoa">Xếp lại</button><button type="button" class="btn solid lnp-xep-kt" disabled>Kiểm tra</button></div></div>';
     }
     el.innerHTML = '<div class="lnp-khung">' + veVach() + '<div class="lt-de lnp-de">' + dau + de + '</div>' + dap + '<div class="lnp-giai" aria-live="polite"></div></div>';
+    if (c.dang === 'xep') doiChe(x.che, true);
+  }
+  function doiChe(che, dau) {                                 // xếp câu: bấm khối hay tự gõ (nhớ lựa chọn trên máy)
+    var x = L.ds[L.i]; x.che = che; ghiLS(KHOA_CHE, che);
+    el.querySelectorAll('.lnp-che').forEach(function (b) { b.classList.toggle('on', b.dataset.che === che); b.setAttribute('aria-pressed', b.dataset.che === che); });
+    el.querySelector('.lnp-che-go').hidden = che !== 'go'; el.querySelector('.lnp-che-bam').hidden = che === 'go';
+    if (che === 'go' && !dau) el.querySelector('.lnp-go-o').focus();
   }
   function veDongXep() {
     var x = L.ds[L.i], dong = el.querySelector('.lnp-xep-dong');
@@ -150,18 +162,20 @@
   function ghiKetQua(x, chon, dung) {
     var c = x.c, deBai = c.dang === 'chon' ? (c.kieu === 'py' ? c.cau + ' [' + c.tu + ']' : c.cau) : c.dang === 'hoi' ? c.dap : c.dang === 'xep' ? c.khoi.join(' / ') : c.cau;
     var dapAn = c.dang === 'dungSai' ? (c.dung ? 'Đúng' : 'Sai') : c.dang === 'hoi' ? c.hoi : c.dang === 'xep' ? c.cau : c.dap;
-    L.kq.push({ stt: L.i + 1, maCau: c.ma, dang: c.dang, kieu: c.kieu || '', np: c.np, dd: c.dd, nguon: x.nguon, baiCau: x.bai,
-      deBai: deBai, dapAn: dapAn, chon: chon, dung: dung ? 1 : 0, giay: Math.round((Date.now() - x.t0) / 100) / 10,
+    L.kq.push({ stt: L.i + 1, maCau: c.ma, dang: c.dang, np: c.np, dd: c.dd, nguon: x.nguon, baiCau: x.bai,
+      deBai: deBai, dapAn: dapAn, chon: chon, dung: dung ? 1 : 0, kieu: c.dang === 'xep' ? (x.che === 'go' ? 'go' : 'bam') : (c.kieu || ''), giay: Math.round((Date.now() - x.t0) / 100) / 10,
       thuTu: (x.pa || (x.kh || []).map(function (o) { return o.t; })).join(' | ') });
   }
   function hienGiai(dung) {
     var x = L.ds[L.i], c = x.c, cd = cauDung(c), dd = DD[c.dd];
     el.querySelector('.lt-de').classList.add('xong');
     el.querySelector('.lnp-giai').innerHTML = '<div class="lnp-giai-o ' + (dung ? 'dung' : 'sai') + '">' +
-      '<div class="lt-ket ' + (dung ? 'dung' : 'sai') + '">' + (dung ? '✓ Đúng rồi!' : x.chiSaiDau ? '✗ Thứ tự đúng rồi, nhưng dấu câu chưa đúng' : '✗ Chưa đúng') + '</div>' +
+      '<div class="lt-ket ' + (dung ? 'dung' : 'sai') + '">' + (dung ? '✓ Đúng rồi!' : x.nuaChieu ? '✗ Dấu câu phải là dấu tiếng Trung (，。？！), không dùng dấu , . ? !' : x.chiSaiDau ? '✗ Thứ tự đúng rồi, nhưng dấu câu chưa đúng' : '✗ Chưa đúng') + '</div>' +
       (c.dang === 'dungSai' && !c.dung ? '<div class="lnp-nhan-nho">Câu đúng:</div>' : '') +
       '<div class="lnp-cau-dung">' + TV.nutLoa(c.dang === 'hoi' ? c.hoi + c.dap : cd[0]) + '<div><div class="hanzi">' + esc(cd[0]) + '</div><div class="lnp-py">' + esc(cd[1]) + '</div></div></div>' +
       (c.gt ? '<p class="lnp-gt">' + dam(c.gt) + '</p>' : dd ? '<p class="lnp-dd">Ghi nhớ: ' + dam(dd.ten) + '</p>' : '') +
+      (c.dang === 'xep' && !dung ? '<p class="lnp-ban">Bạn ' + (x.che === 'go' ? 'gõ' : 'xếp') + ': <span class="hanzi">' + esc(x.cua || '—') + '</span></p>' +
+        '<p class="lt-xep-note">Câu đúng ở trên. Có câu xếp được nhiều cách; thấy câu mình cũng đúng thì hỏi cô nhé.</p>' : '') +
       '</div><div class="lt-nut-kq"><button type="button" class="btn solid lnp-tiep">' + (L.i < L.ds.length - 1 ? 'Câu tiếp ›' : 'Xem kết quả') + '</button></div>';
     var t = el.querySelector('.lnp-tiep'); if (t) t.focus({ preventScroll: true });
     amThanh(dung ? 'dung' : 'sai'); docSau(c.dang === 'hoi' ? c.hoi + c.dap : cd[0]);
@@ -182,12 +196,20 @@
   function chuanCau(s) { return String(s).replace(/！$/, '。'); }      // cuối câu kể: 。 hay ！ đều được
   function boDau(s) { return String(s).replace(/[，。？！]/g, ''); }
   function kiemTraXep() {
-    var x = L.ds[L.i], c = x.c, cua = x.dat.map(function (k) { return typeof k === 'string' ? k : x.kh[k].t; }).join('');
+    var x = L.ds[L.i], c = x.c, cua;
+    if (x.che === 'go') {
+      cua = el.querySelector('.lnp-go-o').value.replace(/\s+/g, '');
+      var bao = el.querySelector('.lnp-go-bao');
+      if (!cua) return;
+      if (/^[A-Za-z\u00C0-\u024F\u1E00-\u1EFF'·,.?!]+$/.test(cua)) { bao.innerHTML = '⌨️ Bạn đang gõ <b>chữ cái Latinh</b>. Hãy bật <b>bộ gõ tiếng Trung (Pinyin)</b> rồi gõ lại, hoặc chọn <b>🧱 Bấm khối</b>.'; return; }
+      x.nuaChieu = /[,.?!]/.test(cua);
+    } else cua = x.dat.map(function (k) { return typeof k === 'string' ? k : x.kh[k].t; }).join('');
+    x.cua = cua;
     var dungCau = [c.cau].concat(c.khac || []);
     var dung = dungCau.some(function (t) { return chuanCau(cua) === chuanCau(t); });
     x.chiSaiDau = !dung && dungCau.some(function (t) { return boDau(cua) === boDau(t); });
-    el.querySelectorAll('.lnp-khoi, .lnp-tren, .lnp-xep-xoa, .lnp-xep-kt, .lnp-dau-nut').forEach(function (b) { b.disabled = true; });
-    el.querySelector('.lnp-xep-dong').classList.add(dung ? 'dung' : 'sai');
+    el.querySelectorAll('.lnp-khoi, .lnp-tren, .lnp-xep-xoa, .lnp-xep-kt, .lnp-dau-nut, .lnp-che, .lnp-go-kt, .lnp-go-o').forEach(function (b) { b.disabled = true; });
+    el.querySelector(x.che === 'go' ? '.lnp-go-o' : '.lnp-xep-dong').classList.add(dung ? 'dung' : 'sai');
     ghiKetQua(x, cua, dung); hienGiai(dung);
   }
 
@@ -263,11 +285,19 @@
     var k = t.closest('.lnp-khoi'); if (k && !k.disabled) { var x = L.ds[L.i]; if (x.dat.indexOf(+k.dataset.k) < 0) { x.dat.push(+k.dataset.k); amThanh('cham'); veDongXep(); } return; }
     var tr = t.closest('.lnp-tren'); if (tr && !tr.disabled) { L.ds[L.i].dat.splice(+tr.dataset.j, 1); amThanh('cham'); return veDongXep(); }
     if (t.closest('.lnp-xep-xoa')) { L.ds[L.i].dat = []; return veDongXep(); }
-    if (t.closest('.lnp-xep-kt')) return kiemTraXep();
+    if (t.closest('.lnp-xep-kt') || t.closest('.lnp-go-kt')) return kiemTraXep();
+    var ch = t.closest('.lnp-che'); if (ch && !ch.disabled) { amThanh('cham'); return doiChe(ch.dataset.che); }
     if (t.closest('.lnp-tiep')) { TV.dungDoc(); amThanh('cham'); if (L.i < L.ds.length - 1) { L.i++; veCau(); veDau(); } else veKetQua(); return; }
     if (t.closest('.lnp-xem-lai')) { var xc = el.querySelector('.lnp-xem-ct'); xc.hidden = !xc.hidden; return; }
     if (t.closest('.lnp-luot-moi')) { dungLuot(); veCau(); veDau(); return; }
     var xt = t.closest('.lnp-xem-the'); if (xt && window.QM_NP) { QM_NP.den(CHI_SO_NP[xt.dataset.np]); return; }
+  });
+  el.addEventListener('input', function (e) {                // ô tự gõ: có chữ mới bật nút Kiểm tra
+    if (!e.target.classList.contains('lnp-go-o')) return;
+    el.querySelector('.lnp-go-kt').disabled = !e.target.value.trim(); el.querySelector('.lnp-go-bao').textContent = '';
+  });
+  el.addEventListener('keydown', function (e) {
+    if (e.target.classList.contains('lnp-go-o') && e.key === 'Enter' && !e.isComposing) { e.preventDefault(); if (e.target.value.trim()) kiemTraXep(); }
   });
   document.addEventListener('keydown', function (e) {
     if (!L || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName) || !el.querySelector('.lnp-khung')) return;
