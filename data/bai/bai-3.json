@@ -3936,7 +3936,7 @@
    {
     "ma": "tai-le",
     "np": "tai",
-    "ten": "不太 không kèm 了",
+    "ten": "不太 + TT là câu trọn ý, không cần 了 như khung 太……了",
     "nguon": "L1"
    },
    {
@@ -4104,8 +4104,8 @@
     "nghia": "Người này có phải là bạn gái của Lý Văn không?",
     "dap": "是不是",
     "nhieu": [
-     "不是",
-     "吗"
+     "吗",
+     "谁"
     ],
     "gt": "Câu không có 吗 ở cuối thì hỏi bằng **是不是**."
    },
@@ -4145,8 +4145,8 @@
     "nghia": "Người phụ nữ kia là ai?",
     "dap": "谁",
     "nhieu": [
-     "吗",
-     "哪"
+     "哪",
+     "还"
     ],
     "gt": "Hỏi \"ai\" dùng **谁**; câu đã có 谁 thì không thêm 吗."
    },
@@ -4191,7 +4191,8 @@
      "那",
      "哪"
     ],
-    "gt": "\"này\" là **这**, \"kia\" là 那, \"nào\" là 哪."
+    "gt": "\"này\" là **这**, \"kia\" là 那, \"nào\" là 哪.",
+    "sau": "这个人是我哥哥。"
    },
    {
     "ma": "b3-zn-gx-2",
@@ -4206,10 +4207,8 @@
      "个",
      "男生",
      "是",
-     "你",
-     "的",
-     "男朋友",
-     "吗"
+     "你的",
+     "男朋友吗"
     ],
     "npPhu": [
      "zhenana",
@@ -4227,8 +4226,8 @@
     "nghia": "Thầy/cô nào là giáo viên tiếng Trung của bạn?",
     "dap": "哪",
     "nhieu": [
-     "那",
-     "这"
+     "谁",
+     "什么"
     ],
     "gt": "Hỏi \"… nào\" dùng **哪 + LT + DT**."
    },
@@ -4258,7 +4257,7 @@
     "dap": "这",
     "nhieu": [
      "哪",
-     "谁"
+     "吗"
     ],
     "gt": "这, 那 **đứng một mình làm chủ ngữ** được: 这是谁？"
    },
@@ -4282,8 +4281,8 @@
     "nghia": "Bạn của bạn là người nước nào?",
     "dap": "哪",
     "nhieu": [
-     "那",
-     "这"
+     "谁",
+     "什么"
     ],
     "gt": "Hỏi quốc tịch: **哪国人**."
    },
@@ -4390,8 +4389,8 @@
     "nghia": "Chúng tôi nhớ bạn quá!",
     "dap": "太",
     "nhieu": [
-     "还",
-     "也"
+     "吗",
+     "的"
     ],
     "gt": "**太 + ĐT tâm lý (想) + 了**: nhớ … quá."
    },
@@ -4430,8 +4429,7 @@
     "nghia": "Chị gái không muốn đi Pháp lắm.",
     "khoi": [
      "姐姐",
-     "不",
-     "太",
+     "不太",
      "想",
      "去",
      "法国"
@@ -4446,26 +4444,20 @@
     "np": "tai",
     "dang": "dungSai",
     "dd": "tai-le",
-    "cau": "我的工作不太忙了。",
-    "py": "Wǒ de gōngzuò bú tài máng le.",
-    "dung": false,
-    "gt": "**不太 + TT** không kèm 了.",
-    "sua": "我的工作不太忙。",
-    "pySua": "Wǒ de gōngzuò bú tài máng.",
-    "nguon": "lưu ý thẻ"
+    "cau": "我的工作不太忙。",
+    "py": "Wǒ de gōngzuò bú tài máng.",
+    "dung": true,
+    "gt": "**不太 + TT** đã trọn ý, không cần thêm 了 như khung 太……了."
    },
    {
     "ma": "b3-tai-le-2",
     "np": "tai",
     "dang": "dungSai",
     "dd": "tai-le",
-    "cau": "姐姐不太高兴了。",
-    "py": "Jiějie bú tài gāoxìng le.",
-    "dung": false,
-    "gt": "**不太 + TT** không kèm 了.",
-    "sua": "姐姐不太高兴。",
-    "pySua": "Jiějie bú tài gāoxìng.",
-    "nguon": "lưu ý thẻ"
+    "cau": "爸爸不太高兴。",
+    "py": "Bàba bú tài gāoxìng.",
+    "dung": true,
+    "gt": "**不太 + TT**: 不太高兴 = không vui lắm, không cần thêm 了."
    },
    {
     "ma": "b3-tai-py-1",
@@ -4544,7 +4536,7 @@
     "nghia": "Ông nội vẫn còn làm việc.",
     "dap": "还",
     "nhieu": [
-     "也",
+     "很",
      "太"
     ],
     "gt": "\"vẫn, còn\" là **还**, đứng sau chủ ngữ."
@@ -4625,20 +4617,18 @@
     "np": "xiang",
     "dang": "xep",
     "dd": "xiang-nho",
-    "cau": "白家月很想她的爸爸妈妈。",
-    "py": "Bái Jiāyuè hěn xiǎng tā de bàba māma.",
-    "nghia": "Bạch Gia Nguyệt rất nhớ bố mẹ của cô ấy.",
+    "cau": "我们很想越南。",
+    "py": "Wǒmen hěn xiǎng Yuènán.",
+    "nghia": "Chúng tôi rất nhớ Việt Nam.",
     "khoi": [
-     "白家月",
+     "我们",
      "很",
      "想",
-     "她",
-     "的",
-     "爸爸妈妈"
+     "越南"
     ],
     "npPhu": [
      "xiang",
-     "de"
+     "hen"
     ]
    },
    {
@@ -4651,7 +4641,7 @@
     "nghia": "Họ muốn đi Thái Lan.",
     "dap": "想",
     "nhieu": [
-     "还",
+     "很",
      "太"
     ],
     "gt": "**想 + ĐT** = muốn làm gì."
@@ -4681,8 +4671,8 @@
     "nghia": "Anh ấy không muốn học tiếng Trung.",
     "dap": "不",
     "nhieu": [
-     "还",
-     "太"
+     "吗",
+     "的"
     ],
     "gt": "Phủ định của 想 là **不想**."
    },

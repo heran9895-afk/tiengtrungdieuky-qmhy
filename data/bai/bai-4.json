@@ -4442,8 +4442,8 @@
     "np": "you",
     "dang": "chon",
     "dd": "you-co",
-    "cau": "王一雪＿两个孩子。",
-    "py": "Wáng Yīxuě yǒu liǎng ge háizi.",
+    "cau": "王一雪＿两个孩子，一个儿子、一个女儿。",
+    "py": "Wáng Yīxuě yǒu liǎng ge háizi, yí ge érzi, yí ge nǚ'ér.",
     "nghia": "Vương Nhất Tuyết có hai người con.",
     "dap": "有",
     "nhieu": [
@@ -4477,8 +4477,8 @@
     "np": "you",
     "dang": "chon",
     "dd": "you-pd",
-    "cau": "我＿有哥哥。",
-    "py": "Wǒ méi·yǒu gēge.",
+    "cau": "我＿有哥哥，我只有一个妹妹。",
+    "py": "Wǒ méi·yǒu gēge, wǒ zhǐ yǒu yí ge mèimei.",
     "nghia": "Tôi không có anh trai.",
     "dap": "没",
     "nhieu": [
@@ -4509,8 +4509,7 @@
      "我",
      "没有",
      "哥哥",
-     "你",
-     "呢"
+     "你呢"
     ],
     "npPhu": [
      "you",
@@ -4612,7 +4611,8 @@
      "三十二",
      "两十三"
     ],
-    "gt": "Đọc theo thứ tự viết: 2 chục 3 → **二十三**; hàng chục dùng 二."
+    "gt": "Đọc theo thứ tự viết: 2 chục 3 → **二十三**; hàng chục dùng 二.",
+    "goiY": "23"
    },
    {
     "ma": "b4-so-99-2",
@@ -4627,7 +4627,8 @@
      "五十四",
      "四五"
     ],
-    "gt": "45 = 4 chục 5 → **四十五**."
+    "gt": "45 = 4 chục 5 → **四十五**.",
+    "goiY": "45"
    },
    {
     "ma": "b4-so-lon-1",
@@ -4642,7 +4643,8 @@
      "三二十",
      "二十三百"
     ],
-    "gt": "Đọc từ hàng lớn tới nhỏ: 3 trăm 2 chục → **三百二十**."
+    "gt": "Đọc từ hàng lớn tới nhỏ: 3 trăm 2 chục → **三百二十**.",
+    "goiY": "320"
    },
    {
     "ma": "b4-so-lon-2",
@@ -4657,7 +4659,8 @@
      "一千五二十八",
      "一五二八"
     ],
-    "gt": "1528 = 一千 + 五百 + 二十 + 八."
+    "gt": "1528 = 一千 + 五百 + 二十 + 八.",
+    "goiY": "1528"
    },
    {
     "ma": "b4-so-ling-1",
@@ -4672,7 +4675,8 @@
      "十",
      "二"
     ],
-    "gt": "Hàng chục trống thì đọc **零**: 108 = 一百零八."
+    "gt": "Hàng chục trống thì đọc **零**: 108 = 一百零八.",
+    "goiY": "108"
    },
    {
     "ma": "b4-so-ling-2",
@@ -4719,7 +4723,8 @@
      "两",
      "第"
     ],
-    "gt": "Hàng chục và hàng đơn vị dùng **二**: 二十二."
+    "gt": "Hàng chục và hàng đơn vị dùng **二**: 二十二.",
+    "goiY": "22"
    },
    {
     "ma": "b4-so-erliang-2",
@@ -4734,7 +4739,8 @@
      "二十",
      "几"
     ],
-    "gt": "2000 thường nói **两千**."
+    "gt": "2000 thường nói **两千**.",
+    "goiY": "2000"
    },
    {
     "ma": "b4-so-1ling-1",
@@ -4749,7 +4755,8 @@
      "零零",
      "百零"
     ],
-    "gt": "Nhiều số 0 liền nhau **chỉ đọc một 零**: 1001 = 一千零一."
+    "gt": "Nhiều số 0 liền nhau **chỉ đọc một 零**: 1001 = 一千零一.",
+    "goiY": "1001"
    },
    {
     "ma": "b4-so-1ling-2",
@@ -4777,7 +4784,8 @@
      "十",
      "零十"
     ],
-    "gt": "110 đọc **一百一十** (khẩu ngữ: 一百一)."
+    "gt": "110 đọc **一百一十** (khẩu ngữ: 一百一).",
+    "goiY": "110"
    },
    {
     "ma": "b4-so-110-2",
@@ -4802,7 +4810,8 @@
      "两千零二十六",
      "二千二十六"
     ],
-    "gt": "Năm đọc **từng chữ số**: 二〇二六年."
+    "gt": "Năm đọc **từng chữ số**: 二〇二六年.",
+    "goiY": "2026"
    },
    {
     "ma": "b4-so-nam-2",
@@ -4944,12 +4953,14 @@
     "khoi": [
      "他",
      "是",
-     "我",
-     "的",
+     "我的",
      "第一",
      "个",
      "中国",
      "朋友"
+    ],
+    "khac": [
+     "我的第一个中国朋友是他。"
     ],
     "npPhu": [
      "di",
@@ -4996,7 +5007,7 @@
     "dap": "多少",
     "nhieu": [
      "几",
-     "什么"
+     "吗"
     ],
     "gt": "Không có lượng từ → chỉ dùng được **多少**; 几 bắt buộc có lượng từ."
    },
@@ -5035,15 +5046,16 @@
     "np": "duoshao",
     "dang": "chon",
     "dd": "ds-ji",
-    "cau": "你家有＿口人？",
-    "py": "Nǐ jiā yǒu jǐ kǒu rén?",
+    "cau": "王老师有＿个学生？",
+    "py": "Wáng lǎoshī yǒu duōshao ge xué·shēng?",
     "nghia": "Nhà bạn có mấy người?",
-    "dap": "几",
+    "dap": "多少",
     "nhieu": [
-     "多少",
+     "几",
      "什么"
     ],
-    "gt": "Số người trong nhà là số nhỏ → **几**."
+    "gt": "Câu trả lời là số lớn (120) → hỏi bằng **多少**; **几** hỏi số nhỏ (thường dưới 10).",
+    "sau": "她有一百二十个学生。"
    },
    {
     "ma": "b4-ds-ji-2",
@@ -5163,15 +5175,16 @@
     "np": "hoiTuoi",
     "dang": "chon",
     "dd": "ht-jisui",
-    "cau": "你弟弟今年＿？",
-    "py": "Nǐ dìdi jīnnián jǐ suì?",
+    "cau": "小朋友，你今年＿？",
+    "py": "Xiǎopéngyou, nǐ jīnnián jǐ suì?",
     "nghia": "Em trai bạn năm nay mấy tuổi?",
     "dap": "几岁",
     "nhieu": [
      "多大年纪",
      "多少"
     ],
-    "gt": "Hỏi tuổi trẻ nhỏ dùng **几岁**."
+    "gt": "Hỏi tuổi trẻ nhỏ dùng **几岁**.",
+    "sau": "我今年五岁。"
    },
    {
     "ma": "b4-ht-jisui-2",
@@ -5201,7 +5214,8 @@
      "多大年纪",
      "多少"
     ],
-    "gt": "Hỏi người cùng lứa dùng **多大**."
+    "gt": "Hỏi người cùng lứa dùng **多大**.",
+    "sau": "我今年二十岁。"
    },
    {
     "ma": "b4-ht-duoda-2",
@@ -5231,7 +5245,8 @@
      "几岁",
      "多少"
     ],
-    "gt": "Hỏi tuổi người cao tuổi dùng **多大年纪**."
+    "gt": "Hỏi tuổi người cao tuổi dùng **多大年纪**.",
+    "sau": "她今年八十岁了。"
    },
    {
     "ma": "b4-ht-nianji-2",
@@ -5380,7 +5395,7 @@
     "nghia": "Mẹ ơi, con mèo của con đâu ạ?",
     "dap": "呢",
     "nhieu": [
-     "吗",
+     "的",
      "几"
     ],
     "gt": "Hỏi người, vật ở đâu: **DT + 呢？**"

@@ -63,6 +63,7 @@ def kiem():
                     else:
                         if it['cau'].count('＿') != 1: loi.append(f'B{n}: số ô trống {it["cau"]}')
                         ck(it['cau'].replace('＿', it['dap']), it['py'], 'chọn')
+                        if it.get('sau'): ck(it['sau'], None, 'câu B')
                         for x in it['nhieu']: ck(x, None, 'nhiễu')
                 elif d == 'dungSai':
                     ck(it['cau'], it['py'], 'đúng/sai')
@@ -73,6 +74,8 @@ def kiem():
                 elif d == 'xep':
                     ck(it['cau'], it['py'], 'xếp')
                     if ''.join(it['khoi']) != ''.join(han(it['cau'])): loi.append(f'B{n}: khối không ghép đúng câu {it["cau"]}')
+                    for k in it.get('khac', []):                     # câu xếp khác vẫn đúng: cùng bộ chữ, có dấu câu cuối
+                        if sorted(han(k)) != sorted(han(it['cau'])) or k[-1] not in '。？！': loi.append(f'B{n}: câu khác không khớp khối {k}')
             for k, v in dem.items():
                 if v < 2: loi.append(f'B{n}: đặc điểm {k} chỉ có {v} câu (cần >= 2)')
             ds[n] = (m.DD[n], cau)

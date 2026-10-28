@@ -2767,8 +2767,10 @@
     "khoi": [
      "安妮",
      "是",
-     "美国",
-     "学生"
+     "美国学生"
+    ],
+    "khac": [
+     "美国学生是安妮。"
     ],
     "npPhu": [
      "shi"
@@ -2789,8 +2791,8 @@
     "np": "shi",
     "dang": "chon",
     "dd": "shi-pd",
-    "cau": "白家月＿日本学生。",
-    "py": "Bái Jiāyuè bú shì Rìběn xué·shēng.",
+    "cau": "我＿日本学生，我是美国学生。",
+    "py": "Wǒ bú shì Rìběn xué·shēng, wǒ shì Měiguó xué·shēng.",
     "nghia": "Bạch Gia Nguyệt không phải là học sinh Nhật Bản.",
     "dap": "不是",
     "nhieu": [
@@ -2819,8 +2821,8 @@
     "nghia": "Xin hỏi, cô có phải là cô Vương không ạ?",
     "dap": "是不是",
     "nhieu": [
-     "不是",
-     "是"
+     "不",
+     "也"
     ],
     "gt": "Hỏi \"có phải … không?\" dùng **是不是**."
    },
@@ -2967,15 +2969,14 @@
     "np": "bu",
     "dang": "xep",
     "dd": "bu-pd",
-    "cau": "陈天中也不认识白家月。",
-    "py": "Chén Tiānzhōng yě bú rènshi Bái Jiāyuè.",
-    "nghia": "Trần Thiên Trung cũng không quen Bạch Gia Nguyệt.",
+    "cau": "李文也不高兴。",
+    "py": "Lǐ Wén yě bù gāoxìng.",
+    "nghia": "Lý Văn cũng không vui.",
     "khoi": [
-     "陈天中",
+     "李文",
      "也",
      "不",
-     "认识",
-     "白家月"
+     "高兴"
     ],
     "npPhu": [
      "ye",
@@ -3024,8 +3025,8 @@
     "nghia": "Tôi là học sinh, Annie cũng là học sinh.",
     "dap": "也",
     "nhieu": [
-     "不",
-     "很"
+     "很",
+     "请"
     ],
     "gt": "\"cũng\" là **也**, đứng sau chủ ngữ, trước động từ."
    },
@@ -3064,8 +3065,8 @@
     "np": "ye",
     "dang": "chon",
     "dd": "ye-vt",
-    "cau": "我们＿不是英国学生。",
-    "py": "Wǒmen yě bú shì Yīngguó xué·shēng.",
+    "cau": "李文不是英国学生，我们＿不是英国学生。",
+    "py": "Lǐ Wén bú shì Yīngguó xué·shēng, wǒmen yě bú shì Yīngguó xué·shēng.",
     "nghia": "Chúng tôi cũng không phải là học sinh Anh.",
     "dap": "也",
     "nhieu": [
@@ -3316,8 +3317,8 @@
     "nghia": "Trung Quốc rất rộng lớn.",
     "dap": "很",
     "nhieu": [
-     "也",
-     "是"
+     "是",
+     "请"
     ],
     "gt": "Tính từ làm vị ngữ đi với **很**, không dùng 是: 中国很大."
    },
@@ -3345,7 +3346,7 @@
     "dap": "很",
     "nhieu": [
      "是",
-     "也"
+     "请"
     ],
     "gt": "Tiếng Việt nói \"tôi khỏe\", tiếng Trung vẫn có **很**: 我很好. Lúc này 很 không nhấn \"rất\"."
    },
@@ -3358,13 +3359,10 @@
     "py": "Wǒmen hěn hǎo, nǐmen yě hěn hǎo.",
     "nghia": "Chúng tôi khỏe, các bạn cũng khỏe.",
     "khoi": [
-     "我们",
-     "很",
-     "好",
+     "我们很好",
      "你们",
      "也",
-     "很",
-     "好"
+     "很好"
     ],
     "npPhu": [
      "hen",
