@@ -2633,5 +2633,744 @@
    "bai": "Bài 1",
    "url": "chuong-trinh-hsk/hsk1/bai-1/tu-vung.html"
   }
+ },
+ "nguPhapLuyen": {
+  "phienBan": "2026-10-29a",
+  "dacDiem": [
+   {
+    "ma": "shi-kd",
+    "np": "shi",
+    "ten": "Khẳng định: A 是 B",
+    "nguon": "y1"
+   },
+   {
+    "ma": "shi-pd",
+    "np": "shi",
+    "ten": "Phủ định: A 不是 B",
+    "nguon": "y2"
+   },
+   {
+    "ma": "shi-hoi",
+    "np": "shi",
+    "ten": "Câu hỏi: A 是不是 B？",
+    "nguon": "y3"
+   },
+   {
+    "ma": "shi-py1",
+    "np": "shi",
+    "ten": "不是 đọc bú shì",
+    "nguon": "L1"
+   },
+   {
+    "ma": "shi-py2",
+    "np": "shi",
+    "ten": "是不是 đọc shì bu shì",
+    "nguon": "L2"
+   },
+   {
+    "ma": "bu-pd",
+    "np": "bu",
+    "ten": "不 đứng trước ĐT / TT để phủ định",
+    "nguon": "y1"
+   },
+   {
+    "ma": "bu-py",
+    "np": "bu",
+    "ten": "不 trước thanh 4 đọc thanh 2",
+    "nguon": "L1"
+   },
+   {
+    "ma": "ye-ng",
+    "np": "ye",
+    "ten": "也 = cũng (người sau giống người trước)",
+    "nguon": "y1"
+   },
+   {
+    "ma": "ye-vt",
+    "np": "ye",
+    "ten": "也 đứng sau chủ ngữ, không đứng đầu câu",
+    "nguon": "L1-L2"
+   },
+   {
+    "ma": "shenme-dt",
+    "np": "shenme",
+    "ten": "ĐT + 什么: hỏi đối tượng của hành động",
+    "nguon": "y1"
+   },
+   {
+    "ma": "shenme-dn",
+    "np": "shenme",
+    "ten": "什么 + DT: hỏi \"… gì\"",
+    "nguon": "y2"
+   },
+   {
+    "ma": "shenme-tl",
+    "np": "shenme",
+    "ten": "Trả lời: thay 什么 bằng thông tin, giữ trật tự câu",
+    "nguon": "L1-L2"
+   },
+   {
+    "ma": "qing-dt",
+    "np": "qing",
+    "ten": "请 + ĐT: mời ai làm gì",
+    "nguon": "y1"
+   },
+   {
+    "ma": "qing-hoi",
+    "np": "qing",
+    "ten": "请问: xin hỏi (cụm cố định, lịch sự hơn 问)",
+    "nguon": "y2-L1-L2"
+   },
+   {
+    "ma": "hen-tt",
+    "np": "hen",
+    "ten": "很 + TT: miêu tả trạng thái, tính chất",
+    "nguon": "y1"
+   },
+   {
+    "ma": "hen-vn",
+    "np": "hen",
+    "ten": "TT làm vị ngữ đi với 很, không dùng 是",
+    "nguon": "L1"
+   },
+   {
+    "ma": "hen-nhe",
+    "np": "hen",
+    "ten": "很 nhạt nghĩa: 我很好 = tôi khỏe",
+    "nguon": "L2"
+   }
+  ],
+  "cau": [
+   {
+    "ma": "b2-shi-kd-1",
+    "np": "shi",
+    "dang": "chon",
+    "dd": "shi-kd",
+    "cau": "我＿老师，你们是学生。",
+    "py": "Wǒ shì lǎoshī, nǐmen shì xué·shēng.",
+    "nghia": "Tôi là giáo viên, các bạn là học sinh.",
+    "dap": "是",
+    "nhieu": [
+     "很",
+     "也"
+    ],
+    "gt": "\"là\" là **是**: A 是 B."
+   },
+   {
+    "ma": "b2-shi-kd-2",
+    "np": "shi",
+    "dang": "xep",
+    "dd": "shi-kd",
+    "cau": "安妮是美国学生。",
+    "py": "Ānnī shì Měiguó xué·shēng.",
+    "nghia": "Annie là học sinh Mỹ.",
+    "khoi": [
+     "安妮",
+     "是",
+     "美国",
+     "学生"
+    ],
+    "npPhu": [
+     "shi"
+    ]
+   },
+   {
+    "ma": "b2-shi-kd-3",
+    "np": "shi",
+    "dang": "dungSai",
+    "dd": "shi-kd",
+    "cau": "我是中国学生。",
+    "py": "Wǒ shì Zhōngguó xué·shēng.",
+    "dung": true,
+    "gt": "A 是 B: tôi là học sinh Trung Quốc."
+   },
+   {
+    "ma": "b2-shi-pd-1",
+    "np": "shi",
+    "dang": "chon",
+    "dd": "shi-pd",
+    "cau": "白家月＿日本学生。",
+    "py": "Bái Jiāyuè bú shì Rìběn xué·shēng.",
+    "nghia": "Bạch Gia Nguyệt không phải là học sinh Nhật Bản.",
+    "dap": "不是",
+    "nhieu": [
+     "是不是",
+     "也"
+    ],
+    "gt": "\"không phải là\" là **不是**."
+   },
+   {
+    "ma": "b2-shi-pd-2",
+    "np": "shi",
+    "dang": "dungSai",
+    "dd": "shi-pd",
+    "cau": "李文不是英国学生。",
+    "py": "Lǐ Wén bú shì Yīngguó xué·shēng.",
+    "dung": true,
+    "gt": "Phủ định của 是 là **不是**."
+   },
+   {
+    "ma": "b2-shi-hoi-1",
+    "np": "shi",
+    "dang": "chon",
+    "dd": "shi-hoi",
+    "cau": "请问，您＿王老师？",
+    "py": "Qǐngwèn, nín shì bu shì Wáng lǎoshī?",
+    "nghia": "Xin hỏi, cô có phải là cô Vương không ạ?",
+    "dap": "是不是",
+    "nhieu": [
+     "不是",
+     "是"
+    ],
+    "gt": "Hỏi \"có phải … không?\" dùng **是不是**."
+   },
+   {
+    "ma": "b2-shi-hoi-2",
+    "np": "shi",
+    "dang": "hoi",
+    "dd": "shi-hoi",
+    "dap": "不是，我是美国学生。",
+    "pyDap": "Bú shì, wǒ shì Měiguó xué·shēng.",
+    "hoi": "你是不是英国学生？",
+    "pyHoi": "Nǐ shì bu shì Yīngguó xué·shēng?",
+    "nhieu": [
+     "你是不是美国学生？",
+     "你叫什么名字？"
+    ],
+    "gt": "Đáp \"không phải, tôi là học sinh Mỹ\" → câu hỏi hỏi một nước **khác** Mỹ."
+   },
+   {
+    "ma": "b2-shi-hoi-3",
+    "np": "shi",
+    "dang": "hoi",
+    "dd": "shi-hoi",
+    "dap": "是，我是王老师。请进！",
+    "pyDap": "Shì, wǒ shì Wáng lǎoshī. Qǐng jìn!",
+    "hoi": "请问，您是不是王老师？",
+    "pyHoi": "Qǐngwèn, nín shì bu shì Wáng lǎoshī?",
+    "nhieu": [
+     "请问，您叫什么名字？",
+     "您说什么？"
+    ],
+    "gt": "Đáp bắt đầu bằng **是** → câu hỏi dạng **是不是**."
+   },
+   {
+    "ma": "b2-shi-hoi-4",
+    "np": "shi",
+    "dang": "xep",
+    "dd": "shi-hoi",
+    "cau": "请问，您是不是王老师？",
+    "py": "Qǐngwèn, nín shì bu shì Wáng lǎoshī?",
+    "nghia": "Xin hỏi, cô có phải là cô Vương không ạ?",
+    "khoi": [
+     "请问",
+     "您",
+     "是不是",
+     "王老师"
+    ],
+    "npPhu": [
+     "qing",
+     "shi"
+    ]
+   },
+   {
+    "ma": "b2-shi-py1-1",
+    "np": "shi",
+    "dang": "chon",
+    "kieu": "py",
+    "dd": "shi-py1",
+    "cau": "我不是老师。",
+    "py": "Wǒ bú shì lǎoshī.",
+    "tu": "不是",
+    "dap": "bú shì",
+    "nhieu": [
+     "bù shì",
+     "bu shì"
+    ],
+    "gt": "不 đứng trước 是 (thanh 4) nên đọc **thanh 2**: bú shì."
+   },
+   {
+    "ma": "b2-shi-py1-2",
+    "np": "shi",
+    "dang": "chon",
+    "kieu": "py",
+    "dd": "shi-py1",
+    "cau": "李文不是日本学生。",
+    "py": "Lǐ Wén bú shì Rìběn xué·shēng.",
+    "tu": "不是",
+    "dap": "bú shì",
+    "nhieu": [
+     "bù shì",
+     "bu shi"
+    ],
+    "gt": "Trong **不是**, 不 đọc thanh 2: bú shì."
+   },
+   {
+    "ma": "b2-shi-py2-1",
+    "np": "shi",
+    "dang": "chon",
+    "kieu": "py",
+    "dd": "shi-py2",
+    "cau": "你是不是学生？",
+    "py": "Nǐ shì bu shì xué·shēng?",
+    "tu": "是不是",
+    "dap": "shì bu shì",
+    "nhieu": [
+     "shì bú shì",
+     "shì bù shì"
+    ],
+    "gt": "Trong **是不是**, 不 đọc **nhẹ**: shì bu shì."
+   },
+   {
+    "ma": "b2-shi-py2-2",
+    "np": "shi",
+    "dang": "chon",
+    "kieu": "py",
+    "dd": "shi-py2",
+    "cau": "您是不是王老师？",
+    "py": "Nín shì bu shì Wáng lǎoshī?",
+    "tu": "是不是",
+    "dap": "shì bu shì",
+    "nhieu": [
+     "shì bú shì",
+     "shī bu shī"
+    ],
+    "gt": "Trong **是不是**, 不 đọc nhẹ, 是 giữ thanh 4: shì bu shì."
+   },
+   {
+    "ma": "b2-bu-pd-1",
+    "np": "bu",
+    "dang": "chon",
+    "dd": "bu-pd",
+    "cau": "我＿叫安妮，我叫白家月。",
+    "py": "Wǒ bú jiào Ānnī, wǒ jiào Bái Jiāyuè.",
+    "nghia": "Tôi không tên là Annie, tôi tên là Bạch Gia Nguyệt.",
+    "dap": "不",
+    "nhieu": [
+     "也",
+     "很"
+    ],
+    "gt": "Phủ định động từ dùng **不 + ĐT**: 不叫."
+   },
+   {
+    "ma": "b2-bu-pd-2",
+    "np": "bu",
+    "dang": "dungSai",
+    "dd": "bu-pd",
+    "cau": "我不吃，也不喝。",
+    "py": "Wǒ bù chī, yě bù hē.",
+    "dung": true,
+    "gt": "不 đứng trước động từ; 也 đứng trước 不."
+   },
+   {
+    "ma": "b2-bu-pd-3",
+    "np": "bu",
+    "dang": "xep",
+    "dd": "bu-pd",
+    "cau": "陈天中也不认识白家月。",
+    "py": "Chén Tiānzhōng yě bú rènshi Bái Jiāyuè.",
+    "nghia": "Trần Thiên Trung cũng không quen Bạch Gia Nguyệt.",
+    "khoi": [
+     "陈天中",
+     "也",
+     "不",
+     "认识",
+     "白家月"
+    ],
+    "npPhu": [
+     "ye",
+     "bu"
+    ]
+   },
+   {
+    "ma": "b2-bu-py-1",
+    "np": "bu",
+    "dang": "chon",
+    "kieu": "py",
+    "dd": "bu-py",
+    "cau": "我不认识白家月。",
+    "py": "Wǒ bú rènshi Bái Jiāyuè.",
+    "tu": "不认识",
+    "dap": "bú rènshi",
+    "nhieu": [
+     "bù rènshi",
+     "bu rènshi"
+    ],
+    "gt": "认 mang **thanh 4** nên 不 đọc **thanh 2**: bú rènshi."
+   },
+   {
+    "ma": "b2-bu-py-2",
+    "np": "bu",
+    "dang": "chon",
+    "kieu": "py",
+    "dd": "bu-py",
+    "cau": "我不吃。",
+    "py": "Wǒ bù chī.",
+    "tu": "不吃",
+    "dap": "bù chī",
+    "nhieu": [
+     "bú chī",
+     "bu chī"
+    ],
+    "gt": "吃 là thanh 1, **không phải thanh 4**, nên 不 giữ **thanh 4**: bù chī."
+   },
+   {
+    "ma": "b2-ye-ng-1",
+    "np": "ye",
+    "dang": "chon",
+    "dd": "ye-ng",
+    "cau": "我是学生，安妮＿是学生。",
+    "py": "Wǒ shì xué·shēng, Ānnī yě shì xué·shēng.",
+    "nghia": "Tôi là học sinh, Annie cũng là học sinh.",
+    "dap": "也",
+    "nhieu": [
+     "不",
+     "很"
+    ],
+    "gt": "\"cũng\" là **也**, đứng sau chủ ngữ, trước động từ."
+   },
+   {
+    "ma": "b2-ye-ng-2",
+    "np": "ye",
+    "dang": "dungSai",
+    "dd": "ye-ng",
+    "cau": "安妮也认识李文。",
+    "py": "Ānnī yě rènshi Lǐ Wén.",
+    "dung": true,
+    "gt": "也 đứng sau chủ ngữ 安妮, trước động từ 认识."
+   },
+   {
+    "ma": "b2-ye-ng-3",
+    "np": "ye",
+    "dang": "xep",
+    "dd": "ye-ng",
+    "cau": "我们老师也很好。",
+    "py": "Wǒmen lǎoshī yě hěn hǎo.",
+    "nghia": "Cô giáo của chúng tôi cũng rất tốt.",
+    "khoi": [
+     "我们",
+     "老师",
+     "也",
+     "很",
+     "好"
+    ],
+    "npPhu": [
+     "ye",
+     "hen"
+    ]
+   },
+   {
+    "ma": "b2-ye-vt-1",
+    "np": "ye",
+    "dang": "chon",
+    "dd": "ye-vt",
+    "cau": "我们＿不是英国学生。",
+    "py": "Wǒmen yě bú shì Yīngguó xué·shēng.",
+    "nghia": "Chúng tôi cũng không phải là học sinh Anh.",
+    "dap": "也",
+    "nhieu": [
+     "很",
+     "是"
+    ],
+    "gt": "**也** đứng sau chủ ngữ, trước **不**: 也不是 = cũng không phải."
+   },
+   {
+    "ma": "b2-ye-vt-2",
+    "np": "ye",
+    "dang": "dungSai",
+    "dd": "ye-vt",
+    "cau": "也我是学生。",
+    "py": "Yě wǒ shì xué·shēng.",
+    "dung": false,
+    "gt": "也 luôn đứng **sau chủ ngữ**, không đứng đầu câu.",
+    "sua": "我也是学生。",
+    "pySua": "Wǒ yě shì xué·shēng.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b2-ye-vt-3",
+    "np": "ye",
+    "dang": "xep",
+    "dd": "ye-vt",
+    "cau": "我们也不是日本学生。",
+    "py": "Wǒmen yě bú shì Rìběn xué·shēng.",
+    "nghia": "Chúng tôi cũng không phải là học sinh Nhật Bản.",
+    "khoi": [
+     "我们",
+     "也",
+     "不",
+     "是",
+     "日本",
+     "学生"
+    ],
+    "npPhu": [
+     "ye",
+     "bu",
+     "shi"
+    ]
+   },
+   {
+    "ma": "b2-shenme-dt-1",
+    "np": "shenme",
+    "dang": "chon",
+    "dd": "shenme-dt",
+    "cau": "你们说＿？",
+    "py": "Nǐmen shuō shénme?",
+    "nghia": "Các bạn nói gì?",
+    "dap": "什么",
+    "nhieu": [
+     "请",
+     "也"
+    ],
+    "gt": "**ĐT + 什么**: 说什么 = nói gì."
+   },
+   {
+    "ma": "b2-shenme-dt-2",
+    "np": "shenme",
+    "dang": "chon",
+    "dd": "shenme-dt",
+    "cau": "老师问＿？",
+    "py": "Lǎoshī wèn shénme?",
+    "nghia": "Cô hỏi gì?",
+    "dap": "什么",
+    "nhieu": [
+     "请",
+     "很"
+    ],
+    "gt": "**ĐT + 什么**: 问什么 = hỏi gì."
+   },
+   {
+    "ma": "b2-shenme-dn-1",
+    "np": "shenme",
+    "dang": "chon",
+    "dd": "shenme-dn",
+    "cau": "你叫＿名字？",
+    "py": "Nǐ jiào shénme míngzi?",
+    "nghia": "Bạn tên là gì?",
+    "dap": "什么",
+    "nhieu": [
+     "是不是",
+     "很"
+    ],
+    "gt": "**什么 + DT**: 什么名字 = tên gì."
+   },
+   {
+    "ma": "b2-shenme-dn-2",
+    "np": "shenme",
+    "dang": "dungSai",
+    "dd": "shenme-dn",
+    "cau": "你叫名字什么？",
+    "py": "Nǐ jiào míngzi shénme?",
+    "dung": false,
+    "gt": "**什么 đứng trước danh từ**: 什么名字. Không đặt như tiếng Việt \"tên gì\".",
+    "sua": "你叫什么名字？",
+    "pySua": "Nǐ jiào shénme míngzi?",
+    "nguon": "cô duyệt 29/10/2026"
+   },
+   {
+    "ma": "b2-shenme-dn-3",
+    "np": "shenme",
+    "dang": "xep",
+    "dd": "shenme-dn",
+    "cau": "请问，你叫什么名字？",
+    "py": "Qǐngwèn, nǐ jiào shénme míngzi?",
+    "nghia": "Xin hỏi, bạn tên là gì?",
+    "khoi": [
+     "请问",
+     "你",
+     "叫",
+     "什么",
+     "名字"
+    ],
+    "npPhu": [
+     "qing",
+     "shenme"
+    ]
+   },
+   {
+    "ma": "b2-shenme-tl-1",
+    "np": "shenme",
+    "dang": "hoi",
+    "dd": "shenme-tl",
+    "dap": "我叫白家月。",
+    "pyDap": "Wǒ jiào Bái Jiāyuè.",
+    "hoi": "你叫什么名字？",
+    "pyHoi": "Nǐ jiào shénme míngzi?",
+    "nhieu": [
+     "你是不是学生？",
+     "你吃什么？"
+    ],
+    "gt": "Trả lời thay 什么 bằng tên, giữ trật tự: 你叫什么名字？ → 我叫白家月。"
+   },
+   {
+    "ma": "b2-shenme-tl-2",
+    "np": "shenme",
+    "dang": "hoi",
+    "dd": "shenme-tl",
+    "dap": "我们说汉语。",
+    "pyDap": "Wǒmen shuō Hànyǔ.",
+    "hoi": "你们说什么？",
+    "pyHoi": "Nǐmen shuō shénme?",
+    "nhieu": [
+     "你们是不是老师？",
+     "你们叫什么名字？"
+    ],
+    "gt": "你们说什么？ → 我们说汉语。: 汉语 đứng đúng chỗ của 什么."
+   },
+   {
+    "ma": "b2-qing-dt-1",
+    "np": "qing",
+    "dang": "chon",
+    "dd": "qing-dt",
+    "cau": "同学们，＿进！",
+    "py": "Tóngxuémen, qǐng jìn!",
+    "nghia": "Các em, mời vào!",
+    "dap": "请",
+    "nhieu": [
+     "请问",
+     "什么"
+    ],
+    "gt": "Mời ai làm gì: **请 + ĐT**. 请问 là \"xin hỏi\"."
+   },
+   {
+    "ma": "b2-qing-dt-2",
+    "np": "qing",
+    "dang": "dungSai",
+    "dd": "qing-dt",
+    "cau": "大家请坐！",
+    "py": "Dàjiā qǐng zuò!",
+    "dung": true,
+    "gt": "请 + ĐT: 请坐 = mời ngồi."
+   },
+   {
+    "ma": "b2-qing-hoi-1",
+    "np": "qing",
+    "dang": "chon",
+    "dd": "qing-hoi",
+    "cau": "＿，你是不是陈天中？",
+    "py": "Qǐngwèn, nǐ shì bu shì Chén Tiānzhōng?",
+    "nghia": "Xin hỏi, bạn có phải là Trần Thiên Trung không?",
+    "dap": "请问",
+    "nhieu": [
+     "请",
+     "问"
+    ],
+    "gt": "\"Xin hỏi\" là cụm cố định **请问**."
+   },
+   {
+    "ma": "b2-qing-hoi-2",
+    "np": "qing",
+    "dang": "xep",
+    "dd": "qing-hoi",
+    "cau": "请问，老师叫什么名字？",
+    "py": "Qǐngwèn, lǎoshī jiào shénme míngzi?",
+    "nghia": "Xin hỏi, thầy/cô tên là gì?",
+    "khoi": [
+     "请问",
+     "老师",
+     "叫",
+     "什么",
+     "名字"
+    ],
+    "npPhu": [
+     "qing",
+     "shenme"
+    ]
+   },
+   {
+    "ma": "b2-hen-tt-1",
+    "np": "hen",
+    "dang": "dungSai",
+    "dd": "hen-tt",
+    "cau": "认识你很高兴。",
+    "py": "Rènshi nǐ hěn gāoxìng.",
+    "dung": true,
+    "gt": "很 + TT: 很高兴."
+   },
+   {
+    "ma": "b2-hen-tt-2",
+    "np": "hen",
+    "dang": "xep",
+    "dd": "hen-tt",
+    "cau": "我也很高兴。",
+    "py": "Wǒ yě hěn gāoxìng.",
+    "nghia": "Tôi cũng rất vui.",
+    "khoi": [
+     "我",
+     "也",
+     "很",
+     "高兴"
+    ],
+    "npPhu": [
+     "ye",
+     "hen"
+    ]
+   },
+   {
+    "ma": "b2-hen-vn-1",
+    "np": "hen",
+    "dang": "chon",
+    "dd": "hen-vn",
+    "cau": "中国＿大。",
+    "py": "Zhōngguó hěn dà.",
+    "nghia": "Trung Quốc rất rộng lớn.",
+    "dap": "很",
+    "nhieu": [
+     "也",
+     "是"
+    ],
+    "gt": "Tính từ làm vị ngữ đi với **很**, không dùng 是: 中国很大."
+   },
+   {
+    "ma": "b2-hen-vn-2",
+    "np": "hen",
+    "dang": "dungSai",
+    "dd": "hen-vn",
+    "cau": "我是很高兴。",
+    "py": "Wǒ shì hěn gāoxìng.",
+    "dung": false,
+    "gt": "Tính từ làm vị ngữ **không cần 是**, chỉ cần **很 + TT**.",
+    "sua": "我很高兴。",
+    "pySua": "Wǒ hěn gāoxìng.",
+    "nguon": "cô duyệt 29/10/2026"
+   },
+   {
+    "ma": "b2-hen-nhe-1",
+    "np": "hen",
+    "dang": "chon",
+    "dd": "hen-nhe",
+    "cau": "我＿好。",
+    "py": "Wǒ hěn hǎo.",
+    "nghia": "Tôi khỏe.",
+    "dap": "很",
+    "nhieu": [
+     "是",
+     "也"
+    ],
+    "gt": "Tiếng Việt nói \"tôi khỏe\", tiếng Trung vẫn có **很**: 我很好. Lúc này 很 không nhấn \"rất\"."
+   },
+   {
+    "ma": "b2-hen-nhe-2",
+    "np": "hen",
+    "dang": "xep",
+    "dd": "hen-nhe",
+    "cau": "我们很好，你们也很好。",
+    "py": "Wǒmen hěn hǎo, nǐmen yě hěn hǎo.",
+    "nghia": "Chúng tôi khỏe, các bạn cũng khỏe.",
+    "khoi": [
+     "我们",
+     "很",
+     "好",
+     "你们",
+     "也",
+     "很",
+     "好"
+    ],
+    "npPhu": [
+     "hen",
+     "ye"
+    ]
+   }
+  ]
  }
 }

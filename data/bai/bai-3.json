@@ -3857,5 +3857,845 @@
    "bai": "Bài 1",
    "url": "chuong-trinh-hsk/hsk1/bai-1/tu-vung.html"
   }
+ },
+ "nguPhapLuyen": {
+  "phienBan": "2026-10-29a",
+  "dacDiem": [
+   {
+    "ma": "de-sh",
+    "np": "de",
+    "ten": "A 的 B = B của A (đảo trật tự)",
+    "nguon": "y1"
+   },
+   {
+    "ma": "de-luoc",
+    "np": "de",
+    "ten": "Lược 的: đại từ + người thân / danh từ chỉ người",
+    "nguon": "y2-L1"
+   },
+   {
+    "ma": "ma-cau",
+    "np": "ma",
+    "ten": "Câu trần thuật + 吗？",
+    "nguon": "y1"
+   },
+   {
+    "ma": "ma-cp",
+    "np": "ma",
+    "ten": "Đã dùng 吗 thì không dùng thêm dạng chính phản",
+    "nguon": "y2-L1-L2"
+   },
+   {
+    "ma": "ma-th",
+    "np": "ma",
+    "ten": "Câu có từ để hỏi (谁, 什么, 哪…) không thêm 吗",
+    "nguon": "bổ sung 29/10"
+   },
+   {
+    "ma": "zn-gx",
+    "np": "zhenana",
+    "ten": "这 / 那 + LT + DT: gần / xa",
+    "nguon": "y1"
+   },
+   {
+    "ma": "zn-na",
+    "np": "zhenana",
+    "ten": "哪 + LT + DT: hỏi \"… nào\"",
+    "nguon": "y2"
+   },
+   {
+    "ma": "zn-cn",
+    "np": "zhenana",
+    "ten": "这, 那 đứng một mình làm chủ ngữ",
+    "nguon": "L1"
+   },
+   {
+    "ma": "zn-qt",
+    "np": "zhenana",
+    "ten": "Hỏi quốc tịch: 哪国人, không có lượng từ",
+    "nguon": "L2"
+   },
+   {
+    "ma": "tai-tt",
+    "np": "tai",
+    "ten": "太 + TT + 了",
+    "nguon": "y1"
+   },
+   {
+    "ma": "tai-dt",
+    "np": "tai",
+    "ten": "太 + ĐT tâm lý, cảm xúc + 了",
+    "nguon": "y2"
+   },
+   {
+    "ma": "tai-bt",
+    "np": "tai",
+    "ten": "不太 + TT / ĐT tâm lý: không … lắm",
+    "nguon": "y3"
+   },
+   {
+    "ma": "tai-le",
+    "np": "tai",
+    "ten": "不太 không kèm 了",
+    "nguon": "L1"
+   },
+   {
+    "ma": "tai-py",
+    "np": "tai",
+    "ten": "不太 đọc bú tài",
+    "nguon": "L2"
+   },
+   {
+    "ma": "hai-them",
+    "np": "hai",
+    "ten": "还 = còn (làm thêm việc gì)",
+    "nguon": "y1"
+   },
+   {
+    "ma": "hai-van",
+    "np": "hai",
+    "ten": "还 = vẫn (trạng thái tiếp diễn)",
+    "nguon": "y1"
+   },
+   {
+    "ma": "hai-vt",
+    "np": "hai",
+    "ten": "还 đứng sau chủ ngữ, không đứng đầu câu",
+    "nguon": "L1-L2"
+   },
+   {
+    "ma": "xiang-nho",
+    "np": "xiang",
+    "ten": "想 + tân ngữ = nhớ",
+    "nguon": "y1"
+   },
+   {
+    "ma": "xiang-muon",
+    "np": "xiang",
+    "ten": "想 + ĐT = muốn",
+    "nguon": "y2"
+   },
+   {
+    "ma": "xiang-pd",
+    "np": "xiang",
+    "ten": "Phủ định: 不想",
+    "nguon": "L1"
+   }
+  ],
+  "cau": [
+   {
+    "ma": "b3-de-sh-1",
+    "np": "de",
+    "dang": "chon",
+    "dd": "de-sh",
+    "cau": "这是我＿中文老师。",
+    "py": "Zhè shì wǒ de Zhōngwén lǎoshī.",
+    "nghia": "Đây là giáo viên tiếng Trung của tôi.",
+    "dap": "的",
+    "nhieu": [
+     "吗",
+     "很"
+    ],
+    "gt": "\"B của A\" là **A 的 B**: 我的中文老师."
+   },
+   {
+    "ma": "b3-de-sh-2",
+    "np": "de",
+    "dang": "hoi",
+    "dd": "de-sh",
+    "dap": "那是我的猫。",
+    "pyDap": "Nà shì wǒ de māo.",
+    "hoi": "那是谁的猫？",
+    "pyHoi": "Nà shì shéi de māo?",
+    "nhieu": [
+     "那个人是谁？",
+     "你想去哪个国家？"
+    ],
+    "gt": "Đáp \"của tôi\" → hỏi **谁的** (của ai)."
+   },
+   {
+    "ma": "b3-de-sh-3",
+    "np": "de",
+    "dang": "xep",
+    "dd": "de-sh",
+    "cau": "你的中文老师是哪国人？",
+    "py": "Nǐ de Zhōngwén lǎoshī shì nǎ guó rén?",
+    "nghia": "Giáo viên tiếng Trung của bạn là người nước nào?",
+    "khoi": [
+     "你",
+     "的",
+     "中文老师",
+     "是",
+     "哪国",
+     "人"
+    ],
+    "npPhu": [
+     "de",
+     "zhenana"
+    ]
+   },
+   {
+    "ma": "b3-de-luoc-1",
+    "np": "de",
+    "dang": "dungSai",
+    "dd": "de-luoc",
+    "cau": "我妈妈是中文老师。",
+    "py": "Wǒ māma shì Zhōngwén lǎoshī.",
+    "dung": true,
+    "gt": "Đại từ + người thân thì **lược được 的**: 我妈妈."
+   },
+   {
+    "ma": "b3-de-luoc-2",
+    "np": "de",
+    "dang": "dungSai",
+    "dd": "de-luoc",
+    "cau": "这是我女朋友。",
+    "py": "Zhè shì wǒ nǚpéngyou.",
+    "dung": true,
+    "gt": "Đại từ + danh từ chỉ người: **lược được 的**."
+   },
+   {
+    "ma": "b3-ma-cau-1",
+    "np": "ma",
+    "dang": "chon",
+    "dd": "ma-cau",
+    "cau": "你是越南人＿？",
+    "py": "Nǐ shì Yuènán rén ma?",
+    "nghia": "Bạn là người Việt Nam à?",
+    "dap": "吗",
+    "nhieu": [
+     "的",
+     "谁"
+    ],
+    "gt": "Câu trần thuật + **吗** thành câu hỏi có / không."
+   },
+   {
+    "ma": "b3-ma-cau-2",
+    "np": "ma",
+    "dang": "hoi",
+    "dd": "ma-cau",
+    "dap": "不太忙。",
+    "pyDap": "Bú tài máng.",
+    "hoi": "你忙吗？",
+    "pyHoi": "Nǐ máng ma?",
+    "nhieu": [
+     "你是谁？",
+     "你做什么工作？"
+    ],
+    "gt": "Đáp \"không bận lắm\" → câu hỏi có / không **忙吗**."
+   },
+   {
+    "ma": "b3-ma-cau-3",
+    "np": "ma",
+    "dang": "dungSai",
+    "dd": "ma-cau",
+    "cau": "你爸爸忙吗？",
+    "py": "Nǐ bàba máng ma?",
+    "dung": true,
+    "gt": "Câu trần thuật 你爸爸忙 + 吗."
+   },
+   {
+    "ma": "b3-ma-cp-1",
+    "np": "ma",
+    "dang": "chon",
+    "dd": "ma-cp",
+    "cau": "这个人＿李文的女朋友？",
+    "py": "Zhè ge rén shì bu shì Lǐ Wén de nǚpéngyou?",
+    "nghia": "Người này có phải là bạn gái của Lý Văn không?",
+    "dap": "是不是",
+    "nhieu": [
+     "不是",
+     "吗"
+    ],
+    "gt": "Câu không có 吗 ở cuối thì hỏi bằng **是不是**."
+   },
+   {
+    "ma": "b3-ma-cp-2",
+    "np": "ma",
+    "dang": "dungSai",
+    "dd": "ma-cp",
+    "cau": "你是不是学生吗？",
+    "py": "Nǐ shì bu shì xué·shēng ma?",
+    "dung": false,
+    "gt": "Đã dùng **是不是** thì **không thêm 吗**.",
+    "sua": "你是不是学生？",
+    "pySua": "Nǐ shì bu shì xué·shēng?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b3-ma-cp-3",
+    "np": "ma",
+    "dang": "dungSai",
+    "dd": "ma-cp",
+    "cau": "她是不是你的姐姐吗？",
+    "py": "Tā shì bu shì nǐ de jiějie ma?",
+    "dung": false,
+    "gt": "Chọn một trong hai: 她是你的姐姐吗？ hoặc 她是不是你的姐姐？",
+    "sua": "她是你的姐姐吗？",
+    "pySua": "Tā shì nǐ de jiějie ma?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b3-ma-th-1",
+    "np": "ma",
+    "dang": "chon",
+    "dd": "ma-th",
+    "cau": "那个女人是＿？",
+    "py": "Nà ge nǚrén shì shéi?",
+    "nghia": "Người phụ nữ kia là ai?",
+    "dap": "谁",
+    "nhieu": [
+     "吗",
+     "哪"
+    ],
+    "gt": "Hỏi \"ai\" dùng **谁**; câu đã có 谁 thì không thêm 吗."
+   },
+   {
+    "ma": "b3-ma-th-2",
+    "np": "ma",
+    "dang": "dungSai",
+    "dd": "ma-th",
+    "cau": "她是谁吗？",
+    "py": "Tā shì shéi ma?",
+    "dung": false,
+    "gt": "Câu đã có từ để hỏi (**谁**) thì **không thêm 吗**.",
+    "sua": "她是谁？",
+    "pySua": "Tā shì shéi?",
+    "nguon": "cô duyệt 29/10/2026"
+   },
+   {
+    "ma": "b3-ma-th-3",
+    "np": "ma",
+    "dang": "hoi",
+    "dd": "ma-th",
+    "dap": "她是我姐姐。",
+    "pyDap": "Tā shì wǒ jiějie.",
+    "hoi": "她是谁？",
+    "pyHoi": "Tā shì shéi?",
+    "nhieu": [
+     "她是哪国人？",
+     "她忙吗？"
+    ],
+    "gt": "Đáp \"là chị gái tôi\" → hỏi **谁**, không có 吗."
+   },
+   {
+    "ma": "b3-zn-gx-1",
+    "np": "zhenana",
+    "dang": "chon",
+    "dd": "zn-gx",
+    "cau": "＿个人是谁？",
+    "py": "Zhè ge rén shì shéi?",
+    "nghia": "Người này là ai?",
+    "dap": "这",
+    "nhieu": [
+     "那",
+     "哪"
+    ],
+    "gt": "\"này\" là **这**, \"kia\" là 那, \"nào\" là 哪."
+   },
+   {
+    "ma": "b3-zn-gx-2",
+    "np": "zhenana",
+    "dang": "xep",
+    "dd": "zn-gx",
+    "cau": "那个男生是你的男朋友吗？",
+    "py": "Nà ge nánshēng shì nǐ de nánpéngyou ma?",
+    "nghia": "Bạn nam kia là bạn trai của bạn à?",
+    "khoi": [
+     "那",
+     "个",
+     "男生",
+     "是",
+     "你",
+     "的",
+     "男朋友",
+     "吗"
+    ],
+    "npPhu": [
+     "zhenana",
+     "de",
+     "ma"
+    ]
+   },
+   {
+    "ma": "b3-zn-na-1",
+    "np": "zhenana",
+    "dang": "chon",
+    "dd": "zn-na",
+    "cau": "＿个老师是你的中文老师？",
+    "py": "Nǎ ge lǎoshī shì nǐ de Zhōngwén lǎoshī?",
+    "nghia": "Thầy/cô nào là giáo viên tiếng Trung của bạn?",
+    "dap": "哪",
+    "nhieu": [
+     "那",
+     "这"
+    ],
+    "gt": "Hỏi \"… nào\" dùng **哪 + LT + DT**."
+   },
+   {
+    "ma": "b3-zn-na-2",
+    "np": "zhenana",
+    "dang": "hoi",
+    "dd": "zn-na",
+    "dap": "那个女生是我的女朋友。",
+    "pyDap": "Nà ge nǚshēng shì wǒ de nǚpéngyou.",
+    "hoi": "哪个女生是你的女朋友？",
+    "pyHoi": "Nǎ ge nǚshēng shì nǐ de nǚpéngyou?",
+    "nhieu": [
+     "你女朋友是哪国人？",
+     "你有女朋友吗？"
+    ],
+    "gt": "Đáp chỉ ra \"bạn nữ kia\" → câu hỏi **哪个女生**."
+   },
+   {
+    "ma": "b3-zn-cn-1",
+    "np": "zhenana",
+    "dang": "chon",
+    "dd": "zn-cn",
+    "cau": "＿是谁？",
+    "py": "Zhè shì shéi?",
+    "nghia": "Đây là ai?",
+    "dap": "这",
+    "nhieu": [
+     "哪",
+     "谁"
+    ],
+    "gt": "这, 那 **đứng một mình làm chủ ngữ** được: 这是谁？"
+   },
+   {
+    "ma": "b3-zn-cn-2",
+    "np": "zhenana",
+    "dang": "dungSai",
+    "dd": "zn-cn",
+    "cau": "那是我的狗。",
+    "py": "Nà shì wǒ de gǒu.",
+    "dung": true,
+    "gt": "这, 那 đứng một mình làm chủ ngữ được."
+   },
+   {
+    "ma": "b3-zn-qt-1",
+    "np": "zhenana",
+    "dang": "chon",
+    "dd": "zn-qt",
+    "cau": "你朋友是＿国人？",
+    "py": "Nǐ péngyou shì nǎ guó rén?",
+    "nghia": "Bạn của bạn là người nước nào?",
+    "dap": "哪",
+    "nhieu": [
+     "那",
+     "这"
+    ],
+    "gt": "Hỏi quốc tịch: **哪国人**."
+   },
+   {
+    "ma": "b3-zn-qt-2",
+    "np": "zhenana",
+    "dang": "dungSai",
+    "dd": "zn-qt",
+    "cau": "他是哪个国人？",
+    "py": "Tā shì nǎ ge guó rén?",
+    "dung": false,
+    "gt": "Hỏi quốc tịch dùng **哪国人**, không có lượng từ ở giữa.",
+    "sua": "他是哪国人？",
+    "pySua": "Tā shì nǎ guó rén?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b3-zn-qt-3",
+    "np": "zhenana",
+    "dang": "hoi",
+    "dd": "zn-qt",
+    "dap": "我是越南人。",
+    "pyDap": "Wǒ shì Yuènán rén.",
+    "hoi": "你是哪国人？",
+    "pyHoi": "Nǐ shì nǎ guó rén?",
+    "nhieu": [
+     "你想去哪个国家？",
+     "你做什么工作？"
+    ],
+    "gt": "Đáp quốc tịch → hỏi **哪国人**."
+   },
+   {
+    "ma": "b3-zn-qt-4",
+    "np": "zhenana",
+    "dang": "hoi",
+    "dd": "zn-qt",
+    "dap": "他是法国人。",
+    "pyDap": "Tā shì Fǎguó rén.",
+    "hoi": "你朋友是哪国人？",
+    "pyHoi": "Nǐ péngyou shì nǎ guó rén?",
+    "nhieu": [
+     "你朋友想去哪个国家？",
+     "你朋友忙吗？"
+    ],
+    "gt": "Đáp \"là người Pháp\" → hỏi **哪国人**, không phải muốn đi đâu."
+   },
+   {
+    "ma": "b3-tai-tt-1",
+    "np": "tai",
+    "dang": "chon",
+    "dd": "tai-tt",
+    "cau": "我爸爸的工作＿忙了！",
+    "py": "Wǒ bàba de gōngzuò tài máng le!",
+    "nghia": "Công việc của bố tôi bận quá!",
+    "dap": "太",
+    "nhieu": [
+     "很",
+     "还"
+    ],
+    "gt": "Có **了** ở cuối → khung **太……了**."
+   },
+   {
+    "ma": "b3-tai-tt-2",
+    "np": "tai",
+    "dang": "dungSai",
+    "dd": "tai-tt",
+    "cau": "我太忙。",
+    "py": "Wǒ tài máng.",
+    "dung": false,
+    "gt": "Khung **太……了** phải có 了 ở cuối.",
+    "sua": "我太忙了。",
+    "pySua": "Wǒ tài máng le.",
+    "nguon": "quy chuẩn 05"
+   },
+   {
+    "ma": "b3-tai-tt-3",
+    "np": "tai",
+    "dang": "xep",
+    "dd": "tai-tt",
+    "cau": "我爸爸的工作太忙了。",
+    "py": "Wǒ bàba de gōngzuò tài máng le.",
+    "nghia": "Công việc của bố tôi bận quá.",
+    "khoi": [
+     "我",
+     "爸爸",
+     "的",
+     "工作",
+     "太",
+     "忙",
+     "了"
+    ],
+    "npPhu": [
+     "de",
+     "tai"
+    ]
+   },
+   {
+    "ma": "b3-tai-dt-1",
+    "np": "tai",
+    "dang": "chon",
+    "dd": "tai-dt",
+    "cau": "我们＿想你了！",
+    "py": "Wǒmen tài xiǎng nǐ le!",
+    "nghia": "Chúng tôi nhớ bạn quá!",
+    "dap": "太",
+    "nhieu": [
+     "还",
+     "也"
+    ],
+    "gt": "**太 + ĐT tâm lý (想) + 了**: nhớ … quá."
+   },
+   {
+    "ma": "b3-tai-dt-2",
+    "np": "tai",
+    "dang": "dungSai",
+    "dd": "tai-dt",
+    "cau": "妈妈太想你了！",
+    "py": "Māma tài xiǎng nǐ le!",
+    "dung": true,
+    "gt": "太 đi được với động từ tâm lý 想: 太想你了."
+   },
+   {
+    "ma": "b3-tai-bt-1",
+    "np": "tai",
+    "dang": "chon",
+    "dd": "tai-bt",
+    "cau": "姐姐不＿高兴。",
+    "py": "Jiějie bú tài gāoxìng.",
+    "nghia": "Chị gái không vui lắm.",
+    "dap": "太",
+    "nhieu": [
+     "还",
+     "也"
+    ],
+    "gt": "\"không … lắm\" là **不太 + TT**."
+   },
+   {
+    "ma": "b3-tai-bt-2",
+    "np": "tai",
+    "dang": "xep",
+    "dd": "tai-bt",
+    "cau": "姐姐不太想去法国。",
+    "py": "Jiějie bú tài xiǎng qù Fǎguó.",
+    "nghia": "Chị gái không muốn đi Pháp lắm.",
+    "khoi": [
+     "姐姐",
+     "不",
+     "太",
+     "想",
+     "去",
+     "法国"
+    ],
+    "npPhu": [
+     "tai",
+     "xiang"
+    ]
+   },
+   {
+    "ma": "b3-tai-le-1",
+    "np": "tai",
+    "dang": "dungSai",
+    "dd": "tai-le",
+    "cau": "我的工作不太忙了。",
+    "py": "Wǒ de gōngzuò bú tài máng le.",
+    "dung": false,
+    "gt": "**不太 + TT** không kèm 了.",
+    "sua": "我的工作不太忙。",
+    "pySua": "Wǒ de gōngzuò bú tài máng.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b3-tai-le-2",
+    "np": "tai",
+    "dang": "dungSai",
+    "dd": "tai-le",
+    "cau": "姐姐不太高兴了。",
+    "py": "Jiějie bú tài gāoxìng le.",
+    "dung": false,
+    "gt": "**不太 + TT** không kèm 了.",
+    "sua": "姐姐不太高兴。",
+    "pySua": "Jiějie bú tài gāoxìng.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b3-tai-py-1",
+    "np": "tai",
+    "dang": "chon",
+    "kieu": "py",
+    "dd": "tai-py",
+    "cau": "妈妈不太高兴。",
+    "py": "Māma bú tài gāoxìng.",
+    "tu": "不太",
+    "dap": "bú tài",
+    "nhieu": [
+     "bù tài",
+     "bu tài"
+    ],
+    "gt": "太 mang thanh 4 nên 不 đọc **thanh 2**: bú tài."
+   },
+   {
+    "ma": "b3-tai-py-2",
+    "np": "tai",
+    "dang": "chon",
+    "kieu": "py",
+    "dd": "tai-py",
+    "cau": "我的工作不太忙。",
+    "py": "Wǒ de gōngzuò bú tài máng.",
+    "tu": "不太",
+    "dap": "bú tài",
+    "nhieu": [
+     "bù tài",
+     "bú tāi"
+    ],
+    "gt": "Trong **不太**, 不 đọc thanh 2: bú tài."
+   },
+   {
+    "ma": "b3-hai-them-1",
+    "np": "hai",
+    "dang": "chon",
+    "dd": "hai-them",
+    "cau": "我认识他，＿认识他的女朋友。",
+    "py": "Wǒ rènshi tā, hái rènshi tā de nǚpéngyou.",
+    "nghia": "Tôi quen anh ấy, còn quen cả bạn gái của anh ấy.",
+    "dap": "还",
+    "nhieu": [
+     "太",
+     "很"
+    ],
+    "gt": "\"còn (thêm)\" là **还**."
+   },
+   {
+    "ma": "b3-hai-them-2",
+    "np": "hai",
+    "dang": "xep",
+    "dd": "hai-them",
+    "cau": "我还想去泰国。",
+    "py": "Wǒ hái xiǎng qù Tàiguó.",
+    "nghia": "Tôi còn muốn đi Thái Lan.",
+    "khoi": [
+     "我",
+     "还",
+     "想",
+     "去",
+     "泰国"
+    ],
+    "npPhu": [
+     "hai",
+     "xiang"
+    ]
+   },
+   {
+    "ma": "b3-hai-van-1",
+    "np": "hai",
+    "dang": "chon",
+    "dd": "hai-van",
+    "cau": "爷爷＿工作。",
+    "py": "Yéye hái gōngzuò.",
+    "nghia": "Ông nội vẫn còn làm việc.",
+    "dap": "还",
+    "nhieu": [
+     "也",
+     "太"
+    ],
+    "gt": "\"vẫn, còn\" là **还**, đứng sau chủ ngữ."
+   },
+   {
+    "ma": "b3-hai-van-2",
+    "np": "hai",
+    "dang": "xep",
+    "dd": "hai-van",
+    "cau": "这个女人还工作吗？",
+    "py": "Zhè ge nǚrén hái gōngzuò ma?",
+    "nghia": "Người phụ nữ này vẫn còn làm việc à?",
+    "khoi": [
+     "这",
+     "个",
+     "女人",
+     "还",
+     "工作",
+     "吗"
+    ],
+    "npPhu": [
+     "zhenana",
+     "hai",
+     "ma"
+    ]
+   },
+   {
+    "ma": "b3-hai-vt-1",
+    "np": "hai",
+    "dang": "dungSai",
+    "dd": "hai-vt",
+    "cau": "还姐姐很忙。",
+    "py": "Hái jiějie hěn máng.",
+    "dung": false,
+    "gt": "还 đứng **sau chủ ngữ**, không đứng đầu câu.",
+    "sua": "姐姐还很忙。",
+    "pySua": "Jiějie hái hěn máng.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b3-hai-vt-2",
+    "np": "hai",
+    "dang": "xep",
+    "dd": "hai-vt",
+    "cau": "姐姐的工作还很忙。",
+    "py": "Jiějie de gōngzuò hái hěn máng.",
+    "nghia": "Công việc của chị gái vẫn rất bận.",
+    "khoi": [
+     "姐姐",
+     "的",
+     "工作",
+     "还",
+     "很",
+     "忙"
+    ],
+    "npPhu": [
+     "de",
+     "hai"
+    ]
+   },
+   {
+    "ma": "b3-xiang-nho-1",
+    "np": "xiang",
+    "dang": "chon",
+    "dd": "xiang-nho",
+    "cau": "我很＿妈妈。",
+    "py": "Wǒ hěn xiǎng māma.",
+    "nghia": "Tôi rất nhớ mẹ.",
+    "dap": "想",
+    "nhieu": [
+     "去",
+     "做"
+    ],
+    "gt": "**想 + người** = nhớ."
+   },
+   {
+    "ma": "b3-xiang-nho-2",
+    "np": "xiang",
+    "dang": "xep",
+    "dd": "xiang-nho",
+    "cau": "白家月很想她的爸爸妈妈。",
+    "py": "Bái Jiāyuè hěn xiǎng tā de bàba māma.",
+    "nghia": "Bạch Gia Nguyệt rất nhớ bố mẹ của cô ấy.",
+    "khoi": [
+     "白家月",
+     "很",
+     "想",
+     "她",
+     "的",
+     "爸爸妈妈"
+    ],
+    "npPhu": [
+     "xiang",
+     "de"
+    ]
+   },
+   {
+    "ma": "b3-xiang-muon-1",
+    "np": "xiang",
+    "dang": "chon",
+    "dd": "xiang-muon",
+    "cau": "他们＿去泰国。",
+    "py": "Tāmen xiǎng qù Tàiguó.",
+    "nghia": "Họ muốn đi Thái Lan.",
+    "dap": "想",
+    "nhieu": [
+     "还",
+     "太"
+    ],
+    "gt": "**想 + ĐT** = muốn làm gì."
+   },
+   {
+    "ma": "b3-xiang-muon-2",
+    "np": "xiang",
+    "dang": "hoi",
+    "dd": "xiang-muon",
+    "dap": "想，我很想去中国。",
+    "pyDap": "Xiǎng, wǒ hěn xiǎng qù Zhōngguó.",
+    "hoi": "你想去中国吗？",
+    "pyHoi": "Nǐ xiǎng qù Zhōngguó ma?",
+    "nhieu": [
+     "你是中国人吗？",
+     "你妈妈做什么工作？"
+    ],
+    "gt": "Đáp bắt đầu bằng **想** → câu hỏi **想……吗**."
+   },
+   {
+    "ma": "b3-xiang-pd-1",
+    "np": "xiang",
+    "dang": "chon",
+    "dd": "xiang-pd",
+    "cau": "他＿想学中文。",
+    "py": "Tā bù xiǎng xué Zhōngwén.",
+    "nghia": "Anh ấy không muốn học tiếng Trung.",
+    "dap": "不",
+    "nhieu": [
+     "还",
+     "太"
+    ],
+    "gt": "Phủ định của 想 là **不想**."
+   },
+   {
+    "ma": "b3-xiang-pd-2",
+    "np": "xiang",
+    "dang": "dungSai",
+    "dd": "xiang-pd",
+    "cau": "我不想去法国。",
+    "py": "Wǒ bù xiǎng qù Fǎguó.",
+    "dung": true,
+    "gt": "Phủ định của 想 là **不想**."
+   }
+  ]
  }
 }

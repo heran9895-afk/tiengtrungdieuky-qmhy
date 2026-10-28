@@ -5,7 +5,8 @@
    ========================================================= */
 (function () {
   var el = document.getElementById('ngu-phap'), TV = window.QM_TV; if (!el || !TV) return;
-  var esc = TV.esc, DS = [], i = 0, xong = false;
+  var esc = TV.esc, DS = [], i = 0, xong = false, LUYEN = document.getElementById('luyen-ngu-phap');   // khối 🎯 Luyện ngữ pháp cuối trang (luyen-ngu-phap.js)
+  function denLuyen() { if (!LUYEN) return; var h = document.querySelector('.sh-header'), tr = h ? h.getBoundingClientRect().bottom : 0; window.scrollTo(0, Math.max(0, LUYEN.getBoundingClientRect().top + scrollY - tr - 8)); }
   // Chuỗi trộn chữ Hán + chữ Việt (vd "不 + ĐT / TT"): chỉ bọc phần chữ Hán bằng font chữ Hán, phần còn lại giữ font giao diện
   // **chữ đậm** trong giải thích, lưu ý → nhấn mạnh màu; chữ Hán giữ font chữ Hán
   function dam(t) { return tron(t).replace(/\*\*(.+?)\*\*/g, '<strong class="np-nb">$1</strong>'); }
@@ -17,12 +18,13 @@
     if (xong) {
       if (window.QM_PHAN) QM_PHAN.danhDau('xong');            // xem hết mọi điểm ngữ pháp: phần Ngữ pháp đã xong
       el.innerHTML = '<div class="np-xong card"><div class="np-xong-ico">🎉</div><h3>Hoàn thành ' + DS.length + ' điểm ngữ pháp!</h3><p>Ôn lại bất cứ lúc nào bằng các nút tròn phía trên.</p>' +
-        '<div class="lt-nut-kq"><button type="button" class="btn np-lai">Xem lại từ đầu</button><a class="btn solid" href="bai-tap.html">Làm bài tập ›</a></div></div>';
+        '<div class="lt-nut-kq"><button type="button" class="btn np-lai">Xem lại từ đầu</button>' + (LUYEN ? '<button type="button" class="btn solid np-luyen">🎯 Luyện ngữ pháp ›</button>' : '<a class="btn solid" href="bai-tap.html">Làm bài tập ›</a>') + '</div></div>';
       return;
     }
     var g = DS[i];
     el.innerHTML =
-      '<div class="np-nut">' + DS.map(function (x, k) { return '<button type="button" class="np-tron' + (k === i ? ' on' : '') + (k < i ? ' qua' : '') + '" data-k="' + k + '" aria-label="Điểm ' + (k + 1) + ': ' + esc(x.ten) + '">' + (k + 1) + '</button>'; }).join('') + '</div>' +
+      '<div class="np-nut">' + DS.map(function (x, k) { return '<button type="button" class="np-tron' + (k === i ? ' on' : '') + (k < i ? ' qua' : '') + '" data-k="' + k + '" aria-label="Điểm ' + (k + 1) + ': ' + esc(x.ten) + '">' + (k + 1) + '</button>'; }).join('') +
+        (LUYEN ? '<button type="button" class="np-tron np-tron-luyen np-luyen" aria-label="Luyện ngữ pháp">🎯 Luyện</button>' : '') + '</div>' +
       '<div class="lt-vach np-vach"><i class="thuoc" style="width:' + ((i + 1) / DS.length * 100) + '%"></i></div>' +
       '<article class="np-the card">' +
         '<div class="np-dau"><span class="np-so">' + (i + 1) + '</span><h3 class="np-ten">' + tron(g.ten) + '</h3></div>' +
@@ -48,6 +50,7 @@
   el.addEventListener('click', function (e) {
     var t = e.target;
     if (t.closest('.tv-loa')) return;
+    if (t.closest('.np-luyen')) return denLuyen();
     var n = t.closest('.np-tron'); if (n) return den(+n.dataset.k);
     var cu = t.closest('.np-cum');
     if (cu) { var sm = cu.querySelector('small'); sm.hidden = !sm.hidden; cu.classList.toggle('mo', !sm.hidden); return; }   // cụm từ: chỉ hiện phiên âm, không phát âm
@@ -57,6 +60,7 @@
     if (t.closest('.np-tiep')) { if (i < DS.length - 1) return den(i + 1); xong = true; return ve(); }
     if (t.closest('.np-lai')) return den(0);
   });
+  window.QM_NP = { den: function (k) { den(k); var t = el.getBoundingClientRect().top; window.scrollBy(0, t - 120); } };   // khối Luyện ngữ pháp: "Xem lại thẻ ›"
   // Dòng chú giải viết tắt ở đầu phần
   var chuGiai = '<p class="np-chu-giai">' + Object.keys(LOAI).map(function (k) { return '<span class="np-o np-' + k + '">' + (k === 'codinh' ? '是' : k === 'dt' ? 'DT' : k === 'dgt' ? 'ĐT' : k === 'tt' ? 'TT' : k === 'st' ? 'ST' : k === 'cau' ? 'Câu' : 'PT') + '</span> ' + LOAI[k]; }).join(' · ') + '</p>';
   el.innerHTML = '<div class="tv-trong">Đang tải ngữ pháp…</div>';

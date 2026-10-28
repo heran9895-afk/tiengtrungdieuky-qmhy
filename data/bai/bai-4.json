@@ -4239,5 +4239,1215 @@
    "bai": "Bài 3",
    "url": "chuong-trinh-hsk/hsk1/bai-3/tu-vung.html"
   }
+ },
+ "nguPhapLuyen": {
+  "phienBan": "2026-10-29a",
+  "dacDiem": [
+   {
+    "ma": "you-co",
+    "np": "you",
+    "ten": "有 + DT: có …",
+    "nguon": "y1"
+   },
+   {
+    "ma": "you-pd",
+    "np": "you",
+    "ten": "没(有) + DT: không có …",
+    "nguon": "y2"
+   },
+   {
+    "ma": "you-hoi",
+    "np": "you",
+    "ten": "有没有 + DT？",
+    "nguon": "y3"
+   },
+   {
+    "ma": "you-buyou",
+    "np": "you",
+    "ten": "Không nói 不有",
+    "nguon": "L1"
+   },
+   {
+    "ma": "you-ma",
+    "np": "you",
+    "ten": "有没有 không thêm 吗",
+    "nguon": "L2"
+   },
+   {
+    "ma": "so-99",
+    "np": "so",
+    "ten": "Số 0–99: ST + 十 + ST",
+    "nguon": "y1"
+   },
+   {
+    "ma": "so-lon",
+    "np": "so",
+    "ten": "百 · 千 · 万: đọc từ hàng lớn tới hàng nhỏ",
+    "nguon": "y2"
+   },
+   {
+    "ma": "so-ling",
+    "np": "so",
+    "ten": "Hàng ở giữa trống: đọc 零",
+    "nguon": "y3"
+   },
+   {
+    "ma": "so-erliang",
+    "np": "so",
+    "ten": "二 / 两 trong số (二十二, 两百, 两千)",
+    "nguon": "L1"
+   },
+   {
+    "ma": "so-1ling",
+    "np": "so",
+    "ten": "Nhiều số 0 liền nhau chỉ đọc một 零",
+    "nguon": "L2"
+   },
+   {
+    "ma": "so-110",
+    "np": "so",
+    "ten": "110 đọc 一百一十",
+    "nguon": "L3"
+   },
+   {
+    "ma": "so-nam",
+    "np": "so",
+    "ten": "Năm đọc từng chữ số",
+    "nguon": "L4"
+   },
+   {
+    "ma": "stlt-lt",
+    "np": "stlt",
+    "ten": "ST + LT + DT, không bỏ lượng từ",
+    "nguon": "y1-L1"
+   },
+   {
+    "ma": "stlt-liang",
+    "np": "stlt",
+    "ten": "Số 2 trước lượng từ dùng 两",
+    "nguon": "y2-L2"
+   },
+   {
+    "ma": "stlt-kou",
+    "np": "stlt",
+    "ten": "口 chỉ đếm người trong gia đình; người nói chung dùng 个",
+    "nguon": "L3"
+   },
+   {
+    "ma": "di-tt",
+    "np": "di",
+    "ten": "第 + ST + LT + DT: thứ tự",
+    "nguon": "y1"
+   },
+   {
+    "ma": "di-er",
+    "np": "di",
+    "ten": "Thứ tự dùng 第二, không nói 第两",
+    "nguon": "L1"
+   },
+   {
+    "ma": "ds-hoi",
+    "np": "duoshao",
+    "ten": "多少 + (LT) + DT: lượng từ có thể bỏ",
+    "nguon": "y1"
+   },
+   {
+    "ma": "ds-ji",
+    "np": "duoshao",
+    "ten": "几 hỏi số nhỏ, 多少 hỏi số lớn",
+    "nguon": "L1 (= 几 L1)"
+   },
+   {
+    "ma": "ds-ma",
+    "np": "duoshao",
+    "ten": "Câu có 多少 không thêm 吗",
+    "nguon": "L2"
+   },
+   {
+    "ma": "ji-lt",
+    "np": "ji",
+    "ten": "几 + LT + DT: bắt buộc có lượng từ",
+    "nguon": "y1-L2"
+   },
+   {
+    "ma": "ji-ma",
+    "np": "ji",
+    "ten": "Câu có 几 không thêm 吗",
+    "nguon": "L3"
+   },
+   {
+    "ma": "ht-jisui",
+    "np": "hoiTuoi",
+    "ten": "几岁: hỏi trẻ nhỏ",
+    "nguon": "y1"
+   },
+   {
+    "ma": "ht-duoda",
+    "np": "hoiTuoi",
+    "ten": "多大: hỏi người cùng lứa, người lớn",
+    "nguon": "y2"
+   },
+   {
+    "ma": "ht-nianji",
+    "np": "hoiTuoi",
+    "ten": "多大年纪: hỏi người cao tuổi",
+    "nguon": "y3"
+   },
+   {
+    "ma": "ht-shi",
+    "np": "hoiTuoi",
+    "ten": "Nói tuổi không cần 是",
+    "nguon": "L1"
+   },
+   {
+    "ma": "ht-le",
+    "np": "hoiTuoi",
+    "ten": "了 cuối câu: đã tới tuổi đó",
+    "nguon": "L2"
+   },
+   {
+    "ma": "ne-nhe",
+    "np": "ne",
+    "ten": "Câu hỏi + 呢: hỏi nhẹ nhàng",
+    "nguon": "y1"
+   },
+   {
+    "ma": "ne-hoilai",
+    "np": "ne",
+    "ten": "A……，B呢？: hỏi lại điều vừa nói",
+    "nguon": "y2"
+   },
+   {
+    "ma": "ne-odau",
+    "np": "ne",
+    "ten": "DT + 呢？: hỏi người, vật ở đâu",
+    "nguon": "y3"
+   },
+   {
+    "ma": "ne-truoc",
+    "np": "ne",
+    "ten": "B呢 chỉ dùng khi điều muốn hỏi đã nói ở trước",
+    "nguon": "L1"
+   },
+   {
+    "ma": "ne-ma",
+    "np": "ne",
+    "ten": "Câu có 呢 không thêm 吗",
+    "nguon": "L2"
+   }
+  ],
+  "cau": [
+   {
+    "ma": "b4-you-co-1",
+    "np": "you",
+    "dang": "chon",
+    "dd": "you-co",
+    "cau": "王一雪＿两个孩子。",
+    "py": "Wáng Yīxuě yǒu liǎng ge háizi.",
+    "nghia": "Vương Nhất Tuyết có hai người con.",
+    "dap": "有",
+    "nhieu": [
+     "是",
+     "没"
+    ],
+    "gt": "\"có\" là **有 + DT**."
+   },
+   {
+    "ma": "b4-you-co-2",
+    "np": "you",
+    "dang": "xep",
+    "dd": "you-co",
+    "cau": "王一雪有两个孩子。",
+    "py": "Wáng Yīxuě yǒu liǎng ge háizi.",
+    "nghia": "Vương Nhất Tuyết có hai người con.",
+    "khoi": [
+     "王一雪",
+     "有",
+     "两",
+     "个",
+     "孩子"
+    ],
+    "npPhu": [
+     "you",
+     "stlt"
+    ]
+   },
+   {
+    "ma": "b4-you-pd-1",
+    "np": "you",
+    "dang": "chon",
+    "dd": "you-pd",
+    "cau": "我＿有哥哥。",
+    "py": "Wǒ méi·yǒu gēge.",
+    "nghia": "Tôi không có anh trai.",
+    "dap": "没",
+    "nhieu": [
+     "不",
+     "也"
+    ],
+    "gt": "Phủ định của 有 là **没有**."
+   },
+   {
+    "ma": "b4-you-pd-2",
+    "np": "you",
+    "dang": "dungSai",
+    "dd": "you-pd",
+    "cau": "我没姐姐。",
+    "py": "Wǒ méi jiějie.",
+    "dung": true,
+    "gt": "没有 nói gọn là **没** cũng được: 没姐姐."
+   },
+   {
+    "ma": "b4-you-pd-3",
+    "np": "you",
+    "dang": "xep",
+    "dd": "you-pd",
+    "cau": "我没有哥哥，你呢？",
+    "py": "Wǒ méi·yǒu gēge, nǐ ne?",
+    "nghia": "Tôi không có anh trai, còn bạn?",
+    "khoi": [
+     "我",
+     "没有",
+     "哥哥",
+     "你",
+     "呢"
+    ],
+    "npPhu": [
+     "you",
+     "ne"
+    ]
+   },
+   {
+    "ma": "b4-you-hoi-1",
+    "np": "you",
+    "dang": "chon",
+    "dd": "you-hoi",
+    "cau": "你有＿有中国朋友？",
+    "py": "Nǐ yǒu méi·yǒu Zhōngguó péngyou?",
+    "nghia": "Bạn có bạn người Trung Quốc không?",
+    "dap": "没",
+    "nhieu": [
+     "不",
+     "吗"
+    ],
+    "gt": "Dạng chính phản của 有 là **有没有**."
+   },
+   {
+    "ma": "b4-you-hoi-2",
+    "np": "you",
+    "dang": "hoi",
+    "dd": "you-hoi",
+    "dap": "没有，我只有一个妹妹。",
+    "pyDap": "Méi·yǒu, wǒ zhǐ yǒu yí ge mèimei.",
+    "hoi": "你有没有哥哥？",
+    "pyHoi": "Nǐ yǒu méi·yǒu gēge?",
+    "nhieu": [
+     "你有几个妹妹？",
+     "你妹妹多大？"
+    ],
+    "gt": "Đáp bắt đầu bằng **没有** → câu hỏi **有没有**."
+   },
+   {
+    "ma": "b4-you-buyou-1",
+    "np": "you",
+    "dang": "dungSai",
+    "dd": "you-buyou",
+    "cau": "我不有姐姐。",
+    "py": "Wǒ bù yǒu jiějie.",
+    "dung": false,
+    "gt": "Phủ định của 有 là **没有 / 没**, không nói 不有.",
+    "sua": "我没有姐姐。",
+    "pySua": "Wǒ méi·yǒu jiějie.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-you-buyou-2",
+    "np": "you",
+    "dang": "dungSai",
+    "dd": "you-buyou",
+    "cau": "他们不有孩子。",
+    "py": "Tāmen bù yǒu háizi.",
+    "dung": false,
+    "gt": "Phủ định của 有 là **没有**, không nói 不有.",
+    "sua": "他们没有孩子。",
+    "pySua": "Tāmen méi·yǒu háizi.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-you-ma-1",
+    "np": "you",
+    "dang": "dungSai",
+    "dd": "you-ma",
+    "cau": "你有没有孩子吗？",
+    "py": "Nǐ yǒu méi·yǒu háizi ma?",
+    "dung": false,
+    "gt": "Đã dùng **有没有** thì **không thêm 吗**.",
+    "sua": "你有没有孩子？",
+    "pySua": "Nǐ yǒu méi·yǒu háizi?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-you-ma-2",
+    "np": "you",
+    "dang": "dungSai",
+    "dd": "you-ma",
+    "cau": "她有没有男朋友吗？",
+    "py": "Tā yǒu méi·yǒu nánpéngyou ma?",
+    "dung": false,
+    "gt": "Chọn một: 她有男朋友吗？ hoặc 她有没有男朋友？",
+    "sua": "她有没有男朋友？",
+    "pySua": "Tā yǒu méi·yǒu nánpéngyou?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-so-99-1",
+    "np": "so",
+    "dang": "chon",
+    "dd": "so-99",
+    "cau": "她有＿个学生。",
+    "py": "Tā yǒu èrshísān ge xué·shēng.",
+    "nghia": "Cô ấy có 23 học sinh.",
+    "dap": "二十三",
+    "nhieu": [
+     "三十二",
+     "两十三"
+    ],
+    "gt": "Đọc theo thứ tự viết: 2 chục 3 → **二十三**; hàng chục dùng 二."
+   },
+   {
+    "ma": "b4-so-99-2",
+    "np": "so",
+    "dang": "chon",
+    "dd": "so-99",
+    "cau": "我妈妈今年＿岁。",
+    "py": "Wǒ māma jīnnián sìshíwǔ suì.",
+    "nghia": "Mẹ tôi năm nay 45 tuổi.",
+    "dap": "四十五",
+    "nhieu": [
+     "五十四",
+     "四五"
+    ],
+    "gt": "45 = 4 chục 5 → **四十五**."
+   },
+   {
+    "ma": "b4-so-lon-1",
+    "np": "so",
+    "dang": "chon",
+    "dd": "so-lon",
+    "cau": "我们有＿个学生。",
+    "py": "Wǒmen yǒu sānbǎi èrshí ge xué·shēng.",
+    "nghia": "Chúng tôi có 320 học sinh.",
+    "dap": "三百二十",
+    "nhieu": [
+     "三二十",
+     "二十三百"
+    ],
+    "gt": "Đọc từ hàng lớn tới nhỏ: 3 trăm 2 chục → **三百二十**."
+   },
+   {
+    "ma": "b4-so-lon-2",
+    "np": "so",
+    "dang": "chon",
+    "dd": "so-lon",
+    "cau": "他有＿个朋友。",
+    "py": "Tā yǒu yìqiān wǔbǎi èrshíbā ge péngyou.",
+    "nghia": "Anh ấy có 1528 người bạn.",
+    "dap": "一千五百二十八",
+    "nhieu": [
+     "一千五二十八",
+     "一五二八"
+    ],
+    "gt": "1528 = 一千 + 五百 + 二十 + 八."
+   },
+   {
+    "ma": "b4-so-ling-1",
+    "np": "so",
+    "dang": "chon",
+    "dd": "so-ling",
+    "cau": "他有一百＿八个朋友。",
+    "py": "Tā yǒu yìbǎi líng bā ge péngyou.",
+    "nghia": "Anh ấy có một trăm lẻ tám người bạn.",
+    "dap": "零",
+    "nhieu": [
+     "十",
+     "二"
+    ],
+    "gt": "Hàng chục trống thì đọc **零**: 108 = 一百零八."
+   },
+   {
+    "ma": "b4-so-ling-2",
+    "np": "so",
+    "dang": "dungSai",
+    "dd": "so-ling",
+    "cau": "我们有一千零五十个学生。",
+    "py": "Wǒmen yǒu yìqiān líng wǔshí ge xué·shēng.",
+    "dung": true,
+    "gt": "1050: hàng trăm trống nên đọc **零**."
+   },
+   {
+    "ma": "b4-so-ling-3",
+    "np": "so",
+    "dang": "xep",
+    "dd": "so-ling",
+    "cau": "我们有两百零五个学生。",
+    "py": "Wǒmen yǒu liǎngbǎi líng wǔ ge xué·shēng.",
+    "nghia": "Chúng tôi có hai trăm lẻ năm học sinh.",
+    "khoi": [
+     "我们",
+     "有",
+     "两百",
+     "零",
+     "五",
+     "个",
+     "学生"
+    ],
+    "npPhu": [
+     "so",
+     "stlt"
+    ]
+   },
+   {
+    "ma": "b4-so-erliang-1",
+    "np": "so",
+    "dang": "chon",
+    "dd": "so-erliang",
+    "cau": "我有＿十二个中国朋友。",
+    "py": "Wǒ yǒu èrshí'èr ge Zhōngguó péngyou.",
+    "nghia": "Tôi có 22 người bạn Trung Quốc.",
+    "dap": "二",
+    "nhieu": [
+     "两",
+     "第"
+    ],
+    "gt": "Hàng chục và hàng đơn vị dùng **二**: 二十二."
+   },
+   {
+    "ma": "b4-so-erliang-2",
+    "np": "so",
+    "dang": "chon",
+    "dd": "so-erliang",
+    "cau": "我们有＿千个学生。",
+    "py": "Wǒmen yǒu liǎngqiān ge xué·shēng.",
+    "nghia": "Chúng tôi có 2000 học sinh.",
+    "dap": "两",
+    "nhieu": [
+     "二十",
+     "几"
+    ],
+    "gt": "2000 thường nói **两千**."
+   },
+   {
+    "ma": "b4-so-1ling-1",
+    "np": "so",
+    "dang": "chon",
+    "dd": "so-1ling",
+    "cau": "我们有一千＿一个学生。",
+    "py": "Wǒmen yǒu yìqiān líng yī ge xué·shēng.",
+    "nghia": "Chúng tôi có 1001 học sinh.",
+    "dap": "零",
+    "nhieu": [
+     "零零",
+     "百零"
+    ],
+    "gt": "Nhiều số 0 liền nhau **chỉ đọc một 零**: 1001 = 一千零一."
+   },
+   {
+    "ma": "b4-so-1ling-2",
+    "np": "so",
+    "dang": "dungSai",
+    "dd": "so-1ling",
+    "cau": "我们有一千零零一个学生。",
+    "py": "Wǒmen yǒu yìqiān líng líng yī ge xué·shēng.",
+    "dung": false,
+    "gt": "Nhiều số 0 liền nhau **chỉ đọc một 零**: 一千零一.",
+    "sua": "我们有一千零一个学生。",
+    "pySua": "Wǒmen yǒu yìqiān líng yī ge xué·shēng.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-so-110-1",
+    "np": "so",
+    "dang": "chon",
+    "dd": "so-110",
+    "cau": "我们有一百＿个学生。",
+    "py": "Wǒmen yǒu yìbǎi yīshí ge xué·shēng.",
+    "nghia": "Chúng tôi có 110 học sinh.",
+    "dap": "一十",
+    "nhieu": [
+     "十",
+     "零十"
+    ],
+    "gt": "110 đọc **一百一十** (khẩu ngữ: 一百一)."
+   },
+   {
+    "ma": "b4-so-110-2",
+    "np": "so",
+    "dang": "dungSai",
+    "dd": "so-110",
+    "cau": "王老师有一百一十个学生。",
+    "py": "Wáng lǎoshī yǒu yìbǎi yīshí ge xué·shēng.",
+    "dung": true,
+    "gt": "110 = **一百一十**."
+   },
+   {
+    "ma": "b4-so-nam-1",
+    "np": "so",
+    "dang": "chon",
+    "dd": "so-nam",
+    "cau": "今年是＿年。",
+    "py": "Jīnnián shì èrlíng'èrliù nián.",
+    "nghia": "Năm nay là năm 2026.",
+    "dap": "二〇二六",
+    "nhieu": [
+     "两千零二十六",
+     "二千二十六"
+    ],
+    "gt": "Năm đọc **từng chữ số**: 二〇二六年."
+   },
+   {
+    "ma": "b4-so-nam-2",
+    "np": "so",
+    "dang": "hoi",
+    "dd": "so-nam",
+    "dap": "今年是二〇二六年。",
+    "pyDap": "Jīnnián shì èrlíng'èrliù nián.",
+    "hoi": "今年是哪一年？",
+    "pyHoi": "Jīnnián shì nǎ yì nián?",
+    "nhieu": [
+     "你今年多大？",
+     "你家有几口人？"
+    ],
+    "gt": "Đáp năm → hỏi **哪一年**; năm đọc từng chữ số."
+   },
+   {
+    "ma": "b4-stlt-lt-1",
+    "np": "stlt",
+    "dang": "chon",
+    "dd": "stlt-lt",
+    "cau": "我有三＿孩子。",
+    "py": "Wǒ yǒu sān ge háizi.",
+    "nghia": "Tôi có ba đứa con.",
+    "dap": "个",
+    "nhieu": [
+     "口",
+     "岁"
+    ],
+    "gt": "Giữa số từ và danh từ phải có **lượng từ**: 三个孩子."
+   },
+   {
+    "ma": "b4-stlt-lt-2",
+    "np": "stlt",
+    "dang": "dungSai",
+    "dd": "stlt-lt",
+    "cau": "我们有三学生。",
+    "py": "Wǒmen yǒu sān xué·shēng.",
+    "dung": false,
+    "gt": "Giữa số từ và danh từ **phải có lượng từ**.",
+    "sua": "我们有三个学生。",
+    "pySua": "Wǒmen yǒu sān ge xué·shēng.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-stlt-liang-1",
+    "np": "stlt",
+    "dang": "chon",
+    "dd": "stlt-liang",
+    "cau": "我有＿个妹妹。",
+    "py": "Wǒ yǒu liǎng ge mèimei.",
+    "nghia": "Tôi có hai em gái.",
+    "dap": "两",
+    "nhieu": [
+     "二",
+     "第二"
+    ],
+    "gt": "Số 2 đứng trước lượng từ dùng **两**: 两个."
+   },
+   {
+    "ma": "b4-stlt-liang-2",
+    "np": "stlt",
+    "dang": "dungSai",
+    "dd": "stlt-liang",
+    "cau": "我有二个哥哥。",
+    "py": "Wǒ yǒu èr ge gēge.",
+    "dung": false,
+    "gt": "Số 2 trước lượng từ dùng **两**.",
+    "sua": "我有两个哥哥。",
+    "pySua": "Wǒ yǒu liǎng ge gēge.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-stlt-kou-1",
+    "np": "stlt",
+    "dang": "chon",
+    "dd": "stlt-kou",
+    "cau": "我家有五＿人。",
+    "py": "Wǒ jiā yǒu wǔ kǒu rén.",
+    "nghia": "Nhà tôi có năm người.",
+    "dap": "口",
+    "nhieu": [
+     "位",
+     "岁"
+    ],
+    "gt": "Đếm người trong gia đình dùng **口**."
+   },
+   {
+    "ma": "b4-stlt-kou-2",
+    "np": "stlt",
+    "dang": "chon",
+    "dd": "stlt-kou",
+    "cau": "我们有两＿汉语老师。",
+    "py": "Wǒmen yǒu liǎng wèi Hànyǔ lǎoshī.",
+    "nghia": "Chúng tôi có hai thầy cô dạy tiếng Trung.",
+    "dap": "位",
+    "nhieu": [
+     "口",
+     "岁"
+    ],
+    "gt": "口 chỉ dùng cho người trong gia đình; thầy cô dùng **位** (lịch sự)."
+   },
+   {
+    "ma": "b4-stlt-kou-3",
+    "np": "stlt",
+    "dang": "dungSai",
+    "dd": "stlt-kou",
+    "cau": "我有四口朋友。",
+    "py": "Wǒ yǒu sì kǒu péngyou.",
+    "dung": false,
+    "gt": "**口** chỉ dùng đếm người trong gia đình; bạn bè dùng **个**.",
+    "sua": "我有四个朋友。",
+    "pySua": "Wǒ yǒu sì ge péngyou.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-di-tt-1",
+    "np": "di",
+    "dang": "chon",
+    "dd": "di-tt",
+    "cau": "她是我们家的＿二个孩子。",
+    "py": "Tā shì wǒmen jiā de dì-èr ge háizi.",
+    "nghia": "Cô ấy là đứa con thứ hai trong nhà chúng tôi.",
+    "dap": "第",
+    "nhieu": [
+     "两",
+     "几"
+    ],
+    "gt": "Chỉ thứ tự: **第 + ST + LT + DT**."
+   },
+   {
+    "ma": "b4-di-tt-2",
+    "np": "di",
+    "dang": "xep",
+    "dd": "di-tt",
+    "cau": "他是我的第一个中国朋友。",
+    "py": "Tā shì wǒ de dì-yī ge Zhōngguó péngyou.",
+    "nghia": "Anh ấy là người bạn Trung Quốc đầu tiên của tôi.",
+    "khoi": [
+     "他",
+     "是",
+     "我",
+     "的",
+     "第一",
+     "个",
+     "中国",
+     "朋友"
+    ],
+    "npPhu": [
+     "di",
+     "stlt",
+     "de"
+    ]
+   },
+   {
+    "ma": "b4-di-er-1",
+    "np": "di",
+    "dang": "chon",
+    "dd": "di-er",
+    "cau": "她是我的第＿个老师。",
+    "py": "Tā shì wǒ de dì-èr ge lǎoshī.",
+    "nghia": "Cô ấy là giáo viên thứ hai của tôi.",
+    "dap": "二",
+    "nhieu": [
+     "两",
+     "几"
+    ],
+    "gt": "Thứ tự dùng **第二**, không nói 第两."
+   },
+   {
+    "ma": "b4-di-er-2",
+    "np": "di",
+    "dang": "dungSai",
+    "dd": "di-er",
+    "cau": "她是我们家的第两个孩子。",
+    "py": "Tā shì wǒmen jiā de dì-liǎng ge háizi.",
+    "dung": false,
+    "gt": "Thứ tự dùng **第二**; 两 chỉ dùng cho số lượng.",
+    "sua": "她是我们家的第二个孩子。",
+    "pySua": "Tā shì wǒmen jiā de dì-èr ge háizi.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-ds-hoi-1",
+    "np": "duoshao",
+    "dang": "chon",
+    "dd": "ds-hoi",
+    "cau": "你们有＿学生？",
+    "py": "Nǐmen yǒu duōshao xué·shēng?",
+    "nghia": "Các bạn có bao nhiêu học sinh?",
+    "dap": "多少",
+    "nhieu": [
+     "几",
+     "什么"
+    ],
+    "gt": "Không có lượng từ → chỉ dùng được **多少**; 几 bắt buộc có lượng từ."
+   },
+   {
+    "ma": "b4-ds-hoi-2",
+    "np": "duoshao",
+    "dang": "dungSai",
+    "dd": "ds-hoi",
+    "cau": "王老师有多少学生？",
+    "py": "Wáng lǎoshī yǒu duōshao xué·shēng?",
+    "dung": true,
+    "gt": "Sau 多少 **có thể bỏ lượng từ**."
+   },
+   {
+    "ma": "b4-ds-hoi-3",
+    "np": "duoshao",
+    "dang": "xep",
+    "dd": "ds-hoi",
+    "cau": "你们有多少个学生？",
+    "py": "Nǐmen yǒu duōshao ge xué·shēng?",
+    "nghia": "Các bạn có bao nhiêu học sinh?",
+    "khoi": [
+     "你们",
+     "有",
+     "多少",
+     "个",
+     "学生"
+    ],
+    "npPhu": [
+     "duoshao",
+     "stlt"
+    ]
+   },
+   {
+    "ma": "b4-ds-ji-1",
+    "np": "duoshao",
+    "dang": "chon",
+    "dd": "ds-ji",
+    "cau": "你家有＿口人？",
+    "py": "Nǐ jiā yǒu jǐ kǒu rén?",
+    "nghia": "Nhà bạn có mấy người?",
+    "dap": "几",
+    "nhieu": [
+     "多少",
+     "什么"
+    ],
+    "gt": "Số người trong nhà là số nhỏ → **几**."
+   },
+   {
+    "ma": "b4-ds-ji-2",
+    "np": "duoshao",
+    "dang": "hoi",
+    "dd": "ds-ji",
+    "dap": "我们有三百二十个学生。",
+    "pyDap": "Wǒmen yǒu sānbǎi èrshí ge xué·shēng.",
+    "hoi": "你们有多少个学生？",
+    "pyHoi": "Nǐmen yǒu duōshao ge xué·shēng?",
+    "nhieu": [
+     "你们有几位老师？",
+     "你们是哪国学生？"
+    ],
+    "gt": "Số lớn → hỏi **多少**."
+   },
+   {
+    "ma": "b4-ds-ma-1",
+    "np": "duoshao",
+    "dang": "dungSai",
+    "dd": "ds-ma",
+    "cau": "你们有多少学生吗？",
+    "py": "Nǐmen yǒu duōshao xué·shēng ma?",
+    "dung": false,
+    "gt": "Câu có 多少 thì **không thêm 吗**.",
+    "sua": "你们有多少学生？",
+    "pySua": "Nǐmen yǒu duōshao xué·shēng?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-ds-ma-2",
+    "np": "duoshao",
+    "dang": "dungSai",
+    "dd": "ds-ma",
+    "cau": "王老师有多少个学生吗？",
+    "py": "Wáng lǎoshī yǒu duōshao ge xué·shēng ma?",
+    "dung": false,
+    "gt": "Câu có 多少 thì **không thêm 吗**.",
+    "sua": "王老师有多少个学生？",
+    "pySua": "Wáng lǎoshī yǒu duōshao ge xué·shēng?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-ji-lt-1",
+    "np": "ji",
+    "dang": "dungSai",
+    "dd": "ji-lt",
+    "cau": "你有几朋友？",
+    "py": "Nǐ yǒu jǐ péngyou?",
+    "dung": false,
+    "gt": "Sau 几 **bắt buộc có lượng từ**.",
+    "sua": "你有几个朋友？",
+    "pySua": "Nǐ yǒu jǐ ge péngyou?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-ji-lt-2",
+    "np": "ji",
+    "dang": "hoi",
+    "dd": "ji-lt",
+    "dap": "我家有四口人。",
+    "pyDap": "Wǒ jiā yǒu sì kǒu rén.",
+    "hoi": "你家有几口人？",
+    "pyHoi": "Nǐ jiā yǒu jǐ kǒu rén?",
+    "nhieu": [
+     "你有几个哥哥？",
+     "你有没有哥哥？"
+    ],
+    "gt": "Đáp số người trong nhà → hỏi **几口人**."
+   },
+   {
+    "ma": "b4-ji-lt-3",
+    "np": "ji",
+    "dang": "xep",
+    "dd": "ji-lt",
+    "cau": "你家有几口人？",
+    "py": "Nǐ jiā yǒu jǐ kǒu rén?",
+    "nghia": "Nhà bạn có mấy người?",
+    "khoi": [
+     "你",
+     "家",
+     "有",
+     "几",
+     "口",
+     "人"
+    ],
+    "npPhu": [
+     "ji",
+     "stlt"
+    ]
+   },
+   {
+    "ma": "b4-ji-ma-1",
+    "np": "ji",
+    "dang": "dungSai",
+    "dd": "ji-ma",
+    "cau": "你有几个孩子吗？",
+    "py": "Nǐ yǒu jǐ ge háizi ma?",
+    "dung": false,
+    "gt": "Câu có 几 thì **không thêm 吗**.",
+    "sua": "你有几个孩子？",
+    "pySua": "Nǐ yǒu jǐ ge háizi?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-ji-ma-2",
+    "np": "ji",
+    "dang": "dungSai",
+    "dd": "ji-ma",
+    "cau": "她有几个妹妹？",
+    "py": "Tā yǒu jǐ ge mèimei?",
+    "dung": true,
+    "gt": "Câu có 几 đã là câu hỏi, không cần 吗."
+   },
+   {
+    "ma": "b4-ht-jisui-1",
+    "np": "hoiTuoi",
+    "dang": "chon",
+    "dd": "ht-jisui",
+    "cau": "你弟弟今年＿？",
+    "py": "Nǐ dìdi jīnnián jǐ suì?",
+    "nghia": "Em trai bạn năm nay mấy tuổi?",
+    "dap": "几岁",
+    "nhieu": [
+     "多大年纪",
+     "多少"
+    ],
+    "gt": "Hỏi tuổi trẻ nhỏ dùng **几岁**."
+   },
+   {
+    "ma": "b4-ht-jisui-2",
+    "np": "hoiTuoi",
+    "dang": "hoi",
+    "dd": "ht-jisui",
+    "dap": "他今年五岁。",
+    "pyDap": "Tā jīnnián wǔ suì.",
+    "hoi": "你儿子几岁？",
+    "pyHoi": "Nǐ érzi jǐ suì?",
+    "nhieu": [
+     "你儿子有几个朋友？",
+     "你有几个儿子？"
+    ],
+    "gt": "Đáp tuổi trẻ nhỏ → hỏi **几岁**."
+   },
+   {
+    "ma": "b4-ht-duoda-1",
+    "np": "hoiTuoi",
+    "dang": "chon",
+    "dd": "ht-duoda",
+    "cau": "你今年＿？",
+    "py": "Nǐ jīnnián duō dà?",
+    "nghia": "Năm nay bạn bao nhiêu tuổi? (hỏi bạn cùng lớp)",
+    "dap": "多大",
+    "nhieu": [
+     "多大年纪",
+     "多少"
+    ],
+    "gt": "Hỏi người cùng lứa dùng **多大**."
+   },
+   {
+    "ma": "b4-ht-duoda-2",
+    "np": "hoiTuoi",
+    "dang": "hoi",
+    "dd": "ht-duoda",
+    "dap": "他今年二十五岁。",
+    "pyDap": "Tā jīnnián èrshíwǔ suì.",
+    "hoi": "你哥哥多大？",
+    "pyHoi": "Nǐ gēge duō dà?",
+    "nhieu": [
+     "你奶奶多大年纪？",
+     "你有几个哥哥？"
+    ],
+    "gt": "Người lớn 25 tuổi → hỏi **多大**."
+   },
+   {
+    "ma": "b4-ht-nianji-1",
+    "np": "hoiTuoi",
+    "dang": "chon",
+    "dd": "ht-nianji",
+    "cau": "你奶奶＿？",
+    "py": "Nǐ nǎinai duō dà niánjì?",
+    "nghia": "Bà nội bạn bao nhiêu tuổi?",
+    "dap": "多大年纪",
+    "nhieu": [
+     "几岁",
+     "多少"
+    ],
+    "gt": "Hỏi tuổi người cao tuổi dùng **多大年纪**."
+   },
+   {
+    "ma": "b4-ht-nianji-2",
+    "np": "hoiTuoi",
+    "dang": "hoi",
+    "dd": "ht-nianji",
+    "dap": "她今年八十岁了。",
+    "pyDap": "Tā jīnnián bāshí suì le.",
+    "hoi": "你奶奶多大年纪？",
+    "pyHoi": "Nǐ nǎinai duō dà niánjì?",
+    "nhieu": [
+     "你妹妹几岁？",
+     "你奶奶有几个孩子？"
+    ],
+    "gt": "Người 80 tuổi → hỏi **多大年纪**; 几岁 dùng cho trẻ nhỏ."
+   },
+   {
+    "ma": "b4-ht-shi-1",
+    "np": "hoiTuoi",
+    "dang": "chon",
+    "dd": "ht-shi",
+    "cau": "我妈妈＿四十五岁。",
+    "py": "Wǒ māma jīnnián sìshíwǔ suì.",
+    "nghia": "Mẹ tôi năm nay 45 tuổi.",
+    "dap": "今年",
+    "nhieu": [
+     "是",
+     "有"
+    ],
+    "gt": "Nói tuổi **không cần 是**: CN + (今年) + số + 岁."
+   },
+   {
+    "ma": "b4-ht-shi-2",
+    "np": "hoiTuoi",
+    "dang": "dungSai",
+    "dd": "ht-shi",
+    "cau": "我是二十岁。",
+    "py": "Wǒ shì èrshí suì.",
+    "dung": false,
+    "gt": "Nói tuổi **không cần 是**.",
+    "sua": "我二十岁。",
+    "pySua": "Wǒ èrshí suì.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-ht-le-1",
+    "np": "hoiTuoi",
+    "dang": "dungSai",
+    "dd": "ht-le",
+    "cau": "他今年两岁了。",
+    "py": "Tā jīnnián liǎng suì le.",
+    "dung": true,
+    "gt": "Thêm 了 cuối câu: đã tới tuổi đó."
+   },
+   {
+    "ma": "b4-ht-le-2",
+    "np": "hoiTuoi",
+    "dang": "xep",
+    "dd": "ht-le",
+    "cau": "你奶奶多大年纪了？",
+    "py": "Nǐ nǎinai duō dà niánjì le?",
+    "nghia": "Bà nội bạn bao nhiêu tuổi rồi?",
+    "khoi": [
+     "你",
+     "奶奶",
+     "多大",
+     "年纪",
+     "了"
+    ],
+    "npPhu": [
+     "hoiTuoi"
+    ]
+   },
+   {
+    "ma": "b4-ne-nhe-1",
+    "np": "ne",
+    "dang": "chon",
+    "dd": "ne-nhe",
+    "cau": "你叫什么名字＿？",
+    "py": "Nǐ jiào shénme míngzi ne?",
+    "nghia": "Bạn tên là gì thế?",
+    "dap": "呢",
+    "nhieu": [
+     "吗",
+     "的"
+    ],
+    "gt": "Câu hỏi + **呢**: hỏi nhẹ nhàng; câu có 什么 không dùng 吗."
+   },
+   {
+    "ma": "b4-ne-nhe-2",
+    "np": "ne",
+    "dang": "dungSai",
+    "dd": "ne-nhe",
+    "cau": "你叫什么名字呢？",
+    "py": "Nǐ jiào shénme míngzi ne?",
+    "dung": true,
+    "gt": "Câu hỏi + 呢 cho nhẹ nhàng, uyển chuyển."
+   },
+   {
+    "ma": "b4-ne-hoilai-1",
+    "np": "ne",
+    "dang": "chon",
+    "dd": "ne-hoilai",
+    "cau": "我是越南人，你＿？",
+    "py": "Wǒ shì Yuènán rén, nǐ ne?",
+    "nghia": "Tôi là người Việt Nam, còn bạn?",
+    "dap": "呢",
+    "nhieu": [
+     "吗",
+     "的"
+    ],
+    "gt": "Hỏi lại điều vừa nói: **B 呢？**"
+   },
+   {
+    "ma": "b4-ne-hoilai-2",
+    "np": "ne",
+    "dang": "dungSai",
+    "dd": "ne-hoilai",
+    "cau": "我没有孩子，你呢？",
+    "py": "Wǒ méi·yǒu háizi, nǐ ne?",
+    "dung": true,
+    "gt": "B 呢？ hỏi lại điều vừa nói ở trước."
+   },
+   {
+    "ma": "b4-ne-hoilai-3",
+    "np": "ne",
+    "dang": "hoi",
+    "dd": "ne-hoilai",
+    "dap": "我是中国人。",
+    "pyDap": "Wǒ shì Zhōngguó rén.",
+    "hoi": "我是越南人，你呢？",
+    "pyHoi": "Wǒ shì Yuènán rén, nǐ ne?",
+    "nhieu": [
+     "你家有几口人？",
+     "你今年多大？"
+    ],
+    "gt": "**你呢？** hỏi lại điều vừa nói (quốc tịch)."
+   },
+   {
+    "ma": "b4-ne-odau-1",
+    "np": "ne",
+    "dang": "chon",
+    "dd": "ne-odau",
+    "cau": "妈妈，我的猫＿？",
+    "py": "Māma, wǒ de māo ne?",
+    "nghia": "Mẹ ơi, con mèo của con đâu ạ?",
+    "dap": "呢",
+    "nhieu": [
+     "吗",
+     "几"
+    ],
+    "gt": "Hỏi người, vật ở đâu: **DT + 呢？**"
+   },
+   {
+    "ma": "b4-ne-odau-2",
+    "np": "ne",
+    "dang": "dungSai",
+    "dd": "ne-odau",
+    "cau": "爸爸，我妈妈呢？",
+    "py": "Bàba, wǒ māma ne?",
+    "dung": true,
+    "gt": "DT + 呢？ hỏi người đang ở đâu."
+   },
+   {
+    "ma": "b4-ne-truoc-1",
+    "np": "ne",
+    "dang": "hoi",
+    "dd": "ne-truoc",
+    "dap": "我今年二十岁。",
+    "pyDap": "Wǒ jīnnián èrshí suì.",
+    "hoi": "我今年二十二岁，你呢？",
+    "pyHoi": "Wǒ jīnnián èrshí'èr suì, nǐ ne?",
+    "nhieu": [
+     "我是中国人，你呢？",
+     "我有两个哥哥，你呢？"
+    ],
+    "gt": "B呢 hỏi lại **đúng điều vừa nói ở trước**: nói tuổi trước thì 你呢 mới là hỏi tuổi."
+   },
+   {
+    "ma": "b4-ne-truoc-2",
+    "np": "ne",
+    "dang": "hoi",
+    "dd": "ne-truoc",
+    "dap": "我家有三口人。",
+    "pyDap": "Wǒ jiā yǒu sān kǒu rén.",
+    "hoi": "我家有五口人，你家呢？",
+    "pyHoi": "Wǒ jiā yǒu wǔ kǒu rén, nǐ jiā ne?",
+    "nhieu": [
+     "我有两个哥哥，你呢？",
+     "我是学生，你呢？"
+    ],
+    "gt": "Câu trước nói số người trong nhà → 你家呢 hỏi số người trong nhà."
+   },
+   {
+    "ma": "b4-ne-ma-1",
+    "np": "ne",
+    "dang": "dungSai",
+    "dd": "ne-ma",
+    "cau": "我是越南人，你呢吗？",
+    "py": "Wǒ shì Yuènán rén, nǐ ne ma?",
+    "dung": false,
+    "gt": "Câu có 呢 thì **không thêm 吗**.",
+    "sua": "我是越南人，你呢？",
+    "pySua": "Wǒ shì Yuènán rén, nǐ ne?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-ne-ma-2",
+    "np": "ne",
+    "dang": "dungSai",
+    "dd": "ne-ma",
+    "cau": "我有两个孩子，你呢？",
+    "py": "Wǒ yǒu liǎng ge háizi, nǐ ne?",
+    "dung": true,
+    "gt": "Câu có 呢 không cần thêm 吗."
+   }
+  ]
  }
 }

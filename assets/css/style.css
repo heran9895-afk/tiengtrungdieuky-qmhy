@@ -855,3 +855,40 @@ body::after{content:"";position:fixed;left:50%;top:56%;width:min(72vw,560px);asp
 /* Dòng nhắc: cấu tạo chữ đã có ở từ phía trước */
 .ctz-nhac{margin:6px 0 0;font-size:14px;line-height:1.5;color:var(--muted)}
 .ctz-xem{display:inline;border:0;background:none;padding:0;font:inherit;color:var(--brand);font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+
+/* ===== LUYỆN NGỮ PHÁP (khối 🎯 cuối trang Ngữ pháp, assets/js/luyen-ngu-phap.js) ===== */
+#luyen-ngu-phap{max-width:760px;margin:34px auto 0;scroll-margin-top:90px}
+.lnp-dau{padding:22px 18px;text-align:center;border-top:5px solid var(--gold)}
+.lnp-tieu-de{margin:4px 0 8px;font-size:24px;color:var(--brand)}
+.lnp-mo-ta{margin:0 0 10px;line-height:1.55;color:var(--ink)}
+.lnp-dang{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:0 0 14px}
+.lnp-dang span{background:var(--surface-2);border:1px solid var(--line-soft);border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700;color:var(--muted)}
+.lnp-hs{text-align:left}
+.lnp-loi{color:var(--no)}
+.lnp-hang{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:4px}
+.lnp-ten-dang{font-weight:800;color:var(--brand);font-size:14.5px}
+.lnp-nhan{font-size:13px;font-weight:700;color:var(--muted);text-align:left;margin-bottom:6px}
+.lnp-nhan b{color:#7a5a12}
+.lnp-hoi{margin:6px 0 2px;font-weight:700;color:var(--muted);font-size:14.5px}
+.lnp-nghia{margin:4px 0 2px;font-size:17px;font-weight:800;color:var(--ink);line-height:1.45}
+.lnp-de .lt-de-cau{padding:2px 0}
+.lnp-tu{color:var(--red);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.lnp-trong{display:inline-block;min-width:2.2em;border-bottom:3px solid var(--gold);margin:0 .1em}
+.lnp-3{grid-template-columns:repeat(3,1fr)}
+.lt-dap.chu .lt-dap-chu.lnp-dai{font-size:19px}
+.lnp-ds .lt-dap-o{justify-content:center;font-size:17px;font-weight:800}
+.lnp-giai-o{margin-top:12px;background:#fff;border:1.5px solid var(--line-soft);border-left:5px solid var(--ok);border-radius:14px;padding:10px 14px;text-align:left}
+.lnp-giai-o.sai{border-left-color:var(--no)}
+.lnp-nhan-nho{font-size:12.5px;font-weight:800;color:var(--muted);margin-top:4px}
+.lnp-cau-dung{display:flex;align-items:center;gap:10px;margin:4px 0}
+.lnp-cau-dung .hanzi{font-size:21px;line-height:1.45;color:var(--ink)}
+.lnp-py{color:var(--red);font-weight:700;font-size:13.5px}
+.lnp-gt,.lnp-dd{margin:6px 0 0;line-height:1.55;font-size:14.5px}
+.lnp-dd{color:var(--muted);font-size:13.5px}
+.lnp-ds-sai{list-style:none;padding:0;margin:0;display:grid;gap:10px;text-align:left}
+.lnp-ds-sai>li{background:var(--surface-2);border:1px solid var(--line-soft);border-radius:12px;padding:10px 12px}
+.lnp-ds-ten{font-weight:800;color:var(--brand)}
+.lnp-ds-sai ul{margin:4px 0 8px;padding-left:20px;line-height:1.5;font-size:14px}
+.lnp-ds-sai .btn{padding:6px 12px;font-size:13.5px}
+.np-tron.np-tron-luyen{width:auto;padding:0 12px;border-radius:999px;border-color:var(--gold);color:#7a5a12}
+@media(max-width:600px){.lnp-3{grid-template-columns:1fr 1fr 1fr;gap:6px}.lt-dap.chu.lnp-3 .lt-dap-chu{font-size:22px}.lt-dap.chu .lt-dap-chu.lnp-dai{font-size:15px}.lnp-tieu-de{font-size:21px}.lnp-nghia{font-size:16px}}
