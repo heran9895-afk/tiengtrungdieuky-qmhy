@@ -122,7 +122,7 @@ def py_moi_cach(c):
 def so_han(s):
     return HAN.findall(s)
 
-OK_AM = {('教', 'jiao', 1), ('片', 'pian', 4), ('卷', 'juan', 3), ('觉', 'jiao', 4), ('长', 'chang', 2), ('都', 'dou', 1), ('地', 'de', 0), ('谁', 'shei', 2), ('了', 'le', 0), ('得', 'de', 0), ('着', 'zhe', 0), ('为', 'wei', 4), ('为', 'wei', 2), ('更', 'geng', 4), ('处', 'chu', 4), ('肚', 'du', 4), ('当', 'dang', 1), ('的', 'de', 0), ('和', 'he', 2), ('发', 'fa', 1), ('汗', 'han', 4), ('场', 'chang', 3)}
+OK_AM = {('教', 'jiao', 1), ('片', 'pian', 4), ('卷', 'juan', 3), ('觉', 'jiao', 4), ('长', 'chang', 2), ('都', 'dou', 1), ('地', 'de', 0), ('谁', 'shei', 2), ('了', 'le', 0), ('得', 'de', 0), ('着', 'zhe', 0), ('为', 'wei', 4), ('为', 'wei', 2), ('更', 'geng', 4), ('处', 'chu', 4), ('肚', 'du', 4), ('当', 'dang', 1), ('的', 'de', 0), ('和', 'he', 2), ('发', 'fa', 1), ('汗', 'han', 4), ('场', 'chang', 3), ('尽', 'jin', 4), ('划', 'hua', 2), ('假', 'jia', 4), ('铺', 'pu', 1), ('干', 'gan', 1)}
 
 def kiem_py(han, py, nhan, canh):
     chu = so_han(han)
@@ -317,7 +317,7 @@ def kiem(ten):
             for k in DA_AM:
                 if k in s and (not dd or k in dd):
                     canh.append(f'{nh}: có "{k}", cần "Đọc câu" thay {DA_AM[k]} — {s}')
-            if dd and len(so_han(dd)) != len(so_han(s)) - s.count('儿') + dd.count('儿') and abs(len(dd) - len(s)) > 3:
+            if dd and dd != '-' and len(so_han(dd)) != len(so_han(s)) - s.count('儿') + dd.count('儿') and abs(len(dd) - len(s)) > 3:
                 canh.append(f'{nh}: "Đọc câu" lệch độ dài — {dd}')
         cum_on = [h for h, _ in cum for t in cat(h, lv) if t != w and len(t) > 1 and lv.get(t) == '7-9' and vt.get(t, 1e9) < i]
         if not any(e['_ontap']) and not cum_on:
