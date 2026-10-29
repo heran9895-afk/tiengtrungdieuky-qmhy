@@ -14,6 +14,7 @@ import json, os, re, sys, unicodedata, importlib.util
 GOC = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PHIEN_BAN = '2026-10-29a'
 # Vốn chữ theo sổ tích lũy (Project claude/so-tich-luy.json, chuHanMoi từng bài) — bài mới nhớ thêm dòng
+TEN_RIENG = '小语王一飞陈天中安妮白家月李文王一雪刘明杨同乐小明'
 CHU = {1: "一三不个五们你八再吃同喝大天好学客家小师很您明气汉狗猫王生老见语谢飞",
        2: "中么也事什俄关兴十口只叫名国坐女妮子字安对我文斯日是月本李没爱白系罗美英认识说请起进门问陈高",
        3: "了人他作做南去友吗哥哪喂太奶她妈妹姐姥工弟忙想有朋法泰爷爸男的谁越还这那雪",
@@ -42,7 +43,7 @@ def kiem():
     loi, ds = [], {}
     for m in KHO:
         for n, cau in m.CAU.items():
-            von = set(''.join(CHU[k] for k in CHU if k <= n))
+            von = set(''.join(CHU[k] for k in CHU if k <= n)) | set(TEN_RIENG)
             dds = {d[1]: d for d in m.DD[n]}; dem = {k: 0 for k in dds}
 
             def ck(s, py, nhan):
@@ -53,7 +54,8 @@ def kiem():
                     if a != strip(py): loi.append(f'B{n} {nhan}: pinyin lệch :: {s} | {py}')
             for it in cau:
                 if it['dd'] not in dds: loi.append(f'B{n}: đặc điểm lạ {it["dd"]}'); continue
-                dem[it['dd']] += 1; d = it['dang']
+                if not it.get('bo'): dem[it['dd']] += 1
+                d = it['dang']
                 if d == 'chon':
                     pa = [it['dap']] + it['nhieu']
                     if len(set(pa)) != len(pa): loi.append(f'B{n}: phương án trùng {it}')
@@ -70,6 +72,7 @@ def kiem():
                     if not it['dung']: ck(it['sua'], it['pySua'], 'câu sửa')
                 elif d == 'hoi':
                     ck(it['dap'], it['pyDap'], 'câu đáp'); ck(it['hoi'], it['pyHoi'], 'câu hỏi')
+                    if it['hoi'] in it['nhieu']: loi.append(f'B{n}: nhiễu trùng câu hỏi đúng {it["hoi"]}')
                     for x in it['nhieu']: ck(x, None, 'nhiễu')
                 elif d == 'xep':
                     ck(it['cau'], it['py'], 'xếp')

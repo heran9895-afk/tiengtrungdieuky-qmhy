@@ -280,3 +280,39 @@ CAU = {
  D('ne-ma','我有两个孩子，你呢？','Wǒ yǒu liǎng ge háizi, nǐ ne?','Câu có 呢 không cần thêm 吗.'),
 ],
 }
+
+# ===== Câu dựng từ BÀI KHÓA (slide của cô, Nhiên chốt 29/10/2026) — chỉ thêm vào cuối, không chèn giữa (mã câu là khoá phân tích) =====
+def BO(o): o['bo'] = True; return o    # câu cũ bị thay: vẫn giữ để mã các câu sau không đổi, web không bốc nữa
+
+CAU[2] += [
+ C('hen-tt','＿高兴认识你。','Hěn gāoxìng rènshi nǐ.','Rất vui được làm quen với bạn.','很',['是','请'],'很 + TT: **很高兴** = rất vui.'),
+ C('shi-pd','你好，陈天中！我＿安妮，我是白家月。','Nǐ hǎo, Chén Tiānzhōng! Wǒ bú shì Ānnī, wǒ shì Bái Jiāyuè.','Chào Trần Thiên Trung! Mình không phải là Annie, mình là Bạch Gia Nguyệt.','不是',['是不是','也'],'Vế sau "我是白家月" cho biết vế trước là phủ định: **不是**.'),
+ X('ye-vt',['ye','hen'],'认识你我也很高兴。','Rènshi nǐ wǒ yě hěn gāoxìng.','Làm quen với bạn mình cũng rất vui.',['认识你','我','也','很高兴'],['我也很高兴认识你。']),
+ D('ye-vt','认识你也我很高兴。','Rènshi nǐ yě wǒ hěn gāoxìng.','也 đứng **sau chủ ngữ 我**, trước 很高兴.','认识你我也很高兴。','Rènshi nǐ wǒ yě hěn gāoxìng.','luuY'),
+ H('qing-hoi','我叫陈天中。','Wǒ jiào Chén Tiānzhōng.','请问，你叫什么名字？','Qǐngwèn, nǐ jiào shénme míngzi?',['请问，你是不是老师？','你们说什么？'],'Đáp tên → hỏi lịch sự **请问，你叫什么名字？**'),
+ H('shi-hoi','我不是安妮，我是白家月。','Wǒ bú shì Ānnī, wǒ shì Bái Jiāyuè.','你是不是安妮？','Nǐ shì bu shì Ānnī?',['你说什么？','你是不是美国学生？'],'Đáp "không phải Annie" → câu hỏi **是不是安妮**.'),
+]
+for c in CAU[3]:
+    if c['dd'] == 'zn-cn' and c['dang'] == 'chon' and not c.get('sau'): BO(c)     # "＿是谁？" thiếu ngữ cảnh → thay bằng câu có lượt B bên dưới
+CAU[3] += [
+ C('ma-cau','你工作还忙＿？','Nǐ gōngzuò hái máng ma?','Công việc của em vẫn bận à?','吗',['的','谁'],'Câu hỏi có / không: câu trần thuật + **吗**; B trả lời 对.', sau='对，还很忙。'),
+ D('hai-vt','你工作忙还吗？','Nǐ gōngzuò máng hái ma?','还 đứng **trước** tính từ 忙: 还忙.','你工作还忙吗？','Nǐ gōngzuò hái máng ma?','luuY'),
+ C('tai-bt','我不＿忙。我们很想你。','Wǒ bú tài máng. Wǒmen hěn xiǎng nǐ.','Chị không bận lắm. Mọi người rất nhớ em.','太',['还','也'],'**不太 + TT**: không … lắm.'),
+ C('xiang-nho','我们很＿你。','Wǒmen hěn xiǎng nǐ.','Mọi người rất nhớ em.','想',['去','做'],'**想 + người** = nhớ.', sau='我也想你们。'),
+ X('xiang-nho',['ye','xiang'],'我也想你们。','Wǒ yě xiǎng nǐmen.','Em cũng nhớ mọi người.',['我','也','想','你们']),
+ C('de-sh','我＿中文老师也是中国人。','Wǒ de Zhōngwén lǎoshī yě shì Zhōngguó rén.','Giáo viên tiếng Trung của tôi cũng là người Trung Quốc.','的',['吗','很'],'"giáo viên tiếng Trung **của** tôi": **我的中文老师**.'),
+ X('de-sh',['de','ye'],'我的中文老师也是中国人。','Wǒ de Zhōngwén lǎoshī yě shì Zhōngguó rén.','Giáo viên tiếng Trung của tôi cũng là người Trung Quốc.',['我的','中文老师','也','是','中国人']),
+ C('zn-cn','＿是谁？','Zhè shì shéi?','Đây là ai?','这',['哪','吗'],'这 đứng một mình làm chủ ngữ: **这是谁？**', sau='这是我女朋友。'),
+ H('zn-qt','她也是泰国人。','Tā yě shì Tàiguó rén.','你女朋友是哪国人？','Nǐ nǚpéngyou shì nǎ guó rén?',['这是谁？','你女朋友忙吗？'],'Đáp quốc tịch → hỏi **哪国人**.'),
+ H('zn-cn','这是我女朋友。','Zhè shì wǒ nǚpéngyou.','这是谁？','Zhè shì shéi?',['你女朋友是哪国人？','你是哪国人？'],'Đáp "là bạn gái tôi" → hỏi **这是谁？**'),
+]
+CAU[4] += [
+ C('ds-hoi','她有＿个学生？','Tā yǒu duōshao ge xué·shēng?','Cô ấy có bao nhiêu học sinh?','多少',['几','什么'],'Câu trả lời là 20, số lớn → hỏi bằng **多少**.', sau='她有二十个学生。'),
+ C('ne-hoilai','我有两个哥哥，你＿？','Wǒ yǒu liǎng ge gēge, nǐ ne?','Tôi có hai anh trai, còn anh?','呢',['吗','的'],'Hỏi lại điều vừa nói (có anh trai không): **你呢？**', sau='我没有哥哥。'),
+ C('stlt-kou','我家有四＿人，爸爸、妈妈、妹妹和我。','Wǒ jiā yǒu sì kǒu rén, bàba, māma, mèimei hé wǒ.','Nhà tôi có bốn người: bố, mẹ, em gái và tôi.','口',['位','岁'],'Đếm người trong gia đình dùng **口**.'),
+ C('ht-jisui','您儿子＿？','Nín érzi jǐ suì?','Con trai chị mấy tuổi?','几岁',['多大年纪','多少'],'Cậu bé 5 tuổi là trẻ nhỏ → hỏi **几岁**.', sau='他今年五岁。'),
+ C('ht-duoda','您女儿＿？','Nín nǚ\'ér duō dà?','Con gái chị bao nhiêu tuổi?','多大',['多大年纪','多少'],'Cô bé 12 tuổi → hỏi **多大**; 多大年纪 dùng cho người cao tuổi.', sau='她今年十二。'),
+ X('you-co',['you','stlt'],'我有两个孩子，一个儿子，一个女儿。','Wǒ yǒu liǎng ge háizi, yí ge érzi, yí ge nǚ\'ér.','Tôi có hai người con, một con trai, một con gái.',['我','有','两个孩子','一个儿子','一个女儿'],['我有两个孩子，一个女儿，一个儿子。','我有两个孩子，一个儿子、一个女儿。','我有两个孩子，一个女儿、一个儿子。']),
+ D('ht-shi','他今年是五岁。','Tā jīnnián shì wǔ suì.','Nói tuổi **không cần 是**.','他今年五岁。','Tā jīnnián wǔ suì.','luuY'),
+ H('you-pd','我没有哥哥。','Wǒ méi·yǒu gēge.','我有两个哥哥，你呢？','Wǒ yǒu liǎng ge gēge, nǐ ne?',['你家有几口人？','你妹妹多大？'],'"我没有哥哥" trả lời câu **你呢？** hỏi lại về anh trai.'),
+]

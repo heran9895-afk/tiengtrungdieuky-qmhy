@@ -2836,6 +2836,130 @@
     ]
    ],
    "chang": "3.2"
+  },
+  {
+   "hoi": [
+    "李文是哪国人？",
+    "Lǐ Wén shì nǎ guó rén?",
+    "Lý Văn là người nước nào?"
+   ],
+   "dap": [
+    "他是中国人。",
+    "Tā shì Zhōngguó rén.",
+    "Anh ấy là người Trung Quốc."
+   ],
+   "nhieu": [
+    [
+     "他是我的中文老师。",
+     "Tā shì wǒ de Zhōngwén lǎoshī.",
+     ""
+    ],
+    [
+     "他很忙。",
+     "Tā hěn máng.",
+     ""
+    ],
+    [
+     "他想去中国。",
+     "Tā xiǎng qù Zhōngguó.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "白家月是哪国人？",
+    "Bái Jiāyuè shì nǎ guó rén?",
+    "Bạch Gia Nguyệt là người nước nào?"
+   ],
+   "dap": [
+    "她是法国人。",
+    "Tā shì Fǎguó rén.",
+    "Cô ấy là người Pháp."
+   ],
+   "nhieu": [
+    [
+     "她是我的同学。",
+     "Tā shì wǒ de tóngxué.",
+     ""
+    ],
+    [
+     "她很忙。",
+     "Tā hěn máng.",
+     ""
+    ],
+    [
+     "她叫白家月。",
+     "Tā jiào Bái Jiāyuè.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "白家月的中文老师是哪国人？",
+    "Bái Jiāyuè de Zhōngwén lǎoshī shì nǎ guó rén?",
+    "Giáo viên tiếng Trung của Bạch Gia Nguyệt là người nước nào?"
+   ],
+   "dap": [
+    "她的中文老师是中国人。",
+    "Tā de Zhōngwén lǎoshī shì Zhōngguó rén.",
+    "Giáo viên tiếng Trung của cô ấy là người Trung Quốc."
+   ],
+   "nhieu": [
+    [
+     "她的中文老师很忙。",
+     "Tā de Zhōngwén lǎoshī hěn máng.",
+     ""
+    ],
+    [
+     "她是白家月。",
+     "Tā shì Bái Jiāyuè.",
+     ""
+    ],
+    [
+     "她想去中国。",
+     "Tā xiǎng qù Zhōngguó.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "一飞的工作忙吗？",
+    "Yīfēi de gōngzuò máng ma?",
+    "Công việc của Nhất Phi có bận không?"
+   ],
+   "dap": [
+    "她的工作还很忙。",
+    "Tā de gōngzuò hái hěn máng.",
+    "Công việc của cô ấy vẫn rất bận."
+   ],
+   "nhieu": [
+    [
+     "她是王一雪的妹妹。",
+     "Tā shì Wáng Yīxuě de mèimei.",
+     ""
+    ],
+    [
+     "她很想姐姐。",
+     "Tā hěn xiǎng jiějie.",
+     ""
+    ],
+    [
+     "她是中国人。",
+     "Tā shì Zhōngguó rén.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "3.2"
   }
  ],
  "cauLuyen": [
@@ -3638,6 +3762,84 @@
     "这",
     "妹妹"
    ]
+  },
+  {
+   "han": "我是法国人。",
+   "py": "Wǒ shì Fǎguó rén.",
+   "viet": "Tôi là người Pháp.",
+   "tu": [
+    "人",
+    "法国"
+   ],
+   "nguon": "baiKhoa"
+  },
+  {
+   "han": "我的中文老师也是中国人。",
+   "py": "Wǒ de Zhōngwén lǎoshī yě shì Zhōngguó rén.",
+   "viet": "Giáo viên tiếng Trung của tôi cũng là người Trung Quốc.",
+   "tu": [
+    "人",
+    "的",
+    "中国",
+    "中文"
+   ],
+   "nguon": "baiKhoa",
+   "np": "de"
+  },
+  {
+   "han": "白家月的中文老师是中国人。",
+   "py": "Bái Jiāyuè de Zhōngwén lǎoshī shì Zhōngguó rén.",
+   "viet": "Giáo viên tiếng Trung của Bạch Gia Nguyệt là người Trung Quốc.",
+   "tu": [
+    "人",
+    "的",
+    "中国",
+    "中文"
+   ],
+   "nguon": "baiKhoa",
+   "np": "de"
+  },
+  {
+   "han": "白家月不是中国人。",
+   "py": "Bái Jiāyuè bú shì Zhōngguó rén.",
+   "viet": "Bạch Gia Nguyệt không phải là người Trung Quốc.",
+   "tu": [
+    "人",
+    "中国"
+   ],
+   "nguon": "baiKhoa"
+  },
+  {
+   "han": "她也是泰国人。",
+   "py": "Tā yě shì Tàiguó rén.",
+   "viet": "Cô ấy cũng là người Thái Lan.",
+   "tu": [
+    "人",
+    "她",
+    "泰国"
+   ],
+   "nguon": "baiKhoa"
+  },
+  {
+   "han": "我不太忙。",
+   "py": "Wǒ bú tài máng.",
+   "viet": "Chị không bận lắm.",
+   "tu": [
+    "忙",
+    "太"
+   ],
+   "nguon": "baiKhoa",
+   "np": "tai"
+  },
+  {
+   "han": "我也想你们。",
+   "py": "Wǒ yě xiǎng nǐmen.",
+   "viet": "Em cũng nhớ mọi người.",
+   "tu": [
+    "想"
+   ],
+   "nguon": "baiKhoa",
+   "np": "xiang"
   }
  ],
  "hoiThoai": [
@@ -3829,6 +4031,158 @@
      }
     ]
    },
+   "chang": "3.2"
+  },
+  {
+   "ten": "Bài khóa · Bạn gái của Thiên Trung",
+   "luot": [
+    {
+     "han": "这是谁？",
+     "py": "Zhè shì shéi?",
+     "viet": "Đây là ai?"
+    },
+    {
+     "han": "这是我女朋友。",
+     "py": "Zhè shì wǒ nǚpéngyou.",
+     "viet": "Đây là bạn gái mình."
+    },
+    {
+     "han": "你女朋友是哪国人？",
+     "py": "Nǐ nǚpéngyou shì nǎ guó rén?",
+     "viet": "Bạn gái của bạn là người nước nào?"
+    },
+    {
+     "han": "她也是泰国人。",
+     "py": "Tā yě shì Tàiguó rén.",
+     "viet": "Cô ấy cũng là người Thái Lan."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我是中国人。",
+      "py": "Wǒ shì Zhōngguó rén."
+     },
+     {
+      "han": "她很忙。",
+      "py": "Tā hěn máng."
+     },
+     {
+      "han": "我想去泰国。",
+      "py": "Wǒ xiǎng qù Tàiguó."
+     }
+    ],
+    "3": [
+     {
+      "han": "这是我女朋友。",
+      "py": "Zhè shì wǒ nǚpéngyou."
+     },
+     {
+      "han": "她很忙。",
+      "py": "Tā hěn máng."
+     },
+     {
+      "han": "她想去中国。",
+      "py": "Tā xiǎng qù Zhōngguó."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "ten": "Bài khóa · Gọi điện cho em gái",
+   "luot": [
+    {
+     "han": "喂，一飞！",
+     "py": "Wèi, Yīfēi!",
+     "viet": "A lô, Nhất Phi à!"
+    },
+    {
+     "han": "姐姐！",
+     "py": "Jiějie!",
+     "viet": "Chị ơi!"
+    },
+    {
+     "han": "你工作还忙吗？",
+     "py": "Nǐ gōngzuò hái máng ma?",
+     "viet": "Công việc của em vẫn bận à?"
+    },
+    {
+     "han": "对，还很忙。你也很忙吗？",
+     "py": "Duì, hái hěn máng. Nǐ yě hěn máng ma?",
+     "viet": "Vâng, vẫn rất bận. Chị cũng rất bận à?"
+    },
+    {
+     "han": "我不太忙。我们很想你。",
+     "py": "Wǒ bú tài máng. Wǒmen hěn xiǎng nǐ.",
+     "viet": "Chị không bận lắm. Mọi người rất nhớ em."
+    },
+    {
+     "han": "我也想你们。",
+     "py": "Wǒ yě xiǎng nǐmen.",
+     "viet": "Em cũng nhớ mọi người."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "对，还很忙。",
+      "py": "Duì, hái hěn máng."
+     },
+     {
+      "han": "我也想你们。",
+      "py": "Wǒ yě xiǎng nǐmen."
+     },
+     {
+      "han": "不太忙。",
+      "py": "Bú tài máng."
+     }
+    ],
+    "3": [
+     {
+      "han": "姐姐！",
+      "py": "Jiějie!"
+     },
+     {
+      "han": "我也想你们。",
+      "py": "Wǒ yě xiǎng nǐmen."
+     },
+     {
+      "han": "我是中国人。",
+      "py": "Wǒ shì Zhōngguó rén."
+     }
+    ],
+    "4": [
+     {
+      "han": "对，还很忙。",
+      "py": "Duì, hái hěn máng."
+     },
+     {
+      "han": "喂，一飞！",
+      "py": "Wèi, Yīfēi!"
+     },
+     {
+      "han": "她是我姐姐。",
+      "py": "Tā shì wǒ jiějie."
+     }
+    ],
+    "5": [
+     {
+      "han": "姐姐！",
+      "py": "Jiějie!"
+     },
+     {
+      "han": "我不太忙。",
+      "py": "Wǒ bú tài máng."
+     },
+     {
+      "han": "你工作还忙吗？",
+      "py": "Nǐ gōngzuò hái máng ma?"
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
    "chang": "3.2"
   }
  ],
@@ -4259,7 +4613,8 @@
      "哪",
      "吗"
     ],
-    "gt": "这, 那 **đứng một mình làm chủ ngữ** được: 这是谁？"
+    "gt": "这, 那 **đứng một mình làm chủ ngữ** được: 这是谁？",
+    "bo": true
    },
    {
     "ma": "b3-zn-cn-2",
@@ -4685,6 +5040,166 @@
     "py": "Wǒ bù xiǎng qù Fǎguó.",
     "dung": true,
     "gt": "Phủ định của 想 là **不想**."
+   },
+   {
+    "ma": "b3-ma-cau-4",
+    "np": "ma",
+    "dang": "chon",
+    "dd": "ma-cau",
+    "cau": "你工作还忙＿？",
+    "py": "Nǐ gōngzuò hái máng ma?",
+    "nghia": "Công việc của em vẫn bận à?",
+    "dap": "吗",
+    "nhieu": [
+     "的",
+     "谁"
+    ],
+    "gt": "Câu hỏi có / không: câu trần thuật + **吗**; B trả lời 对.",
+    "sau": "对，还很忙。"
+   },
+   {
+    "ma": "b3-hai-vt-3",
+    "np": "hai",
+    "dang": "dungSai",
+    "dd": "hai-vt",
+    "cau": "你工作忙还吗？",
+    "py": "Nǐ gōngzuò máng hái ma?",
+    "dung": false,
+    "gt": "还 đứng **trước** tính từ 忙: 还忙.",
+    "sua": "你工作还忙吗？",
+    "pySua": "Nǐ gōngzuò hái máng ma?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b3-tai-bt-3",
+    "np": "tai",
+    "dang": "chon",
+    "dd": "tai-bt",
+    "cau": "我不＿忙。我们很想你。",
+    "py": "Wǒ bú tài máng. Wǒmen hěn xiǎng nǐ.",
+    "nghia": "Chị không bận lắm. Mọi người rất nhớ em.",
+    "dap": "太",
+    "nhieu": [
+     "还",
+     "也"
+    ],
+    "gt": "**不太 + TT**: không … lắm."
+   },
+   {
+    "ma": "b3-xiang-nho-3",
+    "np": "xiang",
+    "dang": "chon",
+    "dd": "xiang-nho",
+    "cau": "我们很＿你。",
+    "py": "Wǒmen hěn xiǎng nǐ.",
+    "nghia": "Mọi người rất nhớ em.",
+    "dap": "想",
+    "nhieu": [
+     "去",
+     "做"
+    ],
+    "gt": "**想 + người** = nhớ.",
+    "sau": "我也想你们。"
+   },
+   {
+    "ma": "b3-xiang-nho-4",
+    "np": "xiang",
+    "dang": "xep",
+    "dd": "xiang-nho",
+    "cau": "我也想你们。",
+    "py": "Wǒ yě xiǎng nǐmen.",
+    "nghia": "Em cũng nhớ mọi người.",
+    "khoi": [
+     "我",
+     "也",
+     "想",
+     "你们"
+    ],
+    "npPhu": [
+     "ye",
+     "xiang"
+    ]
+   },
+   {
+    "ma": "b3-de-sh-4",
+    "np": "de",
+    "dang": "chon",
+    "dd": "de-sh",
+    "cau": "我＿中文老师也是中国人。",
+    "py": "Wǒ de Zhōngwén lǎoshī yě shì Zhōngguó rén.",
+    "nghia": "Giáo viên tiếng Trung của tôi cũng là người Trung Quốc.",
+    "dap": "的",
+    "nhieu": [
+     "吗",
+     "很"
+    ],
+    "gt": "\"giáo viên tiếng Trung **của** tôi\": **我的中文老师**."
+   },
+   {
+    "ma": "b3-de-sh-5",
+    "np": "de",
+    "dang": "xep",
+    "dd": "de-sh",
+    "cau": "我的中文老师也是中国人。",
+    "py": "Wǒ de Zhōngwén lǎoshī yě shì Zhōngguó rén.",
+    "nghia": "Giáo viên tiếng Trung của tôi cũng là người Trung Quốc.",
+    "khoi": [
+     "我的",
+     "中文老师",
+     "也",
+     "是",
+     "中国人"
+    ],
+    "npPhu": [
+     "de",
+     "ye"
+    ]
+   },
+   {
+    "ma": "b3-zn-cn-3",
+    "np": "zhenana",
+    "dang": "chon",
+    "dd": "zn-cn",
+    "cau": "＿是谁？",
+    "py": "Zhè shì shéi?",
+    "nghia": "Đây là ai?",
+    "dap": "这",
+    "nhieu": [
+     "哪",
+     "吗"
+    ],
+    "gt": "这 đứng một mình làm chủ ngữ: **这是谁？**",
+    "sau": "这是我女朋友。"
+   },
+   {
+    "ma": "b3-zn-qt-5",
+    "np": "zhenana",
+    "dang": "hoi",
+    "dd": "zn-qt",
+    "dap": "她也是泰国人。",
+    "pyDap": "Tā yě shì Tàiguó rén.",
+    "hoi": "你女朋友是哪国人？",
+    "pyHoi": "Nǐ nǚpéngyou shì nǎ guó rén?",
+    "nhieu": [
+     "这是谁？",
+     "你女朋友忙吗？"
+    ],
+    "gt": "Đáp quốc tịch → hỏi **哪国人**."
+   },
+   {
+    "ma": "b3-zn-cn-4",
+    "np": "zhenana",
+    "dang": "hoi",
+    "dd": "zn-cn",
+    "dap": "这是我女朋友。",
+    "pyDap": "Zhè shì wǒ nǚpéngyou.",
+    "hoi": "这是谁？",
+    "pyHoi": "Zhè shì shéi?",
+    "nhieu": [
+     "你女朋友是哪国人？",
+     "你是哪国人？"
+    ],
+    "gt": "Đáp \"là bạn gái tôi\" → hỏi **这是谁？**"
    }
   ]
  }

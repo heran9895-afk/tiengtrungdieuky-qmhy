@@ -2052,6 +2052,37 @@
      "Mình tên là Bạch Gia Nguyệt."
     ]
    ]
+  },
+  {
+   "hoi": [
+    "请问，你是不是安妮？",
+    "Qǐngwèn, nǐ shì bu shì Ānnī?",
+    "Xin hỏi, bạn có phải là Annie không?"
+   ],
+   "dap": [
+    "我不是安妮，我是白家月。",
+    "Wǒ bú shì Ānnī, wǒ shì Bái Jiāyuè.",
+    "Mình không phải là Annie, mình là Bạch Gia Nguyệt."
+   ],
+   "nhieu": [
+    [
+     "没关系！",
+     "Méi guānxi!",
+     ""
+    ],
+    [
+     "认识你我也很高兴。",
+     "Rènshi nǐ wǒ yě hěn gāoxìng.",
+     ""
+    ],
+    [
+     "我们说汉语。",
+     "Wǒmen shuō Hànyǔ.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "2"
   }
  ],
  "cauLuyen": [
@@ -2505,6 +2536,53 @@
     "认识",
     "你"
    ]
+  },
+  {
+   "han": "你好，安妮！",
+   "py": "Nǐ hǎo, Ānnī!",
+   "viet": "Chào Annie!",
+   "tu": [
+    "你"
+   ],
+   "nguon": "baiKhoa"
+  },
+  {
+   "han": "我不是安妮，我是白家月。",
+   "py": "Wǒ bú shì Ānnī, wǒ shì Bái Jiāyuè.",
+   "viet": "Mình không phải là Annie, mình là Bạch Gia Nguyệt.",
+   "tu": [
+    "我",
+    "不",
+    "是"
+   ],
+   "nguon": "baiKhoa",
+   "np": "shi"
+  },
+  {
+   "han": "你好！我叫李文。",
+   "py": "Nǐ hǎo! Wǒ jiào Lǐ Wén.",
+   "viet": "Chào bạn! Mình tên là Lý Văn.",
+   "tu": [
+    "你",
+    "叫",
+    "我"
+   ],
+   "nguon": "baiKhoa"
+  },
+  {
+   "han": "认识你我也很高兴。",
+   "py": "Rènshi nǐ wǒ yě hěn gāoxìng.",
+   "viet": "Làm quen với bạn mình cũng rất vui.",
+   "tu": [
+    "你",
+    "我",
+    "很",
+    "高兴",
+    "认识",
+    "也"
+   ],
+   "nguon": "baiKhoa",
+   "np": "ye"
   }
  ],
  "hoiThoai": [
@@ -2618,6 +2696,153 @@
     ]
    },
    "chang": 3
+  },
+  {
+   "ten": "Bài khóa · Hỏi tên",
+   "luot": [
+    {
+     "han": "请问，你叫什么名字？",
+     "py": "Qǐngwèn, nǐ jiào shénme míngzi?",
+     "viet": "Xin hỏi, em tên là gì?"
+    },
+    {
+     "han": "我叫陈天中。",
+     "py": "Wǒ jiào Chén Tiānzhōng.",
+     "viet": "Em tên là Trần Thiên Trung."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我不认识陈天中。",
+      "py": "Wǒ bú rènshi Chén Tiānzhōng."
+     },
+     {
+      "han": "没关系！",
+      "py": "Méi guānxi!"
+     },
+     {
+      "han": "我也很高兴。",
+      "py": "Wǒ yě hěn gāoxìng."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "1"
+  },
+  {
+   "ten": "Bài khóa · Nhầm tên",
+   "luot": [
+    {
+     "han": "你好，安妮！",
+     "py": "Nǐ hǎo, Ānnī!",
+     "viet": "Chào Annie!"
+    },
+    {
+     "han": "你好，陈天中！我不是安妮，我是白家月。",
+     "py": "Nǐ hǎo, Chén Tiānzhōng! Wǒ bú shì Ānnī, wǒ shì Bái Jiāyuè.",
+     "viet": "Chào Trần Thiên Trung! Mình không phải là Annie, mình là Bạch Gia Nguyệt."
+    },
+    {
+     "han": "对不起！",
+     "py": "Duìbuqǐ!",
+     "viet": "Xin lỗi!"
+    },
+    {
+     "han": "没关系！",
+     "py": "Méi guānxi!",
+     "viet": "Không sao!"
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "没关系！",
+      "py": "Méi guānxi!"
+     },
+     {
+      "han": "不客气！",
+      "py": "Bú kèqi!"
+     },
+     {
+      "han": "请坐！",
+      "py": "Qǐng zuò!"
+     }
+    ],
+    "3": [
+     {
+      "han": "对不起！",
+      "py": "Duìbuqǐ!"
+     },
+     {
+      "han": "很高兴认识你。",
+      "py": "Hěn gāoxìng rènshi nǐ."
+     },
+     {
+      "han": "我叫白家月。",
+      "py": "Wǒ jiào Bái Jiāyuè."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "ten": "Bài khóa · Làm quen",
+   "luot": [
+    {
+     "han": "你好！我叫李文。",
+     "py": "Nǐ hǎo! Wǒ jiào Lǐ Wén.",
+     "viet": "Chào bạn! Mình tên là Lý Văn."
+    },
+    {
+     "han": "你好！我叫白家月。",
+     "py": "Nǐ hǎo! Wǒ jiào Bái Jiāyuè.",
+     "viet": "Chào bạn! Mình tên là Bạch Gia Nguyệt."
+    },
+    {
+     "han": "很高兴认识你。",
+     "py": "Hěn gāoxìng rènshi nǐ.",
+     "viet": "Rất vui được làm quen với bạn."
+    },
+    {
+     "han": "认识你我也很高兴。",
+     "py": "Rènshi nǐ wǒ yě hěn gāoxìng.",
+     "viet": "Làm quen với bạn mình cũng rất vui."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "没关系！",
+      "py": "Méi guānxi!"
+     },
+     {
+      "han": "对不起！",
+      "py": "Duìbuqǐ!"
+     },
+     {
+      "han": "不客气！",
+      "py": "Bú kèqi!"
+     }
+    ],
+    "3": [
+     {
+      "han": "对不起！",
+      "py": "Duìbuqǐ!"
+     },
+     {
+      "han": "你叫什么名字？",
+      "py": "Nǐ jiào shénme míngzi?"
+     },
+     {
+      "han": "我不是李文。",
+      "py": "Wǒ bú shì Lǐ Wén."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "3"
   }
  ],
  "ctTruoc": {
@@ -3368,6 +3593,101 @@
      "hen",
      "ye"
     ]
+   },
+   {
+    "ma": "b2-hen-tt-3",
+    "np": "hen",
+    "dang": "chon",
+    "dd": "hen-tt",
+    "cau": "＿高兴认识你。",
+    "py": "Hěn gāoxìng rènshi nǐ.",
+    "nghia": "Rất vui được làm quen với bạn.",
+    "dap": "很",
+    "nhieu": [
+     "是",
+     "请"
+    ],
+    "gt": "很 + TT: **很高兴** = rất vui."
+   },
+   {
+    "ma": "b2-shi-pd-3",
+    "np": "shi",
+    "dang": "chon",
+    "dd": "shi-pd",
+    "cau": "你好，陈天中！我＿安妮，我是白家月。",
+    "py": "Nǐ hǎo, Chén Tiānzhōng! Wǒ bú shì Ānnī, wǒ shì Bái Jiāyuè.",
+    "nghia": "Chào Trần Thiên Trung! Mình không phải là Annie, mình là Bạch Gia Nguyệt.",
+    "dap": "不是",
+    "nhieu": [
+     "是不是",
+     "也"
+    ],
+    "gt": "Vế sau \"我是白家月\" cho biết vế trước là phủ định: **不是**."
+   },
+   {
+    "ma": "b2-ye-vt-4",
+    "np": "ye",
+    "dang": "xep",
+    "dd": "ye-vt",
+    "cau": "认识你我也很高兴。",
+    "py": "Rènshi nǐ wǒ yě hěn gāoxìng.",
+    "nghia": "Làm quen với bạn mình cũng rất vui.",
+    "khoi": [
+     "认识你",
+     "我",
+     "也",
+     "很高兴"
+    ],
+    "khac": [
+     "我也很高兴认识你。"
+    ],
+    "npPhu": [
+     "ye",
+     "hen"
+    ]
+   },
+   {
+    "ma": "b2-ye-vt-5",
+    "np": "ye",
+    "dang": "dungSai",
+    "dd": "ye-vt",
+    "cau": "认识你也我很高兴。",
+    "py": "Rènshi nǐ yě wǒ hěn gāoxìng.",
+    "dung": false,
+    "gt": "也 đứng **sau chủ ngữ 我**, trước 很高兴.",
+    "sua": "认识你我也很高兴。",
+    "pySua": "Rènshi nǐ wǒ yě hěn gāoxìng.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b2-qing-hoi-3",
+    "np": "qing",
+    "dang": "hoi",
+    "dd": "qing-hoi",
+    "dap": "我叫陈天中。",
+    "pyDap": "Wǒ jiào Chén Tiānzhōng.",
+    "hoi": "请问，你叫什么名字？",
+    "pyHoi": "Qǐngwèn, nǐ jiào shénme míngzi?",
+    "nhieu": [
+     "请问，你是不是老师？",
+     "你们说什么？"
+    ],
+    "gt": "Đáp tên → hỏi lịch sự **请问，你叫什么名字？**"
+   },
+   {
+    "ma": "b2-shi-hoi-5",
+    "np": "shi",
+    "dang": "hoi",
+    "dd": "shi-hoi",
+    "dap": "我不是安妮，我是白家月。",
+    "pyDap": "Wǒ bú shì Ānnī, wǒ shì Bái Jiāyuè.",
+    "hoi": "你是不是安妮？",
+    "pyHoi": "Nǐ shì bu shì Ānnī?",
+    "nhieu": [
+     "你说什么？",
+     "你是不是美国学生？"
+    ],
+    "gt": "Đáp \"không phải Annie\" → câu hỏi **是不是安妮**."
    }
   ]
  }

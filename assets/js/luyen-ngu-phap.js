@@ -61,7 +61,7 @@
   // ---------- dựng lượt ----------
   function dungLuot() {
     var dsDD = KHO.dacDiem, theoDD = {}, dem = { chon: 0, dungSai: 0, hoi: 0, xep: 0 }, ds = [];
-    KHO.cau.forEach(function (c) { (theoDD[c.dd] || (theoDD[c.dd] = [])).push(c); });
+    KHO.cau.forEach(function (c) { if (!c.bo) (theoDD[c.dd] || (theoDD[c.dd] = [])).push(c); });   // bo: câu cũ đã thay, giữ mã nhưng không bốc
     tron1(dsDD).forEach(function (d) {                       // mỗi đặc điểm 1 câu; ưu tiên dạng đang ít để lượt đủ 4 dạng
       var ung = theoDD[d.ma] || []; if (!ung.length) return;
       var it = Math.min.apply(null, ung.map(function (c) { return dem[c.dang]; }));
@@ -321,7 +321,7 @@
         .then(function (d) {
           (d.nguPhap || []).forEach(function (g) { if (!TEN_NP[g.id]) TEN_NP[g.id] = g.ten; });
           ((d.nguPhapLuyen || {}).dacDiem || []).forEach(function (x) { if (!DD[x.ma]) DD[x.ma] = x; });
-          ((d.nguPhapLuyen || {}).cau || []).forEach(function (c) { KHO_ON.push({ c: c, nguon: 'on', bai: b }); });
+          ((d.nguPhapLuyen || {}).cau || []).forEach(function (c) { if (!c.bo) KHO_ON.push({ c: c, nguon: 'on', bai: b }); });
         }).catch(function () {});
     })).then(function () {
       Object.keys(TEN_NP).forEach(function (k) { if (CHI_SO_NP[k] == null) delete CHI_SO_NP[k]; });

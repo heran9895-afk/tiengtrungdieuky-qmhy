@@ -3183,6 +3183,161 @@
     ]
    ],
    "chang": "3"
+  },
+  {
+   "hoi": [
+    "王一雪有几个哥哥？",
+    "Wáng Yīxuě yǒu jǐ ge gēge?",
+    "Vương Nhất Tuyết có mấy anh trai?"
+   ],
+   "dap": [
+    "她有两个哥哥。",
+    "Tā yǒu liǎng ge gēge.",
+    "Cô ấy có hai anh trai."
+   ],
+   "nhieu": [
+    [
+     "她是杨同乐的同事。",
+     "Tā shì Yáng Tónglè de tóngshì.",
+     ""
+    ],
+    [
+     "她很忙。",
+     "Tā hěn máng.",
+     ""
+    ],
+    [
+     "她是中国人。",
+     "Tā shì Zhōngguó rén.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "杨同乐家有几口人？",
+    "Yáng Tónglè jiā yǒu jǐ kǒu rén?",
+    "Nhà Dương Đồng Lạc có mấy người?"
+   ],
+   "dap": [
+    "他家有四口人。",
+    "Tā jiā yǒu sì kǒu rén.",
+    "Nhà anh ấy có bốn người."
+   ],
+   "nhieu": [
+    [
+     "他没有哥哥。",
+     "Tā méi·yǒu gēge.",
+     ""
+    ],
+    [
+     "他是王一雪的同事。",
+     "Tā shì Wáng Yīxuě de tóngshì.",
+     ""
+    ],
+    [
+     "他很忙。",
+     "Tā hěn máng.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "杨同乐有没有哥哥？",
+    "Yáng Tónglè yǒu méi·yǒu gēge?",
+    "Dương Đồng Lạc có anh trai không?"
+   ],
+   "dap": [
+    "没有，他没有哥哥。",
+    "Méi·yǒu, tā méi·yǒu gēge.",
+    "Không, anh ấy không có anh trai."
+   ],
+   "nhieu": [
+    [
+     "他家有四口人。",
+     "Tā jiā yǒu sì kǒu rén.",
+     ""
+    ],
+    [
+     "他是王一雪的同事。",
+     "Tā shì Wáng Yīxuě de tóngshì.",
+     ""
+    ],
+    [
+     "他很忙。",
+     "Tā hěn máng.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "王一雪的儿子几岁？",
+    "Wáng Yīxuě de érzi jǐ suì?",
+    "Con trai của Vương Nhất Tuyết mấy tuổi?"
+   ],
+   "dap": [
+    "他今年五岁。",
+    "Tā jīnnián wǔ suì.",
+    "Năm nay cậu bé năm tuổi."
+   ],
+   "nhieu": [
+    [
+     "王一雪有两个孩子。",
+     "Wáng Yīxuě yǒu liǎng ge háizi.",
+     ""
+    ],
+    [
+     "他是王一雪的儿子。",
+     "Tā shì Wáng Yīxuě de érzi.",
+     ""
+    ],
+    [
+     "他很好。",
+     "Tā hěn hǎo.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "一飞有多少个学生？",
+    "Yīfēi yǒu duōshao ge xué·shēng?",
+    "Nhất Phi có bao nhiêu học sinh?"
+   ],
+   "dap": [
+    "她有二十个学生。",
+    "Tā yǒu èrshí ge xué·shēng.",
+    "Cô ấy có hai mươi học sinh."
+   ],
+   "nhieu": [
+    [
+     "她很忙。",
+     "Tā hěn máng.",
+     ""
+    ],
+    [
+     "她是中文老师。",
+     "Tā shì Zhōngwén lǎoshī.",
+     ""
+    ],
+    [
+     "她的学生很好。",
+     "Tā de xué·shēng hěn hǎo.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "3"
   }
  ],
  "cauLuyen": [
@@ -3674,17 +3829,6 @@
    ]
   },
   {
-   "han": "这个学生有两千个朋友。",
-   "py": "Zhè ge xué·shēng yǒu liǎngqiān ge péngyou.",
-   "viet": "Học sinh này có hai nghìn người bạn.",
-   "tu": [
-    "个",
-    "有",
-    "两",
-    "千"
-   ]
-  },
-  {
    "han": "我们有一万个学生。",
    "py": "Wǒmen yǒu yíwàn ge xué·shēng.",
    "viet": "Chúng tôi có một vạn học sinh.",
@@ -4047,6 +4191,64 @@
     "个",
     "孩子"
    ]
+  },
+  {
+   "han": "一飞忙吗？",
+   "py": "Yīfēi máng ma?",
+   "viet": "Nhất Phi có bận không?",
+   "tu": [],
+   "nguon": "baiKhoa"
+  },
+  {
+   "han": "王一雪有两个哥哥。",
+   "py": "Wáng Yīxuě yǒu liǎng ge gēge.",
+   "viet": "Vương Nhất Tuyết có hai anh trai.",
+   "tu": [
+    "有",
+    "个",
+    "哥哥",
+    "两"
+   ],
+   "nguon": "baiKhoa",
+   "np": "stlt"
+  },
+  {
+   "han": "我没有哥哥。",
+   "py": "Wǒ méi·yǒu gēge.",
+   "viet": "Tôi không có anh trai.",
+   "tu": [
+    "哥哥",
+    "没有"
+   ],
+   "nguon": "baiKhoa",
+   "np": "you"
+  },
+  {
+   "han": "杨同乐家有四口人。",
+   "py": "Yáng Tónglè jiā yǒu sì kǒu rén.",
+   "viet": "Nhà Dương Đồng Lạc có bốn người.",
+   "tu": [
+    "有",
+    "家",
+    "口"
+   ],
+   "nguon": "baiKhoa",
+   "np": "stlt"
+  },
+  {
+   "han": "我有两个孩子，一个儿子，一个女儿。",
+   "py": "Wǒ yǒu liǎng ge háizi, yí ge érzi, yí ge nǚ'ér.",
+   "viet": "Tôi có hai người con, một con trai, một con gái.",
+   "tu": [
+    "有",
+    "个",
+    "儿子",
+    "孩子",
+    "女儿",
+    "两"
+   ],
+   "nguon": "baiKhoa",
+   "np": "stlt"
   }
  ],
  "hoiThoai": [
@@ -4211,6 +4413,201 @@
      }
     ]
    },
+   "chang": "3"
+  },
+  {
+   "ten": "Bài khóa · Nhất Phi có bận không",
+   "luot": [
+    {
+     "han": "一飞忙吗？",
+     "py": "Yīfēi máng ma?",
+     "viet": "Nhất Phi có bận không?"
+    },
+    {
+     "han": "她很忙。",
+     "py": "Tā hěn máng.",
+     "viet": "Cô ấy rất bận."
+    },
+    {
+     "han": "她有多少个学生？",
+     "py": "Tā yǒu duōshao ge xué·shēng?",
+     "viet": "Cô ấy có bao nhiêu học sinh?"
+    },
+    {
+     "han": "她有二十个学生。",
+     "py": "Tā yǒu èrshí ge xué·shēng.",
+     "viet": "Cô ấy có hai mươi học sinh."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "她有二十个学生。",
+      "py": "Tā yǒu èrshí ge xué·shēng."
+     },
+     {
+      "han": "她是我妹妹。",
+      "py": "Tā shì wǒ mèimei."
+     },
+     {
+      "han": "她是中文老师。",
+      "py": "Tā shì Zhōngwén lǎoshī."
+     }
+    ],
+    "3": [
+     {
+      "han": "她很忙。",
+      "py": "Tā hěn máng."
+     },
+     {
+      "han": "她是中文老师。",
+      "py": "Tā shì Zhōngwén lǎoshī."
+     },
+     {
+      "han": "她没有孩子。",
+      "py": "Tā méi·yǒu háizi."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "3"
+  },
+  {
+   "ten": "Bài khóa · Gia đình Đồng Lạc",
+   "luot": [
+    {
+     "han": "我有两个哥哥，你呢？",
+     "py": "Wǒ yǒu liǎng ge gēge, nǐ ne?",
+     "viet": "Tôi có hai anh trai, còn anh?"
+    },
+    {
+     "han": "我没有哥哥。",
+     "py": "Wǒ méi·yǒu gēge.",
+     "viet": "Tôi không có anh trai."
+    },
+    {
+     "han": "你家有几口人？",
+     "py": "Nǐ jiā yǒu jǐ kǒu rén?",
+     "viet": "Nhà anh có mấy người?"
+    },
+    {
+     "han": "我家有四口人，爸爸、妈妈、妹妹和我。",
+     "py": "Wǒ jiā yǒu sì kǒu rén, bàba, māma, mèimei hé wǒ.",
+     "viet": "Nhà tôi có bốn người: bố, mẹ, em gái và tôi."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我家有四口人。",
+      "py": "Wǒ jiā yǒu sì kǒu rén."
+     },
+     {
+      "han": "我是中国人。",
+      "py": "Wǒ shì Zhōngguó rén."
+     },
+     {
+      "han": "我今年二十岁。",
+      "py": "Wǒ jīnnián èrshí suì."
+     }
+    ],
+    "3": [
+     {
+      "han": "我没有哥哥。",
+      "py": "Wǒ méi·yǒu gēge."
+     },
+     {
+      "han": "我有一个妹妹。",
+      "py": "Wǒ yǒu yí ge mèimei."
+     },
+     {
+      "han": "我是王一雪的同事。",
+      "py": "Wǒ shì Wáng Yīxuě de tóngshì."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "ten": "Bài khóa · Con của chị Nhất Tuyết",
+   "luot": [
+    {
+     "han": "这是您儿子吗？",
+     "py": "Zhè shì nín érzi ma?",
+     "viet": "Đây là con trai chị à?"
+    },
+    {
+     "han": "是的。我有两个孩子，一个儿子，一个女儿。",
+     "py": "Shì de. Wǒ yǒu liǎng ge háizi, yí ge érzi, yí ge nǚ'ér.",
+     "viet": "Đúng vậy. Tôi có hai người con, một con trai, một con gái."
+    },
+    {
+     "han": "您儿子几岁？",
+     "py": "Nín érzi jǐ suì?",
+     "viet": "Con trai chị mấy tuổi?"
+    },
+    {
+     "han": "他今年五岁。",
+     "py": "Tā jīnnián wǔ suì.",
+     "viet": "Năm nay cháu năm tuổi."
+    },
+    {
+     "han": "您女儿多大？",
+     "py": "Nín nǚ'ér duō dà?",
+     "viet": "Con gái chị bao nhiêu tuổi?"
+    },
+    {
+     "han": "她今年十二。",
+     "py": "Tā jīnnián shí'èr.",
+     "viet": "Năm nay cháu mười hai."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "他今年五岁。",
+      "py": "Tā jīnnián wǔ suì."
+     },
+     {
+      "han": "我没有哥哥。",
+      "py": "Wǒ méi·yǒu gēge."
+     },
+     {
+      "han": "我是老师。",
+      "py": "Wǒ shì lǎoshī."
+     }
+    ],
+    "3": [
+     {
+      "han": "我有两个孩子。",
+      "py": "Wǒ yǒu liǎng ge háizi."
+     },
+     {
+      "han": "他是我儿子。",
+      "py": "Tā shì wǒ érzi."
+     },
+     {
+      "han": "他很好。",
+      "py": "Tā hěn hǎo."
+     }
+    ],
+    "5": [
+     {
+      "han": "她是我女儿。",
+      "py": "Tā shì wǒ nǚ'ér."
+     },
+     {
+      "han": "我有一个女儿。",
+      "py": "Wǒ yǒu yí ge nǚ'ér."
+     },
+     {
+      "han": "她很好。",
+      "py": "Tā hěn hǎo."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
    "chang": "3"
   }
  ],
@@ -5462,6 +5859,138 @@
     "py": "Wǒ yǒu liǎng ge háizi, nǐ ne?",
     "dung": true,
     "gt": "Câu có 呢 không cần thêm 吗."
+   },
+   {
+    "ma": "b4-ds-hoi-4",
+    "np": "duoshao",
+    "dang": "chon",
+    "dd": "ds-hoi",
+    "cau": "她有＿个学生？",
+    "py": "Tā yǒu duōshao ge xué·shēng?",
+    "nghia": "Cô ấy có bao nhiêu học sinh?",
+    "dap": "多少",
+    "nhieu": [
+     "几",
+     "什么"
+    ],
+    "gt": "Câu trả lời là 20, số lớn → hỏi bằng **多少**.",
+    "sau": "她有二十个学生。"
+   },
+   {
+    "ma": "b4-ne-hoilai-4",
+    "np": "ne",
+    "dang": "chon",
+    "dd": "ne-hoilai",
+    "cau": "我有两个哥哥，你＿？",
+    "py": "Wǒ yǒu liǎng ge gēge, nǐ ne?",
+    "nghia": "Tôi có hai anh trai, còn anh?",
+    "dap": "呢",
+    "nhieu": [
+     "吗",
+     "的"
+    ],
+    "gt": "Hỏi lại điều vừa nói (có anh trai không): **你呢？**",
+    "sau": "我没有哥哥。"
+   },
+   {
+    "ma": "b4-stlt-kou-4",
+    "np": "stlt",
+    "dang": "chon",
+    "dd": "stlt-kou",
+    "cau": "我家有四＿人，爸爸、妈妈、妹妹和我。",
+    "py": "Wǒ jiā yǒu sì kǒu rén, bàba, māma, mèimei hé wǒ.",
+    "nghia": "Nhà tôi có bốn người: bố, mẹ, em gái và tôi.",
+    "dap": "口",
+    "nhieu": [
+     "位",
+     "岁"
+    ],
+    "gt": "Đếm người trong gia đình dùng **口**."
+   },
+   {
+    "ma": "b4-ht-jisui-3",
+    "np": "hoiTuoi",
+    "dang": "chon",
+    "dd": "ht-jisui",
+    "cau": "您儿子＿？",
+    "py": "Nín érzi jǐ suì?",
+    "nghia": "Con trai chị mấy tuổi?",
+    "dap": "几岁",
+    "nhieu": [
+     "多大年纪",
+     "多少"
+    ],
+    "gt": "Cậu bé 5 tuổi là trẻ nhỏ → hỏi **几岁**.",
+    "sau": "他今年五岁。"
+   },
+   {
+    "ma": "b4-ht-duoda-3",
+    "np": "hoiTuoi",
+    "dang": "chon",
+    "dd": "ht-duoda",
+    "cau": "您女儿＿？",
+    "py": "Nín nǚ'ér duō dà?",
+    "nghia": "Con gái chị bao nhiêu tuổi?",
+    "dap": "多大",
+    "nhieu": [
+     "多大年纪",
+     "多少"
+    ],
+    "gt": "Cô bé 12 tuổi → hỏi **多大**; 多大年纪 dùng cho người cao tuổi.",
+    "sau": "她今年十二。"
+   },
+   {
+    "ma": "b4-you-co-3",
+    "np": "you",
+    "dang": "xep",
+    "dd": "you-co",
+    "cau": "我有两个孩子，一个儿子，一个女儿。",
+    "py": "Wǒ yǒu liǎng ge háizi, yí ge érzi, yí ge nǚ'ér.",
+    "nghia": "Tôi có hai người con, một con trai, một con gái.",
+    "khoi": [
+     "我",
+     "有",
+     "两个孩子",
+     "一个儿子",
+     "一个女儿"
+    ],
+    "khac": [
+     "我有两个孩子，一个女儿，一个儿子。",
+     "我有两个孩子，一个儿子、一个女儿。",
+     "我有两个孩子，一个女儿、一个儿子。"
+    ],
+    "npPhu": [
+     "you",
+     "stlt"
+    ]
+   },
+   {
+    "ma": "b4-ht-shi-3",
+    "np": "hoiTuoi",
+    "dang": "dungSai",
+    "dd": "ht-shi",
+    "cau": "他今年是五岁。",
+    "py": "Tā jīnnián shì wǔ suì.",
+    "dung": false,
+    "gt": "Nói tuổi **không cần 是**.",
+    "sua": "他今年五岁。",
+    "pySua": "Tā jīnnián wǔ suì.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b4-you-pd-4",
+    "np": "you",
+    "dang": "hoi",
+    "dd": "you-pd",
+    "dap": "我没有哥哥。",
+    "pyDap": "Wǒ méi·yǒu gēge.",
+    "hoi": "我有两个哥哥，你呢？",
+    "pyHoi": "Wǒ yǒu liǎng ge gēge, nǐ ne?",
+    "nhieu": [
+     "你家有几口人？",
+     "你妹妹多大？"
+    ],
+    "gt": "\"我没有哥哥\" trả lời câu **你呢？** hỏi lại về anh trai."
    }
   ]
  }

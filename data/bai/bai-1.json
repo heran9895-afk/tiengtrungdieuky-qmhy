@@ -1225,17 +1225,6 @@
    ]
   },
   {
-   "han": "小学生很好。",
-   "py": "Xiǎo xué·shēng hěn hǎo.",
-   "viet": "Các em học sinh tiểu học rất ngoan.",
-   "tu": [
-    "小",
-    "学生",
-    "很",
-    "好"
-   ]
-  },
-  {
    "han": "同学，再见！",
    "py": "Tóngxué, zàijiàn!",
    "viet": "Tạm biệt bạn nhé!",
@@ -1281,6 +1270,39 @@
     "不",
     "喝"
    ]
+  },
+  {
+   "han": "小语，你好！",
+   "py": "Xiǎoyǔ, nǐ hǎo!",
+   "viet": "Chào Tiểu Ngữ!",
+   "tu": [
+    "好",
+    "你",
+    "小"
+   ],
+   "nguon": "baiKhoa"
+  },
+  {
+   "han": "王老师，你好！",
+   "py": "Wáng lǎoshī, nǐ hǎo!",
+   "viet": "Em chào cô Vương ạ!",
+   "tu": [
+    "好",
+    "老师",
+    "你"
+   ],
+   "nguon": "baiKhoa"
+  },
+  {
+   "han": "你好，小语！",
+   "py": "Nǐ hǎo, Xiǎoyǔ!",
+   "viet": "Chào Tiểu Ngữ!",
+   "tu": [
+    "好",
+    "你",
+    "小"
+   ],
+   "nguon": "baiKhoa"
   }
  ],
  "hoiThoai": [
@@ -1388,6 +1410,150 @@
      }
     ]
    }
+  },
+  {
+   "ten": "Bài khóa · Chào cô Vương",
+   "luot": [
+    {
+     "han": "小语，你好！",
+     "py": "Xiǎoyǔ, nǐ hǎo!",
+     "viet": "Chào Tiểu Ngữ!"
+    },
+    {
+     "han": "王老师，你好！",
+     "py": "Wáng lǎoshī, nǐ hǎo!",
+     "viet": "Em chào cô Vương ạ!"
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "谢谢！",
+      "py": "Xièxie!"
+     },
+     {
+      "han": "再见！",
+      "py": "Zàijiàn!"
+     },
+     {
+      "han": "不客气！",
+      "py": "Bú kèqi!"
+     }
+    ]
+   },
+   "nguon": "baiKhoa"
+  },
+  {
+   "ten": "Bài khóa · Chào cả lớp",
+   "luot": [
+    {
+     "han": "大家好！",
+     "py": "Dàjiā hǎo!",
+     "viet": "Chào mọi người!"
+    },
+    {
+     "han": "老师，您好！",
+     "py": "Lǎoshī, nín hǎo!",
+     "viet": "Chúng em chào cô ạ!"
+    },
+    {
+     "han": "你们好！",
+     "py": "Nǐmen hǎo!",
+     "viet": "Chào các bạn!"
+    },
+    {
+     "han": "你好，小语！",
+     "py": "Nǐ hǎo, Xiǎoyǔ!",
+     "viet": "Chào Tiểu Ngữ!"
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "不客气！",
+      "py": "Bú kèqi!"
+     },
+     {
+      "han": "再见！",
+      "py": "Zàijiàn!"
+     },
+     {
+      "han": "谢谢你们！",
+      "py": "Xièxie nǐmen!"
+     }
+    ],
+    "3": [
+     {
+      "han": "谢谢！",
+      "py": "Xièxie!"
+     },
+     {
+      "han": "老师，再见！",
+      "py": "Lǎoshī, zàijiàn!"
+     },
+     {
+      "han": "不客气！",
+      "py": "Bú kèqi!"
+     }
+    ]
+   },
+   "nguon": "baiKhoa"
+  },
+  {
+   "ten": "Bài khóa · Cảm ơn và tạm biệt",
+   "luot": [
+    {
+     "han": "谢谢！",
+     "py": "Xièxie!",
+     "viet": "Cảm ơn!"
+    },
+    {
+     "han": "不客气！",
+     "py": "Bú kèqi!",
+     "viet": "Không có gì!"
+    },
+    {
+     "han": "同学们，再见！",
+     "py": "Tóngxuémen, zàijiàn!",
+     "viet": "Tạm biệt các em!"
+    },
+    {
+     "han": "老师，再见！",
+     "py": "Lǎoshī, zàijiàn!",
+     "viet": "Chúng em chào cô ạ!"
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "你好！",
+      "py": "Nǐ hǎo!"
+     },
+     {
+      "han": "再见！",
+      "py": "Zàijiàn!"
+     },
+     {
+      "han": "大家好！",
+      "py": "Dàjiā hǎo!"
+     }
+    ],
+    "3": [
+     {
+      "han": "不客气！",
+      "py": "Bú kèqi!"
+     },
+     {
+      "han": "谢谢！",
+      "py": "Xièxie!"
+     },
+     {
+      "han": "你们好！",
+      "py": "Nǐmen hǎo!"
+     }
+    ]
+   },
+   "nguon": "baiKhoa"
   }
  ]
 }
