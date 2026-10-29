@@ -47,7 +47,7 @@ w('8. **Thứ tự 8 phần** và tên nút như mục 0. Phần **Nói** để 
 
 # ---------------- Bài dịch ----------------
 w('## 2. 🌏 Dịch Việt → Trung (soạn mới — cần duyệt kỹ)\n')
-w('Ba phần: **Dịch câu** (40 câu, trọng tâm ngữ pháp) · **Dịch hội thoại** (5 hội thoại) · **Dịch đoạn văn** (3 đoạn). '
+w(f'Ba phần: **Dịch câu** ({len(D.CAU)} câu, trọng tâm ngữ pháp) · **Dịch hội thoại** (5 hội thoại) · **Dịch đoạn văn** (3 đoạn). '
   'Mỗi dòng: đề tiếng Việt → **đáp án chính** (+ pinyin) → *chấp nhận thêm*. Cô sửa được tất cả ở chế độ giáo viên (mục 9).\n')
 w('### 2.1 Dịch câu\n')
 w('| # | Tiếng Việt | Đáp án | Chấp nhận thêm | Ngữ pháp |')
