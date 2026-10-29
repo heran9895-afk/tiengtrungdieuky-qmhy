@@ -19,6 +19,7 @@
 
   // ---------------- Lưu trên máy ----------------
   var K_TK = 'qm-tk-v1', K_PHAN = 'qm-phan-v1', K_TD = 'qm-tien-do-v1', K_CHU = 'qm-tk-chu', K_DB = 'qm-tk-dong-bo';
+  var K_LD = 'qm-luot-do-v1';                                // lượt làm dở (luot-do.js), đồng bộ cùng tiến độ (2026-10-30)
   function doc(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } }
   function ghi(k, v) { try { if (v == null) localStorage.removeItem(k); else localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   function ssDoc(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
@@ -311,11 +312,11 @@
   function doiChu(id) {
     var chu = localStorage.getItem(K_CHU) || '';
     if (chu === id) return false;
-    var hien = { td: doc(K_TD), phan: doc(K_PHAN) };
+    var hien = { td: doc(K_TD), phan: doc(K_PHAN), ld: doc(K_LD) };
     if (chu) ghi('qm-luu@' + chu, hien);
-    var cat = doc('qm-luu@' + id) || { td: null, phan: null };
+    var cat = doc('qm-luu@' + id) || { td: null, phan: null, ld: null };
     var co = chu ? cat : tronMay(hien, cat);                 // từ chưa đăng nhập → gộp với bản đã cất của hồ sơ (nếu có)
-    ghi(K_TD, co.td); ghi(K_PHAN, co.phan); ghi('qm-luu@' + id, null);
+    ghi(K_TD, co.td); ghi(K_PHAN, co.phan); ghi(K_LD, co.ld || null); ghi('qm-luu@' + id, null);
     try { localStorage.setItem(K_CHU, id); } catch (e) {}
     return !!chu;
   }
@@ -327,12 +328,14 @@
       var cu = ph[k], x = m[k]; if (!cu) { ph[k] = x; return; }
       var hon = (+x.t || 0) > (+cu.t || 0) ? x : cu; ph[k] = Object.assign({}, hon, { tt: cu.tt === 'xong' || x.tt === 'xong' ? 'xong' : hon.tt, t: Math.max(+cu.t || 0, +x.t || 0) });
     }); });
-    return { td: { v: 1, tu: tu, kho: kho, capNhat: Date.now() }, phan: { v: 1, phan: ph } };
+    var ld = {};                                             // lượt làm dở: mỗi khoá lấy bản mới hơn (kể cả dấu xoá)
+    [((a.ld || {}).ds) || {}, ((b.ld || {}).ds) || {}].forEach(function (m) { Object.keys(m).forEach(function (k) { if (!ld[k] || (+m[k].t || 0) > (+ld[k].t || 0)) ld[k] = m[k]; }); });
+    return { td: { v: 1, tu: tu, kho: kho, capNhat: Date.now() }, phan: { v: 1, phan: ph }, ld: { v: 1, ds: ld } };
   }
   function boChu() {                                         // đăng xuất / xoá: cất bản của hồ sơ, máy trở về trạng thái chưa đăng nhập (trống)
     var chu = localStorage.getItem(K_CHU) || '';
-    if (chu && TK && (TK.hoSo || []).some(function (h) { return h.hoSoId === chu; })) ghi('qm-luu@' + chu, { td: doc(K_TD), phan: doc(K_PHAN) });
-    ghi(K_TD, null); ghi(K_PHAN, null); try { localStorage.removeItem(K_CHU); } catch (e) {}
+    if (chu && TK && (TK.hoSo || []).some(function (h) { return h.hoSoId === chu; })) ghi('qm-luu@' + chu, { td: doc(K_TD), phan: doc(K_PHAN), ld: doc(K_LD) });
+    ghi(K_TD, null); ghi(K_PHAN, null); ghi(K_LD, null); try { localStorage.removeItem(K_CHU); } catch (e) {}
     try { localStorage.removeItem('qmhy:hoSo'); } catch (e) {}   // họ tên, lớp đã nhớ cho trang Bài tập: máy dùng chung không để lộ tên người trước
   }
   function chonHoSo(id) {
@@ -355,7 +358,8 @@
   var ban = false;                                           // có thay đổi chưa gửi
   document.addEventListener('qm-tien-do', function (e) { if (!(e.detail && e.detail.nap)) ban = true; });
   document.addEventListener('qm-phan', function () { ban = true; });
-  function duLieuMay() { var td = doc(K_TD) || {}; return { tu: td.tu || {}, kho: td.kho || {}, phan: (doc(K_PHAN) || {}).phan || {} }; }
+  document.addEventListener('qm-luot-do', function () { ban = true; });
+  function duLieuMay() { var td = doc(K_TD) || {}; return { tu: td.tu || {}, kho: td.kho || {}, phan: (doc(K_PHAN) || {}).phan || {}, luotDo: (doc(K_LD) || {}).ds || {} }; }
   function dongBo() {                                        // gửi bản trên máy, máy chủ trộn với bản đã lưu rồi trả về bản chung
     if (!TK || !TK.hoSoId) return Promise.resolve();
     ban = false;
@@ -363,6 +367,12 @@
       var m = d.duLieu || {}, td = { v: 1, tu: m.tu || {}, kho: m.kho || {}, capNhat: Date.now() };
       if (window.QM_TIENDO && QM_TIENDO.nap) QM_TIENDO.nap(td); else ghi(K_TD, td);
       PHAN = { v: 1, phan: m.phan || {} }; ghi(K_PHAN, PHAN);
+      if (m.luotDo) {                                        // máy chủ bản cũ không trả luotDo: giữ nguyên bản trên máy
+        var ldMay = (doc(K_LD) || {}).ds || {}, ldMoi = Object.assign({}, m.luotDo);
+        Object.keys(ldMay).forEach(function (k) { if (!ldMoi[k] || (+ldMay[k].t || 0) > (+ldMoi[k].t || 0)) ldMoi[k] = ldMay[k]; });   // vừa lưu trên máy trong lúc chờ phản hồi
+        ghi(K_LD, { v: 1, ds: ldMoi });
+        try { document.dispatchEvent(new CustomEvent('qm-luot-do-nap')); } catch (e) {}
+      }
       TK.dongBoLuc = Date.now(); luuTK(); try { localStorage.setItem(K_DB, String(Date.now())); } catch (e) {}
       veTienDo();
     }).catch(function (e) { ban = true; throw e; });
@@ -396,7 +406,8 @@
     };
   }
 
-  window.QM_TK = { hoSoId: function () { return TK && TK.hoSoId || ''; }, hoSoDang: hoSoDang, dangNhap: manDangNhap };
+  window.QM_TK = { hoSoId: function () { return TK && TK.hoSoId || ''; }, hoSoDang: hoSoDang, dangNhap: manDangNhap,
+    dongBo: function () { return dongBo().catch(function () {}); } };
 
   function batDau() {
     veNut(); ganBaiLam();
@@ -404,7 +415,7 @@
     if (!TK.hoSoId) { if ((TK.hoSo || []).length) manChonHoSo(); else manTaoHoSo(true); return; }
     if ((TK.hoSo || []).length > 1 && !ssDoc('qm-tk-da-chon')) return manChonHoSo();   // một email nhiều hồ sơ: mỗi lần mở web hỏi ai học
     var lan = +localStorage.getItem(K_DB) || 0;
-    if (Date.now() - lan > 5 * 60000) dongBo().catch(function () {});   // kéo tiến độ mới (từ máy khác) tối đa 5 phút một lần
+    if (window.QM_LD_KEO || Date.now() - lan > 5 * 60000) dongBo().catch(function () {});   // trang có lượt làm dở: luôn kéo bản mới (có thể từ máy khác)   // kéo tiến độ mới (từ máy khác) tối đa 5 phút một lần
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', batDau); else batDau();
 })();

@@ -83,3 +83,9 @@
 .dc-sua-thanh{position:sticky;bottom:0;background:var(--surface,#fff);padding:10px 0;border-top:1px solid var(--line-soft);display:flex;flex-wrap:wrap;gap:8px;justify-content:center;z-index:5}
 @media(max-width:600px){.dc-vi{font-size:17px}.dc-o{font-size:19px}}
 #on-tap.ot-khoi-2{margin-top:34px}
+/* lượt làm dở (luot-do.js) */
+.ot-lam-tiep{background:#fff7e0;border:1.5px solid var(--gold);border-radius:14px;padding:10px 12px;margin:12px 0;text-align:left;font-size:14.5px;line-height:1.5}
+.ot-lam-tiep-nut{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.ot-lam-tiep-nut .btn{padding:7px 14px;font-size:14px}
+.ot-ghi-luu{margin-top:6px}
+.ot-the-do{margin:6px 0 0;font-size:13px;font-weight:800;color:#7a5a12;background:#fff7e0;border-radius:8px;padding:4px 8px}

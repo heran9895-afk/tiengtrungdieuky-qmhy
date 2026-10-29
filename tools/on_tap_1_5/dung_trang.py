@@ -3,7 +3,7 @@
 import os
 GOC = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 THU = os.path.join(GOC, 'chuong-trinh-hsk', 'hsk1', 'on-tap-1-5')
-V = '20261030a'
+V = '20261030b'
 R = '../../../'
 TEP = f"{R}data/bai/on-tap-1-5.json?v={V}"
 
@@ -41,11 +41,12 @@ def trang(ten_tep, tieu_de, mo_ta, kicker, h1, sub, than, js, them_head=''):
     open(os.path.join(THU, ten_tep), 'w', encoding='utf-8').write(html)
 
 
-JS_CHUNG = f'''<script>window.QM_OT_TEP = '{TEP}';</script>
+JS_CHUNG = f'''<script>window.QM_OT_TEP = '{TEP}'; window.QM_LD_KEO = true;</script>
 <script src="{R}assets/js/cau-hinh.js?v=20261028a"></script>
-<script src="{R}assets/js/header.js?v=20261028a"></script>
+<script src="{R}assets/js/header.js?v={V}"></script>
 <script src="{R}assets/js/tu-vung-chung.js?v=20261028a"></script>
-<script src="{R}assets/js/on-tap-gui.js?v={V}"></script>'''
+<script src="{R}assets/js/on-tap-gui.js?v={V}"></script>
+<script src="{R}assets/js/luot-do.js?v={V}"></script>'''
 QUAY = '    <p class="lt-luu-y"><a href="./">‹ Về Ôn tập tổng hợp Bài 1–5</a></p>'
 
 
@@ -79,13 +80,14 @@ js_tv = f'''<script>
   window.QM_TEN_CAP = {{ BAI: 'Bài 1–5' }};
   window.QM_TEP = {{ BAI: {bai} }};
   window.QM_BAI_TAP = {{ ma: 'on-tap-1-5-tu-vung', ten: 'Từ vựng', tenLuot: 'Bài 1–5', onTap: 'tu-vung', nhanh: {{ soCau: 30, phut: 30 }} }};
-  window.QM_OT_TEP = '{TEP}';
+  window.QM_OT_TEP = '{TEP}'; window.QM_LD_KEO = true;
 </script>
 <script src="{R}assets/js/cau-hinh.js?v=20261028a"></script>
-<script src="{R}assets/js/header.js?v=20261028a"></script>
+<script src="{R}assets/js/header.js?v={V}"></script>
 <script src="{R}assets/js/tu-vung-chung.js?v=20261028a"></script>
 <script src="{R}assets/js/tien-do.js?v=20261028a"></script>
 <script src="{R}assets/js/on-tap-gui.js?v={V}"></script>
+<script src="{R}assets/js/luot-do.js?v={V}"></script>
 <script src="{R}assets/js/luyen-tap.js?v={V}"></script>
 <script src="{R}assets/js/on-tap-tong-hop.js?v={V}"></script>'''
 trang('tu-vung.html', 'Từ vựng', 'Ôn tập từ vựng Bài 1–5 HSK 1: 160 từ, 30 câu mỗi lượt, phân loại từ.', '词语', '📚 Từ vựng',
@@ -111,5 +113,28 @@ the = '\n'.join((f'      <a class="card ot-the" href="{h}"><div class="ico-big">
 trang('index.html', 'Ôn tập tổng hợp Bài 1–5', 'Ôn tập tổng hợp Bài 1–5 HSK 1 (HSK 3.0): ngữ âm, chữ Hán, từ vựng, ngữ pháp, đọc hiểu, nghe, dịch.',
       '复习 · 第一课 — 第五课', 'Ôn tập tổng hợp Bài 1–5',
       'Ôn lại toàn bộ 5 bài đầu theo từng kỹ năng. Bài làm được gửi về cho cô để theo dõi, phần này không xếp hạng.',
-      '    <div class="sec-orn"><i></i><b></b><i></i></div>\n    <div class="grid g4">\n' + the + '\n    </div>', f'<script src="{R}assets/js/header.js?v=20261028a"></script>')
+      '    <div class="sec-orn"><i></i><b></b><i></i></div>\n    <div class="grid g4">\n' + the + '\n    </div>',
+      f'''<script>window.QM_LD_KEO = true;</script>
+<script src="{R}assets/js/header.js?v={V}"></script>
+<script src="{R}assets/js/luot-do.js?v={V}"></script>
+<script>
+  // Thẻ nào còn lượt làm dở (luot-do.js; đăng nhập thì đồng bộ từ máy khác): ghi "📌 Đang làm dở" trên thẻ
+  (function () {{
+    var PHAN = {{ 'ngu-am.html': ['ngu-am'], 'chu-han.html': ['chu-han'], 'tu-vung.html': ['tu-vung'], 'ngu-phap.html': ['ngu-phap'],
+      'doc-hieu.html': ['doc-hieu-'], 'nghe.html': ['nghe'], 'dich.html': ['dich-'] }};
+    function ve() {{
+      if (!window.QM_LD) return;
+      var ds = QM_LD.tatCa('on-tap-1-5/');
+      document.querySelectorAll('a.ot-the').forEach(function (a) {{
+        var cu = a.querySelector('.ot-the-do'); if (cu) cu.remove();
+        var tt = (PHAN[a.getAttribute('href')] || []), co = ds.filter(function (e) {{ var k = e.khoa.slice(11); return tt.some(function (t) {{ return t.slice(-1) === '-' ? k.indexOf(t) === 0 : k === t || k === t + '-luyen'; }}); }});
+        if (!co.length) return;
+        var p = document.createElement('p'); p.className = 'ot-the-do';
+        p.textContent = '📌 Đang làm dở: ' + co.map(function (e) {{ return (e.du && e.du.ten) || e.ten ? ((e.du && e.du.ten) || e.ten) + ' · ' + e.tom : e.tom; }}).join(' — ');
+        a.insertBefore(p, a.querySelector('.go'));
+      }});
+    }}
+    ve(); document.addEventListener('qm-luot-do-nap', ve);
+  }})();
+</script>''')
 print('đã dựng', sorted(os.listdir(THU)))
