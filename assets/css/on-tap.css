@@ -1,0 +1,85 @@
+/* =========================================================
+   ÔN TẬP TỔNG HỢP BÀI 1–5 — phần riêng (nạp SAU style.css). Dùng lại khuôn .lt-* / .lnp-* của Bài tập và Luyện ngữ pháp.
+   ========================================================= */
+#on-tap,#dich{max-width:760px;margin:0 auto;scroll-margin-top:90px}
+.ot-an{visibility:hidden;height:0;overflow:hidden;margin:0;padding:0}
+.ot-nghe{margin:6px 0 2px}
+.lt-dap.ot-vi .lt-dap-o{justify-content:flex-start;font-size:15px;line-height:1.4}
+.lt-dap.ot-vi.ot-1c,.lt-dap.ot-1c{grid-template-columns:1fr}
+.lt-dap.ot-2{grid-template-columns:1fr 1fr}
+.lt-dap.py.ot-2 .lt-dap-o{font-size:20px}
+.ot-ds-bai{display:grid;gap:10px;margin-top:14px}
+.ot-chon-bai{display:flex;justify-content:space-between;align-items:center;gap:10px;border:1.5px solid var(--line-soft);background:#fff;border-radius:14px;padding:12px 14px;font:inherit;cursor:pointer;text-align:left;color:var(--ink)}
+.ot-chon-bai:hover{border-color:var(--brand);background:var(--brand-soft)}
+.ot-chon-bai span{color:var(--muted);font-weight:700;font-size:13.5px;white-space:nowrap}
+.ot-bai-doc{padding:12px 16px;margin-bottom:12px;border-top:5px solid var(--brand)}
+.ot-bai-doc summary{font-weight:800;color:var(--brand);cursor:pointer}
+.ot-bai-doc-nut{display:flex;align-items:center;gap:10px;margin:8px 0 4px}
+.ot-bai-doc-nut .btn{padding:5px 12px;font-size:13.5px}
+.ot-van p{margin:6px 0;font-size:20px;line-height:1.6}
+.ot-van b{font-size:16px;color:var(--muted)}
+.ot-van-py{display:block;font-style:normal;font-size:13.5px;color:var(--red);font-weight:700;line-height:1.4}
+.ot-hien-sau{background:var(--surface-2);border-radius:12px;padding:6px 12px;margin:6px 0}
+.ot-hien-sau p{margin:4px 0;font-size:17px;line-height:1.45}
+.ot-hien-sau b{font-size:14px;color:var(--muted)}
+.ot-hien-sau i{font-style:normal;font-size:13px;color:var(--red);font-weight:700}
+.ot-but{display:flex;align-items:center;gap:10px;margin-top:8px;font-size:13px;color:var(--muted);font-weight:700}
+.ot-but-o{width:96px;height:96px;border:1.5px solid var(--line);border-radius:12px;background:#fff;display:grid;place-items:center;cursor:pointer;padding:0;flex-shrink:0}
+.ot-but-o .hanzi{font-size:56px;color:var(--brand)}
+@media(max-width:600px){.ot-van p{font-size:18px}.lt-dap.ot-vi .lt-dap-o{font-size:14px}}
+
+/* ----- Trang chính của thẻ ----- */
+.ot-the.sap-co{opacity:.6;cursor:default}
+.ot-the.sap-co .go{color:var(--muted)}
+
+/* ----- Bài dịch Việt → Trung (assets/js/dich.js) ----- */
+.dc-che{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0}
+.dc-che button{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font:inherit;font-weight:800;font-size:14px;color:var(--muted);cursor:pointer}
+.dc-che button.on{border-color:var(--brand);background:var(--brand);color:#fff}
+.dc-chon{display:grid;gap:8px;margin-top:10px}
+.dc-de{background:#fff;border:1px solid var(--line-soft);border-top:5px solid var(--gold);border-radius:20px;box-shadow:var(--shadow);padding:14px 16px}
+.dc-ai{font-size:13px;font-weight:800;color:var(--muted);margin-bottom:2px}
+.dc-ai .hanzi{color:var(--brand);font-size:15px}
+.dc-vi{font-size:19px;font-weight:800;line-height:1.5;color:var(--ink)}
+.dc-vi.dai{font-size:16.5px;font-weight:700}
+.dc-truoc{font-size:14px;color:var(--muted);margin:0 0 8px;line-height:1.5}
+.dc-truoc .hanzi{font-size:16px;color:var(--ink)}
+.dc-o{display:block;width:100%;box-sizing:border-box;min-height:88px;font-size:21px;line-height:1.5;padding:10px 12px;border:2px solid var(--line);border-radius:14px;background:#fff;font-family:inherit;margin-top:10px;resize:vertical}
+.dc-o.dai{min-height:180px}
+.dc-o:focus{outline:none;border-color:var(--brand)}
+.dc-dau{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:8px}
+.dc-dau button{width:42px;height:42px;border-radius:10px;border:1.5px solid var(--gold);background:#fffaf0;font:inherit;font-size:22px;font-weight:800;color:var(--brand);cursor:pointer}
+.dc-bao{margin:6px 0 0;font-size:13.5px;font-weight:700;color:var(--no)}
+.dc-giai{margin-top:12px;background:#fff;border:1.5px solid var(--line-soft);border-left:5px solid var(--ok);border-radius:14px;padding:10px 14px}
+.dc-giai.sai{border-left-color:var(--gold)}
+.dc-dap{display:flex;gap:10px;align-items:flex-start;margin:6px 0}
+.dc-dap .hanzi{font-size:20px;line-height:1.45}
+.dc-dap .dc-py{color:var(--red);font-weight:700;font-size:13.5px}
+.dc-khac{font-size:14px;color:var(--muted);margin:4px 0}
+.dc-khac .hanzi{font-size:16px;color:var(--ink)}
+.dc-cua{font-size:14px;color:var(--muted);margin:6px 0}
+.dc-cua .hanzi{font-size:18px;color:var(--ink)}
+.dc-tu{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px}
+.dc-tu .btn.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.dc-bang{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px}
+.dc-bang td{border-top:1px solid var(--line-soft);padding:6px 4px;vertical-align:top}
+.dc-bang .hanzi{font-size:17px}
+.dc-gv{margin:28px auto 0;text-align:center}
+.dc-gv .btn{font-size:13.5px;padding:6px 14px}
+/* chế độ giáo viên */
+.dc-sua{max-width:900px;margin:18px auto 0;padding:16px}
+.dc-sua h2{margin:0 0 6px;color:var(--brand);font-size:22px}
+.dc-sua-hang{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
+.dc-sua input[type=password],.dc-sua input[type=text],.dc-sua textarea{font:inherit;font-size:15px;padding:7px 10px;border:1.5px solid var(--line);border-radius:10px;background:#fff;box-sizing:border-box}
+.dc-sua textarea{width:100%;min-height:54px;resize:vertical}
+.dc-sua .hanzi-o{font-size:18px}
+.dc-muc{border:1px solid var(--line-soft);border-radius:12px;padding:10px;margin:8px 0;background:var(--surface-2)}
+.dc-muc-dau{display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:800;color:var(--muted);font-size:13px;margin-bottom:4px}
+.dc-muc label{display:block;font-size:12.5px;font-weight:800;color:var(--muted);margin-top:6px}
+.dc-muc .btn{padding:4px 10px;font-size:12.5px}
+.dc-luot{border-left:3px solid var(--gold);padding-left:8px;margin:8px 0}
+.dc-thong-bao{font-weight:700;margin:6px 0}
+.dc-thong-bao.ok{color:var(--ok)}.dc-thong-bao.loi{color:var(--no)}
+.dc-sua-thanh{position:sticky;bottom:0;background:var(--surface,#fff);padding:10px 0;border-top:1px solid var(--line-soft);display:flex;flex-wrap:wrap;gap:8px;justify-content:center;z-index:5}
+@media(max-width:600px){.dc-vi{font-size:17px}.dc-o{font-size:19px}}
+#on-tap.ot-khoi-2{margin-top:34px}

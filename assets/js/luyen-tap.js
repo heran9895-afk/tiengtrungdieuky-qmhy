@@ -75,7 +75,7 @@
       '<button type="button" role="tab" data-cap="KHO" class="lt-cap-kho">⭐ Từ khó <span class="lt-so-kho"></span></button></div>' +
     (BAI ? '<div class="lt-hs"><label>Họ tên đầy đủ<input type="text" class="lt-hs-ten" autocomplete="name" placeholder="VD: Nguyễn Văn An"></label>' +
       '<label>Lớp<input type="text" class="lt-hs-lop" placeholder="VD: HSK1-K3"></label>' +
-      '<p class="lt-hs-ghi">Điền để lưu điểm lên Bảng xếp hạng. Không điền vẫn làm bài được, chỉ là không lưu điểm.</p></div>' : '') +
+      '<p class="lt-hs-ghi">' + (BAI.onTap ? 'Bài làm từng câu được gửi về cho cô giáo để theo dõi và cải tiến bài học. Phần này không xếp hạng.' : 'Điền để lưu điểm lên Bảng xếp hạng. Không điền vẫn làm bài được, chỉ là không lưu điểm.') + '</p></div>' : '') +
     '<div class="lt-thanh" id="lt-thanh">' +
       '<label class="lt-o"><span class="lt-o-nhan">Chặng</span><select class="lt-chon-chang" aria-label="Chọn chặng"></select></label>' +
       '<label class="lt-o"><span class="lt-o-nhan">Dạng bài</span><select class="lt-chon-dang" aria-label="Chọn dạng bài"></select></label>' +
@@ -1150,6 +1150,13 @@
   function thoiGian(g) { var p = Math.floor(g / 60), q = g % 60; return (p ? p + ' phút ' : '') + q + ' giây'; }
   function guiDiem() {
     var khu = khuBai.querySelector('.lt-luu'); if (!khu) return;
+    if (BAI.onTap && window.QM_OTG) {                         // Ôn tập tổng hợp: mọi lượt gửi bài làm về Sheet (otLuot), không lên Bảng xếp hạng
+      var hs0 = { hoTen: (el.querySelector('.lt-hs-ten').value || '').trim(), lop: (el.querySelector('.lt-hs-lop').value || '').trim() };
+      QM_OTG.gui({ maLuot: QM_OTG.maLuot(), phan: BAI.onTap + (B.dayDu ? '' : '-rieng'), hoTen: hs0.hoTen, lop: hs0.lop, batDau: new Date(B.luc).toISOString(),
+        giay: B.giay, soCau: B.dung + B.sai, soDung: B.dung,
+        cau: B.ct.map(function (c) { return { stt: c.stt, maCau: '', dang: c.dang, nhom: '', deBai: c.cauHoi, dapAn: c.dapAn, chon: c.chon, dung: c.dung ? 1 : 0 }; }) }, khu, BAI.ten);
+      return;
+    }
     if (!B.dayDu) { khu.innerHTML = '<p class="lt-luu-ghi">Lượt luyện riêng (một dạng bài hoặc luyện lại từ sai) không tính lên Bảng xếp hạng. Chọn dạng <b>🔀 Trộn tất cả</b> để làm bài tính điểm.</p>'; return; }
     var api = window.QM_API;
     if (!api) { khu.innerHTML = '<p class="lt-luu-ghi">Bảng xếp hạng chưa được nối với Google Sheet nên kết quả chưa được lưu.</p>'; return; }
