@@ -23,7 +23,7 @@ loi_d, phu, np_phu, thieu_tu, thieu_np = kiem.kiem_dich()
 loi_t = kiem.kiem_trac_nghiem()
 
 w('# Duyệt nội dung · Ôn tập tổng hợp Bài 1–5 (HSK 3.0)\n')
-w('*Soạn 30/10/2026 theo yêu cầu của cô Nhiên. **Chưa dựng trang**: cô duyệt nội dung trước, chốt xong bên soạn mới dựng.*\n')
+w('*Soạn 30/10/2026 theo yêu cầu của cô Nhiên. **ĐÃ LÊN WEB 30/10/2026** theo yêu cầu (cô kiểm trên web rồi báo sửa): thẻ 📚 Ôn tập tổng hợp Bài 1–5 ở trang HSK 1, thư mục `chuong-trinh-hsk/hsk1/on-tap-1-5/`. Máy chủ điểm cần bản **2026-10-30a** (Project `claude/may-chu-diem-Code.gs`) để nhận bài làm và để chế độ giáo viên của Bài dịch hoạt động.*\n')
 w('Nguồn soạn trong kho web: `tools/on_tap_1_5/` (`on_tap.py` các phần trắc nghiệm, `dich.py` bài dịch, `kiem.py` máy kiểm, `xuat_duyet.py` xuất file này).\n')
 
 w('## 0. Tóm tắt\n')
@@ -202,7 +202,7 @@ w('- Cuối trang có nút **🔒 Chế độ giáo viên**. Cô nhập mật kh
 w('- Mỗi lần lưu giữ lại bản cũ (ghi giờ lưu), cô có thể **khôi phục** bản trước nếu lỡ tay. Bài làm của học sinh ghi kèm số phiên bản đề để biết em đó làm theo bản nào.')
 w('- Nhập sai mật khẩu 5 lần liên tiếp thì khóa 10 phút (chống dò mật khẩu).\n')
 w('### 9.2 Đặt mật khẩu (làm một lần, khoảng 2 phút)\n')
-w('Mật khẩu đặt trong **máy chủ điểm** — cùng chỗ cô đã đặt `MAT_KHAU` để xóa điểm. Dùng khóa **mới** `MAT_KHAU_GV` để mật khẩu sửa đề tách riêng với mật khẩu xóa điểm.\n')
+w('**Cô chốt 30/10/2026: dùng luôn mật khẩu `MAT_KHAU` đang có** (mật khẩu xoá điểm) — không cần làm gì thêm. Nếu sau này muốn mật khẩu sửa đề riêng (ví dụ giao cho trợ giảng mà không cho xoá điểm), thêm khoá `MAT_KHAU_GV` theo các bước dưới; máy chủ tự ưu tiên `MAT_KHAU_GV` khi có.\n')
 w('1. Mở **Google Sheet của máy chủ điểm** (Sheet có các trang Scores, Answers, NguPhapLuot…).')
 w('2. Trên thanh menu chọn **Tiện ích mở rộng → Apps Script** (*Extensions → Apps Script*). Trang soạn mã mở ra ở tab mới.')
 w('3. Ở cột biểu tượng bên trái, bấm **⚙️ Cài đặt dự án** (*Project Settings*).')
