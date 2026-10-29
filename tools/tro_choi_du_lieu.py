@@ -47,7 +47,8 @@ KET_CAU_THEM = {'请': 'trái – phải', '忙': 'trái – phải', '的': 'tr
                 '奶': 'trái – phải', '南': 'trên – dưới', '国': 'bao toàn bộ (囗 bao quanh)', '是': 'trên – dưới',
                 '起': 'nửa bao (走 bao trái và dưới)', '越': 'nửa bao (走 bao trái và dưới)', '没': 'trái – phải',
                 '我': 'trái – phải', '它': 'trên – dưới', '名': 'trên – dưới', '美': 'trên – dưới',
-                '第': 'trên – dưới', '和': 'trái – phải'}
+                '第': 'trên – dưới', '和': 'trái – phải',
+                '期': 'trái – phải', '休': 'trái – phải', '新': 'trái – phải', '欢': 'trái – phải', '息': 'trên – dưới', '菜': 'trên – dưới', '看': 'trên – dưới'}
 
 # ---------- Nghĩa: tách cụm nghĩa (cùng cách với web) ----------
 def gon(s): return re.sub(r'\s+', ' ', re.sub(r'[^\w ]', ' ', unicodedata.normalize('NFC', s))).strip()
@@ -220,7 +221,7 @@ def dung_ghep(b):
 # còn thiếu thì tra bảng dưới (âm đọc khi đứng riêng, theo 等级标准)
 TEN_PY = {'李文': 'Lǐ Wén', '安妮': 'Ānnī', '李月': 'Lǐ Yuè'}   # theo pinyin câu ví dụ đã duyệt
 AM_RIENG = {'安': 'ān', '请': 'qǐng', '认': 'rèn', '识': 'shí', '语': 'yǔ', '法': 'fǎ', '谢': 'xiè', '对': 'duì', '起': 'qǐ', '没': 'méi', '什': 'shén', '名': 'míng', '字': 'zì', '李': 'lǐ', '越': 'yuè',
-            '南': 'nán', '爸': 'bà', '姐': 'jiě', '奶': 'nǎi'}
+            '南': 'nán', '爸': 'bà', '姐': 'jiě', '奶': 'nǎi', '期': 'qī', '休': 'xiū', '息': 'xī', '欢': 'huān'}
 MOT_CHU = {}
 for b in BAI:
     for w in WEB[b]['tu']:

@@ -18,7 +18,8 @@ TEN_RIENG = '小语王一飞陈天中安妮白家月李文王一雪刘明杨同�
 CHU = {1: "一三不个五们你八再吃同喝大天好学客家小师很您明气汉狗猫王生老见语谢飞",
        2: "中么也事什俄关兴十口只叫名国坐女妮子字安对我文斯日是月本李没爱白系罗美英认识说请起进门问陈高",
        3: "了人他作做南去友吗哥哪喂太奶她妈妹姐姥工弟忙想有朋法泰爷爸男的谁越还这那雪",
-       4: "〇七万丈两乐九二亿今位儿公六几刘千呢和四多夫妻婆孩少岁年杨百第米纪零"}
+       4: "〇七万丈两乐九二亿今位儿公六几刘千呢和四多夫妻婆孩少岁年杨百第米纪零",
+       5: "号星期休息会饭面条饺些菜下班新电脑真看喜欢它昨道包上旧台听"}
 NGUON = {'luuY': 'lưu ý thẻ', 'quyChuan': 'quy chuẩn 05', 'deXuat': 'cô duyệt 29/10/2026'}
 
 
@@ -26,7 +27,7 @@ def nap(tep):
     sp = importlib.util.spec_from_file_location('kho', os.path.join(GOC, 'tools', 'np_luyen', tep))
     m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m); return m
 
-KHO = [nap('kho_bai2_4.py')]
+KHO = [nap('kho_bai2_4.py'), nap('kho_bai5.py')]
 
 
 def strip(p):
@@ -51,7 +52,8 @@ def kiem():
                 if ng: loi.append(f'B{n} {nhan}: chữ ngoài vốn {ng} :: {s}')
                 if py is not None:
                     a = strip(''.join('ling' if c == '〇' else lazy_pinyin(c)[0] for c in han(s)))
-                    if a != strip(py): loi.append(f'B{n} {nhan}: pinyin lệch :: {s} | {py}')
+                    r = strip(''.join('ling' if c == '〇' else 'r' if c == '儿' else lazy_pinyin(c)[0] for c in han(s)))   # 面条儿 miàntiáor
+                    if strip(py) not in (a, r): loi.append(f'B{n} {nhan}: pinyin lệch :: {s} | {py}')
             for it in cau:
                 if it['dd'] not in dds: loi.append(f'B{n}: đặc điểm lạ {it["dd"]}'); continue
                 if not it.get('bo'): dem[it['dd']] += 1

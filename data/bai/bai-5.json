@@ -1,0 +1,4914 @@
+{
+ "bai": 5,
+ "ten": "第五课：今天我休息",
+ "tenViet": "Bài 5: Hôm nay tôi nghỉ",
+ "pinyinTen": "Dì wǔ kè: Jīntiān wǒ xiūxi",
+ "tenRieng": [],
+ "maBaiTap": "bai5-bai-tap",
+ "tu": [
+  {
+   "Mã": "1-0181",
+   "Chữ Hán": "今天",
+   "Pinyin": "jīntiān",
+   "Âm Hán Việt": "KIM THIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "hôm nay",
+   "Cấp HSK": "1",
+   "Thuận bút": "天",
+   "Cụm từ": "今天几号 | jīntiān jǐ hào\n今天星期几 | jīntiān xīngqī jǐ\n今天休息 | jīntiān xiūxi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：今天几号？\nB：今天九月八号。",
+   "Pinyin câu 1": "A: Jīntiān jǐ hào?\nB: Jīntiān jiǔ yuè bā hào.",
+   "Nghĩa câu 1": "A: Hôm nay ngày mấy?\nB: Hôm nay ngày 8 tháng 9.",
+   "Đọc câu 1": "今天几号？今天九月八号。",
+   "Câu 2": "今天星期日，我休息。",
+   "Pinyin câu 2": "Jīntiān xīngqīrì, wǒ xiūxi.",
+   "Nghĩa câu 2": "Hôm nay chủ nhật, tôi nghỉ.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0143",
+   "Chữ Hán": "号",
+   "Pinyin": "hào",
+   "Âm Hán Việt": "HIỆU",
+   "Từ loại": "lượng từ",
+   "Nghĩa tiếng Việt": "ngày (trong tháng, dùng trong khẩu ngữ)",
+   "Cấp HSK": "1",
+   "Thuận bút": "号",
+   "Cụm từ": "几号 | jǐ hào\n八号 | bā hào\n二十二号 | èrshí'èr hào",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "今天几月几号？",
+   "Pinyin câu 1": "Jīntiān jǐ yuè jǐ hào?",
+   "Nghĩa câu 1": "Hôm nay là ngày mấy tháng mấy?",
+   "Đọc câu 1": "",
+   "Câu 2": "明天是十月二十二号。",
+   "Pinyin câu 2": "Míngtiān shì shí yuè èrshí'èr hào.",
+   "Nghĩa câu 2": "Ngày mai là ngày 22 tháng 10.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0452",
+   "Chữ Hán": "月",
+   "Pinyin": "yuè",
+   "Âm Hán Việt": "NGUYỆT",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "tháng",
+   "Cấp HSK": "1",
+   "Thuận bút": "月",
+   "Cụm từ": "几月 | jǐ yuè\n九月 | jiǔ yuè\n两个月 | liǎng ge yuè",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "一年有十二个月，一个月有多少天？",
+   "Pinyin câu 1": "Yì nián yǒu shí'èr ge yuè, yí ge yuè yǒu duōshao tiān?",
+   "Nghĩa câu 1": "Một năm có mười hai tháng, một tháng có bao nhiêu ngày?",
+   "Đọc câu 1": "",
+   "Câu 2": "今年三月我去法国。",
+   "Pinyin câu 2": "Jīnnián sān yuè wǒ qù Fǎguó.",
+   "Nghĩa câu 2": "Tháng ba năm nay tôi đi Pháp.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0308",
+   "Chữ Hán": "日",
+   "Pinyin": "rì",
+   "Âm Hán Việt": "NHẬT",
+   "Từ loại": "lượng từ",
+   "Nghĩa tiếng Việt": "ngày (trong tháng, dùng trong văn viết)",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "十五日 | shíwǔ rì\n八月八日 | bā yuè bā rì\n二月二十一日 | èr yuè èrshíyī rì",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "今天是二〇二五年五月二十二日。",
+   "Pinyin câu 1": "Jīntiān shì èrlíng'èrwǔ nián wǔ yuè èrshí'èr rì.",
+   "Nghĩa câu 1": "Hôm nay là ngày 22 tháng 5 năm 2025.",
+   "Đọc câu 1": "",
+   "Câu 2": "我的生日是八月十八日。",
+   "Pinyin câu 2": "Wǒ de shēngrì shì bā yuè shíbā rì.",
+   "Nghĩa câu 2": "Sinh nhật của tôi là ngày 18 tháng 8.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0413",
+   "Chữ Hán": "星期",
+   "Pinyin": "xīngqī",
+   "Âm Hán Việt": "TINH KỲ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "tuần; thứ (trong tuần)",
+   "Cấp HSK": "1",
+   "Thuận bút": "星期",
+   "Cụm từ": "星期几 | xīngqī jǐ\n这个星期 | zhè ge xīngqī\n星期一 | xīngqīyī",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "昨天星期几？",
+   "Pinyin câu 1": "Zuótiān xīngqī jǐ?",
+   "Nghĩa câu 1": "Hôm qua thứ mấy?",
+   "Đọc câu 1": "",
+   "Câu 2": "这个星期一你忙吗？",
+   "Pinyin câu 2": "Zhè ge xīngqīyī nǐ máng ma?",
+   "Nghĩa câu 2": "Thứ hai tuần này bạn có bận không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0414",
+   "Chữ Hán": "星期日",
+   "Pinyin": "xīngqīrì",
+   "Âm Hán Việt": "TINH KỲ NHẬT",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "chủ nhật",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "这个星期日 | zhè ge xīngqīrì\n星期日休息 | xīngqīrì xiūxi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "今天星期日，爸爸妈妈不工作。",
+   "Pinyin câu 1": "Jīntiān xīngqīrì, bàba māma bù gōngzuò.",
+   "Nghĩa câu 1": "Hôm nay chủ nhật, bố mẹ không làm việc.",
+   "Đọc câu 1": "",
+   "Câu 2": "这个星期日你想做什么？",
+   "Pinyin câu 2": "Zhè ge xīngqīrì nǐ xiǎng zuò shénme?",
+   "Nghĩa câu 2": "Chủ nhật này bạn muốn làm gì?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0415",
+   "Chữ Hán": "星期天",
+   "Pinyin": "xīngqītiān",
+   "Âm Hán Việt": "TINH KỲ THIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "chủ nhật (khẩu ngữ)",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "星期天休息 | xīngqītiān xiūxi\n这个星期天 | zhè ge xīngqītiān",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你爸爸妈妈星期天休息吗？",
+   "Pinyin câu 1": "Nǐ bàba māma xīngqītiān xiūxi ma?",
+   "Nghĩa câu 1": "Bố mẹ bạn chủ nhật có nghỉ không?",
+   "Đọc câu 1": "",
+   "Câu 2": "星期天我也做饭。",
+   "Pinyin câu 2": "Xīngqītiān wǒ yě zuò fàn.",
+   "Nghĩa câu 2": "Chủ nhật tôi cũng nấu cơm.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0417",
+   "Chữ Hán": "休息",
+   "Pinyin": "xiūxi",
+   "Âm Hán Việt": "HƯU TỨC",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "nghỉ, nghỉ ngơi",
+   "Cấp HSK": "1",
+   "Thuận bút": "休息",
+   "Cụm từ": "不休息 | bù xiūxi\n想休息 | xiǎng xiūxi\n今天休息 | jīntiān xiūxi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "昨天他们工作，不休息。",
+   "Pinyin câu 1": "Zuótiān tāmen gōngzuò, bù xiūxi.",
+   "Nghĩa câu 1": "Hôm qua họ làm việc, không nghỉ.",
+   "Đọc câu 1": "",
+   "Câu 2": "我太忙了，很想休息。",
+   "Pinyin câu 2": "Wǒ tài máng le, hěn xiǎng xiūxi.",
+   "Nghĩa câu 2": "Tôi bận quá, rất muốn nghỉ ngơi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0160",
+   "Chữ Hán": "会",
+   "Pinyin": "huì",
+   "Âm Hán Việt": "HỘI",
+   "Từ loại": "động từ năng nguyện",
+   "Nghĩa tiếng Việt": "biết (làm gì, nhờ học mà biết)",
+   "Cấp HSK": "1",
+   "Thuận bút": "会",
+   "Cụm từ": "会说汉语 | huì shuō Hànyǔ\n会做饭 | huì zuò fàn\n不会 | bú huì",
+   "Đọc từ": "汇",
+   "_nhom": "tuVung",
+   "Câu 1": "我会说越南语和汉语。",
+   "Pinyin câu 1": "Wǒ huì shuō Yuènányǔ hé Hànyǔ.",
+   "Nghĩa câu 1": "Tôi biết nói tiếng Việt và tiếng Trung.",
+   "Đọc câu 1": "",
+   "Câu 2": "他们会做什么？",
+   "Pinyin câu 2": "Tāmen huì zuò shénme?",
+   "Nghĩa câu 2": "Họ biết làm gì?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0772",
+   "Chữ Hán": "做饭",
+   "Pinyin": "zuò∥fàn",
+   "Âm Hán Việt": "TỐ PHẠN",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "nấu cơm, nấu ăn",
+   "Cấp HSK": "2",
+   "Thuận bút": "饭",
+   "Cụm từ": "会做饭 | huì zuò fàn\n不做饭 | bú zuò fàn\n谁做饭 | shéi zuò fàn",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：你会做饭吗？\nB：我会做。",
+   "Pinyin câu 1": "A: Nǐ huì zuò fàn ma?\nB: Wǒ huì zuò.",
+   "Nghĩa câu 1": "A: Bạn biết nấu cơm không?\nB: Tôi biết nấu.",
+   "Đọc câu 1": "你会做饭吗？我会做。",
+   "Câu 2": "星期天谁做饭？",
+   "Pinyin câu 2": "Xīngqītiān shéi zuò fàn?",
+   "Nghĩa câu 2": "Chủ nhật ai nấu cơm?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0500",
+   "Chữ Hán": "做",
+   "Pinyin": "zuò",
+   "Âm Hán Việt": "TỐ",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "làm; nấu (món ăn)",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "做什么 | zuò shénme\n做菜 | zuò cài\n做饺子 | zuò jiǎozi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：你们今天做什么？\nB：我今天学汉语。",
+   "Pinyin câu 1": "A: Nǐmen jīntiān zuò shénme?\nB: Wǒ jīntiān xué Hànyǔ.",
+   "Nghĩa câu 1": "A: Hôm nay các bạn làm gì?\nB: Hôm nay tôi học tiếng Trung.",
+   "Đọc câu 1": "你们今天做什么？我今天学汉语。",
+   "Câu 2": "你会做什么？",
+   "Pinyin câu 2": "Nǐ huì zuò shénme?",
+   "Nghĩa câu 2": "Bạn biết làm món gì?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0244",
+   "Chữ Hán": "面条儿",
+   "Pinyin": "miàntiáor",
+   "Âm Hán Việt": "MIẾN ĐIỀU NHI",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "mì sợi",
+   "Cấp HSK": "1",
+   "Thuận bút": "面条",
+   "Cụm từ": "做面条儿 | zuò miàntiáor\n吃面条儿 | chī miàntiáor\n一些面条儿 | yìxiē miàntiáor",
+   "Đọc từ": "面条",
+   "_nhom": "tuVung",
+   "Câu 1": "他想吃面条儿和一些菜。",
+   "Pinyin câu 1": "Tā xiǎng chī miàntiáor hé yìxiē cài.",
+   "Nghĩa câu 1": "Anh ấy muốn ăn mì và một ít món ăn.",
+   "Đọc câu 1": "他想吃面条和一些菜。",
+   "Câu 2": "星期天我们吃面条儿。",
+   "Pinyin câu 2": "Xīngqītiān wǒmen chī miàntiáor.",
+   "Nghĩa câu 2": "Chủ nhật chúng tôi ăn mì.",
+   "Đọc câu 2": "星期天我们吃面条。"
+  },
+  {
+   "Mã": "2-0275",
+   "Chữ Hán": "饺子",
+   "Pinyin": "jiǎozi",
+   "Âm Hán Việt": "GIẢO TỬ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "sủi cảo, bánh chẻo",
+   "Cấp HSK": "2",
+   "Thuận bút": "饺",
+   "Cụm từ": "做饺子 | zuò jiǎozi\n吃饺子 | chī jiǎozi\n中国饺子 | Zhōngguó jiǎozi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "中国的饺子很好吃。",
+   "Pinyin câu 1": "Zhōngguó de jiǎozi hěn hǎochī.",
+   "Nghĩa câu 1": "Sủi cảo của Trung Quốc rất ngon.",
+   "Đọc câu 1": "",
+   "Câu 2": "你喜欢吃饺子吗？",
+   "Pinyin câu 2": "Nǐ xǐhuan chī jiǎozi ma?",
+   "Nghĩa câu 2": "Bạn có thích ăn sủi cảo không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0439",
+   "Chữ Hán": "一些",
+   "Pinyin": "yìxiē",
+   "Âm Hán Việt": "NHẤT TA",
+   "Từ loại": "số lượng từ",
+   "Nghĩa tiếng Việt": "một vài, một ít",
+   "Cấp HSK": "1",
+   "Thuận bút": "一些",
+   "Cụm từ": "一些菜 | yìxiē cài\n一些饺子 | yìxiē jiǎozi\n一些朋友 | yìxiē péngyou",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我会做一些越南菜，不会做中国菜。",
+   "Pinyin câu 1": "Wǒ huì zuò yìxiē Yuènán cài, bú huì zuò Zhōngguó cài.",
+   "Nghĩa câu 1": "Tôi biết nấu vài món Việt Nam, không biết nấu món Trung Quốc.",
+   "Đọc câu 1": "",
+   "Câu 2": "我们有一些中国朋友。",
+   "Pinyin câu 2": "Wǒmen yǒu yìxiē Zhōngguó péngyou.",
+   "Nghĩa câu 2": "Chúng tôi có vài người bạn Trung Quốc.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0035",
+   "Chữ Hán": "菜",
+   "Pinyin": "cài",
+   "Âm Hán Việt": "THÁI",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "rau; món ăn",
+   "Cấp HSK": "1",
+   "Thuận bút": "菜",
+   "Cụm từ": "做菜 | zuò cài\n中国菜 | Zhōngguó cài\n什么菜 | shénme cài",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我学做菜。",
+   "Pinyin câu 1": "Wǒ xué zuò cài.",
+   "Nghĩa câu 1": "Tôi học nấu ăn.",
+   "Đọc câu 1": "",
+   "Câu 2": "你想吃什么菜？",
+   "Pinyin câu 2": "Nǐ xiǎng chī shénme cài?",
+   "Nghĩa câu 2": "Bạn muốn ăn món gì?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0390",
+   "Chữ Hán": "下班",
+   "Pinyin": "xià∥bān",
+   "Âm Hán Việt": "HẠ BAN",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "tan làm",
+   "Cấp HSK": "1",
+   "Thuận bút": "下班",
+   "Cụm từ": "下班了 | xiàbān le\n想下班 | xiǎng xiàbān",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "妈妈下班了。",
+   "Pinyin câu 1": "Māma xiàbān le.",
+   "Nghĩa câu 1": "Mẹ tan làm rồi.",
+   "Đọc câu 1": "",
+   "Câu 2": "A：同乐，下班吗？\nB：下班。",
+   "Pinyin câu 2": "A: Tónglè, xiàbān ma?\nB: Xiàbān.",
+   "Nghĩa câu 2": "A: Đồng Lạc, tan làm chưa?\nB: Tan làm rồi.",
+   "Đọc câu 2": "同乐，下班吗？下班。"
+  },
+  {
+   "Mã": "1-0411",
+   "Chữ Hán": "新",
+   "Pinyin": "xīn",
+   "Âm Hán Việt": "TÂN",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "mới",
+   "Cấp HSK": "1",
+   "Thuận bút": "新",
+   "Cụm từ": "新同学 | xīn tóngxué\n新朋友 | xīn péngyou\n新电脑 | xīn diànnǎo",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "这是安妮，她是我的新朋友。",
+   "Pinyin câu 1": "Zhè shì Ānnī, tā shì wǒ de xīn péngyou.",
+   "Nghĩa câu 1": "Đây là Annie, cô ấy là bạn mới của tôi.",
+   "Đọc câu 1": "",
+   "Câu 2": "那些新老师是法国人。",
+   "Pinyin câu 2": "Nàxiē xīn lǎoshī shì Fǎguó rén.",
+   "Nghĩa câu 2": "Những thầy cô mới kia là người Pháp.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0079",
+   "Chữ Hán": "电脑",
+   "Pinyin": "diànnǎo",
+   "Âm Hán Việt": "ĐIỆN NÃO",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "máy tính",
+   "Cấp HSK": "1",
+   "Thuận bút": "电脑",
+   "Cụm từ": "一台电脑 | yì tái diànnǎo\n你的电脑 | nǐ de diànnǎo\n新电脑 | xīn diànnǎo",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "这是你的新电脑吗？",
+   "Pinyin câu 1": "Zhè shì nǐ de xīn diànnǎo ma?",
+   "Nghĩa câu 1": "Đây là máy tính mới của bạn à?",
+   "Đọc câu 1": "",
+   "Câu 2": "你有没有电脑？",
+   "Pinyin câu 2": "Nǐ yǒu méi·yǒu diànnǎo?",
+   "Nghĩa câu 2": "Bạn có máy tính không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0470",
+   "Chữ Hán": "真",
+   "Pinyin": "zhēn",
+   "Âm Hán Việt": "CHÂN",
+   "Từ loại": "phó từ",
+   "Nghĩa tiếng Việt": "thật, thật là",
+   "Cấp HSK": "1",
+   "Thuận bút": "真",
+   "Cụm từ": "真新 | zhēn xīn\n真高兴 | zhēn gāoxìng\n真好看 | zhēn hǎokàn",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你的电脑真新！",
+   "Pinyin câu 1": "Nǐ de diànnǎo zhēn xīn!",
+   "Nghĩa câu 1": "Máy tính của bạn mới thật!",
+   "Đọc câu 1": "",
+   "Câu 2": "今天是星期天，真高兴！",
+   "Pinyin câu 2": "Jīntiān shì xīngqītiān, zhēn gāoxìng!",
+   "Nghĩa câu 2": "Hôm nay là chủ nhật, vui thật!",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0140",
+   "Chữ Hán": "好看",
+   "Pinyin": "hǎokàn",
+   "Âm Hán Việt": "HẢO KHÁN",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "đẹp, dễ nhìn; hay (phim, sách)",
+   "Cấp HSK": "1",
+   "Thuận bút": "看",
+   "Cụm từ": "很好看 | hěn hǎokàn\n真好看 | zhēn hǎokàn\n不好看 | bù hǎokàn",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "这是我的新朋友，她真好看！",
+   "Pinyin câu 1": "Zhè shì wǒ de xīn péngyou, tā zhēn hǎokàn!",
+   "Nghĩa câu 1": "Đây là bạn mới của tôi, cô ấy đẹp thật!",
+   "Đọc câu 1": "",
+   "Câu 2": "你妈妈好看吗？",
+   "Pinyin câu 2": "Nǐ māma hǎokàn ma?",
+   "Nghĩa câu 2": "Mẹ bạn có đẹp không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0388",
+   "Chữ Hán": "喜欢",
+   "Pinyin": "xǐhuan",
+   "Âm Hán Việt": "HỶ HOAN",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "thích",
+   "Cấp HSK": "1",
+   "Thuận bút": "喜欢",
+   "Cụm từ": "很喜欢 | hěn xǐhuan\n不喜欢 | bù xǐhuan\n喜欢汉语 | xǐhuan Hànyǔ",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我真喜欢学汉语！",
+   "Pinyin câu 1": "Wǒ zhēn xǐhuan xué Hànyǔ!",
+   "Nghĩa câu 1": "Tôi thật sự thích học tiếng Trung!",
+   "Đọc câu 1": "",
+   "Câu 2": "我也很喜欢它。",
+   "Pinyin câu 2": "Wǒ yě hěn xǐhuan tā.",
+   "Nghĩa câu 2": "Tôi cũng rất thích nó.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0515",
+   "Chữ Hán": "它",
+   "Pinyin": "tā",
+   "Âm Hán Việt": "THA",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "nó (chỉ vật, con vật)",
+   "Cấp HSK": "2",
+   "Thuận bút": "它",
+   "Cụm từ": "它们 | tāmen\n喜欢它 | xǐhuan tā",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "那是我的新电脑，大家很喜欢它。",
+   "Pinyin câu 1": "Nà shì wǒ de xīn diànnǎo, dàjiā hěn xǐhuan tā.",
+   "Nghĩa câu 1": "Kia là máy tính mới của tôi, mọi người rất thích nó.",
+   "Đọc câu 1": "",
+   "Câu 2": "这是李文的小猫，它真好看！",
+   "Pinyin câu 2": "Zhè shì Lǐ Wén de xiǎo māo, tā zhēn hǎokàn!",
+   "Nghĩa câu 2": "Đây là con mèo của Lý Văn, nó đẹp thật!",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0359",
+   "Chữ Hán": "天",
+   "Pinyin": "tiān",
+   "Âm Hán Việt": "THIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "ngày",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "几天 | jǐ tiān\n十五天 | shíwǔ tiān\n一天 | yì tiān",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "一个月有三十天。",
+   "Pinyin câu 1": "Yí ge yuè yǒu sānshí tiān.",
+   "Nghĩa câu 1": "Một tháng có ba mươi ngày.",
+   "Đọc câu 1": "",
+   "Câu 2": "我们休息两天。",
+   "Pinyin câu 2": "Wǒmen xiūxi liǎng tiān.",
+   "Nghĩa câu 2": "Chúng tôi nghỉ hai ngày.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0495",
+   "Chữ Hán": "昨天",
+   "Pinyin": "zuótiān",
+   "Âm Hán Việt": "TẠC THIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "hôm qua",
+   "Cấp HSK": "1",
+   "Thuận bút": "昨",
+   "Cụm từ": "昨天几号 | zuótiān jǐ hào\n昨天星期几 | zuótiān xīngqī jǐ",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "昨天是我的生日。",
+   "Pinyin câu 1": "Zuótiān shì wǒ de shēngrì.",
+   "Nghĩa câu 1": "Hôm qua là sinh nhật của tôi.",
+   "Đọc câu 1": "",
+   "Câu 2": "昨天我们不上班。",
+   "Pinyin câu 2": "Zuótiān wǒmen bú shàngbān.",
+   "Nghĩa câu 2": "Hôm qua chúng tôi không đi làm.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0248",
+   "Chữ Hán": "明天",
+   "Pinyin": "míngtiān",
+   "Âm Hán Việt": "MINH THIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "ngày mai",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "明天见 | míngtiān jiàn\n明天几号 | míngtiān jǐ hào\n明天星期几 | míngtiān xīngqī jǐ",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "明天是二〇二四年八月十八号，星期天。",
+   "Pinyin câu 1": "Míngtiān shì èrlíng'èrsì nián bā yuè shíbā hào, xīngqītiān.",
+   "Nghĩa câu 1": "Ngày mai là chủ nhật, ngày 18 tháng 8 năm 2024.",
+   "Đọc câu 1": "",
+   "Câu 2": "明天我想休息。",
+   "Pinyin câu 2": "Míngtiān wǒ xiǎng xiūxi.",
+   "Nghĩa câu 2": "Ngày mai tôi muốn nghỉ ngơi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0331",
+   "Chữ Hán": "生日",
+   "Pinyin": "shēngrì",
+   "Âm Hán Việt": "SINH NHẬT",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "sinh nhật",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "我的生日 | wǒ de shēngrì\n妈妈的生日 | māma de shēngrì",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "A：你的生日是几月几号？\nB：我的生日是三月二号。",
+   "Pinyin câu 1": "A: Nǐ de shēngrì shì jǐ yuè jǐ hào?\nB: Wǒ de shēngrì shì sān yuè èr hào.",
+   "Nghĩa câu 1": "A: Sinh nhật của bạn là ngày mấy tháng mấy?\nB: Sinh nhật của tôi là ngày 2 tháng 3.",
+   "Đọc câu 1": "你的生日是几月几号？我的生日是三月二号。",
+   "Câu 2": "今天是妈妈的生日。",
+   "Pinyin câu 2": "Jīntiān shì māma de shēngrì.",
+   "Nghĩa câu 2": "Hôm nay là sinh nhật của mẹ.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0112",
+   "Chữ Hán": "道",
+   "Pinyin": "dào",
+   "Âm Hán Việt": "ĐẠO",
+   "Từ loại": "lượng từ",
+   "Nghĩa tiếng Việt": "món (lượng từ dùng cho món ăn)",
+   "Cấp HSK": "2",
+   "Thuận bút": "道",
+   "Cụm từ": "这道菜 | zhè dào cài\n一道菜 | yí dào cài\n两道菜 | liǎng dào cài",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "明天我妈妈做这道菜。",
+   "Pinyin câu 1": "Míngtiān wǒ māma zuò zhè dào cài.",
+   "Nghĩa câu 1": "Ngày mai mẹ tôi nấu món này.",
+   "Đọc câu 1": "",
+   "Câu 2": "这道菜真好吃！",
+   "Pinyin câu 2": "Zhè dào cài zhēn hǎochī!",
+   "Nghĩa câu 2": "Món này ngon thật!",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0139",
+   "Chữ Hán": "好吃",
+   "Pinyin": "hǎochī",
+   "Âm Hán Việt": "HẢO CẬT",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "ngon (đồ ăn)",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "很好吃 | hěn hǎochī\n真好吃 | zhēn hǎochī\n不好吃 | bù hǎochī",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "这些菜太好吃了！",
+   "Pinyin câu 1": "Zhèxiē cài tài hǎochī le!",
+   "Nghĩa câu 1": "Những món này ngon quá!",
+   "Đọc câu 1": "",
+   "Câu 2": "这个面包好吃吗？",
+   "Pinyin câu 2": "Zhè ge miànbāo hǎochī ma?",
+   "Nghĩa câu 2": "Cái bánh mì này có ngon không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0243",
+   "Chữ Hán": "面包",
+   "Pinyin": "miànbāo",
+   "Âm Hán Việt": "MIẾN BAO",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bánh mì",
+   "Cấp HSK": "1",
+   "Thuận bút": "包",
+   "Cụm từ": "这些面包 | zhèxiē miànbāo\n吃面包 | chī miànbāo\n一些面包 | yìxiē miànbāo",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "这些面包很好吃。",
+   "Pinyin câu 1": "Zhèxiē miànbāo hěn hǎochī.",
+   "Nghĩa câu 1": "Những cái bánh mì này rất ngon.",
+   "Đọc câu 1": "",
+   "Câu 2": "哥哥不喜欢吃面包。",
+   "Pinyin câu 2": "Gēge bù xǐhuan chī miànbāo.",
+   "Nghĩa câu 2": "Anh trai không thích ăn bánh mì.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0016",
+   "Chữ Hán": "包子",
+   "Pinyin": "bāozi",
+   "Âm Hán Việt": "BAO TỬ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bánh bao",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "一些包子 | yìxiē bāozi\n吃包子 | chī bāozi\n做包子 | zuò bāozi",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我想吃一些包子。",
+   "Pinyin câu 1": "Wǒ xiǎng chī yìxiē bāozi.",
+   "Nghĩa câu 1": "Tôi muốn ăn vài cái bánh bao.",
+   "Đọc câu 1": "",
+   "Câu 2": "哥哥会做包子。",
+   "Pinyin câu 2": "Gēge huì zuò bāozi.",
+   "Nghĩa câu 2": "Anh trai biết làm bánh bao.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0468",
+   "Chữ Hán": "这些",
+   "Pinyin": "zhèxiē",
+   "Âm Hán Việt": "GIÁ TA",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "những … này",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "这些人 | zhèxiē rén\n这些菜 | zhèxiē cài\n这些同学 | zhèxiē tóngxué",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "这些新同学很好。",
+   "Pinyin câu 1": "Zhèxiē xīn tóngxué hěn hǎo.",
+   "Nghĩa câu 1": "Những bạn học mới này rất tốt.",
+   "Đọc câu 1": "",
+   "Câu 2": "这些菜是中国菜。",
+   "Pinyin câu 2": "Zhèxiē cài shì Zhōngguó cài.",
+   "Nghĩa câu 2": "Những món này là món Trung Quốc.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0258",
+   "Chữ Hán": "那些",
+   "Pinyin": "nàxiē",
+   "Âm Hán Việt": "NA TA",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "những … kia, những … đó",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "那些人 | nàxiē rén\n那些学生 | nàxiē xué·shēng\n那些电脑 | nàxiē diànnǎo",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "那些人是泰国人。",
+   "Pinyin câu 1": "Nàxiē rén shì Tàiguó rén.",
+   "Nghĩa câu 1": "Những người kia là người Thái Lan.",
+   "Đọc câu 1": "",
+   "Câu 2": "那些是我的同学。",
+   "Pinyin câu 2": "Nàxiē shì wǒ de tóngxué.",
+   "Nghĩa câu 2": "Những người kia là bạn học của tôi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0316",
+   "Chữ Hán": "上班",
+   "Pinyin": "shàng∥bān",
+   "Âm Hán Việt": "THƯỢNG BAN",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "đi làm",
+   "Cấp HSK": "1",
+   "Thuận bút": "上",
+   "Cụm từ": "去上班 | qù shàngbān\n不上班 | bú shàngbān\n不去上班 | bú qù shàngbān",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "明天星期天，我们不去上班。",
+   "Pinyin câu 1": "Míngtiān xīngqītiān, wǒmen bú qù shàngbān.",
+   "Nghĩa câu 1": "Mai chủ nhật, chúng tôi không đi làm.",
+   "Đọc câu 1": "",
+   "Câu 2": "你爸爸妈妈星期天上班吗？",
+   "Pinyin câu 2": "Nǐ bàba māma xīngqītiān shàngbān ma?",
+   "Nghĩa câu 2": "Bố mẹ bạn chủ nhật có đi làm không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "3-0391",
+   "Chữ Hán": "旧",
+   "Pinyin": "jiù",
+   "Âm Hán Việt": "CỰU",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "cũ",
+   "Cấp HSK": "3",
+   "Thuận bút": "旧",
+   "Cụm từ": "旧电脑 | jiù diànnǎo\n很旧 | hěn jiù\n太旧了 | tài jiù le",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我的电脑是旧的，不是新的。",
+   "Pinyin câu 1": "Wǒ de diànnǎo shì jiù de, bú shì xīn de.",
+   "Nghĩa câu 1": "Máy tính của tôi là máy cũ, không phải máy mới.",
+   "Đọc câu 1": "",
+   "Câu 2": "我的电脑太旧了。",
+   "Pinyin câu 2": "Wǒ de diànnǎo tài jiù le.",
+   "Nghĩa câu 2": "Máy tính của tôi cũ quá.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "3-0692",
+   "Chữ Hán": "台",
+   "Pinyin": "tái",
+   "Âm Hán Việt": "ĐÀI",
+   "Từ loại": "lượng từ",
+   "Nghĩa tiếng Việt": "chiếc, cái (lượng từ dùng cho máy móc)",
+   "Cấp HSK": "3",
+   "Thuận bút": "台",
+   "Cụm từ": "一台电脑 | yì tái diànnǎo\n两台电脑 | liǎng tái diànnǎo\n这台电脑 | zhè tái diànnǎo",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我有两台电脑。",
+   "Pinyin câu 1": "Wǒ yǒu liǎng tái diànnǎo.",
+   "Nghĩa câu 1": "Tôi có hai chiếc máy tính.",
+   "Đọc câu 1": "",
+   "Câu 2": "这台电脑是谁的？",
+   "Pinyin câu 2": "Zhè tái diànnǎo shì shéi de?",
+   "Nghĩa câu 2": "Chiếc máy tính này là của ai?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0192",
+   "Chữ Hán": "看",
+   "Pinyin": "kàn",
+   "Âm Hán Việt": "KHÁN",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "nhìn, xem; thăm",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "看老同学 | kàn lǎo tóngxué\n看老朋友 | kàn lǎo péngyou\n看爸妈 | kàn bàmā",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "他星期六想去看老同学。",
+   "Pinyin câu 1": "Tā xīngqīliù xiǎng qù kàn lǎo tóngxué.",
+   "Nghĩa câu 1": "Thứ bảy anh ấy muốn đi thăm bạn học cũ.",
+   "Đọc câu 1": "",
+   "Câu 2": "星期天我去看爷爷奶奶。",
+   "Pinyin câu 2": "Xīngqītiān wǒ qù kàn yéye nǎinai.",
+   "Nghĩa câu 2": "Chủ nhật tôi đi thăm ông bà nội.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0141",
+   "Chữ Hán": "好听",
+   "Pinyin": "hǎotīng",
+   "Âm Hán Việt": "HẢO THÍNH",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "hay, dễ nghe",
+   "Cấp HSK": "1",
+   "Thuận bút": "听",
+   "Cụm từ": "很好听 | hěn hǎotīng\n真好听 | zhēn hǎotīng\n不好听 | bù hǎotīng",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "你的名字真好听！",
+   "Pinyin câu 1": "Nǐ de míngzi zhēn hǎotīng!",
+   "Nghĩa câu 1": "Tên của bạn hay thật!",
+   "Đọc câu 1": "",
+   "Câu 2": "汉语好听吗？",
+   "Pinyin câu 2": "Hànyǔ hǎotīng ma?",
+   "Nghĩa câu 2": "Tiếng Trung có hay không?",
+   "Đọc câu 2": ""
+  }
+ ],
+ "boThu": [
+  {
+   "boThu": "艹",
+   "ten": "Bộ thảo",
+   "pinyin": "cǎo",
+   "nghia": "cỏ, cây cỏ, thực vật",
+   "docAm": "草字头",
+   "tenGoi": "草字头",
+   "tenGoiPinyin": "cǎozìtóu",
+   "chuChua": [
+    {
+     "hanzi": "菜",
+     "pinyin": "cài",
+     "nghia": "rau; món ăn"
+    }
+   ]
+  },
+  {
+   "boThu": "爫",
+   "ten": "Bộ trảo",
+   "pinyin": "zhǎo",
+   "nghia": "bàn tay, móng vuốt",
+   "docAm": "爪字头",
+   "tenGoi": "爪字头",
+   "tenGoiPinyin": "zhǎozìtóu",
+   "chuChua": [
+    {
+     "hanzi": "菜",
+     "pinyin": "cài",
+     "nghia": "rau; món ăn"
+    }
+   ]
+  },
+  {
+   "boThu": "斤",
+   "ten": "Bộ cân",
+   "pinyin": "jīn",
+   "nghia": "cái rìu; cân (đơn vị, = 0,5 kg)",
+   "docAm": "斤",
+   "chuChua": [
+    {
+     "hanzi": "新",
+     "pinyin": "xīn",
+     "nghia": "mới"
+    }
+   ]
+  },
+  {
+   "boThu": "士",
+   "ten": "Bộ sĩ",
+   "pinyin": "shì",
+   "nghia": "kẻ sĩ, người có học",
+   "docAm": "士",
+   "chuChua": [
+    {
+     "hanzi": "喜",
+     "pinyin": "xǐ",
+     "nghia": "vui, thích (trong 喜欢)"
+    }
+   ],
+   "ghiChu": "Phân biệt với bộ thổ 土: 士 nét ngang trên dài, 土 nét ngang dưới dài."
+  },
+  {
+   "boThu": "又",
+   "ten": "Bộ hựu",
+   "pinyin": "yòu",
+   "nghia": "lại, nữa; tay phải",
+   "docAm": "又",
+   "chuChua": [
+    {
+     "hanzi": "欢",
+     "pinyin": "huān",
+     "nghia": "vui (trong 喜欢)"
+    }
+   ]
+  },
+  {
+   "boThu": "欠",
+   "ten": "Bộ khiếm",
+   "pinyin": "qiàn",
+   "nghia": "khiếm khuyết, thiếu",
+   "docAm": "欠",
+   "chuChua": [
+    {
+     "hanzi": "欢",
+     "pinyin": "huān",
+     "nghia": "vui (trong 喜欢)"
+    }
+   ]
+  },
+  {
+   "boThu": "匕",
+   "ten": "Bộ chủy",
+   "pinyin": "bǐ",
+   "nghia": "cái thìa, cái muỗng",
+   "docAm": "匕",
+   "chuChua": [
+    {
+     "hanzi": "它",
+     "pinyin": "tā",
+     "nghia": "nó (chỉ vật, con vật)"
+    }
+   ]
+  }
+ ],
+ "thanhPhan": {
+  "其": {
+   "pinyin": "qí",
+   "ten": "chữ 其",
+   "nghia": "(đại từ) nó, của nó"
+  },
+  "月": {
+   "pinyin": "yuè",
+   "ten": "chữ 月",
+   "nghia": "tháng; mặt trăng"
+  },
+  "自": {
+   "pinyin": "zì",
+   "ten": "chữ 自",
+   "nghia": "tự, tự mình, bản thân"
+  },
+  "亲": {
+   "pinyin": "qīn",
+   "ten": "chữ 亲",
+   "nghia": "thân, thân thích"
+  },
+  "手": {
+   "pinyin": "shǒu",
+   "ten": "Bộ thủ",
+   "nghia": "tay (trên đầu chữ 看 viết biến dạng thành 龵)"
+  },
+  "亻": {
+   "pinyin": "rén",
+   "ten": "Bộ nhân đứng",
+   "nghia": "chỉ con người"
+  },
+  "木": {
+   "pinyin": "mù",
+   "ten": "Bộ mộc",
+   "nghia": "cây cối"
+  },
+  "心": {
+   "pinyin": "xīn",
+   "ten": "Bộ tâm",
+   "nghia": "trái tim, chỉ tình cảm và suy nghĩ"
+  },
+  "目": {
+   "pinyin": "mù",
+   "ten": "Bộ mục",
+   "nghia": "mắt"
+  },
+  "宀": {
+   "pinyin": "mián",
+   "ten": "Bộ miên",
+   "nghia": "mái nhà"
+  }
+ },
+ "ghepChu": [
+  {
+   "chu": "期",
+   "phan": [
+    "其",
+    "月"
+   ]
+  },
+  {
+   "chu": "休",
+   "phan": [
+    "亻",
+    "木"
+   ]
+  },
+  {
+   "chu": "息",
+   "phan": [
+    "自",
+    "心"
+   ]
+  },
+  {
+   "chu": "菜",
+   "phan": [
+    "艹",
+    "爫",
+    "木"
+   ]
+  },
+  {
+   "chu": "新",
+   "phan": [
+    "亲",
+    "斤"
+   ]
+  },
+  {
+   "chu": "欢",
+   "phan": [
+    "又",
+    "欠"
+   ]
+  },
+  {
+   "chu": "看",
+   "phan": [
+    "手",
+    "目"
+   ]
+  },
+  {
+   "chu": "它",
+   "phan": [
+    "宀",
+    "匕"
+   ]
+  }
+ ],
+ "chang": [
+  {
+   "so": 1,
+   "ten": "Ôn tập từ vựng 1",
+   "tu": [
+    "今天",
+    "号",
+    "月",
+    "日",
+    "星期",
+    "星期日",
+    "星期天",
+    "休息",
+    "天",
+    "昨天",
+    "明天",
+    "生日"
+   ],
+   "ghepChu": [
+    "期",
+    "休",
+    "息"
+   ]
+  },
+  {
+   "so": 2,
+   "ten": "Ôn tập từ vựng 2",
+   "tu": [
+    "会",
+    "做饭",
+    "做",
+    "面条儿",
+    "饺子",
+    "一些",
+    "菜",
+    "道",
+    "好吃",
+    "面包",
+    "包子",
+    "这些",
+    "那些"
+   ],
+   "ghepChu": [
+    "菜"
+   ]
+  },
+  {
+   "so": 3,
+   "ten": "Ôn tập từ vựng 3",
+   "tu": [
+    "下班",
+    "新",
+    "电脑",
+    "真",
+    "好看",
+    "喜欢",
+    "它",
+    "上班",
+    "旧",
+    "台",
+    "看",
+    "好听"
+   ],
+   "ghepChu": [
+    "新",
+    "欢",
+    "看",
+    "它"
+   ]
+  }
+ ],
+ "nguPhap": [
+  {
+   "id": "ngayThang",
+   "ten": "Cách nói ngày tháng: năm → tháng → ngày → thứ",
+   "congThuc": [
+    [
+     [
+      "ST",
+      "st"
+     ],
+     [
+      "年",
+      "codinh"
+     ],
+     [
+      "ST",
+      "st"
+     ],
+     [
+      "月",
+      "codinh"
+     ],
+     [
+      "ST",
+      "st"
+     ],
+     [
+      "日 / 号",
+      "codinh"
+     ],
+     [
+      "星期…",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "几月几号",
+      "codinh"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "星期几",
+      "codinh"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "Tiếng Trung nói thời gian **từ lớn đến nhỏ**: **năm → tháng → ngày → thứ**, ngược với tiếng Việt. Ngày dùng **日** (văn viết) hoặc **号** (khẩu ngữ). Hỏi ngày dùng **几月几号**, hỏi thứ dùng **星期几**.",
+   "y": [
+    {
+     "noiDung": "Năm → tháng → ngày → thứ",
+     "cum": [
+      [
+       "九月八号",
+       "jiǔ yuè bā hào",
+       "",
+       [
+        [
+         "九",
+         "st"
+        ],
+        [
+         "月",
+         "codinh"
+        ],
+        [
+         "八",
+         "st"
+        ],
+        [
+         "号",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "二〇二五年五月一号",
+       "èrlíng'èrwǔ nián wǔ yuè yī hào",
+       "",
+       [
+        [
+         "二〇二五",
+         "st"
+        ],
+        [
+         "年",
+         "codinh"
+        ],
+        [
+         "五",
+         "st"
+        ],
+        [
+         "月",
+         "codinh"
+        ],
+        [
+         "一",
+         "st"
+        ],
+        [
+         "号",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "十月二十二日",
+       "shí yuè èrshí'èr rì",
+       "",
+       [
+        [
+         "十",
+         "st"
+        ],
+        [
+         "月",
+         "codinh"
+        ],
+        [
+         "二十二",
+         "st"
+        ],
+        [
+         "日",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "今天是二〇二五年五月一号，星期四。",
+       "Jīntiān shì èrlíng'èrwǔ nián wǔ yuè yī hào, xīngqīsì.",
+       "",
+       [
+        [
+         "今天是",
+         null
+        ],
+        [
+         "二〇二五",
+         "st"
+        ],
+        [
+         "年",
+         "codinh"
+        ],
+        [
+         "五",
+         "st"
+        ],
+        [
+         "月",
+         "codinh"
+        ],
+        [
+         "一",
+         "st"
+        ],
+        [
+         "号",
+         "codinh"
+        ],
+        [
+         "，",
+         null
+        ],
+        [
+         "星期四",
+         "codinh"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Hỏi ngày: 几月几号？ · Hỏi thứ: 星期几？",
+     "cum": [
+      [
+       "几月几号",
+       "jǐ yuè jǐ hào",
+       "",
+       [
+        [
+         "几月几号",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "几号",
+       "jǐ hào",
+       "",
+       [
+        [
+         "几号",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "星期几",
+       "xīngqī jǐ",
+       "",
+       [
+        [
+         "星期几",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "三月二号星期几？",
+       "Sān yuè èr hào xīngqī jǐ?",
+       "",
+       [
+        [
+         "三",
+         "st"
+        ],
+        [
+         "月",
+         "codinh"
+        ],
+        [
+         "二",
+         "st"
+        ],
+        [
+         "号",
+         "codinh"
+        ],
+        [
+         "星期几",
+         "codinh"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Thứ trong tuần: 星期 + 一 … 六; chủ nhật: 星期日 / 星期天",
+     "cum": [
+      [
+       "星期一",
+       "xīngqīyī",
+       "thứ hai",
+       [
+        [
+         "星期",
+         "codinh"
+        ],
+        [
+         "一",
+         "st"
+        ]
+       ]
+      ],
+      [
+       "星期三",
+       "xīngqīsān",
+       "thứ tư",
+       [
+        [
+         "星期",
+         "codinh"
+        ],
+        [
+         "三",
+         "st"
+        ]
+       ]
+      ],
+      [
+       "星期六",
+       "xīngqīliù",
+       "thứ bảy",
+       [
+        [
+         "星期",
+         "codinh"
+        ],
+        [
+         "六",
+         "st"
+        ]
+       ]
+      ],
+      [
+       "星期天",
+       "xīngqītiān",
+       "",
+       [
+        [
+         "星期天",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "星期一我很忙。",
+       "Xīngqīyī wǒ hěn máng.",
+       "Thứ hai tôi rất bận.",
+       [
+        [
+         "星期",
+         "codinh"
+        ],
+        [
+         "一",
+         "st"
+        ],
+        [
+         "我很忙。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Thứ tự **ngược với tiếng Việt**: nói **九月八号**, không nói 八号九月.",
+    "**日** dùng trong văn viết, **号** dùng trong khẩu ngữ: 五月一日 / 五月一号.",
+    "Năm đọc **từng chữ số**: 2025 = **二〇二五年**.",
+    "星期 + số: **星期一 = thứ hai** (lệch một số so với tiếng Việt). Chủ nhật là **星期日 / 星期天**, không nói 星期七."
+   ]
+  },
+  {
+   "id": "vnDanhTu",
+   "ten": "Câu vị ngữ danh từ: CN + DT (ngày, thứ, tuổi)",
+   "congThuc": [
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "DT (ngày tháng, thứ, tuổi)",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "不是",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "Vị ngữ là **danh từ, cụm danh từ** chỉ **ngày tháng, thứ, tuổi** thì **không cần 是**: 今天星期日。 Câu **phủ định phải dùng 不是**.",
+   "y": [
+    {
+     "noiDung": "Khẳng định: không cần 是",
+     "viDu": [
+      [
+       "明天星期三。",
+       "Míngtiān xīngqīsān.",
+       "Ngày mai thứ tư.",
+       [
+        [
+         "明天",
+         "dt"
+        ],
+        [
+         "星期三",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Phủ định: CN + 不是 + DT",
+     "viDu": [
+      [
+       "今天不是星期日。",
+       "Jīntiān bú shì xīngqīrì.",
+       "",
+       [
+        [
+         "今天",
+         "dt"
+        ],
+        [
+         "不是",
+         "codinh"
+        ],
+        [
+         "星期日",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Phủ định **phải có 是**: nói 今天不是星期日, không nói 今天不星期日.",
+    "Câu khẳng định thêm 是 cũng được: 今天是九月八号。",
+    "Nói tuổi cũng là câu vị ngữ danh từ: 他今年五岁。"
+   ]
+  },
+  {
+   "id": "trangNgu",
+   "ten": "Vị trí từ chỉ thời gian: thời gian + ĐT",
+   "congThuc": [
+    [
+     [
+      "Thời gian",
+      "dt"
+     ],
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ]
+    ],
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "Thời gian",
+      "dt"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ]
+    ]
+   ],
+   "giaiThich": "Từ chỉ **thời điểm** (今天, 明天, 星期天, 三月…) đứng **trước hoặc sau chủ ngữ**, nhưng **luôn đứng trước động từ**. Tiếng Việt hay để thời gian ở cuối câu, tiếng Trung thì không.",
+   "y": [
+    {
+     "noiDung": "Thời gian đứng trước chủ ngữ",
+     "viDu": [
+      [
+       "今天我休息。",
+       "Jīntiān wǒ xiūxi.",
+       "",
+       [
+        [
+         "今天",
+         "dt"
+        ],
+        [
+         "我",
+         "dt"
+        ],
+        [
+         "休息",
+         "dgt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Thời gian đứng sau chủ ngữ, trước động từ",
+     "viDu": [
+      [
+       "我们星期天做饺子。",
+       "Wǒmen xīngqītiān zuò jiǎozi.",
+       "",
+       [
+        [
+         "我们",
+         "dt"
+        ],
+        [
+         "星期天",
+         "dt"
+        ],
+        [
+         "做",
+         "dgt"
+        ],
+        [
+         "饺子。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**Không đặt thời gian ở cuối câu** như tiếng Việt: nói 我今天休息, không nói 我休息今天.",
+    "Khoảng thời gian (两天, 三个月) thì đứng **sau động từ**: 我们休息两天。"
+   ]
+  },
+  {
+   "id": "hui",
+   "ten": "会 + ĐT · 不会 · 会不会",
+   "congThuc": [
+    [
+     [
+      "会",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ]
+    ],
+    [
+     [
+      "不会",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ]
+    ],
+    [
+     [
+      "会不会",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "会 là **động từ năng nguyện**, đặt **trước động từ**, nghĩa là **\"biết (làm gì)\"**, chỉ khả năng có được **nhờ học**. Phủ định **不会**; hỏi **会…吗？** hoặc **会不会…？**",
+   "y": [
+    {
+     "noiDung": "会 + ĐT: biết làm gì",
+     "cum": [
+      [
+       "会说汉语",
+       "huì shuō Hànyǔ",
+       "",
+       [
+        [
+         "会",
+         "codinh"
+        ],
+        [
+         "说汉语",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "会做饭",
+       "huì zuò fàn",
+       "",
+       [
+        [
+         "会",
+         "codinh"
+        ],
+        [
+         "做饭",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "会做饺子",
+       "huì zuò jiǎozi",
+       "",
+       [
+        [
+         "会",
+         "codinh"
+        ],
+        [
+         "做饺子",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我会做面条儿。",
+       "Wǒ huì zuò miàntiáor.",
+       "",
+       [
+        [
+         "我",
+         null
+        ],
+        [
+         "会",
+         "codinh"
+        ],
+        [
+         "做面条儿",
+         "dgt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ],
+       "我会做面条。"
+      ]
+     ]
+    },
+    {
+     "noiDung": "不会 + ĐT: không biết làm gì",
+     "cum": [
+      [
+       "不会做菜",
+       "bú huì zuò cài",
+       "",
+       [
+        [
+         "不会",
+         "codinh"
+        ],
+        [
+         "做菜",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "不会说法语",
+       "bú huì shuō Fǎyǔ",
+       "không biết nói tiếng Pháp",
+       [
+        [
+         "不会",
+         "codinh"
+        ],
+        [
+         "说法语",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我不会做菜。",
+       "Wǒ bú huì zuò cài.",
+       "",
+       [
+        [
+         "我",
+         null
+        ],
+        [
+         "不会",
+         "codinh"
+        ],
+        [
+         "做菜",
+         "dgt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Hỏi: 会…吗？ / 会不会…？",
+     "cum": [
+      [
+       "会不会做饭",
+       "huì bu huì zuò fàn",
+       "",
+       [
+        [
+         "会不会",
+         "codinh"
+        ],
+        [
+         "做饭",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你会不会说汉语？",
+       "Nǐ huì bu huì shuō Hànyǔ?",
+       "",
+       [
+        [
+         "你",
+         null
+        ],
+        [
+         "会不会",
+         "codinh"
+        ],
+        [
+         "说汉语",
+         "dgt"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Trả lời ngắn: **会。/ 不会。**",
+    "Phủ định dùng **不会**, không nói 没会.",
+    "不会 đọc **bú huì**; trong 会不会, 不 đọc nhẹ: **huì bu huì**.",
+    "Câu đã dùng **会不会** thì **không thêm 吗**."
+   ]
+  },
+  {
+   "id": "yixie",
+   "ten": "一些 / 这些 / 那些 + DT",
+   "congThuc": [
+    [
+     [
+      "一些",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "这些",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "那些",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "**一些** = \"một vài, một ít\", chỉ số lượng **không xác định**. **这些 / 那些** = \"những … này / những … kia\", chỉ **nhiều** người, vật. Sau 些 **không cần lượng từ**.",
+   "y": [
+    {
+     "noiDung": "一些 + DT: một vài …",
+     "cum": [
+      [
+       "一些菜",
+       "yìxiē cài",
+       "",
+       [
+        [
+         "一些",
+         "codinh"
+        ],
+        [
+         "菜",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "一些饺子",
+       "yìxiē jiǎozi",
+       "",
+       [
+        [
+         "一些",
+         "codinh"
+        ],
+        [
+         "饺子",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "一些朋友",
+       "yìxiē péngyou",
+       "",
+       [
+        [
+         "一些",
+         "codinh"
+        ],
+        [
+         "朋友",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我们会做一些越南菜。",
+       "Wǒmen huì zuò yìxiē Yuènán cài.",
+       "",
+       [
+        [
+         "我们会做",
+         null
+        ],
+        [
+         "一些",
+         "codinh"
+        ],
+        [
+         "越南菜",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "这些 / 那些 + DT: những … này / những … kia",
+     "cum": [
+      [
+       "这些人",
+       "zhèxiē rén",
+       "",
+       [
+        [
+         "这些",
+         "codinh"
+        ],
+        [
+         "人",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "那些菜",
+       "nàxiē cài",
+       "",
+       [
+        [
+         "那些",
+         "codinh"
+        ],
+        [
+         "菜",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "这些面包",
+       "zhèxiē miànbāo",
+       "",
+       [
+        [
+         "这些",
+         "codinh"
+        ],
+        [
+         "面包",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "那些同学是我的朋友。",
+       "Nàxiē tóngxué shì wǒ de péngyou.",
+       "",
+       [
+        [
+         "那些",
+         "codinh"
+        ],
+        [
+         "同学",
+         "dt"
+        ],
+        [
+         "是我的朋友。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Sau 一些 / 这些 / 那些 **không thêm lượng từ**: nói **这些人**, không nói 这些个人.",
+    "这些 / 那些 còn **đứng một mình làm chủ ngữ**: 那些是我的同学。"
+   ]
+  },
+  {
+   "id": "zhen",
+   "ten": "真 + TT / ĐT tâm lý",
+   "congThuc": [
+    [
+     [
+      "真",
+      "codinh"
+     ],
+     [
+      "TT",
+      "tt"
+     ],
+     [
+      "！",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "真",
+      "codinh"
+     ],
+     [
+      "ĐT tâm lý",
+      "dgt"
+     ]
+    ]
+   ],
+   "giaiThich": "真 là **phó từ**, đặt **trước tính từ hoặc động từ tâm lý**, nghĩa là **\"thật, thật là\"**, dùng để **cảm thán**, cuối câu thường có **！**.",
+   "y": [
+    {
+     "noiDung": "真 + TT: … thật!",
+     "cum": [
+      [
+       "真新",
+       "zhēn xīn",
+       "",
+       [
+        [
+         "真",
+         "codinh"
+        ],
+        [
+         "新",
+         "tt"
+        ]
+       ]
+      ],
+      [
+       "真好看",
+       "zhēn hǎokàn",
+       "",
+       [
+        [
+         "真",
+         "codinh"
+        ],
+        [
+         "好看",
+         "tt"
+        ]
+       ]
+      ],
+      [
+       "真高兴",
+       "zhēn gāoxìng",
+       "",
+       [
+        [
+         "真",
+         "codinh"
+        ],
+        [
+         "高兴",
+         "tt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你的新朋友真好看！",
+       "Nǐ de xīn péngyou zhēn hǎokàn!",
+       "",
+       [
+        [
+         "你的新朋友",
+         null
+        ],
+        [
+         "真",
+         "codinh"
+        ],
+        [
+         "好看",
+         "tt"
+        ],
+        [
+         "！",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "真 + ĐT tâm lý: thật sự …",
+     "cum": [
+      [
+       "真喜欢",
+       "zhēn xǐhuan",
+       "",
+       [
+        [
+         "真",
+         "codinh"
+        ],
+        [
+         "喜欢",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "真想",
+       "zhēn xiǎng",
+       "",
+       [
+        [
+         "真",
+         "codinh"
+        ],
+        [
+         "想",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我真想去中国！",
+       "Wǒ zhēn xiǎng qù Zhōngguó!",
+       "",
+       [
+        [
+         "我",
+         null
+        ],
+        [
+         "真",
+         "codinh"
+        ],
+        [
+         "想",
+         "dgt"
+        ],
+        [
+         "去中国",
+         null
+        ],
+        [
+         "！",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "真 + TT **không thêm 了** như khung 太……了: nói 真好看！, không nói 真好看了.",
+    "真 dùng để **cảm thán**, không dùng trong câu hỏi: không nói 你的电脑真新吗？ (hỏi thì dùng 很: 你的电脑很新吗？)"
+   ]
+  },
+  {
+   "id": "haoV",
+   "ten": "好 + ĐT: 好看 · 好吃 · 好听 · 好喝",
+   "congThuc": [
+    [
+     [
+      "好",
+      "codinh"
+     ],
+     [
+      "ĐT (看 / 吃 / 听 / 喝)",
+      "dgt"
+     ]
+    ]
+   ],
+   "giaiThich": "**好 + động từ chỉ giác quan** tạo thành **tính từ**: **好看** = đẹp, dễ nhìn; **好吃** = ngon (đồ ăn); **好听** = hay, dễ nghe; **好喝** = ngon (đồ uống).",
+   "y": [
+    {
+     "noiDung": "好 + ĐT → tính từ",
+     "cum": [
+      [
+       "很好看",
+       "hěn hǎokàn",
+       "",
+       [
+        [
+         "很",
+         null
+        ],
+        [
+         "好",
+         "codinh"
+        ],
+        [
+         "看",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "真好吃",
+       "zhēn hǎochī",
+       "",
+       [
+        [
+         "真",
+         null
+        ],
+        [
+         "好",
+         "codinh"
+        ],
+        [
+         "吃",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "不好听",
+       "bù hǎotīng",
+       "",
+       [
+        [
+         "不",
+         null
+        ],
+        [
+         "好",
+         "codinh"
+        ],
+        [
+         "听",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "很好喝",
+       "hěn hǎohē",
+       "rất ngon (đồ uống)",
+       [
+        [
+         "很",
+         null
+        ],
+        [
+         "好",
+         "codinh"
+        ],
+        [
+         "喝",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "中国菜很好吃。",
+       "Zhōngguó cài hěn hǎochī.",
+       "",
+       [
+        [
+         "中国菜很",
+         null
+        ],
+        [
+         "好",
+         "codinh"
+        ],
+        [
+         "吃",
+         "dgt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ],
+      [
+       "这个很好喝。",
+       "Zhè ge hěn hǎohē.",
+       "Cái này rất ngon.",
+       [
+        [
+         "这个很",
+         null
+        ],
+        [
+         "好",
+         "codinh"
+        ],
+        [
+         "喝",
+         "dgt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**好吃** dùng cho **đồ ăn**, **好喝** dùng cho **đồ uống**: nói 菜很好吃, không nói 菜很好喝.",
+    "**好看** dùng cho người, vật đẹp; phim, sách **hay** cũng dùng 好看."
+   ]
+  }
+ ],
+ "hoiDap": [
+  {
+   "hoi": [
+    "今天几号？",
+    "Jīntiān jǐ hào?",
+    "Hôm nay ngày mấy?"
+   ],
+   "dap": [
+    "今天十月八号。",
+    "Jīntiān shí yuè bā hào.",
+    "Hôm nay ngày 8 tháng 10."
+   ],
+   "nhieu": [
+    [
+     "今天星期三。",
+     "Jīntiān xīngqīsān.",
+     ""
+    ],
+    [
+     "我今天休息。",
+     "Wǒ jīntiān xiūxi.",
+     ""
+    ],
+    [
+     "今天很忙。",
+     "Jīntiān hěn máng.",
+     ""
+    ]
+   ],
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "今天星期几？",
+    "Jīntiān xīngqī jǐ?",
+    "Hôm nay thứ mấy?"
+   ],
+   "dap": [
+    "今天星期五。",
+    "Jīntiān xīngqīwǔ.",
+    "Hôm nay thứ sáu."
+   ],
+   "nhieu": [
+    [
+     "今天九月五号。",
+     "Jīntiān jiǔ yuè wǔ hào.",
+     ""
+    ],
+    [
+     "我很喜欢星期五。",
+     "Wǒ hěn xǐhuan xīngqīwǔ.",
+     ""
+    ],
+    [
+     "今天不忙。",
+     "Jīntiān bù máng.",
+     ""
+    ]
+   ],
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "你的生日是几月几号？",
+    "Nǐ de shēngrì shì jǐ yuè jǐ hào?",
+    "Sinh nhật bạn là ngày mấy tháng mấy?"
+   ],
+   "dap": [
+    "我的生日是三月二十号。",
+    "Wǒ de shēngrì shì sān yuè èrshí hào.",
+    "Sinh nhật mình là ngày 20 tháng 3."
+   ],
+   "nhieu": [
+    [
+     "我今年二十岁。",
+     "Wǒ jīnnián èrshí suì.",
+     ""
+    ],
+    [
+     "今天是星期三。",
+     "Jīntiān shì xīngqīsān.",
+     ""
+    ],
+    [
+     "我有三个朋友。",
+     "Wǒ yǒu sān ge péngyou.",
+     ""
+    ]
+   ],
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "你星期天休息吗？",
+    "Nǐ xīngqītiān xiūxi ma?",
+    "Chủ nhật bạn có nghỉ không?"
+   ],
+   "dap": [
+    "休息，星期天我不上班。",
+    "Xiūxi, xīngqītiān wǒ bú shàngbān.",
+    "Nghỉ, chủ nhật mình không đi làm."
+   ],
+   "nhieu": [
+    [
+     "我会做饭。",
+     "Wǒ huì zuò fàn.",
+     ""
+    ],
+    [
+     "今天星期天。",
+     "Jīntiān xīngqītiān.",
+     ""
+    ],
+    [
+     "我有一台电脑。",
+     "Wǒ yǒu yì tái diànnǎo.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你们今天上班吗？",
+    "Nǐmen jīntiān shàngbān ma?",
+    "Hôm nay các bạn có đi làm không?"
+   ],
+   "dap": [
+    "不上班，今天星期日。",
+    "Bú shàngbān, jīntiān xīngqīrì.",
+    "Không đi làm, hôm nay chủ nhật."
+   ],
+   "nhieu": [
+    [
+     "我们是同事。",
+     "Wǒmen shì tóngshì.",
+     ""
+    ],
+    [
+     "我们是中国人。",
+     "Wǒmen shì Zhōngguó rén.",
+     ""
+    ],
+    [
+     "我们会做饭。",
+     "Wǒmen huì zuò fàn.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你会做饭吗？",
+    "Nǐ huì zuò fàn ma?",
+    "Bạn biết nấu cơm không?"
+   ],
+   "dap": [
+    "我会做，我会做面条儿。",
+    "Wǒ huì zuò, wǒ huì zuò miàntiáor.",
+    "Mình biết, mình biết làm mì."
+   ],
+   "nhieu": [
+    [
+     "我很喜欢吃饭。",
+     "Wǒ hěn xǐhuan chī fàn.",
+     ""
+    ],
+    [
+     "我不想吃饭。",
+     "Wǒ bù xiǎng chī fàn.",
+     ""
+    ],
+    [
+     "我是中国人。",
+     "Wǒ shì Zhōngguó rén.",
+     ""
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你会做什么菜？",
+    "Nǐ huì zuò shénme cài?",
+    "Bạn biết nấu món gì?"
+   ],
+   "dap": [
+    "我会做一些越南菜。",
+    "Wǒ huì zuò yìxiē Yuènán cài.",
+    "Mình biết nấu vài món Việt Nam."
+   ],
+   "nhieu": [
+    [
+     "这些菜很好吃。",
+     "Zhèxiē cài hěn hǎochī.",
+     ""
+    ],
+    [
+     "我会说汉语。",
+     "Wǒ huì shuō Hànyǔ.",
+     ""
+    ],
+    [
+     "我有很多朋友。",
+     "Wǒ yǒu hěn duō péngyou.",
+     ""
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你会说法语吗？",
+    "Nǐ huì shuō Fǎyǔ ma?",
+    "Bạn biết nói tiếng Pháp không?"
+   ],
+   "dap": [
+    "不会，我会说英语。",
+    "Bú huì, wǒ huì shuō Yīngyǔ.",
+    "Không biết, mình biết nói tiếng Anh."
+   ],
+   "nhieu": [
+    [
+     "我是法国人。",
+     "Wǒ shì Fǎguó rén.",
+     ""
+    ],
+    [
+     "我想去法国。",
+     "Wǒ xiǎng qù Fǎguó.",
+     ""
+    ],
+    [
+     "我有法国朋友。",
+     "Wǒ yǒu Fǎguó péngyou.",
+     ""
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "这是谁的电脑？",
+    "Zhè shì shéi de diànnǎo?",
+    "Đây là máy tính của ai?"
+   ],
+   "dap": [
+    "这是我的新电脑。",
+    "Zhè shì wǒ de xīn diànnǎo.",
+    "Đây là máy tính mới của mình."
+   ],
+   "nhieu": [
+    [
+     "这台电脑很好看。",
+     "Zhè tái diànnǎo hěn hǎokàn.",
+     ""
+    ],
+    [
+     "我有两台电脑。",
+     "Wǒ yǒu liǎng tái diànnǎo.",
+     ""
+    ],
+    [
+     "我喜欢电脑。",
+     "Wǒ xǐhuan diànnǎo.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你喜欢吃什么？",
+    "Nǐ xǐhuan chī shénme?",
+    "Bạn thích ăn gì?"
+   ],
+   "dap": [
+    "我喜欢吃饺子。",
+    "Wǒ xǐhuan chī jiǎozi.",
+    "Mình thích ăn sủi cảo."
+   ],
+   "nhieu": [
+    [
+     "我会做饺子。",
+     "Wǒ huì zuò jiǎozi.",
+     ""
+    ],
+    [
+     "饺子很好吃。",
+     "Jiǎozi hěn hǎochī.",
+     ""
+    ],
+    [
+     "我妈妈会做饭。",
+     "Wǒ māma huì zuò fàn.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你的新电脑好看吗？",
+    "Nǐ de xīn diànnǎo hǎokàn ma?",
+    "Máy tính mới của bạn có đẹp không?"
+   ],
+   "dap": [
+    "很好看，我很喜欢它。",
+    "Hěn hǎokàn, wǒ hěn xǐhuan tā.",
+    "Rất đẹp, mình rất thích nó."
+   ],
+   "nhieu": [
+    [
+     "我有电脑。",
+     "Wǒ yǒu diànnǎo.",
+     ""
+    ],
+    [
+     "这是我的电脑。",
+     "Zhè shì wǒ de diànnǎo.",
+     ""
+    ],
+    [
+     "我会说汉语。",
+     "Wǒ huì shuō Hànyǔ.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "这些饺子好吃吗？",
+    "Zhèxiē jiǎozi hǎochī ma?",
+    "Những cái sủi cảo này có ngon không?"
+   ],
+   "dap": [
+    "真好吃！",
+    "Zhēn hǎochī!",
+    "Ngon thật!"
+   ],
+   "nhieu": [
+    [
+     "这些是饺子。",
+     "Zhèxiē shì jiǎozi.",
+     ""
+    ],
+    [
+     "我会做饺子。",
+     "Wǒ huì zuò jiǎozi.",
+     ""
+    ],
+    [
+     "我想吃面条儿。",
+     "Wǒ xiǎng chī miàntiáor.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "那些人是谁？",
+    "Nàxiē rén shì shéi?",
+    "Những người kia là ai?"
+   ],
+   "dap": [
+    "那些人是我的同事。",
+    "Nàxiē rén shì wǒ de tóngshì.",
+    "Những người kia là đồng nghiệp của mình."
+   ],
+   "nhieu": [
+    [
+     "他们很忙。",
+     "Tāmen hěn máng.",
+     ""
+    ],
+    [
+     "那些菜很好吃。",
+     "Nàxiē cài hěn hǎochī.",
+     ""
+    ],
+    [
+     "我有很多同事。",
+     "Wǒ yǒu hěn duō tóngshì.",
+     ""
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你的小猫几岁了？",
+    "Nǐ de xiǎo māo jǐ suì le?",
+    "Con mèo nhỏ của bạn mấy tuổi rồi?"
+   ],
+   "dap": [
+    "它两岁了。",
+    "Tā liǎng suì le.",
+    "Nó hai tuổi rồi."
+   ],
+   "nhieu": [
+    [
+     "它很好看。",
+     "Tā hěn hǎokàn.",
+     ""
+    ],
+    [
+     "它是我的猫。",
+     "Tā shì wǒ de māo.",
+     ""
+    ],
+    [
+     "我有一只猫。",
+     "Wǒ yǒu yì zhī māo.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "刘明今天休息吗？",
+    "Liú Míng jīntiān xiūxi ma?",
+    "Hôm nay Lưu Minh có nghỉ không?"
+   ],
+   "dap": [
+    "休息，今天星期日。",
+    "Xiūxi, jīntiān xīngqīrì.",
+    "Có nghỉ, hôm nay chủ nhật."
+   ],
+   "nhieu": [
+    [
+     "他是刘明。",
+     "Tā shì Liú Míng.",
+     ""
+    ],
+    [
+     "他会做饭。",
+     "Tā huì zuò fàn.",
+     ""
+    ],
+    [
+     "他是王一雪的同事。",
+     "Tā shì Wáng Yīxuě de tóngshì.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "杨同乐会做什么？",
+    "Yáng Tónglè huì zuò shénme?",
+    "Dương Đồng Lạc biết làm gì?"
+   ],
+   "dap": [
+    "他会做面条儿、饺子，也会做一些菜。",
+    "Tā huì zuò miàntiáor, jiǎozi, yě huì zuò yìxiē cài.",
+    "Anh ấy biết làm mì, sủi cảo, cũng biết nấu vài món."
+   ],
+   "nhieu": [
+    [
+     "他星期天也做饭。",
+     "Tā xīngqītiān yě zuò fàn.",
+     ""
+    ],
+    [
+     "他喜欢吃饺子。",
+     "Tā xǐhuan chī jiǎozi.",
+     ""
+    ],
+    [
+     "他是王一雪的同事。",
+     "Tā shì Wáng Yīxuě de tóngshì.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "杨同乐星期天做饭吗？",
+    "Yáng Tónglè xīngqītiān zuò fàn ma?",
+    "Chủ nhật Dương Đồng Lạc có nấu cơm không?"
+   ],
+   "dap": [
+    "做，星期天他也做饭。",
+    "Zuò, xīngqītiān tā yě zuò fàn.",
+    "Có, chủ nhật anh ấy cũng nấu cơm."
+   ],
+   "nhieu": [
+    [
+     "他是杨同乐。",
+     "Tā shì Yáng Tónglè.",
+     ""
+    ],
+    [
+     "今天星期天。",
+     "Jīntiān xīngqītiān.",
+     ""
+    ],
+    [
+     "他有新电脑。",
+     "Tā yǒu xīn diànnǎo.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "他们下班吗？",
+    "Tāmen xiàbān ma?",
+    "Họ tan làm chưa?"
+   ],
+   "dap": [
+    "他们下班。",
+    "Tāmen xiàbān.",
+    "Họ tan làm."
+   ],
+   "nhieu": [
+    [
+     "他们是同事。",
+     "Tāmen shì tóngshì.",
+     ""
+    ],
+    [
+     "他们有电脑。",
+     "Tāmen yǒu diànnǎo.",
+     ""
+    ],
+    [
+     "他们是中国人。",
+     "Tāmen shì Zhōngguó rén.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "这是谁的新电脑？",
+    "Zhè shì shéi de xīn diànnǎo?",
+    "Đây là máy tính mới của ai?"
+   ],
+   "dap": [
+    "这是同乐的新电脑。",
+    "Zhè shì Tónglè de xīn diànnǎo.",
+    "Đây là máy tính mới của Đồng Lạc."
+   ],
+   "nhieu": [
+    [
+     "这是电脑。",
+     "Zhè shì diànnǎo.",
+     ""
+    ],
+    [
+     "电脑真好看！",
+     "Diànnǎo zhēn hǎokàn!",
+     ""
+    ],
+    [
+     "同乐很喜欢电脑。",
+     "Tónglè hěn xǐhuan diànnǎo.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "同乐喜欢他的电脑吗？",
+    "Tónglè xǐhuan tā de diànnǎo ma?",
+    "Đồng Lạc có thích máy tính của mình không?"
+   ],
+   "dap": [
+    "他很喜欢。",
+    "Tā hěn xǐhuan.",
+    "Anh ấy rất thích."
+   ],
+   "nhieu": [
+    [
+     "他有电脑。",
+     "Tā yǒu diànnǎo.",
+     ""
+    ],
+    [
+     "这是他的电脑。",
+     "Zhè shì tā de diànnǎo.",
+     ""
+    ],
+    [
+     "他会说汉语。",
+     "Tā huì shuō Hànyǔ.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "3"
+  }
+ ],
+ "cauLuyen": [
+  {
+   "han": "今天十月二十二号，星期三。",
+   "py": "Jīntiān shí yuè èrshí'èr hào, xīngqīsān.",
+   "viet": "Hôm nay thứ tư, ngày 22 tháng 10.",
+   "tu": [
+    "今天",
+    "号",
+    "月",
+    "星期"
+   ],
+   "np": "ngayThang"
+  },
+  {
+   "han": "明天星期几？",
+   "py": "Míngtiān xīngqī jǐ?",
+   "viet": "Ngày mai thứ mấy?",
+   "tu": [
+    "星期",
+    "明天"
+   ],
+   "np": "ngayThang"
+  },
+  {
+   "han": "昨天是八月八号。",
+   "py": "Zuótiān shì bā yuè bā hào.",
+   "viet": "Hôm qua là ngày 8 tháng 8.",
+   "tu": [
+    "号",
+    "月",
+    "昨天"
+   ],
+   "np": "ngayThang"
+  },
+  {
+   "han": "我的生日是五月二十号。",
+   "py": "Wǒ de shēngrì shì wǔ yuè èrshí hào.",
+   "viet": "Sinh nhật của tôi là ngày 20 tháng 5.",
+   "tu": [
+    "号",
+    "月",
+    "生日"
+   ],
+   "np": "ngayThang"
+  },
+  {
+   "han": "你的生日是几月几号？",
+   "py": "Nǐ de shēngrì shì jǐ yuè jǐ hào?",
+   "viet": "Sinh nhật của bạn là ngày mấy tháng mấy?",
+   "tu": [
+    "号",
+    "月",
+    "生日"
+   ],
+   "np": "ngayThang"
+  },
+  {
+   "han": "昨天星期六，今天星期日。",
+   "py": "Zuótiān xīngqīliù, jīntiān xīngqīrì.",
+   "viet": "Hôm qua thứ bảy, hôm nay chủ nhật.",
+   "tu": [
+    "今天",
+    "星期",
+    "星期日",
+    "天",
+    "昨天"
+   ],
+   "np": "vnDanhTu"
+  },
+  {
+   "han": "明天不是星期天，是星期一。",
+   "py": "Míngtiān bú shì xīngqītiān, shì xīngqīyī.",
+   "viet": "Ngày mai không phải chủ nhật, là thứ hai.",
+   "tu": [
+    "星期",
+    "星期天",
+    "天",
+    "明天"
+   ],
+   "np": "vnDanhTu"
+  },
+  {
+   "han": "我女儿今年八岁。",
+   "py": "Wǒ nǚ'ér jīnnián bā suì.",
+   "viet": "Con gái tôi năm nay tám tuổi.",
+   "tu": [],
+   "np": "vnDanhTu"
+  },
+  {
+   "han": "我的猫很小，它两岁。",
+   "py": "Wǒ de māo hěn xiǎo, tā liǎng suì.",
+   "viet": "Con mèo của tôi rất nhỏ, nó hai tuổi.",
+   "tu": [
+    "它"
+   ],
+   "np": "vnDanhTu"
+  },
+  {
+   "han": "星期天我们休息。",
+   "py": "Xīngqītiān wǒmen xiūxi.",
+   "viet": "Chủ nhật chúng tôi nghỉ.",
+   "tu": [
+    "星期天",
+    "休息"
+   ],
+   "np": "trangNgu"
+  },
+  {
+   "han": "我今天不上班。",
+   "py": "Wǒ jīntiān bú shàngbān.",
+   "viet": "Hôm nay tôi không đi làm.",
+   "tu": [
+    "今天",
+    "上班"
+   ],
+   "np": "trangNgu"
+  },
+  {
+   "han": "爸爸星期六也上班。",
+   "py": "Bàba xīngqīliù yě shàngbān.",
+   "viet": "Bố thứ bảy cũng đi làm.",
+   "tu": [
+    "星期",
+    "上班"
+   ],
+   "np": "trangNgu"
+  },
+  {
+   "han": "明天我想休息。",
+   "py": "Míngtiān wǒ xiǎng xiūxi.",
+   "viet": "Ngày mai tôi muốn nghỉ.",
+   "tu": [
+    "休息",
+    "明天"
+   ],
+   "np": "trangNgu"
+  },
+  {
+   "han": "我们休息两天。",
+   "py": "Wǒmen xiūxi liǎng tiān.",
+   "viet": "Chúng tôi nghỉ hai ngày.",
+   "tu": [
+    "休息",
+    "天"
+   ],
+   "np": "trangNgu"
+  },
+  {
+   "han": "你们星期六上班吗？",
+   "py": "Nǐmen xīngqīliù shàngbān ma?",
+   "viet": "Thứ bảy các bạn có đi làm không?",
+   "tu": [
+    "星期",
+    "上班"
+   ],
+   "np": "trangNgu"
+  },
+  {
+   "han": "星期天你想做什么？",
+   "py": "Xīngqītiān nǐ xiǎng zuò shénme?",
+   "viet": "Chủ nhật bạn muốn làm gì?",
+   "tu": [
+    "星期天",
+    "做"
+   ],
+   "np": "trangNgu"
+  },
+  {
+   "han": "你会说汉语吗？",
+   "py": "Nǐ huì shuō Hànyǔ ma?",
+   "viet": "Bạn biết nói tiếng Trung không?",
+   "tu": [
+    "会"
+   ],
+   "np": "hui"
+  },
+  {
+   "han": "我妈妈会做饺子。",
+   "py": "Wǒ māma huì zuò jiǎozi.",
+   "viet": "Mẹ tôi biết làm sủi cảo.",
+   "tu": [
+    "会",
+    "做",
+    "饺子"
+   ],
+   "np": "hui"
+  },
+  {
+   "han": "我不会做饭，我姐姐会做。",
+   "py": "Wǒ bú huì zuò fàn, wǒ jiějie huì zuò.",
+   "viet": "Tôi không biết nấu cơm, chị tôi biết nấu.",
+   "tu": [
+    "会",
+    "做饭",
+    "做"
+   ],
+   "np": "hui"
+  },
+  {
+   "han": "你会不会做面条儿？",
+   "py": "Nǐ huì bu huì zuò miàntiáor?",
+   "viet": "Bạn có biết làm mì không?",
+   "tu": [
+    "会",
+    "做",
+    "面条儿"
+   ],
+   "np": "hui",
+   "doc": "你会不会做面条？"
+  },
+  {
+   "han": "他会说英语，也会说法语。",
+   "py": "Tā huì shuō Yīngyǔ, yě huì shuō Fǎyǔ.",
+   "viet": "Anh ấy biết nói tiếng Anh, cũng biết nói tiếng Pháp.",
+   "tu": [
+    "会"
+   ],
+   "np": "hui"
+  },
+  {
+   "han": "我爷爷不会说汉语。",
+   "py": "Wǒ yéye bú huì shuō Hànyǔ.",
+   "viet": "Ông nội tôi không biết nói tiếng Trung.",
+   "tu": [
+    "会"
+   ],
+   "np": "hui"
+  },
+  {
+   "han": "我想吃一些包子。",
+   "py": "Wǒ xiǎng chī yìxiē bāozi.",
+   "viet": "Tôi muốn ăn một ít bánh bao.",
+   "tu": [
+    "一些",
+    "包子"
+   ],
+   "np": "yixie"
+  },
+  {
+   "han": "这些是我的新同学。",
+   "py": "Zhèxiē shì wǒ de xīn tóngxué.",
+   "viet": "Đây là những bạn học mới của tôi.",
+   "tu": [
+    "新",
+    "这些"
+   ],
+   "np": "yixie"
+  },
+  {
+   "han": "那些学生是越南人。",
+   "py": "Nàxiē xué·shēng shì Yuènán rén.",
+   "viet": "Những học sinh kia là người Việt Nam.",
+   "tu": [
+    "那些"
+   ],
+   "np": "yixie"
+  },
+  {
+   "han": "这些饺子很好吃。",
+   "py": "Zhèxiē jiǎozi hěn hǎochī.",
+   "viet": "Những cái sủi cảo này rất ngon.",
+   "tu": [
+    "饺子",
+    "好吃",
+    "这些"
+   ],
+   "np": "yixie"
+  },
+  {
+   "han": "那些面包是你的吗？",
+   "py": "Nàxiē miànbāo shì nǐ de ma?",
+   "viet": "Những cái bánh mì kia là của bạn à?",
+   "tu": [
+    "面包",
+    "那些"
+   ],
+   "np": "yixie"
+  },
+  {
+   "han": "你的新电脑真好看！",
+   "py": "Nǐ de xīn diànnǎo zhēn hǎokàn!",
+   "viet": "Máy tính mới của bạn đẹp thật!",
+   "tu": [
+    "新",
+    "电脑",
+    "真",
+    "好看"
+   ],
+   "np": "zhen"
+  },
+  {
+   "han": "今天我真忙！",
+   "py": "Jīntiān wǒ zhēn máng!",
+   "viet": "Hôm nay tôi bận thật!",
+   "tu": [
+    "今天",
+    "真"
+   ],
+   "np": "zhen"
+  },
+  {
+   "han": "我真喜欢这个小狗。",
+   "py": "Wǒ zhēn xǐhuan zhè ge xiǎo gǒu.",
+   "viet": "Tôi thật sự thích con chó nhỏ này.",
+   "tu": [
+    "真",
+    "喜欢"
+   ],
+   "np": "zhen"
+  },
+  {
+   "han": "这个名字真好听！",
+   "py": "Zhè ge míngzi zhēn hǎotīng!",
+   "viet": "Cái tên này hay thật!",
+   "tu": [
+    "真",
+    "好听"
+   ],
+   "np": "zhen"
+  },
+  {
+   "han": "中国菜很好吃。",
+   "py": "Zhōngguó cài hěn hǎochī.",
+   "viet": "Món Trung Quốc rất ngon.",
+   "tu": [
+    "菜",
+    "好吃"
+   ],
+   "np": "haoV"
+  },
+  {
+   "han": "这个包子不好吃。",
+   "py": "Zhè ge bāozi bù hǎochī.",
+   "viet": "Cái bánh bao này không ngon.",
+   "tu": [
+    "好吃",
+    "包子"
+   ],
+   "np": "haoV"
+  },
+  {
+   "han": "汉语很好听。",
+   "py": "Hànyǔ hěn hǎotīng.",
+   "viet": "Tiếng Trung nghe rất hay.",
+   "tu": [
+    "好听"
+   ],
+   "np": "haoV"
+  },
+  {
+   "han": "她的小猫很好看。",
+   "py": "Tā de xiǎo māo hěn hǎokàn.",
+   "viet": "Con mèo nhỏ của cô ấy rất đẹp.",
+   "tu": [
+    "好看"
+   ],
+   "np": "haoV"
+  },
+  {
+   "han": "我很喜欢我的新电脑。",
+   "py": "Wǒ hěn xǐhuan wǒ de xīn diànnǎo.",
+   "viet": "Tôi rất thích máy tính mới của tôi.",
+   "tu": [
+    "新",
+    "电脑",
+    "喜欢"
+   ]
+  },
+  {
+   "han": "我有一台新电脑。",
+   "py": "Wǒ yǒu yì tái xīn diànnǎo.",
+   "viet": "Tôi có một cái máy tính mới.",
+   "tu": [
+    "新",
+    "电脑",
+    "台"
+   ]
+  },
+  {
+   "han": "这台电脑很旧，那台电脑很新。",
+   "py": "Zhè tái diànnǎo hěn jiù, nà tái diànnǎo hěn xīn.",
+   "viet": "Máy tính này rất cũ, máy tính kia rất mới.",
+   "tu": [
+    "新",
+    "电脑",
+    "旧",
+    "台"
+   ]
+  },
+  {
+   "han": "我想看你的电脑。",
+   "py": "Wǒ xiǎng kàn nǐ de diànnǎo.",
+   "viet": "Tôi muốn xem máy tính của bạn.",
+   "tu": [
+    "电脑",
+    "看"
+   ]
+  },
+  {
+   "han": "你喜欢吃面条儿吗？",
+   "py": "Nǐ xǐhuan chī miàntiáor ma?",
+   "viet": "Bạn có thích ăn mì không?",
+   "tu": [
+    "面条儿",
+    "喜欢"
+   ],
+   "doc": "你喜欢吃面条吗？"
+  },
+  {
+   "han": "我喜欢饺子，也喜欢包子。",
+   "py": "Wǒ xǐhuan jiǎozi, yě xǐhuan bāozi.",
+   "viet": "Tôi thích sủi cảo, cũng thích bánh bao.",
+   "tu": [
+    "饺子",
+    "喜欢",
+    "包子"
+   ]
+  },
+  {
+   "han": "这道菜叫什么名字？",
+   "py": "Zhè dào cài jiào shénme míngzi?",
+   "viet": "Món này tên là gì?",
+   "tu": [
+    "菜",
+    "道"
+   ]
+  },
+  {
+   "han": "明天是我的生日。",
+   "py": "Míngtiān shì wǒ de shēngrì.",
+   "viet": "Ngày mai là sinh nhật của tôi.",
+   "tu": [
+    "明天",
+    "生日"
+   ]
+  },
+  {
+   "han": "妈妈下班了。",
+   "py": "Māma xiàbān le.",
+   "viet": "Mẹ tan làm rồi.",
+   "tu": [
+    "下班"
+   ]
+  },
+  {
+   "han": "今天星期日，刘明休息。",
+   "py": "Jīntiān xīngqīrì, Liú Míng xiūxi.",
+   "viet": "Hôm nay chủ nhật, Lưu Minh nghỉ.",
+   "tu": [
+    "今天",
+    "星期日",
+    "休息"
+   ],
+   "nguon": "baiKhoa",
+   "np": "vnDanhTu"
+  },
+  {
+   "han": "杨同乐会做面条儿和饺子。",
+   "py": "Yáng Tónglè huì zuò miàntiáor hé jiǎozi.",
+   "viet": "Dương Đồng Lạc biết làm mì và sủi cảo.",
+   "tu": [
+    "会",
+    "做",
+    "面条儿",
+    "饺子"
+   ],
+   "nguon": "baiKhoa",
+   "np": "hui",
+   "doc": "杨同乐会做面条和饺子。"
+  },
+  {
+   "han": "我会做面条儿、饺子，也会做一些菜。",
+   "py": "Wǒ huì zuò miàntiáor, jiǎozi, yě huì zuò yìxiē cài.",
+   "viet": "Tôi biết làm mì, sủi cảo, cũng biết nấu vài món.",
+   "tu": [
+    "会",
+    "做",
+    "面条儿",
+    "饺子",
+    "一些",
+    "菜"
+   ],
+   "nguon": "baiKhoa",
+   "np": "yixie",
+   "doc": "我会做面条、饺子，也会做一些菜。"
+  },
+  {
+   "han": "星期天杨同乐也做饭。",
+   "py": "Xīngqītiān Yáng Tónglè yě zuò fàn.",
+   "viet": "Chủ nhật Dương Đồng Lạc cũng nấu cơm.",
+   "tu": [
+    "星期天",
+    "做饭"
+   ],
+   "nguon": "baiKhoa",
+   "np": "trangNgu"
+  },
+  {
+   "han": "是的，是我的新电脑。",
+   "py": "Shì de, shì wǒ de xīn diànnǎo.",
+   "viet": "Đúng vậy, là máy tính mới của tôi.",
+   "tu": [
+    "新",
+    "电脑"
+   ],
+   "nguon": "baiKhoa"
+  },
+  {
+   "han": "同乐的新电脑真好看！",
+   "py": "Tónglè de xīn diànnǎo zhēn hǎokàn!",
+   "viet": "Máy tính mới của Đồng Lạc đẹp thật!",
+   "tu": [
+    "新",
+    "电脑",
+    "真",
+    "好看"
+   ],
+   "nguon": "baiKhoa",
+   "np": "zhen"
+  }
+ ],
+ "hoiThoai": [
+  {
+   "ten": "Hỏi ngày sinh nhật",
+   "luot": [
+    {
+     "han": "你的生日是几月几号？",
+     "py": "Nǐ de shēngrì shì jǐ yuè jǐ hào?",
+     "viet": "Sinh nhật bạn là ngày mấy tháng mấy?"
+    },
+    {
+     "han": "我的生日是十月二十二号。你呢？",
+     "py": "Wǒ de shēngrì shì shí yuè èrshí'èr hào. Nǐ ne?",
+     "viet": "Sinh nhật mình là ngày 22 tháng 10. Còn bạn?"
+    },
+    {
+     "han": "我的生日是十二月一号。",
+     "py": "Wǒ de shēngrì shì shí'èr yuè yī hào.",
+     "viet": "Sinh nhật mình là ngày 1 tháng 12."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我今年二十岁。",
+      "py": "Wǒ jīnnián èrshí suì."
+     },
+     {
+      "han": "今天星期三。",
+      "py": "Jīntiān xīngqīsān."
+     },
+     {
+      "han": "我是越南人。",
+      "py": "Wǒ shì Yuènán rén."
+     }
+    ],
+    "2": [
+     {
+      "han": "我不会做饭。",
+      "py": "Wǒ bú huì zuò fàn."
+     },
+     {
+      "han": "我很喜欢你的电脑。",
+      "py": "Wǒ hěn xǐhuan nǐ de diànnǎo."
+     },
+     {
+      "han": "明天星期五。",
+      "py": "Míngtiān xīngqīwǔ."
+     }
+    ]
+   },
+   "chang": "1"
+  },
+  {
+   "ten": "Chủ nhật ai nấu cơm",
+   "luot": [
+    {
+     "han": "星期天你做饭吗？",
+     "py": "Xīngqītiān nǐ zuò fàn ma?",
+     "viet": "Chủ nhật bạn có nấu cơm không?"
+    },
+    {
+     "han": "做，我会做饺子。",
+     "py": "Zuò, wǒ huì zuò jiǎozi.",
+     "viet": "Có, mình biết làm sủi cảo."
+    },
+    {
+     "han": "真好！我不会做饭。",
+     "py": "Zhēn hǎo! Wǒ bú huì zuò fàn.",
+     "viet": "Hay thật! Mình không biết nấu cơm."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我是学生。",
+      "py": "Wǒ shì xué·shēng."
+     },
+     {
+      "han": "今天星期天。",
+      "py": "Jīntiān xīngqītiān."
+     },
+     {
+      "han": "我有一台新电脑。",
+      "py": "Wǒ yǒu yì tái xīn diànnǎo."
+     }
+    ],
+    "2": [
+     {
+      "han": "我会说汉语。",
+      "py": "Wǒ huì shuō Hànyǔ."
+     },
+     {
+      "han": "你是哪国人？",
+      "py": "Nǐ shì nǎ guó rén?"
+     },
+     {
+      "han": "这是我的电脑。",
+      "py": "Zhè shì wǒ de diànnǎo."
+     }
+    ]
+   },
+   "chang": "3"
+  },
+  {
+   "ten": "Máy tính của ai",
+   "luot": [
+    {
+     "han": "这是谁的电脑？",
+     "py": "Zhè shì shéi de diànnǎo?",
+     "viet": "Đây là máy tính của ai?"
+    },
+    {
+     "han": "是我姐姐的，是她的新电脑。",
+     "py": "Shì wǒ jiějie de, shì tā de xīn diànnǎo.",
+     "viet": "Của chị mình, là máy tính mới của chị ấy."
+    },
+    {
+     "han": "真好看！",
+     "py": "Zhēn hǎokàn!",
+     "viet": "Đẹp thật!"
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "这是电脑。",
+      "py": "Zhè shì diànnǎo."
+     },
+     {
+      "han": "我很忙。",
+      "py": "Wǒ hěn máng."
+     },
+     {
+      "han": "我会做饭。",
+      "py": "Wǒ huì zuò fàn."
+     }
+    ],
+    "2": [
+     {
+      "han": "我会做面条儿。",
+      "py": "Wǒ huì zuò miàntiáor."
+     },
+     {
+      "han": "今天星期几？",
+      "py": "Jīntiān xīngqī jǐ?"
+     },
+     {
+      "han": "她是中国人。",
+      "py": "Tā shì Zhōngguó rén."
+     }
+    ]
+   },
+   "chang": "3"
+  },
+  {
+   "ten": "Bài khóa · Hôm nay ngày mấy",
+   "luot": [
+    {
+     "han": "今天几号？",
+     "py": "Jīntiān jǐ hào?",
+     "viet": "Hôm nay ngày mấy?"
+    },
+    {
+     "han": "今天九月八号。",
+     "py": "Jīntiān jiǔ yuè bā hào.",
+     "viet": "Hôm nay ngày 8 tháng 9."
+    },
+    {
+     "han": "星期几？",
+     "py": "Xīngqī jǐ?",
+     "viet": "Thứ mấy?"
+    },
+    {
+     "han": "星期日。今天我休息。",
+     "py": "Xīngqīrì. Jīntiān wǒ xiūxi.",
+     "viet": "Chủ nhật. Hôm nay tôi nghỉ."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "今天星期日。",
+      "py": "Jīntiān xīngqīrì."
+     },
+     {
+      "han": "今天我休息。",
+      "py": "Jīntiān wǒ xiūxi."
+     },
+     {
+      "han": "我很好。",
+      "py": "Wǒ hěn hǎo."
+     }
+    ],
+    "3": [
+     {
+      "han": "九月八号。",
+      "py": "Jiǔ yuè bā hào."
+     },
+     {
+      "han": "我会做饭。",
+      "py": "Wǒ huì zuò fàn."
+     },
+     {
+      "han": "我今年二十岁。",
+      "py": "Wǒ jīnnián èrshí suì."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "1"
+  },
+  {
+   "ten": "Bài khóa · Đồng Lạc biết nấu ăn",
+   "luot": [
+    {
+     "han": "你会做饭吗？",
+     "py": "Nǐ huì zuò fàn ma?",
+     "viet": "Anh biết nấu cơm không?"
+    },
+    {
+     "han": "我会做。",
+     "py": "Wǒ huì zuò.",
+     "viet": "Tôi biết nấu."
+    },
+    {
+     "han": "你会做什么？",
+     "py": "Nǐ huì zuò shénme?",
+     "viet": "Anh biết làm món gì?"
+    },
+    {
+     "han": "我会做面条儿、饺子，也会做一些菜。",
+     "py": "Wǒ huì zuò miàntiáor, jiǎozi, yě huì zuò yìxiē cài.",
+     "viet": "Tôi biết làm mì, sủi cảo, cũng biết nấu vài món."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我喜欢吃饭。",
+      "py": "Wǒ xǐhuan chī fàn."
+     },
+     {
+      "han": "我是杨同乐。",
+      "py": "Wǒ shì Yáng Tónglè."
+     },
+     {
+      "han": "我不想吃。",
+      "py": "Wǒ bù xiǎng chī."
+     }
+    ],
+    "3": [
+     {
+      "han": "我会做。",
+      "py": "Wǒ huì zuò."
+     },
+     {
+      "han": "星期天我休息。",
+      "py": "Xīngqītiān wǒ xiūxi."
+     },
+     {
+      "han": "这些菜很好吃。",
+      "py": "Zhèxiē cài hěn hǎochī."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "ten": "Bài khóa · Máy tính mới",
+   "luot": [
+    {
+     "han": "这是你的新电脑吗？",
+     "py": "Zhè shì nǐ de xīn diànnǎo ma?",
+     "viet": "Đây là máy tính mới của anh à?"
+    },
+    {
+     "han": "是的，是我的新电脑。",
+     "py": "Shì de, shì wǒ de xīn diànnǎo.",
+     "viet": "Đúng vậy, là máy tính mới của tôi."
+    },
+    {
+     "han": "真好看！",
+     "py": "Zhēn hǎokàn!",
+     "viet": "Đẹp thật!"
+    },
+    {
+     "han": "我也很喜欢它。",
+     "py": "Wǒ yě hěn xǐhuan tā.",
+     "viet": "Tôi cũng rất thích nó."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我下班。",
+      "py": "Wǒ xiàbān."
+     },
+     {
+      "han": "我会做饭。",
+      "py": "Wǒ huì zuò fàn."
+     },
+     {
+      "han": "今天星期日。",
+      "py": "Jīntiān xīngqīrì."
+     }
+    ],
+    "3": [
+     {
+      "han": "我不会做饭。",
+      "py": "Wǒ bú huì zuò fàn."
+     },
+     {
+      "han": "这是电脑。",
+      "py": "Zhè shì diànnǎo."
+     },
+     {
+      "han": "今天我休息。",
+      "py": "Jīntiān wǒ xiūxi."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "3"
+  }
+ ],
+ "ctTruoc": {
+  "好": {
+   "ma": "1-0138",
+   "han": "好",
+   "bai": "Bài 1",
+   "url": "chuong-trinh-hsk/hsk1/bai-1/tu-vung.html"
+  },
+  "明": {
+   "ma": "1-0247",
+   "han": "明年",
+   "bai": "Bài 4",
+   "url": "chuong-trinh-hsk/hsk1/bai-4/tu-vung.html"
+  },
+  "这": {
+   "ma": "1-0464",
+   "han": "这",
+   "bai": "Bài 3",
+   "url": "chuong-trinh-hsk/hsk1/bai-3/tu-vung.html"
+  }
+ },
+ "nguPhapLuyen": {
+  "phienBan": "2026-10-29a",
+  "dacDiem": [
+   {
+    "ma": "nt-thutu",
+    "np": "ngayThang",
+    "ten": "Năm → tháng → ngày → thứ (ngược tiếng Việt)",
+    "nguon": "y1-L1"
+   },
+   {
+    "ma": "nt-hoi",
+    "np": "ngayThang",
+    "ten": "Hỏi ngày: 几月几号？ · hỏi thứ: 星期几？",
+    "nguon": "y2"
+   },
+   {
+    "ma": "nt-thu",
+    "np": "ngayThang",
+    "ten": "Thứ: 星期 + 一…六; chủ nhật 星期日 / 星期天, không nói 星期七",
+    "nguon": "y3-L4"
+   },
+   {
+    "ma": "nt-rihao",
+    "np": "ngayThang",
+    "ten": "日 dùng trong văn viết, 号 dùng trong khẩu ngữ",
+    "nguon": "L2"
+   },
+   {
+    "ma": "nt-nam",
+    "np": "ngayThang",
+    "ten": "Năm đọc từng chữ số: 二〇二五年",
+    "nguon": "L3"
+   },
+   {
+    "ma": "vn-kd",
+    "np": "vnDanhTu",
+    "ten": "Vị ngữ là ngày tháng, thứ: không cần 是 (có 是 cũng được)",
+    "nguon": "y1-L2"
+   },
+   {
+    "ma": "vn-pd",
+    "np": "vnDanhTu",
+    "ten": "Phủ định phải dùng 不是",
+    "nguon": "y2-L1"
+   },
+   {
+    "ma": "vn-tuoi",
+    "np": "vnDanhTu",
+    "ten": "Nói tuổi: CN + (今年) + số + 岁",
+    "nguon": "L3"
+   },
+   {
+    "ma": "tn-truoc",
+    "np": "trangNgu",
+    "ten": "Thời gian đứng trước chủ ngữ",
+    "nguon": "y1"
+   },
+   {
+    "ma": "tn-sau",
+    "np": "trangNgu",
+    "ten": "Thời gian đứng sau chủ ngữ, trước động từ",
+    "nguon": "y2"
+   },
+   {
+    "ma": "tn-cuoi",
+    "np": "trangNgu",
+    "ten": "Không đặt thời gian ở cuối câu như tiếng Việt",
+    "nguon": "L1"
+   },
+   {
+    "ma": "tn-doan",
+    "np": "trangNgu",
+    "ten": "Khoảng thời gian (两天) đứng sau động từ",
+    "nguon": "L2"
+   },
+   {
+    "ma": "hui-kd",
+    "np": "hui",
+    "ten": "会 + ĐT: biết làm gì",
+    "nguon": "y1"
+   },
+   {
+    "ma": "hui-pd",
+    "np": "hui",
+    "ten": "Phủ định 不会, không nói 没会",
+    "nguon": "y2-L2"
+   },
+   {
+    "ma": "hui-hoi",
+    "np": "hui",
+    "ten": "Hỏi 会…吗？ / 会不会…？ (không thêm 吗 sau 会不会)",
+    "nguon": "y3-L4"
+   },
+   {
+    "ma": "hui-tl",
+    "np": "hui",
+    "ten": "Trả lời ngắn: 会。/ 不会。",
+    "nguon": "L1"
+   },
+   {
+    "ma": "hui-py",
+    "np": "hui",
+    "ten": "不会 đọc bú huì; 会不会 đọc huì bu huì",
+    "nguon": "L3"
+   },
+   {
+    "ma": "yx-yixie",
+    "np": "yixie",
+    "ten": "一些 + DT: một vài …",
+    "nguon": "y1"
+   },
+   {
+    "ma": "yx-zhe",
+    "np": "yixie",
+    "ten": "这些 / 那些 + DT: những … này / kia",
+    "nguon": "y2"
+   },
+   {
+    "ma": "yx-lt",
+    "np": "yixie",
+    "ten": "Sau 些 không thêm lượng từ",
+    "nguon": "L1"
+   },
+   {
+    "ma": "yx-cn",
+    "np": "yixie",
+    "ten": "这些 / 那些 đứng một mình làm chủ ngữ",
+    "nguon": "L2"
+   },
+   {
+    "ma": "zh-tt",
+    "np": "zhen",
+    "ten": "真 + TT: … thật!",
+    "nguon": "y1"
+   },
+   {
+    "ma": "zh-dt",
+    "np": "zhen",
+    "ten": "真 + ĐT tâm lý: thật sự …",
+    "nguon": "y2"
+   },
+   {
+    "ma": "zh-le",
+    "np": "zhen",
+    "ten": "真 + TT không thêm 了 (khác 太……了)",
+    "nguon": "L1"
+   },
+   {
+    "ma": "zh-hoi",
+    "np": "zhen",
+    "ten": "真 dùng để cảm thán, không dùng trong câu hỏi",
+    "nguon": "L2"
+   },
+   {
+    "ma": "hv-tt",
+    "np": "haoV",
+    "ten": "好 + ĐT (看 / 吃 / 听 / 喝) → tính từ",
+    "nguon": "y1"
+   },
+   {
+    "ma": "hv-chi-he",
+    "np": "haoV",
+    "ten": "好吃: đồ ăn · 好喝: đồ uống",
+    "nguon": "L1"
+   },
+   {
+    "ma": "hv-kan",
+    "np": "haoV",
+    "ten": "好看: người, vật đẹp; phim, sách hay",
+    "nguon": "L2"
+   }
+  ],
+  "cau": [
+   {
+    "ma": "b5-nt-thutu-1",
+    "np": "ngayThang",
+    "dang": "chon",
+    "dd": "nt-thutu",
+    "cau": "今天是＿。",
+    "py": "Jīntiān shì jiǔ yuè bā hào.",
+    "nghia": "Hôm nay là ngày 8 tháng 9.",
+    "dap": "九月八号",
+    "nhieu": [
+     "八号九月",
+     "九号八月"
+    ],
+    "gt": "Nói **từ lớn đến nhỏ**: tháng trước, ngày sau: **九月八号**."
+   },
+   {
+    "ma": "b5-nt-thutu-2",
+    "np": "ngayThang",
+    "dang": "dungSai",
+    "dd": "nt-thutu",
+    "cau": "今天八号九月。",
+    "py": "Jīntiān bā hào jiǔ yuè.",
+    "dung": false,
+    "gt": "Nói **tháng trước, ngày sau**, ngược với tiếng Việt.",
+    "sua": "今天九月八号。",
+    "pySua": "Jīntiān jiǔ yuè bā hào.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b5-nt-thutu-3",
+    "np": "ngayThang",
+    "dang": "xep",
+    "dd": "nt-thutu",
+    "cau": "今天是二〇二五年五月一号。",
+    "py": "Jīntiān shì èrlíng'èrwǔ nián wǔ yuè yī hào.",
+    "nghia": "Hôm nay là ngày 1 tháng 5 năm 2025.",
+    "khoi": [
+     "今天是",
+     "二〇二五年",
+     "五月",
+     "一号"
+    ],
+    "npPhu": [
+     "ngayThang"
+    ]
+   },
+   {
+    "ma": "b5-nt-hoi-1",
+    "np": "ngayThang",
+    "dang": "chon",
+    "dd": "nt-hoi",
+    "cau": "今天＿？",
+    "py": "Jīntiān jǐ yuè jǐ hào?",
+    "nghia": "Hôm nay ngày mấy tháng mấy?",
+    "dap": "几月几号",
+    "nhieu": [
+     "几岁",
+     "多少"
+    ],
+    "gt": "Hỏi ngày tháng dùng **几月几号**.",
+    "sau": "今天九月八号。"
+   },
+   {
+    "ma": "b5-nt-hoi-2",
+    "np": "ngayThang",
+    "dang": "chon",
+    "dd": "nt-hoi",
+    "cau": "三月二号＿？",
+    "py": "Sān yuè èr hào xīngqī jǐ?",
+    "nghia": "Ngày 2 tháng 3 là thứ mấy?",
+    "dap": "星期几",
+    "nhieu": [
+     "几月",
+     "几岁"
+    ],
+    "gt": "Câu trả lời là thứ → hỏi **星期几**.",
+    "sau": "三月二号星期三。"
+   },
+   {
+    "ma": "b5-nt-hoi-3",
+    "np": "ngayThang",
+    "dang": "hoi",
+    "dd": "nt-hoi",
+    "dap": "今天星期日。",
+    "pyDap": "Jīntiān xīngqīrì.",
+    "hoi": "今天星期几？",
+    "pyHoi": "Jīntiān xīngqī jǐ?",
+    "nhieu": [
+     "今天几月几号？",
+     "你今年多大？"
+    ],
+    "gt": "Đáp là thứ → hỏi **星期几**."
+   },
+   {
+    "ma": "b5-nt-thu-1",
+    "np": "ngayThang",
+    "dang": "chon",
+    "dd": "nt-thu",
+    "cau": "今天星期＿。",
+    "py": "Jīntiān xīngqīyī.",
+    "nghia": "Hôm nay thứ hai.",
+    "dap": "一",
+    "nhieu": [
+     "七",
+     "零"
+    ],
+    "gt": "**星期一 = thứ hai** (lệch một số so với tiếng Việt)."
+   },
+   {
+    "ma": "b5-nt-thu-2",
+    "np": "ngayThang",
+    "dang": "dungSai",
+    "dd": "nt-thu",
+    "cau": "今天星期七。",
+    "py": "Jīntiān xīngqīqī.",
+    "dung": false,
+    "gt": "Chủ nhật là **星期日 / 星期天**, không nói 星期七.",
+    "sua": "今天星期日。",
+    "pySua": "Jīntiān xīngqīrì.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b5-nt-thu-3",
+    "np": "ngayThang",
+    "dang": "chon",
+    "dd": "nt-thu",
+    "cau": "明天星期＿，我们不上班。",
+    "py": "Míngtiān xīngqītiān, wǒmen bú shàngbān.",
+    "nghia": "Mai chủ nhật, chúng tôi không đi làm.",
+    "dap": "天",
+    "nhieu": [
+     "七",
+     "号"
+    ],
+    "gt": "Chủ nhật là **星期天 / 星期日**."
+   },
+   {
+    "ma": "b5-nt-rihao-1",
+    "np": "ngayThang",
+    "dang": "dungSai",
+    "dd": "nt-rihao",
+    "cau": "今天是五月一号。",
+    "py": "Jīntiān shì wǔ yuè yī hào.",
+    "dung": true,
+    "gt": "Khẩu ngữ dùng **号**: 五月一号."
+   },
+   {
+    "ma": "b5-nt-rihao-2",
+    "np": "ngayThang",
+    "dang": "chon",
+    "dd": "nt-rihao",
+    "cau": "我的生日是八月十八＿。",
+    "py": "Wǒ de shēngrì shì bā yuè shíbā hào.",
+    "nghia": "Sinh nhật của tôi là ngày 18 tháng 8.",
+    "dap": "号",
+    "nhieu": [
+     "月",
+     "年"
+    ],
+    "gt": "Ngày trong tháng: **号** (khẩu ngữ) hoặc 日 (văn viết)."
+   },
+   {
+    "ma": "b5-nt-nam-1",
+    "np": "ngayThang",
+    "dang": "chon",
+    "dd": "nt-nam",
+    "cau": "今年是＿年。",
+    "py": "Jīnnián shì èrlíng'èrwǔ nián.",
+    "nghia": "Năm nay là năm 2025.",
+    "dap": "二〇二五",
+    "nhieu": [
+     "两千零二十五",
+     "二千二十五"
+    ],
+    "gt": "Năm đọc **từng chữ số**: 二〇二五年."
+   },
+   {
+    "ma": "b5-nt-nam-2",
+    "np": "ngayThang",
+    "dang": "dungSai",
+    "dd": "nt-nam",
+    "cau": "今年是两千零二十五年。",
+    "py": "Jīnnián shì liǎngqiān líng èrshíwǔ nián.",
+    "dung": false,
+    "gt": "Năm đọc **từng chữ số**, không đọc như số đếm.",
+    "sua": "今年是二〇二五年。",
+    "pySua": "Jīnnián shì èrlíng'èrwǔ nián.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b5-vn-kd-1",
+    "np": "vnDanhTu",
+    "dang": "dungSai",
+    "dd": "vn-kd",
+    "cau": "今天星期六。",
+    "py": "Jīntiān xīngqīliù.",
+    "dung": true,
+    "gt": "Vị ngữ là thứ: **không cần 是**."
+   },
+   {
+    "ma": "b5-vn-kd-2",
+    "np": "vnDanhTu",
+    "dang": "dungSai",
+    "dd": "vn-kd",
+    "cau": "今天是九月八号。",
+    "py": "Jīntiān shì jiǔ yuè bā hào.",
+    "dung": true,
+    "gt": "Câu khẳng định thêm **是** cũng được."
+   },
+   {
+    "ma": "b5-vn-kd-3",
+    "np": "vnDanhTu",
+    "dang": "xep",
+    "dd": "vn-kd",
+    "cau": "今天九月八号，星期日。",
+    "py": "Jīntiān jiǔ yuè bā hào, xīngqīrì.",
+    "nghia": "Hôm nay chủ nhật, ngày 8 tháng 9.",
+    "khoi": [
+     "今天",
+     "九月",
+     "八号",
+     "星期日"
+    ],
+    "npPhu": [
+     "vnDanhTu",
+     "ngayThang"
+    ]
+   },
+   {
+    "ma": "b5-vn-pd-1",
+    "np": "vnDanhTu",
+    "dang": "chon",
+    "dd": "vn-pd",
+    "cau": "今天＿星期日，今天星期六。",
+    "py": "Jīntiān bú shì xīngqīrì, jīntiān xīngqīliù.",
+    "nghia": "Hôm nay không phải chủ nhật, hôm nay thứ bảy.",
+    "dap": "不是",
+    "nhieu": [
+     "不",
+     "没"
+    ],
+    "gt": "Phủ định câu vị ngữ danh từ **phải dùng 不是**."
+   },
+   {
+    "ma": "b5-vn-pd-2",
+    "np": "vnDanhTu",
+    "dang": "dungSai",
+    "dd": "vn-pd",
+    "cau": "明天不星期天。",
+    "py": "Míngtiān bù xīngqītiān.",
+    "dung": false,
+    "gt": "Phủ định **phải có 是**: 不是星期天.",
+    "sua": "明天不是星期天。",
+    "pySua": "Míngtiān bú shì xīngqītiān.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b5-vn-tuoi-1",
+    "np": "vnDanhTu",
+    "dang": "dungSai",
+    "dd": "vn-tuoi",
+    "cau": "他今年五岁。",
+    "py": "Tā jīnnián wǔ suì.",
+    "dung": true,
+    "gt": "Nói tuổi: CN + (今年) + số + 岁, không cần 是."
+   },
+   {
+    "ma": "b5-vn-tuoi-2",
+    "np": "vnDanhTu",
+    "dang": "dungSai",
+    "dd": "vn-tuoi",
+    "cau": "我女儿是十二岁。",
+    "py": "Wǒ nǚ'ér shì shí'èr suì.",
+    "dung": false,
+    "gt": "Nói tuổi **không cần 是**.",
+    "sua": "我女儿十二岁。",
+    "pySua": "Wǒ nǚ'ér shí'èr suì.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b5-tn-truoc-1",
+    "np": "trangNgu",
+    "dang": "xep",
+    "dd": "tn-truoc",
+    "cau": "今天我休息。",
+    "py": "Jīntiān wǒ xiūxi.",
+    "nghia": "Hôm nay tôi nghỉ.",
+    "khoi": [
+     "今天",
+     "我",
+     "休息"
+    ],
+    "khac": [
+     "我今天休息。"
+    ],
+    "npPhu": [
+     "trangNgu"
+    ]
+   },
+   {
+    "ma": "b5-tn-truoc-2",
+    "np": "trangNgu",
+    "dang": "chon",
+    "dd": "tn-truoc",
+    "cau": "＿我们不上班。",
+    "py": "Xīngqītiān wǒmen bú shàngbān.",
+    "nghia": "Chủ nhật chúng tôi không đi làm.",
+    "dap": "星期天",
+    "nhieu": [
+     "星期几",
+     "几号"
+    ],
+    "gt": "Câu kể (dấu 。) → thời điểm cụ thể **星期天** đứng đầu câu."
+   },
+   {
+    "ma": "b5-tn-sau-1",
+    "np": "trangNgu",
+    "dang": "xep",
+    "dd": "tn-sau",
+    "cau": "我们星期天做饺子。",
+    "py": "Wǒmen xīngqītiān zuò jiǎozi.",
+    "nghia": "Chủ nhật chúng tôi làm sủi cảo.",
+    "khoi": [
+     "我们",
+     "星期天",
+     "做",
+     "饺子"
+    ],
+    "khac": [
+     "星期天我们做饺子。"
+    ],
+    "npPhu": [
+     "trangNgu"
+    ]
+   },
+   {
+    "ma": "b5-tn-sau-2",
+    "np": "trangNgu",
+    "dang": "dungSai",
+    "dd": "tn-sau",
+    "cau": "杨同乐星期天也做饭。",
+    "py": "Yáng Tónglè xīngqītiān yě zuò fàn.",
+    "dung": true,
+    "gt": "Thời gian đứng **sau chủ ngữ, trước động từ**."
+   },
+   {
+    "ma": "b5-tn-cuoi-1",
+    "np": "trangNgu",
+    "dang": "dungSai",
+    "dd": "tn-cuoi",
+    "cau": "我休息今天。",
+    "py": "Wǒ xiūxi jīntiān.",
+    "dung": false,
+    "gt": "**Không đặt thời gian ở cuối câu**: 我今天休息.",
+    "sua": "我今天休息。",
+    "pySua": "Wǒ jīntiān xiūxi.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b5-tn-cuoi-2",
+    "np": "trangNgu",
+    "dang": "dungSai",
+    "dd": "tn-cuoi",
+    "cau": "我们做饺子星期天。",
+    "py": "Wǒmen zuò jiǎozi xīngqītiān.",
+    "dung": false,
+    "gt": "Thời gian phải đứng **trước động từ**.",
+    "sua": "我们星期天做饺子。",
+    "pySua": "Wǒmen xīngqītiān zuò jiǎozi.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b5-tn-doan-1",
+    "np": "trangNgu",
+    "dang": "chon",
+    "dd": "tn-doan",
+    "cau": "我们休息＿。",
+    "py": "Wǒmen xiūxi liǎng tiān.",
+    "nghia": "Chúng tôi nghỉ hai ngày.",
+    "dap": "两天",
+    "nhieu": [
+     "两号",
+     "星期二"
+    ],
+    "gt": "Khoảng thời gian (**两天**) đứng **sau động từ**."
+   },
+   {
+    "ma": "b5-tn-doan-2",
+    "np": "trangNgu",
+    "dang": "dungSai",
+    "dd": "tn-doan",
+    "cau": "我们两天休息。",
+    "py": "Wǒmen liǎng tiān xiūxi.",
+    "dung": false,
+    "gt": "Khoảng thời gian đứng **sau động từ**: 休息两天.",
+    "sua": "我们休息两天。",
+    "pySua": "Wǒmen xiūxi liǎng tiān.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b5-hui-kd-1",
+    "np": "hui",
+    "dang": "chon",
+    "dd": "hui-kd",
+    "cau": "我＿说越南语和汉语。",
+    "py": "Wǒ huì shuō Yuènányǔ hé Hànyǔ.",
+    "nghia": "Tôi biết nói tiếng Việt và tiếng Trung.",
+    "dap": "会",
+    "nhieu": [
+     "是",
+     "很"
+    ],
+    "gt": "\"biết (nói)\" là **会 + ĐT**."
+   },
+   {
+    "ma": "b5-hui-kd-2",
+    "np": "hui",
+    "dang": "hoi",
+    "dd": "hui-kd",
+    "dap": "我会做饺子，也会做一些菜。",
+    "pyDap": "Wǒ huì zuò jiǎozi, yě huì zuò yìxiē cài.",
+    "hoi": "你会做什么？",
+    "pyHoi": "Nǐ huì zuò shénme?",
+    "nhieu": [
+     "你喜欢什么菜？",
+     "这是谁的电脑？"
+    ],
+    "gt": "Đáp \"biết làm sủi cảo…\" → hỏi **你会做什么？**"
+   },
+   {
+    "ma": "b5-hui-kd-3",
+    "np": "hui",
+    "dang": "xep",
+    "dd": "hui-kd",
+    "cau": "我会做一些越南菜。",
+    "py": "Wǒ huì zuò yìxiē Yuènán cài.",
+    "nghia": "Tôi biết nấu vài món Việt Nam.",
+    "khoi": [
+     "我",
+     "会",
+     "做",
+     "一些",
+     "越南菜"
+    ],
+    "npPhu": [
+     "hui",
+     "yixie"
+    ]
+   },
+   {
+    "ma": "b5-hui-pd-1",
+    "np": "hui",
+    "dang": "chon",
+    "dd": "hui-pd",
+    "cau": "我＿做菜，我妈妈会做。",
+    "py": "Wǒ bú huì zuò cài, wǒ māma huì zuò.",
+    "nghia": "Tôi không biết nấu ăn, mẹ tôi biết.",
+    "dap": "不会",
+    "nhieu": [
+     "没会",
+     "不是"
+    ],
+    "gt": "Phủ định của 会 là **不会**, không nói 没会."
+   },
+   {
+    "ma": "b5-hui-pd-2",
+    "np": "hui",
+    "dang": "dungSai",
+    "dd": "hui-pd",
+    "cau": "我没会说法语。",
+    "py": "Wǒ méi huì shuō Fǎyǔ.",
+    "dung": false,
+    "gt": "Phủ định dùng **不会**.",
+    "sua": "我不会说法语。",
+    "pySua": "Wǒ bú huì shuō Fǎyǔ.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b5-hui-hoi-1",
+    "np": "hui",
+    "dang": "chon",
+    "dd": "hui-hoi",
+    "cau": "你会＿会做饭？",
+    "py": "Nǐ huì bu huì zuò fàn?",
+    "nghia": "Bạn có biết nấu cơm không?",
+    "dap": "不",
+    "nhieu": [
+     "没",
+     "吗"
+    ],
+    "gt": "Hỏi chính phản: **会不会**."
+   },
+   {
+    "ma": "b5-hui-hoi-2",
+    "np": "hui",
+    "dang": "dungSai",
+    "dd": "hui-hoi",
+    "cau": "你会不会做饭吗？",
+    "py": "Nǐ huì bu huì zuò fàn ma?",
+    "dung": false,
+    "gt": "Đã dùng **会不会** thì **không thêm 吗**.",
+    "sua": "你会不会做饭？",
+    "pySua": "Nǐ huì bu huì zuò fàn?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b5-hui-hoi-3",
+    "np": "hui",
+    "dang": "hoi",
+    "dd": "hui-hoi",
+    "dap": "我会做。",
+    "pyDap": "Wǒ huì zuò.",
+    "hoi": "你会做饭吗？",
+    "pyHoi": "Nǐ huì zuò fàn ma?",
+    "nhieu": [
+     "你想吃什么？",
+     "这是你的电脑吗？"
+    ],
+    "gt": "Đáp \"我会做\" → câu hỏi **会…吗？**"
+   },
+   {
+    "ma": "b5-hui-tl-1",
+    "np": "hui",
+    "dang": "hoi",
+    "dd": "hui-tl",
+    "dap": "不会。",
+    "pyDap": "Bú huì.",
+    "hoi": "你会说法语吗？",
+    "pyHoi": "Nǐ huì shuō Fǎyǔ ma?",
+    "nhieu": [
+     "你是法国人吗？",
+     "你想去法国吗？"
+    ],
+    "gt": "Trả lời ngắn **不会** cho câu hỏi **会…吗？**"
+   },
+   {
+    "ma": "b5-hui-tl-2",
+    "np": "hui",
+    "dang": "hoi",
+    "dd": "hui-tl",
+    "dap": "会，我会做饺子。",
+    "pyDap": "Huì, wǒ huì zuò jiǎozi.",
+    "hoi": "你会做饺子吗？",
+    "pyHoi": "Nǐ huì zuò jiǎozi ma?",
+    "nhieu": [
+     "你喜欢吃饺子吗？",
+     "你有饺子吗？"
+    ],
+    "gt": "Đáp bắt đầu bằng **会** → câu hỏi **会…吗？**"
+   },
+   {
+    "ma": "b5-hui-py-1",
+    "np": "hui",
+    "dang": "chon",
+    "kieu": "py",
+    "dd": "hui-py",
+    "cau": "我不会做菜。",
+    "py": "Wǒ bú huì zuò cài.",
+    "tu": "不会",
+    "dap": "bú huì",
+    "nhieu": [
+     "bù huì",
+     "bu huì"
+    ],
+    "gt": "会 mang thanh 4 nên 不 đọc **thanh 2**: bú huì."
+   },
+   {
+    "ma": "b5-hui-py-2",
+    "np": "hui",
+    "dang": "chon",
+    "kieu": "py",
+    "dd": "hui-py",
+    "cau": "你会不会说汉语？",
+    "py": "Nǐ huì bu huì shuō Hànyǔ?",
+    "tu": "会不会",
+    "dap": "huì bu huì",
+    "nhieu": [
+     "huì bú huì",
+     "huí bu huí"
+    ],
+    "gt": "Trong **会不会**, 不 đọc **nhẹ**: huì bu huì."
+   },
+   {
+    "ma": "b5-yx-yixie-1",
+    "np": "yixie",
+    "dang": "chon",
+    "dd": "yx-yixie",
+    "cau": "我会做＿菜。",
+    "py": "Wǒ huì zuò yìxiē cài.",
+    "nghia": "Tôi biết nấu vài món.",
+    "dap": "一些",
+    "nhieu": [
+     "多少",
+     "几"
+    ],
+    "gt": "\"một vài\" là **一些 + DT**."
+   },
+   {
+    "ma": "b5-yx-yixie-2",
+    "np": "yixie",
+    "dang": "xep",
+    "dd": "yx-yixie",
+    "cau": "我们有一些中国朋友。",
+    "py": "Wǒmen yǒu yìxiē Zhōngguó péngyou.",
+    "nghia": "Chúng tôi có vài người bạn Trung Quốc.",
+    "khoi": [
+     "我们",
+     "有",
+     "一些",
+     "中国朋友"
+    ],
+    "npPhu": [
+     "yixie"
+    ]
+   },
+   {
+    "ma": "b5-yx-zhe-1",
+    "np": "yixie",
+    "dang": "chon",
+    "dd": "yx-zhe",
+    "cau": "＿面包很好吃。",
+    "py": "Zhèxiē miànbāo hěn hǎochī.",
+    "nghia": "Những cái bánh mì này rất ngon.",
+    "dap": "这些",
+    "nhieu": [
+     "多少",
+     "什么"
+    ],
+    "gt": "\"những … này\" là **这些 + DT**."
+   },
+   {
+    "ma": "b5-yx-zhe-2",
+    "np": "yixie",
+    "dang": "hoi",
+    "dd": "yx-zhe",
+    "dap": "那些人是泰国人。",
+    "pyDap": "Nàxiē rén shì Tàiguó rén.",
+    "hoi": "那些人是哪国人？",
+    "pyHoi": "Nàxiē rén shì nǎ guó rén?",
+    "nhieu": [
+     "那些人有几个孩子？",
+     "那些人会做饭吗？"
+    ],
+    "gt": "Đáp quốc tịch → hỏi **哪国人**."
+   },
+   {
+    "ma": "b5-yx-lt-1",
+    "np": "yixie",
+    "dang": "dungSai",
+    "dd": "yx-lt",
+    "cau": "这些个人是我的同学。",
+    "py": "Zhèxiē ge rén shì wǒ de tóngxué.",
+    "dung": false,
+    "gt": "Sau 这些 **không thêm lượng từ**.",
+    "sua": "这些人是我的同学。",
+    "pySua": "Zhèxiē rén shì wǒ de tóngxué.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b5-yx-lt-2",
+    "np": "yixie",
+    "dang": "dungSai",
+    "dd": "yx-lt",
+    "cau": "这些菜很好吃。",
+    "py": "Zhèxiē cài hěn hǎochī.",
+    "dung": true,
+    "gt": "这些 + DT, không có lượng từ ở giữa."
+   },
+   {
+    "ma": "b5-yx-cn-1",
+    "np": "yixie",
+    "dang": "dungSai",
+    "dd": "yx-cn",
+    "cau": "那些是我的同学。",
+    "py": "Nàxiē shì wǒ de tóngxué.",
+    "dung": true,
+    "gt": "那些 **đứng một mình làm chủ ngữ** được."
+   },
+   {
+    "ma": "b5-yx-cn-2",
+    "np": "yixie",
+    "dang": "chon",
+    "dd": "yx-cn",
+    "cau": "＿是我的新朋友。",
+    "py": "Zhèxiē shì wǒ de xīn péngyou.",
+    "nghia": "Đây là những người bạn mới của tôi.",
+    "dap": "这些",
+    "nhieu": [
+     "一些",
+     "几"
+    ],
+    "gt": "这些 đứng một mình làm chủ ngữ; 一些 không đứng một mình như vậy."
+   },
+   {
+    "ma": "b5-zh-tt-1",
+    "np": "zhen",
+    "dang": "chon",
+    "dd": "zh-tt",
+    "cau": "你的电脑＿新！",
+    "py": "Nǐ de diànnǎo zhēn xīn!",
+    "nghia": "Máy tính của bạn mới thật!",
+    "dap": "真",
+    "nhieu": [
+     "太",
+     "是"
+    ],
+    "gt": "Cảm thán, không có 了 ở cuối → **真 + TT**."
+   },
+   {
+    "ma": "b5-zh-tt-2",
+    "np": "zhen",
+    "dang": "xep",
+    "dd": "zh-tt",
+    "cau": "这道菜真好吃！",
+    "py": "Zhè dào cài zhēn hǎochī!",
+    "nghia": "Món này ngon thật!",
+    "khoi": [
+     "这道菜",
+     "真",
+     "好吃"
+    ],
+    "npPhu": [
+     "zhen"
+    ]
+   },
+   {
+    "ma": "b5-zh-dt-1",
+    "np": "zhen",
+    "dang": "chon",
+    "dd": "zh-dt",
+    "cau": "我＿喜欢学汉语！",
+    "py": "Wǒ zhēn xǐhuan xué Hànyǔ!",
+    "nghia": "Tôi thật sự thích học tiếng Trung!",
+    "dap": "真",
+    "nhieu": [
+     "是",
+     "有"
+    ],
+    "gt": "**真 + ĐT tâm lý**: 真喜欢."
+   },
+   {
+    "ma": "b5-zh-dt-2",
+    "np": "zhen",
+    "dang": "dungSai",
+    "dd": "zh-dt",
+    "cau": "我真想去中国！",
+    "py": "Wǒ zhēn xiǎng qù Zhōngguó!",
+    "dung": true,
+    "gt": "真 + ĐT tâm lý (想)."
+   },
+   {
+    "ma": "b5-zh-le-1",
+    "np": "zhen",
+    "dang": "dungSai",
+    "dd": "zh-le",
+    "cau": "这些菜真好吃了！",
+    "py": "Zhèxiē cài zhēn hǎochī le!",
+    "dung": false,
+    "gt": "真 + TT **không thêm 了**.",
+    "sua": "这些菜真好吃！",
+    "pySua": "Zhèxiē cài zhēn hǎochī!",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b5-zh-le-2",
+    "np": "zhen",
+    "dang": "chon",
+    "dd": "zh-le",
+    "cau": "这些菜太好吃＿！",
+    "py": "Zhèxiē cài tài hǎochī le!",
+    "nghia": "Những món này ngon quá!",
+    "dap": "了",
+    "nhieu": [
+     "吗",
+     "呢"
+    ],
+    "gt": "Khung **太……了** phải có 了; 真 thì không."
+   },
+   {
+    "ma": "b5-zh-hoi-1",
+    "np": "zhen",
+    "dang": "dungSai",
+    "dd": "zh-hoi",
+    "cau": "你的电脑真新吗？",
+    "py": "Nǐ de diànnǎo zhēn xīn ma?",
+    "dung": false,
+    "gt": "真 dùng để **cảm thán**, câu hỏi dùng 很.",
+    "sua": "你的电脑很新吗？",
+    "pySua": "Nǐ de diànnǎo hěn xīn ma?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b5-zh-hoi-2",
+    "np": "zhen",
+    "dang": "dungSai",
+    "dd": "zh-hoi",
+    "cau": "你的电脑真新！",
+    "py": "Nǐ de diànnǎo zhēn xīn!",
+    "dung": true,
+    "gt": "真 dùng trong câu cảm thán, cuối câu có ！"
+   },
+   {
+    "ma": "b5-hv-tt-1",
+    "np": "haoV",
+    "dang": "chon",
+    "dd": "hv-tt",
+    "cau": "中国的饺子很好＿。",
+    "py": "Zhōngguó de jiǎozi hěn hǎochī.",
+    "nghia": "Sủi cảo của Trung Quốc rất ngon.",
+    "dap": "吃",
+    "nhieu": [
+     "喝",
+     "听"
+    ],
+    "gt": "Đồ ăn ngon: **好吃**."
+   },
+   {
+    "ma": "b5-hv-tt-2",
+    "np": "haoV",
+    "dang": "chon",
+    "dd": "hv-tt",
+    "cau": "你的名字真好＿！",
+    "py": "Nǐ de míngzi zhēn hǎotīng!",
+    "nghia": "Tên của bạn hay thật!",
+    "dap": "听",
+    "nhieu": [
+     "吃",
+     "喝"
+    ],
+    "gt": "Tên, bài hát nghe hay: **好听**."
+   },
+   {
+    "ma": "b5-hv-tt-3",
+    "np": "haoV",
+    "dang": "xep",
+    "dd": "hv-tt",
+    "cau": "这是李文的小猫，它真好看！",
+    "py": "Zhè shì Lǐ Wén de xiǎo māo, tā zhēn hǎokàn!",
+    "nghia": "Đây là con mèo của Lý Văn, nó đẹp thật!",
+    "khoi": [
+     "这是",
+     "李文的",
+     "小猫",
+     "它",
+     "真",
+     "好看"
+    ],
+    "npPhu": [
+     "haoV",
+     "zhen"
+    ]
+   },
+   {
+    "ma": "b5-hv-chi-he-1",
+    "np": "haoV",
+    "dang": "dungSai",
+    "dd": "hv-chi-he",
+    "cau": "这些菜很好喝。",
+    "py": "Zhèxiē cài hěn hǎohē.",
+    "dung": false,
+    "gt": "**好吃** dùng cho đồ ăn, **好喝** dùng cho đồ uống.",
+    "sua": "这些菜很好吃。",
+    "pySua": "Zhèxiē cài hěn hǎochī.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b5-hv-chi-he-2",
+    "np": "haoV",
+    "dang": "chon",
+    "dd": "hv-chi-he",
+    "cau": "妈妈，这个真好＿！我还想喝。",
+    "py": "Māma, zhè ge zhēn hǎohē! Wǒ hái xiǎng hē.",
+    "nghia": "Mẹ ơi, cái này ngon thật! Con còn muốn uống nữa.",
+    "dap": "喝",
+    "nhieu": [
+     "吃",
+     "听"
+    ],
+    "gt": "Đồ uống ngon: **好喝**."
+   },
+   {
+    "ma": "b5-hv-kan-1",
+    "np": "haoV",
+    "dang": "chon",
+    "dd": "hv-kan",
+    "cau": "这是我的新朋友，她真好＿！",
+    "py": "Zhè shì wǒ de xīn péngyou, tā zhēn hǎokàn!",
+    "nghia": "Đây là bạn mới của tôi, cô ấy đẹp thật!",
+    "dap": "看",
+    "nhieu": [
+     "吃",
+     "喝"
+    ],
+    "gt": "Người đẹp: **好看**."
+   },
+   {
+    "ma": "b5-hv-kan-2",
+    "np": "haoV",
+    "dang": "dungSai",
+    "dd": "hv-kan",
+    "cau": "你妈妈好看吗？",
+    "py": "Nǐ māma hǎokàn ma?",
+    "dung": true,
+    "gt": "好看 dùng cho người đẹp."
+   }
+  ]
+ }
+}

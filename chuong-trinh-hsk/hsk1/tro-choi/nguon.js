@@ -4,12 +4,13 @@
    Chém chữ Hán và Đỉnh luyện chữ cần thêm file data/bai/tro-choi/<ma>.json (dựng bằng tools/tro_choi_du_lieu.py hsk3).
    ========================================================= */
 (function () {
-  var V = '?v=20261028a', D = '../../../data/bai/';
+  var V = '?v=20261029f', D = '../../../data/bai/';
   var BAI = [
     { ma: 'bai-1', ten: 'Bài 1', diem: 'bai1' },
     { ma: 'bai-2', ten: 'Bài 2', diem: 'bai2' },
     { ma: 'bai-3', ten: 'Bài 3', diem: 'bai3' },
-    { ma: 'bai-4', ten: 'Bài 4', diem: 'bai4' }
+    { ma: 'bai-4', ten: 'Bài 4', diem: 'bai4' },
+    { ma: 'bai-5', ten: 'Bài 5', diem: 'bai5' }
   ];
   var CHUNG = { phamVi: 'h3-hsk1', tongHop: true, maDiem: '', tenDiem: 'HSK 3.0 · ', tongHopDiem: 'hsk1-tong-hop-bai0', bxh: 'bang-xep-hang.html' };   // mã điểm HSK 3.0 không có tiền tố, như Bài tập 3.0
   function cauHinh(thuMuc) {
