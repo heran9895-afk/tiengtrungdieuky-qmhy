@@ -118,3 +118,9 @@
 .dc-ht-cap-ten+.dc-ht-dong{border-top:0}
 .dc-ht-ai{font-size:12.5px;font-weight:800;color:var(--muted)}
 .dc-ht-ai .hanzi{font-size:14px;color:var(--brand)}
+/* từ gợi ý ở đề dịch (31/10/2026) */
+.dc-goi-y{margin:6px 0 0;font-size:14px;font-weight:700;color:#7a5a12;background:#fff7e0;border-radius:8px;padding:4px 10px;display:inline-block}
+.dc-goi-y b{font-size:17px;color:var(--brand);font-weight:700}
+.dc-goi-y.nho{font-size:13px;padding:2px 8px;margin-top:4px}
+.dc-goi-y-chen{font-size:14px;font-weight:700;color:#7a5a12}
+.dc-goi-y-chen b{color:var(--brand)}
