@@ -11,6 +11,8 @@ DONG_NGHIA = [('汉语', '中文'), ('你们', '大家'), ('你', '您'), ('个'
 HOI = ('吗',)                       # hỏi bằng 吗 ↔ A不A / 有没有
 # Câu cô đã chọn đáp án chính khác (theo chế độ giáo viên 31/10/2026)
 DAP_CHINH = {'c06': '请大家说汉语。'}
+# Câu luyện một từ tuỳ chọn (bỏ đi câu vẫn đúng, thậm chí tự nhiên hơn) thì bắt buộc gợi ý từ đó (cô Nhiên 31/10/2026: 你叫什么名字呢？)
+GOI_Y_THEM = {'c119': ['呢']}
 
 
 def tok(s):
@@ -30,6 +32,8 @@ def goi_y(ma, zh):
     """→ (goiY: list, zh mới)"""
     if ma in DAP_CHINH:
         c = DAP_CHINH[ma]; zh = [c] + [z for z in zh if z != c]
+    if ma in GOI_Y_THEM:
+        w = GOI_Y_THEM[ma]; return list(w), [z for z in zh if all(x in z for x in w)]
     if len(zh) < 2: return [], zh
     a0 = tok(zh[0]); s0 = set(a0); gy = []
     for alt in zh[1:]:
