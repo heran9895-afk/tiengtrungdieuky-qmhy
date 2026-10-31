@@ -138,3 +138,12 @@
 .dc-ve-o-hop{min-width:0}
 .dc-ve .dc-ht-o{margin-top:0}
 @media(max-width:700px){.dc-ve{grid-template-columns:1fr}}
+/* Dịch hội thoại: mỗi câu một hàng như câu A/B (đề bên trái, ô bên phải), mỗi cặp một nút Kiểm tra */
+.dc-ht-hang{padding:6px 0}
+.dc-ht-ai+.dc-ht-hang{border-top:0}
+.dc-ht-vai.an{visibility:hidden}
+.dc-ht-dong>.dc-ht-ai{padding:2px 0 0 40px}
+.dc-ht-kq-thoai .dc-giai{margin:2px 0 6px}
+.dc-cap-nut{margin:6px 0 4px}
+.dc-cap-nut .lt-ket{margin:0}
+.dc-cap-bao:empty{display:none}
