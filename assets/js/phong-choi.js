@@ -40,8 +40,19 @@
     ghi: ghi,
     doc: function (ma, khoa) { return goi({ a: 'doc', ma: ma, khoa: khoa }); },
     xem: function (ma, d) { return goi({ a: 'xem', ma: ma, d: d == null ? '' : d }); },
-    vao: function (ma, d) { return goi({ a: 'vao', ma: ma, d: d, id: maMay() }); },
-    gui: function (ma, d, k, c, x) { return goi({ a: 'gui', ma: ma, d: d, k: k, c: c, x: x }); },
+    vao: function (ma, d) { var p = { a: 'vao', ma: ma, d: d, id: maMay() }; return goi(p).catch(function () { return goi(p, true); }); },
+    ping: function () { return goi({ a: 'ping' }); },
+    // Gửi bài: thử lại tối đa 3 lần (GET, rồi POST), lỗi máy chủ (ok:0) thì báo đúng mã lỗi
+    gui: function (ma, d, k, c, x) {
+      var p = { a: 'gui', ma: ma, d: d, k: k, c: c, x: x }, lan = 0;
+      return (function thu() {
+        lan++;
+        return goi(p, lan === 2).catch(function (e) {
+          if (lan >= 3 || e.ma === 'khong-co-phong' || e.ma === 'doi' || e.ma === 'loai') throw e;
+          return new Promise(function (ok) { setTimeout(ok, 600 * lan); }).then(thu);
+        });
+      })();
+    },
     maMay: maMay
   };
 })();

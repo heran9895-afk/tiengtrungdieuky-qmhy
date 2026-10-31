@@ -138,11 +138,23 @@
         '<div class="tl-cai-nut"><button type="button" class="btn gold tl-bat-dau">▶ Bắt đầu</button><button type="button" class="btn tl-ve-cai">‹ Đổi cài đặt</button></div>' +
       '</div></div>';
     veQR(noi.querySelector('.tl-qr'), link);
+    kiemMayChu();
     noi.querySelector('.tl-bat-dau').addEventListener('click', function () { vaoToanMan(); batDauVan(); });
     noi.querySelector('.tl-ve-cai').addEventListener('click', manCai);
     veSanhDoi();
     dayLen({ gd: 'sanh' });
     batDauDoc(2000);
+  }
+  // Máy chủ phòng chơi phải là bản 2026-11-01 trở lên (bản cũ dùng LockService, học sinh không gửi được đáp án)
+  var PHIEN_BAN_CAN = '2026-11-01';
+  function kiemMayChu() {
+    P.ping().then(function (o) { if (!o.phienBan || o.phienBan < PHIEN_BAN_CAN) throw 0; })
+      .catch(function () {
+        var k = noi.querySelector('.tl-sanh-phai'); if (!k || k.querySelector('.tl-canh-bao')) return;
+        k.insertAdjacentHTML('afterbegin', '<p class="tl-canh-bao">⚠️ Máy chủ phòng chơi đang chạy <b>bản cũ</b>: điện thoại có thể không gửi được đáp án. ' +
+          'Cô mở Apps Script <b>TTDK - Phong choi</b>, dán mã mới rồi <b>Triển khai → Quản lý triển khai → ✏️ → Phiên bản mới</b>. ' +
+          'Trong lúc chờ, cô bấm vào ô của đội để chấm thay.</p>');
+      });
   }
   function veSanhDoi() {
     var k = noi.querySelector('.tl-sanh-doi'); if (!k) return;

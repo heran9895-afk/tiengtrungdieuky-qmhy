@@ -88,9 +88,13 @@
     R.khoaVe = '';
     ve();
     if (navigator.vibrate) try { navigator.vibrate(30); } catch (e) {}
-    P.gui(R.ma, R.d, k, c, x).catch(function () {
-      delete R.daGui[k + c]; R.khoaVe = ''; ve();
-      alert('Chưa gửi được (mạng). Bạn bấm lại nhé.');
+    R.loiGui = '';
+    P.gui(R.ma, R.d, k, c, x).then(function () { R.loiGui = ''; }).catch(function (e) {
+      // Không dùng alert (alert chặn cả việc đọc câu hỏi). Bỏ chọn để bấm lại, báo lỗi ngay trên trang kèm mã lỗi.
+      delete R.daGui[k + c]; R.khoaVe = '';
+      R.loiGui = e && e.ma ? 'Máy chủ báo lỗi: ' + e.ma : 'Mạng chập chờn';
+      ve();
+      if (navigator.vibrate) try { navigator.vibrate([80, 60, 80]); } catch (x2) {}
     });
   }
   function daGui(k, c) {
@@ -107,12 +111,15 @@
       (s.diem ? '<span class="vc-diem">' + s.diem[d] + ' điểm' + (s.phu && s.phu[d] ? ' · ' + esc(s.phu[d]) : '') + '</span>' : '') +
       '<button type="button" class="vc-link vc-doi-lai">Đổi đội</button></div>';
     var view = noiDung(s, d);
-    if (view.khoa === R.khoaVe) { capNhatGiay(view); return; }
-    R.khoaVe = view.khoa;
+    var khoa = view.khoa + '|' + (R.loiGui || '');
+    if (khoa === R.khoaVe) { capNhatGiay(view); return; }
+    R.khoaVe = khoa;
     // Giữ chữ đang gõ dở khi vẽ lại (ô cùng loại vẫn còn sau khi vẽ)
     var dangGo = document.activeElement && document.activeElement.tagName === 'INPUT' && el.contains(document.activeElement) ? document.activeElement : null;
     var goForm = dangGo && dangGo.form ? dangGo.form.className : '', goChu = dangGo ? dangGo.value : '';
-    el.innerHTML = '<div class="vc-dau">' + dau + '</div><div class="vc-noi">' + view.html + '</div>';
+    el.innerHTML = '<div class="vc-dau">' + dau + '</div>' +
+      (R.loiGui ? '<div class="vc-mang vc-loi-gui">⚠️ Chưa gửi được đáp án (' + esc(R.loiGui) + '). Bạn bấm chọn lại nhé.</div>' : '') +
+      '<div class="vc-noi">' + view.html + '</div>';
     el.querySelector('.vc-doi-lai').addEventListener('click', function () { try { sessionStorage.removeItem(khoaDoi()); } catch (e) {} dung(); R.d = null; moPhong(); });
     if (view.gan) view.gan();
     if (goForm) {

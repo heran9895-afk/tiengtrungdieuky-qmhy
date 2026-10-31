@@ -521,3 +521,6 @@ body.vc-trang.co-sf{padding-bottom:0}
 .bxh-tc-chon{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:10px;max-width:760px;margin:0 auto 12px}
 .bxh-tc-chon .lt-o[hidden]{display:none}
 @media(max-width:600px){.bxh-tc-chon{grid-template-columns:1fr 1fr}}
+
+.tl-canh-bao{background:#fff1ef;border:1.5px solid var(--red);color:var(--ink);border-radius:12px;padding:10px 14px;font-size:14.5px;line-height:1.55;margin:0 0 12px}
+.vc-loi-gui{background:var(--no-bg)!important;border-color:var(--red)!important;color:var(--no);font-weight:800}
