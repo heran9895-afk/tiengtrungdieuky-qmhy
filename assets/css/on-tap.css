@@ -113,3 +113,8 @@
 .dc-tu .btn.on{background:var(--brand);color:#fff;border-color:var(--brand)}
 @media(max-width:600px){.dc-ht-vi{font-size:15.5px}.dc-ht-o{font-size:18px}.dc-ht-dau-cau{bottom:56px;flex-wrap:nowrap;gap:5px}.dc-ht-dau-cau span{display:none}.dc-ht-dau-cau button{width:40px;height:38px;font-size:20px}}
 .dc-ht-dau-cau[hidden]{display:none}
+.dc-ht-cap{border:1.5px solid var(--line-soft);border-radius:14px;padding:4px 12px 8px;margin:12px 0;background:#fff}
+.dc-ht-cap-ten{font-size:12.5px;font-weight:800;color:var(--muted);padding-top:4px}
+.dc-ht-cap-ten+.dc-ht-dong{border-top:0}
+.dc-ht-ai{font-size:12.5px;font-weight:800;color:var(--muted)}
+.dc-ht-ai .hanzi{font-size:14px;color:var(--brand)}

@@ -142,19 +142,30 @@
   // ---------- vẽ một câu ----------
   // ---------- DẠNG HỘI THOẠI: cả đoạn trên một màn, mỗi thoại (A, B…) một ô dịch, chấm riêng từng thoại ----------
   var CHU_VAI = 'ABCDEFGH', O_CUOI = null;
-  function vaiCua(h) { var v = {}, n = 0; h.luot.forEach(function (l) { if (!(l.ai in v)) v[l.ai] = CHU_VAI[n++] || '?'; }); return v; }
+  // Chia hội thoại thành từng cặp thoại A – B theo thứ tự, kể cả bài có hơn 2 người nói: thoại sau là B của cặp nếu do người khác nói;
+  // hai thoại liền nhau cùng một người nói thì thoại trước đứng riêng (chỉ có A). Trả về ['A','B','A',…]
+  function chiaCap(ds) {
+    var v = [];
+    for (var i = 0; i < ds.length; i++) {
+      if (v[i - 1] === 'A' && ds[i].ai !== ds[i - 1].ai) v.push('B'); else v.push('A');
+    }
+    return v;
+  }
+  function vaiThoai(i) { return chiaCap(L.ds)[i]; }
   function nhapHT() { return Array.prototype.map.call(el.querySelectorAll('.dc-ht-o'), function (b) { return b.value; }); }
   function veHoiThoai() {
-    var h = L.ds[0].ht, vai = vaiCua(h), t0 = Date.now();
+    var t0 = Date.now();
     L.ds.forEach(function (x) { x.t0 = t0; });
     el.innerHTML = '<div class="lnp-khung dc-ht"><div class="dc-de"><div class="lnp-hang"><span class="lnp-ten-dang">💬 ' + esc(L.ten) + '</span><span class="lt-dem">' + L.ds.length + ' thoại</span></div>' +
-      '<p class="lnp-dd">Dịch từng thoại sang tiếng Trung, gõ vào ô ngay dưới thoại đó. Dịch xong cả bài thì bấm <b>Kiểm tra</b>: máy chấm riêng từng thoại.</p>' +
-      '<div class="dc-vai">' + Object.keys(vai).map(function (ai) { return '<span><b>' + vai[ai] + '</b> = <span class="hanzi">' + esc(ai) + '</span>' + (tenViet(ai) ? ' (' + esc(tenViet(ai)) + ')' : '') + '</span>'; }).join('') + '</div>' +
-      L.ds.map(function (x, i) {
-        return '<div class="dc-ht-dong" data-i="' + i + '"><div class="dc-ht-dau"><span class="dc-ht-vai v' + (vai[x.ai].charCodeAt(0) - 65) % 4 + '">' + vai[x.ai] + '</span><div class="dc-ht-vi">' + esc(x.vi) + '</div></div>' +
-          '<textarea class="dc-ht-o" data-i="' + i + '" rows="1" lang="zh-CN" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Bản dịch thoại ' + vai[x.ai] + '"></textarea>' +
-          '<p class="dc-bao dc-ht-bao" aria-live="polite"></p><div class="dc-ht-giai" aria-live="polite"></div></div>';
-      }).join('') +
+      '<p class="lnp-dd">Hội thoại chia thành từng cặp thoại <b>A – B</b>. Dịch từng thoại, gõ vào ô ngay dưới thoại đó. Dịch xong cả bài thì bấm <b>Kiểm tra</b>: máy chấm riêng từng thoại.</p>' +
+      (function () { var vai = chiaCap(L.ds), soCap = 0; return L.ds.map(function (x, i) {
+        var v = vai[i], moCap = v === 'A', dongCap = vai[i + 1] !== 'B', ten = '<span class="hanzi">' + esc(x.ai) + '</span>' + (tenViet(x.ai) ? ' (' + esc(tenViet(x.ai)) + ')' : '');
+        return (moCap ? '<div class="dc-ht-cap"><div class="dc-ht-cap-ten">Cặp thoại ' + (++soCap) + '</div>' : '') +
+          '<div class="dc-ht-dong" data-i="' + i + '"><div class="dc-ht-dau"><span class="dc-ht-vai v' + (v === 'B' ? 1 : 0) + '">' + v + '</span><div><div class="dc-ht-ai">' + ten + '</div><div class="dc-ht-vi">' + esc(x.vi) + '</div></div></div>' +
+          '<textarea class="dc-ht-o" data-i="' + i + '" rows="1" lang="zh-CN" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Bản dịch thoại ' + v + '"></textarea>' +
+          '<p class="dc-bao dc-ht-bao" aria-live="polite"></p><div class="dc-ht-giai" aria-live="polite"></div></div>' +
+          (dongCap ? '</div>' : '');
+      }).join(''); })() +
       '<div class="dc-dau dc-ht-dau-cau"><span>Dấu câu:</span>' + DAU.map(function (d) { return '<button type="button" data-d="' + d + '" aria-label="Thêm dấu ' + d + '">' + d + '</button>'; }).join('') + '</div>' +
       '<p class="dc-bao dc-ht-chung" aria-live="polite"></p>' +
       '<div class="lt-nut-kq dc-ht-nut"><button type="button" class="btn solid dc-ht-kt">Kiểm tra</button></div></div></div>';
@@ -200,7 +211,7 @@
   }
   function xongHT() {
     L.kq = L.ds.map(function (x, i) {
-      return { stt: i + 1, maCau: x.ma, dang: 'dich', nhom: x.nhom, deBai: (vaiCua(x.ht)[x.ai] || '') + ' (' + x.ai + '): ' + x.vi, dapAn: x.zh[0],
+      return { stt: i + 1, maCau: x.ma, dang: 'dich', nhom: x.nhom, deBai: vaiThoai(i) + ' (' + x.ai + '): ' + x.vi, dapAn: x.zh[0],
         chon: x.cua || '(bỏ trống)', dung: x.khop ? 1 : 0, tuDanhGia: x.tuDanhGia || '', giay: Math.round((Date.now() - x.t0) / 100) / 10, thuTu: '' };
     });
     veKetQua();
