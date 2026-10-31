@@ -130,3 +130,11 @@
 .dc-zh-hang .dc-zh-o{flex:1;min-width:0;font-size:18px}
 .dc-zh-nhan{font-size:12px;font-weight:800;color:var(--muted);white-space:nowrap}
 .dc-them-zh{margin-top:6px}
+/* Dịch câu hỏi – đáp A/B: mỗi vế một dòng, ô điền bên phải (điện thoại: ô dưới câu) — cô chốt 31/10/2026 */
+.dc-ve-ds{margin-top:8px}
+.dc-ve{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 14px;align-items:start;border-top:1px dashed var(--line);padding:10px 0}
+.dc-ve:first-child{border-top:0}
+.dc-ve-de{display:flex;gap:10px;align-items:flex-start}
+.dc-ve-o-hop{min-width:0}
+.dc-ve .dc-ht-o{margin-top:0}
+@media(max-width:700px){.dc-ve{grid-template-columns:1fr}}

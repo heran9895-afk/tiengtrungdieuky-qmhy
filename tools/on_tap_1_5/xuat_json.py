@@ -264,7 +264,31 @@ def muc_dich(ma, vi, zh, **them):
     gy, moi = goi_y.goi_y(ma, zh)
     o = dict(vi=vi, zh=moi, py=pyc(moi[0]), **them)
     if gy: o.update(goiY=gy, zhCu=zh)                  # zhCu: đáp án trước khi thêm gợi ý (để chế độ giáo viên nhận ra câu cô chưa sửa)
+    if '——' in moi[0]: o = tach_ve(o)
     return o
+
+
+def tach_ve(o):
+    """Câu hỏi – đáp A/B (cô Nhiên chốt 31/10/2026): tách thành 2 vế, mỗi vế một ô, chấm riêng từng vế; cả câu đúng khi đủ 2 vế."""
+    import re
+    vi = [re.sub(r'^\s*[AB]\s*[:：]\s*', '', x).strip() for x in re.split(r'\s+—\s+', o['vi'])]
+    assert len(vi) == 2, o['vi']
+    ve = []
+    for k in range(2):
+        zh, cu = [], []
+        for z in o['zh']:
+            x = z.split('——')[k]
+            if x not in zh: zh.append(x)
+        for z in o.get('zhCu', o['zh']):
+            x = z.split('——')[k]
+            if x not in cu: cu.append(x)
+        v = dict(vai='AB'[k], vi=vi[k], zh=zh, py=pyc(zh[0]))
+        gy = [w for w in o.get('goiY', []) if w in zh[0]]
+        if gy: v.update(goiY=gy, zhCu=cu)
+        ve.append(v)
+    n = {k: v for k, v in o.items() if k not in ('vi', 'zh', 'py', 'goiY', 'zhCu')}
+    n.update(vi=' — '.join(x['vi'] for x in ve), ve=ve, zh=[ve[0]['zh'][0] + ve[1]['zh'][0]], py='')
+    return n
 
 
 def dich():
