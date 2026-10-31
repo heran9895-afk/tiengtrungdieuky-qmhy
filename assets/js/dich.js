@@ -636,6 +636,12 @@
     if (e.target.classList.contains('dc-o') && e.key === 'Enter' && !e.shiftKey && !e.isComposing && L && L.ds[L.i] && !L.ds[L.i].doan) { e.preventDefault(); if (e.target.value.trim()) kiemTra(false); }
   });
 
+  // Enter sau khi đã kiểm tra (ô điền đã khoá): sang câu tiếp. Enter vừa dùng để kiểm tra thì bỏ qua, tránh nhảy câu luôn
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' || e.defaultPrevented || e.isComposing || e.shiftKey || !L || SUA) return;
+    var a = document.activeElement; if (a && /^(TEXTAREA|INPUT|BUTTON|SELECT|A)$/.test(a.tagName) && !a.disabled) return;
+    var n = el.querySelector('.dc-tiep:not([disabled])'); if (n) { e.preventDefault(); n.click(); }
+  });
   el.innerHTML = '<div class="tv-trong">Đang tải bài dịch…</div>';
   // đợi cau-hinh.js (QM_API) rồi mới hỏi máy chủ bản đề mới nhất
   setTimeout(function () {

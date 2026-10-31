@@ -3,7 +3,7 @@
 import os
 GOC = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 THU = os.path.join(GOC, 'chuong-trinh-hsk', 'hsk1', 'on-tap-1-5')
-V = '20261031f'
+V = '20261031g'
 R = '../../../'
 TEP = f"{R}data/bai/on-tap-1-5.json?v={V}"
 
