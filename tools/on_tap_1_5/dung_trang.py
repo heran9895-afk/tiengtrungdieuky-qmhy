@@ -3,7 +3,7 @@
 import os
 GOC = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 THU = os.path.join(GOC, 'chuong-trinh-hsk', 'hsk1', 'on-tap-1-5')
-V = '20261031g'
+V = '20261031h'
 R = '../../../'
 TEP = f"{R}data/bai/on-tap-1-5.json?v={V}"
 
@@ -69,6 +69,10 @@ phan('doc-hieu.html', 'Đọc hiểu', '阅读', '📖 Đọc hiểu', 'Ba bài 
 phan('nghe.html', 'Nghe', '听力', '🎧 Nghe', 'Nghe số, ngày tháng, thứ và hội thoại ngắn (giọng đọc máy). Chữ của bài nghe hiện sau khi bạn trả lời.',
      'Luyện nghe Bài 1–5 HSK 1: số, ngày tháng, thứ, hội thoại ngắn.', 'nghe', 'nghe số, ngày tháng, thứ và hội thoại ngắn')
 
+phan('tong-hop.html', 'Trộn tổng hợp', '综合', '🔀 Trộn tổng hợp', 'Câu hỏi của cả 6 phần Ngữ âm, Chữ Hán, Từ vựng, Ngữ pháp, Đọc hiểu, Nghe trộn lẫn trong một lượt — như một bài kiểm tra tổng hợp.',
+     'Ôn tập trộn tổng hợp Bài 1–5 HSK 1: ngữ âm, chữ Hán, từ vựng, ngữ pháp, đọc hiểu, nghe trong một lượt.', 'tong-hop',
+     'câu của 6 phần trộn lẫn, kèm một bài đọc ngắn')
+
 # ---- Từ vựng: bộ máy Bài tập (30 câu bốc ngẫu nhiên) + phân loại từ ----
 bai = f"'{R}data/bai/on-tap-1-5-tu.json?v={V}'"
 than_tv = '''    <div id="luyen-tap"></div>
@@ -106,11 +110,12 @@ THE = [('ngu-am.html', '🔤', 'Ngữ âm', 'Thanh mẫu, vận mẫu, thanh đi
        ('doc-hieu.html', '📖', 'Đọc hiểu', 'Ba bài đọc: đoạn văn, hội thoại, tin nhắn.'),
        ('nghe.html', '🎧', 'Nghe', 'Nghe số, ngày tháng, thứ, hội thoại ngắn. 15 câu mỗi lượt.'),
        ('', '🗣️', 'Nói', 'Phần luyện nói đang được cô soạn.'),
-       ('dich.html', '🌏', 'Dịch Việt → Trung', '150 câu, 5 hội thoại, 3 đoạn văn. Gõ bản dịch rồi so với đáp án.')]
+       ('dich.html', '🌏', 'Dịch Việt → Trung', '150 câu, 5 hội thoại, 3 đoạn văn. Gõ bản dịch rồi so với đáp án.'),
+       ('tong-hop.html', '🔀', 'Trộn tổng hợp', 'Câu của cả 6 phần 1–6 trộn lẫn trong một lượt 30 câu, kèm một bài đọc. Như bài kiểm tra tổng hợp.')]
 the = '\n'.join((f'      <a class="card ot-the" href="{h}"><div class="ico-big">{i}</div><h3>{k + 1}. {t}</h3>\n        <p>{m}</p><span class="go">Vào ôn →</span></a>' if h else
                  f'      <div class="card ot-the sap-co"><div class="ico-big">{i}</div><h3>{k + 1}. {t}</h3>\n        <p>{m}</p><span class="go">Sắp có</span></div>')
                 for k, (h, i, t, m) in enumerate(THE))
-trang('index.html', 'Ôn tập tổng hợp Bài 1–5', 'Ôn tập tổng hợp Bài 1–5 HSK 1 (HSK 3.0): ngữ âm, chữ Hán, từ vựng, ngữ pháp, đọc hiểu, nghe, dịch.',
+trang('index.html', 'Ôn tập tổng hợp Bài 1–5', 'Ôn tập tổng hợp Bài 1–5 HSK 1 (HSK 3.0): ngữ âm, chữ Hán, từ vựng, ngữ pháp, đọc hiểu, nghe, dịch, trộn tổng hợp.',
       '复习 · 第一课 — 第五课', 'Ôn tập tổng hợp Bài 1–5',
       'Ôn lại toàn bộ 5 bài đầu theo từng kỹ năng. Bài làm được gửi về cho cô để theo dõi, phần này không xếp hạng.',
       '    <div class="sec-orn"><i></i><b></b><i></i></div>\n    <div class="grid g4">\n' + the + '\n    </div>',
@@ -121,7 +126,7 @@ trang('index.html', 'Ôn tập tổng hợp Bài 1–5', 'Ôn tập tổng hợp
   // Thẻ nào còn lượt làm dở (luot-do.js; đăng nhập thì đồng bộ từ máy khác): ghi "📌 Đang làm dở" trên thẻ
   (function () {{
     var PHAN = {{ 'ngu-am.html': ['ngu-am'], 'chu-han.html': ['chu-han'], 'tu-vung.html': ['tu-vung'], 'ngu-phap.html': ['ngu-phap'],
-      'doc-hieu.html': ['doc-hieu-'], 'nghe.html': ['nghe'], 'dich.html': ['dich-'] }};
+      'doc-hieu.html': ['doc-hieu-'], 'nghe.html': ['nghe'], 'dich.html': ['dich-'], 'tong-hop.html': ['tong-hop'] }};
     function ve() {{
       if (!window.QM_LD) return;
       var ds = QM_LD.tatCa('on-tap-1-5/');

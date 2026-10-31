@@ -313,6 +313,14 @@ if __name__ == '__main__':
             if it['dang'] == 'chon':
                 pa = [it['dap']] + it['nhieu']
                 assert len(set(pa)) == len(pa), (k, it['ma'], pa)
+    # Trộn tổng hợp phần 1–6 (cô Nhiên 31/10/2026): câu lấy thẳng từ 6 phần trên (on-tap-tong-hop.js tự trộn);
+    # riêng câu luyện 160 từ (chọn chữ / nghe / pinyin / nghĩa) dựng lúc chạy từ danh sách từ gọn dưới đây
+    tu160, da_tu = [], set()
+    for n in range(1, 6):
+        for t in von.BAI[n]['tu']:
+            if t['Chữ Hán'] not in da_tu: da_tu.add(t['Chữ Hán']); tu160.append([t['Chữ Hán'], t['Pinyin'].replace('∥', '').replace('·', ''), t['Nghĩa tiếng Việt']])
+    data['phan']['tong-hop'] = dict(soCau=30, moiPhan=5, tuLuyen=3, tu=tu160,
+                                    tenNhom={'T1': 'Từ vựng · Chọn chữ theo nghĩa', 'T2': 'Từ vựng · Nghe chọn từ', 'T3': 'Từ vựng · Chọn pinyin', 'T4': 'Từ vựng · Chọn nghĩa'})
     json.dump(data, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     # Kho từ gộp 5 bài cho trang Từ vựng (luyen-tap.js): mỗi từ một lần (lấy lần xuất hiện đầu), câu luyện, chữ ghép, bộ thủ của cả 5 bài
     gop = dict(bai='1-5', ten='Ôn tập tổng hợp Bài 1–5', tu=[], boThu=[], ghepChu=[], thanhPhan={}, cauLuyen=[], tenRieng=[])
@@ -330,5 +338,5 @@ if __name__ == '__main__':
         gop['tenRieng'] += [x for x in b.get('tenRieng', []) if x not in gop['tenRieng']]
     json.dump(gop, open(OUT.replace('.json', '-tu.json'), 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
     print('kho từ gộp:', len(gop['tu']), 'từ ·', len(gop['ghepChu']), 'chữ ghép ·', len(gop['cauLuyen']), 'câu luyện')
-    tong = {k: len(p.get('cau', [])) or sum(len(b['cau']) for b in p['bai']) for k, p in data['phan'].items()}
+    tong = {k: len(p.get('cau', [])) or sum(len(b['cau']) for b in p.get('bai', [])) for k, p in data['phan'].items()}
     print('đã xuất', OUT, os.path.getsize(OUT), 'byte ·', tong, '· dịch', len(data['dich']['cau']), 'câu')

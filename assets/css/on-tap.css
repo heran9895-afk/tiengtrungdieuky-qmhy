@@ -147,3 +147,8 @@
 .dc-cap-nut{margin:6px 0 4px}
 .dc-cap-nut .lt-ket{margin:0}
 .dc-cap-bao:empty{display:none}
+/* Trộn tổng hợp: điểm theo từng phần ở màn kết quả */
+.ot-theo-phan{list-style:none;margin:10px auto 4px;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;max-width:620px}
+.ot-theo-phan li{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 12px;border:1.5px solid var(--line);border-radius:12px;background:#fffaf0;font-size:14.5px}
+.ot-theo-phan li.dung{border-color:var(--ok);background:var(--ok-bg)}
+.ot-theo-phan b{font-size:16px}
