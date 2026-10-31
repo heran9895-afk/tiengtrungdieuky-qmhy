@@ -89,3 +89,27 @@
 .ot-lam-tiep-nut .btn{padding:7px 14px;font-size:14px}
 .ot-ghi-luu{margin-top:6px}
 .ot-the-do{margin:6px 0 0;font-size:13px;font-weight:800;color:#7a5a12;background:#fff7e0;border-radius:8px;padding:4px 8px}
+/* Dịch hội thoại: cả đoạn một màn, mỗi thoại một ô (A, B…) */
+.dc-vai{display:flex;flex-wrap:wrap;gap:6px 14px;margin:6px 0 10px;font-size:13.5px;color:var(--muted);font-weight:700}
+.dc-vai b{color:var(--brand)}
+.dc-vai .hanzi{color:var(--ink);font-size:15px}
+.dc-ht-dong{border-top:1px dashed var(--line);padding:10px 0 6px}
+.dc-ht-dau{display:flex;gap:10px;align-items:flex-start}
+.dc-ht-vai{flex-shrink:0;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:15px;color:#fff;background:var(--brand)}
+.dc-ht-vai.v1{background:#a8530d}.dc-ht-vai.v2{background:#6d4c8c}.dc-ht-vai.v3{background:#b31916}
+.dc-ht-vi{font-size:17px;font-weight:700;line-height:1.5;color:var(--ink);padding-top:3px}
+.dc-ht-o{display:block;width:100%;box-sizing:border-box;min-height:48px;font-size:20px;line-height:1.45;padding:8px 10px;margin:8px 0 0;border:2px solid var(--line);border-radius:12px;background:#fff;font-family:inherit;resize:none;overflow:hidden}
+.dc-ht-o:focus{outline:none;border-color:var(--brand)}
+.dc-ht-o.dung{border-color:var(--ok);background:var(--ok-bg)}
+.dc-ht-o.sai{border-color:var(--gold);background:#fffaf0}
+.dc-ht-giai .dc-giai{margin-top:8px}
+.dc-ht-dau-cau{position:sticky;bottom:64px;background:var(--surface,#fff);padding:8px 0;margin-top:10px;align-items:center;z-index:3}
+.dc-ht-dau-cau span{font-weight:700;color:var(--muted);font-size:13.5px}
+.dc-ht-cau{display:inline-flex;align-items:center;gap:2px;margin-right:6px}
+.dc-ht-cau .hanzi{font-size:17px}
+.dc-ht-cau.sai .hanzi{color:var(--no)}
+.dc-ht-nut{flex-direction:column;align-items:center}
+.dc-ht-nut .lt-ket{margin:0}
+.dc-tu .btn.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+@media(max-width:600px){.dc-ht-vi{font-size:15.5px}.dc-ht-o{font-size:18px}.dc-ht-dau-cau{bottom:56px;flex-wrap:nowrap;gap:5px}.dc-ht-dau-cau span{display:none}.dc-ht-dau-cau button{width:40px;height:38px;font-size:20px}}
+.dc-ht-dau-cau[hidden]{display:none}
