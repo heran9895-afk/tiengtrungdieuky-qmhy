@@ -34,7 +34,25 @@
   function veDau() { var h = document.querySelector('.sh-header'), t = h ? Math.max(0, h.getBoundingClientRect().bottom) : 0, r = el.getBoundingClientRect(); window.scrollTo(0, Math.max(0, r.top + scrollY - t - 8)); }
 
   // ---------- chuẩn hoá để so đáp án ----------
-  function chuan(s) { return String(s || '').replace(/\s+/g, '').replace(/[—–-]+/g, '').replace(/！/g, '。').replace(/[“”"]/g, ''); }
+  // Nhãn vai "A：", "B：" (đầu câu hoặc ngay sau dấu kết câu) không tính khi so đáp án
+  function boVai(s) { return String(s || '').replace(/(^|[。？！，、\s—–-])\s*[A-ZＡ-Ｚ]\s*[：:]\s*/g, '$1'); }
+  function chuan(s) { return boVai(String(s || '').replace(/\s+/g, '')).replace(/[—–-]+/g, '').replace(/！/g, '。').replace(/[“”"]/g, ''); }
+  // Đáp án nhập theo từng vai ("A：…" một dòng, "B：…" dòng sau) là MỘT cách dịch, không phải hai cách dịch: gộp lại
+  function gopVai(zh) {
+    zh = (zh || []).map(function (z) { return String(z || '').trim(); }).filter(Boolean);
+    if (zh.length < 2 || !zh.every(function (z) { return /^[A-ZＡ-Ｚ]\s*[：:]/.test(z); })) return zh;
+    var kq = [], cur = '';
+    zh.forEach(function (z) { if (/^[AＡ]\s*[：:]/.test(z) && cur) { kq.push(cur); cur = ''; } cur += boVai(z); });
+    if (cur) kq.push(cur);
+    return kq;
+  }
+  function chuanDe(de) {                                        // sửa dữ liệu đã lưu theo kiểu A / B mỗi dòng
+    if (!de) return de;
+    (de.cau || []).forEach(function (c) { c.zh = gopVai(c.zh); });
+    (de.hoiThoai || []).forEach(function (h) { h.luot.forEach(function (l) { l.zh = gopVai(l.zh); }); });
+    (de.doanVan || []).forEach(function (d) { d.cau.forEach(function (l) { l.zh = gopVai(l.zh); }); });
+    return de;
+  }
   function khop(cua, ds) { var c = chuan(cua); return ds.some(function (a) { return chuan(a) === c; }); }
   function tachCau(s) { return (String(s || '').replace(/\s+/g, '').match(/[^。？！]+[。？！]?/g) || []).filter(function (x) { return x.replace(/[，、：]/g, ''); }); }
   function kiemGo(s) {                                            // trả về lời nhắc nếu bài gõ có vấn đề hình thức
@@ -50,7 +68,7 @@
       if (!window.QM_API) return;
       var hoan = new Promise(function (_, tu) { setTimeout(function () { tu(new Error('het-gio')); }, 7000); });
       return Promise.race([fetch(window.QM_API + '?action=baiDich').then(function (r) { return r.json(); }), hoan]).then(function (s) {
-        if (s && s.ok && s.deBai && Array.isArray(s.deBai.cau)) { DE = s.deBai; NGUON = 'may-chu'; if (!DE.tenViet) DE.tenViet = GOC.tenViet; }
+        if (s && s.ok && s.deBai && Array.isArray(s.deBai.cau)) { DE = chuanDe(s.deBai); NGUON = 'may-chu'; if (!DE.tenViet) DE.tenViet = GOC.tenViet; }
       }).catch(function () {});
     });
   }
@@ -319,14 +337,25 @@
   function veMucCau(c, k) {
     return '<div class="dc-muc" data-k="' + k + '"><div class="dc-muc-dau"><span>' + esc(c.ma || 'mới') + '</span><span><button type="button" class="btn dc-len" title="Đưa lên">↑</button> <button type="button" class="btn dc-xuong" title="Đưa xuống">↓</button> <button type="button" class="btn dc-xoa">Xoá</button></span></div>' +
       '<label>Đề tiếng Việt</label>' + oChu('vi', c.vi) +
-      '<label>Đáp án (mỗi dòng một cách dịch; dòng đầu là đáp án chính)</label>' + oChu('zh', (c.zh || []).join('\n'), true) + oGoiYSua(c) + '</div>';
+      oDapAn(c.zh) + oGoiYSua(c) + '</div>';
   }
+  function oDapAn(zh) {                                         // đáp án chính + các cách dịch khác, mỗi cách dịch một ô riêng
+    zh = (zh && zh.length ? zh : ['']);
+    return '<label>✅ Đáp án chính (cả câu; câu có A, B thì gõ liền trên cùng một ô)</label>' +
+      '<div class="dc-zh-ds">' + zh.map(function (z, i) { return oZh(z, i); }).join('') + '</div>' +
+      '<button type="button" class="btn dc-them-zh">+ Thêm cách dịch khác cũng đúng</button>';
+  }
+  function oZh(z, i) {
+    return '<div class="dc-zh-hang">' + (i ? '<span class="dc-zh-nhan">Cách khác</span>' : '') + '<input type="text" class="hanzi-o dc-zh-o" value="' + esc(z) + '" placeholder="' + (i ? 'Một cách dịch khác, trọn cả câu' : 'Đáp án chính, trọn cả câu') + '">' +
+      (i ? '<button type="button" class="btn dc-xoa-zh" title="Bỏ cách dịch này">✕</button>' : '') + '</div>';
+  }
+  function docZh(o) { return gopVai(Array.prototype.map.call(o.querySelectorAll(':scope > .dc-zh-ds .dc-zh-o'), function (x) { return x.value; })); }
   function oGoiYSua(c) { return '<label>💡 Từ gợi ý hiện ở đề (cách nhau bằng dấu phẩy; để trống nếu không cần)</label><input type="text" class="hanzi-o dc-gy-o" data-f="goiY" value="' + esc((c.goiY || []).join(', ')) + '">'; }
   function docGoiY(o) { return o ? o.value.split(/[,，、;；\s]+/).map(function (w) { return w.trim(); }).filter(Boolean) : []; }
   function veMucLuot(l, j) {
     return '<div class="dc-luot" data-j="' + j + '"><div class="dc-muc-dau"><span>Lượt ' + (j + 1) + '</span><span><button type="button" class="btn dc-xoa-luot">Xoá lượt</button></span></div>' +
       (l.ai !== undefined ? '<label>Người nói (chữ Hán)</label><input type="text" class="hanzi-o" data-f="ai" value="' + esc(l.ai) + '">' : '') +
-      '<label>Đề tiếng Việt</label>' + oChu('vi', l.vi) + '<label>Đáp án (mỗi dòng một cách dịch)</label>' + oChu('zh', (l.zh || []).join('\n'), true) + oGoiYSua(l) + '</div>';
+      '<label>Đề tiếng Việt</label>' + oChu('vi', l.vi) + oDapAn(l.zh) + oGoiYSua(l) + '</div>';
   }
   function veMucNhom(h, k, coAi) {
     var ds = coAi ? h.luot : h.cau;
@@ -356,14 +385,14 @@
     khu.querySelectorAll('.dc-ds-sua > .dc-muc').forEach(function (m) {
       var k = +m.dataset.k, it = SUA[TAB][k];
       if (TAB === 'cau') {
-        var zh = dong(m.querySelector('[data-f="zh"]').value);
+        var zh = docZh(m);
         if (zh[0] !== (it.zh || [])[0]) it.py = '';
         it.vi = m.querySelector('[data-f="vi"]').value.trim(); it.zh = zh; it.goiY = docGoiY(m.querySelector('[data-f="goiY"]'));
       } else {
         it.ten = m.querySelector('[data-f="ten"]').value.trim();
         var ds = TAB === 'hoiThoai' ? it.luot : it.cau;
         m.querySelectorAll('.dc-luot').forEach(function (lo) {
-          var l = ds[+lo.dataset.j], zh2 = dong(lo.querySelector('[data-f="zh"]').value);
+          var l = ds[+lo.dataset.j], zh2 = docZh(lo);
           if (zh2[0] !== (l.zh || [])[0]) l.py = '';
           l.vi = lo.querySelector('[data-f="vi"]').value.trim(); l.zh = zh2; l.goiY = docGoiY(lo.querySelector('[data-f="goiY"]'));
           var ai = lo.querySelector('[data-f="ai"]'); if (ai) l.ai = ai.value.trim();
@@ -414,7 +443,7 @@
     }).catch(function (e) { khu.innerHTML = '<p class="dc-thong-bao loi">' + esc(e.message) + '</p>'; });
   }
   function layBan(v) {
-    goiMayChu({ action: 'baiDichLay', matKhau: MK, phienBanDe: v }).then(function (d) { SUA = d.deBai; SUA.phienBanDe = v; if (!SUA.tenViet) SUA.tenViet = GOC.tenViet;
+    goiMayChu({ action: 'baiDichLay', matKhau: MK, phienBanDe: v }).then(function (d) { SUA = chuanDe(d.deBai); SUA.phienBanDe = v; if (!SUA.tenViet) SUA.tenViet = GOC.tenViet;
       veSua('Đã mở bản ' + v + ' để xem / sửa. Bấm 💾 Lưu bản mới nếu muốn học sinh dùng lại bản này.'); })
       .catch(function (e) { veSua(e.message, true); });
   }
@@ -459,6 +488,8 @@
     if (t.closest('.dc-ls')) { docForm(); return lichSu(); }
     var lb = t.closest('.dc-lay'); if (lb) return layBan(lb.dataset.v);
     if (t.closest('.dc-ap-gy')) return apGoiY();
+    var tz = t.closest('.dc-them-zh'); if (tz) { var dsz = tz.previousElementSibling; dsz.insertAdjacentHTML('beforeend', oZh('', dsz.children.length)); dsz.lastElementChild.querySelector('input').focus(); return; }
+    var xz = t.closest('.dc-xoa-zh'); if (xz) { xz.parentNode.remove(); return; }
     if (t.closest('.dc-ve-goc')) { SUA = sao(GOC); return veSua('Đã nạp bộ đề gốc vào khung sửa (chưa lưu). Bấm 💾 Lưu bản mới để học sinh dùng lại bộ đề gốc.'); }
     var muc = t.closest('.dc-muc[data-k]'), k = muc ? +muc.dataset.k : -1;
     if (t.closest('.dc-them')) { docForm();

@@ -124,3 +124,9 @@
 .dc-goi-y.nho{font-size:13px;padding:2px 8px;margin-top:4px}
 .dc-goi-y-chen{font-size:14px;font-weight:700;color:#7a5a12}
 .dc-goi-y-chen b{color:var(--brand)}
+/* chế độ giáo viên: mỗi cách dịch một ô */
+.dc-zh-ds{display:grid;gap:6px}
+.dc-zh-hang{display:flex;gap:6px;align-items:center}
+.dc-zh-hang .dc-zh-o{flex:1;min-width:0;font-size:18px}
+.dc-zh-nhan{font-size:12px;font-weight:800;color:var(--muted);white-space:nowrap}
+.dc-them-zh{margin-top:6px}
