@@ -282,7 +282,7 @@ def kiem(ten):
             for k in CAM:
                 if k in s and k not in w:
                     canh.append(f'{nh}: có "{k}" (tránh) — {s}')
-            if 'děi' in p.lower():
+            if 'děi' in p.lower() and 'děi' not in x['Pinyin']:
                 canh.append(f'{nh}: có 得 děi (tránh) — {s}')
             for k in HAN_CHE:
                 if k in s and k not in w:
