@@ -212,7 +212,7 @@
     var kq = [];
     ht.forEach(function (h) { Object.keys(h.nhieu || {}).forEach(function (k) {
       var a = h.luot[+k - 1], b = h.luot[+k]; if (!a || !b) return;
-      var c = function (x) { return [x.han, x.py || '', x.viet || '']; };
+      var c = function (x) { return [x.han, x.py || '', x.viet || '', x.doc || '']; };
       kq.push({ hoi: c(a), dap: c(b), nhieu: h.nhieu[k].map(c), chang: h.chang, hoiThoai: h.ten });
     }); });
     return kq;
