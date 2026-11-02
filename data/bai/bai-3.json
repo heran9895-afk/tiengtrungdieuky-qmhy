@@ -18,16 +18,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "人",
    "Cụm từ": "中国人 | Zhōngguó rén\n法国人 | Fǎguó rén\n泰国人 | Tàiguó rén\n好人 | hǎo rén",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/465afe3c11.mp3",
    "_nhom": "tuVung",
    "Câu 1": "我是中国人。",
    "Pinyin câu 1": "Wǒ shì Zhōngguó rén.",
    "Nghĩa câu 1": "Tôi là người Trung Quốc.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/24adef1380.mp3",
    "Câu 2": "这个人是我朋友。",
    "Pinyin câu 2": "Zhè ge rén shì wǒ péngyou.",
    "Nghĩa câu 2": "Người này là bạn tôi.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/826d8f21c1.mp3"
   },
   {
    "Mã": "1-0067",
@@ -39,16 +39,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "的",
    "Cụm từ": "我的老师 | wǒ de lǎoshī\n你的同学 | nǐ de tóngxué\n我们的国家 | wǒmen de guójiā",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/01d7aa494b.mp3",
    "_nhom": "tuVung",
    "Câu 1": "我的学生是越南人。",
    "Pinyin câu 1": "Wǒ de xué·shēng shì Yuènán rén.",
    "Nghĩa câu 1": "Học sinh của tôi là người Việt Nam.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/458dc50a9d.mp3",
    "Câu 2": "你们的中文老师很好。",
    "Pinyin câu 2": "Nǐmen de Zhōngwén lǎoshī hěn hǎo.",
    "Nghĩa câu 2": "Giáo viên tiếng Trung của các bạn rất tốt.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/52f929f46e.mp3"
   },
   {
    "Mã": "1-0477",
@@ -60,16 +60,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "",
    "Cụm từ": "中国人 | Zhōngguó rén\n去中国 | qù Zhōngguó",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/c13dceabcb.mp3",
    "_nhom": "tuVung",
    "Câu 1": "李文是中国人。",
    "Pinyin câu 1": "Lǐ Wén shì Zhōngguó rén.",
    "Nghĩa câu 1": "Lý Văn là người Trung Quốc.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/cd71c4ee24.mp3",
    "Câu 2": "中国很大。",
    "Pinyin câu 2": "Zhōngguó hěn dà.",
    "Nghĩa câu 2": "Trung Quốc rất lớn.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/af8b9decd3.mp3"
   },
   {
    "Mã": "bai3-法国",
@@ -81,16 +81,16 @@
    "Cấp HSK": "TR",
    "Thuận bút": "法",
    "Cụm từ": "法国人 | Fǎguó rén\n去法国 | qù Fǎguó\n法国朋友 | Fǎguó péngyou",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/f5818fdf08.mp3",
    "_nhom": "tuVung",
    "Câu 1": "白家月是法国人。",
    "Pinyin câu 1": "Bái Jiāyuè shì Fǎguó rén.",
    "Nghĩa câu 1": "Bạch Gia Nguyệt là người Pháp.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/d17dc329eb.mp3",
    "Câu 2": "我不去法国。",
    "Pinyin câu 2": "Wǒ bú qù Fǎguó.",
    "Nghĩa câu 2": "Tôi không đi Pháp.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/15980d34e0.mp3"
   },
   {
    "Mã": "1-0479",
@@ -102,16 +102,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "",
    "Cụm từ": "中文老师 | Zhōngwén lǎoshī\n说中文 | shuō Zhōngwén\n学中文 | xué Zhōngwén",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/a7bac2239f.mp3",
    "_nhom": "tuVung",
    "Câu 1": "我是中文老师。",
    "Pinyin câu 1": "Wǒ shì Zhōngwén lǎoshī.",
    "Nghĩa câu 1": "Tôi là giáo viên tiếng Trung.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/2f29e13e84.mp3",
    "Câu 2": "你的同学说不说中文？",
    "Pinyin câu 2": "Nǐ de tóngxué shuō bu shuō Zhōngwén?",
    "Nghĩa câu 2": "Bạn học của bạn có nói tiếng Trung không?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/b9d8120031.mp3"
   },
   {
    "Mã": "1-0464",
@@ -123,16 +123,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "这",
    "Cụm từ": "这个人 | zhè ge rén\n这个学生 | zhè ge xué·shēng",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/8e9b7a3a19.mp3",
    "_nhom": "tuVung",
    "Câu 1": "这是谁？",
    "Pinyin câu 1": "Zhè shì shéi?",
    "Nghĩa câu 1": "Đây là ai?",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/793ff684c9.mp3",
    "Câu 2": "这是王老师的学生。",
    "Pinyin câu 2": "Zhè shì Wáng lǎoshī de xué·shēng.",
    "Nghĩa câu 2": "Đây là học sinh của cô Vương.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/0bf4a08524.mp3"
   },
   {
    "Mã": "1-0325",
@@ -144,16 +144,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "谁",
    "Cụm từ": "是谁 | shì shéi\n谁的同学 | shéi de tóngxué\n谁的学生 | shéi de xué·shēng",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/cfbafdf1d6.mp3",
    "_nhom": "tuVung",
    "Câu 1": "谁是你的中文老师？",
    "Pinyin câu 1": "Shéi shì nǐ de Zhōngwén lǎoshī?",
    "Nghĩa câu 1": "Ai là giáo viên tiếng Trung của bạn?",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/ec83d9fdde.mp3",
    "Câu 2": "你是谁的同学？",
    "Pinyin câu 2": "Nǐ shì shéi de tóngxué?",
    "Nghĩa câu 2": "Bạn là bạn học của ai?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/484b2a32c2.mp3"
   },
   {
    "Mã": "1-0279",
@@ -165,16 +165,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "朋友",
    "Cụm từ": "我的女朋友 | wǒ de nǚpéngyou\n他的女朋友 | tā de nǚpéngyou",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/1247e9a7ba.mp3",
    "_nhom": "tuVung",
    "Câu 1": "这是我女朋友。",
    "Pinyin câu 1": "Zhè shì wǒ nǚpéngyou.",
    "Nghĩa câu 1": "Đây là bạn gái tôi.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/849a026bf6.mp3",
    "Câu 2": "这是谁的女朋友？",
    "Pinyin câu 2": "Zhè shì shéi de nǚpéngyou?",
    "Nghĩa câu 2": "Đây là bạn gái của ai?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/f493f2f9d5.mp3"
   },
   {
    "Mã": "1-0250",
@@ -186,16 +186,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "哪",
    "Cụm từ": "哪个老师 | nǎ ge lǎoshī\n哪国 | nǎ guó\n哪国人 | nǎ guó rén",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/e0bcc1fa08.mp3",
    "_nhom": "tuVung",
    "Câu 1": "你是哪国人？",
    "Pinyin câu 1": "Nǐ shì nǎ guó rén?",
    "Nghĩa câu 1": "Bạn là người nước nào?",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/c1a9246f49.mp3",
    "Câu 2": "哪个老师是你的中文老师？",
    "Pinyin câu 2": "Nǎ ge lǎoshī shì nǐ de Zhōngwén lǎoshī?",
    "Nghĩa câu 2": "Thầy/cô nào là giáo viên tiếng Trung của bạn?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/10509c4043.mp3"
   },
   {
    "Mã": "1-0128",
@@ -207,16 +207,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "",
    "Cụm từ": "哪国 | nǎ guó\n中国 | Zhōngguó\n泰国 | Tàiguó\n法国 | Fǎguó",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/62f8ae5410.mp3",
    "_nhom": "tuVung",
    "Câu 1": "你女朋友是哪国人？",
    "Pinyin câu 1": "Nǐ nǚpéngyou shì nǎ guó rén?",
    "Nghĩa câu 1": "Bạn gái của bạn là người nước nào?",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/e9c2c50920.mp3",
    "Câu 2": "我是泰国人。",
    "Pinyin câu 2": "Wǒ shì Tàiguó rén.",
    "Nghĩa câu 2": "Tôi là người Thái Lan.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/94e90108e9.mp3"
   },
   {
    "Mã": "1-0356",
@@ -228,16 +228,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "她",
    "Cụm từ": "她们 | tāmen\n她的朋友 | tā de péngyou\n她的老师 | tā de lǎoshī",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/92f3ca76d5.mp3",
    "_nhom": "tuVung",
    "Câu 1": "她是我的朋友。",
    "Pinyin câu 1": "Tā shì wǒ de péngyou.",
    "Nghĩa câu 1": "Cô ấy là bạn của tôi.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/0782c1e1c6.mp3",
    "Câu 2": "她的男朋友是中文老师。",
    "Pinyin câu 2": "Tā de nánpéngyou shì Zhōngwén lǎoshī.",
    "Nghĩa câu 2": "Bạn trai của cô ấy là giáo viên tiếng Trung.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/ccd7b00c3b.mp3"
   },
   {
    "Mã": "bai3-泰国",
@@ -249,16 +249,16 @@
    "Cấp HSK": "TR",
    "Thuận bút": "泰",
    "Cụm từ": "泰国人 | Tàiguó rén\n去泰国 | qù Tàiguó\n泰国朋友 | Tàiguó péngyou",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/6e4d220d02.mp3",
    "_nhom": "tuVung",
    "Câu 1": "我去泰国，不去法国。",
    "Pinyin câu 1": "Wǒ qù Tàiguó, bú qù Fǎguó.",
    "Nghĩa câu 1": "Tôi đi Thái Lan, không đi Pháp.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/8ae2b500bf.mp3",
    "Câu 2": "我的朋友是泰国人。",
    "Pinyin câu 2": "Wǒ de péngyou shì Tàiguó rén.",
    "Nghĩa câu 2": "Bạn tôi là người Thái Lan.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/67261a2b3d.mp3"
   },
   {
    "Mã": "2-0574",
@@ -270,16 +270,16 @@
    "Cấp HSK": "2",
    "Thuận bút": "喂",
    "Cụm từ": "",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/367c9508e7.mp3",
    "_nhom": "tuVung",
    "Câu 1": "喂，你是谁？",
    "Pinyin câu 1": "Wèi, nǐ shì shéi?",
    "Nghĩa câu 1": "A lô, bạn là ai?",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/6b33dae619.mp3",
    "Câu 2": "喂，一飞！",
    "Pinyin câu 2": "Wèi, Yīfēi!",
    "Nghĩa câu 2": "A lô, Nhất Phi!",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/a273a71dea.mp3"
   },
   {
    "Mã": "1-0178",
@@ -291,16 +291,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "姐",
    "Cụm từ": "我姐姐 | wǒ jiějie\n姐姐的工作 | jiějie de gōngzuò",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/033e1fb01c.mp3",
    "_nhom": "tuVung",
    "Câu 1": "姐姐的工作还很忙。",
    "Pinyin câu 1": "Jiějie de gōngzuò hái hěn máng.",
    "Nghĩa câu 1": "Công việc của chị gái vẫn rất bận.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/4eb1c8ae70.mp3",
    "Câu 2": "姐姐，你忙吗？",
    "Pinyin câu 2": "Jiějie, nǐ máng ma?",
    "Nghĩa câu 2": "Chị ơi, chị có bận không?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/56521d2c78.mp3"
   },
   {
    "Mã": "1-0124",
@@ -312,16 +312,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "工作",
    "Cụm từ": "不工作 | bù gōngzuò\n什么工作 | shénme gōngzuò",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/9a018b21ab.mp3",
    "_nhom": "tuVung",
    "Câu 1": "我爸爸的工作很忙。",
    "Pinyin câu 1": "Wǒ bàba de gōngzuò hěn máng.",
    "Nghĩa câu 1": "Công việc của bố tôi rất bận.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/d9ab37adad.mp3",
    "Câu 2": "你工作还忙吗？",
    "Pinyin câu 2": "Nǐ gōngzuò hái máng ma?",
    "Nghĩa câu 2": "Công việc của bạn vẫn bận chứ?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/2a96c63d65.mp3"
   },
   {
    "Mã": "1-0132",
@@ -333,16 +333,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "还",
    "Cụm từ": "还认识 | hái rènshi\n还工作 | hái gōngzuò\n还忙 | hái máng",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/1993f80c49.mp3",
    "_nhom": "tuVung",
    "Câu 1": "我认识他，还认识他的女朋友。",
    "Pinyin câu 1": "Wǒ rènshi tā, hái rènshi tā de nǚpéngyou.",
    "Nghĩa câu 1": "Tôi quen anh ấy, còn quen cả bạn gái anh ấy.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/a8b9ef7071.mp3",
    "Câu 2": "对，还很忙。",
    "Pinyin câu 2": "Duì, hái hěn máng.",
    "Nghĩa câu 2": "Đúng, vẫn rất bận.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/c16448dce5.mp3"
   },
   {
    "Mã": "1-0230",
@@ -354,16 +354,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "忙",
    "Cụm từ": "很忙 | hěn máng\n不忙 | bù máng\n太忙了 | tài máng le",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/1c0a089e7a.mp3",
    "_nhom": "tuVung",
    "Câu 1": "我爸爸很忙，我不忙。",
    "Pinyin câu 1": "Wǒ bàba hěn máng, wǒ bù máng.",
    "Nghĩa câu 1": "Bố tôi rất bận, tôi không bận.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/afea9feaad.mp3",
    "Câu 2": "他们忙吗？",
    "Pinyin câu 2": "Tāmen máng ma?",
    "Nghĩa câu 2": "Họ có bận không?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/ddf638394d.mp3"
   },
   {
    "Mã": "1-0227",
@@ -375,16 +375,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "吗",
    "Cụm từ": "好吗 | hǎo ma\n忙吗 | máng ma\n是吗 | shì ma",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/2988084a74.mp3",
    "_nhom": "tuVung",
    "Câu 1": "你的老师好吗？",
    "Pinyin câu 1": "Nǐ de lǎoshī hǎo ma?",
    "Nghĩa câu 1": "Thầy/cô của bạn có khỏe không?",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/a1e2e12f57.mp3",
    "Câu 2": "你也很忙吗？",
    "Pinyin câu 2": "Nǐ yě hěn máng ma?",
    "Nghĩa câu 2": "Bạn cũng rất bận à?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/e6d0b211ec.mp3"
   },
   {
    "Mã": "1-0092",
@@ -396,16 +396,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "",
    "Cụm từ": "对的 | duì de\n不对 | bú duì",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/00447bbe5e.mp3",
    "_nhom": "tuVung",
    "Câu 1": "对的，那个人是我的中文老师。",
    "Pinyin câu 1": "Duì de, nà ge rén shì wǒ de Zhōngwén lǎoshī.",
    "Nghĩa câu 1": "Đúng rồi, người kia là giáo viên tiếng Trung của tôi.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/f38de80c36.mp3",
    "Câu 2": "对，还很忙。你也很忙吗？",
    "Pinyin câu 2": "Duì, hái hěn máng. Nǐ yě hěn máng ma?",
    "Nghĩa câu 2": "Đúng, vẫn rất bận. Bạn cũng rất bận à?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/f35cf55c92.mp3"
   },
   {
    "Mã": "1-0358",
@@ -417,16 +417,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "太",
    "Cụm từ": "太好了 | tài hǎo le\n太高兴了 | tài gāoxìng le\n不太好 | bú tài hǎo",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/2b2daab200.mp3",
    "_nhom": "tuVung",
    "Câu 1": "我的中文老师太忙了。",
    "Pinyin câu 1": "Wǒ de Zhōngwén lǎoshī tài máng le.",
    "Nghĩa câu 1": "Giáo viên tiếng Trung của tôi bận quá.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/4dcd2be906.mp3",
    "Câu 2": "妈妈不太高兴。",
    "Pinyin câu 2": "Māma bú tài gāoxìng.",
    "Nghĩa câu 2": "Mẹ không vui lắm.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/c223d80e73.mp3"
   },
   {
    "Mã": "1-0381",
@@ -438,16 +438,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "",
    "Cụm từ": "我们的老师 | wǒmen de lǎoshī\n我们的国家 | wǒmen de guójiā",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/ab4a85fc2e.mp3",
    "_nhom": "tuVung",
    "Câu 1": "我们的老师很好。",
    "Pinyin câu 1": "Wǒmen de lǎoshī hěn hǎo.",
    "Nghĩa câu 1": "Giáo viên của chúng tôi rất tốt.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/55d86d97bc.mp3",
    "Câu 2": "我们很想你。",
    "Pinyin câu 2": "Wǒmen hěn xiǎng nǐ.",
    "Nghĩa câu 2": "Chúng tôi rất nhớ bạn.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/91d50e1cec.mp3"
   },
   {
    "Mã": "1-0400",
@@ -459,16 +459,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "想",
    "Cụm từ": "想你 | xiǎng nǐ\n想去 | xiǎng qù\n想说 | xiǎng shuō\n不想 | bù xiǎng",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/291837bd5b.mp3",
    "_nhom": "tuVung",
    "Câu 1": "白家月很想她的爸爸妈妈。",
    "Pinyin câu 1": "Bái Jiāyuè hěn xiǎng tā de bàba māma.",
    "Nghĩa câu 1": "Bạch Gia Nguyệt rất nhớ bố mẹ cô ấy.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/165da05efb.mp3",
    "Câu 2": "妹妹很想去中国。",
    "Pinyin câu 2": "Mèimei hěn xiǎng qù Zhōngguó.",
    "Nghĩa câu 2": "Em gái rất muốn đi Trung Quốc.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/3a7f18a86b.mp3"
   },
   {
    "Mã": "1-0302",
@@ -480,16 +480,16 @@
    "Cấp HSK": "1",
    "Thuận bút": "去",
    "Cụm từ": "去中国 | qù Zhōngguó\n去泰国 | qù Tàiguó\n去法国 | qù Fǎguó\n去越南 | qù Yuènán",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/dfb9366c91.mp3",
    "_nhom": "moRong",
    "Câu 1": "我们去越南。",
    "Pinyin câu 1": "Wǒmen qù Yuènán.",
    "Nghĩa câu 1": "Chúng tôi đi Việt Nam.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/6836487926.mp3",
    "Câu 2": "你去哪国？",
    "Pinyin câu 2": "Nǐ qù nǎ guó?",
    "Nghĩa câu 2": "Bạn đi nước nào?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/095371d8b9.mp3"
   },
   {
    "Mã": "bai3-越南",
@@ -501,16 +501,16 @@
    "Cấp HSK": "TR",
    "Thuận bút": "越南",
    "Cụm từ": "越南人 | Yuènán rén\n越南文 | Yuènánwén\n去越南 | qù Yuènán",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/29eeb04d53.mp3",
    "_nhom": "moRong",
    "Câu 1": "中国很大，越南很小。",
    "Pinyin câu 1": "Zhōngguó hěn dà, Yuènán hěn xiǎo.",
    "Nghĩa câu 1": "Trung Quốc rất lớn, Việt Nam rất nhỏ.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/088d864710.mp3",
    "Câu 2": "我是越南人。",
    "Pinyin câu 2": "Wǒ shì Yuènán rén.",
    "Nghĩa câu 2": "Tôi là người Việt Nam.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/4469b0e37e.mp3"
   },
   {
    "Mã": "1-0129",
@@ -527,11 +527,11 @@
    "Câu 1": "越南是我们的国家。",
    "Pinyin câu 1": "Yuènán shì wǒmen de guójiā.",
    "Nghĩa câu 1": "Việt Nam là đất nước của chúng tôi.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/b4f2a26eef.mp3",
    "Câu 2": "你们的国家大吗？",
    "Pinyin câu 2": "Nǐmen de guójiā dà ma?",
    "Nghĩa câu 2": "Đất nước của các bạn có lớn không?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/69c37b25fb.mp3"
   },
   {
    "Mã": "1-0254",
@@ -548,11 +548,11 @@
    "Câu 1": "那个人是我的中文老师。",
    "Pinyin câu 1": "Nà ge rén shì wǒ de Zhōngwén lǎoshī.",
    "Nghĩa câu 1": "Người kia là giáo viên tiếng Trung của tôi.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/0f6fb0aede.mp3",
    "Câu 2": "那是我家。",
    "Pinyin câu 2": "Nà shì wǒ jiā.",
    "Nghĩa câu 2": "Kia là nhà tôi.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/64c299aca8.mp3"
   },
   {
    "Mã": "1-0284",
@@ -569,11 +569,11 @@
    "Câu 1": "这是我的好朋友。",
    "Pinyin câu 1": "Zhè shì wǒ de hǎo péngyou.",
    "Nghĩa câu 1": "Đây là bạn thân của tôi.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/14ab76595c.mp3",
    "Câu 2": "他不是你的朋友吗？",
    "Pinyin câu 2": "Tā bú shì nǐ de péngyou ma?",
    "Nghĩa câu 2": "Anh ấy không phải là bạn của bạn à?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/6b6fbbfc85.mp3"
   },
   {
    "Mã": "1-0263",
@@ -590,11 +590,11 @@
    "Câu 1": "我是白家月的男朋友。",
    "Pinyin câu 1": "Wǒ shì Bái Jiāyuè de nánpéngyou.",
    "Nghĩa câu 1": "Tôi là bạn trai của Bạch Gia Nguyệt.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/8257183f58.mp3",
    "Câu 2": "你有男朋友吗？",
    "Pinyin câu 2": "Nǐ yǒu nánpéngyou ma?",
    "Nghĩa câu 2": "Bạn có bạn trai không?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/cb5dccc39a.mp3"
   },
   {
    "Mã": "1-0264",
@@ -611,11 +611,11 @@
    "Câu 1": "那个男人是我爸爸。",
    "Pinyin câu 1": "Nà ge nánrén shì wǒ bàba.",
    "Nghĩa câu 1": "Người đàn ông kia là bố tôi.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/4cffa40d21.mp3",
    "Câu 2": "这个男人是谁？",
    "Pinyin câu 2": "Zhè ge nánrén shì shéi?",
    "Nghĩa câu 2": "Người đàn ông này là ai?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/707da2c4c5.mp3"
   },
   {
    "Mã": "1-0280",
@@ -632,11 +632,11 @@
    "Câu 1": "那个女人是我妈妈。",
    "Pinyin câu 1": "Nà ge nǚrén shì wǒ māma.",
    "Nghĩa câu 1": "Người phụ nữ kia là mẹ tôi.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/40371733fe.mp3",
    "Câu 2": "这个女人是中文老师。",
    "Pinyin câu 2": "Zhè ge nǚrén shì Zhōngwén lǎoshī.",
    "Nghĩa câu 2": "Người phụ nữ này là giáo viên tiếng Trung.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/318977d649.mp3"
   },
   {
    "Mã": "1-0265",
@@ -653,11 +653,11 @@
    "Câu 1": "这个男生是我同学。",
    "Pinyin câu 1": "Zhè ge nánshēng shì wǒ tóngxué.",
    "Nghĩa câu 1": "Bạn nam này là bạn học của tôi.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/6cf5a37dd8.mp3",
    "Câu 2": "那个男生是哪国人？",
    "Pinyin câu 2": "Nà ge nánshēng shì nǎ guó rén?",
    "Nghĩa câu 2": "Bạn nam kia là người nước nào?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/de06c155cf.mp3"
   },
   {
    "Mã": "1-0281",
@@ -674,11 +674,11 @@
    "Câu 1": "那个女生是我的同学。",
    "Pinyin câu 1": "Nà ge nǚshēng shì wǒ de tóngxué.",
    "Nghĩa câu 1": "Bạn nữ kia là bạn học của tôi.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/b1956c76e8.mp3",
    "Câu 2": "这个女生是泰国人吗？",
    "Pinyin câu 2": "Zhè ge nǚshēng shì Tàiguó rén ma?",
    "Nghĩa câu 2": "Bạn nữ này là người Thái Lan à?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/b7f916c803.mp3"
   },
   {
    "Mã": "1-0354",
@@ -695,11 +695,11 @@
    "Câu 1": "他的女朋友是中文老师。",
    "Pinyin câu 1": "Tā de nǚpéngyou shì Zhōngwén lǎoshī.",
    "Nghĩa câu 1": "Bạn gái của anh ấy là giáo viên tiếng Trung.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/220750dcf2.mp3",
    "Câu 2": "他不想学泰语。",
    "Pinyin câu 2": "Tā bù xiǎng xué Tàiyǔ.",
    "Nghĩa câu 2": "Anh ấy không muốn học tiếng Thái.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/f197220379.mp3"
   },
   {
    "Mã": "1-0355",
@@ -716,11 +716,11 @@
    "Câu 1": "他们是哪国人？",
    "Pinyin câu 1": "Tāmen shì nǎ guó rén?",
    "Nghĩa câu 1": "Họ là người nước nào?",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/7ae5c548b4.mp3",
    "Câu 2": "他们是中国人吗？",
    "Pinyin câu 2": "Tāmen shì Zhōngguó rén ma?",
    "Nghĩa câu 2": "Họ là người Trung Quốc à?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/7eadfb4e37.mp3"
   },
   {
    "Mã": "1-0004",
@@ -737,11 +737,11 @@
    "Câu 1": "我爸爸是中文老师。",
    "Pinyin câu 1": "Wǒ bàba shì Zhōngwén lǎoshī.",
    "Nghĩa câu 1": "Bố tôi là giáo viên tiếng Trung.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/d47797bb03.mp3",
    "Câu 2": "他爸爸妈妈很好。",
    "Pinyin câu 2": "Tā bàba māma hěn hǎo.",
    "Nghĩa câu 2": "Bố mẹ anh ấy rất khỏe.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/ff7de59bb4.mp3"
   },
   {
    "Mã": "1-0224",
@@ -758,11 +758,11 @@
    "Câu 1": "我妈妈工作很忙。",
    "Pinyin câu 1": "Wǒ māma gōngzuò hěn máng.",
    "Nghĩa câu 1": "Mẹ tôi công việc rất bận.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/7f1ccb3cda.mp3",
    "Câu 2": "妈妈，我很想你！",
    "Pinyin câu 2": "Māma, wǒ hěn xiǎng nǐ!",
    "Nghĩa câu 2": "Mẹ ơi, con nhớ mẹ lắm!",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/7093a3778e.mp3"
   },
   {
    "Mã": "1-0424",
@@ -779,11 +779,11 @@
    "Câu 1": "我爷爷奶奶是老师。",
    "Pinyin câu 1": "Wǒ yéye nǎinai shì lǎoshī.",
    "Nghĩa câu 1": "Ông bà nội tôi là giáo viên.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/9e17023864.mp3",
    "Câu 2": "爷爷很想你。",
    "Pinyin câu 2": "Yéye hěn xiǎng nǐ.",
    "Nghĩa câu 2": "Ông nội rất nhớ cháu.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/9a28f4c341.mp3"
   },
   {
    "Mã": "1-0260",
@@ -800,11 +800,11 @@
    "Câu 1": "奶奶，您好！",
    "Pinyin câu 1": "Nǎinai, nín hǎo!",
    "Nghĩa câu 1": "Cháu chào bà ạ!",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/5001e8c597.mp3",
    "Câu 2": "奶奶的工作不忙。",
    "Pinyin câu 2": "Nǎinai de gōngzuò bù máng.",
    "Nghĩa câu 2": "Công việc của bà nội không bận.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/4e47263a95.mp3"
   },
   {
    "Mã": "79-2540",
@@ -821,11 +821,11 @@
    "Câu 1": "姥姥很高兴。",
    "Pinyin câu 1": "Lǎolao hěn gāoxìng.",
    "Nghĩa câu 1": "Bà ngoại rất vui.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/a6907345d7.mp3",
    "Câu 2": "我很想姥姥。",
    "Pinyin câu 2": "Wǒ hěn xiǎng lǎolao.",
    "Nghĩa câu 2": "Tôi rất nhớ bà ngoại.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/c2ee9e7507.mp3"
   },
   {
    "Mã": "79-2541",
@@ -842,11 +842,11 @@
    "Câu 1": "姥爷是中文老师。",
    "Pinyin câu 1": "Lǎoye shì Zhōngwén lǎoshī.",
    "Nghĩa câu 1": "Ông ngoại là giáo viên tiếng Trung.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/ec16b9efea.mp3",
    "Câu 2": "我姥爷不太忙。",
    "Pinyin câu 2": "Wǒ lǎoye bú tài máng.",
    "Nghĩa câu 2": "Ông ngoại tôi không bận lắm.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/6c3489bdb5.mp3"
   },
   {
    "Mã": "1-0118",
@@ -863,11 +863,11 @@
    "Câu 1": "你有哥哥、姐姐、弟弟、妹妹吗？",
    "Pinyin câu 1": "Nǐ yǒu gēge, jiějie, dìdi, mèimei ma?",
    "Nghĩa câu 1": "Bạn có anh trai, chị gái, em trai, em gái không?",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/fd5896a06d.mp3",
    "Câu 2": "我哥哥的工作很忙。",
    "Pinyin câu 2": "Wǒ gēge de gōngzuò hěn máng.",
    "Nghĩa câu 2": "Công việc của anh trai tôi rất bận.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/0aac1ec908.mp3"
   },
   {
    "Mã": "1-0074",
@@ -884,11 +884,11 @@
    "Câu 1": "弟弟是我的好朋友。",
    "Pinyin câu 1": "Dìdi shì wǒ de hǎo péngyou.",
    "Nghĩa câu 1": "Em trai là bạn thân của tôi.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/fbecac16ab.mp3",
    "Câu 2": "弟弟是学生，不工作。",
    "Pinyin câu 2": "Dìdi shì xué·shēng, bù gōngzuò.",
    "Nghĩa câu 2": "Em trai là học sinh, không đi làm.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/6fd59e6e9f.mp3"
   },
   {
    "Mã": "1-0237",
@@ -905,11 +905,11 @@
    "Câu 1": "我妹妹是学生。",
    "Pinyin câu 1": "Wǒ mèimei shì xué·shēng.",
    "Nghĩa câu 1": "Em gái tôi là học sinh.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/d74fb73d40.mp3",
    "Câu 2": "我妹妹是中文老师。",
    "Pinyin câu 2": "Wǒ mèimei shì Zhōngwén lǎoshī.",
    "Nghĩa câu 2": "Em gái tôi là giáo viên tiếng Trung.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/c9b0be3201.mp3"
   },
   {
    "Mã": "1-0441",
@@ -926,11 +926,11 @@
    "Câu 1": "你家有谁？",
    "Pinyin câu 1": "Nǐ jiā yǒu shéi?",
    "Nghĩa câu 1": "Nhà bạn có những ai?",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/d6eca350ae.mp3",
    "Câu 2": "我有一个妹妹。",
    "Pinyin câu 2": "Wǒ yǒu yí ge mèimei.",
    "Nghĩa câu 2": "Tôi có một em gái.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/0c22de4d4b.mp3"
   },
   {
    "Mã": "1-0236",
@@ -947,11 +947,11 @@
    "Câu 1": "我没有哥哥。",
    "Pinyin câu 1": "Wǒ méi·yǒu gēge.",
    "Nghĩa câu 1": "Tôi không có anh trai.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/cd2433cc78.mp3",
    "Câu 2": "我没有姐姐，有一个妹妹。",
    "Pinyin câu 2": "Wǒ méi·yǒu jiějie, yǒu yí ge mèimei.",
    "Nghĩa câu 2": "Tôi không có chị gái, có một em gái.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/3a87532030.mp3"
   },
   {
    "Mã": "1-0500",
@@ -968,11 +968,11 @@
    "Câu 1": "你们做什么工作？",
    "Pinyin câu 1": "Nǐmen zuò shénme gōngzuò?",
    "Nghĩa câu 1": "Các bạn làm công việc gì?",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/cau/82bb7086eb.mp3",
    "Câu 2": "你爸爸做什么工作？",
    "Pinyin câu 2": "Nǐ bàba zuò shénme gōngzuò?",
    "Nghĩa câu 2": "Bố bạn làm nghề gì?",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/cau/606994d4e2.mp3"
   }
  ],
  "boThu": [
@@ -2423,28 +2423,33 @@
    "hoi": [
     "你是哪国人？",
     "Nǐ shì nǎ guó rén?",
-    "Bạn là người nước nào?"
+    "Bạn là người nước nào?",
+    "assets/am/cau/c1a9246f49.mp3"
    ],
    "dap": [
     "我是越南人。",
     "Wǒ shì Yuènán rén.",
-    "Mình là người Việt Nam."
+    "Mình là người Việt Nam.",
+    "assets/am/cau/4469b0e37e.mp3"
    ],
    "nhieu": [
     [
      "我叫李文。",
      "Wǒ jiào Lǐ Wén.",
-     "Mình tên là Lý Văn."
+     "Mình tên là Lý Văn.",
+     "assets/am/cau/81dd0cc2e1.mp3"
     ],
     [
      "她是我姐姐。",
      "Tā shì wǒ jiějie.",
-     "Cô ấy là chị gái mình."
+     "Cô ấy là chị gái mình.",
+     "assets/am/cau/34969bc1c7.mp3"
     ],
     [
      "我很忙。",
      "Wǒ hěn máng.",
-     "Mình rất bận."
+     "Mình rất bận.",
+     "assets/am/cau/5900b59384.mp3"
     ]
    ],
    "chang": "3.2"
@@ -2453,28 +2458,33 @@
    "hoi": [
     "她是哪国人？",
     "Tā shì nǎ guó rén?",
-    "Cô ấy là người nước nào?"
+    "Cô ấy là người nước nào?",
+    "assets/am/cau/5befe1ab3c.mp3"
    ],
    "dap": [
     "她是泰国人。",
     "Tā shì Tàiguó rén.",
-    "Cô ấy là người Thái Lan."
+    "Cô ấy là người Thái Lan.",
+    "assets/am/cau/9fdec88dc3.mp3"
    ],
    "nhieu": [
     [
      "她是我姐姐。",
      "Tā shì wǒ jiějie.",
-     "Cô ấy là chị gái mình."
+     "Cô ấy là chị gái mình.",
+     "assets/am/cau/34969bc1c7.mp3"
     ],
     [
      "她工作很忙。",
      "Tā gōngzuò hěn máng.",
-     "Cô ấy công việc rất bận."
+     "Cô ấy công việc rất bận.",
+     "assets/am/cau/567a7eef16.mp3"
     ],
     [
      "她想去中国。",
      "Tā xiǎng qù Zhōngguó.",
-     "Cô ấy muốn đi Trung Quốc."
+     "Cô ấy muốn đi Trung Quốc.",
+     "assets/am/cau/032b7f6516.mp3"
     ]
    ],
    "chang": "3.2"
@@ -2483,28 +2493,33 @@
    "hoi": [
     "这是谁？",
     "Zhè shì shéi?",
-    "Đây là ai?"
+    "Đây là ai?",
+    "assets/am/cau/793ff684c9.mp3"
    ],
    "dap": [
     "这是我妈妈。",
     "Zhè shì wǒ māma.",
-    "Đây là mẹ mình."
+    "Đây là mẹ mình.",
+    "assets/am/cau/0ed28fcd13.mp3"
    ],
    "nhieu": [
     [
      "我是中国人。",
      "Wǒ shì Zhōngguó rén.",
-     "Mình là người Trung Quốc."
+     "Mình là người Trung Quốc.",
+     "assets/am/cau/24adef1380.mp3"
     ],
     [
      "太好了！",
      "Tài hǎo le!",
-     "Tốt quá!"
+     "Tốt quá!",
+     "assets/am/cau/0db9be67e4.mp3"
     ],
     [
      "她很忙。",
      "Tā hěn máng.",
-     "Cô ấy rất bận."
+     "Cô ấy rất bận.",
+     "assets/am/cau/6a9b9eaff9.mp3"
     ]
    ]
   },
@@ -2512,28 +2527,33 @@
    "hoi": [
     "她是谁？",
     "Tā shì shéi?",
-    "Cô ấy là ai?"
+    "Cô ấy là ai?",
+    "assets/am/cau/1bae105976.mp3"
    ],
    "dap": [
     "她是我的中文老师。",
     "Tā shì wǒ de Zhōngwén lǎoshī.",
-    "Cô ấy là giáo viên tiếng Trung của mình."
+    "Cô ấy là giáo viên tiếng Trung của mình.",
+    "assets/am/cau/08c611698b.mp3"
    ],
    "nhieu": [
     [
      "她很忙。",
      "Tā hěn máng.",
-     "Cô ấy rất bận."
+     "Cô ấy rất bận.",
+     "assets/am/cau/6a9b9eaff9.mp3"
     ],
     [
      "她有男朋友。",
      "Tā yǒu nánpéngyou.",
-     "Cô ấy có bạn trai."
+     "Cô ấy có bạn trai.",
+     "assets/am/cau/758a444001.mp3"
     ],
     [
      "她想去泰国。",
      "Tā xiǎng qù Tàiguó.",
-     "Cô ấy muốn đi Thái Lan."
+     "Cô ấy muốn đi Thái Lan.",
+     "assets/am/cau/3578f88c26.mp3"
     ]
    ],
    "chang": "3.2"
@@ -2542,28 +2562,33 @@
    "hoi": [
     "喂，你是谁？",
     "Wèi, nǐ shì shéi?",
-    "A lô, bạn là ai?"
+    "A lô, bạn là ai?",
+    "assets/am/cau/6b33dae619.mp3"
    ],
    "dap": [
     "我是王一雪。",
     "Wǒ shì Wáng Yīxuě.",
-    "Mình là Vương Nhất Tuyết."
+    "Mình là Vương Nhất Tuyết.",
+    "assets/am/cau/6c42969804.mp3"
    ],
    "nhieu": [
     [
      "我是越南人。",
      "Wǒ shì Yuènán rén.",
-     "Mình là người Việt Nam."
+     "Mình là người Việt Nam.",
+     "assets/am/cau/4469b0e37e.mp3"
     ],
     [
      "我很好。",
      "Wǒ hěn hǎo.",
-     "Mình rất khỏe."
+     "Mình rất khỏe.",
+     "assets/am/cau/af96a73bf7.mp3"
     ],
     [
      "我也很想你。",
      "Wǒ yě hěn xiǎng nǐ.",
-     "Mình cũng rất nhớ bạn."
+     "Mình cũng rất nhớ bạn.",
+     "assets/am/cau/c84b568c4c.mp3"
     ]
    ],
    "chang": "3.2"
@@ -2572,28 +2597,33 @@
    "hoi": [
     "他是你的男朋友吗？",
     "Tā shì nǐ de nánpéngyou ma?",
-    "Anh ấy là bạn trai của bạn à?"
+    "Anh ấy là bạn trai của bạn à?",
+    "assets/am/cau/708752ad39.mp3"
    ],
    "dap": [
     "不是，他是我哥哥。",
     "Bú shì, tā shì wǒ gēge.",
-    "Không phải, anh ấy là anh trai mình."
+    "Không phải, anh ấy là anh trai mình.",
+    "assets/am/cau/fccdcd7be7.mp3"
    ],
    "nhieu": [
     [
      "他很忙。",
      "Tā hěn máng.",
-     "Anh ấy rất bận."
+     "Anh ấy rất bận.",
+     "assets/am/cau/c8f4e5a40d.mp3"
     ],
     [
      "他想去泰国。",
      "Tā xiǎng qù Tàiguó.",
-     "Anh ấy muốn đi Thái Lan."
+     "Anh ấy muốn đi Thái Lan.",
+     "assets/am/cau/f4f1599698.mp3"
     ],
     [
      "他是法国人。",
      "Tā shì Fǎguó rén.",
-     "Anh ấy là người Pháp."
+     "Anh ấy là người Pháp.",
+     "assets/am/cau/76aa09a756.mp3"
     ]
    ],
    "chang": "3.2"
@@ -2602,28 +2632,33 @@
    "hoi": [
     "你忙吗？",
     "Nǐ máng ma?",
-    "Bạn có bận không?"
+    "Bạn có bận không?",
+    "assets/am/cau/3bf9ea0a38.mp3"
    ],
    "dap": [
     "我很忙。",
     "Wǒ hěn máng.",
-    "Mình rất bận."
+    "Mình rất bận.",
+    "assets/am/cau/5900b59384.mp3"
    ],
    "nhieu": [
     [
      "我是泰国人。",
      "Wǒ shì Tàiguó rén.",
-     "Mình là người Thái Lan."
+     "Mình là người Thái Lan.",
+     "assets/am/cau/94e90108e9.mp3"
     ],
     [
      "这是我哥哥。",
      "Zhè shì wǒ gēge.",
-     "Đây là anh trai mình."
+     "Đây là anh trai mình.",
+     "assets/am/cau/a5a8008ff5.mp3"
     ],
     [
      "不客气。",
      "Bú kèqi.",
-     "Không có gì."
+     "Không có gì.",
+     "assets/am/cau/9c4d773eef.mp3"
     ]
    ],
    "chang": "3.2"
@@ -2632,28 +2667,33 @@
    "hoi": [
     "你工作还忙吗？",
     "Nǐ gōngzuò hái máng ma?",
-    "Công việc của bạn vẫn bận chứ?"
+    "Công việc của bạn vẫn bận chứ?",
+    "assets/am/cau/2a96c63d65.mp3"
    ],
    "dap": [
     "还很忙。",
     "Hái hěn máng.",
-    "Vẫn rất bận."
+    "Vẫn rất bận.",
+    "assets/am/cau/347ed03f41.mp3"
    ],
    "nhieu": [
     [
      "我是越南人。",
      "Wǒ shì Yuènán rén.",
-     "Mình là người Việt Nam."
+     "Mình là người Việt Nam.",
+     "assets/am/cau/4469b0e37e.mp3"
     ],
     [
      "她是我女朋友。",
      "Tā shì wǒ nǚpéngyou.",
-     "Cô ấy là bạn gái mình."
+     "Cô ấy là bạn gái mình.",
+     "assets/am/cau/2422a9d373.mp3"
     ],
     [
      "没关系。",
      "Méi guānxi.",
-     "Không sao."
+     "Không sao.",
+     "assets/am/cau/e6c20f1d01.mp3"
     ]
    ],
    "chang": "3.2"
@@ -2662,28 +2702,33 @@
    "hoi": [
     "你好吗？",
     "Nǐ hǎo ma?",
-    "Bạn có khỏe không?"
+    "Bạn có khỏe không?",
+    "assets/am/cau/bb0b6bc453.mp3"
    ],
    "dap": [
     "我很好，谢谢！",
     "Wǒ hěn hǎo, xièxie!",
-    "Mình rất khỏe, cảm ơn!"
+    "Mình rất khỏe, cảm ơn!",
+    "assets/am/cau/5aed566b07.mp3"
    ],
    "nhieu": [
     [
      "我是学生。",
      "Wǒ shì xué·shēng.",
-     "Mình là học sinh."
+     "Mình là học sinh.",
+     "assets/am/cau/9d9749882a.mp3"
     ],
     [
      "这是我朋友。",
      "Zhè shì wǒ péngyou.",
-     "Đây là bạn mình."
+     "Đây là bạn mình.",
+     "assets/am/cau/a392593f96.mp3"
     ],
     [
      "没关系。",
      "Méi guānxi.",
-     "Không sao."
+     "Không sao.",
+     "assets/am/cau/e6c20f1d01.mp3"
     ]
    ],
    "chang": "3.2"
@@ -2692,28 +2737,33 @@
    "hoi": [
     "你有哥哥吗？",
     "Nǐ yǒu gēge ma?",
-    "Bạn có anh trai không?"
+    "Bạn có anh trai không?",
+    "assets/am/cau/234a7219c8.mp3"
    ],
    "dap": [
     "没有，我有姐姐。",
     "Méi·yǒu, wǒ yǒu jiějie.",
-    "Không có, mình có chị gái."
+    "Không có, mình có chị gái.",
+    "assets/am/cau/e93ec4f300.mp3"
    ],
    "nhieu": [
     [
      "我是法国人。",
      "Wǒ shì Fǎguó rén.",
-     "Mình là người Pháp."
+     "Mình là người Pháp.",
+     "assets/am/cau/75ecde8a51.mp3"
     ],
     [
      "这是我爸爸。",
      "Zhè shì wǒ bàba.",
-     "Đây là bố mình."
+     "Đây là bố mình.",
+     "assets/am/cau/db5694476a.mp3"
     ],
     [
      "太好了！",
      "Tài hǎo le!",
-     "Tốt quá!"
+     "Tốt quá!",
+     "assets/am/cau/0db9be67e4.mp3"
     ]
    ]
   },
@@ -2721,28 +2771,33 @@
    "hoi": [
     "你家有谁？",
     "Nǐ jiā yǒu shéi?",
-    "Nhà bạn có những ai?"
+    "Nhà bạn có những ai?",
+    "assets/am/cau/d6eca350ae.mp3"
    ],
    "dap": [
     "爸爸、妈妈、哥哥，还有我。",
     "Bàba, māma, gēge, hái yǒu wǒ.",
-    "Bố, mẹ, anh trai, và mình."
+    "Bố, mẹ, anh trai, và mình.",
+    "assets/am/cau/015489f248.mp3"
    ],
    "nhieu": [
     [
      "我家很大。",
      "Wǒ jiā hěn dà.",
-     "Nhà mình rất to."
+     "Nhà mình rất to.",
+     "assets/am/cau/82dbf1a3a8.mp3"
     ],
     [
      "他们是中国人。",
      "Tāmen shì Zhōngguó rén.",
-     "Họ là người Trung Quốc."
+     "Họ là người Trung Quốc.",
+     "assets/am/cau/91b39b17a1.mp3"
     ],
     [
      "我爸爸很忙。",
      "Wǒ bàba hěn máng.",
-     "Bố mình rất bận."
+     "Bố mình rất bận.",
+     "assets/am/cau/2cb6f0eb5f.mp3"
     ]
    ],
    "chang": "3.2"
@@ -2751,28 +2806,33 @@
    "hoi": [
     "你爸爸做什么工作？",
     "Nǐ bàba zuò shénme gōngzuò?",
-    "Bố bạn làm nghề gì?"
+    "Bố bạn làm nghề gì?",
+    "assets/am/cau/606994d4e2.mp3"
    ],
    "dap": [
     "他是老师。",
     "Tā shì lǎoshī.",
-    "Bố mình là giáo viên."
+    "Bố mình là giáo viên.",
+    "assets/am/cau/7c4453d05f.mp3"
    ],
    "nhieu": [
     [
      "他是中国人。",
      "Tā shì Zhōngguó rén.",
-     "Bố mình là người Trung Quốc."
+     "Bố mình là người Trung Quốc.",
+     "assets/am/cau/f800116a04.mp3"
     ],
     [
      "我爸爸很好。",
      "Wǒ bàba hěn hǎo.",
-     "Bố mình rất khỏe."
+     "Bố mình rất khỏe.",
+     "assets/am/cau/018119fd59.mp3"
     ],
     [
      "我有爸爸妈妈。",
      "Wǒ yǒu bàba māma.",
-     "Mình có bố mẹ."
+     "Mình có bố mẹ.",
+     "assets/am/cau/0f1167305d.mp3"
     ]
    ],
    "chang": "3.2"
@@ -2781,28 +2841,33 @@
    "hoi": [
     "你想去哪国？",
     "Nǐ xiǎng qù nǎ guó?",
-    "Bạn muốn đi nước nào?"
+    "Bạn muốn đi nước nào?",
+    "assets/am/cau/3ab4d334b2.mp3"
    ],
    "dap": [
     "我想去中国。",
     "Wǒ xiǎng qù Zhōngguó.",
-    "Mình muốn đi Trung Quốc."
+    "Mình muốn đi Trung Quốc.",
+    "assets/am/cau/84118f2db1.mp3"
    ],
    "nhieu": [
     [
      "我是中国人。",
      "Wǒ shì Zhōngguó rén.",
-     "Mình là người Trung Quốc."
+     "Mình là người Trung Quốc.",
+     "assets/am/cau/24adef1380.mp3"
     ],
     [
      "我很想妈妈。",
      "Wǒ hěn xiǎng māma.",
-     "Mình rất nhớ mẹ."
+     "Mình rất nhớ mẹ.",
+     "assets/am/cau/fbdcf6d29b.mp3"
     ],
     [
      "我很忙。",
      "Wǒ hěn máng.",
-     "Mình rất bận."
+     "Mình rất bận.",
+     "assets/am/cau/5900b59384.mp3"
     ]
    ],
    "chang": "3.2"
@@ -2811,28 +2876,33 @@
    "hoi": [
     "你们的国家大吗？",
     "Nǐmen de guójiā dà ma?",
-    "Đất nước của các bạn có lớn không?"
+    "Đất nước của các bạn có lớn không?",
+    "assets/am/cau/69c37b25fb.mp3"
    ],
    "dap": [
     "很大。",
     "Hěn dà.",
-    "Rất lớn."
+    "Rất lớn.",
+    "assets/am/cau/75301e0c33.mp3"
    ],
    "nhieu": [
     [
      "我们是越南人。",
      "Wǒmen shì Yuènán rén.",
-     "Chúng mình là người Việt Nam."
+     "Chúng mình là người Việt Nam.",
+     "assets/am/cau/8ef84cabc7.mp3"
     ],
     [
      "我们想去中国。",
      "Wǒmen xiǎng qù Zhōngguó.",
-     "Chúng mình muốn đi Trung Quốc."
+     "Chúng mình muốn đi Trung Quốc.",
+     "assets/am/cau/49fefa27e4.mp3"
     ],
     [
      "没关系。",
      "Méi guānxi.",
-     "Không sao."
+     "Không sao.",
+     "assets/am/cau/e6c20f1d01.mp3"
     ]
    ],
    "chang": "3.2"
@@ -2841,28 +2911,33 @@
    "hoi": [
     "李文是哪国人？",
     "Lǐ Wén shì nǎ guó rén?",
-    "Lý Văn là người nước nào?"
+    "Lý Văn là người nước nào?",
+    "assets/am/cau/db6c5d80aa.mp3"
    ],
    "dap": [
     "他是中国人。",
     "Tā shì Zhōngguó rén.",
-    "Anh ấy là người Trung Quốc."
+    "Anh ấy là người Trung Quốc.",
+    "assets/am/cau/f800116a04.mp3"
    ],
    "nhieu": [
     [
      "他是我的中文老师。",
      "Tā shì wǒ de Zhōngwén lǎoshī.",
-     ""
+     "",
+     "assets/am/cau/60f3b50cb0.mp3"
     ],
     [
      "他很忙。",
      "Tā hěn máng.",
-     ""
+     "",
+     "assets/am/cau/c8f4e5a40d.mp3"
     ],
     [
      "他想去中国。",
      "Tā xiǎng qù Zhōngguó.",
-     ""
+     "",
+     "assets/am/cau/2365557032.mp3"
     ]
    ],
    "nguon": "baiKhoa",
@@ -2872,28 +2947,33 @@
    "hoi": [
     "白家月是哪国人？",
     "Bái Jiāyuè shì nǎ guó rén?",
-    "Bạch Gia Nguyệt là người nước nào?"
+    "Bạch Gia Nguyệt là người nước nào?",
+    "assets/am/cau/f2256fb12b.mp3"
    ],
    "dap": [
     "她是法国人。",
     "Tā shì Fǎguó rén.",
-    "Cô ấy là người Pháp."
+    "Cô ấy là người Pháp.",
+    "assets/am/cau/565351ae67.mp3"
    ],
    "nhieu": [
     [
      "她是我的同学。",
      "Tā shì wǒ de tóngxué.",
-     ""
+     "",
+     "assets/am/cau/0c7629919c.mp3"
     ],
     [
      "她很忙。",
      "Tā hěn máng.",
-     ""
+     "",
+     "assets/am/cau/6a9b9eaff9.mp3"
     ],
     [
      "她叫白家月。",
      "Tā jiào Bái Jiāyuè.",
-     ""
+     "",
+     "assets/am/cau/2f4f05b30d.mp3"
     ]
    ],
    "nguon": "baiKhoa",
@@ -2903,28 +2983,33 @@
    "hoi": [
     "白家月的中文老师是哪国人？",
     "Bái Jiāyuè de Zhōngwén lǎoshī shì nǎ guó rén?",
-    "Giáo viên tiếng Trung của Bạch Gia Nguyệt là người nước nào?"
+    "Giáo viên tiếng Trung của Bạch Gia Nguyệt là người nước nào?",
+    "assets/am/cau/ce9b842819.mp3"
    ],
    "dap": [
     "她的中文老师是中国人。",
     "Tā de Zhōngwén lǎoshī shì Zhōngguó rén.",
-    "Giáo viên tiếng Trung của cô ấy là người Trung Quốc."
+    "Giáo viên tiếng Trung của cô ấy là người Trung Quốc.",
+    "assets/am/cau/7029a0bb6c.mp3"
    ],
    "nhieu": [
     [
      "她的中文老师很忙。",
      "Tā de Zhōngwén lǎoshī hěn máng.",
-     ""
+     "",
+     "assets/am/cau/a25ab2751b.mp3"
     ],
     [
      "她是白家月。",
      "Tā shì Bái Jiāyuè.",
-     ""
+     "",
+     "assets/am/cau/acc7c50c58.mp3"
     ],
     [
      "她想去中国。",
      "Tā xiǎng qù Zhōngguó.",
-     ""
+     "",
+     "assets/am/cau/032b7f6516.mp3"
     ]
    ],
    "nguon": "baiKhoa",
@@ -2934,28 +3019,33 @@
    "hoi": [
     "一飞的工作忙吗？",
     "Yīfēi de gōngzuò máng ma?",
-    "Công việc của Nhất Phi có bận không?"
+    "Công việc của Nhất Phi có bận không?",
+    "assets/am/cau/cab57be512.mp3"
    ],
    "dap": [
     "她的工作还很忙。",
     "Tā de gōngzuò hái hěn máng.",
-    "Công việc của cô ấy vẫn rất bận."
+    "Công việc của cô ấy vẫn rất bận.",
+    "assets/am/cau/0f740dbeed.mp3"
    ],
    "nhieu": [
     [
      "她是王一雪的妹妹。",
      "Tā shì Wáng Yīxuě de mèimei.",
-     ""
+     "",
+     "assets/am/cau/98000e7703.mp3"
     ],
     [
      "她很想姐姐。",
      "Tā hěn xiǎng jiějie.",
-     ""
+     "",
+     "assets/am/cau/4553131e3d.mp3"
     ],
     [
      "她是中国人。",
      "Tā shì Zhōngguó rén.",
-     ""
+     "",
+     "assets/am/cau/1346366518.mp3"
     ]
    ],
    "nguon": "baiKhoa",
@@ -2971,7 +3061,8 @@
     "这",
     "的"
    ],
-   "np": "de"
+   "np": "de",
+   "doc": "assets/am/cau/e5cd77fa1b.mp3"
   },
   {
    "han": "她是我的中文老师。",
@@ -2982,7 +3073,8 @@
     "的",
     "中文"
    ],
-   "np": "de"
+   "np": "de",
+   "doc": "assets/am/cau/08c611698b.mp3"
   },
   {
    "han": "那是谁的猫？",
@@ -2993,7 +3085,8 @@
     "谁",
     "的"
    ],
-   "np": "de"
+   "np": "de",
+   "doc": "assets/am/cau/ec26af3f7f.mp3"
   },
   {
    "han": "我的朋友是越南人。",
@@ -3005,7 +3098,8 @@
     "越南",
     "人"
    ],
-   "np": "de"
+   "np": "de",
+   "doc": "assets/am/cau/ce133fdb57.mp3"
   },
   {
    "han": "李文的女朋友是法国人。",
@@ -3017,7 +3111,8 @@
     "法国",
     "人"
    ],
-   "np": "de"
+   "np": "de",
+   "doc": "assets/am/cau/edff6fda36.mp3"
   },
   {
    "han": "你是中国人吗？",
@@ -3028,7 +3123,8 @@
     "人",
     "吗"
    ],
-   "np": "ma"
+   "np": "ma",
+   "doc": "assets/am/cau/49733512b7.mp3"
   },
   {
    "han": "你爸爸忙吗？",
@@ -3039,7 +3135,8 @@
     "忙",
     "吗"
    ],
-   "np": "ma"
+   "np": "ma",
+   "doc": "assets/am/cau/4bc39f8bf5.mp3"
   },
   {
    "han": "她是你的姐姐吗？",
@@ -3051,7 +3148,8 @@
     "姐姐",
     "吗"
    ],
-   "np": "ma"
+   "np": "ma",
+   "doc": "assets/am/cau/c628786234.mp3"
   },
   {
    "han": "你有哥哥吗？",
@@ -3062,7 +3160,8 @@
     "哥哥",
     "吗"
    ],
-   "np": "ma"
+   "np": "ma",
+   "doc": "assets/am/cau/234a7219c8.mp3"
   },
   {
    "han": "她有男朋友吗？",
@@ -3074,7 +3173,8 @@
     "男朋友",
     "吗"
    ],
-   "np": "ma"
+   "np": "ma",
+   "doc": "assets/am/cau/0b051179e8.mp3"
   },
   {
    "han": "这个人是谁？",
@@ -3085,7 +3185,8 @@
     "人",
     "谁"
    ],
-   "np": "zhenana"
+   "np": "zhenana",
+   "doc": "assets/am/cau/1a688e695c.mp3"
   },
   {
    "han": "那个男生是我哥哥。",
@@ -3096,7 +3197,8 @@
     "男生",
     "哥哥"
    ],
-   "np": "zhenana"
+   "np": "zhenana",
+   "doc": "assets/am/cau/26e4cc4fff.mp3"
   },
   {
    "han": "哪个女生是你的女朋友？",
@@ -3108,7 +3210,8 @@
     "的",
     "女朋友"
    ],
-   "np": "zhenana"
+   "np": "zhenana",
+   "doc": "assets/am/cau/65e6a5c716.mp3"
   },
   {
    "han": "这个女人是我妈妈。",
@@ -3119,7 +3222,8 @@
     "女人",
     "妈妈"
    ],
-   "np": "zhenana"
+   "np": "zhenana",
+   "doc": "assets/am/cau/b0059c47a8.mp3"
   },
   {
    "han": "那个男人是哪国人？",
@@ -3132,7 +3236,8 @@
     "国",
     "人"
    ],
-   "np": "zhenana"
+   "np": "zhenana",
+   "doc": "assets/am/cau/73b93740c4.mp3"
   },
   {
    "han": "太好了！",
@@ -3141,7 +3246,8 @@
    "tu": [
     "太"
    ],
-   "np": "tai"
+   "np": "tai",
+   "doc": "assets/am/cau/0db9be67e4.mp3"
   },
   {
    "han": "我爸爸的工作太忙了。",
@@ -3154,7 +3260,8 @@
     "太",
     "忙"
    ],
-   "np": "tai"
+   "np": "tai",
+   "doc": "assets/am/cau/a7617c5d1f.mp3"
   },
   {
    "han": "妈妈太想你了！",
@@ -3165,7 +3272,8 @@
     "太",
     "想"
    ],
-   "np": "tai"
+   "np": "tai",
+   "doc": "assets/am/cau/3f5522bab9.mp3"
   },
   {
    "han": "我的工作不太忙。",
@@ -3177,7 +3285,8 @@
     "太",
     "忙"
    ],
-   "np": "tai"
+   "np": "tai",
+   "doc": "assets/am/cau/b6d4a22945.mp3"
   },
   {
    "han": "姐姐不太高兴。",
@@ -3187,7 +3296,8 @@
     "姐姐",
     "太"
    ],
-   "np": "tai"
+   "np": "tai",
+   "doc": "assets/am/cau/df34997e7c.mp3"
   },
   {
    "han": "我还认识他的妹妹。",
@@ -3199,7 +3309,8 @@
     "的",
     "妹妹"
    ],
-   "np": "hai"
+   "np": "hai",
+   "doc": "assets/am/cau/35f7f927fa.mp3"
   },
   {
    "han": "爷爷还工作。",
@@ -3210,7 +3321,8 @@
     "还",
     "工作"
    ],
-   "np": "hai"
+   "np": "hai",
+   "doc": "assets/am/cau/a450d3debb.mp3"
   },
   {
    "han": "他还很忙。",
@@ -3221,7 +3333,8 @@
     "还",
     "忙"
    ],
-   "np": "hai"
+   "np": "hai",
+   "doc": "assets/am/cau/13d8555223.mp3"
   },
   {
    "han": "我有哥哥，还有弟弟。",
@@ -3233,7 +3346,8 @@
     "还",
     "弟弟"
    ],
-   "np": "hai"
+   "np": "hai",
+   "doc": "assets/am/cau/446f182b90.mp3"
   },
   {
    "han": "奶奶还想去中国。",
@@ -3246,7 +3360,8 @@
     "去",
     "中国"
    ],
-   "np": "hai"
+   "np": "hai",
+   "doc": "assets/am/cau/8a165a34f6.mp3"
   },
   {
    "han": "我很想妈妈。",
@@ -3256,7 +3371,8 @@
     "想",
     "妈妈"
    ],
-   "np": "xiang"
+   "np": "xiang",
+   "doc": "assets/am/cau/fbdcf6d29b.mp3"
   },
   {
    "han": "我想去法国。",
@@ -3267,7 +3383,8 @@
     "去",
     "法国"
    ],
-   "np": "xiang"
+   "np": "xiang",
+   "doc": "assets/am/cau/1a1918bbcc.mp3"
   },
   {
    "han": "姥姥很想你。",
@@ -3277,7 +3394,8 @@
     "姥姥",
     "想"
    ],
-   "np": "xiang"
+   "np": "xiang",
+   "doc": "assets/am/cau/b16f27b6c2.mp3"
   },
   {
    "han": "姥爷想去越南。",
@@ -3289,7 +3407,8 @@
     "去",
     "越南"
    ],
-   "np": "xiang"
+   "np": "xiang",
+   "doc": "assets/am/cau/f63da132e9.mp3"
   },
   {
    "han": "他们想学中文。",
@@ -3300,7 +3419,8 @@
     "想",
     "中文"
    ],
-   "np": "xiang"
+   "np": "xiang",
+   "doc": "assets/am/cau/1b71d24bf1.mp3"
   },
   {
    "han": "喂，你好！",
@@ -3308,7 +3428,8 @@
    "viet": "A lô, xin chào!",
    "tu": [
     "喂"
-   ]
+   ],
+   "doc": "assets/am/cau/04942f9be5.mp3"
   },
   {
    "han": "喂，是王老师吗？",
@@ -3317,7 +3438,8 @@
    "tu": [
     "喂",
     "吗"
-   ]
+   ],
+   "doc": "assets/am/cau/a779da1d9f.mp3"
   },
   {
    "han": "喂，妈妈！",
@@ -3326,7 +3448,8 @@
    "tu": [
     "喂",
     "妈妈"
-   ]
+   ],
+   "doc": "assets/am/cau/858f750370.mp3"
   },
   {
    "han": "对，我是越南人。",
@@ -3336,7 +3459,8 @@
     "对",
     "越南",
     "人"
-   ]
+   ],
+   "doc": "assets/am/cau/65f2db2d17.mp3"
   },
   {
    "han": "对，他是我弟弟。",
@@ -3346,7 +3470,8 @@
     "对",
     "他",
     "弟弟"
-   ]
+   ],
+   "doc": "assets/am/cau/284e6a4310.mp3"
   },
   {
    "han": "对，这是我的猫。",
@@ -3356,7 +3481,8 @@
     "对",
     "这",
     "的"
-   ]
+   ],
+   "doc": "assets/am/cau/95d3e23c47.mp3"
   },
   {
    "han": "她是泰国人。",
@@ -3366,7 +3492,8 @@
     "她",
     "泰国",
     "人"
-   ]
+   ],
+   "doc": "assets/am/cau/9fdec88dc3.mp3"
   },
   {
    "han": "我想去泰国。",
@@ -3376,7 +3503,8 @@
     "想",
     "去",
     "泰国"
-   ]
+   ],
+   "doc": "assets/am/cau/e311fe0c1f.mp3"
   },
   {
    "han": "泰国很大吗？",
@@ -3385,7 +3513,8 @@
    "tu": [
     "泰国",
     "吗"
-   ]
+   ],
+   "doc": "assets/am/cau/6f73e9c0d3.mp3"
   },
   {
    "han": "越南是我的国家。",
@@ -3395,7 +3524,8 @@
     "越南",
     "的",
     "国家"
-   ]
+   ],
+   "doc": "assets/am/cau/a371d26836.mp3"
   },
   {
    "han": "你想去哪个国家？",
@@ -3406,7 +3536,8 @@
     "去",
     "哪",
     "国家"
-   ]
+   ],
+   "doc": "assets/am/cau/13f0d91b4f.mp3"
   },
   {
    "han": "我没有姐姐。",
@@ -3415,7 +3546,8 @@
    "tu": [
     "没有",
     "姐姐"
-   ]
+   ],
+   "doc": "assets/am/cau/f18539e116.mp3"
   },
   {
    "han": "他没有女朋友。",
@@ -3425,7 +3557,8 @@
     "他",
     "没有",
     "女朋友"
-   ]
+   ],
+   "doc": "assets/am/cau/05c8bd0b88.mp3"
   },
   {
    "han": "我没有工作。",
@@ -3434,7 +3567,8 @@
    "tu": [
     "没有",
     "工作"
-   ]
+   ],
+   "doc": "assets/am/cau/42ac40d68f.mp3"
   },
   {
    "han": "你妈妈做什么工作？",
@@ -3444,7 +3578,8 @@
     "妈妈",
     "做",
     "工作"
-   ]
+   ],
+   "doc": "assets/am/cau/0a9a2bf593.mp3"
   },
   {
    "han": "你想做什么？",
@@ -3453,7 +3588,8 @@
    "tu": [
     "想",
     "做"
-   ]
+   ],
+   "doc": "assets/am/cau/f1f2c6f58c.mp3"
   },
   {
    "han": "王老师是中国人。",
@@ -3462,7 +3598,8 @@
    "tu": [
     "中国",
     "人"
-   ]
+   ],
+   "doc": "assets/am/cau/8efc9f30e3.mp3"
   },
   {
    "han": "他们是我的同学。",
@@ -3471,7 +3608,8 @@
    "tu": [
     "他们",
     "的"
-   ]
+   ],
+   "doc": "assets/am/cau/c14331b076.mp3"
   },
   {
    "han": "我姐姐的男朋友是法国人。",
@@ -3483,7 +3621,8 @@
     "男朋友",
     "法国",
     "人"
-   ]
+   ],
+   "doc": "assets/am/cau/885ef0a8f8.mp3"
   },
   {
    "han": "这是我的女朋友。",
@@ -3493,7 +3632,8 @@
     "这",
     "的",
     "女朋友"
-   ]
+   ],
+   "doc": "assets/am/cau/98dc2774cd.mp3"
   },
   {
    "han": "那个人是我朋友。",
@@ -3503,7 +3643,8 @@
     "那",
     "人",
     "朋友"
-   ]
+   ],
+   "doc": "assets/am/cau/763da49e08.mp3"
   },
   {
    "han": "我们是好朋友。",
@@ -3512,7 +3653,8 @@
    "tu": [
     "我们",
     "朋友"
-   ]
+   ],
+   "doc": "assets/am/cau/83ee9ab086.mp3"
   },
   {
    "han": "这是我爸爸。",
@@ -3521,7 +3663,8 @@
    "tu": [
     "这",
     "爸爸"
-   ]
+   ],
+   "doc": "assets/am/cau/db5694476a.mp3"
   },
   {
    "han": "我爸爸是老师。",
@@ -3529,7 +3672,8 @@
    "viet": "Bố tôi là giáo viên.",
    "tu": [
     "爸爸"
-   ]
+   ],
+   "doc": "assets/am/cau/100fde62b4.mp3"
   },
   {
    "han": "我们是越南人。",
@@ -3539,7 +3683,8 @@
     "我们",
     "越南",
     "人"
-   ]
+   ],
+   "doc": "assets/am/cau/8ef84cabc7.mp3"
   },
   {
    "han": "我们想去泰国。",
@@ -3550,7 +3695,8 @@
     "想",
     "去",
     "泰国"
-   ]
+   ],
+   "doc": "assets/am/cau/03d8b275ca.mp3"
   },
   {
    "han": "她不是我的女朋友。",
@@ -3560,7 +3706,8 @@
     "她",
     "的",
     "女朋友"
-   ]
+   ],
+   "doc": "assets/am/cau/b10417ef6d.mp3"
   },
   {
    "han": "谁是你的老师？",
@@ -3569,7 +3716,8 @@
    "tu": [
     "谁",
     "的"
-   ]
+   ],
+   "doc": "assets/am/cau/418d4813c9.mp3"
   },
   {
    "han": "你朋友是哪国人？",
@@ -3580,7 +3728,8 @@
     "哪",
     "国",
     "人"
-   ]
+   ],
+   "doc": "assets/am/cau/bf03cd589e.mp3"
   },
   {
    "han": "她是哪国学生？",
@@ -3590,7 +3739,8 @@
     "她",
     "哪",
     "国"
-   ]
+   ],
+   "doc": "assets/am/cau/a160f671f2.mp3"
   },
   {
    "han": "我们的中文老师是中国人。",
@@ -3602,7 +3752,8 @@
     "中文",
     "中国",
     "人"
-   ]
+   ],
+   "doc": "assets/am/cau/5ea0d46fbe.mp3"
   },
   {
    "han": "那是我的狗。",
@@ -3611,7 +3762,8 @@
    "tu": [
     "那",
     "的"
-   ]
+   ],
+   "doc": "assets/am/cau/0e0a64236e.mp3"
   },
   {
    "han": "这个男人是我爸爸。",
@@ -3621,7 +3773,8 @@
     "这",
     "男人",
     "爸爸"
-   ]
+   ],
+   "doc": "assets/am/cau/6a290a4d61.mp3"
   },
   {
    "han": "那个男人很忙。",
@@ -3631,7 +3784,8 @@
     "那",
     "男人",
     "忙"
-   ]
+   ],
+   "doc": "assets/am/cau/9280f6e089.mp3"
   },
   {
    "han": "那个女人是谁？",
@@ -3641,7 +3795,8 @@
     "那",
     "女人",
     "谁"
-   ]
+   ],
+   "doc": "assets/am/cau/5a55f104e6.mp3"
   },
   {
    "han": "这个女人是泰国人。",
@@ -3652,7 +3807,8 @@
     "女人",
     "泰国",
     "人"
-   ]
+   ],
+   "doc": "assets/am/cau/6e50a9f190.mp3"
   },
   {
    "han": "这个男生是越南人。",
@@ -3663,7 +3819,8 @@
     "男生",
     "越南",
     "人"
-   ]
+   ],
+   "doc": "assets/am/cau/042c72fd08.mp3"
   },
   {
    "han": "男生们很高兴。",
@@ -3671,7 +3828,8 @@
    "viet": "Các bạn nam rất vui.",
    "tu": [
     "男生"
-   ]
+   ],
+   "doc": "assets/am/cau/49efc686f1.mp3"
   },
   {
    "han": "女生们好！",
@@ -3679,7 +3837,8 @@
    "viet": "Chào các bạn nữ!",
    "tu": [
     "女生"
-   ]
+   ],
+   "doc": "assets/am/cau/a21d788647.mp3"
   },
   {
    "han": "我姥姥、姥爷很好。",
@@ -3688,7 +3847,8 @@
    "tu": [
     "姥姥",
     "姥爷"
-   ]
+   ],
+   "doc": "assets/am/cau/8f2632e786.mp3"
   },
   {
    "han": "爷爷奶奶很好。",
@@ -3697,7 +3857,8 @@
    "tu": [
     "爷爷",
     "奶奶"
-   ]
+   ],
+   "doc": "assets/am/cau/222953f535.mp3"
   },
   {
    "han": "我有一个弟弟。",
@@ -3706,7 +3867,8 @@
    "tu": [
     "有",
     "弟弟"
-   ]
+   ],
+   "doc": "assets/am/cau/36456ebad1.mp3"
   },
   {
    "han": "我弟弟是小学生。",
@@ -3714,7 +3876,8 @@
    "viet": "Em trai tôi là học sinh tiểu học.",
    "tu": [
     "弟弟"
-   ]
+   ],
+   "doc": "assets/am/cau/bba952f926.mp3"
   },
   {
    "han": "哥哥是大学生。",
@@ -3722,7 +3885,8 @@
    "viet": "Anh trai là sinh viên đại học.",
    "tu": [
     "哥哥"
-   ]
+   ],
+   "doc": "assets/am/cau/39d411b80c.mp3"
   },
   {
    "han": "姐姐想去泰国。",
@@ -3733,7 +3897,8 @@
     "想",
     "去",
     "泰国"
-   ]
+   ],
+   "doc": "assets/am/cau/0303327eaa.mp3"
   },
   {
    "han": "我姐姐是中文老师。",
@@ -3742,7 +3907,8 @@
    "tu": [
     "姐姐",
     "中文"
-   ]
+   ],
+   "doc": "assets/am/cau/149bdad476.mp3"
   },
   {
    "han": "爸爸、妈妈，我很想你们！",
@@ -3752,7 +3918,8 @@
     "爸爸",
     "妈妈",
     "想"
-   ]
+   ],
+   "doc": "assets/am/cau/de707584d0.mp3"
   },
   {
    "han": "这是我妹妹。",
@@ -3761,7 +3928,8 @@
    "tu": [
     "这",
     "妹妹"
-   ]
+   ],
+   "doc": "assets/am/cau/5494d0c0ce.mp3"
   },
   {
    "han": "我是法国人。",
@@ -3771,7 +3939,8 @@
     "人",
     "法国"
    ],
-   "nguon": "baiKhoa"
+   "nguon": "baiKhoa",
+   "doc": "assets/am/cau/75ecde8a51.mp3"
   },
   {
    "han": "我的中文老师也是中国人。",
@@ -3784,7 +3953,8 @@
     "中文"
    ],
    "nguon": "baiKhoa",
-   "np": "de"
+   "np": "de",
+   "doc": "assets/am/cau/c689abef38.mp3"
   },
   {
    "han": "白家月的中文老师是中国人。",
@@ -3797,7 +3967,8 @@
     "中文"
    ],
    "nguon": "baiKhoa",
-   "np": "de"
+   "np": "de",
+   "doc": "assets/am/cau/0f0bf45701.mp3"
   },
   {
    "han": "白家月不是中国人。",
@@ -3807,7 +3978,8 @@
     "人",
     "中国"
    ],
-   "nguon": "baiKhoa"
+   "nguon": "baiKhoa",
+   "doc": "assets/am/cau/b551f31bff.mp3"
   },
   {
    "han": "她也是泰国人。",
@@ -3818,7 +3990,8 @@
     "她",
     "泰国"
    ],
-   "nguon": "baiKhoa"
+   "nguon": "baiKhoa",
+   "doc": "assets/am/cau/a222fdc7d0.mp3"
   },
   {
    "han": "我不太忙。",
@@ -3829,7 +4002,8 @@
     "太"
    ],
    "nguon": "baiKhoa",
-   "np": "tai"
+   "np": "tai",
+   "doc": "assets/am/cau/4f4609acce.mp3"
   },
   {
    "han": "我也想你们。",
@@ -3839,7 +4013,8 @@
     "想"
    ],
    "nguon": "baiKhoa",
-   "np": "xiang"
+   "np": "xiang",
+   "doc": "assets/am/cau/37afbe47d1.mp3"
   }
  ],
  "hoiThoai": [
@@ -3849,51 +4024,61 @@
     {
      "han": "喂，你好！是李文吗？",
      "py": "Wèi, nǐ hǎo! Shì Lǐ Wén ma?",
-     "viet": "A lô, xin chào! Có phải Lý Văn không?"
+     "viet": "A lô, xin chào! Có phải Lý Văn không?",
+     "doc": "assets/am/cau/235e00ee7c.mp3"
     },
     {
      "han": "是，你是谁？",
      "py": "Shì, nǐ shì shéi?",
-     "viet": "Phải, bạn là ai?"
+     "viet": "Phải, bạn là ai?",
+     "doc": "assets/am/cau/d0db721248.mp3"
     },
     {
      "han": "我是王一雪。你忙吗？",
      "py": "Wǒ shì Wáng Yīxuě. Nǐ máng ma?",
-     "viet": "Mình là Vương Nhất Tuyết. Bạn có bận không?"
+     "viet": "Mình là Vương Nhất Tuyết. Bạn có bận không?",
+     "doc": "assets/am/cau/936f9f8c56.mp3"
     },
     {
      "han": "不太忙。",
      "py": "Bú tài máng.",
-     "viet": "Không bận lắm."
+     "viet": "Không bận lắm.",
+     "doc": "assets/am/cau/066df31f9d.mp3"
     }
    ],
    "nhieu": {
     "1": [
      {
       "han": "我是越南人。",
-      "py": "Wǒ shì Yuènán rén."
+      "py": "Wǒ shì Yuènán rén.",
+      "doc": "assets/am/cau/4469b0e37e.mp3"
      },
      {
       "han": "太好了！",
-      "py": "Tài hǎo le!"
+      "py": "Tài hǎo le!",
+      "doc": "assets/am/cau/0db9be67e4.mp3"
      },
      {
       "han": "她是我姐姐。",
-      "py": "Tā shì wǒ jiějie."
+      "py": "Tā shì wǒ jiějie.",
+      "doc": "assets/am/cau/34969bc1c7.mp3"
      }
     ],
     "3": [
      {
       "han": "我是中国人。",
-      "py": "Wǒ shì Zhōngguó rén."
+      "py": "Wǒ shì Zhōngguó rén.",
+      "doc": "assets/am/cau/24adef1380.mp3"
      },
      {
       "han": "这是我妈妈。",
-      "py": "Zhè shì wǒ māma."
+      "py": "Zhè shì wǒ māma.",
+      "doc": "assets/am/cau/0ed28fcd13.mp3"
      },
      {
       "han": "我想去法国。",
-      "py": "Wǒ xiǎng qù Fǎguó."
+      "py": "Wǒ xiǎng qù Fǎguó.",
+      "doc": "assets/am/cau/1a1918bbcc.mp3"
      }
     ]
    }
@@ -3904,75 +4089,90 @@
     {
      "han": "这是谁？",
      "py": "Zhè shì shéi?",
-     "viet": "Đây là ai?"
+     "viet": "Đây là ai?",
+     "doc": "assets/am/cau/793ff684c9.mp3"
     },
     {
      "han": "这是我姐姐。",
      "py": "Zhè shì wǒ jiějie.",
-     "viet": "Đây là chị gái mình."
+     "viet": "Đây là chị gái mình.",
+     "doc": "assets/am/cau/9541548da6.mp3"
     },
     {
      "han": "她做什么工作？",
      "py": "Tā zuò shénme gōngzuò?",
-     "viet": "Chị ấy làm nghề gì?"
+     "viet": "Chị ấy làm nghề gì?",
+     "doc": "assets/am/cau/946696420f.mp3"
     },
     {
      "han": "她是中文老师。",
      "py": "Tā shì Zhōngwén lǎoshī.",
-     "viet": "Chị ấy là giáo viên tiếng Trung."
+     "viet": "Chị ấy là giáo viên tiếng Trung.",
+     "doc": "assets/am/cau/cde07e2ffb.mp3"
     },
     {
      "han": "她的工作忙吗？",
      "py": "Tā de gōngzuò máng ma?",
-     "viet": "Công việc của chị ấy có bận không?"
+     "viet": "Công việc của chị ấy có bận không?",
+     "doc": "assets/am/cau/5c4321bb61.mp3"
     },
     {
      "han": "太忙了！",
      "py": "Tài máng le!",
-     "viet": "Bận quá!"
+     "viet": "Bận quá!",
+     "doc": "assets/am/cau/73d814d84d.mp3"
     }
    ],
    "nhieu": {
     "1": [
      {
       "han": "她是法国人。",
-      "py": "Tā shì Fǎguó rén."
+      "py": "Tā shì Fǎguó rén.",
+      "doc": "assets/am/cau/565351ae67.mp3"
      },
      {
       "han": "我想去泰国。",
-      "py": "Wǒ xiǎng qù Tàiguó."
+      "py": "Wǒ xiǎng qù Tàiguó.",
+      "doc": "assets/am/cau/e311fe0c1f.mp3"
      },
      {
       "han": "我没有工作。",
-      "py": "Wǒ méi·yǒu gōngzuò."
+      "py": "Wǒ méi·yǒu gōngzuò.",
+      "doc": "assets/am/cau/42ac40d68f.mp3"
      }
     ],
     "3": [
      {
       "han": "她是越南人。",
-      "py": "Tā shì Yuènán rén."
+      "py": "Tā shì Yuènán rén.",
+      "doc": "assets/am/cau/2403779820.mp3"
      },
      {
       "han": "她很想妈妈。",
-      "py": "Tā hěn xiǎng māma."
+      "py": "Tā hěn xiǎng māma.",
+      "doc": "assets/am/cau/fd4b012699.mp3"
      },
      {
       "han": "她有男朋友。",
-      "py": "Tā yǒu nánpéngyou."
+      "py": "Tā yǒu nánpéngyou.",
+      "doc": "assets/am/cau/758a444001.mp3"
      }
     ],
     "5": [
      {
       "han": "她是中文老师。",
-      "py": "Tā shì Zhōngwén lǎoshī."
+      "py": "Tā shì Zhōngwén lǎoshī.",
+      "doc": "assets/am/cau/cde07e2ffb.mp3"
      },
      {
       "han": "她想去中国。",
-      "py": "Tā xiǎng qù Zhōngguó."
+      "py": "Tā xiǎng qù Zhōngguó.",
+      "doc": "assets/am/cau/032b7f6516.mp3"
      },
      {
       "han": "这是我的猫。",
-      "py": "Zhè shì wǒ de māo."
+      "py": "Zhè shì wǒ de māo.",
+      "doc": "assets/am/cau/119fa0d652.mp3"
      }
     ]
    }
@@ -3983,51 +4183,61 @@
     {
      "han": "你的朋友是哪国人？",
      "py": "Nǐ de péngyou shì nǎ guó rén?",
-     "viet": "Bạn của bạn là người nước nào?"
+     "viet": "Bạn của bạn là người nước nào?",
+     "doc": "assets/am/cau/0ef0c93f7a.mp3"
     },
     {
      "han": "他是法国人。",
      "py": "Tā shì Fǎguó rén.",
-     "viet": "Bạn ấy là người Pháp."
+     "viet": "Bạn ấy là người Pháp.",
+     "doc": "assets/am/cau/76aa09a756.mp3"
     },
     {
      "han": "他想去越南吗？",
      "py": "Tā xiǎng qù Yuènán ma?",
-     "viet": "Bạn ấy có muốn đi Việt Nam không?"
+     "viet": "Bạn ấy có muốn đi Việt Nam không?",
+     "doc": "assets/am/cau/b0093b4933.mp3"
     },
     {
      "han": "想，他很想去越南。",
      "py": "Xiǎng, tā hěn xiǎng qù Yuènán.",
-     "viet": "Có, bạn ấy rất muốn đi Việt Nam."
+     "viet": "Có, bạn ấy rất muốn đi Việt Nam.",
+     "doc": "assets/am/cau/de224c5517.mp3"
     }
    ],
    "nhieu": {
     "1": [
      {
       "han": "他是我哥哥。",
-      "py": "Tā shì wǒ gēge."
+      "py": "Tā shì wǒ gēge.",
+      "doc": "assets/am/cau/ca8ba843d2.mp3"
      },
      {
       "han": "他还很忙。",
-      "py": "Tā hái hěn máng."
+      "py": "Tā hái hěn máng.",
+      "doc": "assets/am/cau/13d8555223.mp3"
      },
      {
       "han": "他有女朋友。",
-      "py": "Tā yǒu nǚpéngyou."
+      "py": "Tā yǒu nǚpéngyou.",
+      "doc": "assets/am/cau/8eec5c654e.mp3"
      }
     ],
     "3": [
      {
       "han": "他是越南人。",
-      "py": "Tā shì Yuènán rén."
+      "py": "Tā shì Yuènán rén.",
+      "doc": "assets/am/cau/1485ab6823.mp3"
      },
      {
       "han": "对，他是我弟弟。",
-      "py": "Duì, tā shì wǒ dìdi."
+      "py": "Duì, tā shì wǒ dìdi.",
+      "doc": "assets/am/cau/284e6a4310.mp3"
      },
      {
       "han": "他没有工作。",
-      "py": "Tā méi·yǒu gōngzuò."
+      "py": "Tā méi·yǒu gōngzuò.",
+      "doc": "assets/am/cau/a1a53d2ac5.mp3"
      }
     ]
    },
@@ -4039,51 +4249,61 @@
     {
      "han": "这是谁？",
      "py": "Zhè shì shéi?",
-     "viet": "Đây là ai?"
+     "viet": "Đây là ai?",
+     "doc": "assets/am/cau/793ff684c9.mp3"
     },
     {
      "han": "这是我女朋友。",
      "py": "Zhè shì wǒ nǚpéngyou.",
-     "viet": "Đây là bạn gái mình."
+     "viet": "Đây là bạn gái mình.",
+     "doc": "assets/am/cau/849a026bf6.mp3"
     },
     {
      "han": "你女朋友是哪国人？",
      "py": "Nǐ nǚpéngyou shì nǎ guó rén?",
-     "viet": "Bạn gái của bạn là người nước nào?"
+     "viet": "Bạn gái của bạn là người nước nào?",
+     "doc": "assets/am/cau/e9c2c50920.mp3"
     },
     {
      "han": "她也是泰国人。",
      "py": "Tā yě shì Tàiguó rén.",
-     "viet": "Cô ấy cũng là người Thái Lan."
+     "viet": "Cô ấy cũng là người Thái Lan.",
+     "doc": "assets/am/cau/a222fdc7d0.mp3"
     }
    ],
    "nhieu": {
     "1": [
      {
       "han": "我是中国人。",
-      "py": "Wǒ shì Zhōngguó rén."
+      "py": "Wǒ shì Zhōngguó rén.",
+      "doc": "assets/am/cau/24adef1380.mp3"
      },
      {
       "han": "她很忙。",
-      "py": "Tā hěn máng."
+      "py": "Tā hěn máng.",
+      "doc": "assets/am/cau/6a9b9eaff9.mp3"
      },
      {
       "han": "我想去泰国。",
-      "py": "Wǒ xiǎng qù Tàiguó."
+      "py": "Wǒ xiǎng qù Tàiguó.",
+      "doc": "assets/am/cau/e311fe0c1f.mp3"
      }
     ],
     "3": [
      {
       "han": "这是我女朋友。",
-      "py": "Zhè shì wǒ nǚpéngyou."
+      "py": "Zhè shì wǒ nǚpéngyou.",
+      "doc": "assets/am/cau/849a026bf6.mp3"
      },
      {
       "han": "她很忙。",
-      "py": "Tā hěn máng."
+      "py": "Tā hěn máng.",
+      "doc": "assets/am/cau/6a9b9eaff9.mp3"
      },
      {
       "han": "她想去中国。",
-      "py": "Tā xiǎng qù Zhōngguó."
+      "py": "Tā xiǎng qù Zhōngguó.",
+      "doc": "assets/am/cau/032b7f6516.mp3"
      }
     ]
    },
@@ -4096,89 +4316,107 @@
     {
      "han": "喂，一飞！",
      "py": "Wèi, Yīfēi!",
-     "viet": "A lô, Nhất Phi à!"
+     "viet": "A lô, Nhất Phi à!",
+     "doc": "assets/am/cau/a273a71dea.mp3"
     },
     {
      "han": "姐姐！",
      "py": "Jiějie!",
-     "viet": "Chị ơi!"
+     "viet": "Chị ơi!",
+     "doc": "assets/am/cau/4a9b224e70.mp3"
     },
     {
      "han": "你工作还忙吗？",
      "py": "Nǐ gōngzuò hái máng ma?",
-     "viet": "Công việc của em vẫn bận à?"
+     "viet": "Công việc của em vẫn bận à?",
+     "doc": "assets/am/cau/2a96c63d65.mp3"
     },
     {
      "han": "对，还很忙。你也很忙吗？",
      "py": "Duì, hái hěn máng. Nǐ yě hěn máng ma?",
-     "viet": "Vâng, vẫn rất bận. Chị cũng rất bận à?"
+     "viet": "Vâng, vẫn rất bận. Chị cũng rất bận à?",
+     "doc": "assets/am/cau/f35cf55c92.mp3"
     },
     {
      "han": "我不太忙。我们很想你。",
      "py": "Wǒ bú tài máng. Wǒmen hěn xiǎng nǐ.",
-     "viet": "Chị không bận lắm. Mọi người rất nhớ em."
+     "viet": "Chị không bận lắm. Mọi người rất nhớ em.",
+     "doc": "assets/am/cau/a8b8ed7f37.mp3"
     },
     {
      "han": "我也想你们。",
      "py": "Wǒ yě xiǎng nǐmen.",
-     "viet": "Em cũng nhớ mọi người."
+     "viet": "Em cũng nhớ mọi người.",
+     "doc": "assets/am/cau/37afbe47d1.mp3"
     }
    ],
    "nhieu": {
     "1": [
      {
       "han": "对，还很忙。",
-      "py": "Duì, hái hěn máng."
+      "py": "Duì, hái hěn máng.",
+      "doc": "assets/am/cau/c16448dce5.mp3"
      },
      {
       "han": "我也想你们。",
-      "py": "Wǒ yě xiǎng nǐmen."
+      "py": "Wǒ yě xiǎng nǐmen.",
+      "doc": "assets/am/cau/37afbe47d1.mp3"
      },
      {
       "han": "不太忙。",
-      "py": "Bú tài máng."
+      "py": "Bú tài máng.",
+      "doc": "assets/am/cau/066df31f9d.mp3"
      }
     ],
     "3": [
      {
       "han": "姐姐！",
-      "py": "Jiějie!"
+      "py": "Jiějie!",
+      "doc": "assets/am/cau/4a9b224e70.mp3"
      },
      {
       "han": "我也想你们。",
-      "py": "Wǒ yě xiǎng nǐmen."
+      "py": "Wǒ yě xiǎng nǐmen.",
+      "doc": "assets/am/cau/37afbe47d1.mp3"
      },
      {
       "han": "我是中国人。",
-      "py": "Wǒ shì Zhōngguó rén."
+      "py": "Wǒ shì Zhōngguó rén.",
+      "doc": "assets/am/cau/24adef1380.mp3"
      }
     ],
     "4": [
      {
       "han": "对，还很忙。",
-      "py": "Duì, hái hěn máng."
+      "py": "Duì, hái hěn máng.",
+      "doc": "assets/am/cau/c16448dce5.mp3"
      },
      {
       "han": "喂，一飞！",
-      "py": "Wèi, Yīfēi!"
+      "py": "Wèi, Yīfēi!",
+      "doc": "assets/am/cau/a273a71dea.mp3"
      },
      {
       "han": "她是我姐姐。",
-      "py": "Tā shì wǒ jiějie."
+      "py": "Tā shì wǒ jiějie.",
+      "doc": "assets/am/cau/34969bc1c7.mp3"
      }
     ],
     "5": [
      {
       "han": "姐姐！",
-      "py": "Jiějie!"
+      "py": "Jiějie!",
+      "doc": "assets/am/cau/4a9b224e70.mp3"
      },
      {
       "han": "我不太忙。",
-      "py": "Wǒ bú tài máng."
+      "py": "Wǒ bú tài máng.",
+      "doc": "assets/am/cau/4f4609acce.mp3"
      },
      {
       "han": "你工作还忙吗？",
-      "py": "Nǐ gōngzuò hái máng ma?"
+      "py": "Nǐ gōngzuò hái máng ma?",
+      "doc": "assets/am/cau/2a96c63d65.mp3"
      }
     ]
    },
