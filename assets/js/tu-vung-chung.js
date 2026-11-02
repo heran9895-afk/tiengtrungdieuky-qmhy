@@ -108,7 +108,7 @@
   function doc(txt, nut) {
     dungDoc();
     if (laFileAm(txt)) {
-      var a = amDang = new Audio(txt);
+      var a = amDang = new Audio(/^(https?:)?\/|^\.\.?\//.test(txt) ? txt : ROOT + txt);   // đường dẫn tương đối tính từ gốc web
       if (nut) { nut.classList.add('dang-doc'); a.onended = a.onerror = function () { nut.classList.remove('dang-doc'); }; }
       a.play().catch(function () { if (nut) nut.classList.remove('dang-doc'); baoLoi('Chưa phát được file âm thanh.'); });
       return;
