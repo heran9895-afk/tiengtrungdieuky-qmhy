@@ -1379,7 +1379,8 @@
          "是越南人。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/458dc50a9d.mp3"
       ]
      ]
     },
@@ -1438,7 +1439,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/849a026bf6.mp3"
       ]
      ]
     }
@@ -1535,7 +1537,8 @@
          "？",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/a1e2e12f57.mp3"
       ]
      ]
     },
@@ -1583,7 +1586,8 @@
          "李文的女朋友？",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/ca0077551d.mp3"
       ]
      ]
     }
@@ -1697,7 +1701,8 @@
          "是我的中文老师。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/0f6fb0aede.mp3"
       ]
      ]
     },
@@ -1776,7 +1781,8 @@
          "是你的中文老师？",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/10509c4043.mp3"
       ]
      ]
     }
@@ -1928,7 +1934,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/4dcd2be906.mp3"
       ]
      ]
     },
@@ -1981,7 +1988,8 @@
          "！",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/7dfee9a9bd.mp3"
       ]
      ]
     },
@@ -2071,7 +2079,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/c223d80e73.mp3"
       ],
       [
        "我们不太想你。",
@@ -2094,7 +2103,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/19a1a1737d.mp3"
       ]
      ]
     }
@@ -2202,7 +2212,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/a8b9ef7071.mp3"
       ],
       [
        "姐姐的工作还很忙。",
@@ -2225,7 +2236,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/4eb1c8ae70.mp3"
       ]
      ]
     }
@@ -2333,7 +2345,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/165da05efb.mp3"
       ]
      ]
     },
@@ -2408,7 +2421,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/3a7f18a86b.mp3"
       ]
      ]
     }
@@ -4588,7 +4602,8 @@
      "吗",
      "很"
     ],
-    "gt": "\"B của A\" là **A 的 B**: 我的中文老师."
+    "gt": "\"B của A\" là **A 的 B**: 我的中文老师.",
+    "doc": "assets/am/cau/217b903145.mp3"
    },
    {
     "ma": "b3-de-sh-2",
@@ -4603,7 +4618,8 @@
      "那个人是谁？",
      "你想去哪个国家？"
     ],
-    "gt": "Đáp \"của tôi\" → hỏi **谁的** (của ai)."
+    "gt": "Đáp \"của tôi\" → hỏi **谁的** (của ai).",
+    "doc": "assets/am/cau/85b0630858.mp3"
    },
    {
     "ma": "b3-de-sh-3",
@@ -4624,7 +4640,8 @@
     "npPhu": [
      "de",
      "zhenana"
-    ]
+    ],
+    "doc": "assets/am/cau/102a2c0eec.mp3"
    },
    {
     "ma": "b3-de-luoc-1",
@@ -4634,7 +4651,8 @@
     "cau": "我妈妈是中文老师。",
     "py": "Wǒ māma shì Zhōngwén lǎoshī.",
     "dung": true,
-    "gt": "Đại từ + người thân thì **lược được 的**: 我妈妈."
+    "gt": "Đại từ + người thân thì **lược được 的**: 我妈妈.",
+    "doc": "assets/am/cau/54466bba64.mp3"
    },
    {
     "ma": "b3-de-luoc-2",
@@ -4644,7 +4662,8 @@
     "cau": "这是我女朋友。",
     "py": "Zhè shì wǒ nǚpéngyou.",
     "dung": true,
-    "gt": "Đại từ + danh từ chỉ người: **lược được 的**."
+    "gt": "Đại từ + danh từ chỉ người: **lược được 的**.",
+    "doc": "assets/am/cau/849a026bf6.mp3"
    },
    {
     "ma": "b3-ma-cau-1",
@@ -4659,7 +4678,8 @@
      "的",
      "谁"
     ],
-    "gt": "Câu trần thuật + **吗** thành câu hỏi có / không."
+    "gt": "Câu trần thuật + **吗** thành câu hỏi có / không.",
+    "doc": "assets/am/cau/c9a2af98b6.mp3"
    },
    {
     "ma": "b3-ma-cau-2",
@@ -4674,7 +4694,8 @@
      "你是谁？",
      "你做什么工作？"
     ],
-    "gt": "Đáp \"không bận lắm\" → câu hỏi có / không **忙吗**."
+    "gt": "Đáp \"không bận lắm\" → câu hỏi có / không **忙吗**.",
+    "doc": "assets/am/cau/697cd135ac.mp3"
    },
    {
     "ma": "b3-ma-cau-3",
@@ -4684,7 +4705,8 @@
     "cau": "你爸爸忙吗？",
     "py": "Nǐ bàba máng ma?",
     "dung": true,
-    "gt": "Câu trần thuật 你爸爸忙 + 吗."
+    "gt": "Câu trần thuật 你爸爸忙 + 吗.",
+    "doc": "assets/am/cau/4bc39f8bf5.mp3"
    },
    {
     "ma": "b3-ma-cp-1",
@@ -4699,7 +4721,8 @@
      "吗",
      "谁"
     ],
-    "gt": "Câu không có 吗 ở cuối thì hỏi bằng **是不是**."
+    "gt": "Câu không có 吗 ở cuối thì hỏi bằng **是不是**.",
+    "doc": "assets/am/cau/ca0077551d.mp3"
    },
    {
     "ma": "b3-ma-cp-2",
@@ -4712,7 +4735,8 @@
     "gt": "Đã dùng **是不是** thì **không thêm 吗**.",
     "sua": "你是不是学生？",
     "pySua": "Nǐ shì bu shì xué·shēng?",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/87510bb9e1.mp3"
    },
    {
     "ma": "b3-ma-cp-3",
@@ -4725,7 +4749,8 @@
     "gt": "Chọn một trong hai: 她是你的姐姐吗？ hoặc 她是不是你的姐姐？",
     "sua": "她是你的姐姐吗？",
     "pySua": "Tā shì nǐ de jiějie ma?",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/c628786234.mp3"
    },
    {
     "ma": "b3-ma-th-1",
@@ -4740,7 +4765,8 @@
      "哪",
      "还"
     ],
-    "gt": "Hỏi \"ai\" dùng **谁**; câu đã có 谁 thì không thêm 吗."
+    "gt": "Hỏi \"ai\" dùng **谁**; câu đã có 谁 thì không thêm 吗.",
+    "doc": "assets/am/cau/5a55f104e6.mp3"
    },
    {
     "ma": "b3-ma-th-2",
@@ -4753,7 +4779,8 @@
     "gt": "Câu đã có từ để hỏi (**谁**) thì **không thêm 吗**.",
     "sua": "她是谁？",
     "pySua": "Tā shì shéi?",
-    "nguon": "cô duyệt 29/10/2026"
+    "nguon": "cô duyệt 29/10/2026",
+    "doc": "assets/am/cau/1bae105976.mp3"
    },
    {
     "ma": "b3-ma-th-3",
@@ -4768,7 +4795,8 @@
      "她是哪国人？",
      "她忙吗？"
     ],
-    "gt": "Đáp \"là chị gái tôi\" → hỏi **谁**, không có 吗."
+    "gt": "Đáp \"là chị gái tôi\" → hỏi **谁**, không có 吗.",
+    "doc": "assets/am/cau/7070924243.mp3"
    },
    {
     "ma": "b3-zn-gx-1",
@@ -4784,7 +4812,8 @@
      "哪"
     ],
     "gt": "\"này\" là **这**, \"kia\" là 那, \"nào\" là 哪.",
-    "sau": "这个人是我哥哥。"
+    "sau": "这个人是我哥哥。",
+    "doc": "assets/am/cau/80c83ca2f0.mp3"
    },
    {
     "ma": "b3-zn-gx-2",
@@ -4806,7 +4835,8 @@
      "zhenana",
      "de",
      "ma"
-    ]
+    ],
+    "doc": "assets/am/cau/7cc9d55a40.mp3"
    },
    {
     "ma": "b3-zn-na-1",
@@ -4821,7 +4851,8 @@
      "谁",
      "什么"
     ],
-    "gt": "Hỏi \"… nào\" dùng **哪 + LT + DT**."
+    "gt": "Hỏi \"… nào\" dùng **哪 + LT + DT**.",
+    "doc": "assets/am/cau/10509c4043.mp3"
    },
    {
     "ma": "b3-zn-na-2",
@@ -4836,7 +4867,8 @@
      "你女朋友是哪国人？",
      "你有女朋友吗？"
     ],
-    "gt": "Đáp chỉ ra \"bạn nữ kia\" → câu hỏi **哪个女生**."
+    "gt": "Đáp chỉ ra \"bạn nữ kia\" → câu hỏi **哪个女生**.",
+    "doc": "assets/am/cau/6487fbbba2.mp3"
    },
    {
     "ma": "b3-zn-cn-1",
@@ -4852,7 +4884,8 @@
      "吗"
     ],
     "gt": "这, 那 **đứng một mình làm chủ ngữ** được: 这是谁？",
-    "bo": true
+    "bo": true,
+    "doc": "assets/am/cau/793ff684c9.mp3"
    },
    {
     "ma": "b3-zn-cn-2",
@@ -4862,7 +4895,8 @@
     "cau": "那是我的狗。",
     "py": "Nà shì wǒ de gǒu.",
     "dung": true,
-    "gt": "这, 那 đứng một mình làm chủ ngữ được."
+    "gt": "这, 那 đứng một mình làm chủ ngữ được.",
+    "doc": "assets/am/cau/0e0a64236e.mp3"
    },
    {
     "ma": "b3-zn-qt-1",
@@ -4877,7 +4911,8 @@
      "谁",
      "什么"
     ],
-    "gt": "Hỏi quốc tịch: **哪国人**."
+    "gt": "Hỏi quốc tịch: **哪国人**.",
+    "doc": "assets/am/cau/bf03cd589e.mp3"
    },
    {
     "ma": "b3-zn-qt-2",
@@ -4890,7 +4925,8 @@
     "gt": "Hỏi quốc tịch dùng **哪国人**, không có lượng từ ở giữa.",
     "sua": "他是哪国人？",
     "pySua": "Tā shì nǎ guó rén?",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/409bde563d.mp3"
    },
    {
     "ma": "b3-zn-qt-3",
@@ -4905,7 +4941,8 @@
      "你想去哪个国家？",
      "你做什么工作？"
     ],
-    "gt": "Đáp quốc tịch → hỏi **哪国人**."
+    "gt": "Đáp quốc tịch → hỏi **哪国人**.",
+    "doc": "assets/am/cau/aefdd46d97.mp3"
    },
    {
     "ma": "b3-zn-qt-4",
@@ -4920,7 +4957,8 @@
      "你朋友想去哪个国家？",
      "你朋友忙吗？"
     ],
-    "gt": "Đáp \"là người Pháp\" → hỏi **哪国人**, không phải muốn đi đâu."
+    "gt": "Đáp \"là người Pháp\" → hỏi **哪国人**, không phải muốn đi đâu.",
+    "doc": "assets/am/cau/bbda13539a.mp3"
    },
    {
     "ma": "b3-tai-tt-1",
@@ -4935,7 +4973,8 @@
      "很",
      "还"
     ],
-    "gt": "Có **了** ở cuối → khung **太……了**."
+    "gt": "Có **了** ở cuối → khung **太……了**.",
+    "doc": "assets/am/cau/60bb3bd05b.mp3"
    },
    {
     "ma": "b3-tai-tt-2",
@@ -4948,7 +4987,8 @@
     "gt": "Khung **太……了** phải có 了 ở cuối.",
     "sua": "我太忙了。",
     "pySua": "Wǒ tài máng le.",
-    "nguon": "quy chuẩn 05"
+    "nguon": "quy chuẩn 05",
+    "doc": "assets/am/cau/5c8088f44e.mp3"
    },
    {
     "ma": "b3-tai-tt-3",
@@ -4970,7 +5010,8 @@
     "npPhu": [
      "de",
      "tai"
-    ]
+    ],
+    "doc": "assets/am/cau/a7617c5d1f.mp3"
    },
    {
     "ma": "b3-tai-dt-1",
@@ -4985,7 +5026,8 @@
      "吗",
      "的"
     ],
-    "gt": "**太 + ĐT tâm lý (想) + 了**: nhớ … quá."
+    "gt": "**太 + ĐT tâm lý (想) + 了**: nhớ … quá.",
+    "doc": "assets/am/cau/7dfee9a9bd.mp3"
    },
    {
     "ma": "b3-tai-dt-2",
@@ -4995,7 +5037,8 @@
     "cau": "妈妈太想你了！",
     "py": "Māma tài xiǎng nǐ le!",
     "dung": true,
-    "gt": "太 đi được với động từ tâm lý 想: 太想你了."
+    "gt": "太 đi được với động từ tâm lý 想: 太想你了.",
+    "doc": "assets/am/cau/3f5522bab9.mp3"
    },
    {
     "ma": "b3-tai-bt-1",
@@ -5010,7 +5053,8 @@
      "还",
      "也"
     ],
-    "gt": "\"không … lắm\" là **不太 + TT**."
+    "gt": "\"không … lắm\" là **不太 + TT**.",
+    "doc": "assets/am/cau/df34997e7c.mp3"
    },
    {
     "ma": "b3-tai-bt-2",
@@ -5030,7 +5074,8 @@
     "npPhu": [
      "tai",
      "xiang"
-    ]
+    ],
+    "doc": "assets/am/cau/950bfc0b5b.mp3"
    },
    {
     "ma": "b3-tai-le-1",
@@ -5040,7 +5085,8 @@
     "cau": "我的工作不太忙。",
     "py": "Wǒ de gōngzuò bú tài máng.",
     "dung": true,
-    "gt": "**不太 + TT** đã trọn ý, không cần thêm 了 như khung 太……了."
+    "gt": "**不太 + TT** đã trọn ý, không cần thêm 了 như khung 太……了.",
+    "doc": "assets/am/cau/b6d4a22945.mp3"
    },
    {
     "ma": "b3-tai-le-2",
@@ -5050,7 +5096,8 @@
     "cau": "爸爸不太高兴。",
     "py": "Bàba bú tài gāoxìng.",
     "dung": true,
-    "gt": "**不太 + TT**: 不太高兴 = không vui lắm, không cần thêm 了."
+    "gt": "**不太 + TT**: 不太高兴 = không vui lắm, không cần thêm 了.",
+    "doc": "assets/am/cau/c0930c7a69.mp3"
    },
    {
     "ma": "b3-tai-py-1",
@@ -5066,7 +5113,8 @@
      "bù tài",
      "bu tài"
     ],
-    "gt": "太 mang thanh 4 nên 不 đọc **thanh 2**: bú tài."
+    "gt": "太 mang thanh 4 nên 不 đọc **thanh 2**: bú tài.",
+    "doc": "assets/am/cau/c223d80e73.mp3"
    },
    {
     "ma": "b3-tai-py-2",
@@ -5082,7 +5130,8 @@
      "bù tài",
      "bú tāi"
     ],
-    "gt": "Trong **不太**, 不 đọc thanh 2: bú tài."
+    "gt": "Trong **不太**, 不 đọc thanh 2: bú tài.",
+    "doc": "assets/am/cau/b6d4a22945.mp3"
    },
    {
     "ma": "b3-hai-them-1",
@@ -5097,7 +5146,8 @@
      "太",
      "很"
     ],
-    "gt": "\"còn (thêm)\" là **还**."
+    "gt": "\"còn (thêm)\" là **还**.",
+    "doc": "assets/am/cau/a8b9ef7071.mp3"
    },
    {
     "ma": "b3-hai-them-2",
@@ -5117,7 +5167,8 @@
     "npPhu": [
      "hai",
      "xiang"
-    ]
+    ],
+    "doc": "assets/am/cau/896c1c4406.mp3"
    },
    {
     "ma": "b3-hai-van-1",
@@ -5132,7 +5183,8 @@
      "很",
      "太"
     ],
-    "gt": "\"vẫn, còn\" là **还**, đứng sau chủ ngữ."
+    "gt": "\"vẫn, còn\" là **还**, đứng sau chủ ngữ.",
+    "doc": "assets/am/cau/a450d3debb.mp3"
    },
    {
     "ma": "b3-hai-van-2",
@@ -5154,7 +5206,8 @@
      "zhenana",
      "hai",
      "ma"
-    ]
+    ],
+    "doc": "assets/am/cau/52d546a437.mp3"
    },
    {
     "ma": "b3-hai-vt-1",
@@ -5167,7 +5220,8 @@
     "gt": "还 đứng **sau chủ ngữ**, không đứng đầu câu.",
     "sua": "姐姐还很忙。",
     "pySua": "Jiějie hái hěn máng.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/6d1f727061.mp3"
    },
    {
     "ma": "b3-hai-vt-2",
@@ -5188,7 +5242,8 @@
     "npPhu": [
      "de",
      "hai"
-    ]
+    ],
+    "doc": "assets/am/cau/4eb1c8ae70.mp3"
    },
    {
     "ma": "b3-xiang-nho-1",
@@ -5203,7 +5258,8 @@
      "去",
      "做"
     ],
-    "gt": "**想 + người** = nhớ."
+    "gt": "**想 + người** = nhớ.",
+    "doc": "assets/am/cau/fbdcf6d29b.mp3"
    },
    {
     "ma": "b3-xiang-nho-2",
@@ -5222,7 +5278,8 @@
     "npPhu": [
      "xiang",
      "hen"
-    ]
+    ],
+    "doc": "assets/am/cau/0abec2f5c0.mp3"
    },
    {
     "ma": "b3-xiang-muon-1",
@@ -5237,7 +5294,8 @@
      "很",
      "太"
     ],
-    "gt": "**想 + ĐT** = muốn làm gì."
+    "gt": "**想 + ĐT** = muốn làm gì.",
+    "doc": "assets/am/cau/809f9178b2.mp3"
    },
    {
     "ma": "b3-xiang-muon-2",
@@ -5252,7 +5310,8 @@
      "你是中国人吗？",
      "你妈妈做什么工作？"
     ],
-    "gt": "Đáp bắt đầu bằng **想** → câu hỏi **想……吗**."
+    "gt": "Đáp bắt đầu bằng **想** → câu hỏi **想……吗**.",
+    "doc": "assets/am/cau/d1b2912948.mp3"
    },
    {
     "ma": "b3-xiang-pd-1",
@@ -5267,7 +5326,8 @@
      "吗",
      "的"
     ],
-    "gt": "Phủ định của 想 là **不想**."
+    "gt": "Phủ định của 想 là **不想**.",
+    "doc": "assets/am/cau/1078084c2a.mp3"
    },
    {
     "ma": "b3-xiang-pd-2",
@@ -5277,7 +5337,8 @@
     "cau": "我不想去法国。",
     "py": "Wǒ bù xiǎng qù Fǎguó.",
     "dung": true,
-    "gt": "Phủ định của 想 là **不想**."
+    "gt": "Phủ định của 想 là **不想**.",
+    "doc": "assets/am/cau/ca13924a54.mp3"
    },
    {
     "ma": "b3-ma-cau-4",
@@ -5293,7 +5354,8 @@
      "谁"
     ],
     "gt": "Câu hỏi có / không: câu trần thuật + **吗**; B trả lời 对.",
-    "sau": "对，还很忙。"
+    "sau": "对，还很忙。",
+    "doc": "assets/am/cau/2e9cfa130c.mp3"
    },
    {
     "ma": "b3-hai-vt-3",
@@ -5306,7 +5368,8 @@
     "gt": "还 đứng **trước** tính từ 忙: 还忙.",
     "sua": "你工作还忙吗？",
     "pySua": "Nǐ gōngzuò hái máng ma?",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/2a96c63d65.mp3"
    },
    {
     "ma": "b3-tai-bt-3",
@@ -5321,7 +5384,8 @@
      "还",
      "也"
     ],
-    "gt": "**不太 + TT**: không … lắm."
+    "gt": "**不太 + TT**: không … lắm.",
+    "doc": "assets/am/cau/a8b8ed7f37.mp3"
    },
    {
     "ma": "b3-xiang-nho-3",
@@ -5337,7 +5401,8 @@
      "做"
     ],
     "gt": "**想 + người** = nhớ.",
-    "sau": "我也想你们。"
+    "sau": "我也想你们。",
+    "doc": "assets/am/cau/12ac3b524c.mp3"
    },
    {
     "ma": "b3-xiang-nho-4",
@@ -5356,7 +5421,8 @@
     "npPhu": [
      "ye",
      "xiang"
-    ]
+    ],
+    "doc": "assets/am/cau/37afbe47d1.mp3"
    },
    {
     "ma": "b3-de-sh-4",
@@ -5371,7 +5437,8 @@
      "吗",
      "很"
     ],
-    "gt": "\"giáo viên tiếng Trung **của** tôi\": **我的中文老师**."
+    "gt": "\"giáo viên tiếng Trung **của** tôi\": **我的中文老师**.",
+    "doc": "assets/am/cau/c689abef38.mp3"
    },
    {
     "ma": "b3-de-sh-5",
@@ -5391,7 +5458,8 @@
     "npPhu": [
      "de",
      "ye"
-    ]
+    ],
+    "doc": "assets/am/cau/c689abef38.mp3"
    },
    {
     "ma": "b3-zn-cn-3",
@@ -5407,7 +5475,8 @@
      "吗"
     ],
     "gt": "这 đứng một mình làm chủ ngữ: **这是谁？**",
-    "sau": "这是我女朋友。"
+    "sau": "这是我女朋友。",
+    "doc": "assets/am/cau/21d369e266.mp3"
    },
    {
     "ma": "b3-zn-qt-5",
@@ -5422,7 +5491,8 @@
      "这是谁？",
      "你女朋友忙吗？"
     ],
-    "gt": "Đáp quốc tịch → hỏi **哪国人**."
+    "gt": "Đáp quốc tịch → hỏi **哪国人**.",
+    "doc": "assets/am/cau/060cbe5f0d.mp3"
    },
    {
     "ma": "b3-zn-cn-4",
@@ -5437,7 +5507,8 @@
      "你女朋友是哪国人？",
      "你是哪国人？"
     ],
-    "gt": "Đáp \"là bạn gái tôi\" → hỏi **这是谁？**"
+    "gt": "Đáp \"là bạn gái tôi\" → hỏi **这是谁？**",
+    "doc": "assets/am/cau/ca0f97e6b6.mp3"
    }
   ]
  }

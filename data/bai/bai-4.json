@@ -1143,7 +1143,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/784309f916.mp3"
       ]
      ]
     },
@@ -1218,7 +1219,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/e9e6e9fc90.mp3"
       ]
      ]
     },
@@ -1278,7 +1280,8 @@
          "？",
          "codinh"
         ]
-       ]
+       ],
+       "assets/am/cau/284ef4e46b.mp3"
       ]
      ]
     }
@@ -1428,7 +1431,8 @@
          "个学生。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/39b907e186.mp3"
       ]
      ]
     },
@@ -1559,7 +1563,8 @@
          "个学生。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/9b6dd445e2.mp3"
       ]
      ]
     },
@@ -1654,7 +1659,8 @@
          "个学生。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/759cebb913.mp3"
       ]
      ]
     }
@@ -1788,7 +1794,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/e2f53b483d.mp3"
       ]
      ]
     },
@@ -1879,7 +1886,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/b155480aa5.mp3"
       ]
      ]
     }
@@ -2018,7 +2026,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/c9ff406665.mp3"
       ],
       [
        "第二个孩子是女儿。",
@@ -2045,7 +2054,8 @@
          "是女儿。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/46d0788f7a.mp3"
       ]
      ]
     }
@@ -2176,7 +2186,8 @@
          "？",
          "codinh"
         ]
-       ]
+       ],
+       "assets/am/cau/abed6c74ca.mp3"
       ],
       [
        "你们有多少学生？",
@@ -2199,7 +2210,8 @@
          "？",
          "codinh"
         ]
-       ]
+       ],
+       "assets/am/cau/f5941bbf2f.mp3"
       ]
      ]
     }
@@ -2340,7 +2352,8 @@
          "？",
          "codinh"
         ]
-       ]
+       ],
+       "assets/am/cau/238a4db0d4.mp3"
       ],
       [
        "王一雪有几个孩子？",
@@ -2367,7 +2380,8 @@
          "？",
          "codinh"
         ]
-       ]
+       ],
+       "assets/am/cau/9a5c3a688f.mp3"
       ]
      ]
     }
@@ -2475,7 +2489,8 @@
          "了？",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/c9dc71911b.mp3"
       ]
      ]
     },
@@ -2531,7 +2546,8 @@
          "？",
          "codinh"
         ]
-       ]
+       ],
+       "assets/am/cau/5bc992f1e7.mp3"
       ]
      ]
     },
@@ -2568,7 +2584,8 @@
          "了？",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/8de7509209.mp3"
       ]
      ]
     }
@@ -2652,7 +2669,8 @@
          "？",
          "codinh"
         ]
-       ]
+       ],
+       "assets/am/cau/b55bd9cf69.mp3"
       ]
      ]
     },
@@ -2727,7 +2745,8 @@
          "？",
          "codinh"
         ]
-       ]
+       ],
+       "assets/am/cau/625c25a632.mp3"
       ]
      ]
     },
@@ -2752,7 +2771,8 @@
          "？",
          "codinh"
         ]
-       ]
+       ],
+       "assets/am/cau/9c043cc167.mp3"
       ]
      ]
     }
@@ -5097,7 +5117,8 @@
      "是",
      "没"
     ],
-    "gt": "\"có\" là **有 + DT**."
+    "gt": "\"có\" là **有 + DT**.",
+    "doc": "assets/am/cau/0a5fb19cbc.mp3"
    },
    {
     "ma": "b4-you-co-2",
@@ -5117,7 +5138,8 @@
     "npPhu": [
      "you",
      "stlt"
-    ]
+    ],
+    "doc": "assets/am/cau/784309f916.mp3"
    },
    {
     "ma": "b4-you-pd-1",
@@ -5132,7 +5154,8 @@
      "不",
      "也"
     ],
-    "gt": "Phủ định của 有 là **没有**."
+    "gt": "Phủ định của 有 là **没有**.",
+    "doc": "assets/am/cau/8cf1e8a721.mp3"
    },
    {
     "ma": "b4-you-pd-2",
@@ -5142,7 +5165,8 @@
     "cau": "我没姐姐。",
     "py": "Wǒ méi jiějie.",
     "dung": true,
-    "gt": "没有 nói gọn là **没** cũng được: 没姐姐."
+    "gt": "没有 nói gọn là **没** cũng được: 没姐姐.",
+    "doc": "assets/am/cau/d614cbe4b5.mp3"
    },
    {
     "ma": "b4-you-pd-3",
@@ -5161,7 +5185,8 @@
     "npPhu": [
      "you",
      "ne"
-    ]
+    ],
+    "doc": "assets/am/cau/0469b0e770.mp3"
    },
    {
     "ma": "b4-you-hoi-1",
@@ -5176,7 +5201,8 @@
      "不",
      "吗"
     ],
-    "gt": "Dạng chính phản của 有 là **有没有**."
+    "gt": "Dạng chính phản của 有 là **有没有**.",
+    "doc": "assets/am/cau/6997828752.mp3"
    },
    {
     "ma": "b4-you-hoi-2",
@@ -5191,7 +5217,8 @@
      "你有几个妹妹？",
      "你妹妹多大？"
     ],
-    "gt": "Đáp bắt đầu bằng **没有** → câu hỏi **有没有**."
+    "gt": "Đáp bắt đầu bằng **没有** → câu hỏi **有没有**.",
+    "doc": "assets/am/cau/4655be001e.mp3"
    },
    {
     "ma": "b4-you-buyou-1",
@@ -5204,7 +5231,8 @@
     "gt": "Phủ định của 有 là **没有 / 没**, không nói 不有.",
     "sua": "我没有姐姐。",
     "pySua": "Wǒ méi·yǒu jiějie.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/f18539e116.mp3"
    },
    {
     "ma": "b4-you-buyou-2",
@@ -5217,7 +5245,8 @@
     "gt": "Phủ định của 有 là **没有**, không nói 不有.",
     "sua": "他们没有孩子。",
     "pySua": "Tāmen méi·yǒu háizi.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/ab53b8d060.mp3"
    },
    {
     "ma": "b4-you-ma-1",
@@ -5230,7 +5259,8 @@
     "gt": "Đã dùng **有没有** thì **không thêm 吗**.",
     "sua": "你有没有孩子？",
     "pySua": "Nǐ yǒu méi·yǒu háizi?",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/9afc70913b.mp3"
    },
    {
     "ma": "b4-you-ma-2",
@@ -5243,7 +5273,8 @@
     "gt": "Chọn một: 她有男朋友吗？ hoặc 她有没有男朋友？",
     "sua": "她有没有男朋友？",
     "pySua": "Tā yǒu méi·yǒu nánpéngyou?",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/2504a41de2.mp3"
    },
    {
     "ma": "b4-so-99-1",
@@ -5259,7 +5290,8 @@
      "两十三"
     ],
     "gt": "Đọc theo thứ tự viết: 2 chục 3 → **二十三**; hàng chục dùng 二.",
-    "goiY": "23"
+    "goiY": "23",
+    "doc": "assets/am/cau/3fcfa64e1b.mp3"
    },
    {
     "ma": "b4-so-99-2",
@@ -5275,7 +5307,8 @@
      "四五"
     ],
     "gt": "45 = 4 chục 5 → **四十五**.",
-    "goiY": "45"
+    "goiY": "45",
+    "doc": "assets/am/cau/39a6119bbc.mp3"
    },
    {
     "ma": "b4-so-lon-1",
@@ -5291,7 +5324,8 @@
      "二十三百"
     ],
     "gt": "Đọc từ hàng lớn tới nhỏ: 3 trăm 2 chục → **三百二十**.",
-    "goiY": "320"
+    "goiY": "320",
+    "doc": "assets/am/cau/9b6dd445e2.mp3"
    },
    {
     "ma": "b4-so-lon-2",
@@ -5307,7 +5341,8 @@
      "一五二八"
     ],
     "gt": "1528 = 一千 + 五百 + 二十 + 八.",
-    "goiY": "1528"
+    "goiY": "1528",
+    "doc": "assets/am/cau/1ad04b44ec.mp3"
    },
    {
     "ma": "b4-so-ling-1",
@@ -5323,7 +5358,8 @@
      "二"
     ],
     "gt": "Hàng chục trống thì đọc **零**: 108 = 一百零八.",
-    "goiY": "108"
+    "goiY": "108",
+    "doc": "assets/am/cau/5defdcb347.mp3"
    },
    {
     "ma": "b4-so-ling-2",
@@ -5333,7 +5369,8 @@
     "cau": "我们有一千零五十个学生。",
     "py": "Wǒmen yǒu yìqiān líng wǔshí ge xué·shēng.",
     "dung": true,
-    "gt": "1050: hàng trăm trống nên đọc **零**."
+    "gt": "1050: hàng trăm trống nên đọc **零**.",
+    "doc": "assets/am/cau/2908b9be68.mp3"
    },
    {
     "ma": "b4-so-ling-3",
@@ -5355,7 +5392,8 @@
     "npPhu": [
      "so",
      "stlt"
-    ]
+    ],
+    "doc": "assets/am/cau/82fad7e56e.mp3"
    },
    {
     "ma": "b4-so-erliang-1",
@@ -5371,7 +5409,8 @@
      "第"
     ],
     "gt": "Hàng chục và hàng đơn vị dùng **二**: 二十二.",
-    "goiY": "22"
+    "goiY": "22",
+    "doc": "assets/am/cau/fa96eb0dba.mp3"
    },
    {
     "ma": "b4-so-erliang-2",
@@ -5387,7 +5426,8 @@
      "几"
     ],
     "gt": "2000 thường nói **两千**.",
-    "goiY": "2000"
+    "goiY": "2000",
+    "doc": "assets/am/cau/a9b5755f26.mp3"
    },
    {
     "ma": "b4-so-1ling-1",
@@ -5403,7 +5443,8 @@
      "百零"
     ],
     "gt": "Nhiều số 0 liền nhau **chỉ đọc một 零**: 1001 = 一千零一.",
-    "goiY": "1001"
+    "goiY": "1001",
+    "doc": "assets/am/cau/5e3c9779c6.mp3"
    },
    {
     "ma": "b4-so-1ling-2",
@@ -5416,7 +5457,8 @@
     "gt": "Nhiều số 0 liền nhau **chỉ đọc một 零**: 一千零一.",
     "sua": "我们有一千零一个学生。",
     "pySua": "Wǒmen yǒu yìqiān líng yī ge xué·shēng.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/5e3c9779c6.mp3"
    },
    {
     "ma": "b4-so-110-1",
@@ -5432,7 +5474,8 @@
      "零十"
     ],
     "gt": "110 đọc **一百一十** (khẩu ngữ: 一百一).",
-    "goiY": "110"
+    "goiY": "110",
+    "doc": "assets/am/cau/d272951316.mp3"
    },
    {
     "ma": "b4-so-110-2",
@@ -5442,7 +5485,8 @@
     "cau": "王老师有一百一十个学生。",
     "py": "Wáng lǎoshī yǒu yìbǎi yīshí ge xué·shēng.",
     "dung": true,
-    "gt": "110 = **一百一十**."
+    "gt": "110 = **一百一十**.",
+    "doc": "assets/am/cau/e9aa2947f6.mp3"
    },
    {
     "ma": "b4-so-nam-1",
@@ -5458,7 +5502,8 @@
      "二千二十六"
     ],
     "gt": "Năm đọc **từng chữ số**: 二〇二六年.",
-    "goiY": "2026"
+    "goiY": "2026",
+    "doc": "assets/am/cau/cd81145110.mp3"
    },
    {
     "ma": "b4-so-nam-2",
@@ -5473,7 +5518,8 @@
      "你今年多大？",
      "你家有几口人？"
     ],
-    "gt": "Đáp năm → hỏi **哪一年**; năm đọc từng chữ số."
+    "gt": "Đáp năm → hỏi **哪一年**; năm đọc từng chữ số.",
+    "doc": "assets/am/cau/4528179d03.mp3"
    },
    {
     "ma": "b4-stlt-lt-1",
@@ -5488,7 +5534,8 @@
      "口",
      "岁"
     ],
-    "gt": "Giữa số từ và danh từ phải có **lượng từ**: 三个孩子."
+    "gt": "Giữa số từ và danh từ phải có **lượng từ**: 三个孩子.",
+    "doc": "assets/am/cau/728546b5de.mp3"
    },
    {
     "ma": "b4-stlt-lt-2",
@@ -5501,7 +5548,8 @@
     "gt": "Giữa số từ và danh từ **phải có lượng từ**.",
     "sua": "我们有三个学生。",
     "pySua": "Wǒmen yǒu sān ge xué·shēng.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/a249ae8de0.mp3"
    },
    {
     "ma": "b4-stlt-liang-1",
@@ -5516,7 +5564,8 @@
      "二",
      "第二"
     ],
-    "gt": "Số 2 đứng trước lượng từ dùng **两**: 两个."
+    "gt": "Số 2 đứng trước lượng từ dùng **两**: 两个.",
+    "doc": "assets/am/cau/abedcefb08.mp3"
    },
    {
     "ma": "b4-stlt-liang-2",
@@ -5529,7 +5578,8 @@
     "gt": "Số 2 trước lượng từ dùng **两**.",
     "sua": "我有两个哥哥。",
     "pySua": "Wǒ yǒu liǎng ge gēge.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/0011bad262.mp3"
    },
    {
     "ma": "b4-stlt-kou-1",
@@ -5544,7 +5594,8 @@
      "位",
      "岁"
     ],
-    "gt": "Đếm người trong gia đình dùng **口**."
+    "gt": "Đếm người trong gia đình dùng **口**.",
+    "doc": "assets/am/cau/e2f53b483d.mp3"
    },
    {
     "ma": "b4-stlt-kou-2",
@@ -5559,7 +5610,8 @@
      "口",
      "岁"
     ],
-    "gt": "口 chỉ dùng cho người trong gia đình; thầy cô dùng **位** (lịch sự)."
+    "gt": "口 chỉ dùng cho người trong gia đình; thầy cô dùng **位** (lịch sự).",
+    "doc": "assets/am/cau/99461df4b4.mp3"
    },
    {
     "ma": "b4-stlt-kou-3",
@@ -5572,7 +5624,8 @@
     "gt": "**口** chỉ dùng đếm người trong gia đình; bạn bè dùng **个**.",
     "sua": "我有四个朋友。",
     "pySua": "Wǒ yǒu sì ge péngyou.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/0d429e83f1.mp3"
    },
    {
     "ma": "b4-di-tt-1",
@@ -5587,7 +5640,8 @@
      "两",
      "几"
     ],
-    "gt": "Chỉ thứ tự: **第 + ST + LT + DT**."
+    "gt": "Chỉ thứ tự: **第 + ST + LT + DT**.",
+    "doc": "assets/am/cau/6baec3d667.mp3"
    },
    {
     "ma": "b4-di-tt-2",
@@ -5613,7 +5667,8 @@
      "di",
      "stlt",
      "de"
-    ]
+    ],
+    "doc": "assets/am/cau/39e09a7dd8.mp3"
    },
    {
     "ma": "b4-di-er-1",
@@ -5628,7 +5683,8 @@
      "两",
      "几"
     ],
-    "gt": "Thứ tự dùng **第二**, không nói 第两."
+    "gt": "Thứ tự dùng **第二**, không nói 第两.",
+    "doc": "assets/am/cau/a06f33e91e.mp3"
    },
    {
     "ma": "b4-di-er-2",
@@ -5641,7 +5697,8 @@
     "gt": "Thứ tự dùng **第二**; 两 chỉ dùng cho số lượng.",
     "sua": "她是我们家的第二个孩子。",
     "pySua": "Tā shì wǒmen jiā de dì-èr ge háizi.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/6baec3d667.mp3"
    },
    {
     "ma": "b4-ds-hoi-1",
@@ -5656,7 +5713,8 @@
      "几",
      "吗"
     ],
-    "gt": "Không có lượng từ → chỉ dùng được **多少**; 几 bắt buộc có lượng từ."
+    "gt": "Không có lượng từ → chỉ dùng được **多少**; 几 bắt buộc có lượng từ.",
+    "doc": "assets/am/cau/f5941bbf2f.mp3"
    },
    {
     "ma": "b4-ds-hoi-2",
@@ -5666,7 +5724,8 @@
     "cau": "王老师有多少学生？",
     "py": "Wáng lǎoshī yǒu duōshao xué·shēng?",
     "dung": true,
-    "gt": "Sau 多少 **có thể bỏ lượng từ**."
+    "gt": "Sau 多少 **có thể bỏ lượng từ**.",
+    "doc": "assets/am/cau/40eedb90ad.mp3"
    },
    {
     "ma": "b4-ds-hoi-3",
@@ -5686,7 +5745,8 @@
     "npPhu": [
      "duoshao",
      "stlt"
-    ]
+    ],
+    "doc": "assets/am/cau/e454080d16.mp3"
    },
    {
     "ma": "b4-ds-ji-1",
@@ -5702,7 +5762,8 @@
      "什么"
     ],
     "gt": "Câu trả lời là số lớn (120) → hỏi bằng **多少**; **几** hỏi số nhỏ (thường dưới 10).",
-    "sau": "她有一百二十个学生。"
+    "sau": "她有一百二十个学生。",
+    "doc": "assets/am/cau/61f2f98135.mp3"
    },
    {
     "ma": "b4-ds-ji-2",
@@ -5717,7 +5778,8 @@
      "你们有几位老师？",
      "你们是哪国学生？"
     ],
-    "gt": "Số lớn → hỏi **多少**."
+    "gt": "Số lớn → hỏi **多少**.",
+    "doc": "assets/am/cau/2c3de2910e.mp3"
    },
    {
     "ma": "b4-ds-ma-1",
@@ -5730,7 +5792,8 @@
     "gt": "Câu có 多少 thì **không thêm 吗**.",
     "sua": "你们有多少学生？",
     "pySua": "Nǐmen yǒu duōshao xué·shēng?",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/f5941bbf2f.mp3"
    },
    {
     "ma": "b4-ds-ma-2",
@@ -5743,7 +5806,8 @@
     "gt": "Câu có 多少 thì **không thêm 吗**.",
     "sua": "王老师有多少个学生？",
     "pySua": "Wáng lǎoshī yǒu duōshao ge xué·shēng?",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/7e9694401b.mp3"
    },
    {
     "ma": "b4-ji-lt-1",
@@ -5756,7 +5820,8 @@
     "gt": "Sau 几 **bắt buộc có lượng từ**.",
     "sua": "你有几个朋友？",
     "pySua": "Nǐ yǒu jǐ ge péngyou?",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/b18d1ee08b.mp3"
    },
    {
     "ma": "b4-ji-lt-2",
@@ -5771,7 +5836,8 @@
      "你有几个哥哥？",
      "你有没有哥哥？"
     ],
-    "gt": "Đáp số người trong nhà → hỏi **几口人**."
+    "gt": "Đáp số người trong nhà → hỏi **几口人**.",
+    "doc": "assets/am/cau/a786bb3750.mp3"
    },
    {
     "ma": "b4-ji-lt-3",
@@ -5792,7 +5858,8 @@
     "npPhu": [
      "ji",
      "stlt"
-    ]
+    ],
+    "doc": "assets/am/cau/1aef7c8693.mp3"
    },
    {
     "ma": "b4-ji-ma-1",
@@ -5805,7 +5872,8 @@
     "gt": "Câu có 几 thì **không thêm 吗**.",
     "sua": "你有几个孩子？",
     "pySua": "Nǐ yǒu jǐ ge háizi?",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/097717613c.mp3"
    },
    {
     "ma": "b4-ji-ma-2",
@@ -5815,7 +5883,8 @@
     "cau": "她有几个妹妹？",
     "py": "Tā yǒu jǐ ge mèimei?",
     "dung": true,
-    "gt": "Câu có 几 đã là câu hỏi, không cần 吗."
+    "gt": "Câu có 几 đã là câu hỏi, không cần 吗.",
+    "doc": "assets/am/cau/1ee8ea9ef4.mp3"
    },
    {
     "ma": "b4-ht-jisui-1",
@@ -5831,7 +5900,8 @@
      "多少"
     ],
     "gt": "Hỏi tuổi trẻ nhỏ dùng **几岁**.",
-    "sau": "我今年五岁。"
+    "sau": "我今年五岁。",
+    "doc": "assets/am/cau/415c99bc3a.mp3"
    },
    {
     "ma": "b4-ht-jisui-2",
@@ -5846,7 +5916,8 @@
      "你儿子有几个朋友？",
      "你有几个儿子？"
     ],
-    "gt": "Đáp tuổi trẻ nhỏ → hỏi **几岁**."
+    "gt": "Đáp tuổi trẻ nhỏ → hỏi **几岁**.",
+    "doc": "assets/am/cau/474a98648a.mp3"
    },
    {
     "ma": "b4-ht-duoda-1",
@@ -5862,7 +5933,8 @@
      "多少"
     ],
     "gt": "Hỏi người cùng lứa dùng **多大**.",
-    "sau": "我今年二十岁。"
+    "sau": "我今年二十岁。",
+    "doc": "assets/am/cau/6ba1371c47.mp3"
    },
    {
     "ma": "b4-ht-duoda-2",
@@ -5877,7 +5949,8 @@
      "你奶奶多大年纪？",
      "你有几个哥哥？"
     ],
-    "gt": "Người lớn 25 tuổi → hỏi **多大**."
+    "gt": "Người lớn 25 tuổi → hỏi **多大**.",
+    "doc": "assets/am/cau/74e2c49e51.mp3"
    },
    {
     "ma": "b4-ht-nianji-1",
@@ -5893,7 +5966,8 @@
      "多少"
     ],
     "gt": "Hỏi tuổi người cao tuổi dùng **多大年纪**.",
-    "sau": "她今年八十岁了。"
+    "sau": "她今年八十岁了。",
+    "doc": "assets/am/cau/cb92e698be.mp3"
    },
    {
     "ma": "b4-ht-nianji-2",
@@ -5908,7 +5982,8 @@
      "你妹妹几岁？",
      "你奶奶有几个孩子？"
     ],
-    "gt": "Người 80 tuổi → hỏi **多大年纪**; 几岁 dùng cho trẻ nhỏ."
+    "gt": "Người 80 tuổi → hỏi **多大年纪**; 几岁 dùng cho trẻ nhỏ.",
+    "doc": "assets/am/cau/e6b47662ff.mp3"
    },
    {
     "ma": "b4-ht-shi-1",
@@ -5923,7 +5998,8 @@
      "是",
      "有"
     ],
-    "gt": "Nói tuổi **không cần 是**: CN + (今年) + số + 岁."
+    "gt": "Nói tuổi **không cần 是**: CN + (今年) + số + 岁.",
+    "doc": "assets/am/cau/39a6119bbc.mp3"
    },
    {
     "ma": "b4-ht-shi-2",
@@ -5936,7 +6012,8 @@
     "gt": "Nói tuổi **không cần 是**.",
     "sua": "我二十岁。",
     "pySua": "Wǒ èrshí suì.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/272070a362.mp3"
    },
    {
     "ma": "b4-ht-le-1",
@@ -5946,7 +6023,8 @@
     "cau": "他今年两岁了。",
     "py": "Tā jīnnián liǎng suì le.",
     "dung": true,
-    "gt": "Thêm 了 cuối câu: đã tới tuổi đó."
+    "gt": "Thêm 了 cuối câu: đã tới tuổi đó.",
+    "doc": "assets/am/cau/d9aa016adf.mp3"
    },
    {
     "ma": "b4-ht-le-2",
@@ -5965,7 +6043,8 @@
     ],
     "npPhu": [
      "hoiTuoi"
-    ]
+    ],
+    "doc": "assets/am/cau/ac36d19ca0.mp3"
    },
    {
     "ma": "b4-ne-nhe-1",
@@ -5980,7 +6059,8 @@
      "吗",
      "的"
     ],
-    "gt": "Câu hỏi + **呢**: hỏi nhẹ nhàng; câu có 什么 không dùng 吗."
+    "gt": "Câu hỏi + **呢**: hỏi nhẹ nhàng; câu có 什么 không dùng 吗.",
+    "doc": "assets/am/cau/b55bd9cf69.mp3"
    },
    {
     "ma": "b4-ne-nhe-2",
@@ -5990,7 +6070,8 @@
     "cau": "你叫什么名字呢？",
     "py": "Nǐ jiào shénme míngzi ne?",
     "dung": true,
-    "gt": "Câu hỏi + 呢 cho nhẹ nhàng, uyển chuyển."
+    "gt": "Câu hỏi + 呢 cho nhẹ nhàng, uyển chuyển.",
+    "doc": "assets/am/cau/b55bd9cf69.mp3"
    },
    {
     "ma": "b4-ne-hoilai-1",
@@ -6005,7 +6086,8 @@
      "吗",
      "的"
     ],
-    "gt": "Hỏi lại điều vừa nói: **B 呢？**"
+    "gt": "Hỏi lại điều vừa nói: **B 呢？**",
+    "doc": "assets/am/cau/7dd8b8bf85.mp3"
    },
    {
     "ma": "b4-ne-hoilai-2",
@@ -6015,7 +6097,8 @@
     "cau": "我没有孩子，你呢？",
     "py": "Wǒ méi·yǒu háizi, nǐ ne?",
     "dung": true,
-    "gt": "B 呢？ hỏi lại điều vừa nói ở trước."
+    "gt": "B 呢？ hỏi lại điều vừa nói ở trước.",
+    "doc": "assets/am/cau/6c7df41488.mp3"
    },
    {
     "ma": "b4-ne-hoilai-3",
@@ -6030,7 +6113,8 @@
      "你家有几口人？",
      "你今年多大？"
     ],
-    "gt": "**你呢？** hỏi lại điều vừa nói (quốc tịch)."
+    "gt": "**你呢？** hỏi lại điều vừa nói (quốc tịch).",
+    "doc": "assets/am/cau/d6ef358310.mp3"
    },
    {
     "ma": "b4-ne-odau-1",
@@ -6045,7 +6129,8 @@
      "的",
      "几"
     ],
-    "gt": "Hỏi người, vật ở đâu: **DT + 呢？**"
+    "gt": "Hỏi người, vật ở đâu: **DT + 呢？**",
+    "doc": "assets/am/cau/036cca6ba7.mp3"
    },
    {
     "ma": "b4-ne-odau-2",
@@ -6055,7 +6140,8 @@
     "cau": "爸爸，我妈妈呢？",
     "py": "Bàba, wǒ māma ne?",
     "dung": true,
-    "gt": "DT + 呢？ hỏi người đang ở đâu."
+    "gt": "DT + 呢？ hỏi người đang ở đâu.",
+    "doc": "assets/am/cau/6dc9eaa1b1.mp3"
    },
    {
     "ma": "b4-ne-truoc-1",
@@ -6070,7 +6156,8 @@
      "我是中国人，你呢？",
      "我有两个哥哥，你呢？"
     ],
-    "gt": "B呢 hỏi lại **đúng điều vừa nói ở trước**: nói tuổi trước thì 你呢 mới là hỏi tuổi."
+    "gt": "B呢 hỏi lại **đúng điều vừa nói ở trước**: nói tuổi trước thì 你呢 mới là hỏi tuổi.",
+    "doc": "assets/am/cau/a6a4f62a87.mp3"
    },
    {
     "ma": "b4-ne-truoc-2",
@@ -6085,7 +6172,8 @@
      "我有两个哥哥，你呢？",
      "我是学生，你呢？"
     ],
-    "gt": "Câu trước nói số người trong nhà → 你家呢 hỏi số người trong nhà."
+    "gt": "Câu trước nói số người trong nhà → 你家呢 hỏi số người trong nhà.",
+    "doc": "assets/am/cau/21931f0f1a.mp3"
    },
    {
     "ma": "b4-ne-ma-1",
@@ -6098,7 +6186,8 @@
     "gt": "Câu có 呢 thì **không thêm 吗**.",
     "sua": "我是越南人，你呢？",
     "pySua": "Wǒ shì Yuènán rén, nǐ ne?",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/7dd8b8bf85.mp3"
    },
    {
     "ma": "b4-ne-ma-2",
@@ -6108,7 +6197,8 @@
     "cau": "我有两个孩子，你呢？",
     "py": "Wǒ yǒu liǎng ge háizi, nǐ ne?",
     "dung": true,
-    "gt": "Câu có 呢 không cần thêm 吗."
+    "gt": "Câu có 呢 không cần thêm 吗.",
+    "doc": "assets/am/cau/a1ecd53d9d.mp3"
    },
    {
     "ma": "b4-ds-hoi-4",
@@ -6124,7 +6214,8 @@
      "什么"
     ],
     "gt": "Câu trả lời là 20, số lớn → hỏi bằng **多少**.",
-    "sau": "她有二十个学生。"
+    "sau": "她有二十个学生。",
+    "doc": "assets/am/cau/52be48e94b.mp3"
    },
    {
     "ma": "b4-ne-hoilai-4",
@@ -6140,7 +6231,8 @@
      "的"
     ],
     "gt": "Hỏi lại điều vừa nói (có anh trai không): **你呢？**",
-    "sau": "我没有哥哥。"
+    "sau": "我没有哥哥。",
+    "doc": "assets/am/cau/66043bb324.mp3"
    },
    {
     "ma": "b4-stlt-kou-4",
@@ -6155,7 +6247,8 @@
      "位",
      "岁"
     ],
-    "gt": "Đếm người trong gia đình dùng **口**."
+    "gt": "Đếm người trong gia đình dùng **口**.",
+    "doc": "assets/am/cau/e93f57fa9b.mp3"
    },
    {
     "ma": "b4-ht-jisui-3",
@@ -6171,7 +6264,8 @@
      "多少"
     ],
     "gt": "Cậu bé 5 tuổi là trẻ nhỏ → hỏi **几岁**.",
-    "sau": "他今年五岁。"
+    "sau": "他今年五岁。",
+    "doc": "assets/am/cau/9ed1cf2f34.mp3"
    },
    {
     "ma": "b4-ht-duoda-3",
@@ -6187,7 +6281,8 @@
      "多少"
     ],
     "gt": "Cô bé 12 tuổi → hỏi **多大**; 多大年纪 dùng cho người cao tuổi.",
-    "sau": "她今年十二。"
+    "sau": "她今年十二。",
+    "doc": "assets/am/cau/2c21468d30.mp3"
    },
    {
     "ma": "b4-you-co-3",
@@ -6212,7 +6307,8 @@
     "npPhu": [
      "you",
      "stlt"
-    ]
+    ],
+    "doc": "assets/am/cau/fec86ebc70.mp3"
    },
    {
     "ma": "b4-ht-shi-3",
@@ -6225,7 +6321,8 @@
     "gt": "Nói tuổi **không cần 是**.",
     "sua": "他今年五岁。",
     "pySua": "Tā jīnnián wǔ suì.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/23dbca11dd.mp3"
    },
    {
     "ma": "b4-you-pd-4",
@@ -6240,7 +6337,8 @@
      "你家有几口人？",
      "你妹妹多大？"
     ],
-    "gt": "\"我没有哥哥\" trả lời câu **你呢？** hỏi lại về anh trai."
+    "gt": "\"我没有哥哥\" trả lời câu **你呢？** hỏi lại về anh trai.",
+    "doc": "assets/am/cau/5bec85e949.mp3"
    }
   ]
  }

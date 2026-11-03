@@ -1256,7 +1256,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/9cb433958e.mp3"
       ]
      ]
     },
@@ -1327,7 +1328,8 @@
          "？",
          "codinh"
         ]
-       ]
+       ],
+       "assets/am/cau/a34b17a7e0.mp3"
       ]
      ]
     },
@@ -1409,7 +1411,8 @@
          "我很忙。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/8c5db8537e.mp3"
       ]
      ]
     }
@@ -1472,7 +1475,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/0e6c08336f.mp3"
       ]
      ]
     },
@@ -1500,7 +1504,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/8414a2f4eb.mp3"
       ]
      ]
     }
@@ -1570,7 +1575,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/c0593f1abc.mp3"
       ]
      ]
     },
@@ -1598,7 +1604,8 @@
          "饺子。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/9ec79c37a0.mp3"
       ]
      ]
     }
@@ -1721,7 +1728,7 @@
          null
         ]
        ],
-       "我会做面条。"
+       "assets/am/cau/f0bdd4f123.mp3"
       ]
      ]
     },
@@ -1781,7 +1788,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/87bf581f75.mp3"
       ]
      ]
     },
@@ -1826,7 +1834,8 @@
          "？",
          "codinh"
         ]
-       ]
+       ],
+       "assets/am/cau/5669d6d6a4.mp3"
       ]
      ]
     }
@@ -1946,7 +1955,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/10d4197b6d.mp3"
       ]
      ]
     },
@@ -2017,7 +2027,8 @@
          "是我的朋友。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/74efb86c75.mp3"
       ]
      ]
     }
@@ -2129,7 +2140,8 @@
          "！",
          "codinh"
         ]
-       ]
+       ],
+       "assets/am/cau/d5d21aa581.mp3"
       ]
      ]
     },
@@ -2193,7 +2205,8 @@
          "！",
          "codinh"
         ]
-       ]
+       ],
+       "assets/am/cau/dbe1830cd3.mp3"
       ]
      ]
     }
@@ -2322,7 +2335,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/59247252d8.mp3"
       ],
       [
        "这个很好喝。",
@@ -2345,7 +2359,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/3af37c5e29.mp3"
       ]
      ]
     }
@@ -4220,7 +4235,8 @@
      "八号九月",
      "九号八月"
     ],
-    "gt": "Nói **từ lớn đến nhỏ**: tháng trước, ngày sau: **九月八号**."
+    "gt": "Nói **từ lớn đến nhỏ**: tháng trước, ngày sau: **九月八号**.",
+    "doc": "assets/am/cau/a81edfe8e0.mp3"
    },
    {
     "ma": "b5-nt-thutu-2",
@@ -4233,7 +4249,8 @@
     "gt": "Nói **tháng trước, ngày sau**, ngược với tiếng Việt.",
     "sua": "今天九月八号。",
     "pySua": "Jīntiān jiǔ yuè bā hào.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/415ceb7f11.mp3"
    },
    {
     "ma": "b5-nt-thutu-3",
@@ -4251,7 +4268,8 @@
     ],
     "npPhu": [
      "ngayThang"
-    ]
+    ],
+    "doc": "assets/am/cau/3e5c15397b.mp3"
    },
    {
     "ma": "b5-nt-hoi-1",
@@ -4267,7 +4285,8 @@
      "多少"
     ],
     "gt": "Hỏi ngày tháng dùng **几月几号**.",
-    "sau": "今天九月八号。"
+    "sau": "今天九月八号。",
+    "doc": "assets/am/cau/e7fcbde8ba.mp3"
    },
    {
     "ma": "b5-nt-hoi-2",
@@ -4283,7 +4302,8 @@
      "几岁"
     ],
     "gt": "Câu trả lời là thứ → hỏi **星期几**.",
-    "sau": "三月二号星期三。"
+    "sau": "三月二号星期三。",
+    "doc": "assets/am/cau/13a1571a5d.mp3"
    },
    {
     "ma": "b5-nt-hoi-3",
@@ -4298,7 +4318,8 @@
      "今天几月几号？",
      "你今年多大？"
     ],
-    "gt": "Đáp là thứ → hỏi **星期几**."
+    "gt": "Đáp là thứ → hỏi **星期几**.",
+    "doc": "assets/am/cau/5def75c289.mp3"
    },
    {
     "ma": "b5-nt-thu-1",
@@ -4313,7 +4334,8 @@
      "七",
      "零"
     ],
-    "gt": "**星期一 = thứ hai** (lệch một số so với tiếng Việt)."
+    "gt": "**星期一 = thứ hai** (lệch một số so với tiếng Việt).",
+    "doc": "assets/am/cau/53e9fb3351.mp3"
    },
    {
     "ma": "b5-nt-thu-2",
@@ -4326,7 +4348,8 @@
     "gt": "Chủ nhật là **星期日 / 星期天**, không nói 星期七.",
     "sua": "今天星期日。",
     "pySua": "Jīntiān xīngqīrì.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/56f627d24d.mp3"
    },
    {
     "ma": "b5-nt-thu-3",
@@ -4341,7 +4364,8 @@
      "七",
      "号"
     ],
-    "gt": "Chủ nhật là **星期天 / 星期日**."
+    "gt": "Chủ nhật là **星期天 / 星期日**.",
+    "doc": "assets/am/cau/889d004bae.mp3"
    },
    {
     "ma": "b5-nt-rihao-1",
@@ -4351,7 +4375,8 @@
     "cau": "今天是五月一号。",
     "py": "Jīntiān shì wǔ yuè yī hào.",
     "dung": true,
-    "gt": "Khẩu ngữ dùng **号**: 五月一号."
+    "gt": "Khẩu ngữ dùng **号**: 五月一号.",
+    "doc": "assets/am/cau/a3b88c89e3.mp3"
    },
    {
     "ma": "b5-nt-rihao-2",
@@ -4366,7 +4391,8 @@
      "月",
      "年"
     ],
-    "gt": "Ngày trong tháng: **号** (khẩu ngữ) hoặc 日 (văn viết)."
+    "gt": "Ngày trong tháng: **号** (khẩu ngữ) hoặc 日 (văn viết).",
+    "doc": "assets/am/cau/c6c3c544d3.mp3"
    },
    {
     "ma": "b5-nt-nam-1",
@@ -4381,7 +4407,8 @@
      "两千零二十五",
      "二千二十五"
     ],
-    "gt": "Năm đọc **từng chữ số**: 二〇二五年."
+    "gt": "Năm đọc **từng chữ số**: 二〇二五年.",
+    "doc": "assets/am/cau/861bdb9fd2.mp3"
    },
    {
     "ma": "b5-nt-nam-2",
@@ -4394,7 +4421,8 @@
     "gt": "Năm đọc **từng chữ số**, không đọc như số đếm.",
     "sua": "今年是二〇二五年。",
     "pySua": "Jīnnián shì èrlíng'èrwǔ nián.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/861bdb9fd2.mp3"
    },
    {
     "ma": "b5-vn-kd-1",
@@ -4404,7 +4432,8 @@
     "cau": "今天星期六。",
     "py": "Jīntiān xīngqīliù.",
     "dung": true,
-    "gt": "Vị ngữ là thứ: **không cần 是**."
+    "gt": "Vị ngữ là thứ: **không cần 是**.",
+    "doc": "assets/am/cau/112d7422eb.mp3"
    },
    {
     "ma": "b5-vn-kd-2",
@@ -4414,7 +4443,8 @@
     "cau": "今天是九月八号。",
     "py": "Jīntiān shì jiǔ yuè bā hào.",
     "dung": true,
-    "gt": "Câu khẳng định thêm **是** cũng được."
+    "gt": "Câu khẳng định thêm **是** cũng được.",
+    "doc": "assets/am/cau/a81edfe8e0.mp3"
    },
    {
     "ma": "b5-vn-kd-3",
@@ -4433,7 +4463,8 @@
     "npPhu": [
      "vnDanhTu",
      "ngayThang"
-    ]
+    ],
+    "doc": "assets/am/cau/bfd34886ff.mp3"
    },
    {
     "ma": "b5-vn-pd-1",
@@ -4448,7 +4479,8 @@
      "不",
      "没"
     ],
-    "gt": "Phủ định câu vị ngữ danh từ **phải dùng 不是**."
+    "gt": "Phủ định câu vị ngữ danh từ **phải dùng 不是**.",
+    "doc": "assets/am/cau/2a2e4c1036.mp3"
    },
    {
     "ma": "b5-vn-pd-2",
@@ -4461,7 +4493,8 @@
     "gt": "Phủ định **phải có 是**: 不是星期天.",
     "sua": "明天不是星期天。",
     "pySua": "Míngtiān bú shì xīngqītiān.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/daa4f44bcd.mp3"
    },
    {
     "ma": "b5-vn-tuoi-1",
@@ -4471,7 +4504,8 @@
     "cau": "他今年五岁。",
     "py": "Tā jīnnián wǔ suì.",
     "dung": true,
-    "gt": "Nói tuổi: CN + (今年) + số + 岁, không cần 是."
+    "gt": "Nói tuổi: CN + (今年) + số + 岁, không cần 是.",
+    "doc": "assets/am/cau/23dbca11dd.mp3"
    },
    {
     "ma": "b5-vn-tuoi-2",
@@ -4484,7 +4518,8 @@
     "gt": "Nói tuổi **không cần 是**.",
     "sua": "我女儿十二岁。",
     "pySua": "Wǒ nǚ'ér shí'èr suì.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/46585ff3c5.mp3"
    },
    {
     "ma": "b5-tn-truoc-1",
@@ -4504,7 +4539,8 @@
     ],
     "npPhu": [
      "trangNgu"
-    ]
+    ],
+    "doc": "assets/am/cau/c0593f1abc.mp3"
    },
    {
     "ma": "b5-tn-truoc-2",
@@ -4519,7 +4555,8 @@
      "星期几",
      "几号"
     ],
-    "gt": "Câu kể (dấu 。) → thời điểm cụ thể **星期天** đứng đầu câu."
+    "gt": "Câu kể (dấu 。) → thời điểm cụ thể **星期天** đứng đầu câu.",
+    "doc": "assets/am/cau/77763f422b.mp3"
    },
    {
     "ma": "b5-tn-sau-1",
@@ -4540,7 +4577,8 @@
     ],
     "npPhu": [
      "trangNgu"
-    ]
+    ],
+    "doc": "assets/am/cau/9ec79c37a0.mp3"
    },
    {
     "ma": "b5-tn-sau-2",
@@ -4550,7 +4588,8 @@
     "cau": "杨同乐星期天也做饭。",
     "py": "Yáng Tónglè xīngqītiān yě zuò fàn.",
     "dung": true,
-    "gt": "Thời gian đứng **sau chủ ngữ, trước động từ**."
+    "gt": "Thời gian đứng **sau chủ ngữ, trước động từ**.",
+    "doc": "assets/am/cau/ae8a0fc765.mp3"
    },
    {
     "ma": "b5-tn-cuoi-1",
@@ -4563,7 +4602,8 @@
     "gt": "**Không đặt thời gian ở cuối câu**: 我今天休息.",
     "sua": "我今天休息。",
     "pySua": "Wǒ jīntiān xiūxi.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/c08ab75789.mp3"
    },
    {
     "ma": "b5-tn-cuoi-2",
@@ -4576,7 +4616,8 @@
     "gt": "Thời gian phải đứng **trước động từ**.",
     "sua": "我们星期天做饺子。",
     "pySua": "Wǒmen xīngqītiān zuò jiǎozi.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/9ec79c37a0.mp3"
    },
    {
     "ma": "b5-tn-doan-1",
@@ -4591,7 +4632,8 @@
      "两号",
      "星期二"
     ],
-    "gt": "Khoảng thời gian (**两天**) đứng **sau động từ**."
+    "gt": "Khoảng thời gian (**两天**) đứng **sau động từ**.",
+    "doc": "assets/am/cau/3dc1c5b997.mp3"
    },
    {
     "ma": "b5-tn-doan-2",
@@ -4604,7 +4646,8 @@
     "gt": "Khoảng thời gian đứng **sau động từ**: 休息两天.",
     "sua": "我们休息两天。",
     "pySua": "Wǒmen xiūxi liǎng tiān.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/3dc1c5b997.mp3"
    },
    {
     "ma": "b5-hui-kd-1",
@@ -4619,7 +4662,8 @@
      "是",
      "很"
     ],
-    "gt": "\"biết (nói)\" là **会 + ĐT**."
+    "gt": "\"biết (nói)\" là **会 + ĐT**.",
+    "doc": "assets/am/cau/deb200a533.mp3"
    },
    {
     "ma": "b5-hui-kd-2",
@@ -4634,7 +4678,8 @@
      "你喜欢什么菜？",
      "这是谁的电脑？"
     ],
-    "gt": "Đáp \"biết làm sủi cảo…\" → hỏi **你会做什么？**"
+    "gt": "Đáp \"biết làm sủi cảo…\" → hỏi **你会做什么？**",
+    "doc": "assets/am/cau/92db7d0527.mp3"
    },
    {
     "ma": "b5-hui-kd-3",
@@ -4654,7 +4699,8 @@
     "npPhu": [
      "hui",
      "yixie"
-    ]
+    ],
+    "doc": "assets/am/cau/12fc766043.mp3"
    },
    {
     "ma": "b5-hui-pd-1",
@@ -4669,7 +4715,8 @@
      "没会",
      "不是"
     ],
-    "gt": "Phủ định của 会 là **不会**, không nói 没会."
+    "gt": "Phủ định của 会 là **不会**, không nói 没会.",
+    "doc": "assets/am/cau/5c3d4f9c00.mp3"
    },
    {
     "ma": "b5-hui-pd-2",
@@ -4682,7 +4729,8 @@
     "gt": "Phủ định dùng **不会**.",
     "sua": "我不会说法语。",
     "pySua": "Wǒ bú huì shuō Fǎyǔ.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/9b48ecf6aa.mp3"
    },
    {
     "ma": "b5-hui-hoi-1",
@@ -4697,7 +4745,8 @@
      "没",
      "吗"
     ],
-    "gt": "Hỏi chính phản: **会不会**."
+    "gt": "Hỏi chính phản: **会不会**.",
+    "doc": "assets/am/cau/c18cd291cc.mp3"
    },
    {
     "ma": "b5-hui-hoi-2",
@@ -4710,7 +4759,8 @@
     "gt": "Đã dùng **会不会** thì **không thêm 吗**.",
     "sua": "你会不会做饭？",
     "pySua": "Nǐ huì bu huì zuò fàn?",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/c18cd291cc.mp3"
    },
    {
     "ma": "b5-hui-hoi-3",
@@ -4725,7 +4775,8 @@
      "你想吃什么？",
      "这是你的电脑吗？"
     ],
-    "gt": "Đáp \"我会做\" → câu hỏi **会…吗？**"
+    "gt": "Đáp \"我会做\" → câu hỏi **会…吗？**",
+    "doc": "assets/am/cau/85ead79a01.mp3"
    },
    {
     "ma": "b5-hui-tl-1",
@@ -4740,7 +4791,8 @@
      "你是法国人吗？",
      "你想去法国吗？"
     ],
-    "gt": "Trả lời ngắn **不会** cho câu hỏi **会…吗？**"
+    "gt": "Trả lời ngắn **不会** cho câu hỏi **会…吗？**",
+    "doc": "assets/am/cau/55ad669b05.mp3"
    },
    {
     "ma": "b5-hui-tl-2",
@@ -4755,7 +4807,8 @@
      "你喜欢吃饺子吗？",
      "你有饺子吗？"
     ],
-    "gt": "Đáp bắt đầu bằng **会** → câu hỏi **会…吗？**"
+    "gt": "Đáp bắt đầu bằng **会** → câu hỏi **会…吗？**",
+    "doc": "assets/am/cau/c764264fa3.mp3"
    },
    {
     "ma": "b5-hui-py-1",
@@ -4771,7 +4824,8 @@
      "bù huì",
      "bu huì"
     ],
-    "gt": "会 mang thanh 4 nên 不 đọc **thanh 2**: bú huì."
+    "gt": "会 mang thanh 4 nên 不 đọc **thanh 2**: bú huì.",
+    "doc": "assets/am/cau/87bf581f75.mp3"
    },
    {
     "ma": "b5-hui-py-2",
@@ -4787,7 +4841,8 @@
      "huì bú huì",
      "huí bu huí"
     ],
-    "gt": "Trong **会不会**, 不 đọc **nhẹ**: huì bu huì."
+    "gt": "Trong **会不会**, 不 đọc **nhẹ**: huì bu huì.",
+    "doc": "assets/am/cau/5669d6d6a4.mp3"
    },
    {
     "ma": "b5-yx-yixie-1",
@@ -4802,7 +4857,8 @@
      "多少",
      "几"
     ],
-    "gt": "\"một vài\" là **一些 + DT**."
+    "gt": "\"một vài\" là **一些 + DT**.",
+    "doc": "assets/am/cau/2e12137bda.mp3"
    },
    {
     "ma": "b5-yx-yixie-2",
@@ -4820,7 +4876,8 @@
     ],
     "npPhu": [
      "yixie"
-    ]
+    ],
+    "doc": "assets/am/cau/c18ce40dab.mp3"
    },
    {
     "ma": "b5-yx-zhe-1",
@@ -4835,7 +4892,8 @@
      "多少",
      "什么"
     ],
-    "gt": "\"những … này\" là **这些 + DT**."
+    "gt": "\"những … này\" là **这些 + DT**.",
+    "doc": "assets/am/cau/1ded4cd592.mp3"
    },
    {
     "ma": "b5-yx-zhe-2",
@@ -4850,7 +4908,8 @@
      "那些人有几个孩子？",
      "那些人会做饭吗？"
     ],
-    "gt": "Đáp quốc tịch → hỏi **哪国人**."
+    "gt": "Đáp quốc tịch → hỏi **哪国人**.",
+    "doc": "assets/am/cau/bcd375e034.mp3"
    },
    {
     "ma": "b5-yx-lt-1",
@@ -4863,7 +4922,8 @@
     "gt": "Sau 这些 **không thêm lượng từ**.",
     "sua": "这些人是我的同学。",
     "pySua": "Zhèxiē rén shì wǒ de tóngxué.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/67faff97b8.mp3"
    },
    {
     "ma": "b5-yx-lt-2",
@@ -4873,7 +4933,8 @@
     "cau": "这些菜很好吃。",
     "py": "Zhèxiē cài hěn hǎochī.",
     "dung": true,
-    "gt": "这些 + DT, không có lượng từ ở giữa."
+    "gt": "这些 + DT, không có lượng từ ở giữa.",
+    "doc": "assets/am/cau/73b11d22c2.mp3"
    },
    {
     "ma": "b5-yx-cn-1",
@@ -4883,7 +4944,8 @@
     "cau": "那些是我的同学。",
     "py": "Nàxiē shì wǒ de tóngxué.",
     "dung": true,
-    "gt": "那些 **đứng một mình làm chủ ngữ** được."
+    "gt": "那些 **đứng một mình làm chủ ngữ** được.",
+    "doc": "assets/am/cau/3a38b677ed.mp3"
    },
    {
     "ma": "b5-yx-cn-2",
@@ -4898,7 +4960,8 @@
      "一些",
      "几"
     ],
-    "gt": "这些 đứng một mình làm chủ ngữ; 一些 không đứng một mình như vậy."
+    "gt": "这些 đứng một mình làm chủ ngữ; 一些 không đứng một mình như vậy.",
+    "doc": "assets/am/cau/39a77e07f4.mp3"
    },
    {
     "ma": "b5-zh-tt-1",
@@ -4913,7 +4976,8 @@
      "太",
      "是"
     ],
-    "gt": "Cảm thán, không có 了 ở cuối → **真 + TT**."
+    "gt": "Cảm thán, không có 了 ở cuối → **真 + TT**.",
+    "doc": "assets/am/cau/16ecf39a2d.mp3"
    },
    {
     "ma": "b5-zh-tt-2",
@@ -4930,7 +4994,8 @@
     ],
     "npPhu": [
      "zhen"
-    ]
+    ],
+    "doc": "assets/am/cau/32c83c50f4.mp3"
    },
    {
     "ma": "b5-zh-dt-1",
@@ -4945,7 +5010,8 @@
      "是",
      "有"
     ],
-    "gt": "**真 + ĐT tâm lý**: 真喜欢."
+    "gt": "**真 + ĐT tâm lý**: 真喜欢.",
+    "doc": "assets/am/cau/b2e38ad14d.mp3"
    },
    {
     "ma": "b5-zh-dt-2",
@@ -4955,7 +5021,8 @@
     "cau": "我真想去中国！",
     "py": "Wǒ zhēn xiǎng qù Zhōngguó!",
     "dung": true,
-    "gt": "真 + ĐT tâm lý (想)."
+    "gt": "真 + ĐT tâm lý (想).",
+    "doc": "assets/am/cau/dbe1830cd3.mp3"
    },
    {
     "ma": "b5-zh-le-1",
@@ -4968,7 +5035,8 @@
     "gt": "真 + TT **không thêm 了**.",
     "sua": "这些菜真好吃！",
     "pySua": "Zhèxiē cài zhēn hǎochī!",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/9ed68f2a2e.mp3"
    },
    {
     "ma": "b5-zh-le-2",
@@ -4983,7 +5051,8 @@
      "吗",
      "呢"
     ],
-    "gt": "Khung **太……了** phải có 了; 真 thì không."
+    "gt": "Khung **太……了** phải có 了; 真 thì không.",
+    "doc": "assets/am/cau/e901ec27e4.mp3"
    },
    {
     "ma": "b5-zh-hoi-1",
@@ -4996,7 +5065,8 @@
     "gt": "真 dùng để **cảm thán**, câu hỏi dùng 很.",
     "sua": "你的电脑很新吗？",
     "pySua": "Nǐ de diànnǎo hěn xīn ma?",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/a6ab3a24c0.mp3"
    },
    {
     "ma": "b5-zh-hoi-2",
@@ -5006,7 +5076,8 @@
     "cau": "你的电脑真新！",
     "py": "Nǐ de diànnǎo zhēn xīn!",
     "dung": true,
-    "gt": "真 dùng trong câu cảm thán, cuối câu có ！"
+    "gt": "真 dùng trong câu cảm thán, cuối câu có ！",
+    "doc": "assets/am/cau/16ecf39a2d.mp3"
    },
    {
     "ma": "b5-hv-tt-1",
@@ -5021,7 +5092,8 @@
      "喝",
      "听"
     ],
-    "gt": "Đồ ăn ngon: **好吃**."
+    "gt": "Đồ ăn ngon: **好吃**.",
+    "doc": "assets/am/cau/b299855c25.mp3"
    },
    {
     "ma": "b5-hv-tt-2",
@@ -5036,7 +5108,8 @@
      "吃",
      "喝"
     ],
-    "gt": "Tên, bài hát nghe hay: **好听**."
+    "gt": "Tên, bài hát nghe hay: **好听**.",
+    "doc": "assets/am/cau/34c04315a3.mp3"
    },
    {
     "ma": "b5-hv-tt-3",
@@ -5057,7 +5130,8 @@
     "npPhu": [
      "haoV",
      "zhen"
-    ]
+    ],
+    "doc": "assets/am/cau/0f05df6fe1.mp3"
    },
    {
     "ma": "b5-hv-chi-he-1",
@@ -5070,7 +5144,8 @@
     "gt": "**好吃** dùng cho đồ ăn, **好喝** dùng cho đồ uống.",
     "sua": "这些菜很好吃。",
     "pySua": "Zhèxiē cài hěn hǎochī.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/73b11d22c2.mp3"
    },
    {
     "ma": "b5-hv-chi-he-2",
@@ -5085,7 +5160,8 @@
      "吃",
      "听"
     ],
-    "gt": "Đồ uống ngon: **好喝**."
+    "gt": "Đồ uống ngon: **好喝**.",
+    "doc": "assets/am/cau/50475b6e19.mp3"
    },
    {
     "ma": "b5-hv-kan-1",
@@ -5100,7 +5176,8 @@
      "吃",
      "喝"
     ],
-    "gt": "Người đẹp: **好看**."
+    "gt": "Người đẹp: **好看**.",
+    "doc": "assets/am/cau/327c720c17.mp3"
    },
    {
     "ma": "b5-hv-kan-2",
@@ -5110,7 +5187,8 @@
     "cau": "你妈妈好看吗？",
     "py": "Nǐ māma hǎokàn ma?",
     "dung": true,
-    "gt": "好看 dùng cho người đẹp."
+    "gt": "好看 dùng cho người đẹp.",
+    "doc": "assets/am/cau/7b00d4f25d.mp3"
    }
   ]
  }

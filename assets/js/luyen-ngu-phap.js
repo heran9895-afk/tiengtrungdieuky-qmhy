@@ -172,13 +172,13 @@
     el.querySelector('.lnp-giai').innerHTML = '<div class="lnp-giai-o ' + (dung ? 'dung' : 'sai') + '">' +
       '<div class="lt-ket ' + (dung ? 'dung' : 'sai') + '">' + (dung ? '✓ Đúng rồi!' : x.nuaChieu ? '✗ Dấu câu phải là dấu tiếng Trung (，。？！), không dùng dấu , . ? !' : x.chiSaiDau ? '✗ Thứ tự đúng rồi, nhưng dấu câu chưa đúng' : '✗ Chưa đúng') + '</div>' +
       (c.dang === 'dungSai' && !c.dung ? '<div class="lnp-nhan-nho">Câu đúng:</div>' : '') +
-      '<div class="lnp-cau-dung">' + TV.nutLoa(c.dang === 'hoi' ? c.hoi + c.dap : cd[0]) + '<div><div class="hanzi">' + esc(cd[0]) + '</div><div class="lnp-py">' + esc(cd[1]) + '</div></div></div>' +
+      '<div class="lnp-cau-dung">' + TV.nutLoa(c.dang === 'hoi' ? c.hoi + c.dap : cd[0], false, c.doc || '') + '<div><div class="hanzi">' + esc(cd[0]) + '</div><div class="lnp-py">' + esc(cd[1]) + '</div></div></div>' +
       (c.gt ? '<p class="lnp-gt">' + dam(c.gt) + '</p>' : dd ? '<p class="lnp-dd">Ghi nhớ: ' + dam(dd.ten) + '</p>' : '') +
       (c.dang === 'xep' && !dung ? '<p class="lnp-ban">Bạn ' + (x.che === 'go' ? 'gõ' : 'xếp') + ': <span class="hanzi">' + esc(x.cua || '—') + '</span></p>' +
         '<p class="lt-xep-note">Câu đúng ở trên. Có câu xếp được nhiều cách; thấy câu mình cũng đúng thì hỏi cô nhé.</p>' : '') +
       '</div><div class="lt-nut-kq"><button type="button" class="btn solid lnp-tiep">' + (L.i < L.ds.length - 1 ? 'Câu tiếp ›' : 'Xem kết quả') + '</button></div>';
     var t = el.querySelector('.lnp-tiep'); if (t) t.focus({ preventScroll: true });
-    amThanh(dung ? 'dung' : 'sai'); docSau(c.dang === 'hoi' ? c.hoi + c.dap : cd[0]);
+    amThanh(dung ? 'dung' : 'sai'); docSau(c.doc || (c.dang === 'hoi' ? c.hoi + c.dap : cd[0]));
     giuNut();
   }
   function traLoi(o) {

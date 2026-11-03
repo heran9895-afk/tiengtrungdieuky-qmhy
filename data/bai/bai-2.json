@@ -926,7 +926,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/325f2961b9.mp3"
       ]
      ]
     },
@@ -986,7 +987,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/64be89cf7b.mp3"
       ]
      ]
     },
@@ -1046,7 +1048,8 @@
          "？",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/fad2ae4b25.mp3"
       ]
      ]
     }
@@ -1169,7 +1172,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/af69eb37e6.mp3"
       ],
       [
        "我不认识白家月。",
@@ -1192,7 +1196,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/0cd7074187.mp3"
       ]
      ]
     }
@@ -1311,7 +1316,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/70e25c15a6.mp3"
       ],
       [
        "我们很好，你们也很好。",
@@ -1338,7 +1344,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/010c0d5ed7.mp3"
       ]
      ]
     }
@@ -1431,7 +1438,8 @@
          "？",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/c8bca96a5e.mp3"
       ]
      ]
     },
@@ -1476,7 +1484,8 @@
          "？",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/11b7ab7b9f.mp3"
       ]
      ]
     }
@@ -1574,7 +1583,8 @@
          "！",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/2a1848397c.mp3"
       ]
      ]
     },
@@ -1607,7 +1617,8 @@
          "，你是不是白家月同学？",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/5f650ec5ec.mp3"
       ]
      ]
     }
@@ -1724,7 +1735,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/eb14307d90.mp3"
       ],
       [
        "很高兴认识你。",
@@ -1743,7 +1755,8 @@
          "。",
          null
         ]
-       ]
+       ],
+       "assets/am/cau/1f7295fdc1.mp3"
       ]
      ]
     }
@@ -3126,7 +3139,8 @@
      "很",
      "也"
     ],
-    "gt": "\"là\" là **是**: A 是 B."
+    "gt": "\"là\" là **是**: A 是 B.",
+    "doc": "assets/am/cau/325f2961b9.mp3"
    },
    {
     "ma": "b2-shi-kd-2",
@@ -3146,7 +3160,8 @@
     ],
     "npPhu": [
      "shi"
-    ]
+    ],
+    "doc": "assets/am/cau/026cb1686a.mp3"
    },
    {
     "ma": "b2-shi-kd-3",
@@ -3156,7 +3171,8 @@
     "cau": "我是中国学生。",
     "py": "Wǒ shì Zhōngguó xué·shēng.",
     "dung": true,
-    "gt": "A 是 B: tôi là học sinh Trung Quốc."
+    "gt": "A 是 B: tôi là học sinh Trung Quốc.",
+    "doc": "assets/am/cau/f03585067d.mp3"
    },
    {
     "ma": "b2-shi-pd-1",
@@ -3171,7 +3187,8 @@
      "是不是",
      "也"
     ],
-    "gt": "\"không phải là\" là **不是**."
+    "gt": "\"không phải là\" là **不是**.",
+    "doc": "assets/am/cau/9c30416169.mp3"
    },
    {
     "ma": "b2-shi-pd-2",
@@ -3181,7 +3198,8 @@
     "cau": "李文不是英国学生。",
     "py": "Lǐ Wén bú shì Yīngguó xué·shēng.",
     "dung": true,
-    "gt": "Phủ định của 是 là **不是**."
+    "gt": "Phủ định của 是 là **不是**.",
+    "doc": "assets/am/cau/446e30d3f4.mp3"
    },
    {
     "ma": "b2-shi-hoi-1",
@@ -3196,7 +3214,8 @@
      "不",
      "也"
     ],
-    "gt": "Hỏi \"có phải … không?\" dùng **是不是**."
+    "gt": "Hỏi \"có phải … không?\" dùng **是不是**.",
+    "doc": "assets/am/cau/061d661396.mp3"
    },
    {
     "ma": "b2-shi-hoi-2",
@@ -3211,7 +3230,8 @@
      "你是不是美国学生？",
      "你叫什么名字？"
     ],
-    "gt": "Đáp \"không phải, tôi là học sinh Mỹ\" → câu hỏi hỏi một nước **khác** Mỹ."
+    "gt": "Đáp \"không phải, tôi là học sinh Mỹ\" → câu hỏi hỏi một nước **khác** Mỹ.",
+    "doc": "assets/am/cau/8b81fcfdfe.mp3"
    },
    {
     "ma": "b2-shi-hoi-3",
@@ -3226,7 +3246,8 @@
      "请问，您叫什么名字？",
      "您说什么？"
     ],
-    "gt": "Đáp bắt đầu bằng **是** → câu hỏi dạng **是不是**."
+    "gt": "Đáp bắt đầu bằng **是** → câu hỏi dạng **是不是**.",
+    "doc": "assets/am/cau/a61ee86b7a.mp3"
    },
    {
     "ma": "b2-shi-hoi-4",
@@ -3245,7 +3266,8 @@
     "npPhu": [
      "qing",
      "shi"
-    ]
+    ],
+    "doc": "assets/am/cau/061d661396.mp3"
    },
    {
     "ma": "b2-shi-py1-1",
@@ -3261,7 +3283,8 @@
      "bù shì",
      "bu shì"
     ],
-    "gt": "不 đứng trước 是 (thanh 4) nên đọc **thanh 2**: bú shì."
+    "gt": "不 đứng trước 是 (thanh 4) nên đọc **thanh 2**: bú shì.",
+    "doc": "assets/am/cau/9df9733e72.mp3"
    },
    {
     "ma": "b2-shi-py1-2",
@@ -3277,7 +3300,8 @@
      "bù shì",
      "bu shi"
     ],
-    "gt": "Trong **不是**, 不 đọc thanh 2: bú shì."
+    "gt": "Trong **不是**, 不 đọc thanh 2: bú shì.",
+    "doc": "assets/am/cau/2a0c423d4e.mp3"
    },
    {
     "ma": "b2-shi-py2-1",
@@ -3293,7 +3317,8 @@
      "shì bú shì",
      "shì bù shì"
     ],
-    "gt": "Trong **是不是**, 不 đọc **nhẹ**: shì bu shì."
+    "gt": "Trong **是不是**, 不 đọc **nhẹ**: shì bu shì.",
+    "doc": "assets/am/cau/87510bb9e1.mp3"
    },
    {
     "ma": "b2-shi-py2-2",
@@ -3309,7 +3334,8 @@
      "shì bú shì",
      "shī bu shī"
     ],
-    "gt": "Trong **是不是**, 不 đọc nhẹ, 是 giữ thanh 4: shì bu shì."
+    "gt": "Trong **是不是**, 不 đọc nhẹ, 是 giữ thanh 4: shì bu shì.",
+    "doc": "assets/am/cau/3596069eae.mp3"
    },
    {
     "ma": "b2-bu-pd-1",
@@ -3324,7 +3350,8 @@
      "也",
      "很"
     ],
-    "gt": "Phủ định động từ dùng **不 + ĐT**: 不叫."
+    "gt": "Phủ định động từ dùng **不 + ĐT**: 不叫.",
+    "doc": "assets/am/cau/c265c94300.mp3"
    },
    {
     "ma": "b2-bu-pd-2",
@@ -3334,7 +3361,8 @@
     "cau": "我不吃，也不喝。",
     "py": "Wǒ bù chī, yě bù hē.",
     "dung": true,
-    "gt": "不 đứng trước động từ; 也 đứng trước 不."
+    "gt": "不 đứng trước động từ; 也 đứng trước 不.",
+    "doc": "assets/am/cau/8861505563.mp3"
    },
    {
     "ma": "b2-bu-pd-3",
@@ -3353,7 +3381,8 @@
     "npPhu": [
      "ye",
      "bu"
-    ]
+    ],
+    "doc": "assets/am/cau/a54965572c.mp3"
    },
    {
     "ma": "b2-bu-py-1",
@@ -3369,7 +3398,8 @@
      "bù rènshi",
      "bu rènshi"
     ],
-    "gt": "认 mang **thanh 4** nên 不 đọc **thanh 2**: bú rènshi."
+    "gt": "认 mang **thanh 4** nên 不 đọc **thanh 2**: bú rènshi.",
+    "doc": "assets/am/cau/0cd7074187.mp3"
    },
    {
     "ma": "b2-bu-py-2",
@@ -3385,7 +3415,8 @@
      "bú chī",
      "bu chī"
     ],
-    "gt": "吃 là thanh 1, **không phải thanh 4**, nên 不 giữ **thanh 4**: bù chī."
+    "gt": "吃 là thanh 1, **không phải thanh 4**, nên 不 giữ **thanh 4**: bù chī.",
+    "doc": "assets/am/cau/1bfef3fab7.mp3"
    },
    {
     "ma": "b2-ye-ng-1",
@@ -3400,7 +3431,8 @@
      "很",
      "请"
     ],
-    "gt": "\"cũng\" là **也**, đứng sau chủ ngữ, trước động từ."
+    "gt": "\"cũng\" là **也**, đứng sau chủ ngữ, trước động từ.",
+    "doc": "assets/am/cau/26d88ebee4.mp3"
    },
    {
     "ma": "b2-ye-ng-2",
@@ -3410,7 +3442,8 @@
     "cau": "安妮也认识李文。",
     "py": "Ānnī yě rènshi Lǐ Wén.",
     "dung": true,
-    "gt": "也 đứng sau chủ ngữ 安妮, trước động từ 认识."
+    "gt": "也 đứng sau chủ ngữ 安妮, trước động từ 认识.",
+    "doc": "assets/am/cau/aa4affc3c5.mp3"
    },
    {
     "ma": "b2-ye-ng-3",
@@ -3430,7 +3463,8 @@
     "npPhu": [
      "ye",
      "hen"
-    ]
+    ],
+    "doc": "assets/am/cau/d9a105aa39.mp3"
    },
    {
     "ma": "b2-ye-vt-1",
@@ -3445,7 +3479,8 @@
      "很",
      "是"
     ],
-    "gt": "**也** đứng sau chủ ngữ, trước **不**: 也不是 = cũng không phải."
+    "gt": "**也** đứng sau chủ ngữ, trước **不**: 也不是 = cũng không phải.",
+    "doc": "assets/am/cau/c75ad7277d.mp3"
    },
    {
     "ma": "b2-ye-vt-2",
@@ -3458,7 +3493,8 @@
     "gt": "也 luôn đứng **sau chủ ngữ**, không đứng đầu câu.",
     "sua": "我也是学生。",
     "pySua": "Wǒ yě shì xué·shēng.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/10cc8e0fca.mp3"
    },
    {
     "ma": "b2-ye-vt-3",
@@ -3480,7 +3516,8 @@
      "ye",
      "bu",
      "shi"
-    ]
+    ],
+    "doc": "assets/am/cau/2fc45d249b.mp3"
    },
    {
     "ma": "b2-shenme-dt-1",
@@ -3495,7 +3532,8 @@
      "请",
      "也"
     ],
-    "gt": "**ĐT + 什么**: 说什么 = nói gì."
+    "gt": "**ĐT + 什么**: 说什么 = nói gì.",
+    "doc": "assets/am/cau/53cdeb5acd.mp3"
    },
    {
     "ma": "b2-shenme-dt-2",
@@ -3510,7 +3548,8 @@
      "请",
      "很"
     ],
-    "gt": "**ĐT + 什么**: 问什么 = hỏi gì."
+    "gt": "**ĐT + 什么**: 问什么 = hỏi gì.",
+    "doc": "assets/am/cau/35205c552e.mp3"
    },
    {
     "ma": "b2-shenme-dn-1",
@@ -3525,7 +3564,8 @@
      "是不是",
      "很"
     ],
-    "gt": "**什么 + DT**: 什么名字 = tên gì."
+    "gt": "**什么 + DT**: 什么名字 = tên gì.",
+    "doc": "assets/am/cau/dcdedf4368.mp3"
    },
    {
     "ma": "b2-shenme-dn-2",
@@ -3538,7 +3578,8 @@
     "gt": "**什么 đứng trước danh từ**: 什么名字. Không đặt như tiếng Việt \"tên gì\".",
     "sua": "你叫什么名字？",
     "pySua": "Nǐ jiào shénme míngzi?",
-    "nguon": "cô duyệt 29/10/2026"
+    "nguon": "cô duyệt 29/10/2026",
+    "doc": "assets/am/cau/dcdedf4368.mp3"
    },
    {
     "ma": "b2-shenme-dn-3",
@@ -3558,7 +3599,8 @@
     "npPhu": [
      "qing",
      "shenme"
-    ]
+    ],
+    "doc": "assets/am/cau/c17078dc25.mp3"
    },
    {
     "ma": "b2-shenme-tl-1",
@@ -3573,7 +3615,8 @@
      "你是不是学生？",
      "你吃什么？"
     ],
-    "gt": "Trả lời thay 什么 bằng tên, giữ trật tự: 你叫什么名字？ → 我叫白家月。"
+    "gt": "Trả lời thay 什么 bằng tên, giữ trật tự: 你叫什么名字？ → 我叫白家月。",
+    "doc": "assets/am/cau/41c80ae64b.mp3"
    },
    {
     "ma": "b2-shenme-tl-2",
@@ -3588,7 +3631,8 @@
      "你们是不是老师？",
      "你们叫什么名字？"
     ],
-    "gt": "你们说什么？ → 我们说汉语。: 汉语 đứng đúng chỗ của 什么."
+    "gt": "你们说什么？ → 我们说汉语。: 汉语 đứng đúng chỗ của 什么.",
+    "doc": "assets/am/cau/51053d80da.mp3"
    },
    {
     "ma": "b2-qing-dt-1",
@@ -3603,7 +3647,8 @@
      "请问",
      "什么"
     ],
-    "gt": "Mời ai làm gì: **请 + ĐT**. 请问 là \"xin hỏi\"."
+    "gt": "Mời ai làm gì: **请 + ĐT**. 请问 là \"xin hỏi\".",
+    "doc": "assets/am/cau/0a3337725b.mp3"
    },
    {
     "ma": "b2-qing-dt-2",
@@ -3613,7 +3658,8 @@
     "cau": "大家请坐！",
     "py": "Dàjiā qǐng zuò!",
     "dung": true,
-    "gt": "请 + ĐT: 请坐 = mời ngồi."
+    "gt": "请 + ĐT: 请坐 = mời ngồi.",
+    "doc": "assets/am/cau/2aecfa022a.mp3"
    },
    {
     "ma": "b2-qing-hoi-1",
@@ -3628,7 +3674,8 @@
      "请",
      "问"
     ],
-    "gt": "\"Xin hỏi\" là cụm cố định **请问**."
+    "gt": "\"Xin hỏi\" là cụm cố định **请问**.",
+    "doc": "assets/am/cau/e153f41393.mp3"
    },
    {
     "ma": "b2-qing-hoi-2",
@@ -3648,7 +3695,8 @@
     "npPhu": [
      "qing",
      "shenme"
-    ]
+    ],
+    "doc": "assets/am/cau/314aa8f088.mp3"
    },
    {
     "ma": "b2-hen-tt-1",
@@ -3658,7 +3706,8 @@
     "cau": "认识你很高兴。",
     "py": "Rènshi nǐ hěn gāoxìng.",
     "dung": true,
-    "gt": "很 + TT: 很高兴."
+    "gt": "很 + TT: 很高兴.",
+    "doc": "assets/am/cau/f4210f4d73.mp3"
    },
    {
     "ma": "b2-hen-tt-2",
@@ -3677,7 +3726,8 @@
     "npPhu": [
      "ye",
      "hen"
-    ]
+    ],
+    "doc": "assets/am/cau/9ab474d742.mp3"
    },
    {
     "ma": "b2-hen-vn-1",
@@ -3692,7 +3742,8 @@
      "是",
      "请"
     ],
-    "gt": "Tính từ làm vị ngữ đi với **很**, không dùng 是: 中国很大."
+    "gt": "Tính từ làm vị ngữ đi với **很**, không dùng 是: 中国很大.",
+    "doc": "assets/am/cau/af8b9decd3.mp3"
    },
    {
     "ma": "b2-hen-vn-2",
@@ -3705,7 +3756,8 @@
     "gt": "Tính từ làm vị ngữ **không cần 是**, chỉ cần **很 + TT**.",
     "sua": "我很高兴。",
     "pySua": "Wǒ hěn gāoxìng.",
-    "nguon": "cô duyệt 29/10/2026"
+    "nguon": "cô duyệt 29/10/2026",
+    "doc": "assets/am/cau/eb14307d90.mp3"
    },
    {
     "ma": "b2-hen-nhe-1",
@@ -3720,7 +3772,8 @@
      "是",
      "请"
     ],
-    "gt": "Tiếng Việt nói \"tôi khỏe\", tiếng Trung vẫn có **很**: 我很好. Lúc này 很 không nhấn \"rất\"."
+    "gt": "Tiếng Việt nói \"tôi khỏe\", tiếng Trung vẫn có **很**: 我很好. Lúc này 很 không nhấn \"rất\".",
+    "doc": "assets/am/cau/af96a73bf7.mp3"
    },
    {
     "ma": "b2-hen-nhe-2",
@@ -3739,7 +3792,8 @@
     "npPhu": [
      "hen",
      "ye"
-    ]
+    ],
+    "doc": "assets/am/cau/010c0d5ed7.mp3"
    },
    {
     "ma": "b2-hen-tt-3",
@@ -3754,7 +3808,8 @@
      "是",
      "请"
     ],
-    "gt": "很 + TT: **很高兴** = rất vui."
+    "gt": "很 + TT: **很高兴** = rất vui.",
+    "doc": "assets/am/cau/1f7295fdc1.mp3"
    },
    {
     "ma": "b2-shi-pd-3",
@@ -3769,7 +3824,8 @@
      "是不是",
      "也"
     ],
-    "gt": "Vế sau \"我是白家月\" cho biết vế trước là phủ định: **不是**."
+    "gt": "Vế sau \"我是白家月\" cho biết vế trước là phủ định: **不是**.",
+    "doc": "assets/am/cau/b8a8abadff.mp3"
    },
    {
     "ma": "b2-ye-vt-4",
@@ -3791,7 +3847,8 @@
     "npPhu": [
      "ye",
      "hen"
-    ]
+    ],
+    "doc": "assets/am/cau/8459218bbe.mp3"
    },
    {
     "ma": "b2-ye-vt-5",
@@ -3804,7 +3861,8 @@
     "gt": "也 đứng **sau chủ ngữ 我**, trước 很高兴.",
     "sua": "认识你我也很高兴。",
     "pySua": "Rènshi nǐ wǒ yě hěn gāoxìng.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "doc": "assets/am/cau/8459218bbe.mp3"
    },
    {
     "ma": "b2-qing-hoi-3",
@@ -3819,7 +3877,8 @@
      "请问，你是不是老师？",
      "你们说什么？"
     ],
-    "gt": "Đáp tên → hỏi lịch sự **请问，你叫什么名字？**"
+    "gt": "Đáp tên → hỏi lịch sự **请问，你叫什么名字？**",
+    "doc": "assets/am/cau/d6fc71bc92.mp3"
    },
    {
     "ma": "b2-shi-hoi-5",
@@ -3834,7 +3893,8 @@
      "你说什么？",
      "你是不是美国学生？"
     ],
-    "gt": "Đáp \"không phải Annie\" → câu hỏi **是不是安妮**."
+    "gt": "Đáp \"không phải Annie\" → câu hỏi **是不是安妮**.",
+    "doc": "assets/am/cau/2051a39b90.mp3"
    }
   ]
  }

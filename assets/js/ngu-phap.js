@@ -37,7 +37,7 @@
               return '<button type="button" class="np-cum" data-doc="' + esc(c[0]) + '"><span class="hanzi">' + toMau(c) + '</span><small hidden>' + esc(c[1]) + (c[2] ? ' · ' + esc(c[2]) : '') + '</small></button>'; }).join('') + '</div>' +
               (y.viDu.length ? '<div class="np-nhan">Câu ví dụ</div>' : '') : '') +
             y.viDu.map(function (v) {
-              return '<div class="np-vd">' + TV.nutLoa(v[0]) + '<div class="np-vd-chu"><div class="hanzi">' + toMau(v) + '</div><div class="np-vd-an" hidden><div class="np-vd-py">' + esc(v[1]) + '</div>' + (v[2] ? '<div class="np-vd-vi">' + esc(v[2]) + '</div>' : '') + '</div></div>' +
+              return '<div class="np-vd">' + TV.nutLoa(v[0], false, v[4] || '') + '<div class="np-vd-chu"><div class="hanzi">' + toMau(v) + '</div><div class="np-vd-an" hidden><div class="np-vd-py">' + esc(v[1]) + '</div>' + (v[2] ? '<div class="np-vd-vi">' + esc(v[2]) + '</div>' : '') + '</div></div>' +
                 '<button type="button" class="np-hien">Hiện pinyin</button></div>';
             }).join('') + '</div>';
         }).join('') +
