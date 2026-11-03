@@ -397,7 +397,7 @@
         ghi(K_LD, { v: 1, ds: ldMoi });
         try { document.dispatchEvent(new CustomEvent('qm-luot-do-nap')); } catch (e) {}
       }
-      if ('lop' in d) { TK.lop = d.lop; TK.lopLuc = Date.now(); }   // máy chủ 2026-11-04a: kèm bài đã mở, bài được giao của lớp
+      if ('lop' in d) apLop(d.lop);                          // máy chủ 2026-11-04a: kèm bài đã mở, bài được giao của lớp
       TK.dongBoLuc = Date.now(); luuTK(); try { localStorage.setItem(K_DB, String(Date.now())); } catch (e) {}
       veTienDo();
     }).catch(function (e) { ban = true; throw e; });
@@ -452,6 +452,7 @@
   // Mục của một cấp: bai-N, on-tap-1-5, tro-choi… Khoá mục "hsk1/bai-3", "h2/hsk1/tro-choi".
   // MỞ CHO MỌI NGƯỜI (Nhiên chốt 04/11/2026): Thư viện, Nhập môn (không thuộc cấp nào) và các mục dưới đây.
   // Mọi mục khác của chương trình: chỉ vào được khi cô đã mở cho lớp của hồ sơ đang chọn (tài khoản giáo viên: mở hết).
+  var DA_HOI_LOP = false;                                   // trang này đã hỏi máy chủ lớp của hồ sơ chưa
   var MO_TU_DO = window.QM_MO_TU_DO = ['hsk1/bai-1', 'hsk1/bai-2', 'h2/hsk1/bai-1-2'];
   var RE_MUC = /(chuong-trinh-hsk(?:-2)?)\/(hsk[^\/]+)\/([a-z0-9-]+)(?:\/|$)/;
   function mucTuDuongDan(p) { var m = String(p || '').match(RE_MUC); return m ? { muc: CT_KHOA[m[1]] + m[2] + '/' + m[3], cap: m[1] + '/' + m[2] + '/' } : null; }
@@ -459,7 +460,8 @@
     if (MO_TU_DO.indexOf(muc) >= 0) return null;
     if (TK && TK.giaoVien) return null;
     if (!TK) return 'khach';
-    var h = hoSoDang(); if (!h || !h.maLop) return 'chua-lop';
+    var h = hoSoDang(); if (!h) return 'chua-lop';
+    if (!h.maLop) return DA_HOI_LOP ? 'chua-lop' : 'cho';   // cô có thể vừa xếp em vào lớp: chờ hỏi máy chủ xong mới kết luận
     var L = lopDang(); if (!L) return 'cho';
     return L.moBai.indexOf(muc) >= 0 ? null : 'chua-mo';
   }
@@ -590,10 +592,18 @@
     }
   }
   function veLop() { veKhoa(); if (TK) veGiao(); }
-  function keoLop() {                                        // hồ sơ có mã lớp mà chưa có / đã cũ thông tin lớp: hỏi máy chủ (tối đa 3 phút một lần)
-    var h = hoSoDang(); if (!h || !h.maLop) return;
-    if (lopDang() && Date.now() - (TK.lopLuc || 0) < 3 * 60000) return;
-    goi('lopCuaToi', { hoSoId: h.hoSoId }).then(function (d) { TK.lop = d.lop; TK.lopLuc = Date.now(); luuTK(); veLop(); }).catch(function () {
+  // Thông tin lớp từ máy chủ là chuẩn: cô có thể vừa xếp / chuyển / bỏ lớp cho hồ sơ này (bản hồ sơ trên máy có từ lúc đăng nhập)
+  function apLop(L) {
+    TK.lop = L || null; TK.lopLuc = Date.now(); DA_HOI_LOP = true;
+    var h = hoSoDang();
+    if (h) { var ma = L ? L.maLop : ''; if (h.maLop !== ma) { h.maLop = ma; if (L) h.lop = L.tenLop; ganBaiLam(); veNut(); } }
+    luuTK(); veLop();
+  }
+  function keoLop(epBuoc) {                                 // hỏi máy chủ lớp của hồ sơ (tối đa 3 phút một lần, trừ khi trang đang bị khoá)
+    var h = hoSoDang(); if (!h) return;
+    if (!epBuoc && Date.now() - (TK.lopLuc || 0) < 3 * 60000) { DA_HOI_LOP = true; return veLop(); }
+    goi('lopCuaToi', { hoSoId: h.hoSoId }).then(function (d) { apLop(d.lop); }).catch(function () {
+      DA_HOI_LOP = true;
       var man = document.querySelector('.tk-khoa-man[data-ly=cho] .tk-khoa-in');   // không hỏi được máy chủ: báo thay vì chờ mãi
       if (man) man.innerHTML = '<div class="tk-ico">⚠️</div><h3>Chưa kiểm tra được lớp của bạn</h3><p>Bạn kiểm tra mạng rồi tải lại trang nhé.</p><div class="tk-menu"><button type="button" class="tk-btn chinh" onclick="location.reload()">Tải lại trang</button></div>';
     });
@@ -612,7 +622,8 @@
     if (!TK || LA_TRANG_GV) return;
     keoTin();                          // trang giáo viên: không hỏi hồ sơ học sinh
     if (!TK.hoSoId) { if (TK.giaoVien) return; if ((TK.hoSo || []).length) manChonHoSo(); else manTaoHoSo(true); return; }
-    keoLop();
+    var mTrang = mucTuDuongDan(location.pathname);
+    keoLop(!!(mTrang && MO_TU_DO.indexOf(mTrang.muc) < 0) || !(hoSoDang() || {}).maLop);   // đang ở mục cần quyền, hoặc hồ sơ chưa có lớp: hỏi ngay
     if ((TK.hoSo || []).length > 1 && !ssDoc('qm-tk-da-chon')) return manChonHoSo();   // một email nhiều hồ sơ: mỗi lần mở web hỏi ai học
     var lan = +localStorage.getItem(K_DB) || 0;
     if (window.QM_LD_KEO || Date.now() - lan > 5 * 60000) dongBo().catch(function () {});   // trang có lượt làm dở: luôn kéo bản mới (có thể từ máy khác)   // kéo tiến độ mới (từ máy khác) tối đa 5 phút một lần
