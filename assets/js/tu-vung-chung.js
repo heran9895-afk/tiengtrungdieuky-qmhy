@@ -105,8 +105,17 @@
   var amDang = null;
   function laFileAm(t) { return /\.(mp3|m4a|wav|ogg)(\?.*)?$/i.test(t); }
   function dungDoc() { if (window.speechSynthesis) speechSynthesis.cancel(); if (amDang) { amDang.pause(); amDang = null; } }
+  // Bảng tra "chữ → file ghi âm" (assets/am/ban-do.json, tạo bằng tools/ban_do_am.py):
+  // câu / từ nào đã có file giọng Gemini thì phát file, kể cả ở trò chơi, ôn tập, dịch…
+  var BAN_DO = null;
+  function chuanAm(t) {
+    return String(t || '').replace(/\s+/g, '').replace(/(^|[。！？])[A-Z\u4e00-\u9fff]{1,4}[：:]/g, '$1')
+      .replace(/[—–\-“”"]/g, '').replace(/！/g, '。');
+  }
+  try { fetch(ROOT + 'assets/am/ban-do.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (m) { BAN_DO = m; }).catch(function () {}); } catch (e) {}
   function doc(txt, nut) {
     dungDoc();
+    if (!laFileAm(txt) && BAN_DO) { var f = BAN_DO[chuanAm(txt)]; if (f) txt = f; }
     if (laFileAm(txt)) {
       var a = amDang = new Audio(/^(https?:)?\/|^\.\.?\//.test(txt) ? txt : ROOT + txt);   // đường dẫn tương đối tính từ gốc web
       if (nut) { nut.classList.add('dang-doc'); a.onended = a.onerror = function () { nut.classList.remove('dang-doc'); }; }
