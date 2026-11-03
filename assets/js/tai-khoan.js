@@ -27,6 +27,7 @@
   function ghi(k, v) { try { if (v == null) localStorage.removeItem(k); else localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
   function ssDoc(k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } }
   function ssGhi(k, v) { try { sessionStorage.setItem(k, v); } catch (e) {} }
+  function lopDu(t) { t = String(t || ''); return /^lớp(\s|$)/i.test(t) ? t : 'Lớp ' + t; }   // "Lớp tiếng Trung…" không thành "Lớp Lớp …"
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
   // =====================================================================
@@ -198,6 +199,7 @@
     nut.innerHTML = TK ? (TK.nguoiDung && TK.nguoiDung.anh ? '<img src="' + esc(TK.nguoiDung.anh) + '" alt="" referrerpolicy="no-referrer">' : '<span class="tk-nut-chu">' + esc(((h && h.hoTen) || 'A').trim().split(' ').pop().charAt(0)) + '</span>') +
       '<span class="tk-nut-ten">' + esc(h ? h.hoTen.trim().split(' ').pop() : 'Chọn hồ sơ') + '</span>' : '<span class="tk-nut-ico">👤</span><span class="tk-nut-ten">Đăng nhập</span>';
     if (TK && TK.giaoVien && !h) nut.innerHTML = nut.innerHTML.replace('Chọn hồ sơ', 'Cô giáo');
+    if (TK && TK.tinMoi) nut.insertAdjacentHTML('beforeend', '<i class="tk-nut-cham" title="Cô đã trả lời tin nhắn"></i>');
     nut.setAttribute('aria-label', TK ? 'Tài khoản' : 'Đăng nhập');
   }
   function moNut() {
@@ -249,7 +251,7 @@
   function nhanThe(resp) {
     var bao = pop && pop.querySelector('.tk-bao'); if (bao) bao.textContent = '⏳ Đang đăng nhập…';
     goi('dangNhap', { idToken: resp.credential }).then(function (d) {
-      TK = { phien: d.phien, nguoiDung: d.nguoiDung, hoSo: d.hoSo || [], hoSoId: '', giaoVien: !!d.giaoVien, moi: d.moi || null }; luuTK(); veNut();
+      TK = { phien: d.phien, nguoiDung: d.nguoiDung, hoSo: d.hoSo || [], hoSoId: '', giaoVien: !!d.giaoVien, moi: d.moi || null }; luuTK(); veNut(); veLop();
       if (!TK.hoSo.length) return TK.giaoVien ? manGiaoVien(true) : manTaoHoSo(true);
       if (TK.hoSo.length === 1) return chonHoSo(TK.hoSo[0].hoSoId);
       manChonHoSo();
@@ -285,7 +287,7 @@
   }
   function manChonHoSo() {
     var b = moBang('<div class="tk-ico">👋</div><h3>Hôm nay là ai học?</h3>' +
-      '<div class="tk-ds-hs">' + TK.hoSo.map(function (h) { return '<button type="button" class="tk-hs" data-id="' + esc(h.hoSoId) + '"><b>' + esc(h.hoTen) + '</b><small>Lớp ' + esc(h.lop) + '</small></button>'; }).join('') + '</div>' +
+      '<div class="tk-ds-hs">' + TK.hoSo.map(function (h) { return '<button type="button" class="tk-hs" data-id="' + esc(h.hoSoId) + '"><b>' + esc(h.hoTen) + '</b><small>' + esc(lopDu(h.lop)) + '</small></button>'; }).join('') + '</div>' +
       '<div class="tk-hang"><button type="button" class="tk-btn tk-them">➕ Thêm hồ sơ</button><button type="button" class="tk-btn tk-ra">Đăng xuất</button></div>' +
       (TK.giaoVien ? '<div class="tk-menu"><a class="tk-btn chinh" href="' + ROOT + 'giao-vien/">🧑‍🏫 Vào trang giáo viên</a></div>' : ''));
     b.addEventListener('click', function (e) {
@@ -297,15 +299,15 @@
   function manTaiKhoan() {
     var h = hoSoDang(), nd = TK.nguoiDung || {};
     var b = moBang('<div class="tk-dau-tk">' + (nd.anh ? '<img src="' + esc(nd.anh) + '" alt="" referrerpolicy="no-referrer">' : '') + '<div><b>' + esc(nd.hoTen || '') + '</b><small>' + esc(nd.email || '') + '</small></div></div>' +
-      '<div class="tk-dang-hs"><small>Đang học</small><b>' + esc(h.hoTen) + '</b><span>Lớp ' + esc(h.lop) + (h.maLop ? ' · mã ' + esc(h.maLop) : '') + '</span></div>' +
+      '<div class="tk-dang-hs"><small>Đang học</small><b>' + esc(h.hoTen) + '</b><span>' + esc(lopDu(h.lop)) + (h.maLop ? ' · mã ' + esc(h.maLop) : '') + '</span></div>' +
       (TK.giaoVien ? '<div class="tk-menu"><a class="tk-btn chinh" href="' + ROOT + 'giao-vien/">🧑‍🏫 Vào trang giáo viên</a></div>' : '') +
       '<p class="tk-nho tk-dong-bo">' + (TK.dongBoLuc ? 'Tiến độ đã đồng bộ lúc ' + new Date(TK.dongBoLuc).toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }) : 'Tiến độ đang được đồng bộ…') + '</p>' +
       '<div class="tk-menu">' + (TK.hoSo.length > 1 ? '<button type="button" class="tk-btn" data-l="doi">🔄 Đổi hồ sơ</button>' : '') +
-      '<button type="button" class="tk-btn" data-l="them">➕ Thêm hồ sơ</button><button type="button" class="tk-btn" data-l="sua">✏️ Sửa họ tên, mã lớp</button>' +
+      '<button type="button" class="tk-btn" data-l="tin">💬 Tin nhắn với cô' + (TK.tinMoi ? ' <span class="tk-cham">' + TK.tinMoi + ' mới</span>' : '') + '</button><button type="button" class="tk-btn" data-l="them">➕ Thêm hồ sơ</button><button type="button" class="tk-btn" data-l="sua">✏️ Sửa họ tên, mã lớp</button>' +
       '<button type="button" class="tk-btn" data-l="ra">↪ Đăng xuất</button><button type="button" class="tk-btn nhe" data-l="xoa">🗑 Xoá dữ liệu của tôi</button></div>');
     b.addEventListener('click', function (e) {
       var l = (e.target.closest('[data-l]') || {}).dataset; if (!l) return;
-      ({ doi: manChonHoSo, them: function () { manTaoHoSo(false); }, sua: function () { manTaoHoSo(false, true); }, ra: dangXuat, xoa: manXoa })[l.l]();
+      ({ tin: manTinCuaToi, doi: manChonHoSo, them: function () { manTaoHoSo(false); }, sua: function () { manTaoHoSo(false, true); }, ra: dangXuat, xoa: manXoa })[l.l]();
     });
   }
   function manXoa() {
@@ -417,7 +419,7 @@
     if (h) {
       ten.value = h.hoTen; lop.value = h.lop; ten.dispatchEvent(new Event('change'));
       hs.classList.add('tk-co-hs');
-      dong.innerHTML = '🎓 Đang học: <b>' + esc(h.hoTen) + '</b> · Lớp ' + esc(h.lop) + ' <button type="button" class="tk-doi">Đổi</button>';
+      dong.innerHTML = '🎓 Đang học: <b>' + esc(h.hoTen) + '</b> · ' + esc(lopDu(h.lop)) + ' <button type="button" class="tk-doi">Đổi</button>';
     } else {
       hs.classList.remove('tk-co-hs');
       dong.innerHTML = TK ? '<button type="button" class="tk-moi">Chọn hồ sơ</button> để tự điền họ tên, lớp và lưu tiến độ học.'
@@ -447,43 +449,115 @@
     });
   }
   function lopDang() { var h = hoSoDang(); return h && h.maLop && TK.lop && TK.lop.maLop === h.maLop ? TK.lop : null; }
-  var RE_TRANG_BAI = new RegExp('(chuong-trinh-hsk(?:-2)?)\\/(hsk[^\\/]+)\\/(' + RE_BAI + ')(?:\\/|$)');
-  function baiTuDuongDan(p) { var m = String(p || '').match(RE_TRANG_BAI); return m ? { bai: CT_KHOA[m[1]] + m[2] + '/' + m[3], cap: m[1] + '/' + m[2] + '/' } : null; }
-  function biKhoa(bai) { var L = lopDang(); return !!(L && !TK.giaoVien && L.moBai.indexOf(bai) < 0); }
+  // Mục của một cấp: bai-N, on-tap-1-5, tro-choi… Khoá mục "hsk1/bai-3", "h2/hsk1/tro-choi".
+  // MỞ CHO MỌI NGƯỜI (Nhiên chốt 04/11/2026): Thư viện, Nhập môn (không thuộc cấp nào) và các mục dưới đây.
+  // Mọi mục khác của chương trình: chỉ vào được khi cô đã mở cho lớp của hồ sơ đang chọn (tài khoản giáo viên: mở hết).
+  var MO_TU_DO = window.QM_MO_TU_DO = ['hsk1/bai-1', 'hsk1/bai-2', 'h2/hsk1/bai-1-2'];
+  var RE_MUC = /(chuong-trinh-hsk(?:-2)?)\/(hsk[^\/]+)\/([a-z0-9-]+)(?:\/|$)/;
+  function mucTuDuongDan(p) { var m = String(p || '').match(RE_MUC); return m ? { muc: CT_KHOA[m[1]] + m[2] + '/' + m[3], cap: m[1] + '/' + m[2] + '/' } : null; }
+  function lyDoKhoa(muc) {                                   // null = được vào; 'khach' · 'chua-lop' · 'cho' (đang tải thông tin lớp) · 'chua-mo'
+    if (MO_TU_DO.indexOf(muc) >= 0) return null;
+    if (TK && TK.giaoVien) return null;
+    if (!TK) return 'khach';
+    var h = hoSoDang(); if (!h || !h.maLop) return 'chua-lop';
+    var L = lopDang(); if (!L) return 'cho';
+    return L.moBai.indexOf(muc) >= 0 ? null : 'chua-mo';
+  }
   function ngayGio(t) {
     var d = new Date(t), thu = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'][d.getDay()];
     return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2) + ' ' + thu + ' ' + ('0' + d.getDate()).slice(-2) + '/' + ('0' + (d.getMonth() + 1)).slice(-2);
   }
+  function tenTrang() { return document.title.split(' · ').filter(function (x) { return !/Tiếng Trung Diệu Kỳ/.test(x); }).join(' · '); }
   function veKhoa() {
-    var L = lopDang();
-    // Thẻ bài trên trang cấp / trang chủ: bài chưa mở thì khoá thẻ (bỏ liên kết), mở rồi thì trả lại liên kết
+    // Thẻ mục trên trang cấp: chưa được vào thì khoá thẻ (bỏ liên kết), được vào thì trả lại liên kết
     document.querySelectorAll('a.card[href], a.card[data-tk-href]').forEach(function (a) {
       var url = a.getAttribute('data-tk-href') ? new URL(a.getAttribute('data-tk-href'), location.href).pathname : a.pathname;
-      var b = baiTuDuongDan(url); if (!b) return;
-      if (biKhoa(b.bai)) {
+      var m = mucTuDuongDan(url); if (!m) return;
+      var ly = lyDoKhoa(m.muc), nhanCu = a.querySelector('.tk-khoa-nhan');
+      if (ly && ly !== 'cho') {
         if (!a.hasAttribute('data-tk-href')) { a.setAttribute('data-tk-href', a.getAttribute('href')); a.removeAttribute('href'); }
-        a.classList.add('tk-khoa'); a.setAttribute('aria-disabled', 'true'); a.title = 'Cô chưa mở bài này cho lớp ' + L.tenLop;
-        if (!a.querySelector('.tk-khoa-nhan')) a.insertAdjacentHTML('afterbegin', '<span class="tk-khoa-nhan">🔒 Cô chưa mở</span>');
-      } else if (a.hasAttribute('data-tk-href')) {
+        var nhan = ly === 'chua-mo' ? '🔒 Cô chưa mở' : '🔒 Dành cho học viên lớp';
+        a.classList.add('tk-khoa'); a.setAttribute('aria-disabled', 'true'); a.title = nhan.slice(3);
+        if (nhanCu) nhanCu.textContent = nhan; else a.insertAdjacentHTML('afterbegin', '<span class="tk-khoa-nhan">' + nhan + '</span>');
+      } else if (!ly && a.hasAttribute('data-tk-href')) {
         a.setAttribute('href', a.getAttribute('data-tk-href')); a.removeAttribute('data-tk-href');
         a.classList.remove('tk-khoa'); a.removeAttribute('aria-disabled'); a.removeAttribute('title');
-        var n = a.querySelector('.tk-khoa-nhan'); if (n) n.remove();
+        if (nhanCu) nhanCu.remove();
       }
     });
-    // Đang ở trong một bài chưa mở: che trang
-    var b = baiTuDuongDan(location.pathname), man = document.querySelector('.tk-khoa-man');
-    if (b && biKhoa(b.bai)) {
-      if (!man) {
-        man = document.createElement('div'); man.className = 'tk-khoa-man'; man.setAttribute('role', 'alertdialog');
-        man.innerHTML = '<div class="tk-khoa-in"><div class="tk-ico">🔒</div><h3>Bài này cô chưa mở</h3>' +
-          '<p>Lớp <b>' + esc(L.tenLop) + '</b> sẽ học bài này khi cô mở trên lớp. Trong lúc chờ, bạn ôn lại các bài đã học nhé.</p>' +
-          '<div class="tk-menu"><a class="tk-btn chinh" href="' + ROOT + b.cap + '">← Về danh sách bài</a>' +
-          '<button type="button" class="tk-btn nhe" data-l="tk">Đổi hồ sơ / tài khoản</button></div></div>';
-        document.body.appendChild(man);
-        man.querySelector('[data-l]').addEventListener('click', moNut);
-      }
-      document.body.classList.add('tk-bi-khoa');
-    } else if (man) { man.remove(); document.body.classList.remove('tk-bi-khoa'); }
+    // Đang ở trong một mục không được vào: che trang
+    var m = mucTuDuongDan(location.pathname), ly = m ? lyDoKhoa(m.muc) : null, man = document.querySelector('.tk-khoa-man');
+    if (!ly) { if (man) { man.remove(); document.body.classList.remove('tk-bi-khoa'); } return; }
+    if (!man) { man = document.createElement('div'); man.className = 'tk-khoa-man'; man.setAttribute('role', 'alertdialog'); document.body.appendChild(man); }
+    if (man.dataset.ly === ly) return;
+    man.dataset.ly = ly;
+    var L = lopDang(), h = TK && hoSoDang();
+    var noi = {
+      cho: '<div class="tk-ico">⏳</div><h3>Đang kiểm tra lớp của bạn…</h3>',
+      khach: '<div class="tk-ico">🔒</div><h3>Bài này dành cho học viên lớp của cô</h3><p>Thư viện, Nhập môn và Bài 1–2 mở cho mọi người. Các bài khác cô mở cho từng lớp: bạn đăng nhập bằng Google rồi nhập <b>mã lớp</b> cô đưa nhé.</p>' +
+        '<div class="tk-menu"><button type="button" class="tk-btn chinh" data-l="dn">Đăng nhập bằng Google</button><button type="button" class="tk-btn" data-l="nhan">💬 Nhắn cô xin học bài này</button>',
+      'chua-lop': '<div class="tk-ico">🎓</div><h3>Bạn chưa vào lớp nào</h3><p>Bài này cô mở cho từng lớp. Bạn nhập <b>mã lớp</b> cô đưa vào hồ sơ' + (h ? ' <b>' + esc(h.hoTen) + '</b>' : '') + ', hoặc nhắn cô để được thêm vào lớp.</p>' +
+        '<div class="tk-menu"><button type="button" class="tk-btn chinh" data-l="ma">Nhập mã lớp</button><button type="button" class="tk-btn" data-l="nhan">💬 Nhắn cô xin vào lớp</button>',
+      'chua-mo': '<div class="tk-ico">🔒</div><h3>Bài này cô chưa mở</h3><p><b>' + esc(lopDu(L ? L.tenLop : '')) + '</b> sẽ học bài này khi cô mở trên lớp. Trong lúc chờ, bạn ôn lại các bài đã học nhé.</p>' +
+        '<div class="tk-menu"><button type="button" class="tk-btn" data-l="nhan">💬 Nhắn cô xin mở bài</button>'
+    }[ly];
+    man.innerHTML = '<div class="tk-khoa-in">' + noi + (ly === 'cho' ? '' : '<a class="tk-btn nhe" href="' + ROOT + m.cap + '">← Về danh sách bài</a>' +
+      (TK && ly !== 'khach' ? '<button type="button" class="tk-btn nhe" data-l="tk">Đổi hồ sơ / tài khoản</button>' : '') + '</div>') + '</div>';
+    document.body.classList.add('tk-bi-khoa');
+    man.onclick = function (e) {
+      var l = (e.target.closest('[data-l]') || {}).dataset; if (!l) return;
+      if (l.l === 'dn') return manDangNhap('Đăng nhập rồi nhập mã lớp cô đưa để vào học bài này.');
+      if (l.l === 'ma') return hoSoDang() ? manTaoHoSo(false, true) : moNut();
+      if (l.l === 'tk') return moNut();
+      if (l.l === 'nhan') return manNhanCo('mo-bai', m.muc, ly === 'chua-lop' ? 'Em xin cô thêm em vào lớp để học "' + tenTrang() + '" ạ.' : 'Em xin cô mở "' + tenTrang() + '"' + (L ? ' cho lớp ' + L.tenLop : '') + ' ạ.');
+    };
+  }
+
+  // ---------- Nhắn cô: xin mở bài, báo lỗi (máy chủ 2026-11-04c) ----------
+  function manNhanCo(loai, muc, goiY) {
+    var h = TK && hoSoDang();
+    var b = moBang('<div class="tk-ico">💬</div><h3>Nhắn cô</h3><p class="tk-loi-moi">Xin mở bài, báo lỗi trên web, hay hỏi gì cũng được. Cô đọc và trả lời trong thời gian sớm nhất.</p>' +
+      '<form class="tk-form"><label>Bạn muốn<select name="loai"><option value="mo-bai">Xin mở bài / vào lớp</option><option value="bao-loi">Báo lỗi trên web</option><option value="khac">Việc khác</option></select></label>' +
+      (TK ? '<p class="tk-nho" style="margin:0">Gửi từ: <b>' + esc(h ? h.hoTen : (TK.nguoiDung || {}).hoTen || '') + '</b> · ' + esc((TK.nguoiDung || {}).email || '') + '. Cô trả lời thì bạn xem ở nút tài khoản → 💬 Tin nhắn với cô.</p>'
+        : '<label>Họ tên<input name="hoTen" required maxlength="80" autocomplete="name"></label><label>Zalo / số điện thoại / email<input name="lienHe" required maxlength="120" placeholder="để cô liên hệ lại"></label>') +
+      '<label>Nội dung<textarea name="noiDung" required maxlength="2000" rows="4"></textarea></label>' +
+      '<p class="tk-nho" style="margin:0">Kèm theo: trang <b>' + esc(tenTrang() || location.pathname) + '</b></p>' +
+      '<button class="tk-btn chinh" type="submit">Gửi cho cô</button><p class="tk-bao" aria-live="polite"></p></form>');
+    var f = b.querySelector('form'); f.loai.value = loai || 'khac'; f.noiDung.value = goiY || '';
+    f.addEventListener('submit', function (e) {
+      e.preventDefault(); var bao = b.querySelector('.tk-bao'), n = f.querySelector('button.chinh');
+      n.disabled = true; bao.textContent = '⏳ Đang gửi…';
+      goi('guiTin', { loai: f.loai.value, noiDung: f.noiDung.value, trang: location.pathname.replace(/^.*?(chuong-trinh-hsk|thu-vien|giao-vien|choi\/|index\.html|gioi-thieu\.html)/, '$1') + location.hash + ' · ' + tenTrang(),
+        muc: muc || '', hoTen: f.hoTen ? f.hoTen.value : '', lienHe: f.lienHe ? f.lienHe.value : '', hoSoId: h ? h.hoSoId : '', hoTenGoogle: TK ? (TK.nguoiDung || {}).hoTen : '', maPhien: maPhien })
+        .then(function () { dongBang(); baoNho('Đã gửi tin cho cô. Cảm ơn bạn!'); })
+        .catch(function (x) { n.disabled = false; bao.textContent = '⚠️ ' + x.message; });
+    });
+  }
+  function manTinCuaToi() {
+    var b = moBang('<div class="tk-ico">💬</div><h3>Tin nhắn với cô</h3><div class="tk-ds-tin"><p class="tk-nho">⏳ Đang tải…</p></div>' +
+      '<div class="tk-menu"><button type="button" class="tk-btn chinh" data-l="moi">✏️ Nhắn tin mới</button></div>');
+    b.querySelector('[data-l=moi]').addEventListener('click', function () { manNhanCo('khac'); });
+    goi('tinCuaToi', {}).then(function (d) {
+      TK.xemTinLuc = Date.now(); TK.tinMoi = 0; luuTK(); veNut();
+      var o = b.querySelector('.tk-ds-tin'); if (!o) return;
+      o.innerHTML = d.tin.length ? d.tin.map(function (t) {
+        return '<div class="tk-tin"><small>' + ngayGio(t.thoiDiem) + ' · ' + esc({ 'mo-bai': 'Xin mở bài', 'bao-loi': 'Báo lỗi' }[t.loai] || 'Tin nhắn') + '</small><p>' + esc(t.noiDung) + '</p>' +
+          (t.traLoi ? '<div class="tk-tl"><b>Cô trả lời</b> <small>' + ngayGio(t.traLoiLuc) + '</small><p>' + esc(t.traLoi) + '</p></div>' : '<span class="tk-gn' + (t.trangThai === 'xong' ? ' xong">✓ Cô đã xử lý' : '">Cô chưa trả lời') + '</span>') + '</div>';
+      }).join('') : '<p class="tk-nho">Bạn chưa nhắn cô lần nào.</p>';
+    }).catch(function (x) { var o = b.querySelector('.tk-ds-tin'); if (o) o.innerHTML = '<p class="tk-loi">' + esc(x.message) + '</p>'; });
+  }
+  function keoTin() {                                        // có câu trả lời mới của cô: chấm đỏ trên nút tài khoản (hỏi tối đa 10 phút một lần)
+    if (!TK || TK.giaoVien || Date.now() - (TK.tinLuc || 0) < 10 * 60000) return;
+    TK.tinLuc = Date.now(); luuTK();
+    goi('tinCuaToi', {}).then(function (d) {
+      TK.tinMoi = d.tin.filter(function (t) { return t.traLoiLuc > (TK.xemTinLuc || 0); }).length; luuTK(); veNut();
+    }).catch(function () {});
+  }
+  function veNutNhan() {                                     // nút "💬 Nhắn cô" ở chân trang, mọi trang
+    var o = document.querySelector('.sf-social'); if (!o || o.querySelector('.tk-nhan-co')) return;
+    var n = document.createElement('button'); n.type = 'button'; n.className = 'tk-nhan-co'; n.innerHTML = '💬 <span>Nhắn cô</span>';
+    n.addEventListener('click', function () { manNhanCo('khac'); });
+    o.insertBefore(n, o.firstChild);
   }
   function veGiao() {
     var cu = document.querySelector('.tk-giao'), L = lopDang();
@@ -515,11 +589,14 @@
       o.addEventListener('click', function (e) { if (e.target.closest('.tk-giao-them')) { o.classList.add('tk-mo-het'); e.target.remove(); } });
     }
   }
-  function veLop() { if (!TK) return; veKhoa(); veGiao(); }
+  function veLop() { veKhoa(); if (TK) veGiao(); }
   function keoLop() {                                        // hồ sơ có mã lớp mà chưa có / đã cũ thông tin lớp: hỏi máy chủ (tối đa 3 phút một lần)
     var h = hoSoDang(); if (!h || !h.maLop) return;
     if (lopDang() && Date.now() - (TK.lopLuc || 0) < 3 * 60000) return;
-    goi('lopCuaToi', { hoSoId: h.hoSoId }).then(function (d) { TK.lop = d.lop; TK.lopLuc = Date.now(); luuTK(); veLop(); }).catch(function () {});
+    goi('lopCuaToi', { hoSoId: h.hoSoId }).then(function (d) { TK.lop = d.lop; TK.lopLuc = Date.now(); luuTK(); veLop(); }).catch(function () {
+      var man = document.querySelector('.tk-khoa-man[data-ly=cho] .tk-khoa-in');   // không hỏi được máy chủ: báo thay vì chờ mãi
+      if (man) man.innerHTML = '<div class="tk-ico">⚠️</div><h3>Chưa kiểm tra được lớp của bạn</h3><p>Bạn kiểm tra mạng rồi tải lại trang nhé.</p><div class="tk-menu"><button type="button" class="tk-btn chinh" onclick="location.reload()">Tải lại trang</button></div>';
+    });
   }
 
   window.QM_TK = { hoSoId: function () { return TK && TK.hoSoId || ''; }, hoSoDang: hoSoDang, dangNhap: manDangNhap,
@@ -531,8 +608,9 @@
   var LA_TRANG_GV = /\/giao-vien\/(index\.html)?$/.test(location.pathname);
 
   function batDau() {
-    veNut(); ganBaiLam(); veLop();
-    if (!TK || LA_TRANG_GV) return;                          // trang giáo viên: không hỏi hồ sơ học sinh
+    veNut(); ganBaiLam(); veLop(); veNutNhan();
+    if (!TK || LA_TRANG_GV) return;
+    keoTin();                          // trang giáo viên: không hỏi hồ sơ học sinh
     if (!TK.hoSoId) { if (TK.giaoVien) return; if ((TK.hoSo || []).length) manChonHoSo(); else manTaoHoSo(true); return; }
     keoLop();
     if ((TK.hoSo || []).length > 1 && !ssDoc('qm-tk-da-chon')) return manChonHoSo();   // một email nhiều hồ sơ: mỗi lần mở web hỏi ai học
