@@ -38,6 +38,13 @@
     clearTimeout(toastHen); toastHen = setTimeout(function () { b.classList.remove('on'); }, loi ? 6000 : 3200);
   }
 
+  // Gọi máy chủ tài khoản; quá 45 giây chưa có phản hồi thì báo (máy chủ có thể đã lưu, chỉ là trả lời chậm)
+  function goiMC(a, d) {
+    return Promise.race([QM_TK.goi(a, d), new Promise(function (_, hong) {
+      setTimeout(function () { hong(new Error('Máy chủ trả lời chậm. Cô bấm ↻ Làm mới để xem đã lưu chưa nhé.')); }, 45000);
+    })]);
+  }
+
   // ---------------- chờ tai-khoan.js nạp xong ----------------
   var lanCho = 0;
   (function cho() {
@@ -68,7 +75,7 @@
   function taiDuLieu(imLang) {
     if (!imLang) app.innerHTML = '<p class="gv-cho">⏳ Đang tải dữ liệu lớp học…</p>';
     nutTaiLai.hidden = true;
-    return Promise.all([QM_TK.goi('gvDuLieu', {}), CAT ? Promise.resolve(CAT) : taiMucLuc()]).then(function (kq) {
+    return Promise.all([goiMC('gvDuLieu', {}), CAT ? Promise.resolve(CAT) : taiMucLuc()]).then(function (kq) {
       D = kq[0]; CAT = kq[1]; QM_TK.laGiaoVien();
       lamChiMuc(); nutTaiLai.hidden = false;
       dongCapNhat.textContent = 'Cập nhật ' + ngayGio(Date.now()).slice(0, 5);
@@ -341,7 +348,7 @@
       '<h4>🎯 Điểm các lượt làm</h4><div class="gv-diem"><p class="gv-cho">⏳ Đang tải điểm…</p></div>');
     b.querySelector('.gv-luu-lop').addEventListener('click', function (e) {
       var ma = b.querySelector('select[name=chuyen]').value, nut = e.target; nut.disabled = true;
-      QM_TK.goi('gvChuyenLop', { hoSoId: [id], maLop: ma }).then(function () {
+      goiMC('gvChuyenLop', { hoSoId: [id], maLop: ma }).then(function () {
         bao(ma ? 'Đã chuyển ' + h.hoTen + ' sang lớp ' + LOP[ma].tenLop : 'Đã bỏ ' + h.hoTen + ' khỏi lớp'); dongBang(); taiDuLieu(true);
       }).catch(function (x) { nut.disabled = false; bao('⚠️ ' + x.message, true); });
     });
@@ -373,10 +380,12 @@
         '<p class="gv-trong">Học sinh vào lớp bằng cách: đăng nhập Google → tạo / sửa hồ sơ → nhập <b>mã lớp</b>. Em trong lớp chỉ vào được các bài cô đã mở cho lớp.</p></div>' +
       (ds.length ? ds.map(theLop).join('') : '<div class="gv-the"><p class="gv-trong">Chưa có lớp nào.</p></div>');
     noi.querySelector('.gv-tao-lop').addEventListener('submit', function (e) {
-      e.preventDefault(); var f = e.target, n = f.querySelector('button'); n.disabled = true;
-      QM_TK.goi('gvLuuLop', { tenLop: f.tenLop.value, maMoi: f.maMoi.value, ghiChu: f.ghiChu.value }).then(function (d) {
-        bao('Đã tạo lớp · mã ' + d.maLop); LOP_MO = d.maLop; taiDuLieu(true);
-      }).catch(function (x) { n.disabled = false; bao('⚠️ ' + x.message, true); });
+      e.preventDefault(); var f = e.target, n = f.querySelector('button'); n.disabled = true; n.textContent = '⏳ Đang tạo…';
+      goiMC('gvLuuLop', { tenLop: f.tenLop.value, maMoi: f.maMoi.value, ghiChu: f.ghiChu.value }).then(function (d) {
+        bao('Đã tạo lớp · mã ' + d.maLop); LOP_MO = d.maLop;
+        if (d.lop) { D.lop = d.lop; lamChiMuc(); ve(); }        // hiện lớp mới ngay, rồi tải lại toàn bộ ở nền
+        taiDuLieu(true);
+      }).catch(function (x) { n.disabled = false; n.textContent = 'Tạo lớp'; bao('⚠️ ' + x.message, true); });
     });
     noi.addEventListener('click', bamLop);
     noi.addEventListener('change', doiMoBai);
@@ -407,10 +416,10 @@
     } else if (n.dataset.l === 'hs') { LOC.lop = ma; moTab('hoc-sinh'); }
     else if (n.dataset.l === 'sua') {
       var ten = prompt('Tên mới của lớp (mã lớp giữ nguyên):', l.tenLop); if (!ten || ten.trim() === l.tenLop) return;
-      QM_TK.goi('gvLuuLop', { maLop: ma, tenLop: ten }).then(function () { bao('Đã đổi tên lớp'); taiDuLieu(true); }).catch(function (x) { bao('⚠️ ' + x.message, true); });
+      goiMC('gvLuuLop', { maLop: ma, tenLop: ten }).then(function () { bao('Đã đổi tên lớp'); taiDuLieu(true); }).catch(function (x) { bao('⚠️ ' + x.message, true); });
     } else if (n.dataset.l === 'dong') {
       if (!l.dong && !confirm('Đóng lớp ' + l.tenLop + '? Học sinh mới không vào được bằng mã này nữa. Học sinh đã trong lớp vẫn giữ nguyên.')) return;
-      QM_TK.goi('gvLuuLop', { maLop: ma, dong: !l.dong }).then(function () { bao(l.dong ? 'Đã mở lại lớp' : 'Đã đóng lớp'); taiDuLieu(true); }).catch(function (x) { bao('⚠️ ' + x.message, true); });
+      goiMC('gvLuuLop', { maLop: ma, dong: !l.dong }).then(function () { bao(l.dong ? 'Đã mở lại lớp' : 'Đã đóng lớp'); taiDuLieu(true); }).catch(function (x) { bao('⚠️ ' + x.message, true); });
     } else if (n.dataset.l === 'mo-het' || n.dataset.l === 'khoa-het') {
       var c = CAT.filter(function (c) { return c.ct + '/' + c.cap === n.dataset.cap; })[0];
       guiMoBai(ma, c.bai.map(function (b) { return b.khoa; }), n.dataset.l === 'mo-het');
@@ -424,7 +433,7 @@
   function guiMoBai(ma, ds, mo) {
     var tenBai = {}; ds.forEach(function (k) { var b = BAI_THEO_KHOA[k]; if (b) tenBai[k] = b.ten + (b.tenDai ? ' · ' + b.tenDai : ''); });
     LOP_MO = ma;
-    QM_TK.goi('gvMoBai', { maLop: ma, bai: ds, mo: mo, tenBai: tenBai }).then(function (d) {
+    goiMC('gvMoBai', { maLop: ma, bai: ds, mo: mo, tenBai: tenBai }).then(function (d) {
       D.moBai = D.moBai.filter(function (m) { return m.maLop !== ma; }).concat(d.moBai.map(function (b) { return { maLop: ma, bai: b }; }));
       bao((mo ? 'Đã mở ' : 'Đã khoá ') + (ds.length > 1 ? ds.length + ' bài' : (BAI_THEO_KHOA[ds[0]] || {}).ten || ds[0]) + ' cho lớp ' + LOP[ma].tenLop);
       if (ds.length > 1) ve(); else { var c = app.querySelector('[data-lop="' + ma + '"] .gv-mo-bai summary .gv-chip'); if (c) { c.textContent = d.moBai.length + ' bài đã mở'; c.className = 'gv-chip ' + (d.moBai.length ? 'xong' : 'xam'); } }
@@ -476,7 +485,7 @@
       var bd = new Date(f.batDau.value).getTime() || Date.now(), hn = new Date(f.hanNop.value).getTime();
       if (!hn || hn <= bd) return bao('⚠️ Hạn nộp phải sau giờ bắt đầu', true);
       n.disabled = true; n.textContent = '⏳ Đang giao…';
-      QM_TK.goi('gvGiaoBai', { maLop: lops, batDau: bd, hanNop: hn, ghiChu: f.ghiChu.value, phan: phans.map(function (k) {
+      goiMC('gvGiaoBai', { maLop: lops, batDau: bd, hanNop: hn, ghiChu: f.ghiChu.value, phan: phans.map(function (k) {
         var b = BAI_THEO_KHOA[k.replace(/\/[^\/]+$/, '')] || {}; return { phan: k, ten: PHAN_TEN[k] || k, tenBai: (b.ten || '') + (b.tenDai ? ' · ' + b.tenDai : '') };
       }) }).then(function (d) {
         bao('Đã giao ' + phans.length + ' phần cho ' + lops.length + ' lớp' + (d.moThem ? ' · tự mở thêm ' + d.moThem + ' bài' : ''));
@@ -531,13 +540,13 @@
     var g = D.giaoBai.filter(function (x) { return x.maDot === ma; })[0]; if (!g) return;
     if (l === 'xoa') {
       if (!confirm('Xoá đợt giao này? Học sinh sẽ không thấy bài trong ô "Bài cô giao" nữa (tiến độ đã học vẫn giữ).')) return;
-      QM_TK.goi('gvXoaGiao', { maDot: ma }).then(function () { bao('Đã xoá đợt giao'); taiDuLieu(true); }).catch(function (x) { bao('⚠️ ' + x.message, true); });
+      goiMC('gvXoaGiao', { maDot: ma }).then(function () { bao('Đã xoá đợt giao'); taiDuLieu(true); }).catch(function (x) { bao('⚠️ ' + x.message, true); });
     } else if (l === 'han') {
       var o = nut.closest('.gv-dot-the'); if (o.querySelector('.gv-doi-han')) return;
       o.insertAdjacentHTML('beforeend', '<form class="gv-doi-han"><label>Hạn mới<input type="datetime-local" name="han" value="' + chuoiDL(g.hanNop) + '" required></label><button type="submit" class="gv-nut nho chinh">Lưu</button></form>');
       o.querySelector('.gv-doi-han').addEventListener('submit', function (e) {
         e.preventDefault(); var t = new Date(e.target.han.value).getTime();
-        QM_TK.goi('gvSuaGiao', { maDot: ma, hanNop: t }).then(function () { bao('Đã đổi hạn nộp'); taiDuLieu(true); }).catch(function (x) { bao('⚠️ ' + x.message, true); });
+        goiMC('gvSuaGiao', { maDot: ma, hanNop: t }).then(function () { bao('Đã đổi hạn nộp'); taiDuLieu(true); }).catch(function (x) { bao('⚠️ ' + x.message, true); });
       });
     }
   }
