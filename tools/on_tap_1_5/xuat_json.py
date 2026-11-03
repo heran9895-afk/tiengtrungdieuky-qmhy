@@ -14,7 +14,7 @@ random.seed(20261030)
 T = kiem.nap('on_tap')
 D = kiem.nap('dich')
 NET = kiem.NET
-PHIEN_BAN = '2026-10-31a'
+PHIEN_BAN = '2026-11-04a'
 OUT = os.path.join(von.GOC, 'data', 'bai', 'on-tap-1-5.json')
 
 
@@ -259,11 +259,12 @@ def nghe():
 
 
 # =========================== BÀI DỊCH ===========================
-def muc_dich(ma, vi, zh, **them):
+def muc_dich(ma, vi, zh, gy=None, **them):
     import goi_y
-    gy, moi = goi_y.goi_y(ma, zh)
+    if gy is not None: moi = list(zh)                 # bản 04/11/2026: đề ghi sẵn goiY, mỗi câu một đáp án
+    else: gy, moi = goi_y.goi_y(ma, zh)
     o = dict(vi=vi, zh=moi, py=pyc(moi[0]), **them)
-    if gy: o.update(goiY=gy, zhCu=zh)                  # zhCu: đáp án trước khi thêm gợi ý (để chế độ giáo viên nhận ra câu cô chưa sửa)
+    if gy: o.update(goiY=list(gy))
     if '——' in moi[0]: o = tach_ve(o)
     return o
 
@@ -283,8 +284,8 @@ def tach_ve(o):
             x = z.split('——')[k]
             if x not in cu: cu.append(x)
         v = dict(vai='AB'[k], vi=vi[k], zh=zh, py=pyc(zh[0]))
-        gy = [w for w in o.get('goiY', []) if w in zh[0]]
-        if gy: v.update(goiY=gy, zhCu=cu)
+        gy = list(dict.fromkeys(w for w in o.get('goiY', []) if w in zh[0]))
+        if gy: v.update(goiY=gy)
         ve.append(v)
     n = {k: v for k, v in o.items() if k not in ('vi', 'zh', 'py', 'goiY', 'zhCu')}
     n.update(vi=' — '.join(x['vi'] for x in ve), ve=ve, zh=[ve[0]['zh'][0] + ve[1]['zh'][0]], py='')
@@ -292,10 +293,10 @@ def tach_ve(o):
 
 
 def dich():
-    cau = [dict(ma=c['ma'], **muc_dich(c['ma'], c['vi'], c['zh'], np=c.get('np', []), ghiChu=c.get('ghiChu', ''))) for c in D.CAU]
-    ht = [dict(ma=h['ma'], ten=h['ten'], np=h['np'], luot=[dict(ai=l['ai'], **muc_dich(f"{h['ma']}-{i}", l['vi'], l['zh'])) for i, l in enumerate(h['luot'], 1)])
+    cau = [dict(ma=c['ma'], **muc_dich(c['ma'], c['vi'], c['zh'], c.get('goiY', []), np=c.get('np', []), ghiChu=c.get('ghiChu', ''))) for c in D.CAU]
+    ht = [dict(ma=h['ma'], ten=h['ten'], np=h['np'], luot=[dict(ai=l['ai'], **muc_dich(f"{h['ma']}-{i}", l['vi'], l['zh'], l.get('goiY', []))) for i, l in enumerate(h['luot'], 1)])
           for h in D.HOI_THOAI]
-    dv = [dict(ma=d['ma'], ten=d['ten'], np=d['np'], cau=[muc_dich(f"{d['ma']}-{i}", l['vi'], l['zh']) for i, l in enumerate(d['cau'], 1)]) for d in D.DOAN_VAN]
+    dv = [dict(ma=d['ma'], ten=d['ten'], np=d['np'], cau=[muc_dich(f"{d['ma']}-{i}", l['vi'], l['zh'], l.get('goiY', [])) for i, l in enumerate(d['cau'], 1)]) for d in D.DOAN_VAN]
     ten_viet = {'王老师': 'Cô Vương', '同学们': 'Các bạn học', '白家月': 'Bạch Gia Nguyệt', '李文': 'Lý Văn', '陈天中': 'Trần Thiên Trung',
                 '王一飞': 'Vương Nhất Phi', '王一雪': 'Vương Nhất Tuyết', '杨同乐': 'Dương Đồng Lạc', '刘明': 'Lưu Minh', '安妮': 'An Ni'}
     return dict(phienBanDe='goc-' + PHIEN_BAN, soCauMoiLuot=20, tenViet=ten_viet, cau=cau, hoiThoai=ht, doanVan=dv)

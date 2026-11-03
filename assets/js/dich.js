@@ -38,6 +38,8 @@
   // Nhãn vai "A：", "B：" (đầu câu hoặc ngay sau dấu kết câu) không tính khi so đáp án
   function boVai(s) { return String(s || '').replace(/(^|[。？！，、\s—–-])\s*[A-ZＡ-Ｚ]\s*[：:]\s*/g, '$1'); }
   function chuan(s) { return boVai(String(s || '').replace(/\s+/g, '')).replace(/[—–-]+/g, '').replace(/！/g, '。').replace(/[“”"]/g, ''); }
+  // So đáp án (04/11/2026): dấu ngắt câu không làm sai bài — ，、；。！ coi như nhau, bỏ dấu cuối câu (kể cả ？); ？ giữa câu và ： vẫn so
+  function chuanSo(s) { return chuan(s).replace(/[，,、；;。!.]+/g, '。').replace(/[。？?]+$/, ''); }
   // Đáp án nhập theo từng vai ("A：…" một dòng, "B：…" dòng sau) là MỘT cách dịch, không phải hai cách dịch: gộp lại
   function gopVai(zh) {
     zh = (zh || []).map(function (z) { return String(z || '').trim(); }).filter(Boolean);
@@ -75,7 +77,7 @@
     (de.doanVan || []).forEach(function (d) { d.cau.forEach(function (l) { l.zh = gopVai(l.zh); }); });
     return de;
   }
-  function khop(cua, ds) { var c = chuan(cua); return ds.some(function (a) { return chuan(a) === c; }); }
+  function khop(cua, ds) { var c = chuanSo(cua); return ds.some(function (a) { return chuanSo(a) === c; }); }
   function tachCau(s) { return (String(s || '').replace(/\s+/g, '').match(/[^。？！]+[。？！]?/g) || []).filter(function (x) { return x.replace(/[，、：]/g, ''); }); }
   function kiemGo(s) {                                            // trả về lời nhắc nếu bài gõ có vấn đề hình thức
     if (/[A-Za-zÀ-ỹ]/.test(s.replace(/[A-Za-z]：/g, ''))) return '⌨️ Bài dịch có <b>chữ cái Latinh</b>. Hãy bật <b>bộ gõ tiếng Trung (Pinyin)</b> rồi gõ chữ Hán.';
@@ -449,8 +451,8 @@
       (i ? '<button type="button" class="btn dc-xoa-zh" title="Bỏ cách dịch này">✕</button>' : '') + '</div>';
   }
   function docZh(o) { return gopVai(Array.prototype.map.call(o.querySelectorAll(':scope > .dc-zh-ds .dc-zh-o'), function (x) { return x.value; })); }
-  function oGoiYSua(c) { return '<label>💡 Từ gợi ý hiện ở đề (cách nhau bằng dấu phẩy; để trống nếu không cần)</label><input type="text" class="hanzi-o dc-gy-o" data-f="goiY" value="' + esc((c.goiY || []).join(', ')) + '">'; }
-  function docGoiY(o) { return o ? o.value.split(/[,，、;；\s]+/).map(function (w) { return w.trim(); }).filter(Boolean) : []; }
+  function oGoiYSua(c) { return '<label>💡 Từ gợi ý hiện ở đề (tối đa 2–3 từ / cụm, cách nhau bằng dấu phẩy; để trống nếu không cần)</label><input type="text" class="hanzi-o dc-gy-o" data-f="goiY" value="' + esc((c.goiY || []).join(', ')) + '">'; }
+  function docGoiY(o) { return o ? o.value.split(/[,，、;；]+/).map(function (w) { return w.trim(); }).filter(Boolean) : []; }   // chỉ tách ở dấu phẩy: gợi ý được là cụm từ có dấu cách
   function veMucLuot(l, j) {
     return '<div class="dc-luot" data-j="' + j + '"><div class="dc-muc-dau"><span>Lượt ' + (j + 1) + '</span><span><button type="button" class="btn dc-xoa-luot">Xoá lượt</button></span></div>' +
       (l.ai !== undefined ? '<label>Người nói (chữ Hán)</label><input type="text" class="hanzi-o" data-f="ai" value="' + esc(l.ai) + '">' : '') +
