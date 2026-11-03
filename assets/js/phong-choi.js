@@ -38,7 +38,9 @@
     coMayChu: function () { return !!api(); },
     tao: function () { return goi({ a: 'tao' }); },
     ghi: ghi,
-    doc: function (ma, khoa) { return goi({ a: 'doc', ma: ma, khoa: khoa }); },
+    doc: function (ma, khoa, n) { return goi({ a: 'doc', ma: ma, khoa: khoa, n: n || 4 }); },
+    // Cá nhân (máy chủ 2026-11-04): giữ ô người chơi d; ô có người khác → lỗi 'co-nguoi'
+    nhan: function (ma, d, ten, lop, hs) { var p = { a: 'nhan', ma: ma, d: d, id: maMay(), ten: ten, lop: lop || '', hs: hs || '' }; return goi(p).catch(function (e) { if (e.ma) throw e; return goi(p, true); }); },
     xem: function (ma, d) { return goi({ a: 'xem', ma: ma, d: d == null ? '' : d }); },
     vao: function (ma, d) { var p = { a: 'vao', ma: ma, d: d, id: maMay() }; return goi(p).catch(function () { return goi(p, true); }); },
     ping: function () { return goi({ a: 'ping' }); },

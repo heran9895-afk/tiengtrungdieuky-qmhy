@@ -567,3 +567,31 @@ body.vc-trang.co-sf{padding-bottom:0}
 .vc-oc-goi-y{margin:8px 0;padding:10px 12px;border-radius:12px;background:#fffaf0;border:1px dashed var(--gold);font-size:17px;font-weight:700}
 .vc-oc-goi-y .hanzi{font-size:34px}
 @media (max-width:640px){.tl-che-do{grid-template-columns:1fr}}
+
+/* ---------- Rung chuông vàng cá nhân (mỗi máy một người, 04/11/2026) ---------- */
+.tl-cn-dem{font-size:17px;font-weight:700;color:var(--muted);margin-bottom:8px}
+.tl-cn-dem b{color:var(--brand);font-size:22px}
+.tl-cn-ds{display:flex;flex-wrap:wrap;gap:6px}
+.tl-cn-ten{padding:6px 12px;border-radius:999px;background:#f6fbf7;border:1.5px solid var(--line-soft);font-weight:800;font-size:16px}
+.tl-doi-ds.cn{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tl-doi-ds.cn .tl-cn-dem{flex-basis:100%;margin:0 0 2px}
+.tl-cn-o{position:relative;display:grid;gap:0;min-width:118px;max-width:170px;padding:5px 26px 5px 10px;border-radius:10px;border:2px solid var(--line-soft);background:#fff;font-size:14px;line-height:1.25}
+.tl-cn-o b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tl-cn-o span{font-size:12px;color:var(--muted);font-weight:700}
+.tl-cn-o i{position:absolute;right:7px;top:50%;transform:translateY(-50%);font-style:normal;font-weight:900;color:var(--brand)}
+.tl-cn-o.dung{border-color:#1f9d55;background:#eaf8ef}
+.tl-cn-o.sai{border-color:#e7a5a3;background:#fdf1f0}
+.tl-cn-o.sai i{color:var(--red)}
+.tl-cn-o.loai{opacity:.45}
+.tl-ai-so{font-size:14px;font-weight:800;color:var(--brand);background:#fff;border-radius:999px;padding:2px 8px;border:1px solid var(--line-soft)}
+.tl-cn-xep{list-style:none;padding:0;margin:10px auto;max-width:720px;max-height:56vh;overflow-y:auto;display:grid;gap:6px}
+.tl-cn-xep li{display:grid;grid-template-columns:44px 1fr auto;grid-template-rows:auto auto;column-gap:10px;align-items:center;padding:8px 14px;border-radius:12px;background:#fff;border:1px solid var(--line-soft);text-align:left}
+.tl-cn-xep li .tl-huy{grid-row:1 / 3;font-size:24px;text-align:center;font-weight:900;color:var(--muted)}
+.tl-cn-xep li b{font-size:18px}
+.tl-cn-xep li small{grid-column:2;color:var(--muted);font-weight:600}
+.tl-cn-xep li > span:last-child{grid-row:1 / 3;grid-column:3;font-weight:700;color:var(--ink);font-size:14px}
+.tl-cn-xep li.h1{background:#fff8e1;border-color:var(--gold)}
+.tl-cn-xep li.h2,.tl-cn-xep li.h3{background:#fbfaf6}
+.tl-cn-xep li.loai{opacity:.75}
+.vc-form.vc-form-ten{display:grid;gap:8px}
+.vc-form.vc-form-ten input{text-transform:none;font-size:18px;font-weight:700}
