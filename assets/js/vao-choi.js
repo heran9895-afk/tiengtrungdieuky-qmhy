@@ -9,6 +9,16 @@
   if (!el || !P) return;
   function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   var CHU = ['A', 'B', 'C', 'D'];
+  var TV = window.QM_TV || null;
+  function moKhoaAm() {   // iPhone: lần đọc đầu phải nằm trong một lần bấm
+    try { if (window.speechSynthesis) { var u = new SpeechSynthesisUtterance(' '); u.volume = 0; u.lang = 'zh-CN'; speechSynthesis.speak(u); } } catch (e) {}
+  }
+  document.addEventListener('click', function mo1() { moKhoaAm(); document.removeEventListener('click', mo1, true); }, true);
+  function loaDT(s) { return s && s.loa !== 'chieu'; }   // câu nghe phát trên điện thoại (cô chọn ở màn cài đặt)
+  function nutNghe(t, nhan) { return t && TV ? '<button type="button" class="vc-nghe" data-doc="' + esc(t) + '">🔊 ' + (nhan || 'Nghe') + '</button>' : ''; }
+  el.addEventListener('click', function (e) { var b = e.target.closest('.vc-nghe'); if (b && TV) TV.doc(b.dataset.doc); });
+  var DA_DOC = {};
+  function tuDoc(khoa, t) { if (!t || !TV || DA_DOC[khoa]) return; DA_DOC[khoa] = 1; setTimeout(function () { TV.doc(t); }, 250); }
   var MAU = { do: 'do', xanh: 'xanh', vang: 'vang', lam: 'lam' };
 
   var R = { ma: (location.search.match(/[?&]ma=(\d{4,5})/) || [])[1] || '', d: null, s: null, toi: null, nhan: 0, khoaVe: '', daGui: {}, loi: 0, hen: null };
@@ -57,6 +67,7 @@
     if (!ds.length) { dung(); R.hen = setTimeout(moPhong, 2000); }
   }
   function chonDoi(i) {
+    moKhoaAm();
     R.d = i; R.khoaVe = '';
     try { sessionStorage.setItem(khoaDoi(), i); } catch (e) {}
     P.vao(R.ma, i).catch(function () {});
@@ -81,9 +92,11 @@
     }).then(function () { R.hen = setTimeout(vong, 1200); });
   }
   setInterval(function () {   // đếm ngược trên điện thoại
-    var t = el.querySelector('.vc-giay'); if (!t || !R.s) return;
-    var con = Math.max(0, +t.dataset.con - Math.round((Date.now() - R.nhan) / 1000));
-    t.textContent = con + 's'; t.classList.toggle('gap', con <= 3);
+    if (!R.s) return;
+    el.querySelectorAll('.vc-giay, .vc-dem').forEach(function (t) {
+      var con = Math.max(0, +t.dataset.con - Math.round((Date.now() - R.nhan) / 1000));
+      t.textContent = con + (t.classList.contains('vc-giay') ? 's' : ''); t.classList.toggle('gap', con <= 3);
+    });
   }, 250);
 
   function gui(k, c, x) {
@@ -137,13 +150,18 @@
   function tenDoi(s, i) { var x = s.doi[i]; return x ? esc(x.ico + ' ' + x.ten) : ''; }
 
   function noiDung(s, d) {
-    if (s.gd === 'sanh' || !s.gd) return { khoa: 'sanh' + s.v, html: '<div class="vc-cho"><div class="vc-ico">✅</div><h2>Đã vào đội!</h2><p>Nhìn lên màn chiếu, chờ cô bắt đầu nhé.</p><p class="vc-nho">' + esc(s.ten || '') + '</p></div>' };
+    if (s.gd === 'sanh' || !s.gd) {
+      if (s.cheDo === 'tu' && s.sanSang) return oSanSang(s, d, '<div class="vc-ico">✅</div><h2>Đã vào đội!</h2><p class="vc-nho">' + esc(s.ten || '') + ' · tự luyện</p>', 'Đội mình sẵn sàng');
+      return { khoa: 'sanh' + s.v, html: '<div class="vc-cho"><div class="vc-ico">✅</div><h2>Đã vào đội!</h2><p>Chờ cô bấm bắt đầu nhé.</p><p class="vc-nho">' + esc(s.ten || '') + '</p></div>' };
+    }
     if (s.gd === 'ket' && s.ket) {
       var toi = (s.ket.thu || []).filter(function (x) { return x.i === d; })[0], h = toi ? toi.hang : 0;
-      return { khoa: 'ket' + s.v, rung: h === 1 ? [80, 60, 80, 60, 200] : null,
+      var ssK = s.cheDo === 'tu' && s.sanSang ? oSanSang(s, d, '', 'Chơi ván mới') : null;
+      return { khoa: 'ket' + (ssK ? ssK.khoa : s.v), gan: ssK ? ssK.gan : null, rung: h === 1 ? [80, 60, 80, 60, 200] : null,
         html: '<div class="vc-cho"><div class="vc-ico">' + (['', '🥇', '🥈', '🥉', '🎖️'][h] || '🏁') + '</div><h2>' + (h === 1 ? 'Đội bạn vô địch!' : 'Hạng ' + h) + '</h2>' +
           '<ol class="vc-xep">' + (s.ket.thu || []).map(function (x) { return '<li' + (x.i === d ? ' class="toi"' : '') + '>' + tenDoi(s, x.i) + ' · ' + s.diem[x.i] + ' điểm</li>'; }).join('') + '</ol>' +
-          '<p class="vc-nho">Chờ cô mở ván mới…</p></div>' };
+          (s.cheDo === 'tu' && s.sanSang ? '' : '<p class="vc-nho">Chờ cô mở ván mới…</p>') + '</div>' +
+          (ssK ? ssK.html : '') };
     }
     if (s.tro === 'oc' && s.oc) return noiDungOC(s, d);
     var c = s.cau; if (!c) return { khoa: 'cho' + s.v, html: '<div class="tv-trong">Chờ câu hỏi…</div>' };
@@ -159,13 +177,14 @@
       }
       return { khoa: 'cau' + c.id + '|' + (da == null ? '' : da) + '|' + (c.an || []).join() + JSON.stringify(c.tg || ''), con: c.conLai,
         html: '<div class="vc-cau-dau"><span>' + esc(c.ico || '') + ' Câu ' + c.so + (c.tong ? '/' + c.tong : '') + '</span>' + giay(c.conLai) + '</div>' +
-          '<div class="vc-de' + (c.deHan ? ' hanzi' : '') + '">' + esc(c.txt).replace(/\n/g, '<br>') + '</div>' +
+          '<div class="vc-de' + (c.deHan ? ' hanzi' : '') + '">' + esc(c.txt).replace(/\n/g, '<br>') + (c.doc ? '<div>' + nutNghe(c.doc, 'Nghe lại') + '</div>' : '') + '</div>' +
           '<div class="vc-dap' + (c.han ? ' han' : '') + '">' + c.dap.map(function (x, i) {
             var an = (c.an || []).indexOf(i) >= 0;
             return '<button type="button" class="vc-dap-o' + (da != null && +da === i ? ' chon' : '') + (an ? ' an' : '') + '" data-i="' + i + '"' + (da != null || an ? ' disabled' : '') + '><b>' + CHU[i] + '</b><span>' + esc(x) + '</span></button>';
           }).join('') + '</div>' + tg +
           (da != null ? '<p class="vc-da-chon">Đã chọn <b>' + CHU[+da] + '</b> · chờ kết quả…</p>' : ''),
         gan: function () {
+          if (c.doc && loaDT(s)) tuDoc('c' + c.id, c.doc);
           el.querySelectorAll('.vc-dap-o:not([disabled])').forEach(function (b) { b.addEventListener('click', function () { gui('dap', c.id, b.dataset.i); }); });
           el.querySelectorAll('.vc-tg button').forEach(function (b) { b.addEventListener('click', function () { if (confirm('Dùng quyền trợ giúp này? Mỗi quyền chỉ dùng được 1 lần.')) { b.disabled = true; P.gui(R.ma, R.d, 'tg', c.id, b.dataset.tg).catch(function () { b.disabled = false; }); } }); });
         } };
@@ -173,9 +192,34 @@
     // Câu đã đóng: kết quả
     var kq = c.kq ? c.kq[d] : '', dung = c.dap[c.dung];
     var tieuDe = kq === 'dung' ? '🎉 Chính xác!' : kq === 'sai' ? '😅 Chưa đúng' : kq === 'trong' ? '⏰ Hết giờ' : '👀 Đáp án';
-    return { khoa: 'kq' + c.id + kq + s.v, rung: kq === 'dung' ? [60, 40, 60] : kq === 'sai' ? [200] : null,
-      html: '<div class="vc-kq ' + (kq || 'xem') + '"><h2>' + tieuDe + '</h2><p>Đáp án: <b>' + CHU[c.dung] + '</b> <span class="' + (c.han ? 'hanzi' : '') + '">' + esc(dung) + '</span></p></div>' +
-        '<p class="vc-nho">Nhìn lên màn chiếu, chờ câu tiếp theo…</p>' };
+    var sg = oSang(s, d);
+    return { khoa: 'kq' + c.id + kq + sg.khoa, rung: kq === 'dung' ? [60, 40, 60] : kq === 'sai' ? [200] : null,
+      html: '<div class="vc-kq ' + (kq || 'xem') + '"><h2>' + tieuDe + '</h2><p>Đáp án: <b>' + CHU[c.dung] + '</b> <span class="' + (c.han ? 'hanzi' : '') + '">' + esc(dung) + '</span></p>' +
+        (c.giai ? '<p class="vc-giai">' + esc(c.giai) + ' ' + nutNghe(c.docGiai) + '</p>' : '') + '</div>' + sg.html,
+      gan: function () { if (c.docGiai && loaDT(s)) tuDoc('g' + c.id, c.docGiai); sg.gan(); } };
+  }
+
+  // ---------- Sang câu / sẵn sàng (tự sang câu, tự luyện) ----------
+  function oSang(s, d) {
+    var x = s.sang;
+    if (!x) return { khoa: '', html: '<p class="vc-nho">Chờ câu tiếp theo…</p>', gan: function () {} };
+    var da = (x.san || []).indexOf(d) >= 0 || daGui('tg', x.id) === 'tiep', so = (x.san || []).length;
+    var html = '<div class="vc-sang">' +
+      (x.dung ? '<p>⏸ Đang dừng để cô giảng, chờ chút nhé…</p>' : x.con != null ? '<p>' + (x.ket ? 'Xem kết quả' : 'Câu tiếp') + ' sau <b class="vc-dem" data-con="' + x.con + '">' + x.con + '</b> giây</p>' : '') +
+      (da ? '<p class="vc-da-chon">✓ Đội bạn đã sẵn sàng' + (so ? ' (' + so + ' đội)' : '') + '</p>'
+        : '<button type="button" class="btn gold vc-tiep">' + (x.ket ? 'Xem kết quả 🏆' : 'Sẵn sàng câu tiếp ›') + '</button>' + (so ? '<p class="vc-nho">' + so + ' đội đã sẵn sàng</p>' : '')) + '</div>';
+    return { khoa: '|s' + x.id + so + (da ? 'd' : '') + (x.dung ? 'p' : '') + (x.con == null ? '' : 'c'), html: html,
+      gan: function () { var b = el.querySelector('.vc-tiep'); if (b) b.addEventListener('click', function () { gui('tg', x.id, 'tiep'); }); } };
+  }
+  function oSanSang(s, d, dau, nhan) {
+    var x = s.sanSang, da = (x.san || []).indexOf(d) >= 0 || daGui('tg', x.id) === 'san-sang';
+    var ds = (s.doi || []).map(function (z, i) { return '<li class="' + ((x.san || []).indexOf(i) >= 0 ? 'on' : '') + '">' + esc(z.ico + ' ' + z.ten) + ((x.san || []).indexOf(i) >= 0 ? ' ✋' : '') + '</li>'; }).join('');
+    var html = '<div class="vc-cho">' + dau +
+      (x.con != null ? '<h2>Bắt đầu sau <b class="vc-dem" data-con="' + x.con + '">' + x.con + '</b> giây!</h2>'
+        : da ? '<p class="vc-da-chon">✓ Đội bạn đã sẵn sàng. Chờ các đội khác…</p>' : '<button type="button" class="btn gold vc-san-sang">✋ ' + esc(nhan) + '</button>') +
+      '<ul class="vc-san-ds">' + ds + '</ul><p class="vc-nho">Mọi đội có điện thoại cùng sẵn sàng (ít nhất 2 đội) là tự bắt đầu.</p></div>';
+    return { khoa: 'ss' + x.id + (x.san || []).join() + (da ? 'd' : '') + (x.con == null ? '' : 'c') + (s.gd || ''), html: html,
+      gan: function () { var b = el.querySelector('.vc-san-sang'); if (b) b.addEventListener('click', function () { gui('tg', x.id, 'san-sang'); }); } };
   }
 
   // ---------- Ô chữ ----------
@@ -194,7 +238,9 @@
       f.addEventListener('submit', function (e) { e.preventDefault(); var v = f.querySelector('input').value.trim(); if (!v) return;
         if (confirm('Gửi từ khóa "' + v + '"? Mỗi đội chỉ được đoán 1 lần.')) gui('khoa', O.khoaId, v); });
     };
-    var html = '', gan = null, con = O.conLai || null;
+    var html = '', gan = null, con = O.conLai || null, sg = null;
+    var gy = O.goiY, goiYHtml = gy ? '<div class="vc-oc-goi-y">' + (gy.loai === 'nghia' ? '📖 ' + esc(gy.txt) : gy.loai === 'han' ? '<span class="hanzi">' + esc(gy.txt) + '</span>' : '🎧 ' + nutNghe(gy.doc, 'Nghe từ')) + '</div>' : '';
+    if (gy && gy.doc && loaDT(s)) tuDoc('oc' + O.dapId, gy.doc);
     if (O.gd === 'chon') {
       if (O.luot === d) {
         html = '<h2 class="vc-h">Đội bạn chọn hàng ngang</h2><div class="vc-hang-ds">' + O.ds.map(function (h, r) {
@@ -207,16 +253,22 @@
       var da = daGui('dap', O.dapId), dai = O.ds[O.hang] ? O.ds[O.hang].dai : '';
       if (duoc && da == null) {
         html = '<div class="vc-cau-dau"><span>Hàng ' + (O.hang + 1) + ' · ' + dai + ' chữ cái' + (O.gd === 'gianh' ? ' · giành quyền!' : '') + '</span>' + giay(O.conLai) + '</div>' +
-          '<p class="vc-nho">Nhìn gợi ý trên màn chiếu, gõ <b>phiên âm không dấu</b> (ü gõ <b>v</b>).</p>' +
+          goiYHtml + '<p class="vc-nho">Gõ <b>phiên âm không dấu</b> (ü gõ <b>v</b>).</p>' +
           '<form class="vc-form vc-form-dap"><input type="text" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="20" placeholder="' + dai + ' chữ cái" aria-label="Đáp án">' +
           '<button type="submit" class="btn gold">Gửi</button></form>';
         gan = function () { var f = el.querySelector('.vc-form-dap'), i = f.querySelector('input'); setTimeout(function () { i.focus(); }, 50);
           f.addEventListener('submit', function (e) { e.preventDefault(); var v = i.value.trim(); if (v) gui('dap', O.dapId, v); }); };
       } else if (da != null) html = '<div class="vc-cho"><h2>Đã gửi: <b>' + esc(da) + '</b></h2><p>Chờ kết quả trên màn chiếu…</p></div>';
-      else html = '<div class="vc-cho"><div class="vc-ico">👀</div><h2>' + (O.gd === 'hang' ? tenDoi(s, O.luot) + ' đang trả lời hàng ' + (O.hang + 1) : 'Các đội khác đang giành quyền') + '</h2>' + giay(O.conLai) + '</div>';
+      else html = '<div class="vc-cho"><div class="vc-ico">👀</div><h2>' + (O.gd === 'hang' ? tenDoi(s, O.luot) + ' đang trả lời hàng ' + (O.hang + 1) : 'Các đội khác đang giành quyền') + '</h2>' + goiYHtml + giay(O.conLai) + '</div>';
     } else if (O.gd === 'khoa') {
-      html = '<h2 class="vc-h">🔑 Vòng cuối: đoán từ khóa</h2>' + giay(O.conLai) + doanKhoa(true);
+      html = '<h2 class="vc-h">🔑 Vòng cuối: đoán từ khóa</h2>' + (O.goiYKhoa ? '<div class="vc-oc-goi-y">💡 ' + esc(O.goiYKhoa) + '</div>' : '') + giay(O.conLai) + doanKhoa(true);
       gan = ganKhoa;
+    } else if ((O.gd === 'xong' && O.giai) || (O.gd === 'het' && O.khoaDap)) {
+      var w = O.gd === 'xong' ? O.giai : O.khoaDap;
+      sg = oSang(s, d);
+      html = '<div class="vc-kq xem"><h2>' + (O.gd === 'xong' ? 'Hàng ' + (O.hang + 1) : '🔑 Từ khóa') + '</h2><p><span class="hanzi">' + esc(w.han) + '</span> <b>' + esc(w.py) + '</b> · ' + esc(w.nghia) + ' ' + nutNghe(w.doc) + '</p></div>' + sg.html;
+      if (O.gd === 'xong' && w.doc && loaDT(s)) tuDoc('ocx' + O.dapId, w.doc);
+      gan = sg.gan;
     } else html = '<div class="vc-cho"><p>Nhìn lên màn chiếu nhé…</p></div>';
     if (O.gd !== 'khoa') html += doanKhoa(false);
     var g1 = gan;

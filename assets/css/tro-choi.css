@@ -539,3 +539,31 @@ body.vc-trang.co-sf{padding-bottom:0}
 @media (max-width:560px){.pc-bang{font-size:13px;padding:8px 12px}.pc-bang .pc-tt{margin-left:0;flex-basis:100%}}
 .pc-em{margin:10px 0 4px;font-size:14px;color:#2c6b44}
 .vc-the .pc-vao{display:inline-block;margin-top:6px}
+
+/* ---------- Chế độ chơi, tự sang câu, tự luyện (04/11/2026) ---------- */
+.tl-che-do{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.tl-che-o{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border:2px solid var(--line-soft);border-radius:14px;cursor:pointer;background:#fff}
+.tl-che-o:has(input:checked){border-color:var(--brand);background:var(--brand-soft)}
+.tl-che-o input{margin-top:3px;accent-color:var(--brand);width:18px;height:18px;flex-shrink:0}
+.tl-che-o span{display:grid;gap:2px}
+.tl-che-o b{color:var(--brand);font-size:16px}
+.tl-che-o small{color:var(--muted);font-weight:600;font-size:13px;line-height:1.45}
+.tl-tu-bd{margin:10px 0;padding:10px 14px;border-radius:12px;background:#fff8e6;border:1px solid #f0d58a;color:#7a5a00;font-size:15px;text-align:center}
+.tl-hanh-dong{flex-wrap:wrap;align-items:center}
+.tl-sang{font-size:16px;font-weight:700;color:var(--muted)}
+.tl-sang b{color:var(--brand);font-size:20px;font-variant-numeric:tabular-nums}
+.tl-sang-so{color:var(--brand)}
+.vc-sang{margin:10px 0 0;padding:12px;border-radius:14px;background:#fff;border:1px solid var(--line-soft);text-align:center}
+.vc-sang p{margin:0 0 8px}
+.vc-sang .btn{width:100%;font-size:17px;padding:12px}
+.vc-dem{font-size:22px;color:var(--brand);font-variant-numeric:tabular-nums}
+.vc-giai{margin:8px 0 0;font-size:15px;line-height:1.5}
+.vc-nghe{display:inline-flex;align-items:center;gap:4px;margin:6px 0 0;padding:6px 14px;border-radius:999px;border:1.5px solid var(--brand);background:#fff;color:var(--brand);font:inherit;font-weight:800;font-size:15px;cursor:pointer}
+
+.vc-san-ds{list-style:none;padding:0;margin:12px 0 4px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.vc-san-ds li{padding:4px 10px;border-radius:999px;background:#f1ece2;color:var(--muted);font-size:14px;font-weight:700}
+.vc-san-ds li.on{background:var(--brand-soft);color:var(--brand)}
+.vc-cho .vc-san-sang{font-size:18px;padding:13px 26px;margin-top:6px}
+.vc-oc-goi-y{margin:8px 0;padding:10px 12px;border-radius:12px;background:#fffaf0;border:1px dashed var(--gold);font-size:17px;font-weight:700}
+.vc-oc-goi-y .hanzi{font-size:34px}
+@media (max-width:640px){.tl-che-do{grid-template-columns:1fr}}
