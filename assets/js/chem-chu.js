@@ -14,6 +14,8 @@
   if (CF.tongHop && NHOM.length > 1) NHOM.push({ ma: 'tong-hop', ten: 'Tổng hợp', tongHop: true });
   const thamSo = new URLSearchParams(location.search).get('bai');
   let maNhom = NHOM.some(n => n.ma === thamSo) ? thamSo : (NHOM[0] || {}).ma;
+  const PC = window.QM_PC && QM_PC.on ? QM_PC : null;   // phiên chơi của cô: bài cố định, báo tiến trình
+  if (PC && NHOM.some(n => n.ma === PC.bai)) maNhom = PC.bai;
 
   goc.innerHTML = `
     <div class="lt-thanh tc-thanh"><label class="lt-o"><span class="lt-o-nhan">Bài</span><select class="cc-chon-bai" aria-label="Chọn bài">${NHOM.map(n => `<option value="${esc(n.ma)}">${esc(n.ten)}</option>`).join('')}</select></label>
@@ -37,6 +39,7 @@
   const $ = id => document.getElementById(id);
   const selBai = goc.querySelector('.cc-chon-bai');
   selBai.value = maNhom;
+  if (PC) { selBai.disabled = true; selBai.title = 'Cô đã chọn sẵn cho phiên chơi'; }
 
   /* ===== DỮ LIỆU ===== */
   let P = {}, CONF = {}, MEAN = {}, TRANH = {}, KEYS = [], D = null, ROUND_TIME = 60;
@@ -328,6 +331,7 @@
     const s = Math.ceil(timeLeft); $('cc-time').textContent = s + ' giây';
     $('cc-time').classList.toggle('low', s <= 10);
     $('cc-score').textContent = score + ' điểm';
+    if (PC && state === 'play') PC.cap({ c: Math.min(ROUND_TIME, Math.round(ROUND_TIME - timeLeft)), n: ROUND_TIME, d: score, dg: hits, s: wrongs + misses, mang: lives });
   }
   function toast(html) { const el = $('cc-toast'); el.innerHTML = html; el.classList.add('show'); toastT = 1.6; }
   let batDauLuc = 0;
@@ -343,12 +347,14 @@
     $('cc-toast').classList.remove('show');
     lastSec = ROUND_TIME; beatT = 0.6; batDauLuc = Date.now();
     ac(); sfx.start();
+    if (PC) PC.bat({ n: ROUND_TIME, mang: lives });
     state = 'play'; selBai.disabled = true; hud();
     const h = document.querySelector('.sh-header'), cao = h ? h.getBoundingClientRect().height : 0, r = goc.querySelector('.cc-game').getBoundingClientRect();
     if (r.top < cao || field.getBoundingClientRect().bottom > window.innerHeight) window.scrollTo({ top: r.top + window.scrollY - cao - 6, behavior: 'smooth' });
   }
   function end() {
-    state = 'over'; selBai.disabled = false; $('cc-toast').classList.remove('show');
+    state = 'over'; selBai.disabled = !!PC; $('cc-toast').classList.remove('show');
+    if (PC) PC.xong({ c: Math.min(ROUND_TIME, Math.round(ROUND_TIME - timeLeft)), n: ROUND_TIME, d: score, dg: hits, s: wrongs + misses, mang: lives, tong: ROUND_TIME * 30, tg: Math.round((Date.now() - batDauLuc) / 1000) });
     const cu = readBest(), best = Math.max(cu, score), isNew = score > 0 && score > cu;
     saveBest(best);
     sfx.end(isNew);

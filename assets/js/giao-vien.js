@@ -175,7 +175,7 @@
   var NHAN_TT = { xong: '✓ Đã xong', muon: '✓ Xong muộn', dang: '● Đang làm', chua: 'Chưa làm', qua: '⏰ Quá hạn' };
 
   // ---------------- khung trang ----------------
-  var TABS = [['tong-quan', '📊 Tổng quan'], ['hoc-sinh', '🧑‍🎓 Học sinh'], ['lop', '🏫 Lớp & mở bài'], ['giao-bai', '📋 Giao bài'], ['tin', '💬 Tin nhắn']];
+  var TABS = [['tong-quan', '📊 Tổng quan'], ['hoc-sinh', '🧑‍🎓 Học sinh'], ['lop', '🏫 Lớp & mở bài'], ['giao-bai', '📋 Giao bài'], ['tro-choi', '🎮 Trò chơi'], ['tin', '💬 Tin nhắn']];
   function tinMoi() { return (D.tinNhan || []).filter(function (t) { return t.trangThai !== 'xong'; }); }
   function ve() {
     app.innerHTML = '<nav class="gv-tabs" role="tablist">' + TABS.map(function (t) {
@@ -187,7 +187,8 @@
   function moTab(t) { TAB = t; try { sessionStorage.setItem('gv-tab', t); } catch (e) {} ve(); window.scrollTo({ top: app.offsetTop - 90, behavior: 'smooth' }); }
   function veTab() {
     var noi = app.querySelector('.gv-noi');
-    ({ 'tong-quan': veTongQuan, 'hoc-sinh': veHocSinh, 'lop': veLop, 'giao-bai': veGiaoBai, 'tin': veTin })[TAB](noi);
+    dungTheoDoi();
+    ({ 'tong-quan': veTongQuan, 'hoc-sinh': veHocSinh, 'lop': veLop, 'giao-bai': veGiaoBai, 'tro-choi': veTroChoi, 'tin': veTin })[TAB](noi);
   }
 
   // =====================================================================
@@ -713,6 +714,229 @@
         luuNen('gvSuaGiao', { maDot: ma, hanNop: t }, 'Đổi hạn').catch(function () {});
       });
     }
+  }
+
+  // =====================================================================
+  // TRÒ CHƠI (2026-11-04e): phiên chơi cá nhân có mã — cô tạo mã, theo dõi trực tiếp từng em
+  //   Tiến trình trực tiếp: máy chủ tài khoản (gvXemPhien, 3 giây / lần khi đang mở bảng theo dõi).
+  //   Tổng số lượt, lần đầu, lần tốt nhất: máy chủ điểm (?action=attempts&lesson=<mã bài>), ghép theo họ tên + lớp như bảng xếp hạng.
+  // =====================================================================
+  var TRO = [
+    { ma: 'bong-bay', ten: 'Bắn bóng bay', ico: '🎈', tep: 'ban-bong-bay.html', coMuc: true, donVi: 'câu' },
+    { ma: 'chem-chu', ten: 'Chém chữ Hán', ico: '🍉', tep: 'chem-chu.html', donVi: 'giây' },
+    { ma: 'dinh-luyen-chu', ten: 'Đỉnh luyện chữ', ico: '🧩', tep: 'dinh-luyen-chu.html', donVi: 'câu' }
+  ];
+  var MUC_TC = [['de', 'Dễ'], ['tb', 'Trung bình'], ['kho', 'Khó']];
+  var TRO_THEO_MA = {}; TRO.forEach(function (t) { TRO_THEO_MA[t.ma] = t; });
+  var NGUON_TC = null, PC_CHON = { ct: '', tro: 'bong-bay', bai: '', muc: 'tb', lop: '' }, PC_MO = '', PC_LIVE = {}, PC_DIEM = {}, PC_HEN = null, PC_LAN = 0;
+  try { var pcCu = JSON.parse(sessionStorage.getItem('gv-pc') || '{}'); if (pcCu.chon) PC_CHON = pcCu.chon; if (pcCu.mo) PC_MO = pcCu.mo; } catch (e) {}
+  function luuPC() { try { sessionStorage.setItem('gv-pc', JSON.stringify({ chon: PC_CHON, mo: PC_MO })); } catch (e) {} }
+  function taiNguonTC() {                   // danh sách bài của trò chơi: chạy nguon.js của từng cấp có thư mục tro-choi
+    if (NGUON_TC) return Promise.resolve(NGUON_TC);
+    return Promise.all(CAT.map(function (c) {
+      return fetch(ROOT + c.ct + '/' + c.cap + '/tro-choi/nguon.js').then(function (r) { if (!r.ok) throw r; return r.text(); }).then(function (txt) {
+        var w = {}; new Function('window', txt)(w);
+        var N = w.QM_NGUON_TC; if (!N) return null;
+        var bai = N.BAI.map(function (b) { return { ma: b.ma, ten: b.ten, diem: b.diem }; });
+        if (N.CHUNG.tongHop && bai.length > 1) bai.push({ ma: 'tong-hop', ten: 'Tổng hợp', diem: N.CHUNG.tongHopDiem });
+        return { khoa: c.ct + '/' + c.cap, ct: c.ct, cap: c.cap, ten: c.ten, maDiem: N.CHUNG.maDiem || '', tenDiem: N.CHUNG.tenDiem || '', bai: bai };
+      }).catch(function () { return null; });
+    })).then(function (ds) { NGUON_TC = ds.filter(Boolean); return NGUON_TC; });
+  }
+  function maBaiTC(ng, bai, tro, muc) { return [ng.maDiem, bai.diem, 'tro-choi', tro].concat(muc ? [muc] : []).filter(Boolean).join('-'); }
+  function linkVao(ma) { return new URL(ROOT + 'choi/?ma=' + ma, location.href).href; }
+  function phienCon(p) { return !p.ketThuc && Date.now() - p.taoLuc < 6 * 3600e3; }
+  function dungTheoDoi() { clearTimeout(PC_HEN); PC_HEN = null; PC_LAN++; }   // mọi lượt kéo đang chờ đều bỏ
+
+  function veTroChoi(noi) {
+    noi.innerHTML = '<p class="gv-cho">⏳ Đang tải danh sách trò chơi…</p>';
+    taiNguonTC().then(function (ds) {
+      if (TAB !== 'tro-choi') return;
+      if (PC_MO) return veTheoDoi(noi, PC_MO);
+      if (!ds.length) { noi.innerHTML = '<div class="gv-the"><p class="gv-trong">Chưa tìm thấy trò chơi nào trong các cấp đang mở.</p></div>'; return; }
+      if (!ds.some(function (n) { return n.khoa === PC_CHON.ct; })) PC_CHON.ct = ds[0].khoa;
+      var dsPh = D.phienChoi || [], dangMo = dsPh.filter(phienCon), cu = dsPh.filter(function (p) { return !phienCon(p); });
+      var lopMo = D.lop.filter(function (l) { return !l.dong; });
+      noi.innerHTML = '<div class="gv-the"><div class="gv-the-dau"><h3>🎮 Tạo mã vào chơi</h3></div>' +
+        '<form class="gv-pc-tao">' +
+          '<label>Lớp<select name="lop" class="gv-chon"><option value="">Không theo lớp (ai có mã đều vào)</option>' + lopMo.map(function (l) { return '<option value="' + esc(l.maLop) + '"' + (l.maLop === PC_CHON.lop ? ' selected' : '') + '>' + esc(l.tenLop) + '</option>'; }).join('') + '</select></label>' +
+          '<label>Chương trình<select name="ct" class="gv-chon">' + ds.map(function (n) { return '<option value="' + esc(n.khoa) + '"' + (n.khoa === PC_CHON.ct ? ' selected' : '') + '>' + esc(n.ten) + '</option>'; }).join('') + '</select></label>' +
+          '<label>Trò chơi<select name="tro" class="gv-chon">' + TRO.map(function (t) { return '<option value="' + t.ma + '"' + (t.ma === PC_CHON.tro ? ' selected' : '') + '>' + t.ico + ' ' + t.ten + '</option>'; }).join('') + '</select></label>' +
+          '<label>Bài<select name="bai" class="gv-chon"></select></label>' +
+          '<label class="gv-pc-muc">Mức độ<select name="muc" class="gv-chon">' + MUC_TC.map(function (m) { return '<option value="' + m[0] + '"' + (m[0] === PC_CHON.muc ? ' selected' : '') + '>' + m[1] + '</option>'; }).join('') + '</select></label>' +
+          '<button type="submit" class="gv-nut chinh">Tạo mã</button></form>' +
+        '<p class="gv-trong">Học sinh đăng nhập, vào <b>' + esc(linkVao('').replace(/\?ma=$/, '')) + '</b> (hoặc quét QR) và nhập mã 5 số. Bài, mức cố định theo mã; Bắn bóng bay chơi dạng 🔀 Trộn tất cả. Điểm vẫn lưu về Sheet như mọi lần.</p></div>' +
+        '<div class="gv-the"><div class="gv-the-dau"><h3>📡 Phiên đang mở</h3></div>' + (dangMo.length ? '<div class="gv-pc-ds">' + dangMo.map(thePhien).join('') + '</div>' : '<p class="gv-trong">Chưa có phiên nào đang mở.</p>') + '</div>' +
+        (cu.length ? '<details class="gv-the gv-pc-cu"><summary><h3>🗂 Phiên trước (' + cu.length + ')</h3></summary><div class="gv-pc-ds">' + cu.map(thePhien).join('') + '</div></details>' : '');
+      var f = noi.querySelector('.gv-pc-tao');
+      function veBai() {
+        var ng = ds.filter(function (n) { return n.khoa === f.ct.value; })[0];
+        if (!ng.bai.some(function (b) { return b.ma === PC_CHON.bai; })) PC_CHON.bai = ng.bai[0].ma;
+        f.bai.innerHTML = ng.bai.map(function (b) { return '<option value="' + esc(b.ma) + '"' + (b.ma === PC_CHON.bai ? ' selected' : '') + '>' + esc(b.ten) + '</option>'; }).join('');
+        f.querySelector('.gv-pc-muc').hidden = !TRO_THEO_MA[f.tro.value].coMuc;
+      }
+      veBai();
+      f.addEventListener('change', function () { PC_CHON = { lop: f.lop.value, ct: f.ct.value, tro: f.tro.value, bai: f.bai.value, muc: f.muc.value }; veBai(); PC_CHON.bai = f.bai.value; luuPC(); });
+      f.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var ng = ds.filter(function (n) { return n.khoa === f.ct.value; })[0], bai = ng.bai.filter(function (b) { return b.ma === f.bai.value; })[0], t = TRO_THEO_MA[f.tro.value];
+        var muc = t.coMuc ? f.muc.value : '', n = f.querySelector('button'); n.disabled = true; n.textContent = '⏳ Đang tạo…';
+        goiMC('gvTaoPhien', { maLop: f.lop.value, tro: t.ma, tenTro: t.ten, bai: bai.ma, tenBai: ng.tenDiem + (ng.cap !== 'hsk1' ? ng.cap.toUpperCase() + ' · ' : '') + bai.ten,
+          muc: muc, lesson: maBaiTC(ng, bai, t.ma, muc), trang: ng.ct + '/' + ng.cap + '/tro-choi/' + t.tep }).then(function (d) {
+          D.phienChoi = [d.phien].concat(D.phienChoi || []);
+          PC_MO = d.phien.ma; luuPC(); bao('Đã tạo mã ' + d.phien.ma); veTroChoi(noi); chieuMa(d.phien);
+        }).catch(function (x) {
+          n.disabled = false; n.textContent = 'Tạo mã';
+          bao('⚠️ ' + (/Lệnh không hợp lệ/.test(x.message) ? 'Máy chủ tài khoản chưa cập nhật bản 2026-11-04e' : x.message), true);
+        });
+      });
+      noi.onclick = function (e) { var b = e.target.closest('[data-pc]'); if (b) { PC_MO = b.dataset.pc; luuPC(); veTroChoi(noi); } };
+    });
+  }
+  function tenTroPh(p) { var t = TRO_THEO_MA[p.tro]; return (t ? t.ico + ' ' : '') + p.tenTro; }
+  function mucPh(p) { return p.muc ? ' · ' + ((MUC_TC.filter(function (m) { return m[0] === p.muc; })[0] || [])[1] || p.muc) : ''; }
+  function thePhien(p) {
+    return '<button type="button" class="gv-pc-the' + (phienCon(p) ? ' con' : '') + '" data-pc="' + esc(p.ma) + '"><span class="gv-pc-so">' + esc(p.ma) + '</span>' +
+      '<span class="gv-pc-chu"><b>' + esc(tenTroPh(p)) + '</b><small>' + esc(p.tenBai + mucPh(p)) + '</small>' +
+      '<small>' + (p.maLop ? esc((LOP[p.maLop] || {}).tenLop || p.maLop) : 'Không theo lớp') + ' · ' + ngayGio(p.taoLuc) + (p.ketThuc ? ' · đã kết thúc' : '') + '</small></span><span class="gv-pc-di">Theo dõi ›</span></button>';
+  }
+  function chieuMa(p) {
+    var link = linkVao(p.ma);
+    var b = moBang('<div class="gv-pc-chieu"><p class="gv-pc-chieu-tro">' + esc(tenTroPh(p)) + ' · ' + esc(p.tenBai + mucPh(p)) + '</p>' +
+      '<div class="gv-pc-chieu-qr"></div><p class="gv-pc-chieu-nhan">Mã vào chơi</p><div class="gv-pc-chieu-ma">' + esc(p.ma) + '</div>' +
+      '<p class="gv-pc-chieu-link">Đăng nhập → vào <b>' + esc(link.replace(/^https?:\/\//, '').replace(/\?ma=\d+$/, '')) + '</b> → nhập mã</p>' +
+      '<div class="gv-pc-chieu-nut"><button type="button" class="gv-nut nho" data-l="chep">⧉ Chép link</button><button type="button" class="gv-nut nho" data-l="toan">⛶ Toàn màn hình</button></div></div>');
+    b.classList.add('gv-pc-pop');
+    var o = b.querySelector('.gv-pc-chieu-qr');
+    if (window.QRCode) { try { new window.QRCode(o, { text: link, width: 220, height: 220, correctLevel: window.QRCode.CorrectLevel.M }); } catch (e) {} }
+    b.querySelector('.gv-pc-chieu-nut').addEventListener('click', function (e) {
+      var n = e.target.closest('[data-l]'); if (!n) return;
+      if (n.dataset.l === 'chep') { (navigator.clipboard ? navigator.clipboard.writeText(link) : Promise.reject()).then(function () { bao('Đã chép link vào chơi'); }, function () { prompt('Chép link:', link); }); }
+      else { var x = b.closest('.gv-pop') || b; if (document.fullscreenElement) document.exitFullscreen(); else if (x.requestFullscreen) x.requestFullscreen().catch(function () {}); }
+    });
+  }
+
+  // ---------- Bảng theo dõi một phiên ----------
+  function veTheoDoi(noi, ma) {
+    var p = (D.phienChoi || []).filter(function (x) { return x.ma === ma; })[0] || (PC_LIVE[ma] || {}).phien;
+    if (!p) { PC_MO = ''; luuPC(); return veTroChoi(noi); }
+    var con = phienCon(p);
+    noi.innerHTML = '<div class="gv-the gv-pc-dau"><button type="button" class="gv-lk gv-pc-ve">‹ Các phiên chơi</button>' +
+      '<div class="gv-pc-tieu"><div><h3>' + esc(tenTroPh(p)) + '</h3><small>' + esc(p.tenBai + mucPh(p)) + ' · ' + (p.maLop ? esc((LOP[p.maLop] || {}).tenLop || p.maLop) : 'Không theo lớp') + ' · tạo ' + ngayGio(p.taoLuc) + '</small></div>' +
+      '<button type="button" class="gv-ma gv-pc-ma" data-l="chieu" title="Chiếu mã + QR"><small>Mã vào chơi</small><b>' + esc(p.ma) + '</b><span>📺 chiếu mã</span></button></div>' +
+      '<div class="gv-pc-nut">' + (p.ketThuc ? '<span class="gv-chip">Đã kết thúc ' + ngayGio(p.ketThuc) + '</span><button type="button" class="gv-nut nho" data-l="mo-lai">↺ Mở lại</button>'
+        : !con ? '<span class="gv-chip">Mã đã hết hạn (quá 6 giờ)</span>' : '<span class="gv-chip xong gv-pc-song">● Đang mở</span><button type="button" class="gv-nut nho nhe" data-l="ket-thuc">■ Kết thúc phiên</button>') +
+      '<span class="gv-pc-cap"></span></div></div>' +
+      '<div class="gv-o-so nho gv-pc-so-lieu"></div><div class="gv-the"><div class="gv-pc-bang"><p class="gv-cho">⏳ Đang tải tiến trình…</p></div>' +
+      '<p class="gv-trong">Lượt đang chơi cập nhật vài giây một lần. <b>Tổng lượt · Lần đầu · Tốt nhất</b> tính từ điểm đã lưu về Sheet (mọi lần em chơi bài này, cả ngoài phiên). Bấm tên em để xem chi tiết.</p></div>';
+    noi.onclick = function (e) {
+      if (e.target.closest('.gv-pc-ve')) { PC_MO = ''; luuPC(); dungTheoDoi(); return veTroChoi(noi); }
+      var h = e.target.closest('[data-hs]'); if (h) return moHocSinh(h.dataset.hs);
+      var n = e.target.closest('[data-l]'); if (!n) return;
+      if (n.dataset.l === 'chieu') chieuMa(p);
+      if (n.dataset.l === 'ket-thuc' || n.dataset.l === 'mo-lai') {
+        var mo = n.dataset.l === 'mo-lai';
+        if (!mo && !confirm('Kết thúc phiên ' + p.ma + '? Học sinh không vào được nữa; em đang chơi vẫn chơi hết lượt, điểm vẫn lưu.')) return;
+        n.disabled = true;
+        goiMC('gvKetThucPhien', { ma: p.ma, moLai: mo }).then(function (d) {
+          D.phienChoi = (D.phienChoi || []).map(function (x) { return x.ma === p.ma ? d.phien : x; });
+          if (mo && Date.now() - d.phien.taoLuc > 6 * 3600e3) bao('Đã mở lại, nhưng mã đã quá 6 giờ nên em không vào được. Cô tạo mã mới nhé.', true);
+          else bao(mo ? 'Đã mở lại phiên ' + p.ma : 'Đã kết thúc phiên ' + p.ma);
+          veTheoDoi(noi, p.ma);
+        }).catch(function (x) { n.disabled = false; bao('⚠️ ' + x.message, true); });
+      }
+    };
+    if (PC_LIVE[ma]) veBangPhien(noi, p);
+    keoPhien(noi, p, true);
+  }
+  function keoPhien(noi, p, lanDau) {
+    dungTheoDoi();
+    var lan = PC_LAN;
+    var diemCu = PC_DIEM[p.ma];
+    var canDiem = lanDau || !diemCu || Date.now() - diemCu.t > 20000;
+    Promise.all([QM_TK.goi('gvXemPhien', { ma: p.ma }).catch(function (x) { return { loi: x.message }; }), canDiem ? taiDiemPhien(p) : Promise.resolve(null)]).then(function (kq) {
+      if (!kq[0].loi) {
+        var cu = PC_LIVE[p.ma], soXongCu = cu ? cu.em.reduce(function (s, x) { return s + x.ds.length; }, 0) : 0;
+        PC_LIVE[p.ma] = { phien: kq[0].phien, em: kq[0].em, t: Date.now() };
+        var soXong = kq[0].em.reduce(function (s, x) { return s + x.ds.length; }, 0);
+        if (soXong > soXongCu && !canDiem) { PC_DIEM[p.ma] = null; }   // có em vừa xong lượt: lần sau tải lại điểm từ Sheet
+      }
+      if (lan !== PC_LAN || TAB !== 'tro-choi' || PC_MO !== p.ma || !document.body.contains(noi)) return;
+      var cap = noi.querySelector('.gv-pc-cap');
+      if (cap) cap.textContent = kq[0].loi ? '⚠️ ' + kq[0].loi : 'Cập nhật ' + ngayGio(Date.now()).slice(0, 5) + ':' + hai(new Date().getSeconds());
+      veBangPhien(noi, p);
+      if (phienCon(p) || lanDau) PC_HEN = setTimeout(function () { keoPhien(noi, p); }, document.hidden ? 15000 : 3000);
+    });
+  }
+  function taiDiemPhien(p) {
+    if (!window.QM_API) return Promise.resolve(null);
+    return fetch(window.QM_API + '?action=attempts&lesson=' + encodeURIComponent(p.lesson)).then(function (r) { return r.json(); }).then(function (d) {
+      var ds = (d && d.ok ? d.attempts || [] : []).filter(function (r) { return r.lesson === p.lesson; });
+      PC_DIEM[p.ma] = { t: Date.now(), ds: ds };
+    }).catch(function () {});
+  }
+  function dongDiem(ds) {                   // các lượt của một em (máy chủ điểm) → tổng lượt, lần đầu, tốt nhất
+    if (!ds.length) return null;
+    var dau = ds.slice().sort(function (a, b) { return (+a.attemptNo || 0) - (+b.attemptNo || 0) || new Date(a.thoiDiem) - new Date(b.thoiDiem); })[0];
+    var tot = ds.slice().sort(function (a, b) { return (+b.score) - (+a.score) || (+a.durationSeconds || 0) - (+b.durationSeconds || 0); })[0];
+    return { so: ds.length, dau: dau, tot: tot };
+  }
+  function oDiem(r) {
+    if (!r) return '<span class="gv-trong">—</span>';
+    var pt = +r.total ? Math.round(+r.score / +r.total * 100) : 0;
+    return '<span><b class="gv-diem-so ' + (pt >= 60 ? 'tot' : pt >= 35 ? 'kha' : 'yeu') + '">' + esc(r.score) + '</b><small>' + Math.floor((+r.durationSeconds || 0) / 60) + ':' + hai((+r.durationSeconds || 0) % 60) + ' · ' + ngayGio(new Date(r.thoiDiem).getTime()).slice(6) + '</small></span>';
+  }
+  function veBangPhien(noi, p) {
+    var L = PC_LIVE[p.ma] || { em: [] }, Dm = PC_DIEM[p.ma] || (PC_DIEM[p.ma] === null ? null : { ds: [] }), t = TRO_THEO_MA[p.tro] || {}, bayGio = Date.now();
+    var dsDiem = (Dm && Dm.ds) || [];
+    // danh sách em: lớp của phiên + em đã vào + (không theo lớp) em có điểm bài này
+    var hang = {}, thuTu = [];
+    function lay(k, o) { if (!hang[k]) { hang[k] = o; thuTu.push(k); } return hang[k]; }
+    if (p.maLop) hsTrongLop(p.maLop).forEach(function (h) { lay(h.hoSoId, { hoSoId: h.hoSoId, hoTen: h.hoTen, lop: h.lop }); });
+    L.em.forEach(function (x) { var r = lay(x.hoSoId || x.id, { hoSoId: x.hoSoId, hoTen: x.hoTen, lop: x.lop }); r.vao = x; });
+    var theoTen = {}; thuTu.forEach(function (k) { theoTen[khoaHs(hang[k].hoTen, hang[k].lop)] = hang[k]; });
+    var nhom = {};
+    dsDiem.forEach(function (r) { var k = khoaHs(r.hoTen, r.lop); (nhom[k] = nhom[k] || []).push(r); });
+    Object.keys(nhom).forEach(function (k) {
+      if (!theoTen[k] && !p.maLop) { var r0 = nhom[k][0]; theoTen[k] = lay('d:' + k, { hoTen: r0.hoTen, lop: r0.lop }); }
+      if (theoTen[k]) theoTen[k].diem = dongDiem(nhom[k]);
+    });
+    var ds = thuTu.map(function (k) { return hang[k]; });
+    function trangThai(r) {
+      var v = r.vao; if (!v) return 'chua';
+      var h = v.hien; if (!h) return 'vao';
+      if (h.xong) return 'xong';
+      return bayGio - h.t < 25000 ? 'choi' : 'dung';
+    }
+    ds.forEach(function (r) { r.tt = trangThai(r); });
+    var THU = { choi: 0, dung: 1, vao: 2, xong: 3, chua: 4 };
+    ds.sort(function (a, b) { return THU[a.tt] - THU[b.tt] || a.hoTen.split(' ').pop().localeCompare(b.hoTen.split(' ').pop(), 'vi') || a.hoTen.localeCompare(b.hoTen, 'vi'); });
+    var dem = { vao: ds.filter(function (r) { return r.vao; }).length, choi: ds.filter(function (r) { return r.tt === 'choi'; }).length,
+      xong: ds.filter(function (r) { return r.vao && r.vao.ds.length; }).length, luot: L.em.reduce(function (s, x) { return s + x.ds.length; }, 0) };
+    var so = noi.querySelector('.gv-pc-so-lieu');
+    if (so) so.innerHTML = oSo('Đã vào', dem.vao + (p.maLop ? '/' + hsTrongLop(p.maLop).length : ''), p.maLop ? 'em trong lớp' : 'em', 'xanh') + oSo('Đang chơi', dem.choi, 'cập nhật trong 25 giây', 'vang') +
+      oSo('Xong ít nhất 1 lượt', dem.xong, 'trong phiên này', 'lam') + oSo('Lượt xong', dem.luot, 'trong phiên này', 'xam');
+    var o = noi.querySelector('.gv-pc-bang'); if (!o) return;
+    if (!ds.length) { o.innerHTML = '<p class="gv-trong">Chưa có em nào vào phiên. Cô bấm <b>📺 chiếu mã</b> cho cả lớp quét QR nhé.</p>'; return; }
+    function oHien(r) {
+      var v = r.vao;
+      if (!v) return '<span class="gv-chip">Chưa vào</span>';
+      var h = v.hien;
+      if (!h) return '<span class="gv-chip dang">Đã vào · chưa bấm Bắt đầu</span>';
+      var pt = h.n ? Math.min(100, Math.round(h.c / h.n * 100)) : 0;
+      var chi = (t.donVi === 'giây' ? h.c + '/' + h.n + ' giây' : 'Câu ' + h.c + '/' + h.n) + ' · <b>' + h.d + '</b> điểm · ✓ ' + h.dg + (h.mang != null && t.donVi === 'giây' ? ' · ' + '♥'.repeat(h.mang) : '');
+      if (h.xong) return '<div class="gv-pc-tien xong"><i style="width:100%"></i></div><small>✓ Xong lượt: <b>' + h.d + '</b> điểm · đúng ' + h.dg + (t.donVi === 'giây' ? ' từ' : '/' + h.n) + ' · ' + truoc(h.t) + '</small>';
+      return '<div class="gv-pc-tien' + (r.tt === 'dung' ? ' dung' : '') + '"><i style="width:' + pt + '%"></i></div><small>' + chi + (r.tt === 'dung' ? ' · ⏸ ' + truoc(h.t) : '') + '</small>';
+    }
+    o.innerHTML = '<table class="gv-bang gv-pc-tbl"><thead><tr><th>Học sinh</th><th>Lượt đang chơi</th><th>Trong phiên</th><th>Tổng lượt</th><th>Lần đầu</th><th>Tốt nhất</th></tr></thead><tbody>' + ds.map(function (r) {
+      var dm = r.diem, trongPhien = r.vao ? r.vao.ds.length : 0;
+      return '<tr' + (r.hoSoId && HS[r.hoSoId] ? ' data-hs="' + esc(r.hoSoId) + '" tabindex="0"' : '') + ' class="tt-' + r.tt + '"><td data-n="Học sinh"><b>' + esc(r.hoTen) + '</b><small>' + esc(r.lop) + '</small></td>' +
+        '<td data-n="Lượt đang chơi" class="gv-pc-o-hien">' + oHien(r) + '</td>' +
+        '<td data-n="Trong phiên">' + (trongPhien ? '<span><b>' + trongPhien + '</b> lượt</span>' : '—') + '</td>' +
+        '<td data-n="Tổng lượt">' + (Dm === null ? '…' : dm ? '<b>' + dm.so + '</b>' : '0') + '</td>' +
+        '<td data-n="Lần đầu">' + (Dm === null ? '…' : oDiem(dm && dm.dau)) + '</td>' +
+        '<td data-n="Tốt nhất">' + (Dm === null ? '…' : oDiem(dm && dm.tot)) + '</td></tr>';
+    }).join('') + '</tbody></table>';
   }
 
   // Mở chi tiết học sinh từ mọi nơi trên trang

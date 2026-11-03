@@ -458,6 +458,7 @@
   function mucTuDuongDan(p) { var m = String(p || '').match(RE_MUC); return m ? { muc: CT_KHOA[m[1]] + m[2] + '/' + m[3], cap: m[1] + '/' + m[2] + '/' } : null; }
   function lyDoKhoa(muc) {                                   // null = được vào; 'khach' · 'chua-lop' · 'cho' (đang tải thông tin lớp) · 'chua-mo'
     if (MO_TU_DO.indexOf(muc) >= 0) return null;
+    if (window.QM_PC && QM_PC.on && /\/tro-choi$/.test(muc)) return null;   // vào bằng mã phiên chơi cô tạo: cô đã cho chơi
     if (TK && TK.giaoVien) return null;
     if (!TK) return 'khach';
     var h = hoSoDang(); if (!h) return 'chua-lop';

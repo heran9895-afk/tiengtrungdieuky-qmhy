@@ -11,7 +11,7 @@
   var CHU = ['A', 'B', 'C', 'D'];
   var MAU = { do: 'do', xanh: 'xanh', vang: 'vang', lam: 'lam' };
 
-  var R = { ma: (location.search.match(/[?&]ma=(\d{4})/) || [])[1] || '', d: null, s: null, toi: null, nhan: 0, khoaVe: '', daGui: {}, loi: 0, hen: null };
+  var R = { ma: (location.search.match(/[?&]ma=(\d{4,5})/) || [])[1] || '', d: null, s: null, toi: null, nhan: 0, khoaVe: '', daGui: {}, loi: 0, hen: null };
   function khoaDoi() { return 'qm-choi-doi-' + R.ma; }
   try { var cu = sessionStorage.getItem('qm-choi-ma'); if (!R.ma && cu) R.ma = cu; } catch (e) {}
 
@@ -20,17 +20,21 @@
     dung(); R.d = null; R.s = null;
     el.innerHTML = '<div class="vc-the">' +
       '<div class="vc-ico">🎮</div><h2>Vào phòng chơi</h2>' +
-      '<p>Nhập mã phòng 4 số trên màn chiếu</p>' +
-      '<form class="vc-form-ma"><input class="vc-o-ma" inputmode="numeric" pattern="\\d{4}" maxlength="4" autocomplete="off" placeholder="1234" value="' + esc(R.ma) + '" aria-label="Mã phòng">' +
+      '<p>Nhập mã cô cho: <b>4 số</b> (chơi cả lớp) hoặc <b>5 số</b> (phiên chơi một mình)</p>' +
+      '<form class="vc-form-ma"><input class="vc-o-ma" inputmode="numeric" pattern="\\d{4,5}" maxlength="5" autocomplete="off" placeholder="1234" value="' + esc(R.ma) + '" aria-label="Mã phòng hoặc mã phiên chơi">' +
       '<button type="submit" class="btn gold">Vào phòng ›</button></form>' +
       (loi ? '<p class="vc-loi">' + esc(loi) + '</p>' : '') + '</div>';
     var f = el.querySelector('.vc-form-ma'), o = el.querySelector('.vc-o-ma');
-    o.addEventListener('input', function () { o.value = o.value.replace(/\D/g, '').slice(0, 4); });
-    f.addEventListener('submit', function (e) { e.preventDefault(); if (/^\d{4}$/.test(o.value)) { R.ma = o.value; moPhong(); } else o.focus(); });
+    o.addEventListener('input', function () { o.value = o.value.replace(/\D/g, '').slice(0, 5); });
+    f.addEventListener('submit', function (e) { e.preventDefault(); if (/^\d{4,5}$/.test(o.value)) { R.ma = o.value; moPhong(); } else o.focus(); });
   }
 
   // ---------- Chọn đội ----------
   function moPhong() {
+    if (R.ma.length === 5) {                 // mã 5 số: phiên chơi một mình (phien-choi.js)
+      if (window.QM_PC && QM_PC.vao) return QM_PC.vao(R.ma, el, function () { R.ma = ''; try { sessionStorage.removeItem('qm-choi-ma'); } catch (e) {} manMa(); });
+      return manMa('Trang chưa tải xong phần phiên chơi, bạn tải lại trang nhé.');
+    }
     try { sessionStorage.setItem('qm-choi-ma', R.ma); } catch (e) {}
     el.innerHTML = '<div class="vc-the"><div class="tv-trong">Đang vào phòng ' + esc(R.ma) + '…</div></div>';
     P.xem(R.ma).then(function (o) {

@@ -50,6 +50,8 @@
   if (thamSo && NHOM.some(function (n) { return n.ma === thamSo; })) S.nhom = thamSo;
   if (!DANG[S.dang] && S.dang !== 'tron') S.dang = 'tron';
   if (!MUC[S.muc]) S.muc = 'de';
+  var PC = window.QM_PC && QM_PC.on ? QM_PC : null;   // phiên chơi của cô: bài + mức cố định, dạng Trộn (tính điểm)
+  if (PC) { if (NHOM.some(function (n) { return n.ma === PC.bai; })) S.nhom = PC.bai; S.dang = 'tron'; if (MUC[PC.muc]) S.muc = PC.muc; }
   function khoaKL() { return (CF.phamVi || 'bb') + '|' + S.nhom + '|' + S.dang + '|' + S.muc; }
 
   el.innerHTML =
@@ -84,6 +86,7 @@
   selDang.innerHTML = '<option value="tron">🔀 Trộn tất cả</option>' + THU_TU_DANG.map(function (k) { return '<option value="' + k + '">' + DANG[k].ico + ' ' + DANG[k].ten + '</option>'; }).join('');
   selMuc.innerHTML = Object.keys(MUC).map(function (k) { return '<option value="' + k + '">' + MUC[k].ten + '</option>'; }).join('');
   selNhom.value = S.nhom; selDang.value = S.dang; selMuc.value = S.muc;
+  if (PC) [selNhom, selDang, selMuc].forEach(function (s) { s.disabled = true; s.title = 'Cô đã chọn sẵn cho phiên chơi'; });
   function veNutAm() { nutAm.textContent = AM.bat ? '🔔' : '🔕'; nutAm.setAttribute('aria-label', (AM.bat ? 'Tắt' : 'Bật') + ' âm thanh hiệu ứng'); }
   veNutAm();
   nutAm.addEventListener('click', function () { AM.bat = !AM.bat; try { localStorage.setItem('qm-am-hieu-ung', AM.bat ? '1' : '0'); } catch (e) {} veNutAm(); });
@@ -152,6 +155,7 @@
       hud.hidden = false; deBai.hidden = false;
       capNhatHud();
       cuonToiKhung(); setTimeout(cuonToiKhung, 400);
+      if (PC && !G.laLai) PC.bat({ n: ds.length });
       demNguoc(3);
     }).catch(function () {
       man.innerHTML = '<div class="bb-the"><div class="bb-the-ico">⚠️</div><h3>Chưa tải được dữ liệu</h3><p>Bạn kiểm tra mạng rồi thử lại nhé.</p><button type="button" class="btn bb-ve">‹ Quay lại</button></div>';
@@ -359,6 +363,7 @@
     }
     C.bong.forEach(function (o, k) { if (k !== i && k !== iDung) o.el.classList.add('mo'); });
     capNhatHud();
+    if (PC && !G.laLai) PC.cap({ c: G.ct.length, n: G.ds.length, d: G.diem, dg: G.dung });
     var nhan = dung ? '<b class="bb-dung-r">✓ Chính xác!</b>' : i < 0 ? '<b class="bb-sai-r">⏰ Bóng bay mất rồi!</b>' : '<b class="bb-sai-r">✗ Chưa đúng</b>';
     giai.innerHTML = '<div class="bb-giai-o ' + (dung ? 'dung' : 'sai') + '">' + nhan +
       '<span class="bb-giai-nd">' + (dung ? '' : 'Đáp án: ') + C.c.giai + '</span>' +
@@ -399,6 +404,7 @@
       (hangSai ? '<div class="bb-on-lai"><b>Cần ôn lại</b><ul>' + hangSai + '</ul></div>' : '') +
     '</div>';
     var sai = G.sai.slice();
+    if (PC && !G.laLai) PC.xong({ c: tong, n: tong, d: G.diem, dg: G.dung, tong: tong * 170, tg: Math.round((Date.now() - G.batDauLuc) / 1000) });
     // Bảng xếp hạng: chỉ lượt Trộn tất cả (không phải luyện lại câu sai), mỗi bài × mức một bảng
     var khuDiem = man.querySelector('.dd-khu');
     if (window.QM_DIEM && S.dang === 'tron' && !G.laLai) {

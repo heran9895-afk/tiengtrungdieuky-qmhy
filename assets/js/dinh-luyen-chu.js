@@ -15,11 +15,14 @@
   if (CF.tongHop && NHOM.length > 1) NHOM.push({ ma: 'tong-hop', ten: 'Tổng hợp', tongHop: true });
   const thamSo = new URLSearchParams(location.search).get('bai');
   let maNhom = NHOM.some(n => n.ma === thamSo) ? thamSo : (NHOM[0] || {}).ma;
+  const PC = window.QM_PC && QM_PC.on ? QM_PC : null;   // phiên chơi của cô: bài cố định, báo tiến trình
+  if (PC && NHOM.some(n => n.ma === PC.bai)) maNhom = PC.bai;
 
   app.innerHTML = `<div class="lt-thanh tc-thanh"><label class="lt-o"><span class="lt-o-nhan">Bài</span><select class="dl-chon-bai" aria-label="Chọn bài">${NHOM.map(n => `<option value="${esc(n.ma)}">${esc(n.ten)}</option>`).join('')}</select></label>
     <a class="lt-o tc-bxh" href="${esc(CF.bxh || 'bang-xep-hang.html')}?tro=dinh-luyen-chu"><span class="lt-o-nhan">Xếp hạng</span><b>🏆 Xem bảng</b></a></div>
     <div class="dl-box" id="dl-app"></div>`;
   const selBai = app.querySelector('.dl-chon-bai'); selBai.value = maNhom;
+  if (PC) selBai.title = 'Cô đã chọn sẵn cho phiên chơi';
   const box = document.getElementById('dl-app');
   const $ = id => document.getElementById(id);
 
@@ -76,7 +79,7 @@
 
   /* ===== MÀN BẮT ĐẦU ===== */
   function intro() {
-    stop(); selBai.disabled = false;
+    stop(); selBai.disabled = !!PC;
     const best = +store.get(bestKey()) || 0;
     box.innerHTML = `<div class="dl-panel">
       <h2>Đỉnh luyện chữ · ${esc(D.ten)}</h2>
@@ -99,6 +102,7 @@
   function restart() {
     qs = shuffle(CHARS); idx = 0; score = 0; streak = 0; bestStreak = 0; answers = []; log = [];
     playStart = Date.now(); selBai.disabled = true;
+    if (PC) PC.bat({ n: qs.length });
     ask();
     const h = document.querySelector('.sh-header'), cao = h ? h.getBoundingClientRect().height : 0, r = box.getBoundingClientRect();
     if (r.top < cao || r.top > window.innerHeight * .4) window.scrollTo({ top: r.top + window.scrollY - cao - 6, behavior: 'smooth' });
@@ -167,6 +171,7 @@
     if (ok) { score += gain; streak++; bestStreak = Math.max(bestStreak, streak); sfx.ok(streak); }
     else { streak = 0; sfx.bad(); }
     answers.push({ c: q.c, ok, got: timeout && !got.length ? 'hết giờ' : got.join(' + ') });
+    if (PC) PC.cap({ c: answers.length, n: qs.length, d: score, dg: answers.filter(a => a.ok).length });
     log.push({ stt: log.length + 1, dang: 'Ghép bộ phận thành chữ', cauHoi: `${q.py} – ${q.vi}`, dapAn: q.c + ' = ' + q.parts.join('+'),
       chon: timeout ? (got.join('+') || '(hết giờ)') : got.join('+'), dung: ok });
     document.querySelectorAll('#dl-app .meta .hole').forEach(h => h.outerHTML = `<span style="color:var(--red)">${esc(q.c)}</span>`);
@@ -196,9 +201,10 @@
 
   /* ===== KẾT QUẢ ===== */
   function result() {
-    stop(); selBai.disabled = false;
+    stop(); selBai.disabled = !!PC;
     const n = answers.filter(a => a.ok).length, t = answers.length;
     const best = +store.get(bestKey()) || 0, isNew = score > best;
+    if (PC) PC.xong({ c: t, n: t, d: score, dg: n, tong: t * (BASE + PER_SEC * Q_TIME), tg: Math.round((Date.now() - playStart) / 1000) });
     if (isNew) store.set(bestKey(), score);
     sfx.end(isNew);
     const msg = n === t ? 'Hoàn hảo, em ghép đúng tất cả.' : n >= t * 0.8 ? 'Rất tốt. Xem lại vài chữ sai bên dưới nhé.' : 'Xem lại các chữ sai rồi chơi lại nhé.';
