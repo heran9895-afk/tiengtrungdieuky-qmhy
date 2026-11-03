@@ -273,7 +273,7 @@
       var maLop = f.maLop.value.replace(/\s+/g, '').toUpperCase();
       if (!maLop && !f.lop.value.trim()) { f.querySelector('.tk-tu-hoc').open = true; bao.textContent = '⚠️ Bạn điền mã lớp cô đưa, hoặc tự ghi tên lớp nếu tự học nhé.'; f.maLop.focus(); return; }
       nutL.disabled = true; bao.textContent = '⏳ Đang lưu…';
-      goi(sua ? 'suaHoSo' : 'taoHoSo', { hoSoId: sua ? h.hoSoId : undefined, hoTen: f.hoTen.value, maLop: maLop, lop: maLop ? '' : f.lop.value, dongY: sua ? undefined : f.dongY.checked })
+      goi(sua ? 'suaHoSo' : 'taoHoSo', { hoSoId: sua ? h.hoSoId : undefined, hoTen: f.hoTen.value, maLop: maLop, lop: maLop || f.lop.value,   /* máy chủ bản cũ chưa biết maLop: vẫn tạo được hồ sơ */ dongY: sua ? undefined : f.dongY.checked })
         .then(function (d) {
           TK.hoSo = d.hoSo; if ('lop' in d) { TK.lop = d.lop; TK.lopLuc = Date.now(); } luuTK();
           if (sua) { ganBaiLam(); veNut(); veLop(); dongBang(); baoNho(d.lop ? 'Đã lưu hồ sơ · Lớp ' + d.lop.tenLop + '.' : 'Đã lưu hồ sơ.'); } else chonHoSo(d.hoSoId);
