@@ -67,7 +67,7 @@
 .dc-gv{margin:28px auto 0;text-align:center}
 .dc-gv .btn{font-size:13.5px;padding:6px 14px}
 /* chế độ giáo viên */
-.dc-sua{max-width:900px;margin:18px auto 0;padding:16px}
+.dc-sua{max-width:900px;margin:18px auto 0;padding:16px;overflow:visible}   /* .card có overflow:hidden làm thanh Lưu (sticky) không dính được */
 .dc-sua h2{margin:0 0 6px;color:var(--brand);font-size:22px}
 .dc-sua-hang{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
 .dc-sua input[type=password],.dc-sua input[type=text],.dc-sua textarea{font:inherit;font-size:15px;padding:7px 10px;border:1.5px solid var(--line);border-radius:10px;background:#fff;box-sizing:border-box}
@@ -80,7 +80,11 @@
 .dc-luot{border-left:3px solid var(--gold);padding-left:8px;margin:8px 0}
 .dc-thong-bao{font-weight:700;margin:6px 0}
 .dc-thong-bao.ok{color:var(--ok)}.dc-thong-bao.loi{color:var(--no)}
-.dc-sua-thanh{position:sticky;bottom:0;background:var(--surface,#fff);padding:10px 0;border-top:1px solid var(--line-soft);display:flex;flex-wrap:wrap;gap:8px;justify-content:center;z-index:5}
+.dc-sua-thanh{position:sticky;bottom:calc(54px + env(safe-area-inset-bottom, 0px));background:var(--surface,#fff);padding:10px 0;border-top:1px solid var(--line-soft);display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;z-index:5;box-shadow:0 -6px 14px rgba(0,0,0,.06)}   /* 54px: chừa thanh chân trang cố định (.sf), nút Lưu luôn trong tầm nhìn */
+.dc-sua-thanh .btn{padding:7px 13px;font-size:13.5px}
+.dc-ban{text-align:center;font-size:12.5px;font-weight:700;color:var(--muted)}
+@media(max-width:760px){.dc-ban{flex-basis:100%}}
+.dc-ban.on{color:#b45309}
 @media(max-width:600px){.dc-vi{font-size:17px}.dc-o{font-size:19px}}
 #on-tap.ot-khoi-2{margin-top:34px}
 /* lượt làm dở (luot-do.js) */

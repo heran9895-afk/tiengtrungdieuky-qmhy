@@ -13,6 +13,7 @@
   var el = document.getElementById('dich'), TV = window.QM_TV, G = window.QM_OTG; if (!el || !TV || !G) return;
   var esc = TV.esc, GOC = null, DE = null, NGUON = 'goc', L = null, CHE = 'cau', MK = '', SUA = null, KHOA_HS = 'qmhy:hoSo';
   var DAU = ['，', '。', '？', '！', '、', '：'];
+  var BAN = false;                                             // chế độ giáo viên: có sửa mà chưa lưu
 
   function docLS(k, md) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : md; } catch (e) { return md; } }
   function ghiLS(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
@@ -474,8 +475,9 @@
       '<button type="button" class="btn dc-them">+ Thêm ' + (TAB === 'cau' ? 'câu' : TAB === 'hoiThoai' ? 'hội thoại' : 'đoạn văn') + '</button>' +
       (TAB === 'cau' ? ' <button type="button" class="btn dc-them dc-them-ab">+ Thêm câu hỏi – đáp A/B</button>' : '') +
       '<div class="dc-lich-su"></div>' +
-      '<div class="dc-sua-thanh"><button type="button" class="btn dc-ls">🕘 Các bản đã lưu</button><button type="button" class="btn dc-ve-goc">Nạp lại bộ đề gốc</button><button type="button" class="btn dc-ap-gy">💡 Áp từ gợi ý mới</button>' +
-        '<button type="button" class="btn dc-thoat">Thoát</button><button type="button" class="btn solid dc-luu">💾 Lưu bản mới</button></div></div>';
+      '<div class="dc-sua-thanh"><button type="button" class="btn solid dc-luu">💾 Lưu bản mới</button><button type="button" class="btn dc-ls">🕘 Các bản đã lưu</button><button type="button" class="btn dc-ve-goc">Nạp lại bộ đề gốc</button><button type="button" class="btn dc-ap-gy">💡 Áp từ gợi ý mới</button>' +
+        '<button type="button" class="btn dc-thoat">Thoát</button>' +
+        '<span class="dc-ban' + (BAN ? ' on' : '') + '">' + (BAN ? '● Có thay đổi chưa lưu · Ctrl + S để lưu' : 'Ctrl + S để lưu nhanh') + '</span></div></div>';
   }
   function docForm() {                                          // chép nội dung ô nhập của tab đang mở vào SUA
     var khu = el.querySelector('.dc-khu-gv'); if (!SUA || !khu.querySelector('.dc-ds-sua')) return;
@@ -536,7 +538,7 @@
     var nut = el.querySelector('.dc-luu'); nut.disabled = true; nut.textContent = '⏳ Đang lưu…';
     var goi = sao(SUA); delete goi.phienBanDe;
     goiMayChu({ action: 'baiDichLuu', matKhau: MK, deBai: goi }).then(function (d) {
-      SUA.phienBanDe = d.phienBanDe; DE = sao(SUA); NGUON = 'may-chu';
+      SUA.phienBanDe = d.phienBanDe; DE = sao(SUA); NGUON = 'may-chu'; BAN = false;
       veSua('✅ Đã lưu bản ' + d.phienBanDe + '. Học sinh mở (hoặc tải lại) trang sẽ nhận bản này.');
     }).catch(function (e) { veSua('Chưa lưu được: ' + e.message, true); });
   }
@@ -592,7 +594,7 @@
     // giáo viên
     if (t.closest('.dc-mo-gv')) return veMoKhoa();
     if (t.closest('.dc-mk-mo')) return moKhoa();
-    if (t.closest('.dc-mk-dong') || t.closest('.dc-thoat')) { MK = ''; SUA = null; el.querySelector('.dc-khu-gv').innerHTML = ''; veBatDau(); return; }
+    if (t.closest('.dc-mk-dong') || t.closest('.dc-thoat')) { if (BAN && t.closest('.dc-thoat') && !confirm('Còn thay đổi chưa lưu. Thoát và bỏ các thay đổi này?')) return; BAN = false; MK = ''; SUA = null; el.querySelector('.dc-khu-gv').innerHTML = ''; veBatDau(); return; }
     var tab = t.closest('.dc-che button[data-tab]'); if (tab) { docForm(); TAB = tab.dataset.tab; return veSua(); }
     if (t.closest('.dc-luu')) return luu();
     if (t.closest('.dc-ls')) { docForm(); return lichSu(); }
@@ -602,6 +604,7 @@
     var xz = t.closest('.dc-xoa-zh'); if (xz) { xz.parentNode.remove(); return; }
     if (t.closest('.dc-ve-goc')) { SUA = sao(GOC); return veSua('Đã nạp bộ đề gốc vào khung sửa (chưa lưu). Bấm 💾 Lưu bản mới để học sinh dùng lại bộ đề gốc.'); }
     var muc = t.closest('.dc-muc[data-k]'), k = muc ? +muc.dataset.k : -1;
+    if (t.closest('.dc-them, .dc-xoa, .dc-len, .dc-xuong, .dc-them-luot, .dc-xoa-luot, .dc-xoa-zh, .dc-them-zh, .dc-ve-goc, .dc-ap-gy')) BAN = true;
     if (t.closest('.dc-them')) { docForm();
       if (TAB === 'cau' && t.closest('.dc-them-ab')) SUA.cau.push({ ma: maMoi('c', SUA.cau), vi: '', zh: [], py: '', np: [], ve: [{ vai: 'A', vi: '', zh: [], py: '' }, { vai: 'B', vi: '', zh: [], py: '' }] });
       else if (TAB === 'cau') SUA.cau.push({ ma: maMoi('c', SUA.cau), vi: '', zh: [], py: '', np: [] });
@@ -614,7 +617,9 @@
     if (t.closest('.dc-them-luot') && k >= 0) { docForm(); var it = SUA[TAB][k]; (TAB === 'hoiThoai' ? it.luot : it.cau).push(TAB === 'hoiThoai' ? { ai: '', vi: '', zh: [], py: '' } : { vi: '', zh: [], py: '' }); return veSua(); }
     var xl = t.closest('.dc-xoa-luot'); if (xl && k >= 0) { docForm(); var it2 = SUA[TAB][k], arr = TAB === 'hoiThoai' ? it2.luot : it2.cau; if (arr.length > 1) { arr.splice(+xl.closest('.dc-luot').dataset.j, 1); veSua(); } return; }
   });
+  function danhDauBan() { if (!SUA || BAN) return; BAN = true; var b = el.querySelector('.dc-ban'); if (b) { b.classList.add('on'); b.textContent = '● Có thay đổi chưa lưu · Ctrl + S để lưu'; } }
   el.addEventListener('input', function (e) {
+    if (SUA && e.target.closest('.dc-sua')) danhDauBan();
     if (e.target.classList.contains('dc-o')) { el.querySelector('.dc-kt').disabled = !e.target.value.trim(); el.querySelector('.dc-bao').textContent = '';
       clearTimeout(HEN_LUU); HEN_LUU = setTimeout(luuDo, 1200); }                // chữ đang gõ: lưu sau 1,2 giây ngừng gõ
     if (e.target.classList.contains('dc-ve-o')) { e.target.parentNode.querySelector('.dc-ve-bao').textContent = ''; L.ds[L.i].daNhacTrong = false;
@@ -635,6 +640,13 @@
     if (e.target.classList.contains('dc-mk') && e.key === 'Enter') { e.preventDefault(); moKhoa(); }
     if (e.target.classList.contains('dc-o') && e.key === 'Enter' && !e.shiftKey && !e.isComposing && L && L.ds[L.i] && !L.ds[L.i].doan) { e.preventDefault(); if (e.target.value.trim()) kiemTra(false); }
   });
+
+  // Chế độ giáo viên: Ctrl + S (Cmd + S) lưu bản mới ở bất kỳ chỗ nào trên trang; rời trang khi chưa lưu thì hỏi lại
+  document.addEventListener('keydown', function (e) {
+    if (!SUA || !(e.ctrlKey || e.metaKey) || String(e.key).toLowerCase() !== 's') return;
+    e.preventDefault(); var n = el.querySelector('.dc-luu'); if (n && !n.disabled) luu();
+  });
+  window.addEventListener('beforeunload', function (e) { if (SUA && BAN) { e.preventDefault(); e.returnValue = ''; } });
 
   // Enter sau khi đã kiểm tra (ô điền đã khoá): sang câu tiếp. Enter vừa dùng để kiểm tra thì bỏ qua, tránh nhảy câu luôn
   document.addEventListener('keydown', function (e) {
