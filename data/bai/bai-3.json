@@ -4695,7 +4695,8 @@
      "你做什么工作？"
     ],
     "gt": "Đáp \"không bận lắm\" → câu hỏi có / không **忙吗**.",
-    "doc": "assets/am/cau/697cd135ac.mp3"
+    "doc": "assets/am/cau/697cd135ac.mp3",
+    "docDap": "assets/am/cau/066df31f9d.mp3"
    },
    {
     "ma": "b3-ma-cau-3",
@@ -4796,7 +4797,8 @@
      "她忙吗？"
     ],
     "gt": "Đáp \"là chị gái tôi\" → hỏi **谁**, không có 吗.",
-    "doc": "assets/am/cau/7070924243.mp3"
+    "doc": "assets/am/cau/7070924243.mp3",
+    "docDap": "assets/am/cau/34969bc1c7.mp3"
    },
    {
     "ma": "b3-zn-gx-1",
@@ -4942,7 +4944,8 @@
      "你做什么工作？"
     ],
     "gt": "Đáp quốc tịch → hỏi **哪国人**.",
-    "doc": "assets/am/cau/aefdd46d97.mp3"
+    "doc": "assets/am/cau/aefdd46d97.mp3",
+    "docDap": "assets/am/cau/4469b0e37e.mp3"
    },
    {
     "ma": "b3-zn-qt-4",
@@ -4958,7 +4961,8 @@
      "你朋友忙吗？"
     ],
     "gt": "Đáp \"là người Pháp\" → hỏi **哪国人**, không phải muốn đi đâu.",
-    "doc": "assets/am/cau/bbda13539a.mp3"
+    "doc": "assets/am/cau/bbda13539a.mp3",
+    "docDap": "assets/am/cau/76aa09a756.mp3"
    },
    {
     "ma": "b3-tai-tt-1",
@@ -5492,7 +5496,8 @@
      "你女朋友忙吗？"
     ],
     "gt": "Đáp quốc tịch → hỏi **哪国人**.",
-    "doc": "assets/am/cau/060cbe5f0d.mp3"
+    "doc": "assets/am/cau/060cbe5f0d.mp3",
+    "docDap": "assets/am/cau/a222fdc7d0.mp3"
    },
    {
     "ma": "b3-zn-cn-4",
@@ -5508,7 +5513,8 @@
      "你是哪国人？"
     ],
     "gt": "Đáp \"là bạn gái tôi\" → hỏi **这是谁？**",
-    "doc": "assets/am/cau/ca0f97e6b6.mp3"
+    "doc": "assets/am/cau/ca0f97e6b6.mp3",
+    "docDap": "assets/am/cau/849a026bf6.mp3"
    }
   ]
  }

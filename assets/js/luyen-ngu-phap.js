@@ -114,7 +114,7 @@
       pa = ['Đúng', 'Sai']; x.pa = pa;
       dap = '<div class="lt-dap lnp-dap lnp-ds">' + pa.map(function (p, k) { return '<button type="button" class="lt-dap-o" data-k="' + k + '"><span class="lt-so">' + (k + 1) + '</span>' + (k ? '❌ Sai' : '✅ Đúng') + '</button>'; }).join('') + '</div>';
     } else if (c.dang === 'hoi') {
-      de = '<p class="lnp-hoi">Câu trả lời:</p><div class="lt-de-cau lnp-de-loa">' + TV.nutLoa(c.dap) + '<span class="hanzi">' + esc(c.dap) + '</span></div><p class="lnp-hoi">Câu hỏi nào hợp với câu trả lời này?</p>';
+      de = '<p class="lnp-hoi">Câu trả lời:</p><div class="lt-de-cau lnp-de-loa">' + TV.nutLoa(c.dap, false, c.docDap || '') + '<span class="hanzi">' + esc(c.dap) + '</span></div><p class="lnp-hoi">Câu hỏi nào hợp với câu trả lời này?</p>';
       pa = tron1([c.hoi].concat(c.nhieu)); x.pa = pa;
       dap = '<div class="lt-dap cau lnp-dap">' + pa.map(function (p, k) { return '<button type="button" class="lt-dap-o" data-k="' + k + '"><span class="lt-so">' + (k + 1) + '</span><span class="lt-dap-cau hanzi">' + esc(p) + '</span></button>'; }).join('') + '</div>';
     } else {                                                  // xep

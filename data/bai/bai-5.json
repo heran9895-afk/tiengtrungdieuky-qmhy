@@ -4319,7 +4319,8 @@
      "你今年多大？"
     ],
     "gt": "Đáp là thứ → hỏi **星期几**.",
-    "doc": "assets/am/cau/5def75c289.mp3"
+    "doc": "assets/am/cau/5def75c289.mp3",
+    "docDap": "assets/am/cau/56f627d24d.mp3"
    },
    {
     "ma": "b5-nt-thu-1",
@@ -4776,7 +4777,8 @@
      "这是你的电脑吗？"
     ],
     "gt": "Đáp \"我会做\" → câu hỏi **会…吗？**",
-    "doc": "assets/am/cau/85ead79a01.mp3"
+    "doc": "assets/am/cau/85ead79a01.mp3",
+    "docDap": "assets/am/cau/ec92a68812.mp3"
    },
    {
     "ma": "b5-hui-tl-1",
@@ -4909,7 +4911,8 @@
      "那些人会做饭吗？"
     ],
     "gt": "Đáp quốc tịch → hỏi **哪国人**.",
-    "doc": "assets/am/cau/bcd375e034.mp3"
+    "doc": "assets/am/cau/bcd375e034.mp3",
+    "docDap": "assets/am/cau/0259dfb7b9.mp3"
    },
    {
     "ma": "b5-yx-lt-1",

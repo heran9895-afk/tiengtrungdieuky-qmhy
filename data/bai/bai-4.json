@@ -5519,7 +5519,8 @@
      "你家有几口人？"
     ],
     "gt": "Đáp năm → hỏi **哪一年**; năm đọc từng chữ số.",
-    "doc": "assets/am/cau/4528179d03.mp3"
+    "doc": "assets/am/cau/4528179d03.mp3",
+    "docDap": "assets/am/cau/cd81145110.mp3"
    },
    {
     "ma": "b4-stlt-lt-1",
@@ -5779,7 +5780,8 @@
      "你们是哪国学生？"
     ],
     "gt": "Số lớn → hỏi **多少**.",
-    "doc": "assets/am/cau/2c3de2910e.mp3"
+    "doc": "assets/am/cau/2c3de2910e.mp3",
+    "docDap": "assets/am/cau/9b6dd445e2.mp3"
    },
    {
     "ma": "b4-ds-ma-1",
@@ -5837,7 +5839,8 @@
      "你有没有哥哥？"
     ],
     "gt": "Đáp số người trong nhà → hỏi **几口人**.",
-    "doc": "assets/am/cau/a786bb3750.mp3"
+    "doc": "assets/am/cau/a786bb3750.mp3",
+    "docDap": "assets/am/cau/b262f802ce.mp3"
    },
    {
     "ma": "b4-ji-lt-3",
@@ -5917,7 +5920,8 @@
      "你有几个儿子？"
     ],
     "gt": "Đáp tuổi trẻ nhỏ → hỏi **几岁**.",
-    "doc": "assets/am/cau/474a98648a.mp3"
+    "doc": "assets/am/cau/474a98648a.mp3",
+    "docDap": "assets/am/cau/23dbca11dd.mp3"
    },
    {
     "ma": "b4-ht-duoda-1",
@@ -5950,7 +5954,8 @@
      "你有几个哥哥？"
     ],
     "gt": "Người lớn 25 tuổi → hỏi **多大**.",
-    "doc": "assets/am/cau/74e2c49e51.mp3"
+    "doc": "assets/am/cau/74e2c49e51.mp3",
+    "docDap": "assets/am/cau/9f83fa21b4.mp3"
    },
    {
     "ma": "b4-ht-nianji-1",
@@ -6114,7 +6119,8 @@
      "你今年多大？"
     ],
     "gt": "**你呢？** hỏi lại điều vừa nói (quốc tịch).",
-    "doc": "assets/am/cau/d6ef358310.mp3"
+    "doc": "assets/am/cau/d6ef358310.mp3",
+    "docDap": "assets/am/cau/24adef1380.mp3"
    },
    {
     "ma": "b4-ne-odau-1",
@@ -6157,7 +6163,8 @@
      "我有两个哥哥，你呢？"
     ],
     "gt": "B呢 hỏi lại **đúng điều vừa nói ở trước**: nói tuổi trước thì 你呢 mới là hỏi tuổi.",
-    "doc": "assets/am/cau/a6a4f62a87.mp3"
+    "doc": "assets/am/cau/a6a4f62a87.mp3",
+    "docDap": "assets/am/cau/dc6f6c93d4.mp3"
    },
    {
     "ma": "b4-ne-truoc-2",
@@ -6173,7 +6180,8 @@
      "我是学生，你呢？"
     ],
     "gt": "Câu trước nói số người trong nhà → 你家呢 hỏi số người trong nhà.",
-    "doc": "assets/am/cau/21931f0f1a.mp3"
+    "doc": "assets/am/cau/21931f0f1a.mp3",
+    "docDap": "assets/am/cau/d78256eead.mp3"
    },
    {
     "ma": "b4-ne-ma-1",
@@ -6338,7 +6346,8 @@
      "你妹妹多大？"
     ],
     "gt": "\"我没有哥哥\" trả lời câu **你呢？** hỏi lại về anh trai.",
-    "doc": "assets/am/cau/5bec85e949.mp3"
+    "doc": "assets/am/cau/5bec85e949.mp3",
+    "docDap": "assets/am/cau/cd2433cc78.mp3"
    }
   ]
  }

@@ -3231,7 +3231,8 @@
      "你叫什么名字？"
     ],
     "gt": "Đáp \"không phải, tôi là học sinh Mỹ\" → câu hỏi hỏi một nước **khác** Mỹ.",
-    "doc": "assets/am/cau/8b81fcfdfe.mp3"
+    "doc": "assets/am/cau/8b81fcfdfe.mp3",
+    "docDap": "assets/am/cau/b7ca934106.mp3"
    },
    {
     "ma": "b2-shi-hoi-3",
@@ -3616,7 +3617,8 @@
      "你吃什么？"
     ],
     "gt": "Trả lời thay 什么 bằng tên, giữ trật tự: 你叫什么名字？ → 我叫白家月。",
-    "doc": "assets/am/cau/41c80ae64b.mp3"
+    "doc": "assets/am/cau/41c80ae64b.mp3",
+    "docDap": "assets/am/cau/9db09b6d2f.mp3"
    },
    {
     "ma": "b2-shenme-tl-2",
@@ -3632,7 +3634,8 @@
      "你们叫什么名字？"
     ],
     "gt": "你们说什么？ → 我们说汉语。: 汉语 đứng đúng chỗ của 什么.",
-    "doc": "assets/am/cau/51053d80da.mp3"
+    "doc": "assets/am/cau/51053d80da.mp3",
+    "docDap": "assets/am/cau/ccb1764f50.mp3"
    },
    {
     "ma": "b2-qing-dt-1",
@@ -3878,7 +3881,8 @@
      "你们说什么？"
     ],
     "gt": "Đáp tên → hỏi lịch sự **请问，你叫什么名字？**",
-    "doc": "assets/am/cau/d6fc71bc92.mp3"
+    "doc": "assets/am/cau/d6fc71bc92.mp3",
+    "docDap": "assets/am/cau/6cd1661fa1.mp3"
    },
    {
     "ma": "b2-shi-hoi-5",
@@ -3894,7 +3898,8 @@
      "你是不是美国学生？"
     ],
     "gt": "Đáp \"không phải Annie\" → câu hỏi **是不是安妮**.",
-    "doc": "assets/am/cau/2051a39b90.mp3"
+    "doc": "assets/am/cau/2051a39b90.mp3",
+    "docDap": "assets/am/cau/1e0e0de7f9.mp3"
    }
   ]
  }
