@@ -394,9 +394,9 @@
     var ds = hsTrongLop(l.maLop), mo = D.moBai.filter(function (m) { return m.maLop === l.maLop; }).map(function (m) { return m.bai; });
     return '<div class="gv-the gv-lop' + (l.dong ? ' dong' : '') + '" data-lop="' + esc(l.maLop) + '">' +
       '<div class="gv-lop-dau"><div><h3>' + esc(l.tenLop) + (l.dong ? ' <span class="gv-chip xam">đã đóng</span>' : '') + '</h3>' +
-        '<small>' + ds.length + ' học sinh · mở ' + mo.length + ' bài' + (l.ghiChu ? ' · ' + esc(l.ghiChu) : '') + '</small></div>' +
+        '<small>' + ds.length + ' học sinh' + (choLop(l.maLop).length ? ' · <b>' + choLop(l.maLop).length + ' email đang chờ</b>' : '') + ' · mở ' + mo.length + ' bài' + (l.ghiChu ? ' · ' + esc(l.ghiChu) : '') + '</small></div>' +
         '<button type="button" class="gv-ma" data-l="chep" title="Chép mã lớp"><small>Mã lớp</small><b>' + esc(l.maLop) + '</b><span>⧉ chép</span></button></div>' +
-      '<div class="gv-lop-nut"><button type="button" class="gv-nut nho" data-l="hs">🧑‍🎓 Xem học sinh</button><button type="button" class="gv-nut nho" data-l="sua">✏️ Đổi tên</button>' +
+      '<div class="gv-lop-nut">' + (l.dong ? '' : '<button type="button" class="gv-nut nho chinh" data-l="them">➕ Thêm học sinh</button>') + '<button type="button" class="gv-nut nho" data-l="hs">🧑‍🎓 Xem học sinh</button><button type="button" class="gv-nut nho" data-l="sua">✏️ Đổi tên</button>' +
         '<button type="button" class="gv-nut nho' + (l.dong ? '' : ' nhe') + '" data-l="dong">' + (l.dong ? '↺ Mở lại lớp' : '🔒 Đóng lớp') + '</button></div>' +
       '<details class="gv-mo-bai"' + (LOP_MO === l.maLop ? ' open' : '') + '><summary>📖 Mở bài cho lớp <span class="gv-chip ' + (mo.length ? 'xong' : 'xam') + '">' + mo.length + ' bài đã mở</span></summary>' +
         CAT.map(function (c) {
@@ -414,6 +414,7 @@
       var xong = function () { bao('Đã chép mã lớp ' + ma); };
       if (navigator.clipboard) navigator.clipboard.writeText(ma).then(xong, function () { prompt('Mã lớp', ma); }); else prompt('Mã lớp', ma);
     } else if (n.dataset.l === 'hs') { LOC.lop = ma; moTab('hoc-sinh'); }
+    else if (n.dataset.l === 'them') moThemHs(ma);
     else if (n.dataset.l === 'sua') {
       var ten = prompt('Tên mới của lớp (mã lớp giữ nguyên):', l.tenLop); if (!ten || ten.trim() === l.tenLop) return;
       goiMC('gvLuuLop', { maLop: ma, tenLop: ten }).then(function () { bao('Đã đổi tên lớp'); taiDuLieu(true); }).catch(function (x) { bao('⚠️ ' + x.message, true); });
@@ -438,6 +439,82 @@
       bao((mo ? 'Đã mở ' : 'Đã khoá ') + (ds.length > 1 ? ds.length + ' bài' : (BAI_THEO_KHOA[ds[0]] || {}).ten || ds[0]) + ' cho lớp ' + LOP[ma].tenLop);
       if (ds.length > 1) ve(); else { var c = app.querySelector('[data-lop="' + ma + '"] .gv-mo-bai summary .gv-chip'); if (c) { c.textContent = d.moBai.length + ' bài đã mở'; c.className = 'gv-chip ' + (d.moBai.length ? 'xong' : 'xam'); } }
     }).catch(function (x) { bao('⚠️ ' + x.message, true); taiDuLieu(true); });
+  }
+
+  // ---------- Thêm học sinh vào lớp: chọn em đã có hồ sơ · nhập trước email ----------
+  function choLop(maLop) { return (D.moiLop || []).filter(function (m) { return m.maLop === maLop && !m.daNhan; }); }
+  function moThemHs(ma) {
+    var l = LOP[ma], ngoai = D.hocSinh.filter(function (h) { return h.maLop !== ma; })
+      .sort(function (a, b) { return (a.maLop ? 1 : 0) - (b.maLop ? 1 : 0) || a.hoTen.localeCompare(b.hoTen, 'vi'); });
+    var chon = {};
+    var b = moBang('<h3 class="gv-pop-tieu">➕ Thêm học sinh vào lớp ' + esc(l.tenLop) + '</h3>' +
+      '<div class="gv-tabs gv-tabs-nho" role="tablist"><button type="button" class="gv-tab on" data-th="co">Em đã có hồ sơ</button><button type="button" class="gv-tab" data-th="email">Nhập trước email</button></div>' +
+      '<div class="gv-th" data-th="co">' + (ngoai.length ? '<input type="search" class="gv-tim gv-tim-th" placeholder="🔎 Tìm tên, email, lớp…" style="width:100%;margin-bottom:8px">' +
+        '<div class="gv-ds-chon">' + ngoai.map(function (h) {
+          return '<label class="gv-o-chon" data-tim="' + esc(boDau(h.hoTen + ' ' + h.email + ' ' + h.lop)) + '"><input type="checkbox" data-hs="' + esc(h.hoSoId) + '"><span><b>' + esc(h.hoTen) + '</b><small>' + esc(h.email) + ' · ' +
+            (h.maLop ? 'đang ở lớp ' + esc(h.lop) : 'tự ghi: ' + esc(h.lop)) + '</small></span></label>';
+        }).join('') + '</div><button type="button" class="gv-nut chinh to gv-xep" disabled>Xếp vào lớp</button>'
+        : '<p class="gv-trong">Em nào cũng đã ở lớp này. Em chưa đăng nhập lần nào thì dùng tab <b>Nhập trước email</b>.</p>') + '</div>' +
+      '<div class="gv-th" data-th="email" hidden><p class="gv-trong" style="margin-top:0">Mỗi dòng một em: <b>email, Họ tên</b> (có thể dán thẳng hai cột từ Excel). Email đã có hồ sơ thì vào lớp ngay; chưa có thì em đăng nhập Google lần đầu sẽ được điền sẵn họ tên + mã lớp.</p>' +
+        '<textarea class="gv-dan" rows="6" placeholder="an.nguyen@gmail.com, Nguyễn Văn An&#10;binh123@gmail.com, Trần Thị Bình"></textarea>' +
+        '<button type="button" class="gv-nut chinh to gv-gui-email">Thêm vào lớp</button><div class="gv-kq"></div>' +
+        '<h4>📨 Email đang chờ <span class="gv-dem-cho"></span></h4><ul class="gv-gd-hs gv-ds-cho"></ul></div>');
+    function veCho() {
+      var ds = choLop(ma), o = b.querySelector('.gv-ds-cho');
+      b.querySelector('.gv-dem-cho').textContent = ds.length ? '(' + ds.length + ')' : '';
+      o.innerHTML = ds.length ? ds.map(function (m) { return '<li><span>' + esc(m.hoTen || '—') + ' <small>· ' + esc(m.email) + '</small></span><button type="button" class="gv-lk" data-xoa="' + esc(m.email) + '">Bỏ</button></li>'; }).join('')
+        : '<li><span class="gv-trong">Không có email nào đang chờ.</span></li>';
+    }
+    veCho();
+    b.addEventListener('click', function (e) {
+      var t = e.target.closest('[data-th]');
+      if (t && t.classList.contains('gv-tab')) {
+        b.querySelectorAll('.gv-tab').forEach(function (x) { x.classList.toggle('on', x === t); });
+        b.querySelectorAll('.gv-th').forEach(function (x) { x.hidden = x.dataset.th !== t.dataset.th; });
+        return;
+      }
+      if (e.target.closest('.gv-xep')) {
+        var ids = Object.keys(chon), n = e.target.closest('.gv-xep'); n.disabled = true; n.textContent = '⏳ Đang xếp…';
+        return goiMC('gvChuyenLop', { hoSoId: ids, maLop: ma }).then(function (d) {
+          bao('Đã xếp ' + d.soHs + ' em vào lớp ' + l.tenLop); dongBang(); LOP_MO = ''; taiDuLieu(true);
+        }).catch(function (x) { n.disabled = false; n.textContent = 'Xếp vào lớp'; bao('⚠️ ' + x.message, true); });
+      }
+      if (e.target.closest('.gv-gui-email')) {
+        var nut = e.target.closest('.gv-gui-email'), ds = docDanh(b.querySelector('.gv-dan').value);
+        if (!ds.length) return bao('⚠️ Cô dán danh sách email trước nhé', true);
+        nut.disabled = true; nut.textContent = '⏳ Đang thêm ' + ds.length + ' em…';
+        return goiMC('gvMoiLop', { maLop: ma, ds: ds }).then(function (d) {
+          nut.disabled = false; nut.textContent = 'Thêm vào lớp'; b.querySelector('.gv-dan').value = '';
+          b.querySelector('.gv-kq').innerHTML = '<div class="gv-tom">' +
+            (d.daXep.length ? '<p>✅ Vào lớp ngay (' + d.daXep.length + '): ' + d.daXep.map(esc).join(', ') + '</p>' : '') +
+            (d.cho.length ? '<p>📨 Chờ em đăng nhập (' + d.cho.length + '): ' + d.cho.map(esc).join(', ') + '</p>' : '') +
+            (d.canChon.length ? '<p>⚠️ Email dùng chung nhiều hồ sơ, chưa biết em nào: ' + d.canChon.map(esc).join(', ') + ' — cô ghi đúng họ tên của em hoặc xếp ở tab “Em đã có hồ sơ”.</p>' : '') +
+            (d.sai.length ? '<p>❌ Không đọc được email: ' + d.sai.map(esc).join(', ') + '</p>' : '') + '</div>';
+          return taiDuLieu(true).then(veCho);
+        }).catch(function (x) { nut.disabled = false; nut.textContent = 'Thêm vào lớp'; bao('⚠️ ' + x.message, true); });
+      }
+      var xoa = e.target.closest('[data-xoa]');
+      if (xoa) goiMC('gvXoaMoi', { email: xoa.dataset.xoa, maLop: ma }).then(function () {
+        D.moiLop = D.moiLop.filter(function (m) { return !(m.email === xoa.dataset.xoa && m.maLop === ma); }); veCho(); bao('Đã bỏ ' + xoa.dataset.xoa);
+      }).catch(function (x) { bao('⚠️ ' + x.message, true); });
+    });
+    b.addEventListener('change', function (e) {
+      var i = e.target.closest('input[data-hs]'); if (!i) return;
+      if (i.checked) chon[i.dataset.hs] = 1; else delete chon[i.dataset.hs];
+      var n = Object.keys(chon).length, nut = b.querySelector('.gv-xep'); nut.disabled = !n; nut.textContent = n ? 'Xếp ' + n + ' em vào lớp' : 'Xếp vào lớp';
+    });
+    var tim = b.querySelector('.gv-tim-th');
+    if (tim) tim.addEventListener('input', function () {
+      var q = boDau(tim.value).trim(); b.querySelectorAll('.gv-ds-chon > label').forEach(function (x) { x.hidden = q && x.dataset.tim.indexOf(q) < 0; });
+    });
+  }
+  function docDanh(txt) {                     // "email, Họ tên" · "Họ tên <tab> email" · chỉ email
+    return String(txt || '').split(/\r?\n/).map(function (d) {
+      d = d.trim(); if (!d) return null;
+      var m = d.match(/[^\s,;<>\t]+@[^\s,;<>\t]+/), email = m ? m[0] : '';
+      var ten = d.replace(email, '').replace(/[<>]/g, '').replace(/^[\s,;\t]+|[\s,;\t]+$/g, '').replace(/[\t;]+/g, ' ').replace(/\s+/g, ' ');
+      return { email: email || d, hoTen: email ? ten : '' };
+    }).filter(Boolean);
   }
 
   // =====================================================================

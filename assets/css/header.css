@@ -280,3 +280,4 @@ a.tk-btn{text-decoration:none;text-align:center;box-sizing:border-box}
 .tk-gn{flex-shrink:0;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:800;background:#f1ece2;color:#6b6257;white-space:nowrap}
 .tk-gn.xong{background:#eaf8ef;color:#0b5a2a}.tk-gn.dang{background:#fff3d6;color:#8a6414}.tk-gn.qua{background:#fbe4e3;color:#b31916}
 .tk-giao-them{display:block;width:100%;padding:9px;border:0;border-top:1px solid #f0e8d6;background:#fff;font:inherit;font-weight:800;color:#0b5a2a;cursor:pointer}
+.tk-moi-lop{margin:0 0 12px;padding:10px 12px;border-radius:12px;background:#eaf8ef;border:1px solid rgba(11,90,42,.25);color:#0b5a2a;font-weight:700;font-size:14px;line-height:1.5;text-align:left}

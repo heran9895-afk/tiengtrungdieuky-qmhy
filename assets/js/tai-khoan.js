@@ -249,7 +249,7 @@
   function nhanThe(resp) {
     var bao = pop && pop.querySelector('.tk-bao'); if (bao) bao.textContent = '⏳ Đang đăng nhập…';
     goi('dangNhap', { idToken: resp.credential }).then(function (d) {
-      TK = { phien: d.phien, nguoiDung: d.nguoiDung, hoSo: d.hoSo || [], hoSoId: '', giaoVien: !!d.giaoVien }; luuTK(); veNut();
+      TK = { phien: d.phien, nguoiDung: d.nguoiDung, hoSo: d.hoSo || [], hoSoId: '', giaoVien: !!d.giaoVien, moi: d.moi || null }; luuTK(); veNut();
       if (!TK.hoSo.length) return TK.giaoVien ? manGiaoVien(true) : manTaoHoSo(true);
       if (TK.hoSo.length === 1) return chonHoSo(TK.hoSo[0].hoSoId);
       manChonHoSo();
@@ -258,11 +258,13 @@
 
   function manTaoHoSo(lanDau, sua) {
     var h = sua ? hoSoDang() : null;
+    var moi = !sua && TK.moi && !(TK.hoSo || []).some(function (x) { return x.maLop === TK.moi.maLop; }) ? TK.moi : null;   // cô đã thêm email này vào lớp: điền sẵn
     var b = moBang('<div class="tk-ico">' + (sua ? '✏️' : '🧑‍🎓') + '</div><h3>' + (sua ? 'Sửa hồ sơ' : lanDau ? 'Tạo hồ sơ học sinh' : 'Thêm hồ sơ học sinh') + '</h3>' +
       (lanDau ? '<p class="tk-loi-moi">Chào ' + esc(TK.nguoiDung.hoTen || TK.nguoiDung.email) + '! Điền một lần, các lần sau không phải gõ tên khi làm bài.</p>' : '') +
+      (moi ? '<p class="tk-moi-lop">🎓 Cô đã thêm bạn vào lớp <b>' + esc(moi.tenLop) + '</b>. Bạn kiểm tra họ tên rồi bấm Tạo hồ sơ nhé.</p>' : '') +
       (!sua && !lanDau ? '<p class="tk-loi-moi">Anh chị em dùng chung tài khoản này thì mỗi người một hồ sơ để điểm không bị dồn vào nhau.</p>' : '') +
-      '<form class="tk-form"><label>Họ tên đầy đủ<input name="hoTen" required maxlength="80" autocomplete="name" placeholder="VD: Nguyễn Văn An" value="' + esc(h ? h.hoTen : '') + '"></label>' +
-      '<label>Mã lớp <span class="tk-phu">(cô đưa trên lớp)</span><input name="maLop" maxlength="16" autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="VD: K3HN7Q" value="' + esc(h ? h.maLop || '' : '') + '"></label>' +
+      '<form class="tk-form"><label>Họ tên đầy đủ<input name="hoTen" required maxlength="80" autocomplete="name" placeholder="VD: Nguyễn Văn An" value="' + esc(h ? h.hoTen : moi ? moi.hoTen : '') + '"></label>' +
+      '<label>Mã lớp <span class="tk-phu">(cô đưa trên lớp)</span><input name="maLop" maxlength="16" autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="VD: K3HN7Q" value="' + esc(h ? h.maLop || '' : moi ? moi.maLop : '') + '"></label>' +
       '<details class="tk-tu-hoc"' + (h && !h.maLop && h.lop ? ' open' : '') + '><summary>Tự học, không có mã lớp?</summary>' +
         '<label>Lớp / nơi học <span class="tk-phu">(tự ghi)</span><input name="lop" maxlength="40" placeholder="VD: Tự học" value="' + esc(h && !h.maLop ? h.lop : '') + '"></label></details>' +
       (sua ? '' : '<label class="tk-dong-y"><input type="checkbox" name="dongY" required><span>Mình đồng ý để web lưu họ tên, lớp, điểm và tiến độ học của mình để phục vụ việc học.</span></label>') +
