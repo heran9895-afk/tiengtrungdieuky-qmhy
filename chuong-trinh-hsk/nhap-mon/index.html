@@ -754,8 +754,33 @@ function playWebAudio(key, done, fallback){
     else ctx.decodeAudioData(bytesOf(key).buffer, start, fallback);
   }catch(e){ fallback(); }
 }
+/* Giọng Gemini (Sulafat) cho bảng ghép: âm nào có trong assets/am/py/ds.json thì phát file mới,
+   còn lại phát bản ghi cũ ở trên. */
+let PY_GEMINI = new Set();
+fetch("../../assets/am/py/ds.json").then(r=>r.ok?r.json():[]).then(a=>{ PY_GEMINI = new Set(a); }).catch(()=>{});
+function playGemini(key, done, fail){
+  const url = "../../assets/am/py/" + key + ".mp3";
+  const tag = ()=>{ try{ player = new Audio(url); player.onended = done; player.onerror = fail;
+    const pr = player.play(); if(pr) pr.catch(err=>{ if(err && err.name !== "AbortError") fail(); }); }catch(e){ fail(); } };
+  const Ctx = window.AudioContext || window.webkitAudioContext;
+  if(!Ctx || !window.fetch){ tag(); return; }
+  try{
+    ctx = ctx || new Ctx();
+    if(ctx.state !== "running") ctx.resume();
+    const start = buf=>{ bufCache["g:"+key] = buf; source = ctx.createBufferSource(); source.buffer = buf;
+      source.connect(ctx.destination); source.onended = done; source.start(); };
+    if(bufCache["g:"+key]) start(bufCache["g:"+key]);
+    else fetch(url).then(r=>{ if(!r.ok) throw 0; return r.arrayBuffer(); })
+      .then(ab=>ctx.decodeAudioData(ab, start, tag)).catch(tag);
+  }catch(e){ tag(); }
+}
 function play(syl, t, btn){
   stopAll();
+  { const k = audioKey(syl,t);
+    if(PY_GEMINI.has(k)){ playingBtn = btn || null; if(btn) btn.classList.add("playing");
+      const d = ()=>{ if(btn) btn.classList.remove("playing"); };
+      playGemini(k, d, ()=>{ d(); if(window.AUDIO_PY && window.AUDIO_PY[k]) playWebAudio(k, d, ()=>playTag(k, d, d)); });
+      return; } }
   if(!window.AUDIO_PY){                          // âm thanh chưa tải xong
     if(btn){ const lb=btn.querySelector("small"); const old=lb.innerHTML; lb.textContent="Đang tải…"; setTimeout(()=>lb.innerHTML=old,1500); }
     return;
