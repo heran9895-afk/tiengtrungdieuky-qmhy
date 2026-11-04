@@ -136,11 +136,14 @@
   var LOA = '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>';
   // Từ/câu có 儿化: loa đọc bỏ 儿 (cột "Đọc" ít chữ 儿 hơn chữ hiển thị) → hiện ghi chú cong lưỡi
   function demNhi(t) { return (String(t || '').match(/儿/g) || []).length; }
-  function coNhiHoa(han, docThay) { return !!docThay && docThay !== '-' && !laFileAm(docThay) && demNhi(han) > demNhi(docThay); }
+  // Chữ có 儿 đã có file giọng Gemini (đọc đúng 儿化) → phát file theo chữ hiển thị, bỏ qua cột "Đọc" (vốn bỏ 儿 cho giọng máy)
+  function coFileNhi(han) { return !!BAN_DO && demNhi(han) > 0 && !!BAN_DO[chuanAm(han)]; }
+  function coNhiHoa(han, docThay) { return !coFileNhi(han) && !!docThay && docThay !== '-' && !laFileAm(docThay) && demNhi(han) > demNhi(docThay); }
   var GHI_NHI = '<p class="tv-nhi">Do hạn chế của máy đọc, loa đọc âm không có đuôi 儿化. Khi đọc, các bạn chú ý <b>cong lưỡi ở cuối âm</b> nhé.</p>';
   // Cột "Đọc" = "-": máy đọc chưa chuẩn, đang chờ thu âm → không hiện nút loa
   function choCapNhat(to) { return '<span class="tv-loa-cho' + (to ? ' to' : '') + '" title="Phát âm đang cập nhật">' + (to ? 'Phát âm đang cập nhật' : '') + '</span>'; }
   function nutLoa(txt, to, docThay) {
+    if (coFileNhi(txt)) docThay = '';
     if (docThay === '-') return choCapNhat(to); return '<button type="button" class="tv-loa' + (to ? ' to' : '') + '" data-doc="' + esc(docThay || txt) + '" aria-label="Nghe phát âm">' + LOA + '</button>'; }
   // Bấm nút loa ở bất kỳ đâu trên trang
   document.addEventListener('click', function (e) {
