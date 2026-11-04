@@ -444,7 +444,25 @@ const spk = (k, label = k) => audB64(k) ? `<button class="spk" type="button" dat
 let AC = null, curSrc = null, curBtn = null;
 const bufs = {};
 function mark(btn, on){ if (curBtn) curBtn.classList.remove('on'); curBtn = on ? btn : null; if (on && btn) btn.classList.add('on'); }
+/* Giọng Gemini (Sulafat): âm tiết có trong assets/am/py/ds.json, từ có trong assets/am/ban-do.json thì phát file mới */
+let TB_PY = new Set(), TB_BD = null;
+fetch('../../assets/am/py/ds.json').then(r => r.ok ? r.json() : []).then(a => { TB_PY = new Set(a); }).catch(() => {});
+fetch('../../assets/am/ban-do.json').then(r => r.ok ? r.json() : null).then(m => { TB_BD = m; }).catch(() => {});
+function urlGemini(k){
+  const pk = k.replace(/^([nl])uu/, '$1v');
+  if (TB_PY.has(pk)) return '../../assets/am/py/' + pk + '.mp3';
+  if (TB_BD && TB_BD[k]) return '../../' + TB_BD[k];
+  return null;
+}
 async function say(k, btn){
+  const url = urlGemini(k);
+  if (url){
+    if (curSrc) try { curSrc.stop(); } catch(e){}
+    const a = new Audio(url); curSrc = { stop: () => a.pause() };
+    mark(btn, true); a.onended = () => mark(null, false);
+    a.play().catch(() => { mark(null, false); });
+    return;
+  }
   try {
     AC = AC || new (window.AudioContext || window.webkitAudioContext)();
     if (AC.state === 'suspended') await AC.resume();
