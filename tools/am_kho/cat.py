@@ -13,14 +13,16 @@ def chuan(s):
     s = re.sub(r'(^|[。！？])[A-Z一-鿿]{1,4}[：:]', r'\1', s)
     return re.sub(r'[—–\-“”"]', '', s).replace('！', '。')
 
-def py(s): return [p for p in lazy_pinyin(re.sub(r'[^一-鿿]', '', s)) if p]
+def py(s): return [p for p in lazy_pinyin(re.sub(r'[^一-鿿]|儿', '', s)) if p]
 
 def ratio(a, b):
     return difflib.SequenceMatcher(None, a, b).ratio() if a or b else 1.0
 
 wav, luot = sys.argv[1], sys.argv[2]
-L = {b['ten']: b for b in json.load(open('/home/claude/am/luot.json'))}[luot]
+LS = json.load(open('/home/claude/am/luot.json')) + (json.load(open('/home/claude/am/nhi/luot.json')) if os.path.exists('/home/claude/am/nhi/luot.json') else [])
+L = {b['ten']: b for b in LS}[luot]
 lines, typ = L['ds'], L['typ']
+khoa = L.get('khoa', lines)
 os.makedirs('/home/claude/am/pcm', exist_ok=True)
 pcm = '/home/claude/am/pcm/%s.wav' % luot
 # 1. PCM sạch 24 kHz mono (bỏ qua header lỗi: -ignore_length)
@@ -80,7 +82,7 @@ for i, l in enumerate(lines):
     if i - 1 in kq: a = max(a, vung[kq[i - 1][0] + kq[i - 1][1] - 1][1] + 0.02)
     ok = r >= 0.9
     bc.append((l, round(r, 2), txt, 'ok' if ok else 'SOI'))
-    f = od + hashlib.md5(chuan(l).encode()).hexdigest()[:10] + '.mp3'
+    f = od + hashlib.md5(chuan(khoa[i]).encode()).hexdigest()[:10] + '.mp3'
     tmp = '/home/claude/am/pcm/_c.wav'
     d = b - a
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', '%.3f' % a, '-t', '%.3f' % d, '-i', pcm,
@@ -89,7 +91,7 @@ for i, l in enumerate(lines):
     os.makedirs('/home/claude/am/ra/' + luot, exist_ok=True)
     dich = ('/home/claude/am/ra/%s/' % luot) + os.path.basename(f)   # để ở thư mục tạm; ok mới chép vào web
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', tmp, '-af', 'atrim=end=%.3f' % (d + 0.05), '-ac', '1', '-ar', str(SR), '-b:a', '48k', dich], check=True)
-    xong[chuan(l)] = {'file': 'assets/am/%s/' % thu + os.path.basename(f), 'tam': dich, 'r': r, 'asr': txt}
+    xong[chuan(khoa[i])] = {'file': 'assets/am/%s/' % thu + os.path.basename(f), 'tam': dich, 'r': r, 'asr': txt}
 json.dump({'luot': luot, 'vung': len(vung), 'dong': n, 'kq': xong, 'thieu': bo}, open('/home/claude/am/ketqua/%s.json' % luot if os.makedirs('/home/claude/am/ketqua', exist_ok=True) is None else '', 'w'), ensure_ascii=False, indent=1)
 print('%s: %d vùng, %d dòng, khớp ≥0,9: %d, soi: %d, thiếu: %d' % (luot, m, n, sum(1 for b in bc if b[3] == 'ok'), sum(1 for b in bc if b[3] == 'SOI'), len(bo)))
 for b in bc:
