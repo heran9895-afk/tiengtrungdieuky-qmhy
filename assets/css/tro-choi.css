@@ -595,3 +595,42 @@ body.vc-trang.co-sf{padding-bottom:0}
 .tl-cn-xep li.loai{opacity:.75}
 .vc-form.vc-form-ten{display:grid;gap:8px}
 .vc-form.vc-form-ten input{text-transform:none;font-size:18px;font-weight:700}
+
+/* ===== Trò chơi cả lớp: kịch tính hơn (04/11/2026) — trả lời ngầm, đóng băng bảng điểm, câu cược, công bố kết quả, Đua xe ⚡ 🕳️ 🚧 ===== */
+.tl-bao-lon{margin:0 auto 8px;padding:6px 14px;border-radius:12px;font-size:18px;font-weight:800;text-align:center;animation:tl-bao-vao .6s cubic-bezier(.3,1.4,.5,1)}
+.tl-bao-lon.bang{background:#e8f4fd;color:#1d5f94;border:2px solid #9cc9ee}
+.tl-bao-lon.rut{background:#fff1ee;color:#b0342c;border:2px solid #f0a69f}
+.tl-bao-lon.cuoc{background:#fffbef;color:#8a6200;border:2px solid var(--gold)}
+@keyframes tl-bao-vao{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:none}}
+.tl-ngam-chu{display:block;margin-top:4px;font-size:14.5px;font-weight:700;color:#6b4fa3}
+.tl-lat-keo{display:inline-block;color:#b0342c;animation:tl-bao-vao .7s cubic-bezier(.3,1.4,.5,1)}
+.tl-loi-ket.tl-chan{color:#8a4b00}
+.tl-cuoc-ds{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0 4px}
+.tl-cuoc-ds .tl-doi-ten{padding:6px 12px;border-radius:999px;border:2px solid var(--line);font-size:17px}
+.tl-sang b.tl-cuoc-dem{font-size:20px}
+.tl-duong-chu{margin-top:6px;font-size:12.5px;color:var(--muted);text-align:center}
+.tl-lan-o i{display:flex;align-items:center;justify-content:center;font-size:17px;font-style:normal;line-height:1}
+.tl-lan-o i.rut{background:repeating-linear-gradient(90deg,rgba(255,120,100,.28) 0 8px,transparent 8px 16px)}
+.tl-lan-o i.tang{background:rgba(255,214,0,.35)}
+.tl-lan-o i.ga{background:rgba(20,20,20,.45)}
+.tl-xe{z-index:2}
+.tl-xe-co{position:absolute;top:-14px;left:50%;transform:translateX(-50%) scaleX(-1);font-size:14px;white-space:nowrap}
+.tl-lat{opacity:0;transform:translateY(14px) scale(.95)}
+.tl-lat.hien{opacity:1;transform:none;transition:opacity .5s,transform .6s cubic-bezier(.3,1.5,.5,1)}
+.tl-hang-doi.tl-lat.hien.h1,.tl-cn-xep li.tl-lat.hien.h1{animation:tl-nhat 1.2s ease-in-out 2}
+@keyframes tl-nhat{50%{box-shadow:0 0 0 8px rgba(226,173,40,.45)}}
+/* điện thoại */
+.vc-ngam{margin:0 0 10px;padding:9px 12px;border-radius:12px;background:#f2edfb;color:#4c3480;font-size:15px;text-align:center}
+.vc-ngam.luot{background:#fffbef;color:#8a6200}
+.vc-ngam.cuoc{background:#fffbef;color:#8a6200;font-weight:800}
+.vc-ngam.rut{background:#fff1ee;color:#b0342c;font-weight:800}
+.vc-ngam.bang{background:#e8f4fd;color:#1d5f94}
+.vc-loi-ket{margin:8px 0 0;padding:10px 12px;border-radius:12px;background:#f7f5f0;font-size:15.5px;text-align:center}
+.vc-chan{margin-top:10px;padding:12px;border-radius:14px;border:2px dashed #e0a043;background:#fff8ec}
+.vc-chan h3{margin:0 0 4px;font-size:18px}
+.vc-chan .vc-doi{font-size:17px;padding:12px}
+.vc-cuoc{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.vc-cuoc button{font:inherit;display:grid;gap:2px;padding:14px 6px;border-radius:14px;border:2px solid var(--gold);background:#fffbef;cursor:pointer}
+.vc-cuoc button b{font-size:24px}
+.vc-cuoc button small{font-size:13px;color:#8a6200}
+.vc-tg .vc-chot{border-color:#d8403a;background:#fff3f2;color:#b0342c}

@@ -172,7 +172,7 @@
     if (!s || !s.doi || !s.doi[d] || s.doi[d].vang) { el.querySelector('.vc-noi') && (el.querySelector('.vc-noi').innerHTML = '<div class="tv-trong">' + (s && s.caNhan && s.gd && s.gd !== 'sanh' ? 'Ván đang chơi, em chờ ván sau nhé…' : 'Chờ cô mở phòng…') + '</div>'); return; }
     var toi = s.doi[d];
     var dau = '<div class="vc-dau-o ' + (MAU[toi.mau] || '') + '"><span>' + esc(toi.ico) + ' <b>' + esc(toi.ten) + '</b></span>' +
-      (s.diem ? '<span class="vc-diem">' + s.diem[d] + ' điểm' + (s.phu && s.phu[d] ? ' · ' + esc(s.phu[d]) : '') + '</span>' : '') +
+      (s.diem ? '<span class="vc-diem">' + (s.diem[d] == null ? '❓' : s.diem[d]) + ' điểm' + (s.phu && s.phu[d] ? ' · ' + esc(s.phu[d]) : '') + (s.dongBang ? ' · 🧊' : '') + '</span>' : '') +
       '<button type="button" class="vc-link vc-doi-lai">' + (s.caNhan ? 'Thoát' : 'Đổi đội') + '</button></div>';
     var view = noiDung(s, d);
     var khoa = view.khoa + '|' + (R.loiGui || '');
@@ -201,6 +201,8 @@
       if (s.cheDo === 'tu' && s.sanSang) return oSanSang(s, d, '<div class="vc-ico">✅</div><h2>' + (s.caNhan ? 'Đã vào phòng!' : 'Đã vào đội!') + '</h2><p class="vc-nho">' + esc(s.ten || '') + ' · tự luyện</p>', s.caNhan ? 'Em sẵn sàng' : 'Đội mình sẵn sàng');
       return { khoa: 'sanh' + s.v, html: '<div class="vc-cho"><div class="vc-ico">✅</div><h2>' + (s.caNhan ? 'Đã vào phòng!' : 'Đã vào đội!') + '</h2><p>Chờ cô bấm bắt đầu nhé.</p><p class="vc-nho">' + esc(s.ten || '') + '</p></div>' };
     }
+    if (s.gd === 'lat') return { khoa: 'lat' + s.v, html: '<div class="vc-cho"><div class="vc-ico">🥁</div><h2>Đang công bố kết quả…</h2><p>Nhìn lên màn chiếu nhé!</p></div>' };
+    if (s.gd === 'cuoc' && s.cuoc) return oCuoc(s, d);
     if (s.gd === 'ket' && s.ket) {
       var toi = (s.ket.thu || []).filter(function (x) { return x.i === d; })[0], h = toi ? toi.hang : 0;
       var ssK = s.cheDo === 'tu' && s.sanSang ? oSanSang(s, d, '', 'Chơi ván mới') : null;
@@ -215,15 +217,20 @@
     var loai = s.loai && s.loai[d];
     if (c.mo) {
       if (loai) return { khoa: 'loai' + c.id, html: '<div class="vc-cho"><div class="vc-ico">📣</div><h2>' + (s.caNhan ? 'Em đã bị loại' : 'Đội đã bị loại') + '</h2><p>Cổ vũ ' + (s.caNhan ? 'các bạn' : 'các đội') + ' còn lại nhé! Cô có thể dùng quyền cứu trợ đấy.</p></div>' };
-      if ((c.ai || []).indexOf(d) < 0) return { khoa: 'xem' + c.id + c.an.join(), con: c.conLai, html: '<div class="vc-cho"><div class="vc-ico">👀</div><h2>' + tenDoi(s, s.luot) + ' đang trả lời</h2><p>Câu nấc tiếp theo · nhìn lên màn chiếu nhé.</p>' + giay(c.conLai) + '</div>' };
-      var da = daGui('dap', c.id);
-      var tg = '';
-      if (s.tro === 'tp' && c.tg && da == null) {
+      if ((c.ai || []).indexOf(d) < 0) return { khoa: 'xem' + c.id + c.an.join(), con: c.conLai, html: '<div class="vc-cho"><div class="vc-ico">👀</div><h2>' + tenDoi(s, s.luot) + ' đang trả lời</h2><p>' +
+        (s.tro === 'tp' && s.phu && /chốt/.test(s.phu[d] || '') ? 'Đội bạn đã chốt tiền 🛑 · cùng xem các đội nhé.' : 'Câu nấc tiếp theo · nhìn lên màn chiếu nhé.') + '</p>' + giay(c.conLai) + '</div>' };
+      var da = daGui('dap', c.id), chinh = s.tro !== 'tp' || c.chinh === d;
+      var tg = '', ngam = '';
+      if (s.tro === 'tp' && chinh && c.tg && da == null) {
         tg = '<div class="vc-tg">' + (c.tg.nam ? '<button type="button" data-tg="5050">50:50</button>' : '') + (c.tg.doi ? '<button type="button" data-tg="doi">🔄 Đổi câu</button>' : '') + (c.tg.gio ? '<button type="button" data-tg="gio">⏱ +15 giây</button>' : '') + '</div>';
         if (!(c.tg.nam || c.tg.doi || c.tg.gio)) tg = '';
+        if (c.dungDuoc) tg += '<div class="vc-tg"><button type="button" class="vc-chot" data-tg="dung">🛑 Dừng cuộc chơi · chốt ' + esc((s.phu && s.phu[d] || '').replace(/^Nấc /, 'nấc ')) + '</button></div>';
       }
-      return { khoa: 'cau' + c.id + '|' + (da == null ? '' : da) + '|' + (c.an || []).join() + JSON.stringify(c.tg || ''), con: c.conLai,
-        html: '<div class="vc-cau-dau"><span>' + esc(c.ico || '') + ' Câu ' + c.so + (c.tong ? '/' + c.tong : '') + '</span>' + giay(c.conLai) + '</div>' +
+      if (s.tro === 'tp' && !chinh) ngam = '<div class="vc-ngam">🕵️ <b>Trả lời ngầm</b>: nếu ' + tenDoi(s, c.chinh) + ' sai hoặc dừng, đội đúng nhanh nhất cướp 1 nấc!</div>';
+      if (s.tro === 'tp' && chinh && c.ngam) ngam = '<div class="vc-ngam luot">⭐ Lượt của đội bạn · các đội khác đang trả lời ngầm để cướp nấc</div>';
+      return { khoa: 'cau' + c.id + '|' + (da == null ? '' : da) + '|' + (c.an || []).join() + JSON.stringify(c.tg || '') + (c.dungDuoc ? 'c' : ''), con: c.conLai,
+        html: ngam + (c.cuoc ? '<div class="vc-ngam cuoc">🎲 Câu cược! Đúng được cộng, sai bị trừ điểm cược</div>' : '') + (c.rut ? '<div class="vc-ngam rut">🏁 Chặng nước rút · câu Khó</div>' : '') +
+          '<div class="vc-cau-dau"><span>' + esc(c.ico || '') + ' ' + (s.tro === 'tp' ? 'Vòng ' : 'Câu ') + c.so + (c.tong ? '/' + c.tong : '') + '</span>' + giay(c.conLai) + '</div>' +
           '<div class="vc-de' + (c.deHan ? ' hanzi' : '') + '">' + esc(c.txt).replace(/\n/g, '<br>') + (c.doc ? '<div>' + nutNghe(c.doc, 'Nghe lại') + '</div>' : '') + '</div>' +
           '<div class="vc-dap' + (c.han ? ' han' : '') + '">' + c.dap.map(function (x, i) {
             var an = (c.an || []).indexOf(i) >= 0;
@@ -233,17 +240,43 @@
         gan: function () {
           if (c.doc && loaDT(s)) tuDoc('c' + c.id, c.doc);
           el.querySelectorAll('.vc-dap-o:not([disabled])').forEach(function (b) { b.addEventListener('click', function () { gui('dap', c.id, b.dataset.i); }); });
-          el.querySelectorAll('.vc-tg button').forEach(function (b) { b.addEventListener('click', function () { if (confirm('Dùng quyền trợ giúp này? Mỗi quyền chỉ dùng được 1 lần.')) { b.disabled = true; P.gui(R.ma, R.d, 'tg', c.id, b.dataset.tg).catch(function () { b.disabled = false; }); } }); });
+          el.querySelectorAll('.vc-tg button').forEach(function (b) { b.addEventListener('click', function () { if (confirm(b.dataset.tg === 'dung' ? 'Dừng cuộc chơi, chốt số tiền đang có? Đội sẽ không còn lượt nữa.' : 'Dùng quyền trợ giúp này? Mỗi quyền chỉ dùng được 1 lần.')) { b.disabled = true; P.gui(R.ma, R.d, 'tg', c.id, b.dataset.tg).catch(function () { b.disabled = false; }); } }); });
         } };
     }
     // Câu đã đóng: kết quả
     var kq = c.kq ? c.kq[d] : '', dung = c.dap[c.dung];
-    var tieuDe = kq === 'dung' ? '🎉 Chính xác!' : kq === 'sai' ? '😅 Chưa đúng' : kq === 'trong' ? '⏰ Hết giờ' : '👀 Đáp án';
-    var sg = oSang(s, d);
-    return { khoa: 'kq' + c.id + kq + sg.khoa, rung: kq === 'dung' ? [60, 40, 60] : kq === 'sai' ? [200] : null,
-      html: '<div class="vc-kq ' + (kq || 'xem') + '"><h2>' + tieuDe + '</h2><p>Đáp án: <b>' + CHU[c.dung] + '</b> <span class="' + (c.han ? 'hanzi' : '') + '">' + esc(dung) + '</span></p>' +
-        (c.giai ? '<p class="vc-giai">' + esc(c.giai) + ' ' + nutNghe(c.docGiai) + '</p>' : '') + '</div>' + sg.html,
-      gan: function () { if (c.docGiai && loaDT(s)) tuDoc('g' + c.id, c.docGiai); sg.gan(); } };
+    var tieuDe = kq === 'dung' ? '🎉 Chính xác!' : kq === 'sai' ? '😅 Chưa đúng' : kq === 'trong' ? '⏰ Hết giờ' : kq === 'chot' ? '🛑 Đã dừng cuộc chơi' : '👀 Đáp án';
+    var ch = oChan(s, d), sg = ch.cho ? { khoa: '', html: '', gan: function () {} } : oSang(s, d);
+    return { khoa: 'kq' + c.id + kq + sg.khoa + ch.khoa + (c.loi || ''), rung: kq === 'dung' ? [60, 40, 60] : kq === 'sai' ? [200] : null,
+      html: '<div class="vc-kq ' + (kq === 'chot' ? 'xem' : kq || 'xem') + '"><h2>' + tieuDe + '</h2><p>Đáp án: <b>' + CHU[c.dung] + '</b> <span class="' + (c.han ? 'hanzi' : '') + '">' + esc(dung) + '</span></p>' +
+        (c.giai ? '<p class="vc-giai">' + esc(c.giai) + ' ' + nutNghe(c.docGiai) + '</p>' : '') + '</div>' +
+        (c.loi ? '<p class="vc-loi-ket">' + esc(c.loi) + '</p>' : '') + ch.html + sg.html,
+      gan: function () { if (c.docGiai && loaDT(s)) tuDoc('g' + c.id, c.docGiai); ch.gan(); sg.gan(); } };
+  }
+
+  // ---------- Đua xe: đội đúng nhanh nhất chọn một đội để chặn ----------
+  function oChan(s, d) {
+    var x = s.chan;
+    if (!x) return { khoa: '', html: '', gan: function () {} };
+    if (x.da != null) return { khoa: '|ch' + x.da, html: '<p class="vc-loi-ket">🚧 ' + tenDoi(s, x.doi) + ' chặn ' + tenDoi(s, x.da) + ': câu sau đội này chỉ tiến tối đa 1 ô.</p>', gan: function () {} };
+    if (x.doi !== d) return { khoa: '|chc', html: '<p class="vc-nho">🚧 ' + tenDoi(s, x.doi) + ' đang chọn đội để chặn…</p>', gan: function () {} };
+    var da = daGui('tg', x.id);
+    if (da != null) return { khoa: '|chg', cho: true, html: '<p class="vc-da-chon">🚧 Đã chọn chặn ' + tenDoi(s, +da) + '…</p>', gan: function () {} };
+    return { khoa: '|chm', cho: true, html: '<div class="vc-chan"><h3>🚧 Đội bạn nhanh nhất! Chọn một đội để chặn</h3><p class="vc-nho">Câu sau đội bị chặn chỉ tiến tối đa 1 ô · còn ' + x.con + ' lượt chặn</p><div class="vc-doi-ds">' +
+      (s.doi || []).map(function (z, i) { return i === d || !z ? '' : '<button type="button" class="vc-doi ' + (MAU[z.mau] || '') + '" data-chan="' + i + '">🚧 ' + esc(z.ico + ' ' + z.ten) + '</button>'; }).join('') + '</div></div>',
+      gan: function () { el.querySelectorAll('[data-chan]').forEach(function (b) { b.addEventListener('click', function () { gui('tg', x.id, b.dataset.chan); }); }); } };
+  }
+  // ---------- Câu cược: chọn 0%, 25%, 50% số điểm đang có ----------
+  function oCuoc(s, d) {
+    var x = s.cuoc, coMat = (x.ai || []).indexOf(d) >= 0, da = daGui('tg', x.id), so = (x.da || []).length;
+    var html = '<div class="vc-cho"><div class="vc-ico">🎲</div><h2>' + (x.vong === 'khoa' ? 'Cược trước vòng đoán từ khóa' : 'Câu cược: câu cuối cùng!') + '</h2>' +
+      (!coMat ? '<p>' + (s.caNhan ? 'Em' : 'Đội bạn') + ' không tham gia lượt cược này, chờ chút nhé.</p>'
+        : (x.da || []).indexOf(d) >= 0 || da != null ? '<p class="vc-da-chon">✓ Đã cược' + (da != null ? ' <b>' + esc(da) + '%</b>' : '') + ' · chờ ' + (s.caNhan ? 'các bạn' : 'các đội') + ' khác…</p>'
+        : '<p>' + (x.vong === 'khoa' ? 'Đoán đúng từ khóa: <b>cộng</b> điểm cược. Sai hoặc hết giờ chưa đoán: <b>trừ</b>.' : 'Trả lời đúng: <b>cộng</b> điểm cược. Sai hoặc không trả lời: <b>trừ</b>.') + '</p>' +
+          '<div class="vc-cuoc">' + [[0, '🛡️ An toàn', '0%'], [25, '⚖️ Vừa', '25%'], [50, '🔥 Tất tay', '50%']].map(function (m) { return '<button type="button" data-cuoc="' + m[0] + '"><b>' + m[2] + '</b><small>' + m[1] + '</small></button>'; }).join('') + '</div>') +
+      '<p class="vc-nho">Còn <b class="vc-dem" data-con="' + x.con + '">' + x.con + '</b> giây · ' + so + '/' + (x.ai || []).length + ' đã cược · số điểm cược tính trên điểm đang có</p></div>';
+    return { khoa: 'cuoc' + x.id + so + (da == null ? '' : 'd'), html: html,
+      gan: function () { el.querySelectorAll('[data-cuoc]').forEach(function (b) { b.addEventListener('click', function () { gui('tg', x.id, b.dataset.cuoc); }); }); } };
   }
 
   // ---------- Sang câu / sẵn sàng (tự sang câu, tự luyện) ----------
@@ -276,14 +309,14 @@
       if (khoaDa || O.gd === 'het') return khoaDa ? '<p class="vc-nho">🔑 Đội bạn đã đoán từ khóa.</p>' : '';
       var da = daGui('khoa', O.khoaId);
       if (da != null) return '<p class="vc-da-chon">🔑 Đã gửi từ khóa: <b>' + esc(da) + '</b></p>';
-      return (bat ? '' : '<details class="vc-khoa"><summary>🔑 Đoán từ khóa hàng dọc (1 lần)</summary>') +
+      return (bat ? '' : '<details class="vc-khoa"><summary>🔑 Đoán từ khóa hàng dọc (1 lần' + (O.khoaDiem ? ' · đúng +' + O.khoaDiem + ', sai mất lượt' : '') + ')</summary>') +
         '<form class="vc-form vc-form-khoa"><input type="text" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="' + O.khoaDai + ' chữ cái, không dấu" aria-label="Từ khóa">' +
         '<button type="submit" class="btn gold">Gửi</button></form>' + (bat ? '' : '</details>');
     };
     var ganKhoa = function () {
       var f = el.querySelector('.vc-form-khoa'); if (!f) return;
       f.addEventListener('submit', function (e) { e.preventDefault(); var v = f.querySelector('input').value.trim(); if (!v) return;
-        if (confirm('Gửi từ khóa "' + v + '"? Mỗi đội chỉ được đoán 1 lần.')) gui('khoa', O.khoaId, v); });
+        if (confirm('Gửi từ khóa "' + v + '"? Mỗi đội chỉ được đoán 1 lần' + (O.gd === 'khoa' ? '.' : ', sai thì mất lượt kế tiếp.'))) gui('khoa', O.khoaId, v); });
     };
     var html = '', gan = null, con = O.conLai || null, sg = null;
     var gy = O.goiY, goiYHtml = gy ? '<div class="vc-oc-goi-y">' + (gy.loai === 'nghia' ? '📖 ' + esc(gy.txt) : gy.loai === 'han' ? '<span class="hanzi">' + esc(gy.txt) + '</span>' : '🎧 ' + nutNghe(gy.doc, 'Nghe từ')) + '</div>' : '';
@@ -296,16 +329,19 @@
         gan = function () { el.querySelectorAll('.vc-hang-ds button').forEach(function (b) { b.addEventListener('click', function () { gui('hang', O.chonId, b.dataset.r); }); }); };
       } else html = '<div class="vc-cho"><div class="vc-ico">👀</div><h2>' + tenDoi(s, O.luot) + ' đang chọn hàng</h2></div>';
     } else if (O.gd === 'hang' || O.gd === 'gianh') {
-      var duoc = O.gd === 'hang' ? O.luot === d : (O.choGianh || []).indexOf(d) >= 0;
+      var laNgam = O.gd === 'hang' && O.luot !== d && O.ngam && (O.daNgam || []).indexOf(d) < 0;
+      var duoc = O.gd === 'hang' ? O.luot === d || laNgam : (O.choGianh || []).indexOf(d) >= 0;
       var da = daGui('dap', O.dapId), dai = O.ds[O.hang] ? O.ds[O.hang].dai : '';
+      if (O.gd === 'hang' && O.luot !== d && (O.daNgam || []).indexOf(d) >= 0 && da == null) da = '…';
       if (duoc && da == null) {
-        html = '<div class="vc-cau-dau"><span>Hàng ' + (O.hang + 1) + ' · ' + dai + ' chữ cái' + (O.gd === 'gianh' ? ' · giành quyền!' : '') + '</span>' + giay(O.conLai) + '</div>' +
+        html = (laNgam ? '<div class="vc-ngam">🕵️ <b>Trả lời ngầm</b>: nếu ' + tenDoi(s, O.luot) + ' sai, đội ngầm đúng nhanh nhất được +5</div>' : '') +
+          '<div class="vc-cau-dau"><span>Hàng ' + (O.hang + 1) + ' · ' + dai + ' chữ cái' + (O.gd === 'gianh' ? ' · giành quyền!' : '') + '</span>' + giay(O.conLai) + '</div>' +
           goiYHtml + '<p class="vc-nho">Gõ <b>phiên âm không dấu</b> (ü gõ <b>v</b>).</p>' +
           '<form class="vc-form vc-form-dap"><input type="text" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="20" placeholder="' + dai + ' chữ cái" aria-label="Đáp án">' +
           '<button type="submit" class="btn gold">Gửi</button></form>';
         gan = function () { var f = el.querySelector('.vc-form-dap'), i = f.querySelector('input'); setTimeout(function () { i.focus(); }, 50);
           f.addEventListener('submit', function (e) { e.preventDefault(); var v = i.value.trim(); if (v) gui('dap', O.dapId, v); }); };
-      } else if (da != null) html = '<div class="vc-cho"><h2>Đã gửi: <b>' + esc(da) + '</b></h2><p>Chờ kết quả trên màn chiếu…</p></div>';
+      } else if (da != null) html = '<div class="vc-cho"><h2>' + (O.gd === 'hang' && O.luot !== d ? '🕵️ Đã gửi ngầm' : 'Đã gửi') + ': <b>' + esc(da) + '</b></h2><p>Chờ kết quả trên màn chiếu…</p></div>';
       else html = '<div class="vc-cho"><div class="vc-ico">👀</div><h2>' + (O.gd === 'hang' ? tenDoi(s, O.luot) + ' đang trả lời hàng ' + (O.hang + 1) : 'Các đội khác đang giành quyền') + '</h2>' + goiYHtml + giay(O.conLai) + '</div>';
     } else if (O.gd === 'khoa') {
       html = '<h2 class="vc-h">🔑 Vòng cuối: đoán từ khóa</h2>' + (O.goiYKhoa ? '<div class="vc-oc-goi-y">💡 ' + esc(O.goiYKhoa) + '</div>' : '') + giay(O.conLai) + doanKhoa(true);
@@ -319,6 +355,7 @@
     } else html = '<div class="vc-cho"><p>Nhìn lên màn chiếu nhé…</p></div>';
     if (O.gd !== 'khoa') html += doanKhoa(false);
     var g1 = gan;
+    if (s.dongBang && O.gd !== 'het') html = '<div class="vc-ngam bang">🧊 Bảng điểm đang đóng băng</div>' + html;
     return { khoa: 'oc' + s.v, con: con, html: html, gan: function () { if (g1) g1(); if (O.gd !== 'khoa') ganKhoa(); } };
   }
 
