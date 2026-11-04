@@ -19,7 +19,7 @@ def ratio(a, b):
     return difflib.SequenceMatcher(None, a, b).ratio() if a or b else 1.0
 
 wav, luot = sys.argv[1], sys.argv[2]
-LS = json.load(open('/home/claude/am/luot.json')) + (json.load(open('/home/claude/am/nhi/luot.json')) if os.path.exists('/home/claude/am/nhi/luot.json') else [])
+LS = json.load(open('/home/claude/am/luot.json')) + (json.load(open('/home/claude/am/nhi/py.json')) if os.path.exists('/home/claude/am/nhi/py.json') else []) + (json.load(open('/home/claude/am/nhi/luot.json')) if os.path.exists('/home/claude/am/nhi/luot.json') else [])
 L = {b['ten']: b for b in LS}[luot]
 lines, typ = L['ds'], L['typ']
 khoa = L.get('khoa', lines)
@@ -71,7 +71,7 @@ while i or j:
     if b[0] == 'ghep': kq[b[1]] = (b[2], b[3], b[4], b[5])
     i, j = b[1], b[2]
 # 5. Cắt rộng 0,12 s đầu / 0,15 s cuối, vuốt, −16 LUFS, mp3 48 kbps 24 kHz mono
-thu = 'tu' if typ == 'tu' else 'cau'
+thu = {'tu': 'tu', 'py': 'py'}.get(typ, 'cau')
 od = R + 'assets/am/%s/' % thu
 bc, xong, bo = [], {}, []
 for i, l in enumerate(lines):
@@ -82,7 +82,7 @@ for i, l in enumerate(lines):
     if i - 1 in kq: a = max(a, vung[kq[i - 1][0] + kq[i - 1][1] - 1][1] + 0.02)
     ok = r >= 0.9
     bc.append((l, round(r, 2), txt, 'ok' if ok else 'SOI'))
-    f = od + hashlib.md5(chuan(khoa[i]).encode()).hexdigest()[:10] + '.mp3'
+    f = od + (khoa[i] if typ == 'py' else hashlib.md5(chuan(khoa[i]).encode()).hexdigest()[:10]) + '.mp3'
     tmp = '/home/claude/am/pcm/_c.wav'
     d = b - a
     subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', '%.3f' % a, '-t', '%.3f' % d, '-i', pcm,
