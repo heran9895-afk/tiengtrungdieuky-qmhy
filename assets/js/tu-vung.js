@@ -308,7 +308,7 @@
       cauTaoHTML(w) +
       (!w.cum.length && !w.cau.length ? '<p class="tv-cho-nd">Cụm kết hợp và câu ví dụ của từ này đang được cô cập nhật 🌱</p>' : '') +
       (w.cum.length ? '<div class="tv-muc"><span class="tv-nhan">Cụm kết hợp</span><ul class="tv-cum">' + w.cum.map(function (c) {
-        return '<li class="tv-mo-py" tabindex="0"><span class="hanzi">' + esc(c.han) + '</span>' + (c.py ? '<i class="tv-py-an">' + esc(c.py) + '</i>' : '') + '</li>'; }).join('') + '</ul></div>' : '') +
+        return '<li>' + nutLoa(c.han, false) + '<span class="tv-mo-py" tabindex="0"><span class="hanzi">' + esc(c.han) + '</span>' + (c.py ? '<i class="tv-py-an">' + esc(c.py) + '</i>' : '') + '</span></li>'; }).join('') + '</ul></div>' : '') +
       (w.cau.length ? '<div class="tv-muc"><span class="tv-nhan">Câu ví dụ</span><ol class="tv-cau">' + w.cau.map(function (c) {
           return '<li>' + nutLoa(c.han, false, c.doc) + '<div class="tv-mo-py" tabindex="0"><div class="hanzi">' + esc(c.han) + '</div>' + (c.py ? '<div class="tv-cau-py tv-py-an">' + esc(c.py) + '</div>' : '') + (c.viet ? '<div class="tv-cau-viet tv-py-an">' + esc(c.viet) + '</div>' : '') + '</div></li>'; }).join('') + '</ol></div>' +
         (!coNhiHoa(w.han, w.doc) && w.cau.some(function (c) { return coNhiHoa(c.han, c.doc); }) ? GHI_NHI : '') : '') +

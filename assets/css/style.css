@@ -365,8 +365,11 @@ body::after{content:"";position:fixed;left:50%;top:56%;width:min(72vw,560px);asp
 .tv-cum{display:flex;flex-wrap:wrap;gap:6px}
 .tv-cum li{padding:5px 11px;border-radius:999px;line-height:1.25;text-align:center}
 .tv-cum .hanzi{font-size:18px!important}
-.tv-cum li:not(.hien) i{display:none}
-.tv-cum li.hien{border-radius:12px}
+.tv-cum li{display:inline-flex;align-items:center;gap:6px;padding-left:5px}
+.tv-cum li .tv-loa{width:26px;height:26px}
+.tv-cum li .tv-loa svg{width:14px;height:14px}
+.tv-cum .tv-mo-py:not(.hien) i{display:none}
+.tv-cum li:has(.hien){border-radius:12px}
 .tv-cau{gap:6px}
 .tv-cau li{padding:8px 10px;gap:10px;border-radius:12px;align-items:center}
 .tv-cau li .tv-loa,.tv-cau li .tv-loa-cho{width:30px;height:30px}
