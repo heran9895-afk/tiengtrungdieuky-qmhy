@@ -53,6 +53,8 @@ def dung_cau_am(loai, bai, k, am, nhieu):
         c.update(hien='＿' + danh_dau(van, t), dap=tm, nhieu=nhieu)
     elif loai == 'vm':
         c.update(hien=tm + '＿', dap=danh_dau(van, t), nhieu=[danh_dau(n, t) for n in nhieu])
+    elif loai == 'at':   # chọn cả âm tiết
+        c.update(hien='', dap=py(am), nhieu=[py(n) for n in nhieu])
     else:  # tđ
         c.update(hien=tm + van, dap=py(am), nhieu=[tm + danh_dau(van, x) for x in (1, 2, 3, 4) if x != t])
     return c
@@ -61,12 +63,12 @@ def dung(bai):
     out = {'bai': bai['bai'], 'ten': bai['ten'], 'tenViet': bai['tenViet'], 'phienBan': bai['phienBan'], 'phan': []}
     for p in bai['phan']:
         q = {k: v for k, v in p.items() if k != 'cau'}
-        if p['loai'] in ('tm', 'vm', 'td'):
+        if p['loai'] in ('tm', 'vm', 'td', 'at'):
             q['cau'] = [dung_cau_am(p['loai'], bai['bai'], i, c[0], c[1] if len(c) > 1 else []) for i, c in enumerate(p['cau'])]
             q['loai'] = 'am'; q['kieu'] = p['loai']
         else:
             q['cau'] = [dict(c) for c in p['cau']]
-            for c in q['cau']:                      # hội thoại: lời nào cũng đã có file giọng Gemini thì phát lần lượt (A|B)
+            for c in [c for c in q['cau'] if 'loi' in c]:   # hội thoại: lời nào cũng đã có file giọng Gemini thì phát lần lượt (A|B)
                 fs = [BAN_DO.get(chuan(v['han'])) for v in c['loi']]
                 if 'doc' not in c and all(fs): c['doc'] = '|'.join(fs)
         out['phan'].append(q)
@@ -81,8 +83,12 @@ def kiem(bai, d):
                     loi.append('thiếu âm ' + c['loa'])
                 pa = [c['dap']] + c['nhieu']
                 if len(set(pa)) != len(pa): loi.append('trùng phương án ' + c['ma'])
-            if p['loai'] == 'tranh':
-                if c['dap'] not in [a['k'] for a in p['anh']]: loi.append('đáp án lạ ' + c['ma'])
+            if p['loai'] != 'am':
+                ks = [a['k'] for a in (c.get('pa') or p.get('anh') or p.get('luaChon') or [])]
+                if c['dap'] not in ks: loi.append('đáp án lạ ' + c['ma'])
+        if p['loai'] in ('doc-ghep', 'doc-dien', 'doc-tranh'):
+            dung_ = [c['dap'] for c in p['cau']]
+            if len(set(dung_)) != len(dung_): loi.append('hai câu trùng đáp án ở ' + p['ten'])
         for a in p.get('anh', []):
             if not os.path.exists(os.path.join(GOC, a['src'])): loi.append('thiếu ảnh ' + a['src'])
     return loi

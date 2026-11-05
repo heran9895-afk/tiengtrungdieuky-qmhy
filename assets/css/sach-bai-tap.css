@@ -47,3 +47,33 @@
   .sbt-am,.sbt-am-dung{font-size:20px}
   .sbt-phan-ten{font-size:16.5px}
 }
+/* đọc hiểu (Bài 4+) */
+.sbt-cong-cu{max-width:860px;margin:0 auto 12px;display:flex;justify-content:flex-end}
+.sbt-chu{display:inline-flex;flex-direction:column;line-height:1.25}
+.sbt-py{font-size:13px;color:var(--muted);font-weight:600;letter-spacing:.2px}
+.sbt-an-py .sbt-py{display:none}
+.sbt-chu .hanzi{font-size:19px}
+.sbt-de-doc{align-items:flex-start}
+.sbt-de-doc .sbt-so{padding-top:2px}
+.sbt-an-py .sbt-de-doc .sbt-so{padding-top:0}
+.sbt-noi{display:flex;flex-direction:column;gap:6px;min-width:0}
+.sbt-cau-chu .hanzi{font-size:21px}
+.sbt-hoi{display:flex;align-items:flex-end;gap:6px}
+.sbt-hoi>b{color:var(--red);font-size:16px;line-height:1.6}
+.sbt-khung{display:grid;grid-template-columns:repeat(2,1fr);gap:6px 14px;margin:0 0 14px;padding:12px 14px;border:1.5px dashed var(--line-soft);border-radius:var(--r-box);background:var(--surface-2)}
+.sbt-khung-tu{grid-template-columns:repeat(6,1fr)}
+.sbt-lc{display:flex;align-items:flex-end;gap:8px}
+.sbt-lc>b{color:var(--red);font-size:16px;line-height:1.7}
+.sbt-pa-6{grid-template-columns:repeat(6,1fr)}
+.sbt-pa-5{grid-template-columns:repeat(5,1fr)}
+.sbt-pa-rieng .sbt-o{display:flex;align-items:flex-end;justify-content:center;gap:6px;padding:6px}
+.sbt-pa-rieng .sbt-o>b{color:var(--red);font-size:15px;line-height:1.7}
+.sbt-pa-rieng .sbt-o .hanzi{font-size:18px}
+.sbt-pa-rieng .sbt-o .sbt-py{font-size:12px}
+@media(max-width:600px){
+  .sbt-khung{grid-template-columns:1fr}
+  .sbt-khung-tu{grid-template-columns:repeat(3,1fr)}
+  .sbt-pa-6{grid-template-columns:repeat(3,1fr)}
+  .sbt-pa-rieng{grid-template-columns:1fr}
+  .sbt-pa-rieng .sbt-o{justify-content:flex-start;padding:6px 12px}
+}
