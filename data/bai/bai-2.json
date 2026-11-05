@@ -215,11 +215,11 @@
    "Câu 1": "A：对不起您。\nB：没关系。",
    "Pinyin câu 1": "A: Duìbuqǐ nín.\nB: Méi guānxi.",
    "Nghĩa câu 1": "A: Em xin lỗi thầy/cô.\nB: Không sao.",
-   "Đọc câu 1": "assets/am/cau/231a36bc5e.mp3",
+   "Đọc câu 1": "assets/am/nam1/aa49dea8e3.mp3|assets/am/cau/e6c20f1d01.mp3",
    "Câu 2": "A：白家月同学，对不起你！\nB：没关系！",
    "Pinyin câu 2": "A: Bái Jiāyuè tóngxué, duìbuqǐ nǐ!\nB: Méi guānxi!",
    "Nghĩa câu 2": "A: Bạn Bạch Gia Nguyệt, mình xin lỗi bạn!\nB: Không sao!",
-   "Đọc câu 2": "assets/am/cau/b767d0e63e.mp3"
+   "Đọc câu 2": "assets/am/nam1/0e052def11.mp3|assets/am/cau/e6c20f1d01.mp3"
   },
   {
    "Mã": "bai2-没事",
@@ -236,11 +236,11 @@
    "Câu 1": "A：李文，对不起你。\nB：没事。",
    "Pinyin câu 1": "A: Lǐ Wén, duìbuqǐ nǐ.\nB: Méishì.",
    "Nghĩa câu 1": "A: Lý Văn, mình xin lỗi bạn.\nB: Không sao.",
-   "Đọc câu 1": "assets/am/cau/6dd5b2ede7.mp3",
+   "Đọc câu 1": "assets/am/nam2/3878371b79.mp3|assets/am/nam1/3e806ae3c2.mp3",
    "Câu 2": "A：王老师，对不起您！\nB：没事！",
    "Pinyin câu 2": "A: Wáng lǎoshī, duìbuqǐ nín!\nB: Méishì!",
    "Nghĩa câu 2": "A: Cô Vương, em xin lỗi cô!\nB: Không sao!",
-   "Đọc câu 2": "assets/am/cau/4579359020.mp3"
+   "Đọc câu 2": "assets/am/nam1/478e334a50.mp3|assets/am/cau/3e806ae3c2.mp3"
   },
   {
    "Mã": "1-0146",
@@ -1773,7 +1773,7 @@
     "你叫什么名字？",
     "Nǐ jiào shénme míngzi?",
     "Bạn tên là gì?",
-    "assets/am/cau/dcdedf4368.mp3"
+    "assets/am/nam1/dcdedf4368.mp3"
    ],
    "dap": [
     "我叫李文。",
@@ -1808,7 +1808,7 @@
     "你是不是学生？",
     "Nǐ shì bu shì xué·shēng?",
     "Bạn có phải là học sinh không?",
-    "assets/am/cau/87510bb9e1.mp3"
+    "assets/am/nam1/87510bb9e1.mp3"
    ],
    "dap": [
     "是，我是学生。",
@@ -1843,7 +1843,7 @@
     "你是不是中国学生？",
     "Nǐ shì bu shì Zhōngguó xué·shēng?",
     "Bạn có phải là học sinh Trung Quốc không?",
-    "assets/am/cau/3792eb3abe.mp3"
+    "assets/am/nam1/3792eb3abe.mp3"
    ],
    "dap": [
     "不是，我是美国学生。",
@@ -1877,7 +1877,7 @@
     "对不起！",
     "Duìbuqǐ!",
     "Xin lỗi!",
-    "assets/am/cau/63d872d18e.mp3"
+    "assets/am/nam1/cf868ce64b.mp3"
    ],
    "dap": [
     "没关系。",
@@ -1912,7 +1912,7 @@
     "谢谢你！",
     "Xièxie nǐ!",
     "Cảm ơn bạn!",
-    "assets/am/cau/6edd74bfd3.mp3"
+    "assets/am/nam1/9c5cbf5a9a.mp3"
    ],
    "dap": [
     "不客气。",
@@ -1947,7 +1947,7 @@
     "认识你很高兴。",
     "Rènshi nǐ hěn gāoxìng.",
     "Rất vui được làm quen với bạn.",
-    "assets/am/cau/f4210f4d73.mp3"
+    "assets/am/nam1/f4210f4d73.mp3"
    ],
    "dap": [
     "认识你我也很高兴。",
@@ -1982,7 +1982,7 @@
     "请进！请坐！",
     "Qǐng jìn! Qǐng zuò!",
     "Mời vào! Mời ngồi!",
-    "assets/am/cau/944e1c2f26.mp3"
+    "assets/am/nam1/ea68480167.mp3"
    ],
    "dap": [
     "谢谢老师！",
@@ -2017,7 +2017,7 @@
     "请问，你是不是陈天中同学？",
     "Qǐngwèn, nǐ shì bu shì Chén Tiānzhōng tóngxué?",
     "Xin hỏi, bạn có phải là bạn Trần Thiên Trung không?",
-    "assets/am/cau/681aef9bae.mp3"
+    "assets/am/nam1/681aef9bae.mp3"
    ],
    "dap": [
     "是，我是陈天中。",
@@ -2052,7 +2052,7 @@
     "你老师叫什么名字？",
     "Nǐ lǎoshī jiào shénme míngzi?",
     "Thầy/cô của bạn tên là gì?",
-    "assets/am/cau/bfa3b97391.mp3"
+    "assets/am/nam1/bfa3b97391.mp3"
    ],
    "dap": [
     "我老师叫王一飞。",
@@ -2087,7 +2087,7 @@
     "你们是不是日本学生？",
     "Nǐmen shì bu shì Rìběn xué·shēng?",
     "Các bạn có phải là học sinh Nhật Bản không?",
-    "assets/am/cau/c21895173c.mp3"
+    "assets/am/nam1/c21895173c.mp3"
    ],
    "dap": [
     "不是，我们是中国学生。",
@@ -2121,7 +2121,7 @@
     "请问，你是不是安妮？",
     "Qǐngwèn, nǐ shì bu shì Ānnī?",
     "Xin hỏi, bạn có phải là Annie không?",
-    "assets/am/cau/3512cc789f.mp3"
+    "assets/am/nam1/3512cc789f.mp3"
    ],
    "dap": [
     "我不是安妮，我是白家月。",
@@ -2708,25 +2708,25 @@
      "han": "你好！我叫李文。你叫什么名字？",
      "py": "Nǐ hǎo! Wǒ jiào Lǐ Wén. Nǐ jiào shénme míngzi?",
      "viet": "Chào bạn! Mình tên là Lý Văn. Bạn tên là gì?",
-     "doc": "assets/am/cau/a370111c4e.mp3"
+     "doc": "assets/am/nam1/08e60276f5.mp3"
     },
     {
      "han": "我叫安妮。",
      "py": "Wǒ jiào Ānnī.",
      "viet": "Mình tên là Annie.",
-     "doc": "assets/am/cau/0479b80624.mp3"
+     "doc": "assets/am/nu2/0479b80624.mp3"
     },
     {
      "han": "你是不是英国学生？",
      "py": "Nǐ shì bu shì Yīngguó xué·shēng?",
      "viet": "Bạn có phải là học sinh Anh không?",
-     "doc": "assets/am/cau/976c2cbea6.mp3"
+     "doc": "assets/am/nam1/976c2cbea6.mp3"
     },
     {
      "han": "不是，我是美国学生。",
      "py": "Bú shì, wǒ shì Měiguó xué·shēng.",
      "viet": "Không phải, mình là học sinh Mỹ.",
-     "doc": "assets/am/cau/b7ca934106.mp3"
+     "doc": "assets/am/nu2/b7ca934106.mp3"
     }
    ],
    "nhieu": {
@@ -2734,34 +2734,34 @@
      {
       "han": "我很高兴。",
       "py": "Wǒ hěn gāoxìng.",
-      "doc": "assets/am/cau/eb14307d90.mp3"
+      "doc": "assets/am/nu2/eb14307d90.mp3"
      },
      {
       "han": "没关系。",
       "py": "Méi guānxi.",
-      "doc": "assets/am/cau/e6c20f1d01.mp3"
+      "doc": "assets/am/nu2/e6c20f1d01.mp3"
      },
      {
       "han": "我是学生。",
       "py": "Wǒ shì xué·shēng.",
-      "doc": "assets/am/cau/9d9749882a.mp3"
+      "doc": "assets/am/nu2/9d9749882a.mp3"
      }
     ],
     "3": [
      {
       "han": "我叫安妮。",
       "py": "Wǒ jiào Ānnī.",
-      "doc": "assets/am/cau/0479b80624.mp3"
+      "doc": "assets/am/nu2/0479b80624.mp3"
      },
      {
       "han": "对不起。",
       "py": "Duìbuqǐ.",
-      "doc": "assets/am/cau/cf868ce64b.mp3"
+      "doc": "assets/am/nu2/cf868ce64b.mp3"
      },
      {
       "han": "我们也说汉语。",
       "py": "Wǒmen yě shuō Hànyǔ.",
-      "doc": "assets/am/cau/d51d8ffa34.mp3"
+      "doc": "assets/am/nu2/d51d8ffa34.mp3"
      }
     ]
    }
@@ -2773,7 +2773,7 @@
      "han": "请问，您是不是王老师？",
      "py": "Qǐngwèn, nín shì bu shì Wáng lǎoshī?",
      "viet": "Xin hỏi, cô có phải là cô Vương không ạ?",
-     "doc": "assets/am/cau/061d661396.mp3"
+     "doc": "assets/am/nam2/061d661396.mp3"
     },
     {
      "han": "是。请进！请坐！",
@@ -2785,7 +2785,7 @@
      "han": "谢谢老师！我叫陈天中。",
      "py": "Xièxie lǎoshī! Wǒ jiào Chén Tiānzhōng.",
      "viet": "Em cảm ơn cô! Em tên là Trần Thiên Trung.",
-     "doc": "assets/am/cau/d1f1f3071a.mp3"
+     "doc": "assets/am/nam2/17d2481a4b.mp3"
     },
     {
      "han": "认识你很高兴。",
@@ -2845,7 +2845,7 @@
      "han": "我叫陈天中。",
      "py": "Wǒ jiào Chén Tiānzhōng.",
      "viet": "Em tên là Trần Thiên Trung.",
-     "doc": "assets/am/cau/6cd1661fa1.mp3"
+     "doc": "assets/am/nam2/6cd1661fa1.mp3"
     }
    ],
    "nhieu": {
@@ -2853,17 +2853,17 @@
      {
       "han": "我不认识陈天中。",
       "py": "Wǒ bú rènshi Chén Tiānzhōng.",
-      "doc": "assets/am/cau/97627fe148.mp3"
+      "doc": "assets/am/nam2/97627fe148.mp3"
      },
      {
       "han": "没关系！",
       "py": "Méi guānxi!",
-      "doc": "assets/am/cau/490e3b2d67.mp3"
+      "doc": "assets/am/nam2/e6c20f1d01.mp3"
      },
      {
       "han": "我也很高兴。",
       "py": "Wǒ yě hěn gāoxìng.",
-      "doc": "assets/am/cau/9ab474d742.mp3"
+      "doc": "assets/am/nam2/9ab474d742.mp3"
      }
     ]
    },
@@ -2877,25 +2877,25 @@
      "han": "你好，安妮！",
      "py": "Nǐ hǎo, Ānnī!",
      "viet": "Chào Annie!",
-     "doc": "assets/am/cau/c3dd24051c.mp3"
+     "doc": "assets/am/nam2/05f4d89af2.mp3"
     },
     {
      "han": "你好，陈天中！我不是安妮，我是白家月。",
      "py": "Nǐ hǎo, Chén Tiānzhōng! Wǒ bú shì Ānnī, wǒ shì Bái Jiāyuè.",
      "viet": "Chào Trần Thiên Trung! Mình không phải là Annie, mình là Bạch Gia Nguyệt.",
-     "doc": "assets/am/cau/b8a8abadff.mp3"
+     "doc": "assets/am/nu2/32dbb8349a.mp3"
     },
     {
      "han": "对不起！",
      "py": "Duìbuqǐ!",
      "viet": "Xin lỗi!",
-     "doc": "assets/am/cau/63d872d18e.mp3"
+     "doc": "assets/am/nam2/cf868ce64b.mp3"
     },
     {
      "han": "没关系！",
      "py": "Méi guānxi!",
      "viet": "Không sao!",
-     "doc": "assets/am/cau/490e3b2d67.mp3"
+     "doc": "assets/am/nu2/e6c20f1d01.mp3"
     }
    ],
    "nhieu": {
@@ -2903,34 +2903,34 @@
      {
       "han": "没关系！",
       "py": "Méi guānxi!",
-      "doc": "assets/am/cau/490e3b2d67.mp3"
+      "doc": "assets/am/nu2/e6c20f1d01.mp3"
      },
      {
       "han": "不客气！",
       "py": "Bú kèqi!",
-      "doc": "assets/am/bai-1/cau/c57.mp3"
+      "doc": "assets/am/nu2/9c4d773eef.mp3"
      },
      {
       "han": "请坐！",
       "py": "Qǐng zuò!",
-      "doc": "assets/am/cau/a8eb44fd82.mp3"
+      "doc": "assets/am/nu2/ccb9f976f7.mp3"
      }
     ],
     "3": [
      {
       "han": "对不起！",
       "py": "Duìbuqǐ!",
-      "doc": "assets/am/cau/63d872d18e.mp3"
+      "doc": "assets/am/nu2/cf868ce64b.mp3"
      },
      {
       "han": "很高兴认识你。",
       "py": "Hěn gāoxìng rènshi nǐ.",
-      "doc": "assets/am/cau/1f7295fdc1.mp3"
+      "doc": "assets/am/nu2/1f7295fdc1.mp3"
      },
      {
       "han": "我叫白家月。",
       "py": "Wǒ jiào Bái Jiāyuè.",
-      "doc": "assets/am/cau/9db09b6d2f.mp3"
+      "doc": "assets/am/nu2/9db09b6d2f.mp3"
      }
     ]
    },
@@ -2944,25 +2944,25 @@
      "han": "你好！我叫李文。",
      "py": "Nǐ hǎo! Wǒ jiào Lǐ Wén.",
      "viet": "Chào bạn! Mình tên là Lý Văn.",
-     "doc": "assets/am/cau/a4b105990e.mp3"
+     "doc": "assets/am/nam1/22c6351395.mp3"
     },
     {
      "han": "你好！我叫白家月。",
      "py": "Nǐ hǎo! Wǒ jiào Bái Jiāyuè.",
      "viet": "Chào bạn! Mình tên là Bạch Gia Nguyệt.",
-     "doc": "assets/am/cau/52c6e45978.mp3"
+     "doc": "assets/am/nu2/1f0abf3b5c.mp3"
     },
     {
      "han": "很高兴认识你。",
      "py": "Hěn gāoxìng rènshi nǐ.",
      "viet": "Rất vui được làm quen với bạn.",
-     "doc": "assets/am/cau/1f7295fdc1.mp3"
+     "doc": "assets/am/nam1/1f7295fdc1.mp3"
     },
     {
      "han": "认识你我也很高兴。",
      "py": "Rènshi nǐ wǒ yě hěn gāoxìng.",
      "viet": "Làm quen với bạn mình cũng rất vui.",
-     "doc": "assets/am/cau/8459218bbe.mp3"
+     "doc": "assets/am/nu2/8459218bbe.mp3"
     }
    ],
    "nhieu": {
@@ -2970,34 +2970,34 @@
      {
       "han": "没关系！",
       "py": "Méi guānxi!",
-      "doc": "assets/am/cau/490e3b2d67.mp3"
+      "doc": "assets/am/nu2/e6c20f1d01.mp3"
      },
      {
       "han": "对不起！",
       "py": "Duìbuqǐ!",
-      "doc": "assets/am/cau/63d872d18e.mp3"
+      "doc": "assets/am/nu2/cf868ce64b.mp3"
      },
      {
       "han": "不客气！",
       "py": "Bú kèqi!",
-      "doc": "assets/am/bai-1/cau/c57.mp3"
+      "doc": "assets/am/nu2/9c4d773eef.mp3"
      }
     ],
     "3": [
      {
       "han": "对不起！",
       "py": "Duìbuqǐ!",
-      "doc": "assets/am/cau/63d872d18e.mp3"
+      "doc": "assets/am/nu2/cf868ce64b.mp3"
      },
      {
       "han": "你叫什么名字？",
       "py": "Nǐ jiào shénme míngzi?",
-      "doc": "assets/am/cau/dcdedf4368.mp3"
+      "doc": "assets/am/nu2/dcdedf4368.mp3"
      },
      {
       "han": "我不是李文。",
       "py": "Wǒ bú shì Lǐ Wén.",
-      "doc": "assets/am/cau/cd1c087256.mp3"
+      "doc": "assets/am/nu2/cd1c087256.mp3"
      }
     ]
    },

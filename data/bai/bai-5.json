@@ -21,7 +21,7 @@
    "Câu 1": "A：今天几号？\nB：今天九月八号。",
    "Pinyin câu 1": "A: Jīntiān jǐ hào?\nB: Jīntiān jiǔ yuè bā hào.",
    "Nghĩa câu 1": "A: Hôm nay ngày mấy?\nB: Hôm nay ngày 8 tháng 9.",
-   "Đọc câu 1": "assets/am/cau/4b099957da.mp3",
+   "Đọc câu 1": "assets/am/nam1/0aeb8a0ed9.mp3|assets/am/cau/415ceb7f11.mp3",
    "Câu 2": "今天星期日，我休息。",
    "Pinyin câu 2": "Jīntiān xīngqīrì, wǒ xiūxi.",
    "Nghĩa câu 2": "Hôm nay chủ nhật, tôi nghỉ.",
@@ -210,7 +210,7 @@
    "Câu 1": "A：你会做饭吗？\nB：我会做。",
    "Pinyin câu 1": "A: Nǐ huì zuò fàn ma?\nB: Wǒ huì zuò.",
    "Nghĩa câu 1": "A: Bạn biết nấu cơm không?\nB: Tôi biết nấu.",
-   "Đọc câu 1": "assets/am/cau/85ead79a01.mp3",
+   "Đọc câu 1": "assets/am/nam1/8caf9727c9.mp3|assets/am/cau/ec92a68812.mp3",
    "Câu 2": "星期天谁做饭？",
    "Pinyin câu 2": "Xīngqītiān shéi zuò fàn?",
    "Nghĩa câu 2": "Chủ nhật ai nấu cơm?",
@@ -231,7 +231,7 @@
    "Câu 1": "A：你们今天做什么？\nB：我今天学汉语。",
    "Pinyin câu 1": "A: Nǐmen jīntiān zuò shénme?\nB: Wǒ jīntiān xué Hànyǔ.",
    "Nghĩa câu 1": "A: Hôm nay các bạn làm gì?\nB: Hôm nay tôi học tiếng Trung.",
-   "Đọc câu 1": "assets/am/cau/daa9f72da3.mp3",
+   "Đọc câu 1": "assets/am/nam1/ae06af5e83.mp3|assets/am/cau/fc1e3297fd.mp3",
    "Câu 2": "你会做什么？",
    "Pinyin câu 2": "Nǐ huì zuò shénme?",
    "Nghĩa câu 2": "Bạn biết làm món gì?",
@@ -340,7 +340,7 @@
    "Câu 2": "A：同乐，下班吗？\nB：下班。",
    "Pinyin câu 2": "A: Tónglè, xiàbān ma?\nB: Xiàbān.",
    "Nghĩa câu 2": "A: Đồng Lạc, tan làm chưa?\nB: Tan làm rồi.",
-   "Đọc câu 2": "assets/am/cau/958e30b82d.mp3"
+   "Đọc câu 2": "assets/am/nu3/ab391baf8e.mp3|assets/am/nam3/42c8160f27.mp3"
   },
   {
    "Mã": "1-0411",
@@ -546,7 +546,7 @@
    "Câu 1": "A：你的生日是几月几号？\nB：我的生日是三月二号。",
    "Pinyin câu 1": "A: Nǐ de shēngrì shì jǐ yuè jǐ hào?\nB: Wǒ de shēngrì shì sān yuè èr hào.",
    "Nghĩa câu 1": "A: Sinh nhật của bạn là ngày mấy tháng mấy?\nB: Sinh nhật của tôi là ngày 2 tháng 3.",
-   "Đọc câu 1": "assets/am/cau/4b99ef9570.mp3",
+   "Đọc câu 1": "assets/am/nam1/11e1b0f6a0.mp3|assets/am/cau/baa70b780c.mp3",
    "Câu 2": "今天是妈妈的生日。",
    "Pinyin câu 2": "Jīntiān shì māma de shēngrì.",
    "Nghĩa câu 2": "Hôm nay là sinh nhật của mẹ.",
@@ -2377,7 +2377,7 @@
     "今天几号？",
     "Jīntiān jǐ hào?",
     "Hôm nay ngày mấy?",
-    "assets/am/cau/0aeb8a0ed9.mp3"
+    "assets/am/nam1/0aeb8a0ed9.mp3"
    ],
    "dap": [
     "今天十月八号。",
@@ -2412,7 +2412,7 @@
     "今天星期几？",
     "Jīntiān xīngqī jǐ?",
     "Hôm nay thứ mấy?",
-    "assets/am/cau/8edc304656.mp3"
+    "assets/am/nam1/8edc304656.mp3"
    ],
    "dap": [
     "今天星期五。",
@@ -2447,7 +2447,7 @@
     "你的生日是几月几号？",
     "Nǐ de shēngrì shì jǐ yuè jǐ hào?",
     "Sinh nhật bạn là ngày mấy tháng mấy?",
-    "assets/am/cau/11e1b0f6a0.mp3"
+    "assets/am/nam1/11e1b0f6a0.mp3"
    ],
    "dap": [
     "我的生日是三月二十号。",
@@ -2482,7 +2482,7 @@
     "你星期天休息吗？",
     "Nǐ xīngqītiān xiūxi ma?",
     "Chủ nhật bạn có nghỉ không?",
-    "assets/am/cau/70a043e1de.mp3"
+    "assets/am/nam1/70a043e1de.mp3"
    ],
    "dap": [
     "休息，星期天我不上班。",
@@ -2517,7 +2517,7 @@
     "你们今天上班吗？",
     "Nǐmen jīntiān shàngbān ma?",
     "Hôm nay các bạn có đi làm không?",
-    "assets/am/cau/7c64e1d968.mp3"
+    "assets/am/nam1/7c64e1d968.mp3"
    ],
    "dap": [
     "不上班，今天星期日。",
@@ -2552,7 +2552,7 @@
     "你会做饭吗？",
     "Nǐ huì zuò fàn ma?",
     "Bạn biết nấu cơm không?",
-    "assets/am/cau/8caf9727c9.mp3"
+    "assets/am/nam1/8caf9727c9.mp3"
    ],
    "dap": [
     "我会做，我会做面条儿。",
@@ -2587,7 +2587,7 @@
     "你会做什么菜？",
     "Nǐ huì zuò shénme cài?",
     "Bạn biết nấu món gì?",
-    "assets/am/cau/0a60932661.mp3"
+    "assets/am/nam1/0a60932661.mp3"
    ],
    "dap": [
     "我会做一些越南菜。",
@@ -2622,7 +2622,7 @@
     "你会说法语吗？",
     "Nǐ huì shuō Fǎyǔ ma?",
     "Bạn biết nói tiếng Pháp không?",
-    "assets/am/cau/9ab0aefecb.mp3"
+    "assets/am/nam1/9ab0aefecb.mp3"
    ],
    "dap": [
     "不会，我会说英语。",
@@ -2657,7 +2657,7 @@
     "这是谁的电脑？",
     "Zhè shì shéi de diànnǎo?",
     "Đây là máy tính của ai?",
-    "assets/am/cau/498b9c9c47.mp3"
+    "assets/am/nam1/498b9c9c47.mp3"
    ],
    "dap": [
     "这是我的新电脑。",
@@ -2692,7 +2692,7 @@
     "你喜欢吃什么？",
     "Nǐ xǐhuan chī shénme?",
     "Bạn thích ăn gì?",
-    "assets/am/cau/2940afe37f.mp3"
+    "assets/am/nam1/2940afe37f.mp3"
    ],
    "dap": [
     "我喜欢吃饺子。",
@@ -2727,7 +2727,7 @@
     "你的新电脑好看吗？",
     "Nǐ de xīn diànnǎo hǎokàn ma?",
     "Máy tính mới của bạn có đẹp không?",
-    "assets/am/cau/47e39c7974.mp3"
+    "assets/am/nam1/47e39c7974.mp3"
    ],
    "dap": [
     "很好看，我很喜欢它。",
@@ -2762,7 +2762,7 @@
     "这些饺子好吃吗？",
     "Zhèxiē jiǎozi hǎochī ma?",
     "Những cái sủi cảo này có ngon không?",
-    "assets/am/cau/bcbcc3004d.mp3"
+    "assets/am/nam1/bcbcc3004d.mp3"
    ],
    "dap": [
     "真好吃！",
@@ -2797,7 +2797,7 @@
     "那些人是谁？",
     "Nàxiē rén shì shéi?",
     "Những người kia là ai?",
-    "assets/am/cau/89d104dcd9.mp3"
+    "assets/am/nam1/89d104dcd9.mp3"
    ],
    "dap": [
     "那些人是我的同事。",
@@ -2832,7 +2832,7 @@
     "你的小猫几岁了？",
     "Nǐ de xiǎo māo jǐ suì le?",
     "Con mèo nhỏ của bạn mấy tuổi rồi?",
-    "assets/am/cau/1f071c972b.mp3"
+    "assets/am/nam1/1f071c972b.mp3"
    ],
    "dap": [
     "它两岁了。",
@@ -2867,7 +2867,7 @@
     "刘明今天休息吗？",
     "Liú Míng jīntiān xiūxi ma?",
     "Hôm nay Lưu Minh có nghỉ không?",
-    "assets/am/cau/7840fe39e1.mp3"
+    "assets/am/nam1/7840fe39e1.mp3"
    ],
    "dap": [
     "休息，今天星期日。",
@@ -2903,7 +2903,7 @@
     "杨同乐会做什么？",
     "Yáng Tónglè huì zuò shénme?",
     "Dương Đồng Lạc biết làm gì?",
-    "assets/am/cau/811bdce528.mp3"
+    "assets/am/nam1/811bdce528.mp3"
    ],
    "dap": [
     "他会做面条儿、饺子，也会做一些菜。",
@@ -2939,7 +2939,7 @@
     "杨同乐星期天做饭吗？",
     "Yáng Tónglè xīngqītiān zuò fàn ma?",
     "Chủ nhật Dương Đồng Lạc có nấu cơm không?",
-    "assets/am/cau/2b6e4e85c5.mp3"
+    "assets/am/nam1/2b6e4e85c5.mp3"
    ],
    "dap": [
     "做，星期天他也做饭。",
@@ -2975,7 +2975,7 @@
     "他们下班吗？",
     "Tāmen xiàbān ma?",
     "Họ tan làm chưa?",
-    "assets/am/cau/fa1c60acfb.mp3"
+    "assets/am/nam1/fa1c60acfb.mp3"
    ],
    "dap": [
     "他们下班。",
@@ -3011,7 +3011,7 @@
     "这是谁的新电脑？",
     "Zhè shì shéi de xīn diànnǎo?",
     "Đây là máy tính mới của ai?",
-    "assets/am/cau/4396eebdbd.mp3"
+    "assets/am/nam1/4396eebdbd.mp3"
    ],
    "dap": [
     "这是同乐的新电脑。",
@@ -3047,7 +3047,7 @@
     "同乐喜欢他的电脑吗？",
     "Tónglè xǐhuan tā de diànnǎo ma?",
     "Đồng Lạc có thích máy tính của mình không?",
-    "assets/am/cau/40c9735088.mp3"
+    "assets/am/nam1/40c9735088.mp3"
    ],
    "dap": [
     "他很喜欢。",
@@ -3654,7 +3654,7 @@
      "han": "你的生日是几月几号？",
      "py": "Nǐ de shēngrì shì jǐ yuè jǐ hào?",
      "viet": "Sinh nhật bạn là ngày mấy tháng mấy?",
-     "doc": "assets/am/cau/11e1b0f6a0.mp3"
+     "doc": "assets/am/nam1/11e1b0f6a0.mp3"
     },
     {
      "han": "我的生日是十月二十二号。你呢？",
@@ -3666,7 +3666,7 @@
      "han": "我的生日是十二月一号。",
      "py": "Wǒ de shēngrì shì shí'èr yuè yī hào.",
      "viet": "Sinh nhật mình là ngày 1 tháng 12.",
-     "doc": "assets/am/cau/5ab572bedf.mp3"
+     "doc": "assets/am/nam1/5ab572bedf.mp3"
     }
    ],
    "nhieu": {
@@ -3691,17 +3691,17 @@
      {
       "han": "我不会做饭。",
       "py": "Wǒ bú huì zuò fàn.",
-      "doc": "assets/am/cau/686ac20fea.mp3"
+      "doc": "assets/am/nam1/686ac20fea.mp3"
      },
      {
       "han": "我很喜欢你的电脑。",
       "py": "Wǒ hěn xǐhuan nǐ de diànnǎo.",
-      "doc": "assets/am/cau/fc7b1f6d37.mp3"
+      "doc": "assets/am/nam1/fc7b1f6d37.mp3"
      },
      {
       "han": "明天星期五。",
       "py": "Míngtiān xīngqīwǔ.",
-      "doc": "assets/am/cau/a4cd66aebe.mp3"
+      "doc": "assets/am/nam1/a4cd66aebe.mp3"
      }
     ]
    },
@@ -3714,7 +3714,7 @@
      "han": "星期天你做饭吗？",
      "py": "Xīngqītiān nǐ zuò fàn ma?",
      "viet": "Chủ nhật bạn có nấu cơm không?",
-     "doc": "assets/am/cau/94c70ba508.mp3"
+     "doc": "assets/am/nam1/94c70ba508.mp3"
     },
     {
      "han": "做，我会做饺子。",
@@ -3726,7 +3726,7 @@
      "han": "真好！我不会做饭。",
      "py": "Zhēn hǎo! Wǒ bú huì zuò fàn.",
      "viet": "Hay thật! Mình không biết nấu cơm.",
-     "doc": "assets/am/cau/eca84dc253.mp3"
+     "doc": "assets/am/nam1/ffbf105afc.mp3"
     }
    ],
    "nhieu": {
@@ -3751,17 +3751,17 @@
      {
       "han": "我会说汉语。",
       "py": "Wǒ huì shuō Hànyǔ.",
-      "doc": "assets/am/cau/edd7f7f636.mp3"
+      "doc": "assets/am/nam1/edd7f7f636.mp3"
      },
      {
       "han": "你是哪国人？",
       "py": "Nǐ shì nǎ guó rén?",
-      "doc": "assets/am/cau/c1a9246f49.mp3"
+      "doc": "assets/am/nam1/c1a9246f49.mp3"
      },
      {
       "han": "这是我的电脑。",
       "py": "Zhè shì wǒ de diànnǎo.",
-      "doc": "assets/am/cau/fbcbaf7dc7.mp3"
+      "doc": "assets/am/nam1/fbcbaf7dc7.mp3"
      }
     ]
    },
@@ -3774,7 +3774,7 @@
      "han": "这是谁的电脑？",
      "py": "Zhè shì shéi de diànnǎo?",
      "viet": "Đây là máy tính của ai?",
-     "doc": "assets/am/cau/498b9c9c47.mp3"
+     "doc": "assets/am/nam1/498b9c9c47.mp3"
     },
     {
      "han": "是我姐姐的，是她的新电脑。",
@@ -3786,7 +3786,7 @@
      "han": "真好看！",
      "py": "Zhēn hǎokàn!",
      "viet": "Đẹp thật!",
-     "doc": "assets/am/cau/5e242716bb.mp3"
+     "doc": "assets/am/nam1/e6f64b3707.mp3"
     }
    ],
    "nhieu": {
@@ -3811,17 +3811,17 @@
      {
       "han": "我会做面条儿。",
       "py": "Wǒ huì zuò miàntiáor.",
-      "doc": "assets/am/cau/f0bdd4f123.mp3"
+      "doc": "assets/am/nam1/f0bdd4f123.mp3"
      },
      {
       "han": "今天星期几？",
       "py": "Jīntiān xīngqī jǐ?",
-      "doc": "assets/am/cau/8edc304656.mp3"
+      "doc": "assets/am/nam1/8edc304656.mp3"
      },
      {
       "han": "她是中国人。",
       "py": "Tā shì Zhōngguó rén.",
-      "doc": "assets/am/cau/1346366518.mp3"
+      "doc": "assets/am/nam1/1346366518.mp3"
      }
     ]
    },
@@ -3834,25 +3834,25 @@
      "han": "今天几号？",
      "py": "Jīntiān jǐ hào?",
      "viet": "Hôm nay ngày mấy?",
-     "doc": "assets/am/cau/0aeb8a0ed9.mp3"
+     "doc": "assets/am/nam3/0aeb8a0ed9.mp3"
     },
     {
      "han": "今天九月八号。",
      "py": "Jīntiān jiǔ yuè bā hào.",
      "viet": "Hôm nay ngày 8 tháng 9.",
-     "doc": "assets/am/cau/415ceb7f11.mp3"
+     "doc": "assets/am/nu3/415ceb7f11.mp3"
     },
     {
      "han": "星期几？",
      "py": "Xīngqī jǐ?",
      "viet": "Thứ mấy?",
-     "doc": "assets/am/cau/f30b6a276a.mp3"
+     "doc": "assets/am/nam3/f30b6a276a.mp3"
     },
     {
      "han": "星期日。今天我休息。",
      "py": "Xīngqīrì. Jīntiān wǒ xiūxi.",
      "viet": "Chủ nhật. Hôm nay tôi nghỉ.",
-     "doc": "assets/am/cau/281f87c058.mp3"
+     "doc": "assets/am/nu3/281f87c058.mp3"
     }
    ],
    "nhieu": {
@@ -3860,34 +3860,34 @@
      {
       "han": "今天星期日。",
       "py": "Jīntiān xīngqīrì.",
-      "doc": "assets/am/cau/56f627d24d.mp3"
+      "doc": "assets/am/nu3/56f627d24d.mp3"
      },
      {
       "han": "今天我休息。",
       "py": "Jīntiān wǒ xiūxi.",
-      "doc": "assets/am/cau/c0593f1abc.mp3"
+      "doc": "assets/am/nu3/c0593f1abc.mp3"
      },
      {
       "han": "我很好。",
       "py": "Wǒ hěn hǎo.",
-      "doc": "assets/am/cau/af96a73bf7.mp3"
+      "doc": "assets/am/nu3/af96a73bf7.mp3"
      }
     ],
     "3": [
      {
       "han": "九月八号。",
       "py": "Jiǔ yuè bā hào.",
-      "doc": "assets/am/cau/ed430be6d4.mp3"
+      "doc": "assets/am/nu3/ed430be6d4.mp3"
      },
      {
       "han": "我会做饭。",
       "py": "Wǒ huì zuò fàn.",
-      "doc": "assets/am/cau/af66688e30.mp3"
+      "doc": "assets/am/nu3/af66688e30.mp3"
      },
      {
       "han": "我今年二十岁。",
       "py": "Wǒ jīnnián èrshí suì.",
-      "doc": "assets/am/cau/dc6f6c93d4.mp3"
+      "doc": "assets/am/nu3/dc6f6c93d4.mp3"
      }
     ]
    },
@@ -3901,25 +3901,25 @@
      "han": "你会做饭吗？",
      "py": "Nǐ huì zuò fàn ma?",
      "viet": "Anh biết nấu cơm không?",
-     "doc": "assets/am/cau/8caf9727c9.mp3"
+     "doc": "assets/am/nu3/8caf9727c9.mp3"
     },
     {
      "han": "我会做。",
      "py": "Wǒ huì zuò.",
      "viet": "Tôi biết nấu.",
-     "doc": "assets/am/cau/ec92a68812.mp3"
+     "doc": "assets/am/nam3/ec92a68812.mp3"
     },
     {
      "han": "你会做什么？",
      "py": "Nǐ huì zuò shénme?",
      "viet": "Anh biết làm món gì?",
-     "doc": "assets/am/cau/053d97d061.mp3"
+     "doc": "assets/am/nu3/053d97d061.mp3"
     },
     {
      "han": "我会做面条儿、饺子，也会做一些菜。",
      "py": "Wǒ huì zuò miàntiáor, jiǎozi, yě huì zuò yìxiē cài.",
      "viet": "Tôi biết làm mì, sủi cảo, cũng biết nấu vài món.",
-     "doc": "assets/am/cau/2186ab1630.mp3"
+     "doc": "assets/am/nam3/2186ab1630.mp3"
     }
    ],
    "nhieu": {
@@ -3927,34 +3927,34 @@
      {
       "han": "我喜欢吃饭。",
       "py": "Wǒ xǐhuan chī fàn.",
-      "doc": "assets/am/cau/77fa58e5eb.mp3"
+      "doc": "assets/am/nam3/77fa58e5eb.mp3"
      },
      {
       "han": "我是杨同乐。",
       "py": "Wǒ shì Yáng Tónglè.",
-      "doc": "assets/am/cau/0bb65f9371.mp3"
+      "doc": "assets/am/nam3/0bb65f9371.mp3"
      },
      {
       "han": "我不想吃。",
       "py": "Wǒ bù xiǎng chī.",
-      "doc": "assets/am/cau/891c5375c1.mp3"
+      "doc": "assets/am/nam3/891c5375c1.mp3"
      }
     ],
     "3": [
      {
       "han": "我会做。",
       "py": "Wǒ huì zuò.",
-      "doc": "assets/am/cau/ec92a68812.mp3"
+      "doc": "assets/am/nam3/ec92a68812.mp3"
      },
      {
       "han": "星期天我休息。",
       "py": "Xīngqītiān wǒ xiūxi.",
-      "doc": "assets/am/cau/ec9c2e97ca.mp3"
+      "doc": "assets/am/nam3/ec9c2e97ca.mp3"
      },
      {
       "han": "这些菜很好吃。",
       "py": "Zhèxiē cài hěn hǎochī.",
-      "doc": "assets/am/cau/73b11d22c2.mp3"
+      "doc": "assets/am/nam3/73b11d22c2.mp3"
      }
     ]
    },
@@ -3968,25 +3968,25 @@
      "han": "这是你的新电脑吗？",
      "py": "Zhè shì nǐ de xīn diànnǎo ma?",
      "viet": "Đây là máy tính mới của anh à?",
-     "doc": "assets/am/cau/a2dfe9a63a.mp3"
+     "doc": "assets/am/nu3/a2dfe9a63a.mp3"
     },
     {
      "han": "是的，是我的新电脑。",
      "py": "Shì de, shì wǒ de xīn diànnǎo.",
      "viet": "Đúng vậy, là máy tính mới của tôi.",
-     "doc": "assets/am/cau/adb9cc0708.mp3"
+     "doc": "assets/am/nam3/adb9cc0708.mp3"
     },
     {
      "han": "真好看！",
      "py": "Zhēn hǎokàn!",
      "viet": "Đẹp thật!",
-     "doc": "assets/am/cau/5e242716bb.mp3"
+     "doc": "assets/am/nu3/e6f64b3707.mp3"
     },
     {
      "han": "我也很喜欢它。",
      "py": "Wǒ yě hěn xǐhuan tā.",
      "viet": "Tôi cũng rất thích nó.",
-     "doc": "assets/am/cau/52897d5960.mp3"
+     "doc": "assets/am/nam3/52897d5960.mp3"
     }
    ],
    "nhieu": {
@@ -3994,34 +3994,34 @@
      {
       "han": "我下班。",
       "py": "Wǒ xiàbān.",
-      "doc": "assets/am/cau/76c71fcc39.mp3"
+      "doc": "assets/am/nam3/76c71fcc39.mp3"
      },
      {
       "han": "我会做饭。",
       "py": "Wǒ huì zuò fàn.",
-      "doc": "assets/am/cau/af66688e30.mp3"
+      "doc": "assets/am/nam3/af66688e30.mp3"
      },
      {
       "han": "今天星期日。",
       "py": "Jīntiān xīngqīrì.",
-      "doc": "assets/am/cau/56f627d24d.mp3"
+      "doc": "assets/am/nam3/56f627d24d.mp3"
      }
     ],
     "3": [
      {
       "han": "我不会做饭。",
       "py": "Wǒ bú huì zuò fàn.",
-      "doc": "assets/am/cau/686ac20fea.mp3"
+      "doc": "assets/am/nam3/686ac20fea.mp3"
      },
      {
       "han": "这是电脑。",
       "py": "Zhè shì diànnǎo.",
-      "doc": "assets/am/cau/7b82b69fa5.mp3"
+      "doc": "assets/am/nam3/7b82b69fa5.mp3"
      },
      {
       "han": "今天我休息。",
       "py": "Jīntiān wǒ xiūxi.",
-      "doc": "assets/am/cau/c0593f1abc.mp3"
+      "doc": "assets/am/nam3/c0593f1abc.mp3"
      }
     ]
    },

@@ -1,0 +1,7598 @@
+[
+{
+"giong": "nam1",
+"han": "你家大不大？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 0,
+"k": 0
+},
+"py": "Nǐ jiā dà bu dà?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "不大，很小。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 0,
+"k": 1
+},
+"py": "Bú dà, hěn xiǎo.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "老师家大不大？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 0,
+"k": 2
+},
+"py": "Lǎoshī jiā dà bu dà?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "老师家很大。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 0,
+"k": 3
+},
+"py": "Lǎoshī jiā hěn dà.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "您再喝！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 1,
+"k": 0
+},
+"py": "Nín zài hē!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "谢谢！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 1,
+"k": 1
+},
+"py": "Xièxie!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 1,
+"k": 2
+},
+"py": "Bú kèqi!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "小语，你好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 2,
+"k": 0
+},
+"py": "Xiǎoyǔ, nǐ hǎo!",
+"co": true
+},
+{
+"giong": "nu4",
+"han": "王老师，你好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 2,
+"k": 1
+},
+"py": "Wáng lǎoshī, nǐ hǎo!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "大家好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 3,
+"k": 0
+},
+"py": "Dàjiā hǎo!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "老师，您好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 3,
+"k": 1
+},
+"py": "Lǎoshī, nín hǎo!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "你们好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 3,
+"k": 2
+},
+"py": "Nǐmen hǎo!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你好，小语！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 3,
+"k": 3
+},
+"py": "Nǐ hǎo, Xiǎoyǔ!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "谢谢！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 4,
+"k": 0
+},
+"py": "Xièxie!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 4,
+"k": 1
+},
+"py": "Bú kèqi!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "同学们，再见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 4,
+"k": 2
+},
+"py": "Tóngxuémen, zàijiàn!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "老师，再见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ht",
+"i": 4,
+"k": 3
+},
+"py": "Lǎoshī, zàijiàn!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "hd",
+"i": 0
+},
+"py": "Nǐ hǎo!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "老师好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "hd",
+"i": 1
+},
+"py": "Lǎoshī hǎo!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "谢谢！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "hd",
+"i": 2
+},
+"py": "Xièxie!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "谢谢老师！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "hd",
+"i": 3
+},
+"py": "Xièxie lǎoshī!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "再见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "hd",
+"i": 4
+},
+"py": "Zàijiàn!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "大家好不好？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "hd",
+"i": 5
+},
+"py": "Dàjiā hǎo bu hǎo?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "同学们好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "hd",
+"i": 6
+},
+"py": "Tóngxuémen hǎo!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "谢谢您！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ab",
+"i": 8,
+"c": "Câu 1",
+"goc": "A：谢谢您！\nB：不客气！",
+"doc": "assets/am/bai-1/cau/c17.mp3",
+"k": 0
+},
+"py": "Xièxie nín!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ab",
+"i": 8,
+"c": "Câu 1",
+"goc": "A：谢谢您！\nB：不客气！",
+"doc": "assets/am/bai-1/cau/c17.mp3",
+"k": 1
+},
+"py": "Bú kèqi!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "谢谢！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ab",
+"i": 8,
+"c": "Câu 2",
+"goc": "A：谢谢！\nB：不客气！",
+"doc": "assets/am/bai-1/cau/c18.mp3",
+"k": 0
+},
+"py": "Xièxie!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "ab",
+"i": 8,
+"c": "Câu 2",
+"goc": "A：谢谢！\nB：不客气！",
+"doc": "assets/am/bai-1/cau/c18.mp3",
+"k": 1
+},
+"py": "Bú kèqi!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你好！我叫李文。你叫什么名字？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 0,
+"k": 0
+},
+"py": "Nǐ hǎo! Wǒ jiào Lǐ Wén. Nǐ jiào shénme míngzi?",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我叫安妮。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 0,
+"k": 1
+},
+"py": "Wǒ jiào Ānnī.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你是不是英国学生？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 0,
+"k": 2
+},
+"py": "Nǐ shì bu shì Yīngguó xué·shēng?",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "不是，我是美国学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 0,
+"k": 3
+},
+"py": "Bú shì, wǒ shì Měiguó xué·shēng.",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "请问，您是不是王老师？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 1,
+"k": 0
+},
+"py": "Qǐngwèn, nín shì bu shì Wáng lǎoshī?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "是。请进！请坐！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 1,
+"k": 1
+},
+"py": "Shì. Qǐng jìn! Qǐng zuò!",
+"co": true
+},
+{
+"giong": "nam2",
+"han": "谢谢老师！我叫陈天中。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 1,
+"k": 2
+},
+"py": "Xièxie lǎoshī! Wǒ jiào Chén Tiānzhōng.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "认识你很高兴。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 1,
+"k": 3
+},
+"py": "Rènshi nǐ hěn gāoxìng.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "请问，你叫什么名字？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 2,
+"k": 0
+},
+"py": "Qǐngwèn, nǐ jiào shénme míngzi?",
+"co": true
+},
+{
+"giong": "nam2",
+"han": "我叫陈天中。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 2,
+"k": 1
+},
+"py": "Wǒ jiào Chén Tiānzhōng.",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "你好，安妮！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 3,
+"k": 0
+},
+"py": "Nǐ hǎo, Ānnī!",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "你好，陈天中！我不是安妮，我是白家月。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 3,
+"k": 1
+},
+"py": "Nǐ hǎo, Chén Tiānzhōng! Wǒ bú shì Ānnī, wǒ shì Bái Jiāyuè.",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "对不起！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 3,
+"k": 2
+},
+"py": "Duìbuqǐ!",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "没关系！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 3,
+"k": 3
+},
+"py": "Méi guānxi!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你好！我叫李文。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 4,
+"k": 0
+},
+"py": "Nǐ hǎo! Wǒ jiào Lǐ Wén.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "你好！我叫白家月。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 4,
+"k": 1
+},
+"py": "Nǐ hǎo! Wǒ jiào Bái Jiāyuè.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "很高兴认识你。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 4,
+"k": 2
+},
+"py": "Hěn gāoxìng rènshi nǐ.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "认识你我也很高兴。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ht",
+"i": 4,
+"k": 3
+},
+"py": "Rènshi nǐ wǒ yě hěn gāoxìng.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你叫什么名字？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "hd",
+"i": 0
+},
+"py": "Nǐ jiào shénme míngzi?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你是不是学生？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "hd",
+"i": 1
+},
+"py": "Nǐ shì bu shì xué·shēng?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你是不是中国学生？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "hd",
+"i": 2
+},
+"py": "Nǐ shì bu shì Zhōngguó xué·shēng?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "对不起！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "hd",
+"i": 3
+},
+"py": "Duìbuqǐ!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "谢谢你！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "hd",
+"i": 4
+},
+"py": "Xièxie nǐ!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "认识你很高兴。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "hd",
+"i": 5
+},
+"py": "Rènshi nǐ hěn gāoxìng.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "请进！请坐！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "hd",
+"i": 6
+},
+"py": "Qǐng jìn! Qǐng zuò!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "请问，你是不是陈天中同学？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "hd",
+"i": 7
+},
+"py": "Qǐngwèn, nǐ shì bu shì Chén Tiānzhōng tóngxué?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你老师叫什么名字？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "hd",
+"i": 8
+},
+"py": "Nǐ lǎoshī jiào shénme míngzi?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你们是不是日本学生？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "hd",
+"i": 9
+},
+"py": "Nǐmen shì bu shì Rìběn xué·shēng?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "请问，你是不是安妮？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "hd",
+"i": 10
+},
+"py": "Qǐngwèn, nǐ shì bu shì Ānnī?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "对不起您。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ab",
+"i": 9,
+"c": "Câu 1",
+"goc": "A：对不起您。\nB：没关系。",
+"doc": "assets/am/cau/231a36bc5e.mp3",
+"k": 0
+},
+"py": "Duìbuqǐ nín.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "没关系。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ab",
+"i": 9,
+"c": "Câu 1",
+"goc": "A：对不起您。\nB：没关系。",
+"doc": "assets/am/cau/231a36bc5e.mp3",
+"k": 1
+},
+"py": "Méi guānxi.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "白家月同学，对不起你！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ab",
+"i": 9,
+"c": "Câu 2",
+"goc": "A：白家月同学，对不起你！\nB：没关系！",
+"doc": "assets/am/cau/b767d0e63e.mp3",
+"k": 0
+},
+"py": "Bái Jiāyuè tóngxué, duìbuqǐ nǐ!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "没关系！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ab",
+"i": 9,
+"c": "Câu 2",
+"goc": "A：白家月同学，对不起你！\nB：没关系！",
+"doc": "assets/am/cau/b767d0e63e.mp3",
+"k": 1
+},
+"py": "Méi guānxi!",
+"co": true
+},
+{
+"giong": "nam2",
+"han": "李文，对不起你。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ab",
+"i": 10,
+"c": "Câu 1",
+"goc": "A：李文，对不起你。\nB：没事。",
+"doc": "assets/am/cau/6dd5b2ede7.mp3",
+"k": 0
+},
+"py": "Lǐ Wén, duìbuqǐ nǐ.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "没事。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ab",
+"i": 10,
+"c": "Câu 1",
+"goc": "A：李文，对不起你。\nB：没事。",
+"doc": "assets/am/cau/6dd5b2ede7.mp3",
+"k": 1
+},
+"py": "Méishì.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "王老师，对不起您！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ab",
+"i": 10,
+"c": "Câu 2",
+"goc": "A：王老师，对不起您！\nB：没事！",
+"doc": "assets/am/cau/4579359020.mp3",
+"k": 0
+},
+"py": "Wáng lǎoshī, duìbuqǐ nín!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "没事！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "ab",
+"i": 10,
+"c": "Câu 2",
+"goc": "A：王老师，对不起您！\nB：没事！",
+"doc": "assets/am/cau/4579359020.mp3",
+"k": 1
+},
+"py": "Méishì!",
+"co": true
+},
+{
+"giong": "nu3",
+"han": "喂，你好！是李文吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 0,
+"k": 0
+},
+"py": "Wèi, nǐ hǎo! Shì Lǐ Wén ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "是，你是谁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 0,
+"k": 1
+},
+"py": "Shì, nǐ shì shéi?",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "我是王一雪。你忙吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 0,
+"k": 2
+},
+"py": "Wǒ shì Wáng Yīxuě. Nǐ máng ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "不太忙。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 0,
+"k": 3
+},
+"py": "Bú tài máng.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "这是谁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 1,
+"k": 0
+},
+"py": "Zhè shì shéi?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "这是我姐姐。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 1,
+"k": 1
+},
+"py": "Zhè shì wǒ jiějie.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "她做什么工作？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 1,
+"k": 2
+},
+"py": "Tā zuò shénme gōngzuò?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "她是中文老师。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 1,
+"k": 3
+},
+"py": "Tā shì Zhōngwén lǎoshī.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "她的工作忙吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 1,
+"k": 4
+},
+"py": "Tā de gōngzuò máng ma?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "太忙了！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 1,
+"k": 5
+},
+"py": "Tài máng le!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你的朋友是哪国人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 2,
+"k": 0
+},
+"py": "Nǐ de péngyou shì nǎ guó rén?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "他是法国人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 2,
+"k": 1
+},
+"py": "Tā shì Fǎguó rén.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "他想去越南吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 2,
+"k": 2
+},
+"py": "Tā xiǎng qù Yuènán ma?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "想，他很想去越南。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 2,
+"k": 3
+},
+"py": "Xiǎng, tā hěn xiǎng qù Yuènán.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "这是谁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 3,
+"k": 0
+},
+"py": "Zhè shì shéi?",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "这是我女朋友。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 3,
+"k": 1
+},
+"py": "Zhè shì wǒ nǚpéngyou.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你女朋友是哪国人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 3,
+"k": 2
+},
+"py": "Nǐ nǚpéngyou shì nǎ guó rén?",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "她也是泰国人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 3,
+"k": 3
+},
+"py": "Tā yě shì Tàiguó rén.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "喂，一飞！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 4,
+"k": 0
+},
+"py": "Wèi, Yīfēi!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "姐姐！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 4,
+"k": 1
+},
+"py": "Jiějie!",
+"co": true
+},
+{
+"giong": "nu3",
+"han": "你工作还忙吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 4,
+"k": 2
+},
+"py": "Nǐ gōngzuò hái máng ma?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "对，还很忙。你也很忙吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 4,
+"k": 3
+},
+"py": "Duì, hái hěn máng. Nǐ yě hěn máng ma?",
+"co": true
+},
+{
+"giong": "nu3",
+"han": "我不太忙。我们很想你。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 4,
+"k": 4
+},
+"py": "Wǒ bú tài máng. Wǒmen hěn xiǎng nǐ.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我也想你们。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "ht",
+"i": 4,
+"k": 5
+},
+"py": "Wǒ yě xiǎng nǐmen.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你是哪国人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 0
+},
+"py": "Nǐ shì nǎ guó rén?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "她是哪国人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 1
+},
+"py": "Tā shì nǎ guó rén?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "这是谁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 2
+},
+"py": "Zhè shì shéi?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "她是谁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 3
+},
+"py": "Tā shì shéi?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "喂，你是谁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 4
+},
+"py": "Wèi, nǐ shì shéi?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "他是你的男朋友吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 5
+},
+"py": "Tā shì nǐ de nánpéngyou ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你忙吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 6
+},
+"py": "Nǐ máng ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你工作还忙吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 7
+},
+"py": "Nǐ gōngzuò hái máng ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你好吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 8
+},
+"py": "Nǐ hǎo ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你有哥哥吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 9
+},
+"py": "Nǐ yǒu gēge ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你家有谁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 10
+},
+"py": "Nǐ jiā yǒu shéi?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你爸爸做什么工作？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 11
+},
+"py": "Nǐ bàba zuò shénme gōngzuò?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你想去哪国？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 12
+},
+"py": "Nǐ xiǎng qù nǎ guó?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你们的国家大吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 13
+},
+"py": "Nǐmen de guójiā dà ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "李文是哪国人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 14
+},
+"py": "Lǐ Wén shì nǎ guó rén?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "白家月是哪国人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 15
+},
+"py": "Bái Jiāyuè shì nǎ guó rén?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "白家月的中文老师是哪国人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 16
+},
+"py": "Bái Jiāyuè de Zhōngwén lǎoshī shì nǎ guó rén?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "一飞的工作忙吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "hd",
+"i": 17
+},
+"py": "Yīfēi de gōngzuò máng ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你家有几口人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 0,
+"k": 0
+},
+"py": "Nǐ jiā yǒu jǐ kǒu rén?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我家有四口人。你家呢？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 0,
+"k": 1
+},
+"py": "Wǒ jiā yǒu sì kǒu rén. Nǐ jiā ne?",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "我家有三口人，爸爸、妈妈和我。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 0,
+"k": 2
+},
+"py": "Wǒ jiā yǒu sān kǒu rén, bàba, māma hé wǒ.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "这是您女儿吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 1,
+"k": 0
+},
+"py": "Zhè shì nín nǚ'ér ma?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "是的，这是我女儿。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 1,
+"k": 1
+},
+"py": "Shì de, zhè shì wǒ nǚ'ér.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "她几岁了？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 1,
+"k": 2
+},
+"py": "Tā jǐ suì le?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "她今年六岁了。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 1,
+"k": 3
+},
+"py": "Tā jīnnián liù suì le.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你有孩子吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 2,
+"k": 0
+},
+"py": "Nǐ yǒu háizi ma?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "有，我有两个孩子。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 2,
+"k": 1
+},
+"py": "Yǒu, wǒ yǒu liǎng ge háizi.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "几个儿子？几个女儿？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 2,
+"k": 2
+},
+"py": "Jǐ ge érzi? Jǐ ge nǚ'ér?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "一个儿子，一个女儿。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 2,
+"k": 3
+},
+"py": "Yí ge érzi, yí ge nǚ'ér.",
+"co": true
+},
+{
+"giong": "nam3",
+"han": "一飞忙吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 3,
+"k": 0
+},
+"py": "Yīfēi máng ma?",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "她很忙。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 3,
+"k": 1
+},
+"py": "Tā hěn máng.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "她有多少个学生？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 3,
+"k": 2
+},
+"py": "Tā yǒu duōshao ge xué·shēng?",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "她有二十个学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 3,
+"k": 3
+},
+"py": "Tā yǒu èrshí ge xué·shēng.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "我有两个哥哥，你呢？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 4,
+"k": 0
+},
+"py": "Wǒ yǒu liǎng ge gēge, nǐ ne?",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我没有哥哥。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 4,
+"k": 1
+},
+"py": "Wǒ méi·yǒu gēge.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "你家有几口人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 4,
+"k": 2
+},
+"py": "Nǐ jiā yǒu jǐ kǒu rén?",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我家有四口人，爸爸、妈妈、妹妹和我。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 4,
+"k": 3
+},
+"py": "Wǒ jiā yǒu sì kǒu rén, bàba, māma, mèimei hé wǒ.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "这是您儿子吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 5,
+"k": 0
+},
+"py": "Zhè shì nín érzi ma?",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "是的。我有两个孩子，一个儿子，一个女儿。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 5,
+"k": 1
+},
+"py": "Shì de. Wǒ yǒu liǎng ge háizi, yí ge érzi, yí ge nǚ'ér.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "您儿子几岁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 5,
+"k": 2
+},
+"py": "Nín érzi jǐ suì?",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "他今年五岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 5,
+"k": 3
+},
+"py": "Tā jīnnián wǔ suì.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "您女儿多大？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 5,
+"k": 4
+},
+"py": "Nín nǚ'ér duō dà?",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "她今年十二。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ht",
+"i": 5,
+"k": 5
+},
+"py": "Tā jīnnián shí'èr.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你家有几口人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 0
+},
+"py": "Nǐ jiā yǒu jǐ kǒu rén?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你有哥哥吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 1
+},
+"py": "Nǐ yǒu gēge ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你有几个孩子？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 2
+},
+"py": "Nǐ yǒu jǐ ge háizi?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你儿子今年几岁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 3
+},
+"py": "Nǐ érzi jīnnián jǐ suì?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你爷爷多大年纪？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 4
+},
+"py": "Nǐ yéye duō dà niánjì?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "王老师有多少个学生？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 5
+},
+"py": "Wáng lǎoshī yǒu duōshao ge xué·shēng?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你哥哥多大？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 6
+},
+"py": "Nǐ gēge duō dà?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "我是越南人，你呢？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 7
+},
+"py": "Wǒ shì Yuènán rén, nǐ ne?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "我有两个妹妹，你呢？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 8
+},
+"py": "Wǒ yǒu liǎng ge mèimei, nǐ ne?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "杨同乐是谁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 9
+},
+"py": "Yáng Tónglè shì shéi?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "今年是哪一年？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 10
+},
+"py": "Jīnnián shì nǎ yì nián?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你有中国朋友吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 11
+},
+"py": "Nǐ yǒu Zhōngguó péngyou ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "您女儿几岁了？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 12
+},
+"py": "Nín nǚ'ér jǐ suì le?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你家有谁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 13
+},
+"py": "Nǐ jiā yǒu shéi?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "王一雪有几个哥哥？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 14
+},
+"py": "Wáng Yīxuě yǒu jǐ ge gēge?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "杨同乐家有几口人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 15
+},
+"py": "Yáng Tónglè jiā yǒu jǐ kǒu rén?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "杨同乐有没有哥哥？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 16
+},
+"py": "Yáng Tónglè yǒu méi·yǒu gēge?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "王一雪的儿子几岁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 17
+},
+"py": "Wáng Yīxuě de érzi jǐ suì?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "一飞有多少个学生？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "hd",
+"i": 18
+},
+"py": "Yīfēi yǒu duōshao ge xué·shēng?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "王一飞老师有多少个学生？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 1,
+"c": "Câu 1",
+"goc": "A：王一飞老师有多少个学生？\nB：她的学生很多。",
+"doc": "assets/am/cau/ef103f28c8.mp3",
+"k": 0
+},
+"py": "Wáng Yīfēi lǎoshī yǒu duōshao ge xué·shēng?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "她的学生很多。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 1,
+"c": "Câu 1",
+"goc": "A：王一飞老师有多少个学生？\nB：她的学生很多。",
+"doc": "assets/am/cau/ef103f28c8.mp3",
+"k": 1
+},
+"py": "Tā de xué·shēng hěn duō.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "她有多少个学生？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 1,
+"c": "Câu 2",
+"goc": "A：她有多少个学生？\nB：她有二十个学生。",
+"doc": "assets/am/cau/b9d819e77f.mp3",
+"k": 0
+},
+"py": "Tā yǒu duōshao ge xué·shēng?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "她有二十个学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 1,
+"c": "Câu 2",
+"goc": "A：她有多少个学生？\nB：她有二十个学生。",
+"doc": "assets/am/cau/b9d819e77f.mp3",
+"k": 1
+},
+"py": "Tā yǒu èrshí ge xué·shēng.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "我家有四口人，你家呢？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 6,
+"c": "Câu 1",
+"goc": "A：我家有四口人，你家呢？\nB：我家也有四口人。",
+"doc": "assets/am/cau/c207908f73.mp3",
+"k": 0
+},
+"py": "Wǒ jiā yǒu sì kǒu rén, nǐ jiā ne?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我家也有四口人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 6,
+"c": "Câu 1",
+"goc": "A：我家有四口人，你家呢？\nB：我家也有四口人。",
+"doc": "assets/am/cau/c207908f73.mp3",
+"k": 1
+},
+"py": "Wǒ jiā yě yǒu sì kǒu rén.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你家有几口人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 8,
+"c": "Câu 1",
+"goc": "A：你家有几口人？\nB：我家有四口人。",
+"doc": "assets/am/cau/a786bb3750.mp3",
+"k": 0
+},
+"py": "Nǐ jiā yǒu jǐ kǒu rén?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我家有四口人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 8,
+"c": "Câu 1",
+"goc": "A：你家有几口人？\nB：我家有四口人。",
+"doc": "assets/am/cau/a786bb3750.mp3",
+"k": 1
+},
+"py": "Wǒ jiā yǒu sì kǒu rén.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "他们家有几口人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 12,
+"c": "Câu 2",
+"goc": "A：他们家有几口人？\nB：他们家有四口人，爸爸、妈妈和两个孩子。",
+"doc": "assets/am/cau/5d70b2333a.mp3",
+"k": 0
+},
+"py": "Tāmen jiā yǒu jǐ kǒu rén?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "他们家有四口人，爸爸、妈妈和两个孩子。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 12,
+"c": "Câu 2",
+"goc": "A：他们家有几口人？\nB：他们家有四口人，爸爸、妈妈和两个孩子。",
+"doc": "assets/am/cau/5d70b2333a.mp3",
+"k": 1
+},
+"py": "Tāmen jiā yǒu sì kǒu rén, bàba, māma hé liǎng ge háizi.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "这是您儿子吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 13,
+"c": "Câu 2",
+"goc": "A：这是您儿子吗？\nB：是的。",
+"doc": "assets/am/cau/afc133ede0.mp3",
+"k": 0
+},
+"py": "Zhè shì nín érzi ma?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "是的。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 13,
+"c": "Câu 2",
+"goc": "A：这是您儿子吗？\nB：是的。",
+"doc": "assets/am/cau/afc133ede0.mp3",
+"k": 1
+},
+"py": "Shì de.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你弟弟今年几岁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 16,
+"c": "Câu 1",
+"goc": "A：你弟弟今年几岁？\nB：他今年两岁了。",
+"doc": "assets/am/cau/4645d1864c.mp3",
+"k": 0
+},
+"py": "Nǐ dìdi jīnnián jǐ suì?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "他今年两岁了。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 16,
+"c": "Câu 1",
+"goc": "A：你弟弟今年几岁？\nB：他今年两岁了。",
+"doc": "assets/am/cau/4645d1864c.mp3",
+"k": 1
+},
+"py": "Tā jīnnián liǎng suì le.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "您儿子几岁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 17,
+"c": "Câu 1",
+"goc": "A：您儿子几岁？\nB：他今年五岁。",
+"doc": "assets/am/cau/7fa38d3b23.mp3",
+"k": 0
+},
+"py": "Nín érzi jǐ suì?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "他今年五岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 17,
+"c": "Câu 1",
+"goc": "A：您儿子几岁？\nB：他今年五岁。",
+"doc": "assets/am/cau/7fa38d3b23.mp3",
+"k": 1
+},
+"py": "Tā jīnnián wǔ suì.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "今年是哪一年？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 18,
+"c": "Câu 1",
+"goc": "A：今年是哪一年？\nB：今年是二〇二六年。",
+"doc": "assets/am/cau/4528179d03.mp3",
+"k": 0
+},
+"py": "Jīnnián shì nǎ yì nián?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "今年是二〇二六年。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 18,
+"c": "Câu 1",
+"goc": "A：今年是哪一年？\nB：今年是二〇二六年。",
+"doc": "assets/am/cau/4528179d03.mp3",
+"k": 1
+},
+"py": "Jīnnián shì èrlíng'èrliù nián.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你姐姐多高？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 19,
+"c": "Câu 1",
+"goc": "A：你姐姐多高？\nB：她一米六。",
+"doc": "assets/am/cau/95e2746fcc.mp3",
+"k": 0
+},
+"py": "Nǐ jiějie duō gāo?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "她一米六。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 19,
+"c": "Câu 1",
+"goc": "A：你姐姐多高？\nB：她一米六。",
+"doc": "assets/am/cau/95e2746fcc.mp3",
+"k": 1
+},
+"py": "Tā yì mǐ liù.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你哥哥多大？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 20,
+"c": "Câu 1",
+"goc": "A：你哥哥多大？\nB：他今年二十岁。",
+"doc": "assets/am/cau/23750107f6.mp3",
+"k": 0
+},
+"py": "Nǐ gēge duō dà?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "他今年二十岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 20,
+"c": "Câu 1",
+"goc": "A：你哥哥多大？\nB：他今年二十岁。",
+"doc": "assets/am/cau/23750107f6.mp3",
+"k": 1
+},
+"py": "Tā jīnnián èrshí suì.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "您女儿多大？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 20,
+"c": "Câu 2",
+"goc": "A：您女儿多大？\nB：她今年十二。",
+"doc": "assets/am/cau/b8d5a4843a.mp3",
+"k": 0
+},
+"py": "Nín nǚ'ér duō dà?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "她今年十二。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "ab",
+"i": 20,
+"c": "Câu 2",
+"goc": "A：您女儿多大？\nB：她今年十二。",
+"doc": "assets/am/cau/b8d5a4843a.mp3",
+"k": 1
+},
+"py": "Tā jīnnián shí'èr.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你的生日是几月几号？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 0,
+"k": 0
+},
+"py": "Nǐ de shēngrì shì jǐ yuè jǐ hào?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我的生日是十月二十二号。你呢？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 0,
+"k": 1
+},
+"py": "Wǒ de shēngrì shì shí yuè èrshí'èr hào. Nǐ ne?",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "我的生日是十二月一号。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 0,
+"k": 2
+},
+"py": "Wǒ de shēngrì shì shí'èr yuè yī hào.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "星期天你做饭吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 1,
+"k": 0
+},
+"py": "Xīngqītiān nǐ zuò fàn ma?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "做，我会做饺子。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 1,
+"k": 1
+},
+"py": "Zuò, wǒ huì zuò jiǎozi.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "真好！我不会做饭。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 1,
+"k": 2
+},
+"py": "Zhēn hǎo! Wǒ bú huì zuò fàn.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "这是谁的电脑？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 2,
+"k": 0
+},
+"py": "Zhè shì shéi de diànnǎo?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "是我姐姐的，是她的新电脑。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 2,
+"k": 1
+},
+"py": "Shì wǒ jiějie de, shì tā de xīn diànnǎo.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "真好看！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 2,
+"k": 2
+},
+"py": "Zhēn hǎokàn!",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "今天几号？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 3,
+"k": 0
+},
+"py": "Jīntiān jǐ hào?",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "今天九月八号。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 3,
+"k": 1
+},
+"py": "Jīntiān jiǔ yuè bā hào.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "星期几？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 3,
+"k": 2
+},
+"py": "Xīngqī jǐ?",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "星期日。今天我休息。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 3,
+"k": 3
+},
+"py": "Xīngqīrì. Jīntiān wǒ xiūxi.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "你会做饭吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 4,
+"k": 0
+},
+"py": "Nǐ huì zuò fàn ma?",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我会做。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 4,
+"k": 1
+},
+"py": "Wǒ huì zuò.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "你会做什么？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 4,
+"k": 2
+},
+"py": "Nǐ huì zuò shénme?",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我会做面条儿、饺子，也会做一些菜。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 4,
+"k": 3
+},
+"py": "Wǒ huì zuò miàntiáor, jiǎozi, yě huì zuò yìxiē cài.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "这是你的新电脑吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 5,
+"k": 0
+},
+"py": "Zhè shì nǐ de xīn diànnǎo ma?",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "是的，是我的新电脑。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 5,
+"k": 1
+},
+"py": "Shì de, shì wǒ de xīn diànnǎo.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "真好看！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 5,
+"k": 2
+},
+"py": "Zhēn hǎokàn!",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我也很喜欢它。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ht",
+"i": 5,
+"k": 3
+},
+"py": "Wǒ yě hěn xǐhuan tā.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "今天几号？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 0
+},
+"py": "Jīntiān jǐ hào?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "今天星期几？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 1
+},
+"py": "Jīntiān xīngqī jǐ?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你的生日是几月几号？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 2
+},
+"py": "Nǐ de shēngrì shì jǐ yuè jǐ hào?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你星期天休息吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 3
+},
+"py": "Nǐ xīngqītiān xiūxi ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你们今天上班吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 4
+},
+"py": "Nǐmen jīntiān shàngbān ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你会做饭吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 5
+},
+"py": "Nǐ huì zuò fàn ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你会做什么菜？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 6
+},
+"py": "Nǐ huì zuò shénme cài?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你会说法语吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 7
+},
+"py": "Nǐ huì shuō Fǎyǔ ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "这是谁的电脑？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 8
+},
+"py": "Zhè shì shéi de diànnǎo?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你喜欢吃什么？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 9
+},
+"py": "Nǐ xǐhuan chī shénme?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你的新电脑好看吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 10
+},
+"py": "Nǐ de xīn diànnǎo hǎokàn ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "这些饺子好吃吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 11
+},
+"py": "Zhèxiē jiǎozi hǎochī ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "那些人是谁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 12
+},
+"py": "Nàxiē rén shì shéi?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你的小猫几岁了？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 13
+},
+"py": "Nǐ de xiǎo māo jǐ suì le?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "刘明今天休息吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 14
+},
+"py": "Liú Míng jīntiān xiūxi ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "杨同乐会做什么？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 15
+},
+"py": "Yáng Tónglè huì zuò shénme?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "杨同乐星期天做饭吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 16
+},
+"py": "Yáng Tónglè xīngqītiān zuò fàn ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "他们下班吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 17
+},
+"py": "Tāmen xiàbān ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "这是谁的新电脑？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 18
+},
+"py": "Zhè shì shéi de xīn diànnǎo?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "同乐喜欢他的电脑吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "hd",
+"i": 19
+},
+"py": "Tónglè xǐhuan tā de diànnǎo ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "今天几号？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ab",
+"i": 0,
+"c": "Câu 1",
+"goc": "A：今天几号？\nB：今天九月八号。",
+"doc": "assets/am/cau/4b099957da.mp3",
+"k": 0
+},
+"py": "Jīntiān jǐ hào?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "今天九月八号。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ab",
+"i": 0,
+"c": "Câu 1",
+"goc": "A：今天几号？\nB：今天九月八号。",
+"doc": "assets/am/cau/4b099957da.mp3",
+"k": 1
+},
+"py": "Jīntiān jiǔ yuè bā hào.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你会做饭吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ab",
+"i": 9,
+"c": "Câu 1",
+"goc": "A：你会做饭吗？\nB：我会做。",
+"doc": "assets/am/cau/85ead79a01.mp3",
+"k": 0
+},
+"py": "Nǐ huì zuò fàn ma?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我会做。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ab",
+"i": 9,
+"c": "Câu 1",
+"goc": "A：你会做饭吗？\nB：我会做。",
+"doc": "assets/am/cau/85ead79a01.mp3",
+"k": 1
+},
+"py": "Wǒ huì zuò.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你们今天做什么？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ab",
+"i": 10,
+"c": "Câu 1",
+"goc": "A：你们今天做什么？\nB：我今天学汉语。",
+"doc": "assets/am/cau/daa9f72da3.mp3",
+"k": 0
+},
+"py": "Nǐmen jīntiān zuò shénme?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我今天学汉语。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ab",
+"i": 10,
+"c": "Câu 1",
+"goc": "A：你们今天做什么？\nB：我今天学汉语。",
+"doc": "assets/am/cau/daa9f72da3.mp3",
+"k": 1
+},
+"py": "Wǒ jīntiān xué Hànyǔ.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "同乐，下班吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ab",
+"i": 15,
+"c": "Câu 2",
+"goc": "A：同乐，下班吗？\nB：下班。",
+"doc": "assets/am/cau/958e30b82d.mp3",
+"k": 0
+},
+"py": "Tónglè, xiàbān ma?",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "下班。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ab",
+"i": 15,
+"c": "Câu 2",
+"goc": "A：同乐，下班吗？\nB：下班。",
+"doc": "assets/am/cau/958e30b82d.mp3",
+"k": 1
+},
+"py": "Xiàbān.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你的生日是几月几号？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ab",
+"i": 25,
+"c": "Câu 1",
+"goc": "A：你的生日是几月几号？\nB：我的生日是三月二号。",
+"doc": "assets/am/cau/4b99ef9570.mp3",
+"k": 0
+},
+"py": "Nǐ de shēngrì shì jǐ yuè jǐ hào?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我的生日是三月二号。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "ab",
+"i": 25,
+"c": "Câu 1",
+"goc": "A：你的生日是几月几号？\nB：我的生日是三月二号。",
+"doc": "assets/am/cau/4b99ef9570.mp3",
+"k": 1
+},
+"py": "Wǒ de shēngrì shì sān yuè èr hào.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "老师好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ht",
+"i": 0,
+"k": 0
+},
+"py": "Lǎoshī hǎo!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "你们好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ht",
+"i": 0,
+"k": 1
+},
+"py": "Nǐmen hǎo!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "老师，再见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ht",
+"i": 0,
+"k": 2
+},
+"py": "Lǎoshī, zàijiàn!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "再见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ht",
+"i": 0,
+"k": 3
+},
+"py": "Zàijiàn!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "对不起！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ht",
+"i": 1,
+"k": 0
+},
+"py": "Duìbuqǐ!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "没关系！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ht",
+"i": 1,
+"k": 1
+},
+"py": "Méi guānxi!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "谢谢您！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ht",
+"i": 1,
+"k": 2
+},
+"py": "Xièxie nín!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ht",
+"i": 1,
+"k": 3
+},
+"py": "Bú kèqi!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "hd",
+"i": 0
+},
+"py": "Nǐ hǎo!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "谢谢你！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "hd",
+"i": 1
+},
+"py": "Xièxie nǐ!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "对不起！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "hd",
+"i": 2
+},
+"py": "Duìbuqǐ!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "老师，再见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "hd",
+"i": 3
+},
+"py": "Lǎoshī, zàijiàn!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "老师好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "hd",
+"i": 4
+},
+"py": "Lǎoshī hǎo!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "明天见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "hd",
+"i": 5
+},
+"py": "Míngtiān jiàn!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "谢谢你！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 5,
+"c": "Câu 1",
+"goc": "A：谢谢你！\nB：不客气！",
+"doc": "谢谢你！不客气！",
+"k": 0
+},
+"py": "Xièxie nǐ!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 5,
+"c": "Câu 1",
+"goc": "A：谢谢你！\nB：不客气！",
+"doc": "谢谢你！不客气！",
+"k": 1
+},
+"py": "Bú kèqi!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "谢谢老师！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 5,
+"c": "Câu 2",
+"goc": "A：谢谢老师！\nB：不客气！",
+"doc": "谢谢老师！不客气！",
+"k": 0
+},
+"py": "Xièxie lǎoshī!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 5,
+"c": "Câu 2",
+"goc": "A：谢谢老师！\nB：不客气！",
+"doc": "谢谢老师！不客气！",
+"k": 1
+},
+"py": "Bú kèqi!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "对不起您！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 8,
+"c": "Câu 1",
+"goc": "A：对不起您！\nB：没关系！",
+"doc": "对不起您！没关系！",
+"k": 0
+},
+"py": "Duìbuqǐ nín!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "没关系！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 8,
+"c": "Câu 1",
+"goc": "A：对不起您！\nB：没关系！",
+"doc": "对不起您！没关系！",
+"k": 1
+},
+"py": "Méi guānxi!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "对不起，老师！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 8,
+"c": "Câu 2",
+"goc": "A：对不起，老师！\nB：没关系！",
+"doc": "对不起，老师！没关系！",
+"k": 0
+},
+"py": "Duìbuqǐ, lǎoshī!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "没关系！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 8,
+"c": "Câu 2",
+"goc": "A：对不起，老师！\nB：没关系！",
+"doc": "对不起，老师！没关系！",
+"k": 1
+},
+"py": "Méi guānxi!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "谢谢您！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 8,
+"c": "cauLuyen",
+"goc": "A：谢谢您！\nB：不客气！",
+"doc": "谢谢您！不客气！",
+"k": 0
+},
+"py": "Xièxie nín!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 8,
+"c": "cauLuyen",
+"goc": "A：谢谢您！\nB：不客气！",
+"doc": "谢谢您！不客气！",
+"k": 1
+},
+"py": "Bú kèqi!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "对不起！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 9,
+"c": "cauLuyen",
+"goc": "A：对不起！\nB：没关系！",
+"doc": "对不起！没关系！",
+"k": 0
+},
+"py": "Duìbuqǐ!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "没关系！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 9,
+"c": "cauLuyen",
+"goc": "A：对不起！\nB：没关系！",
+"doc": "对不起！没关系！",
+"k": 1
+},
+"py": "Méi guānxi!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "谢谢你们！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 10,
+"c": "cauLuyen",
+"goc": "A：谢谢你们！\nB：不客气！",
+"doc": "谢谢你们！不客气！",
+"k": 0
+},
+"py": "Xièxie nǐmen!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 10,
+"c": "cauLuyen",
+"goc": "A：谢谢你们！\nB：不客气！",
+"doc": "谢谢你们！不客气！",
+"k": 1
+},
+"py": "Bú kèqi!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "对不起，同学们！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 11,
+"c": "cauLuyen",
+"goc": "A：对不起，同学们！\nB：没关系！",
+"doc": "对不起，同学们！没关系！",
+"k": 0
+},
+"py": "Duìbuqǐ, tóngxuémen!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "没关系！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 11,
+"c": "cauLuyen",
+"goc": "A：对不起，同学们！\nB：没关系！",
+"doc": "对不起，同学们！没关系！",
+"k": 1
+},
+"py": "Méi guānxi!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "谢谢你，老师！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 12,
+"c": "cauLuyen",
+"goc": "A：谢谢你，老师！\nB：不客气！",
+"doc": "谢谢你，老师！不客气！",
+"k": 0
+},
+"py": "Xièxie nǐ, lǎoshī!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 12,
+"c": "cauLuyen",
+"goc": "A：谢谢你，老师！\nB：不客气！",
+"doc": "谢谢你，老师！不客气！",
+"k": 1
+},
+"py": "Bú kèqi!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "对不起，我不好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 13,
+"c": "cauLuyen",
+"goc": "A：对不起，我不好！\nB：没关系！",
+"doc": "对不起，我不好！没关系！",
+"k": 0
+},
+"py": "Duìbuqǐ, wǒ bù hǎo!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "没关系！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "ab",
+"i": 13,
+"c": "cauLuyen",
+"goc": "A：对不起，我不好！\nB：没关系！",
+"doc": "对不起，我不好！没关系！",
+"k": 1
+},
+"py": "Méi guānxi!",
+"co": true
+},
+{
+"giong": "nam2",
+"han": "你好！我叫小明。你叫什么名字？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ht",
+"i": 0,
+"k": 0
+},
+"py": "Nǐ hǎo! Wǒ jiào Xiǎomíng. Nǐ jiào shénme míngzi?",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我叫李月。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ht",
+"i": 0,
+"k": 1
+},
+"py": "Wǒ jiào Lǐ Yuè.",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "你是老师吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ht",
+"i": 0,
+"k": 2
+},
+"py": "Nǐ shì lǎoshī ma?",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我不是老师，我是学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ht",
+"i": 0,
+"k": 3
+},
+"py": "Wǒ bú shì lǎoshī, wǒ shì xué·shēng.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "老师，您贵姓？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ht",
+"i": 1,
+"k": 0
+},
+"py": "Lǎoshī, nín guìxìng?",
+"co": false
+},
+{
+"giong": "nu4",
+"han": "我姓阮。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ht",
+"i": 1,
+"k": 1
+},
+"py": "Wǒ xìng Ruǎn.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "您是中国人吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ht",
+"i": 1,
+"k": 2
+},
+"py": "Nín shì Zhōngguó rén ma?",
+"co": false
+},
+{
+"giong": "nu4",
+"han": "我不是中国人，我是越南人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ht",
+"i": 1,
+"k": 3
+},
+"py": "Wǒ bú shì Zhōngguó rén, wǒ shì Yuènán rén.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你叫什么名字？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "hd",
+"i": 0
+},
+"py": "Nǐ jiào shénme míngzi?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "您贵姓？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "hd",
+"i": 1
+},
+"py": "Nín guìxìng?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你是老师吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "hd",
+"i": 2
+},
+"py": "Nǐ shì lǎoshī ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你是中国人吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "hd",
+"i": 3
+},
+"py": "Nǐ shì Zhōngguó rén ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "她是李月老师吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "hd",
+"i": 4
+},
+"py": "Tā shì Lǐ Yuè lǎoshī ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "他叫什么？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "hd",
+"i": 5
+},
+"py": "Tā jiào shénme?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你们是学生吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "hd",
+"i": 6
+},
+"py": "Nǐmen shì xué·shēng ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你是不是越南人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "hd",
+"i": 7
+},
+"py": "Nǐ shì bu shì Yuènán rén?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "她姓什么？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "hd",
+"i": 8
+},
+"py": "Tā xìng shénme?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "大卫是美国人吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "hd",
+"i": 9
+},
+"py": "Dàwèi shì Měiguó rén ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你叫什么名字？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ab",
+"i": 2,
+"c": "Câu 2",
+"goc": "A：你叫什么名字？\nB：我叫李月。",
+"doc": "你叫什么名字？我叫李月。",
+"k": 0
+},
+"py": "Nǐ jiào shénme míngzi?",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我叫李月。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ab",
+"i": 2,
+"c": "Câu 2",
+"goc": "A：你叫什么名字？\nB：我叫李月。",
+"doc": "你叫什么名字？我叫李月。",
+"k": 1
+},
+"py": "Wǒ jiào Lǐ Yuè.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "您贵姓？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ab",
+"i": 19,
+"c": "Câu 1",
+"goc": "A：您贵姓？\nB：我姓阮。",
+"doc": "您贵姓？我姓阮。",
+"k": 0
+},
+"py": "Nín guìxìng?",
+"co": false
+},
+{
+"giong": "nu4",
+"han": "我姓阮。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ab",
+"i": 19,
+"c": "Câu 1",
+"goc": "A：您贵姓？\nB：我姓阮。",
+"doc": "您贵姓？我姓阮。",
+"k": 1
+},
+"py": "Wǒ xìng Ruǎn.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你是越南人吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ab",
+"i": 9,
+"c": "cauLuyen",
+"goc": "A：你是越南人吗？\nB：是，我是越南人。",
+"doc": "你是越南人吗？是，我是越南人。",
+"k": 0
+},
+"py": "Nǐ shì Yuènán rén ma?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "是，我是越南人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ab",
+"i": 9,
+"c": "cauLuyen",
+"goc": "A：你是越南人吗？\nB：是，我是越南人。",
+"doc": "你是越南人吗？是，我是越南人。",
+"k": 1
+},
+"py": "Shì, wǒ shì Yuènán rén.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "您贵姓？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ab",
+"i": 14,
+"c": "cauLuyen",
+"goc": "A：您贵姓？\nB：我姓李。",
+"doc": "您贵姓？我姓李。",
+"k": 0
+},
+"py": "Nín guìxìng?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我姓李。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ab",
+"i": 14,
+"c": "cauLuyen",
+"goc": "A：您贵姓？\nB：我姓李。",
+"doc": "您贵姓？我姓李。",
+"k": 1
+},
+"py": "Wǒ xìng Lǐ.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你叫什么？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ab",
+"i": 17,
+"c": "cauLuyen",
+"goc": "A：你叫什么？\nB：我叫小明。",
+"doc": "你叫什么？我叫小明。",
+"k": 0
+},
+"py": "Nǐ jiào shénme?",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "我叫小明。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ab",
+"i": 17,
+"c": "cauLuyen",
+"goc": "A：你叫什么？\nB：我叫小明。",
+"doc": "你叫什么？我叫小明。",
+"k": 1
+},
+"py": "Wǒ jiào Xiǎomíng.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "老师，您贵姓？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ab",
+"i": 39,
+"c": "cauLuyen",
+"goc": "A：老师，您贵姓？\nB：我姓阮，叫阮何然。",
+"doc": "老师，您贵姓？我姓阮，叫阮何然。",
+"k": 0
+},
+"py": "Lǎoshī, nín guìxìng?",
+"co": false
+},
+{
+"giong": "nu4",
+"han": "我姓阮，叫阮何然。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "ab",
+"i": 39,
+"c": "cauLuyen",
+"goc": "A：老师，您贵姓？\nB：我姓阮，叫阮何然。",
+"doc": "老师，您贵姓？我姓阮，叫阮何然。",
+"k": 1
+},
+"py": "Wǒ xìng Ruǎn, jiào Ruǎn Hérán.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "她是谁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "ht",
+"i": 0,
+"k": 0
+},
+"py": "Tā shì shéi?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "她是我的汉语老师，她叫李月。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "ht",
+"i": 0,
+"k": 1
+},
+"py": "Tā shì wǒ de Hànyǔ lǎoshī, tā jiào Lǐ Yuè.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "老师好！您是哪国人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "ht",
+"i": 0,
+"k": 2
+},
+"py": "Lǎoshī hǎo! Nín shì nǎ guó rén?",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我是中国人。你呢？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "ht",
+"i": 0,
+"k": 3
+},
+"py": "Wǒ shì Zhōngguó rén. Nǐ ne?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "我是越南人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "ht",
+"i": 0,
+"k": 4
+},
+"py": "Wǒ shì Yuènán rén.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你学什么？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "ht",
+"i": 1,
+"k": 0
+},
+"py": "Nǐ xué shénme?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我学汉语，你呢？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "ht",
+"i": 1,
+"k": 1
+},
+"py": "Wǒ xué Hànyǔ, nǐ ne?",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "我学英语。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "ht",
+"i": 1,
+"k": 2
+},
+"py": "Wǒ xué Yīngyǔ.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "你的英语老师是哪国人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "ht",
+"i": 1,
+"k": 3
+},
+"py": "Nǐ de Yīngyǔ lǎoshī shì nǎ guó rén?",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "他是美国人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "ht",
+"i": 1,
+"k": 4
+},
+"py": "Tā shì Měiguó rén.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你是哪国人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "hd",
+"i": 0
+},
+"py": "Nǐ shì nǎ guó rén?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "她是谁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "hd",
+"i": 1
+},
+"py": "Tā shì shéi?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你学什么？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "hd",
+"i": 2
+},
+"py": "Nǐ xué shénme?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "我是中国人，你呢？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "hd",
+"i": 3
+},
+"py": "Wǒ shì Zhōngguó rén, nǐ ne?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "谁是你的汉语老师？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "hd",
+"i": 4
+},
+"py": "Shéi shì nǐ de Hànyǔ lǎoshī?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "他是你同学吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "hd",
+"i": 5
+},
+"py": "Tā shì nǐ tóngxué ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你的汉语老师是哪国人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "hd",
+"i": 6
+},
+"py": "Nǐ de Hànyǔ lǎoshī shì nǎ guó rén?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "他学汉语吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "hd",
+"i": 7
+},
+"py": "Tā xué Hànyǔ ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你们是哪国人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "hd",
+"i": 8
+},
+"py": "Nǐmen shì nǎ guó rén?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "她是谁的朋友？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "hd",
+"i": 9
+},
+"py": "Tā shì shéi de péngyou?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你是哪国人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "ab",
+"i": 5,
+"c": "Câu 1",
+"goc": "A：你是哪国人？\nB：我是越南人。",
+"doc": "你是哪国人？我是越南人。",
+"k": 0
+},
+"py": "Nǐ shì nǎ guó rén?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我是越南人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "ab",
+"i": 5,
+"c": "Câu 1",
+"goc": "A：你是哪国人？\nB：我是越南人。",
+"doc": "你是哪国人？我是越南人。",
+"k": 1
+},
+"py": "Wǒ shì Yuènán rén.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你家有几口人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ht",
+"i": 0,
+"k": 0
+},
+"py": "Nǐ jiā yǒu jǐ kǒu rén?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我家有三口人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ht",
+"i": 0,
+"k": 1
+},
+"py": "Wǒ jiā yǒu sān kǒu rén.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你有没有哥哥？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ht",
+"i": 0,
+"k": 2
+},
+"py": "Nǐ yǒu méi·yǒu gēge?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我没有哥哥，我有一个妹妹。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ht",
+"i": 0,
+"k": 3
+},
+"py": "Wǒ méi·yǒu gēge, wǒ yǒu yí ge mèimei.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你妹妹几岁了？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ht",
+"i": 0,
+"k": 4
+},
+"py": "Nǐ mèimei jǐ suì le?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "她今年八岁了。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ht",
+"i": 0,
+"k": 5
+},
+"py": "Tā jīnnián bā suì le.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你爷爷奶奶多大年纪了？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ht",
+"i": 1,
+"k": 0
+},
+"py": "Nǐ yéye nǎinai duō dà niánjì le?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "爷爷八十岁了，奶奶七十八岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ht",
+"i": 1,
+"k": 1
+},
+"py": "Yéye bāshí suì le, nǎinai qīshí bā suì.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你爸爸呢？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ht",
+"i": 1,
+"k": 2
+},
+"py": "Nǐ bàba ne?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "他今年五十岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ht",
+"i": 1,
+"k": 3
+},
+"py": "Tā jīnnián wǔshí suì.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你们班有多少个学生？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ht",
+"i": 2,
+"k": 0
+},
+"py": "Nǐmen bān yǒu duōshao ge xué·shēng?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我们班有二十个学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ht",
+"i": 2,
+"k": 1
+},
+"py": "Wǒmen bān yǒu èrshí ge xué·shēng.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "有几位老师？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ht",
+"i": 2,
+"k": 2
+},
+"py": "Yǒu jǐ wèi lǎoshī?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "有两位老师。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ht",
+"i": 2,
+"k": 3
+},
+"py": "Yǒu liǎng wèi lǎoshī.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你家有几口人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "hd",
+"i": 0
+},
+"py": "Nǐ jiā yǒu jǐ kǒu rén?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你今年多大？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "hd",
+"i": 1
+},
+"py": "Nǐ jīnnián duō dà?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你女儿几岁了？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "hd",
+"i": 2
+},
+"py": "Nǐ nǚ'ér jǐ suì le?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你有哥哥吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "hd",
+"i": 3
+},
+"py": "Nǐ yǒu gēge ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你有没有男朋友？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "hd",
+"i": 4
+},
+"py": "Nǐ yǒu méi·yǒu nánpéngyou?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你们班有多少个学生？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "hd",
+"i": 5
+},
+"py": "Nǐmen bān yǒu duōshao ge xué·shēng?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你爷爷多大年纪了？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "hd",
+"i": 6
+},
+"py": "Nǐ yéye duō dà niánjì le?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你有几位汉语老师？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "hd",
+"i": 7
+},
+"py": "Nǐ yǒu jǐ wèi Hànyǔ lǎoshī?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你的家乡是河内吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "hd",
+"i": 8
+},
+"py": "Nǐ de jiāxiāng shì Hénèi ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "小明有弟弟吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "hd",
+"i": 9
+},
+"py": "Xiǎomíng yǒu dìdi ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "他们去哪国了？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "hd",
+"i": 10
+},
+"py": "Tāmen qù nǎ guó le?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你爸爸妈妈有几个儿子？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "hd",
+"i": 11
+},
+"py": "Nǐ bàba māma yǒu jǐ ge érzi?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "李老师多大了？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "hd",
+"i": 12
+},
+"py": "Lǐ lǎoshī duō dà le?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "他们是谁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "hd",
+"i": 13
+},
+"py": "Tāmen shì shéi?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你家有几口人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ab",
+"i": 0,
+"c": "Câu 1",
+"goc": "A：你家有几口人？\nB：我家有四口人。",
+"doc": "你家有几口人？我家有四口人。",
+"k": 0
+},
+"py": "Nǐ jiā yǒu jǐ kǒu rén?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我家有四口人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ab",
+"i": 0,
+"c": "Câu 1",
+"goc": "A：你家有几口人？\nB：我家有四口人。",
+"doc": "你家有几口人？我家有四口人。",
+"k": 1
+},
+"py": "Wǒ jiā yǒu sì kǒu rén.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你女儿几岁了？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ab",
+"i": 3,
+"c": "Câu 1",
+"goc": "A：你女儿几岁了？\nB：她今年四岁了。",
+"doc": "你女儿几岁了？她今年四岁了。",
+"k": 0
+},
+"py": "Nǐ nǚ'ér jǐ suì le?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "她今年四岁了。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ab",
+"i": 3,
+"c": "Câu 1",
+"goc": "A：你女儿几岁了？\nB：她今年四岁了。",
+"doc": "你女儿几岁了？她今年四岁了。",
+"k": 1
+},
+"py": "Tā jīnnián sì suì le.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你弟弟今年几岁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ab",
+"i": 5,
+"c": "Câu 1",
+"goc": "A：你弟弟今年几岁？\nB：他今年两岁。",
+"doc": "你弟弟今年几岁？他今年两岁。",
+"k": 0
+},
+"py": "Nǐ dìdi jīnnián jǐ suì?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "他今年两岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ab",
+"i": 5,
+"c": "Câu 1",
+"goc": "A：你弟弟今年几岁？\nB：他今年两岁。",
+"doc": "你弟弟今年几岁？他今年两岁。",
+"k": 1
+},
+"py": "Tā jīnnián liǎng suì.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "今年是哪一年？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ab",
+"i": 7,
+"c": "Câu 1",
+"goc": "A：今年是哪一年？\nB：今年是二〇二六年。",
+"doc": "今年是哪一年？今年是二〇二六年。",
+"k": 0
+},
+"py": "Jīnnián shì nǎ yì nián?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "今年是二〇二六年。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ab",
+"i": 7,
+"c": "Câu 1",
+"goc": "A：今年是哪一年？\nB：今年是二〇二六年。",
+"doc": "今年是哪一年？今年是二〇二六年。",
+"k": 1
+},
+"py": "Jīnnián shì èrlíng'èrliù nián.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "李老师多大了？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ab",
+"i": 9,
+"c": "Câu 1",
+"goc": "A：李老师多大了？\nB：她今年五十岁了。",
+"doc": "李老师多大了？她今年五十岁了。",
+"k": 0
+},
+"py": "Lǐ lǎoshī duō dà le?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "她今年五十岁了。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ab",
+"i": 9,
+"c": "Câu 1",
+"goc": "A：李老师多大了？\nB：她今年五十岁了。",
+"doc": "李老师多大了？她今年五十岁了。",
+"k": 1
+},
+"py": "Tā jīnnián wǔshí suì le.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你哥哥多大？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ab",
+"i": 23,
+"c": "Câu 1",
+"goc": "A：你哥哥多大？\nB：他今年二十岁。",
+"doc": "你哥哥多大？他今年二十岁。",
+"k": 0
+},
+"py": "Nǐ gēge duō dà?",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "他今年二十岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "ab",
+"i": 23,
+"c": "Câu 1",
+"goc": "A：你哥哥多大？\nB：他今年二十岁。",
+"doc": "你哥哥多大？他今年二十岁。",
+"k": 1
+},
+"py": "Tā jīnnián èrshí suì.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "天中，你家有几口人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht1",
+"k": 0,
+"goc": "安妮：天中，你家有几口人？。陈天中：我家有六口人：爸爸、妈妈、两个哥哥、一个妹妹和我。"
+},
+"py": "Tiānzhōng, nǐ jiā yǒu jǐ kǒu rén?",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "我家有六口人：爸爸、妈妈、两个哥哥、一个妹妹和我。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht1",
+"k": 1,
+"goc": "安妮：天中，你家有几口人？。陈天中：我家有六口人：爸爸、妈妈、两个哥哥、一个妹妹和我。"
+},
+"py": "Wǒ jiā yǒu liù kǒu rén: bàba, māma, liǎng ge gēge, yí ge mèimei hé wǒ.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "你会做饭吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht2",
+"k": 0,
+"goc": "安妮：你会做饭吗？。李文：我不会做饭，我妈妈会做。"
+},
+"py": "Nǐ huì zuò fàn ma?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "我不会做饭，我妈妈会做。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht2",
+"k": 1,
+"goc": "安妮：你会做饭吗？。李文：我不会做饭，我妈妈会做。"
+},
+"py": "Wǒ bú huì zuò fàn, wǒ māma huì zuò.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "今天几号？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht3",
+"k": 0,
+"goc": "刘明：今天几号？。王一雪：今天十一月三号，星期一。"
+},
+"py": "Jīntiān jǐ hào?",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "今天十一月三号，星期一。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht3",
+"k": 1,
+"goc": "刘明：今天几号？。王一雪：今天十一月三号，星期一。"
+},
+"py": "Jīntiān shíyī yuè sān hào, xīngqīyī.",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "那个人是谁？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht4",
+"k": 0,
+"goc": "陈天中：那个人是谁？。白家月：那是我的中文老师，她是中国人。"
+},
+"py": "Nà ge rén shì shéi?",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "那是我的中文老师，她是中国人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht4",
+"k": 1,
+"goc": "陈天中：那个人是谁？。白家月：那是我的中文老师，她是中国人。"
+},
+"py": "Nà shì wǒ de Zhōngwén lǎoshī, tā shì Zhōngguó rén.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "同乐，你工作忙吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht5",
+"k": 0,
+"goc": "王一雪：同乐，你工作忙吗？。杨同乐：我不太忙。"
+},
+"py": "Tónglè, nǐ gōngzuò máng ma?",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我不太忙。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht5",
+"k": 1,
+"goc": "王一雪：同乐，你工作忙吗？。杨同乐：我不太忙。"
+},
+"py": "Wǒ bú tài máng.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "同乐，你的新电脑真好看！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht6",
+"k": 0,
+"goc": "王一雪：同乐，你的新电脑真好看！。杨同乐：谢谢！我也很喜欢它。"
+},
+"py": "Tónglè, nǐ de xīn diànnǎo zhēn hǎokàn!",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "谢谢！我也很喜欢它。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht6",
+"k": 1,
+"goc": "王一雪：同乐，你的新电脑真好看！。杨同乐：谢谢！我也很喜欢它。"
+},
+"py": "Xièxie! Wǒ yě hěn xǐhuan tā.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "李文，你奶奶多大年纪？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht7",
+"k": 0,
+"goc": "白家月：李文，你奶奶多大年纪？。李文：她今年七十九岁。"
+},
+"py": "Lǐ Wén, nǐ nǎinai duō dà niánjì?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "她今年七十九岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht7",
+"k": 1,
+"goc": "白家月：李文，你奶奶多大年纪？。李文：她今年七十九岁。"
+},
+"py": "Tā jīnnián qīshíjiǔ suì.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "明天你上班吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht8",
+"k": 0,
+"goc": "王一雪：明天你上班吗？。刘明：明天星期六，我不上班，我休息。"
+},
+"py": "Míngtiān nǐ shàngbān ma?",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "明天星期六，我不上班，我休息。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/on-tap-1-5.json",
+"loai": "ot",
+"ma": "nht8",
+"k": 1,
+"goc": "王一雪：明天你上班吗？。刘明：明天星期六，我不上班，我休息。"
+},
+"py": "Míngtiān xīngqīliù, wǒ bú shàngbān, wǒ xiūxi.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 0
+},
+"py": "Bú kèqi!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "谢谢老师！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 1
+},
+"py": "Xièxie lǎoshī!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "再见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 2
+},
+"py": "Zàijiàn!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "老师好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 0
+},
+"py": "Lǎoshī hǎo!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "再见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 1
+},
+"py": "Zàijiàn!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "你很客气。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 2
+},
+"py": "Nǐ hěn kèqi.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "大家好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 0
+},
+"py": "Dàjiā hǎo!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "小猫很小。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 1
+},
+"py": "Xiǎo māo hěn xiǎo.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "同学们再见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 2
+},
+"py": "Tóngxuémen zàijiàn!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "你们好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 1,
+"k": "2",
+"j": 0
+},
+"py": "Nǐmen hǎo!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "老师家很大。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 1,
+"k": "2",
+"j": 1
+},
+"py": "Lǎoshī jiā hěn dà.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "小狗不吃。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 1,
+"k": "2",
+"j": 2
+},
+"py": "Xiǎo gǒu bù chī.",
+"co": false
+},
+{
+"giong": "nu4",
+"han": "谢谢！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 0
+},
+"py": "Xièxie!",
+"co": false
+},
+{
+"giong": "nu4",
+"han": "再见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 1
+},
+"py": "Zàijiàn!",
+"co": false
+},
+{
+"giong": "nu4",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 2
+},
+"py": "Bú kèqi!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 0
+},
+"py": "Bú kèqi!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "再见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 1
+},
+"py": "Zàijiàn!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "谢谢你们！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 2
+},
+"py": "Xièxie nǐmen!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "谢谢！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 0
+},
+"py": "Xièxie!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "老师，再见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 1
+},
+"py": "Lǎoshī, zàijiàn!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 2
+},
+"py": "Bú kèqi!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "你好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 0
+},
+"py": "Nǐ hǎo!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "再见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 1
+},
+"py": "Zàijiàn!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "大家好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 2
+},
+"py": "Dàjiā hǎo!",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 0
+},
+"py": "Bú kèqi!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "谢谢！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 1
+},
+"py": "Xièxie!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你们好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-1.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 2
+},
+"py": "Nǐmen hǎo!",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我很高兴。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ hěn gāoxìng.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "没关系。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 1
+},
+"py": "Méi guānxi.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我是学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ shì xué·shēng.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我叫安妮。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 0
+},
+"py": "Wǒ jiào Ānnī.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "对不起。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 1
+},
+"py": "Duìbuqǐ.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我们也说汉语。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 2
+},
+"py": "Wǒmen yě shuō Hànyǔ.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "没事。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 0
+},
+"py": "Méishì.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我叫白家月。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 1
+},
+"py": "Wǒ jiào Bái Jiāyuè.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我不吃，也不喝。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ bù chī, yě bù hē.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我也是学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 0
+},
+"py": "Wǒ yě shì xué·shēng.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "对不起，老师！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 1
+},
+"py": "Duìbuqǐ, lǎoshī!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我只认识李文。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 2
+},
+"py": "Wǒ zhǐ rènshi Lǐ Wén.",
+"co": true
+},
+{
+"giong": "nam2",
+"han": "我不认识陈天中。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ bú rènshi Chén Tiānzhōng.",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "没关系！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 1
+},
+"py": "Méi guānxi!",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "我也很高兴。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ yě hěn gāoxìng.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "没关系！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 0
+},
+"py": "Méi guānxi!",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 1
+},
+"py": "Bú kèqi!",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "请坐！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 2
+},
+"py": "Qǐng zuò!",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "对不起！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 0
+},
+"py": "Duìbuqǐ!",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "很高兴认识你。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 1
+},
+"py": "Hěn gāoxìng rènshi nǐ.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我叫白家月。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 2
+},
+"py": "Wǒ jiào Bái Jiāyuè.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "没关系！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 0
+},
+"py": "Méi guānxi!",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "对不起！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 1
+},
+"py": "Duìbuqǐ!",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 2
+},
+"py": "Bú kèqi!",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "对不起！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 0
+},
+"py": "Duìbuqǐ!",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "你叫什么名字？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 1
+},
+"py": "Nǐ jiào shénme míngzi?",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我不是李文。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-2.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 2
+},
+"py": "Wǒ bú shì Lǐ Wén.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "我是越南人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ shì Yuènán rén.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "太好了！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 1
+},
+"py": "Tài hǎo le!",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "她是我姐姐。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 2
+},
+"py": "Tā shì wǒ jiějie.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "我是中国人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 0
+},
+"py": "Wǒ shì Zhōngguó rén.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "这是我妈妈。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 1
+},
+"py": "Zhè shì wǒ māma.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "我想去法国。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 2
+},
+"py": "Wǒ xiǎng qù Fǎguó.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "她是法国人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 0
+},
+"py": "Tā shì Fǎguó rén.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我想去泰国。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 1
+},
+"py": "Wǒ xiǎng qù Tàiguó.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我没有工作。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ méi·yǒu gōngzuò.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "她是越南人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 0
+},
+"py": "Tā shì Yuènán rén.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "她很想妈妈。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 1
+},
+"py": "Tā hěn xiǎng māma.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "她有男朋友。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 2
+},
+"py": "Tā yǒu nánpéngyou.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "她是中文老师。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "5",
+"j": 0
+},
+"py": "Tā shì Zhōngwén lǎoshī.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "她想去中国。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "5",
+"j": 1
+},
+"py": "Tā xiǎng qù Zhōngguó.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "这是我的猫。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "5",
+"j": 2
+},
+"py": "Zhè shì wǒ de māo.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "他是我哥哥。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 0
+},
+"py": "Tā shì wǒ gēge.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "他还很忙。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 1
+},
+"py": "Tā hái hěn máng.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "他有女朋友。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 2
+},
+"py": "Tā yǒu nǚpéngyou.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "他是越南人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 2,
+"k": "3",
+"j": 0
+},
+"py": "Tā shì Yuènán rén.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "对，他是我弟弟。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 2,
+"k": "3",
+"j": 1
+},
+"py": "Duì, tā shì wǒ dìdi.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "他没有工作。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 2,
+"k": "3",
+"j": 2
+},
+"py": "Tā méi·yǒu gōngzuò.",
+"co": true
+},
+{
+"giong": "nam2",
+"han": "我是中国人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ shì Zhōngguó rén.",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "她很忙。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 1
+},
+"py": "Tā hěn máng.",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "我想去泰国。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ xiǎng qù Tàiguó.",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "这是我女朋友。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 0
+},
+"py": "Zhè shì wǒ nǚpéngyou.",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "她很忙。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 1
+},
+"py": "Tā hěn máng.",
+"co": false
+},
+{
+"giong": "nam2",
+"han": "她想去中国。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 2
+},
+"py": "Tā xiǎng qù Zhōngguó.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "对，还很忙。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 0
+},
+"py": "Duì, hái hěn máng.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我也想你们。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 1
+},
+"py": "Wǒ yě xiǎng nǐmen.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "不太忙。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 2
+},
+"py": "Bú tài máng.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "姐姐！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 0
+},
+"py": "Jiějie!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我也想你们。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 1
+},
+"py": "Wǒ yě xiǎng nǐmen.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我是中国人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 2
+},
+"py": "Wǒ shì Zhōngguó rén.",
+"co": true
+},
+{
+"giong": "nu3",
+"han": "对，还很忙。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 4,
+"k": "4",
+"j": 0
+},
+"py": "Duì, hái hěn máng.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "喂，一飞！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 4,
+"k": "4",
+"j": 1
+},
+"py": "Wèi, Yīfēi!",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "她是我姐姐。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 4,
+"k": "4",
+"j": 2
+},
+"py": "Tā shì wǒ jiějie.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "姐姐！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 4,
+"k": "5",
+"j": 0
+},
+"py": "Jiějie!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我不太忙。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 4,
+"k": "5",
+"j": 1
+},
+"py": "Wǒ bú tài máng.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "你工作还忙吗？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-3.json",
+"loai": "nh",
+"i": 4,
+"k": "5",
+"j": 2
+},
+"py": "Nǐ gōngzuò hái máng ma?",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我有两个哥哥。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ yǒu liǎng ge gēge.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我是越南人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 1
+},
+"py": "Wǒ shì Yuènán rén.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我很忙。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ hěn máng.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "我没有哥哥。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "2",
+"j": 0
+},
+"py": "Wǒ méi·yǒu gēge.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "我是学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "2",
+"j": 1
+},
+"py": "Wǒ shì xué·shēng.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "我哥哥很忙。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "2",
+"j": 2
+},
+"py": "Wǒ gēge hěn máng.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我今年三十岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ jīnnián sānshí suì.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我是老师。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 1
+},
+"py": "Wǒ shì lǎoshī.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我家有三口人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ jiā yǒu sān kǒu rén.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我有一个女儿。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 0
+},
+"py": "Wǒ yǒu yí ge nǚ'ér.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "她是学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 1
+},
+"py": "Tā shì xué·shēng.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "她很好。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 2
+},
+"py": "Tā hěn hǎo.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我是老师。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ shì lǎoshī.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "他是我的同事。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 1
+},
+"py": "Tā shì wǒ de tóngshì.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我今年三十岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ jīnnián sānshí suì.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我今年三十岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 2,
+"k": "3",
+"j": 0
+},
+"py": "Wǒ jīnnián sānshí suì.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "他们是学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 2,
+"k": "3",
+"j": 1
+},
+"py": "Tāmen shì xué·shēng.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我没有哥哥。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 2,
+"k": "3",
+"j": 2
+},
+"py": "Wǒ méi·yǒu gēge.",
+"co": true
+},
+{
+"giong": "nu3",
+"han": "她有二十个学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 0
+},
+"py": "Tā yǒu èrshí ge xué·shēng.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "她是我妹妹。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 1
+},
+"py": "Tā shì wǒ mèimei.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "她是中文老师。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 2
+},
+"py": "Tā shì Zhōngwén lǎoshī.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "她很忙。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 0
+},
+"py": "Tā hěn máng.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "她是中文老师。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 1
+},
+"py": "Tā shì Zhōngwén lǎoshī.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "她没有孩子。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 2
+},
+"py": "Tā méi·yǒu háizi.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我家有四口人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ jiā yǒu sì kǒu rén.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我是中国人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 1
+},
+"py": "Wǒ shì Zhōngguó rén.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我今年二十岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ jīnnián èrshí suì.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我没有哥哥。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 0
+},
+"py": "Wǒ méi·yǒu gēge.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我有一个妹妹。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 1
+},
+"py": "Wǒ yǒu yí ge mèimei.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我是王一雪的同事。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 2
+},
+"py": "Wǒ shì Wáng Yīxuě de tóngshì.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "他今年五岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 5,
+"k": "1",
+"j": 0
+},
+"py": "Tā jīnnián wǔ suì.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "我没有哥哥。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 5,
+"k": "1",
+"j": 1
+},
+"py": "Wǒ méi·yǒu gēge.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "我是老师。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 5,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ shì lǎoshī.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "我有两个孩子。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 5,
+"k": "3",
+"j": 0
+},
+"py": "Wǒ yǒu liǎng ge háizi.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "他是我儿子。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 5,
+"k": "3",
+"j": 1
+},
+"py": "Tā shì wǒ érzi.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "他很好。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 5,
+"k": "3",
+"j": 2
+},
+"py": "Tā hěn hǎo.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "她是我女儿。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 5,
+"k": "5",
+"j": 0
+},
+"py": "Tā shì wǒ nǚ'ér.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "我有一个女儿。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 5,
+"k": "5",
+"j": 1
+},
+"py": "Wǒ yǒu yí ge nǚ'ér.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "她很好。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-4.json",
+"loai": "nh",
+"i": 5,
+"k": "5",
+"j": 2
+},
+"py": "Tā hěn hǎo.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我今年二十岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ jīnnián èrshí suì.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "今天星期三。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 1
+},
+"py": "Jīntiān xīngqīsān.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我是越南人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ shì Yuènán rén.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "我不会做饭。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "2",
+"j": 0
+},
+"py": "Wǒ bú huì zuò fàn.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "我很喜欢你的电脑。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "2",
+"j": 1
+},
+"py": "Wǒ hěn xǐhuan nǐ de diànnǎo.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "明天星期五。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "2",
+"j": 2
+},
+"py": "Míngtiān xīngqīwǔ.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我是学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ shì xué·shēng.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "今天星期天。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 1
+},
+"py": "Jīntiān xīngqītiān.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我有一台新电脑。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ yǒu yì tái xīn diànnǎo.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "我会说汉语。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 1,
+"k": "2",
+"j": 0
+},
+"py": "Wǒ huì shuō Hànyǔ.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "你是哪国人？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 1,
+"k": "2",
+"j": 1
+},
+"py": "Nǐ shì nǎ guó rén?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "这是我的电脑。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 1,
+"k": "2",
+"j": 2
+},
+"py": "Zhè shì wǒ de diànnǎo.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "这是电脑。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 0
+},
+"py": "Zhè shì diànnǎo.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我很忙。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 1
+},
+"py": "Wǒ hěn máng.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我会做饭。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ huì zuò fàn.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "我会做面条儿。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 2,
+"k": "2",
+"j": 0
+},
+"py": "Wǒ huì zuò miàntiáor.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "今天星期几？",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 2,
+"k": "2",
+"j": 1
+},
+"py": "Jīntiān xīngqī jǐ?",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "她是中国人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 2,
+"k": "2",
+"j": 2
+},
+"py": "Tā shì Zhōngguó rén.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "今天星期日。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 0
+},
+"py": "Jīntiān xīngqīrì.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "今天我休息。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 1
+},
+"py": "Jīntiān wǒ xiūxi.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "我很好。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 3,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ hěn hǎo.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "九月八号。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 0
+},
+"py": "Jiǔ yuè bā hào.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "我会做饭。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 1
+},
+"py": "Wǒ huì zuò fàn.",
+"co": false
+},
+{
+"giong": "nu3",
+"han": "我今年二十岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 3,
+"k": "3",
+"j": 2
+},
+"py": "Wǒ jīnnián èrshí suì.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我喜欢吃饭。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ xǐhuan chī fàn.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我是杨同乐。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 1
+},
+"py": "Wǒ shì Yáng Tónglè.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我不想吃。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 4,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ bù xiǎng chī.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我会做。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 0
+},
+"py": "Wǒ huì zuò.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "星期天我休息。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 1
+},
+"py": "Xīngqītiān wǒ xiūxi.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "这些菜很好吃。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 4,
+"k": "3",
+"j": 2
+},
+"py": "Zhèxiē cài hěn hǎochī.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我下班。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 5,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ xiàbān.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我会做饭。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 5,
+"k": "1",
+"j": 1
+},
+"py": "Wǒ huì zuò fàn.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "今天星期日。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 5,
+"k": "1",
+"j": 2
+},
+"py": "Jīntiān xīngqīrì.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "我不会做饭。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 5,
+"k": "3",
+"j": 0
+},
+"py": "Wǒ bú huì zuò fàn.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "这是电脑。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 5,
+"k": "3",
+"j": 1
+},
+"py": "Zhè shì diànnǎo.",
+"co": false
+},
+{
+"giong": "nam3",
+"han": "今天我休息。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/bai/bai-5.json",
+"loai": "nh",
+"i": 5,
+"k": "3",
+"j": 2
+},
+"py": "Jīntiān wǒ xiūxi.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "没关系！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 0
+},
+"py": "Méi guānxi!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 1
+},
+"py": "Bú kèqi!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "对不起！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 2
+},
+"py": "Duìbuqǐ!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 0
+},
+"py": "Bú kèqi!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "没关系！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 1
+},
+"py": "Méi guānxi!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "谢谢你！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 2
+},
+"py": "Xièxie nǐ!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 0
+},
+"py": "Bú kèqi!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "你好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 1
+},
+"py": "Nǐ hǎo!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "再见！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 2
+},
+"py": "Zàijiàn!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "没关系！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 0
+},
+"py": "Méi guānxi!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "对不起！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 1
+},
+"py": "Duìbuqǐ!",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "你们好！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-1-2.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 2
+},
+"py": "Nǐmen hǎo!",
+"co": true
+},
+{
+"giong": "nu2",
+"han": "我是学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ shì xué·shēng.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我是越南人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 1
+},
+"py": "Wǒ shì Yuènán rén.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我很好。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ hěn hǎo.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我叫李月。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 0
+},
+"py": "Wǒ jiào Lǐ Yuè.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我是中国人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 1
+},
+"py": "Wǒ shì Zhōngguó rén.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "谢谢你！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 2
+},
+"py": "Xièxie nǐ!",
+"co": false
+},
+{
+"giong": "nu4",
+"han": "我是老师。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ shì lǎoshī.",
+"co": false
+},
+{
+"giong": "nu4",
+"han": "我很好。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 1
+},
+"py": "Wǒ hěn hǎo.",
+"co": false
+},
+{
+"giong": "nu4",
+"han": "我是越南人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ shì Yuènán rén.",
+"co": false
+},
+{
+"giong": "nu4",
+"han": "我姓阮。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 0
+},
+"py": "Wǒ xìng Ruǎn.",
+"co": false
+},
+{
+"giong": "nu4",
+"han": "我是老师。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 1
+},
+"py": "Wǒ shì lǎoshī.",
+"co": false
+},
+{
+"giong": "nu4",
+"han": "不客气！",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-3.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 2
+},
+"py": "Bú kèqi!",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "她学汉语。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 0
+},
+"py": "Tā xué Hànyǔ.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "她很好。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 1
+},
+"py": "Tā hěn hǎo.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "她是中国人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 2
+},
+"py": "Tā shì Zhōngguó rén.",
+"co": true
+},
+{
+"giong": "nu2",
+"han": "我叫李月。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 0
+},
+"py": "Wǒ jiào Lǐ Yuè.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "我是老师。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 1
+},
+"py": "Wǒ shì lǎoshī.",
+"co": false
+},
+{
+"giong": "nu2",
+"han": "她是我朋友。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 2
+},
+"py": "Tā shì wǒ péngyou.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "我学汉语。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "4",
+"j": 0
+},
+"py": "Wǒ xué Hànyǔ.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "我叫小明。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "4",
+"j": 1
+},
+"py": "Wǒ jiào Xiǎomíng.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "他是我同学。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 0,
+"k": "4",
+"j": 2
+},
+"py": "Tā shì wǒ tóngxué.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我是学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ shì xué·shēng.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我是越南人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 1
+},
+"py": "Wǒ shì Yuènán rén.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我叫大卫。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ jiào Dàwèi.",
+"co": true
+},
+{
+"giong": "nam1",
+"han": "我是越南人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "2",
+"j": 0
+},
+"py": "Wǒ shì Yuènán rén.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "他是我朋友。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "2",
+"j": 1
+},
+"py": "Tā shì wǒ péngyou.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "我叫小明。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "2",
+"j": 2
+},
+"py": "Wǒ jiào Xiǎomíng.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "他叫大卫。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "4",
+"j": 0
+},
+"py": "Tā jiào Dàwèi.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "他是我的老师。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "4",
+"j": 1
+},
+"py": "Tā shì wǒ de lǎoshī.",
+"co": false
+},
+{
+"giong": "nam1",
+"han": "他学汉语。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-4.json",
+"loai": "nh",
+"i": 1,
+"k": "4",
+"j": 2
+},
+"py": "Tā xué Hànyǔ.",
+"co": false
+},
+{
+"giong": "nu1",
+"han": "我今年二十岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 0
+},
+"py": "Wǒ jīnnián èrshí suì.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我是河内人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 1
+},
+"py": "Wǒ shì Hénèi rén.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我学汉语。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "1",
+"j": 2
+},
+"py": "Wǒ xué Hànyǔ.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我今年十九岁。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 0
+},
+"py": "Wǒ jīnnián shíjiǔ suì.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我是学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 1
+},
+"py": "Wǒ shì xué·shēng.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我家有三口人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "3",
+"j": 2
+},
+"py": "Wǒ jiā yǒu sān kǒu rén.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "她是我妹妹。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "5",
+"j": 0
+},
+"py": "Tā shì wǒ mèimei.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "她是小学生。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "5",
+"j": 1
+},
+"py": "Tā shì xiǎoxué·shēng.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "她有很多朋友。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 0,
+"k": "5",
+"j": 2
+},
+"py": "Tā yǒu hěn duō péngyou.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "他们是河内人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 0
+},
+"py": "Tāmen shì Hénèi rén.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "他们很好。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 1
+},
+"py": "Tāmen hěn hǎo.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "他们是我的家人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 1,
+"k": "1",
+"j": 2
+},
+"py": "Tāmen shì wǒ de jiārén.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "他是汉语老师。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 0
+},
+"py": "Tā shì Hànyǔ lǎoshī.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "他是中国人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 1
+},
+"py": "Tā shì Zhōngguó rén.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "他有两个儿子。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 1,
+"k": "3",
+"j": 2
+},
+"py": "Tā yǒu liǎng ge érzi.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我们学汉语。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 0
+},
+"py": "Wǒmen xué Hànyǔ.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我们是越南人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 1
+},
+"py": "Wǒmen shì Yuènán rén.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我们班的老师很好。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 2,
+"k": "1",
+"j": 2
+},
+"py": "Wǒmen bān de lǎoshī hěn hǎo.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我们的老师是中国人。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 2,
+"k": "3",
+"j": 0
+},
+"py": "Wǒmen de lǎoshī shì Zhōngguó rén.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "我们学汉语。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 2,
+"k": "3",
+"j": 1
+},
+"py": "Wǒmen xué Hànyǔ.",
+"co": true
+},
+{
+"giong": "nu1",
+"han": "老师很好。",
+"noi": {
+"f": "/home/claude/tiengtrungdieuky-qmhy/data/hsk2/bai-5.json",
+"loai": "nh",
+"i": 2,
+"k": "3",
+"j": 2
+},
+"py": "Lǎoshī hěn hǎo.",
+"co": true
+}
+]

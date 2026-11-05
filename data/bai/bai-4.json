@@ -46,11 +46,11 @@
    "Câu 1": "A：王一飞老师有多少个学生？\nB：她的学生很多。",
    "Pinyin câu 1": "A: Wáng Yīfēi lǎoshī yǒu duōshao ge xué·shēng?\nB: Tā de xué·shēng hěn duō.",
    "Nghĩa câu 1": "A: Cô Vương Nhất Phi có bao nhiêu học sinh?\nB: Học sinh của cô ấy rất nhiều.",
-   "Đọc câu 1": "assets/am/cau/ef103f28c8.mp3",
+   "Đọc câu 1": "assets/am/nam1/2ac6069fba.mp3|assets/am/cau/7222609ea3.mp3",
    "Câu 2": "A：她有多少个学生？\nB：她有二十个学生。",
    "Pinyin câu 2": "A: Tā yǒu duōshao ge xué·shēng?\nB: Tā yǒu èrshí ge xué·shēng.",
    "Nghĩa câu 2": "A: Cô ấy có bao nhiêu học sinh?\nB: Cô ấy có hai mươi học sinh.",
-   "Đọc câu 2": "assets/am/cau/b9d819e77f.mp3"
+   "Đọc câu 2": "assets/am/nam1/8c64d6b80b.mp3|assets/am/cau/39b907e186.mp3"
   },
   {
    "Mã": "1-0120",
@@ -151,7 +151,7 @@
    "Câu 1": "A：我家有四口人，你家呢？\nB：我家也有四口人。",
    "Pinyin câu 1": "A: Wǒ jiā yǒu sì kǒu rén, nǐ jiā ne?\nB: Wǒ jiā yě yǒu sì kǒu rén.",
    "Nghĩa câu 1": "A: Nhà mình có bốn người, còn nhà bạn?\nB: Nhà mình cũng có bốn người.",
-   "Đọc câu 1": "assets/am/cau/c207908f73.mp3",
+   "Đọc câu 1": "assets/am/nam1/32b527a8ba.mp3|assets/am/cau/05daef4070.mp3",
    "Câu 2": "他们家有几口人？",
    "Pinyin câu 2": "Tāmen jiā yǒu jǐ kǒu rén?",
    "Nghĩa câu 2": "Nhà họ có mấy người?",
@@ -193,7 +193,7 @@
    "Câu 1": "A：你家有几口人？\nB：我家有四口人。",
    "Pinyin câu 1": "A: Nǐ jiā yǒu jǐ kǒu rén?\nB: Wǒ jiā yǒu sì kǒu rén.",
    "Nghĩa câu 1": "A: Nhà bạn có mấy người?\nB: Nhà mình có bốn người.",
-   "Đọc câu 1": "assets/am/cau/a786bb3750.mp3",
+   "Đọc câu 1": "assets/am/nam1/1aef7c8693.mp3|assets/am/cau/b262f802ce.mp3",
    "Câu 2": "他家有六口人。",
    "Pinyin câu 2": "Tā jiā yǒu liù kǒu rén.",
    "Nghĩa câu 2": "Nhà anh ấy có sáu người.",
@@ -281,7 +281,7 @@
    "Câu 2": "A：他们家有几口人？\nB：他们家有四口人，爸爸、妈妈和两个孩子。",
    "Pinyin câu 2": "A: Tāmen jiā yǒu jǐ kǒu rén?\nB: Tāmen jiā yǒu sì kǒu rén, bàba, māma hé liǎng ge háizi.",
    "Nghĩa câu 2": "A: Nhà họ có mấy người?\nB: Nhà họ có bốn người: bố, mẹ và hai đứa con.",
-   "Đọc câu 2": "assets/am/cau/5d70b2333a.mp3"
+   "Đọc câu 2": "assets/am/nam1/a08321124d.mp3|assets/am/cau/6655d6759a.mp3"
   },
   {
    "Mã": "1-0097",
@@ -302,7 +302,7 @@
    "Câu 2": "A：这是您儿子吗？\nB：是的。",
    "Pinyin câu 2": "A: Zhè shì nín érzi ma?\nB: Shì de.",
    "Nghĩa câu 2": "A: Đây là con trai chị à?\nB: Đúng vậy.",
-   "Đọc câu 2": "assets/am/cau/afc133ede0.mp3"
+   "Đọc câu 2": "assets/am/nam1/8a1e38d472.mp3|assets/am/cau/6d4cec4e4d.mp3"
   },
   {
    "Mã": "1-0135",
@@ -361,7 +361,7 @@
    "Câu 1": "A：你弟弟今年几岁？\nB：他今年两岁了。",
    "Pinyin câu 1": "A: Nǐ dìdi jīnnián jǐ suì?\nB: Tā jīnnián liǎng suì le.",
    "Nghĩa câu 1": "A: Em trai bạn năm nay mấy tuổi?\nB: Năm nay em ấy hai tuổi rồi.",
-   "Đọc câu 1": "assets/am/cau/4645d1864c.mp3",
+   "Đọc câu 1": "assets/am/nam1/d9d5d8ce0c.mp3|assets/am/cau/d9aa016adf.mp3",
    "Câu 2": "我今年十岁了，是学生。",
    "Pinyin câu 2": "Wǒ jīnnián shí suì le, shì xué·shēng.",
    "Nghĩa câu 2": "Năm nay tôi mười tuổi rồi, là học sinh.",
@@ -382,7 +382,7 @@
    "Câu 1": "A：您儿子几岁？\nB：他今年五岁。",
    "Pinyin câu 1": "A: Nín érzi jǐ suì?\nB: Tā jīnnián wǔ suì.",
    "Nghĩa câu 1": "A: Con trai chị mấy tuổi?\nB: Năm nay cháu năm tuổi.",
-   "Đọc câu 1": "assets/am/cau/7fa38d3b23.mp3",
+   "Đọc câu 1": "assets/am/nam1/109c9baaad.mp3|assets/am/cau/23dbca11dd.mp3",
    "Câu 2": "他有两个妹妹。",
    "Pinyin câu 2": "Tā yǒu liǎng ge mèimei.",
    "Nghĩa câu 2": "Anh ấy có hai em gái.",
@@ -403,7 +403,7 @@
    "Câu 1": "A：今年是哪一年？\nB：今年是二〇二六年。",
    "Pinyin câu 1": "A: Jīnnián shì nǎ yì nián?\nB: Jīnnián shì èrlíng'èrliù nián.",
    "Nghĩa câu 1": "A: Năm nay là năm nào?\nB: Năm nay là năm 2026.",
-   "Đọc câu 1": "assets/am/cau/4528179d03.mp3",
+   "Đọc câu 1": "assets/am/nam1/4c99429015.mp3|assets/am/cau/cd81145110.mp3",
    "Câu 2": "我今年二十岁。",
    "Pinyin câu 2": "Wǒ jīnnián èrshí suì.",
    "Nghĩa câu 2": "Năm nay tôi hai mươi tuổi.",
@@ -424,7 +424,7 @@
    "Câu 1": "A：你姐姐多高？\nB：她一米六。",
    "Pinyin câu 1": "A: Nǐ jiějie duō gāo?\nB: Tā yì mǐ liù.",
    "Nghĩa câu 1": "A: Chị gái bạn cao bao nhiêu?\nB: Chị ấy cao một mét sáu.",
-   "Đọc câu 1": "assets/am/cau/95e2746fcc.mp3",
+   "Đọc câu 1": "assets/am/nam1/a11eaa1c63.mp3|assets/am/cau/73d9a027fc.mp3",
    "Câu 2": "他的中国朋友很多。",
    "Pinyin câu 2": "Tā de Zhōngguó péngyou hěn duō.",
    "Nghĩa câu 2": "Anh ấy có rất nhiều bạn người Trung Quốc.",
@@ -445,11 +445,11 @@
    "Câu 1": "A：你哥哥多大？\nB：他今年二十岁。",
    "Pinyin câu 1": "A: Nǐ gēge duō dà?\nB: Tā jīnnián èrshí suì.",
    "Nghĩa câu 1": "A: Anh trai bạn bao nhiêu tuổi?\nB: Năm nay anh ấy hai mươi tuổi.",
-   "Đọc câu 1": "assets/am/cau/23750107f6.mp3",
+   "Đọc câu 1": "assets/am/nam1/0bab9c23ed.mp3|assets/am/cau/d750680ae0.mp3",
    "Câu 2": "A：您女儿多大？\nB：她今年十二。",
    "Pinyin câu 2": "A: Nín nǚ'ér duō dà?\nB: Tā jīnnián shí'èr.",
    "Nghĩa câu 2": "A: Con gái chị bao nhiêu tuổi?\nB: Năm nay cháu mười hai.",
-   "Đọc câu 2": "assets/am/cau/b8d5a4843a.mp3"
+   "Đọc câu 2": "assets/am/nam1/936e026dff.mp3|assets/am/cau/4b9a287919.mp3"
   },
   {
    "Mã": "4-0933",
@@ -2789,7 +2789,7 @@
     "你家有几口人？",
     "Nǐ jiā yǒu jǐ kǒu rén?",
     "Nhà bạn có mấy người?",
-    "assets/am/cau/1aef7c8693.mp3"
+    "assets/am/nam1/1aef7c8693.mp3"
    ],
    "dap": [
     "我家有五口人。",
@@ -2824,7 +2824,7 @@
     "你有哥哥吗？",
     "Nǐ yǒu gēge ma?",
     "Bạn có anh trai không?",
-    "assets/am/cau/234a7219c8.mp3"
+    "assets/am/nam1/234a7219c8.mp3"
    ],
    "dap": [
     "我没有哥哥，我有一个妹妹。",
@@ -2859,7 +2859,7 @@
     "你有几个孩子？",
     "Nǐ yǒu jǐ ge háizi?",
     "Chị có mấy người con?",
-    "assets/am/cau/097717613c.mp3"
+    "assets/am/nam1/097717613c.mp3"
    ],
    "dap": [
     "我有两个孩子，一个儿子、一个女儿。",
@@ -2894,7 +2894,7 @@
     "你儿子今年几岁？",
     "Nǐ érzi jīnnián jǐ suì?",
     "Con trai chị năm nay mấy tuổi?",
-    "assets/am/cau/1733788b5f.mp3"
+    "assets/am/nam1/1733788b5f.mp3"
    ],
    "dap": [
     "他今年八岁。",
@@ -2929,7 +2929,7 @@
     "你爷爷多大年纪？",
     "Nǐ yéye duō dà niánjì?",
     "Ông nội bạn bao nhiêu tuổi?",
-    "assets/am/cau/5fe2eaf4fa.mp3"
+    "assets/am/nam1/5fe2eaf4fa.mp3"
    ],
    "dap": [
     "他今年八十岁了。",
@@ -2964,7 +2964,7 @@
     "王老师有多少个学生？",
     "Wáng lǎoshī yǒu duōshao ge xué·shēng?",
     "Cô Vương có bao nhiêu học sinh?",
-    "assets/am/cau/7e9694401b.mp3"
+    "assets/am/nam1/7e9694401b.mp3"
    ],
    "dap": [
     "她有二十个学生。",
@@ -2999,7 +2999,7 @@
     "你哥哥多大？",
     "Nǐ gēge duō dà?",
     "Anh trai bạn bao nhiêu tuổi?",
-    "assets/am/cau/0bab9c23ed.mp3"
+    "assets/am/nam1/0bab9c23ed.mp3"
    ],
    "dap": [
     "他今年二十五岁。",
@@ -3034,7 +3034,7 @@
     "我是越南人，你呢？",
     "Wǒ shì Yuènán rén, nǐ ne?",
     "Mình là người Việt Nam, còn bạn?",
-    "assets/am/cau/7dd8b8bf85.mp3"
+    "assets/am/nam1/7dd8b8bf85.mp3"
    ],
    "dap": [
     "我是中国人。",
@@ -3069,7 +3069,7 @@
     "我有两个妹妹，你呢？",
     "Wǒ yǒu liǎng ge mèimei, nǐ ne?",
     "Mình có hai em gái, còn bạn?",
-    "assets/am/cau/ead1d3cfdf.mp3"
+    "assets/am/nam1/ead1d3cfdf.mp3"
    ],
    "dap": [
     "我没有妹妹。",
@@ -3104,7 +3104,7 @@
     "杨同乐是谁？",
     "Yáng Tónglè shì shéi?",
     "Dương Đồng Lạc là ai?",
-    "assets/am/cau/d96180eefb.mp3"
+    "assets/am/nam1/d96180eefb.mp3"
    ],
    "dap": [
     "他是王一雪的同事。",
@@ -3139,7 +3139,7 @@
     "今年是哪一年？",
     "Jīnnián shì nǎ yì nián?",
     "Năm nay là năm nào?",
-    "assets/am/cau/4c99429015.mp3"
+    "assets/am/nam1/4c99429015.mp3"
    ],
    "dap": [
     "今年是二〇二六年。",
@@ -3174,7 +3174,7 @@
     "你有中国朋友吗？",
     "Nǐ yǒu Zhōngguó péngyou ma?",
     "Bạn có bạn người Trung Quốc không?",
-    "assets/am/cau/3a3337099e.mp3"
+    "assets/am/nam1/3a3337099e.mp3"
    ],
    "dap": [
     "我有不少中国朋友。",
@@ -3209,7 +3209,7 @@
     "您女儿几岁了？",
     "Nín nǚ'ér jǐ suì le?",
     "Con gái chị mấy tuổi rồi?",
-    "assets/am/cau/b0e47ed564.mp3"
+    "assets/am/nam1/b0e47ed564.mp3"
    ],
    "dap": [
     "她今年三岁了。",
@@ -3244,7 +3244,7 @@
     "你家有谁？",
     "Nǐ jiā yǒu shéi?",
     "Nhà bạn có những ai?",
-    "assets/am/cau/d6eca350ae.mp3"
+    "assets/am/nam1/d6eca350ae.mp3"
    ],
    "dap": [
     "我家有爸爸、妈妈、哥哥和我。",
@@ -3279,7 +3279,7 @@
     "王一雪有几个哥哥？",
     "Wáng Yīxuě yǒu jǐ ge gēge?",
     "Vương Nhất Tuyết có mấy anh trai?",
-    "assets/am/cau/3882ea3f77.mp3"
+    "assets/am/nam1/3882ea3f77.mp3"
    ],
    "dap": [
     "她有两个哥哥。",
@@ -3315,7 +3315,7 @@
     "杨同乐家有几口人？",
     "Yáng Tónglè jiā yǒu jǐ kǒu rén?",
     "Nhà Dương Đồng Lạc có mấy người?",
-    "assets/am/cau/7f251cf5cd.mp3"
+    "assets/am/nam1/7f251cf5cd.mp3"
    ],
    "dap": [
     "他家有四口人。",
@@ -3351,7 +3351,7 @@
     "杨同乐有没有哥哥？",
     "Yáng Tónglè yǒu méi·yǒu gēge?",
     "Dương Đồng Lạc có anh trai không?",
-    "assets/am/cau/1eb23050d4.mp3"
+    "assets/am/nam1/1eb23050d4.mp3"
    ],
    "dap": [
     "没有，他没有哥哥。",
@@ -3387,7 +3387,7 @@
     "王一雪的儿子几岁？",
     "Wáng Yīxuě de érzi jǐ suì?",
     "Con trai của Vương Nhất Tuyết mấy tuổi?",
-    "assets/am/cau/dc9b279776.mp3"
+    "assets/am/nam1/dc9b279776.mp3"
    ],
    "dap": [
     "他今年五岁。",
@@ -3423,7 +3423,7 @@
     "一飞有多少个学生？",
     "Yīfēi yǒu duōshao ge xué·shēng?",
     "Nhất Phi có bao nhiêu học sinh?",
-    "assets/am/cau/bd97be5239.mp3"
+    "assets/am/nam1/bd97be5239.mp3"
    ],
    "dap": [
     "她有二十个学生。",
@@ -4465,7 +4465,7 @@
      "han": "你家有几口人？",
      "py": "Nǐ jiā yǒu jǐ kǒu rén?",
      "viet": "Nhà bạn có mấy người?",
-     "doc": "assets/am/cau/1aef7c8693.mp3"
+     "doc": "assets/am/nam1/1aef7c8693.mp3"
     },
     {
      "han": "我家有四口人。你家呢？",
@@ -4477,7 +4477,7 @@
      "han": "我家有三口人，爸爸、妈妈和我。",
      "py": "Wǒ jiā yǒu sān kǒu rén, bàba, māma hé wǒ.",
      "viet": "Nhà mình có ba người: bố, mẹ và mình.",
-     "doc": "assets/am/cau/aaeb5969b1.mp3"
+     "doc": "assets/am/nam1/aaeb5969b1.mp3"
     }
    ],
    "nhieu": {
@@ -4502,17 +4502,17 @@
      {
       "han": "我没有哥哥。",
       "py": "Wǒ méi·yǒu gēge.",
-      "doc": "assets/am/cau/cd2433cc78.mp3"
+      "doc": "assets/am/nam1/cd2433cc78.mp3"
      },
      {
       "han": "我是学生。",
       "py": "Wǒ shì xué·shēng.",
-      "doc": "assets/am/cau/9d9749882a.mp3"
+      "doc": "assets/am/nam1/9d9749882a.mp3"
      },
      {
       "han": "我哥哥很忙。",
       "py": "Wǒ gēge hěn máng.",
-      "doc": "assets/am/cau/29d2c01205.mp3"
+      "doc": "assets/am/nam1/29d2c01205.mp3"
      }
     ]
    },
@@ -4525,7 +4525,7 @@
      "han": "这是您女儿吗？",
      "py": "Zhè shì nín nǚ'ér ma?",
      "viet": "Đây là con gái chị à?",
-     "doc": "assets/am/cau/3eb1d5ec13.mp3"
+     "doc": "assets/am/nam1/3eb1d5ec13.mp3"
     },
     {
      "han": "是的，这是我女儿。",
@@ -4537,7 +4537,7 @@
      "han": "她几岁了？",
      "py": "Tā jǐ suì le?",
      "viet": "Cháu mấy tuổi rồi?",
-     "doc": "assets/am/cau/414d339de1.mp3"
+     "doc": "assets/am/nam1/414d339de1.mp3"
     },
     {
      "han": "她今年六岁了。",
@@ -4591,7 +4591,7 @@
      "han": "你有孩子吗？",
      "py": "Nǐ yǒu háizi ma?",
      "viet": "Anh có con chưa?",
-     "doc": "assets/am/cau/978db5af8d.mp3"
+     "doc": "assets/am/nam1/978db5af8d.mp3"
     },
     {
      "han": "有，我有两个孩子。",
@@ -4603,7 +4603,7 @@
      "han": "几个儿子？几个女儿？",
      "py": "Jǐ ge érzi? Jǐ ge nǚ'ér?",
      "viet": "Mấy con trai? Mấy con gái?",
-     "doc": "assets/am/cau/77d889dfe1.mp3"
+     "doc": "assets/am/nam1/77d889dfe1.mp3"
     },
     {
      "han": "一个儿子，一个女儿。",
@@ -4657,25 +4657,25 @@
      "han": "一飞忙吗？",
      "py": "Yīfēi máng ma?",
      "viet": "Nhất Phi có bận không?",
-     "doc": "assets/am/cau/73c1e229bb.mp3"
+     "doc": "assets/am/nam3/73c1e229bb.mp3"
     },
     {
      "han": "她很忙。",
      "py": "Tā hěn máng.",
      "viet": "Cô ấy rất bận.",
-     "doc": "assets/am/cau/6a9b9eaff9.mp3"
+     "doc": "assets/am/nu3/6a9b9eaff9.mp3"
     },
     {
      "han": "她有多少个学生？",
      "py": "Tā yǒu duōshao ge xué·shēng?",
      "viet": "Cô ấy có bao nhiêu học sinh?",
-     "doc": "assets/am/cau/8c64d6b80b.mp3"
+     "doc": "assets/am/nam3/8c64d6b80b.mp3"
     },
     {
      "han": "她有二十个学生。",
      "py": "Tā yǒu èrshí ge xué·shēng.",
      "viet": "Cô ấy có hai mươi học sinh.",
-     "doc": "assets/am/cau/39b907e186.mp3"
+     "doc": "assets/am/nu3/39b907e186.mp3"
     }
    ],
    "nhieu": {
@@ -4683,34 +4683,34 @@
      {
       "han": "她有二十个学生。",
       "py": "Tā yǒu èrshí ge xué·shēng.",
-      "doc": "assets/am/cau/39b907e186.mp3"
+      "doc": "assets/am/nu3/39b907e186.mp3"
      },
      {
       "han": "她是我妹妹。",
       "py": "Tā shì wǒ mèimei.",
-      "doc": "assets/am/cau/ad9b719dda.mp3"
+      "doc": "assets/am/nu3/ad9b719dda.mp3"
      },
      {
       "han": "她是中文老师。",
       "py": "Tā shì Zhōngwén lǎoshī.",
-      "doc": "assets/am/cau/cde07e2ffb.mp3"
+      "doc": "assets/am/nu3/cde07e2ffb.mp3"
      }
     ],
     "3": [
      {
       "han": "她很忙。",
       "py": "Tā hěn máng.",
-      "doc": "assets/am/cau/6a9b9eaff9.mp3"
+      "doc": "assets/am/nu3/6a9b9eaff9.mp3"
      },
      {
       "han": "她是中文老师。",
       "py": "Tā shì Zhōngwén lǎoshī.",
-      "doc": "assets/am/cau/cde07e2ffb.mp3"
+      "doc": "assets/am/nu3/cde07e2ffb.mp3"
      },
      {
       "han": "她没有孩子。",
       "py": "Tā méi·yǒu háizi.",
-      "doc": "assets/am/cau/697fd738c6.mp3"
+      "doc": "assets/am/nu3/697fd738c6.mp3"
      }
     ]
    },
@@ -4724,25 +4724,25 @@
      "han": "我有两个哥哥，你呢？",
      "py": "Wǒ yǒu liǎng ge gēge, nǐ ne?",
      "viet": "Tôi có hai anh trai, còn anh?",
-     "doc": "assets/am/cau/f7b20346a1.mp3"
+     "doc": "assets/am/nu3/f7b20346a1.mp3"
     },
     {
      "han": "我没有哥哥。",
      "py": "Wǒ méi·yǒu gēge.",
      "viet": "Tôi không có anh trai.",
-     "doc": "assets/am/cau/cd2433cc78.mp3"
+     "doc": "assets/am/nam3/cd2433cc78.mp3"
     },
     {
      "han": "你家有几口人？",
      "py": "Nǐ jiā yǒu jǐ kǒu rén?",
      "viet": "Nhà anh có mấy người?",
-     "doc": "assets/am/cau/1aef7c8693.mp3"
+     "doc": "assets/am/nu3/1aef7c8693.mp3"
     },
     {
      "han": "我家有四口人，爸爸、妈妈、妹妹和我。",
      "py": "Wǒ jiā yǒu sì kǒu rén, bàba, māma, mèimei hé wǒ.",
      "viet": "Nhà tôi có bốn người: bố, mẹ, em gái và tôi.",
-     "doc": "assets/am/cau/e93f57fa9b.mp3"
+     "doc": "assets/am/nam3/e93f57fa9b.mp3"
     }
    ],
    "nhieu": {
@@ -4750,34 +4750,34 @@
      {
       "han": "我家有四口人。",
       "py": "Wǒ jiā yǒu sì kǒu rén.",
-      "doc": "assets/am/cau/b262f802ce.mp3"
+      "doc": "assets/am/nam3/b262f802ce.mp3"
      },
      {
       "han": "我是中国人。",
       "py": "Wǒ shì Zhōngguó rén.",
-      "doc": "assets/am/cau/24adef1380.mp3"
+      "doc": "assets/am/nam3/24adef1380.mp3"
      },
      {
       "han": "我今年二十岁。",
       "py": "Wǒ jīnnián èrshí suì.",
-      "doc": "assets/am/cau/dc6f6c93d4.mp3"
+      "doc": "assets/am/nam3/dc6f6c93d4.mp3"
      }
     ],
     "3": [
      {
       "han": "我没有哥哥。",
       "py": "Wǒ méi·yǒu gēge.",
-      "doc": "assets/am/cau/cd2433cc78.mp3"
+      "doc": "assets/am/nam3/cd2433cc78.mp3"
      },
      {
       "han": "我有一个妹妹。",
       "py": "Wǒ yǒu yí ge mèimei.",
-      "doc": "assets/am/cau/0c22de4d4b.mp3"
+      "doc": "assets/am/nam3/0c22de4d4b.mp3"
      },
      {
       "han": "我是王一雪的同事。",
       "py": "Wǒ shì Wáng Yīxuě de tóngshì.",
-      "doc": "assets/am/cau/473b630719.mp3"
+      "doc": "assets/am/nam3/473b630719.mp3"
      }
     ]
    },
@@ -4791,37 +4791,37 @@
      "han": "这是您儿子吗？",
      "py": "Zhè shì nín érzi ma?",
      "viet": "Đây là con trai chị à?",
-     "doc": "assets/am/cau/8a1e38d472.mp3"
+     "doc": "assets/am/nam3/8a1e38d472.mp3"
     },
     {
      "han": "是的。我有两个孩子，一个儿子，一个女儿。",
      "py": "Shì de. Wǒ yǒu liǎng ge háizi, yí ge érzi, yí ge nǚ'ér.",
      "viet": "Đúng vậy. Tôi có hai người con, một con trai, một con gái.",
-     "doc": "assets/am/cau/921546edec.mp3"
+     "doc": "assets/am/nu3/921546edec.mp3"
     },
     {
      "han": "您儿子几岁？",
      "py": "Nín érzi jǐ suì?",
      "viet": "Con trai chị mấy tuổi?",
-     "doc": "assets/am/cau/109c9baaad.mp3"
+     "doc": "assets/am/nam3/109c9baaad.mp3"
     },
     {
      "han": "他今年五岁。",
      "py": "Tā jīnnián wǔ suì.",
      "viet": "Năm nay cháu năm tuổi.",
-     "doc": "assets/am/cau/23dbca11dd.mp3"
+     "doc": "assets/am/nu3/23dbca11dd.mp3"
     },
     {
      "han": "您女儿多大？",
      "py": "Nín nǚ'ér duō dà?",
      "viet": "Con gái chị bao nhiêu tuổi?",
-     "doc": "assets/am/cau/936e026dff.mp3"
+     "doc": "assets/am/nam3/936e026dff.mp3"
     },
     {
      "han": "她今年十二。",
      "py": "Tā jīnnián shí'èr.",
      "viet": "Năm nay cháu mười hai.",
-     "doc": "assets/am/cau/4b9a287919.mp3"
+     "doc": "assets/am/nu3/4b9a287919.mp3"
     }
    ],
    "nhieu": {
@@ -4829,51 +4829,51 @@
      {
       "han": "他今年五岁。",
       "py": "Tā jīnnián wǔ suì.",
-      "doc": "assets/am/cau/23dbca11dd.mp3"
+      "doc": "assets/am/nu3/23dbca11dd.mp3"
      },
      {
       "han": "我没有哥哥。",
       "py": "Wǒ méi·yǒu gēge.",
-      "doc": "assets/am/cau/cd2433cc78.mp3"
+      "doc": "assets/am/nu3/cd2433cc78.mp3"
      },
      {
       "han": "我是老师。",
       "py": "Wǒ shì lǎoshī.",
-      "doc": "assets/am/cau/f213ef9af4.mp3"
+      "doc": "assets/am/nu3/f213ef9af4.mp3"
      }
     ],
     "3": [
      {
       "han": "我有两个孩子。",
       "py": "Wǒ yǒu liǎng ge háizi.",
-      "doc": "assets/am/cau/e31189aa6d.mp3"
+      "doc": "assets/am/nu3/e31189aa6d.mp3"
      },
      {
       "han": "他是我儿子。",
       "py": "Tā shì wǒ érzi.",
-      "doc": "assets/am/cau/cd744bcbe4.mp3"
+      "doc": "assets/am/nu3/cd744bcbe4.mp3"
      },
      {
       "han": "他很好。",
       "py": "Tā hěn hǎo.",
-      "doc": "assets/am/cau/2d8a86662a.mp3"
+      "doc": "assets/am/nu3/2d8a86662a.mp3"
      }
     ],
     "5": [
      {
       "han": "她是我女儿。",
       "py": "Tā shì wǒ nǚ'ér.",
-      "doc": "assets/am/cau/d81e578c51.mp3"
+      "doc": "assets/am/nu3/d81e578c51.mp3"
      },
      {
       "han": "我有一个女儿。",
       "py": "Wǒ yǒu yí ge nǚ'ér.",
-      "doc": "assets/am/cau/1b68f3a98a.mp3"
+      "doc": "assets/am/nu3/1b68f3a98a.mp3"
      },
      {
       "han": "她很好。",
       "py": "Tā hěn hǎo.",
-      "doc": "assets/am/cau/dc35c2a59a.mp3"
+      "doc": "assets/am/nu3/dc35c2a59a.mp3"
      }
     ]
    },

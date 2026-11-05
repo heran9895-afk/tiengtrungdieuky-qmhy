@@ -13,7 +13,8 @@ def chuan(s):
 def tao(them=None):
     M = json.load(open(OUT)) if os.path.exists(OUT) else {}
     def add(t, f):
-        if t and isinstance(f, str) and FILE.search(f) and os.path.exists(os.path.join(R, f)): M.setdefault(chuan(t), f)
+        # file giọng riêng của nhân vật (assets/am/nam1/, nu2/…) không đưa vào bảng tra chung: cùng câu ở chỗ khác vẫn đọc giọng Sulafat
+        if t and isinstance(f, str) and FILE.search(f) and not re.match(r'assets/am/(nam|nu)\d/', f) and os.path.exists(os.path.join(R, f)): M.setdefault(chuan(t), f)
     for k, f in (them or {}).items(): add(k, f)
     for p in sorted(glob.glob(os.path.join(R, 'data/bai/bai-*.json'))):
         d = json.load(open(p))

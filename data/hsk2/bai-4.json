@@ -130,7 +130,7 @@
    "Câu 1": "A：你是哪国人？\nB：我是越南人。",
    "Pinyin câu 1": "A: Nǐ shì nǎ guó rén?\nB: Wǒ shì Yuènán rén.",
    "Nghĩa câu 1": "A: Bạn là người nước nào?\nB: Mình là người Việt Nam.",
-   "Đọc câu 1": "你是哪国人？我是越南人。",
+   "Đọc câu 1": "assets/am/nam1/c1a9246f49.mp3|assets/am/cau/4469b0e37e.mp3",
    "Câu 2": "她是韩国人，不是日本人。",
    "Pinyin câu 2": "Tā shì Hánguó rén, bú shì Rìběn rén.",
    "Nghĩa câu 2": "Cô ấy là người Hàn Quốc, không phải người Nhật.",
@@ -1010,7 +1010,8 @@
    "hoi": [
     "你是哪国人？",
     "Nǐ shì nǎ guó rén?",
-    "Bạn là người nước nào?"
+    "Bạn là người nước nào?",
+    "assets/am/nam1/c1a9246f49.mp3"
    ],
    "dap": [
     "我是越南人。",
@@ -1040,7 +1041,8 @@
    "hoi": [
     "她是谁？",
     "Tā shì shéi?",
-    "Cô ấy là ai?"
+    "Cô ấy là ai?",
+    "assets/am/nam1/1bae105976.mp3"
    ],
    "dap": [
     "她是我的汉语老师。",
@@ -1070,7 +1072,8 @@
    "hoi": [
     "你学什么？",
     "Nǐ xué shénme?",
-    "Bạn học gì?"
+    "Bạn học gì?",
+    "assets/am/nam1/4512cf0ac8.mp3"
    ],
    "dap": [
     "我学汉语。",
@@ -1100,7 +1103,8 @@
    "hoi": [
     "我是中国人，你呢？",
     "Wǒ shì Zhōngguó rén, nǐ ne?",
-    "Mình là người Trung Quốc, còn bạn?"
+    "Mình là người Trung Quốc, còn bạn?",
+    "assets/am/nam1/4a81b204c9.mp3"
    ],
    "dap": [
     "我是美国人。",
@@ -1130,7 +1134,8 @@
    "hoi": [
     "谁是你的汉语老师？",
     "Shéi shì nǐ de Hànyǔ lǎoshī?",
-    "Ai là giáo viên tiếng Trung của bạn?"
+    "Ai là giáo viên tiếng Trung của bạn?",
+    "assets/am/nam1/114fd6367a.mp3"
    ],
    "dap": [
     "李月老师是我的汉语老师。",
@@ -1160,7 +1165,8 @@
    "hoi": [
     "他是你同学吗？",
     "Tā shì nǐ tóngxué ma?",
-    "Anh ấy là bạn học của bạn à?"
+    "Anh ấy là bạn học của bạn à?",
+    "assets/am/nam1/4b85bffe86.mp3"
    ],
    "dap": [
     "他不是我同学，他是我朋友。",
@@ -1190,7 +1196,8 @@
    "hoi": [
     "你的汉语老师是哪国人？",
     "Nǐ de Hànyǔ lǎoshī shì nǎ guó rén?",
-    "Giáo viên tiếng Trung của bạn là người nước nào?"
+    "Giáo viên tiếng Trung của bạn là người nước nào?",
+    "assets/am/nam1/0f297c427c.mp3"
    ],
    "dap": [
     "她是中国人。",
@@ -1220,7 +1227,8 @@
    "hoi": [
     "他学汉语吗？",
     "Tā xué Hànyǔ ma?",
-    "Anh ấy học tiếng Trung à?"
+    "Anh ấy học tiếng Trung à?",
+    "assets/am/nam1/e6afa16c8b.mp3"
    ],
    "dap": [
     "他不学汉语，他学日语。",
@@ -1250,7 +1258,8 @@
    "hoi": [
     "你们是哪国人？",
     "Nǐmen shì nǎ guó rén?",
-    "Các bạn là người nước nào?"
+    "Các bạn là người nước nào?",
+    "assets/am/nam1/c929a49d93.mp3"
    ],
    "dap": [
     "我们是韩国人。",
@@ -1280,7 +1289,8 @@
    "hoi": [
     "她是谁的朋友？",
     "Tā shì shéi de péngyou?",
-    "Cô ấy là bạn của ai?"
+    "Cô ấy là bạn của ai?",
+    "assets/am/nam1/de9ff612fb.mp3"
    ],
    "dap": [
     "她是李月的朋友。",
@@ -1683,70 +1693,84 @@
     {
      "han": "她是谁？",
      "py": "Tā shì shéi?",
-     "viet": "Cô ấy là ai?"
+     "viet": "Cô ấy là ai?",
+     "doc": "assets/am/nam1/1bae105976.mp3"
     },
     {
      "han": "她是我的汉语老师，她叫李月。",
      "py": "Tā shì wǒ de Hànyǔ lǎoshī, tā jiào Lǐ Yuè.",
-     "viet": "Cô ấy là giáo viên tiếng Trung của mình, cô ấy tên là Lý Nguyệt."
+     "viet": "Cô ấy là giáo viên tiếng Trung của mình, cô ấy tên là Lý Nguyệt.",
+     "doc": "assets/am/cau/63d975df54.mp3"
     },
     {
      "han": "老师好！您是哪国人？",
      "py": "Lǎoshī hǎo! Nín shì nǎ guó rén?",
-     "viet": "Em chào cô! Cô là người nước nào ạ?"
+     "viet": "Em chào cô! Cô là người nước nào ạ?",
+     "doc": "assets/am/nam1/9ce927bacc.mp3"
     },
     {
      "han": "我是中国人。你呢？",
      "py": "Wǒ shì Zhōngguó rén. Nǐ ne?",
-     "viet": "Cô là người Trung Quốc. Còn em?"
+     "viet": "Cô là người Trung Quốc. Còn em?",
+     "doc": "assets/am/nu2/ff627e4f7b.mp3"
     },
     {
      "han": "我是越南人。",
      "py": "Wǒ shì Yuènán rén.",
-     "viet": "Em là người Việt Nam."
+     "viet": "Em là người Việt Nam.",
+     "doc": "assets/am/nam1/4469b0e37e.mp3"
     }
    ],
    "nhieu": {
     "1": [
      {
       "han": "她学汉语。",
-      "py": "Tā xué Hànyǔ."
+      "py": "Tā xué Hànyǔ.",
+      "doc": "assets/am/cau/4e9bc2babb.mp3"
      },
      {
       "han": "她很好。",
-      "py": "Tā hěn hǎo."
+      "py": "Tā hěn hǎo.",
+      "doc": "assets/am/cau/dc35c2a59a.mp3"
      },
      {
       "han": "她是中国人。",
-      "py": "Tā shì Zhōngguó rén."
+      "py": "Tā shì Zhōngguó rén.",
+      "doc": "assets/am/cau/1346366518.mp3"
      }
     ],
     "3": [
      {
       "han": "我叫李月。",
-      "py": "Wǒ jiào Lǐ Yuè."
+      "py": "Wǒ jiào Lǐ Yuè.",
+      "doc": "assets/am/nu2/70de03d67d.mp3"
      },
      {
       "han": "我是老师。",
-      "py": "Wǒ shì lǎoshī."
+      "py": "Wǒ shì lǎoshī.",
+      "doc": "assets/am/nu2/f213ef9af4.mp3"
      },
      {
       "han": "她是我朋友。",
-      "py": "Tā shì wǒ péngyou."
+      "py": "Tā shì wǒ péngyou.",
+      "doc": "assets/am/nu2/3f74572b25.mp3"
      }
     ],
     "4": [
      {
       "han": "我学汉语。",
-      "py": "Wǒ xué Hànyǔ."
+      "py": "Wǒ xué Hànyǔ.",
+      "doc": "assets/am/nam1/f3dc645857.mp3"
      },
      {
       "han": "我叫小明。",
-      "py": "Wǒ jiào Xiǎomíng."
+      "py": "Wǒ jiào Xiǎomíng.",
+      "doc": "assets/am/nam1/b513ddc6b4.mp3"
      },
      {
       "han": "他是我同学。",
-      "py": "Tā shì wǒ tóngxué."
+      "py": "Tā shì wǒ tóngxué.",
+      "doc": "assets/am/nam1/555034e669.mp3"
      }
     ]
    },
@@ -1758,70 +1782,84 @@
     {
      "han": "你学什么？",
      "py": "Nǐ xué shénme?",
-     "viet": "Bạn học gì?"
+     "viet": "Bạn học gì?",
+     "doc": "assets/am/nam1/4512cf0ac8.mp3"
     },
     {
      "han": "我学汉语，你呢？",
      "py": "Wǒ xué Hànyǔ, nǐ ne?",
-     "viet": "Mình học tiếng Trung, còn bạn?"
+     "viet": "Mình học tiếng Trung, còn bạn?",
+     "doc": "assets/am/cau/f9f27eaef6.mp3"
     },
     {
      "han": "我学英语。",
      "py": "Wǒ xué Yīngyǔ.",
-     "viet": "Mình học tiếng Anh."
+     "viet": "Mình học tiếng Anh.",
+     "doc": "assets/am/nam1/93fafa8d2b.mp3"
     },
     {
      "han": "你的英语老师是哪国人？",
      "py": "Nǐ de Yīngyǔ lǎoshī shì nǎ guó rén?",
-     "viet": "Giáo viên tiếng Anh của bạn là người nước nào?"
+     "viet": "Giáo viên tiếng Anh của bạn là người nước nào?",
+     "doc": "assets/am/cau/38bd5e7b15.mp3"
     },
     {
      "han": "他是美国人。",
      "py": "Tā shì Měiguó rén.",
-     "viet": "Thầy ấy là người Mỹ."
+     "viet": "Thầy ấy là người Mỹ.",
+     "doc": "assets/am/nam1/a3209e5c96.mp3"
     }
    ],
    "nhieu": {
     "1": [
      {
       "han": "我是学生。",
-      "py": "Wǒ shì xué·shēng."
+      "py": "Wǒ shì xué·shēng.",
+      "doc": "assets/am/cau/9d9749882a.mp3"
      },
      {
       "han": "我是越南人。",
-      "py": "Wǒ shì Yuènán rén."
+      "py": "Wǒ shì Yuènán rén.",
+      "doc": "assets/am/cau/4469b0e37e.mp3"
      },
      {
       "han": "我叫大卫。",
-      "py": "Wǒ jiào Dàwèi."
+      "py": "Wǒ jiào Dàwèi.",
+      "doc": "assets/am/cau/21da349fc4.mp3"
      }
     ],
     "2": [
      {
       "han": "我是越南人。",
-      "py": "Wǒ shì Yuènán rén."
+      "py": "Wǒ shì Yuènán rén.",
+      "doc": "assets/am/nam1/4469b0e37e.mp3"
      },
      {
       "han": "他是我朋友。",
-      "py": "Tā shì wǒ péngyou."
+      "py": "Tā shì wǒ péngyou.",
+      "doc": "assets/am/nam1/aa6be2c466.mp3"
      },
      {
       "han": "我叫小明。",
-      "py": "Wǒ jiào Xiǎomíng."
+      "py": "Wǒ jiào Xiǎomíng.",
+      "doc": "assets/am/nam1/b513ddc6b4.mp3"
      }
     ],
     "4": [
      {
       "han": "他叫大卫。",
-      "py": "Tā jiào Dàwèi."
+      "py": "Tā jiào Dàwèi.",
+      "doc": "assets/am/nam1/382e78141f.mp3"
      },
      {
       "han": "他是我的老师。",
-      "py": "Tā shì wǒ de lǎoshī."
+      "py": "Tā shì wǒ de lǎoshī.",
+      "doc": "assets/am/nam1/18a4e95e49.mp3"
      },
      {
       "han": "他学汉语。",
-      "py": "Tā xué Hànyǔ."
+      "py": "Tā xué Hànyǔ.",
+      "doc": "assets/am/nam1/f77e21a9ae.mp3"
      }
     ]
    },

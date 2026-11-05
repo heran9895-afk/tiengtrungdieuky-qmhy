@@ -127,11 +127,11 @@
    "Câu 1": "A：谢谢你！\nB：不客气！",
    "Pinyin câu 1": "A: Xièxie nǐ!\nB: Bú kèqi!",
    "Nghĩa câu 1": "A: Cảm ơn bạn!\nB: Không có gì!",
-   "Đọc câu 1": "谢谢你！不客气！",
+   "Đọc câu 1": "assets/am/nam1/9c5cbf5a9a.mp3|assets/am/cau/9c4d773eef.mp3",
    "Câu 2": "A：谢谢老师！\nB：不客气！",
    "Pinyin câu 2": "A: Xièxie lǎoshī!\nB: Bú kèqi!",
    "Nghĩa câu 2": "A: Em cảm ơn cô!\nB: Không có gì!",
-   "Đọc câu 2": "谢谢老师！不客气！"
+   "Đọc câu 2": "assets/am/nam1/b972ea4001.mp3|assets/am/cau/9c4d773eef.mp3"
   },
   {
    "Mã": "1-0034",
@@ -190,11 +190,11 @@
    "Câu 1": "A：对不起您！\nB：没关系！",
    "Pinyin câu 1": "A: Duìbuqǐ nín!\nB: Méi guānxi!",
    "Nghĩa câu 1": "A: Xin lỗi ông / bà!\nB: Không sao!",
-   "Đọc câu 1": "对不起您！没关系！",
+   "Đọc câu 1": "assets/am/nam1/aa49dea8e3.mp3|assets/am/cau/e6c20f1d01.mp3",
    "Câu 2": "A：对不起，老师！\nB：没关系！",
    "Pinyin câu 2": "A: Duìbuqǐ, lǎoshī!\nB: Méi guānxi!",
    "Nghĩa câu 2": "A: Em xin lỗi cô!\nB: Không sao!",
-   "Đọc câu 2": "对不起，老师！没关系！"
+   "Đọc câu 2": "assets/am/nam1/2c4680d170.mp3|assets/am/cau/e6c20f1d01.mp3"
   },
   {
    "Mã": "1-0093",
@@ -1109,7 +1109,8 @@
    "hoi": [
     "你好！",
     "Nǐ hǎo!",
-    "Xin chào!"
+    "Xin chào!",
+    "assets/am/nam1/9adae3535e.mp3"
    ],
    "dap": [
     "你好！",
@@ -1139,7 +1140,8 @@
    "hoi": [
     "谢谢你！",
     "Xièxie nǐ!",
-    "Cảm ơn bạn!"
+    "Cảm ơn bạn!",
+    "assets/am/nam1/9c5cbf5a9a.mp3"
    ],
    "dap": [
     "不客气！",
@@ -1169,7 +1171,8 @@
    "hoi": [
     "对不起！",
     "Duìbuqǐ!",
-    "Xin lỗi!"
+    "Xin lỗi!",
+    "assets/am/nam1/cf868ce64b.mp3"
    ],
    "dap": [
     "没关系！",
@@ -1199,7 +1202,8 @@
    "hoi": [
     "老师，再见！",
     "Lǎoshī, zàijiàn!",
-    "Tạm biệt cô!"
+    "Tạm biệt cô!",
+    "assets/am/nam1/f5978f0615.mp3"
    ],
    "dap": [
     "再见！",
@@ -1229,7 +1233,8 @@
    "hoi": [
     "老师好！",
     "Lǎoshī hǎo!",
-    "Em chào cô ạ!"
+    "Em chào cô ạ!",
+    "assets/am/nam1/14f1221fdb.mp3"
    ],
    "dap": [
     "同学们好！",
@@ -1258,7 +1263,8 @@
    "hoi": [
     "明天见！",
     "Míngtiān jiàn!",
-    "Mai gặp lại!"
+    "Mai gặp lại!",
+    "assets/am/nam1/2807833bbb.mp3"
    ],
    "dap": [
     "明天见！",
@@ -1382,7 +1388,7 @@
     "您",
     "不客气"
    ],
-   "doc": "谢谢您！不客气！"
+   "doc": "assets/am/nam1/535ceceadc.mp3|assets/am/cau/9c4d773eef.mp3"
   },
   {
    "han": "A：对不起！\nB：没关系！",
@@ -1392,7 +1398,7 @@
     "对不起",
     "没关系"
    ],
-   "doc": "对不起！没关系！"
+   "doc": "assets/am/nam1/cf868ce64b.mp3|assets/am/cau/e6c20f1d01.mp3"
   },
   {
    "han": "A：谢谢你们！\nB：不客气！",
@@ -1403,7 +1409,7 @@
     "你们",
     "不客气"
    ],
-   "doc": "谢谢你们！不客气！"
+   "doc": "assets/am/nam1/77ce3793f5.mp3|assets/am/cau/9c4d773eef.mp3"
   },
   {
    "han": "A：对不起，同学们！\nB：没关系！",
@@ -1414,7 +1420,7 @@
     "们",
     "没关系"
    ],
-   "doc": "对不起，同学们！没关系！"
+   "doc": "assets/am/nam1/2d0252f3eb.mp3|assets/am/cau/e6c20f1d01.mp3"
   },
   {
    "han": "A：谢谢你，老师！\nB：不客气！",
@@ -1426,7 +1432,7 @@
     "老师",
     "不客气"
    ],
-   "doc": "谢谢你，老师！不客气！"
+   "doc": "assets/am/nam1/b539bc62ad.mp3|assets/am/cau/9c4d773eef.mp3"
   },
   {
    "han": "A：对不起，我不好！\nB：没关系！",
@@ -1439,7 +1445,7 @@
     "好",
     "没关系"
    ],
-   "doc": "对不起，我不好！没关系！"
+   "doc": "assets/am/nam1/0dd214bb37.mp3|assets/am/cau/e6c20f1d01.mp3"
   },
   {
    "han": "再见，老师！",
@@ -1681,51 +1687,61 @@
     {
      "han": "老师好！",
      "py": "Lǎoshī hǎo!",
-     "viet": "Em chào cô ạ!"
+     "viet": "Em chào cô ạ!",
+     "doc": "assets/am/nam1/14f1221fdb.mp3"
     },
     {
      "han": "你们好！",
      "py": "Nǐmen hǎo!",
-     "viet": "Chào các em!"
+     "viet": "Chào các em!",
+     "doc": "assets/am/bai-1/cau/c13.mp3"
     },
     {
      "han": "老师，再见！",
      "py": "Lǎoshī, zàijiàn!",
-     "viet": "Em chào cô ạ! (tạm biệt)"
+     "viet": "Em chào cô ạ! (tạm biệt)",
+     "doc": "assets/am/nam1/f5978f0615.mp3"
     },
     {
      "han": "再见！",
      "py": "Zàijiàn!",
-     "viet": "Tạm biệt!"
+     "viet": "Tạm biệt!",
+     "doc": "assets/am/bai-1/cau/c21.mp3"
     }
    ],
    "nhieu": {
     "1": [
      {
       "han": "没关系！",
-      "py": "Méi guānxi!"
+      "py": "Méi guānxi!",
+      "doc": "assets/am/cau/e6c20f1d01.mp3"
      },
      {
       "han": "不客气！",
-      "py": "Bú kèqi!"
+      "py": "Bú kèqi!",
+      "doc": "assets/am/cau/9c4d773eef.mp3"
      },
      {
       "han": "对不起！",
-      "py": "Duìbuqǐ!"
+      "py": "Duìbuqǐ!",
+      "doc": "assets/am/cau/63d872d18e.mp3"
      }
     ],
     "3": [
      {
       "han": "不客气！",
-      "py": "Bú kèqi!"
+      "py": "Bú kèqi!",
+      "doc": "assets/am/cau/9c4d773eef.mp3"
      },
      {
       "han": "没关系！",
-      "py": "Méi guānxi!"
+      "py": "Méi guānxi!",
+      "doc": "assets/am/cau/e6c20f1d01.mp3"
      },
      {
       "han": "谢谢你！",
-      "py": "Xièxie nǐ!"
+      "py": "Xièxie nǐ!",
+      "doc": "assets/am/cau/6edd74bfd3.mp3"
      }
     ]
    },
@@ -1737,51 +1753,61 @@
     {
      "han": "对不起！",
      "py": "Duìbuqǐ!",
-     "viet": "Xin lỗi!"
+     "viet": "Xin lỗi!",
+     "doc": "assets/am/nam1/cf868ce64b.mp3"
     },
     {
      "han": "没关系！",
      "py": "Méi guānxi!",
-     "viet": "Không sao!"
+     "viet": "Không sao!",
+     "doc": "assets/am/cau/e6c20f1d01.mp3"
     },
     {
      "han": "谢谢您！",
      "py": "Xièxie nín!",
-     "viet": "Cảm ơn ông / bà!"
+     "viet": "Cảm ơn ông / bà!",
+     "doc": "assets/am/nam1/535ceceadc.mp3"
     },
     {
      "han": "不客气！",
      "py": "Bú kèqi!",
-     "viet": "Không có gì!"
+     "viet": "Không có gì!",
+     "doc": "assets/am/cau/9c4d773eef.mp3"
     }
    ],
    "nhieu": {
     "1": [
      {
       "han": "不客气！",
-      "py": "Bú kèqi!"
+      "py": "Bú kèqi!",
+      "doc": "assets/am/cau/9c4d773eef.mp3"
      },
      {
       "han": "你好！",
-      "py": "Nǐ hǎo!"
+      "py": "Nǐ hǎo!",
+      "doc": "assets/am/bai-1/cau/c23.mp3"
      },
      {
       "han": "再见！",
-      "py": "Zàijiàn!"
+      "py": "Zàijiàn!",
+      "doc": "assets/am/bai-1/cau/c21.mp3"
      }
     ],
     "3": [
      {
       "han": "没关系！",
-      "py": "Méi guānxi!"
+      "py": "Méi guānxi!",
+      "doc": "assets/am/cau/e6c20f1d01.mp3"
      },
      {
       "han": "对不起！",
-      "py": "Duìbuqǐ!"
+      "py": "Duìbuqǐ!",
+      "doc": "assets/am/cau/63d872d18e.mp3"
      },
      {
       "han": "你们好！",
-      "py": "Nǐmen hǎo!"
+      "py": "Nǐmen hǎo!",
+      "doc": "assets/am/bai-1/cau/c13.mp3"
      }
     ]
    },

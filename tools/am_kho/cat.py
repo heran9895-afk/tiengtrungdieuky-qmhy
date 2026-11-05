@@ -19,7 +19,7 @@ def ratio(a, b):
     return difflib.SequenceMatcher(None, a, b).ratio() if a or b else 1.0
 
 wav, luot = sys.argv[1], sys.argv[2]
-LS = json.load(open('/home/claude/am/luot.json')) + (json.load(open('/home/claude/am/nhi/py.json')) if os.path.exists('/home/claude/am/nhi/py.json') else []) + (json.load(open('/home/claude/am/nhi/luot.json')) if os.path.exists('/home/claude/am/nhi/luot.json') else [])
+LS = json.load(open('/home/claude/am/luot.json')) + (json.load(open('/home/claude/am/nhi/py.json')) if os.path.exists('/home/claude/am/nhi/py.json') else []) + (json.load(open('/home/claude/am/nhi/luot.json')) if os.path.exists('/home/claude/am/nhi/luot.json') else []) + (json.load(open('/home/claude/am/hai/luot.json')) if os.path.exists('/home/claude/am/hai/luot.json') else [])
 L = {b['ten']: b for b in LS}[luot]
 lines, typ = L['ds'], L['typ']
 khoa = L.get('khoa', lines)
@@ -71,7 +71,7 @@ while i or j:
     if b[0] == 'ghep': kq[b[1]] = (b[2], b[3], b[4], b[5])
     i, j = b[1], b[2]
 # 5. Cắt rộng 0,12 s đầu / 0,15 s cuối, vuốt, −16 LUFS, mp3 48 kbps 24 kHz mono
-thu = {'tu': 'tu', 'py': 'py'}.get(typ, 'cau')
+thu = L.get('thu') or {'tu': 'tu', 'py': 'py'}.get(typ, 'cau')
 od = R + 'assets/am/%s/' % thu
 bc, xong, bo = [], {}, []
 for i, l in enumerate(lines):

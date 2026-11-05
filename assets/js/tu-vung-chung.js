@@ -104,7 +104,7 @@
   if (window.speechSynthesis) { chonGiong(); speechSynthesis.onvoiceschanged = chonGiong; }
   var amDang = null;
   function laFileAm(t) { return /\.(mp3|m4a|wav|ogg)(\?.*)?$/i.test(t); }
-  function dungDoc() { if (window.speechSynthesis) speechSynthesis.cancel(); if (amDang) { amDang.pause(); amDang = null; } }
+  function dungDoc() { luotPhat++; if (window.speechSynthesis) speechSynthesis.cancel(); if (amDang) { amDang.pause(); amDang = null; } }
   // Bảng tra "chữ → file ghi âm" (assets/am/ban-do.json, tạo bằng tools/ban_do_am.py):
   // câu / từ nào đã có file giọng Gemini thì phát file, kể cả ở trò chơi, ôn tập, dịch…
   var BAN_DO = null;
@@ -113,13 +113,26 @@
       .replace(/[—–\-“”"]/g, '').replace(/！/g, '。');
   }
   try { fetch(ROOT + 'assets/am/ban-do.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (m) { BAN_DO = m; }).catch(function () {}); } catch (e) {}
+  // Hội thoại nhiều giọng: "a.mp3|b.mp3" = phát lần lượt từng lời, nghỉ ngắn giữa hai lời (quy chuẩn 14 §4b)
+  function laDsAm(t) { return /\|/.test(t || '') && String(t).split('|').every(laFileAm); }
+  var luotPhat = 0;
   function doc(txt, nut) {
     dungDoc();
-    if (!laFileAm(txt) && BAN_DO) { var f = BAN_DO[chuanAm(txt)]; if (f) txt = f; }
-    if (laFileAm(txt)) {
-      var a = amDang = new Audio(/^(https?:)?\/|^\.\.?\//.test(txt) ? txt : ROOT + txt);   // đường dẫn tương đối tính từ gốc web
-      if (nut) { nut.classList.add('dang-doc'); a.onended = a.onerror = function () { nut.classList.remove('dang-doc'); }; }
-      a.play().catch(function () { if (nut) nut.classList.remove('dang-doc'); baoLoi('Chưa phát được file âm thanh.'); });
+    var luot = ++luotPhat;
+    if (!laFileAm(txt) && !laDsAm(txt) && BAN_DO) { var f = BAN_DO[chuanAm(txt)]; if (f) txt = f; }
+    if (laFileAm(txt) || laDsAm(txt)) {
+      var ds = String(txt).split('|'), i = 0;
+      var xong = function () { if (nut) nut.classList.remove('dang-doc'); };
+      if (nut) nut.classList.add('dang-doc');
+      var phat = function () {
+        if (luot !== luotPhat) return;
+        var u = ds[i++];
+        var a = amDang = new Audio(/^(https?:)?\/|^\.\.?\//.test(u) ? u : ROOT + u);   // đường dẫn tương đối tính từ gốc web
+        a.onended = function () { if (luot !== luotPhat) return; if (i < ds.length) setTimeout(phat, 350); else xong(); };
+        a.onerror = xong;
+        a.play().catch(function () { xong(); baoLoi('Chưa phát được file âm thanh.'); });
+      };
+      phat();
       return;
     }
     if (!window.speechSynthesis) return baoLoi('Trình duyệt này chưa hỗ trợ đọc. Bạn thử mở bằng Chrome nhé.');
@@ -138,7 +151,7 @@
   function demNhi(t) { return (String(t || '').match(/儿/g) || []).length; }
   // Chữ có 儿 đã có file giọng Gemini (đọc đúng 儿化) → phát file theo chữ hiển thị, bỏ qua cột "Đọc" (vốn bỏ 儿 cho giọng máy)
   function coFileNhi(han) { return !!BAN_DO && demNhi(han) > 0 && !!BAN_DO[chuanAm(han)]; }
-  function coNhiHoa(han, docThay) { return !coFileNhi(han) && !!docThay && docThay !== '-' && !laFileAm(docThay) && demNhi(han) > demNhi(docThay); }
+  function coNhiHoa(han, docThay) { return !coFileNhi(han) && !!docThay && docThay !== '-' && !laFileAm(docThay) && !laDsAm(docThay) && demNhi(han) > demNhi(docThay); }
   var GHI_NHI = '<p class="tv-nhi">Do hạn chế của máy đọc, loa đọc âm không có đuôi 儿化. Khi đọc, các bạn chú ý <b>cong lưỡi ở cuối âm</b> nhé.</p>';
   // Cột "Đọc" = "-": máy đọc chưa chuẩn, đang chờ thu âm → không hiện nút loa
   function choCapNhat(to) { return '<span class="tv-loa-cho' + (to ? ' to' : '') + '" title="Phát âm đang cập nhật">' + (to ? 'Phát âm đang cập nhật' : '') + '</span>'; }
@@ -153,7 +166,7 @@
   // Máy có đọc được từ này không: file ghi âm thì luôn được; giọng máy thì cần giọng tiếng Trung
   // (danh sách giọng chưa tải xong thì tạm coi là có, tránh chặn nhầm)
   function coGiong(docThay) {
-    if (docThay && laFileAm(docThay)) return true;
+    if (docThay && (laFileAm(docThay) || laDsAm(docThay))) return true;
     if (!window.speechSynthesis) return false;
     var v = speechSynthesis.getVoices();
     return !v.length || v.some(function (x) { return /^(zh|cmn)/i.test(x.lang); });
