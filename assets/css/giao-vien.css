@@ -320,3 +320,23 @@ body.gv-mo{overflow:hidden}
   .gv-pc-cap{margin-left:0;flex-basis:100%}
 }
 .gv-pc-ve{justify-self:start}
+
+/* ---------- 📝 Kiểm tra (2026-11-05a) ---------- */
+.gv-loi{color:var(--red)}
+.gv-cuon{overflow-x:auto}
+.gv-kt-de p{margin:0 0 10px}
+.gv-kt-lop{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:10px 0;border-bottom:1px dashed var(--line-soft)}
+.gv-kt-lop>div{display:flex;flex-direction:column}.gv-kt-lop small{color:var(--muted)}
+.gv-kt-bang td,.gv-kt-bang th{white-space:nowrap}
+.gv-kt-chi-tiet td{background:var(--surface-2);white-space:normal}
+.gv-kt-ct{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));padding:6px 0}
+.gv-kt-c{background:#fff;border:1px solid var(--line-soft);border-left:4px solid var(--line);border-radius:10px;padding:8px 10px;font-size:13.5px}
+.gv-kt-c.dung{border-left-color:var(--brand)}.gv-kt-c.sai{border-left-color:var(--red)}.gv-kt-c.nua,.gv-kt-c.cho{border-left-color:#c46a00}
+.gv-kt-c.cho{background:#fff3e0}
+.gv-kt-c-dau{display:flex;gap:6px;align-items:baseline}.gv-kt-c-dau span{margin-left:auto;font-weight:700}
+.gv-kt-c-de{color:var(--muted);margin:2px 0 4px}
+.gv-kt-cham{margin-top:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}.gv-kt-cham input{font:inherit;width:56px;padding:5px 6px;border:1.5px solid var(--line);border-radius:8px}
+.gv-kt-tk{display:flex;flex-wrap:wrap;gap:5px}
+.gv-kt-tk-o{display:inline-flex;flex-direction:column;align-items:center;min-width:44px;padding:4px 6px;border-radius:8px;font-size:12px;line-height:1.25}
+.gv-kt-tk-o b{font-size:13px}
+.gv-kt-tk-o.tot{background:var(--ok-bg);color:var(--ok)}.gv-kt-tk-o.vua{background:#fff6d6;color:#7a5a00}.gv-kt-tk-o.kem{background:var(--no-bg);color:var(--no)}

@@ -76,7 +76,10 @@
     else luuPhan();
   }
   var cho = window.QM_PHAN && window.QM_PHAN.q || [];         // header.js đặt sẵn hàng đợi: lệnh gọi trước khi file này nạp xong
-  window.QM_PHAN = { danhDau: danhDau, xemTu: xemTu, ds: function () { return PHAN.phan; } };
+  function datPhan(khoa, tt, ten, url) {                     // phần không theo mẫu bai-N (bài kiểm tra): ghi thẳng theo khoá
+    var cu = PHAN.phan[khoa] || {}; PHAN.phan[khoa] = { tt: cu.tt === 'xong' ? 'xong' : tt, t: Date.now(), ten: ten || cu.ten || khoa, url: url || cu.url || '' }; luuPhan();
+  }
+  window.QM_PHAN = { danhDau: danhDau, xemTu: xemTu, datPhan: datPhan, ds: function () { return PHAN.phan; } };
   cho.forEach(function (a) { window.QM_PHAN[a[0]].apply(null, a[1]); });
   if (TRANG_NAY) danhDau('dang-hoc');
 
@@ -464,7 +467,14 @@
     var h = hoSoDang(); if (!h) return 'chua-lop';
     if (!h.maLop) return DA_HOI_LOP ? 'chua-lop' : 'cho';   // cô có thể vừa xếp em vào lớp: chờ hỏi máy chủ xong mới kết luận
     var L = lopDang(); if (!L) return 'cho';
+    if (laMucKt(muc)) return ktDuocGiao(L, muc) ? null : 'chua-giao';
     return L.moBai.indexOf(muc) >= 0 ? null : 'chua-mo';
+  }
+  // Bài kiểm tra (2026-11-05): chỉ hiện khi lớp được GIAO (đã tới giờ bắt đầu), không theo "mở bài"; chưa giao thì thẻ ẩn hẳn
+  function laMucKt(muc) { return /\/kiem-tra-[0-9-]+$/.test(muc); }
+  function ktDuocGiao(L, muc) {
+    var bayGio = Date.now();
+    return (L.giaoBai || []).some(function (g) { return g.phan.indexOf(muc + '/') === 0 && (!g.batDau || g.batDau <= bayGio); });
   }
   function ngayGio(t) {
     var d = new Date(t), thu = ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'][d.getDay()];
@@ -477,6 +487,7 @@
       var url = a.getAttribute('data-tk-href') ? new URL(a.getAttribute('data-tk-href'), location.href).pathname : a.pathname;
       var m = mucTuDuongDan(url); if (!m) return;
       var ly = lyDoKhoa(m.muc), nhanCu = a.querySelector('.tk-khoa-nhan');
+      if (laMucKt(m.muc)) { a.hidden = !!ly; a.style.display = ly ? 'none' : ''; return; }     // bài kiểm tra: chưa giao thì ẩn thẻ (không hiện thẻ khoá)
       if (ly && ly !== 'cho') {
         if (!a.hasAttribute('data-tk-href')) { a.setAttribute('data-tk-href', a.getAttribute('href')); a.removeAttribute('href'); }
         var nhan = ly === 'chua-mo' ? '🔒 Cô chưa mở' : '🔒 Dành cho học viên lớp';
@@ -501,6 +512,8 @@
         '<div class="tk-menu"><button type="button" class="tk-btn chinh" data-l="dn">Đăng nhập bằng Google</button><button type="button" class="tk-btn" data-l="nhan">💬 Nhắn cô xin học bài này</button>',
       'chua-lop': '<div class="tk-ico">🎓</div><h3>Bạn chưa vào lớp nào</h3><p>Bài này cô mở cho từng lớp. Bạn nhập <b>mã lớp</b> cô đưa vào hồ sơ' + (h ? ' <b>' + esc(h.hoTen) + '</b>' : '') + ', hoặc nhắn cô để được thêm vào lớp.</p>' +
         '<div class="tk-menu"><button type="button" class="tk-btn chinh" data-l="ma">Nhập mã lớp</button><button type="button" class="tk-btn" data-l="nhan">💬 Nhắn cô xin vào lớp</button>',
+      'chua-giao': '<div class="tk-ico">📝</div><h3>Bài kiểm tra chưa được giao</h3><p>Bài kiểm tra chỉ mở khi cô giao cho <b>' + esc(lopDu(L ? L.tenLop : '')) + '</b>. Tới giờ làm bài, bạn tải lại trang này nhé.</p>' +
+        '<div class="tk-menu">',
       'chua-mo': '<div class="tk-ico">🔒</div><h3>Bài này cô chưa mở</h3><p><b>' + esc(lopDu(L ? L.tenLop : '')) + '</b> sẽ học bài này khi cô mở trên lớp. Trong lúc chờ, bạn ôn lại các bài đã học nhé.</p>' +
         '<div class="tk-menu"><button type="button" class="tk-btn" data-l="nhan">💬 Nhắn cô xin mở bài</button>'
     }[ly];
