@@ -1,0 +1,544 @@
+{
+ "bai": 2,
+ "ten": "我叫李文",
+ "tenViet": "Mình tên là Lý Văn",
+ "phienBan": "2026-11-05a",
+ "phan": [
+  {
+   "ten": "Nghe, chọn thanh mẫu",
+   "zh": "听录音，选出听到的声母",
+   "hd": "Bấm loa nghe âm tiết, chọn thanh mẫu còn thiếu.",
+   "loai": "am",
+   "cau": [
+    {
+     "ma": "tm-jia1",
+     "loa": "assets/am/py/jia1.mp3",
+     "py": "jiā",
+     "hien": "＿iā",
+     "dap": "j",
+     "nhieu": [
+      "q",
+      "x"
+     ]
+    },
+    {
+     "ma": "tm-qing3",
+     "loa": "assets/am/py/qing3.mp3",
+     "py": "qǐng",
+     "hien": "＿ǐng",
+     "dap": "q",
+     "nhieu": [
+      "j",
+      "x"
+     ]
+    },
+    {
+     "ma": "tm-xie4",
+     "loa": "assets/am/py/xie4.mp3",
+     "py": "xiè",
+     "hien": "＿iè",
+     "dap": "x",
+     "nhieu": [
+      "j",
+      "q"
+     ]
+    },
+    {
+     "ma": "tm-jiao4",
+     "loa": "assets/am/py/jiao4.mp3",
+     "py": "jiào",
+     "hien": "＿iào",
+     "dap": "j",
+     "nhieu": [
+      "q",
+      "x"
+     ]
+    },
+    {
+     "ma": "tm-qu4",
+     "loa": "assets/am/py/qu4.mp3",
+     "py": "qù",
+     "hien": "＿ù",
+     "dap": "q",
+     "nhieu": [
+      "j",
+      "x"
+     ]
+    },
+    {
+     "ma": "tm-xue2",
+     "loa": "assets/am/py/xue2.mp3",
+     "py": "xué",
+     "hien": "＿ué",
+     "dap": "x",
+     "nhieu": [
+      "j",
+      "q"
+     ]
+    },
+    {
+     "ma": "tm-ji3",
+     "loa": "assets/am/py/ji3.mp3",
+     "py": "jǐ",
+     "hien": "＿ǐ",
+     "dap": "j",
+     "nhieu": [
+      "q",
+      "x"
+     ]
+    },
+    {
+     "ma": "tm-qian2",
+     "loa": "assets/am/py/qian2.mp3",
+     "py": "qián",
+     "hien": "＿ián",
+     "dap": "q",
+     "nhieu": [
+      "j",
+      "x"
+     ]
+    },
+    {
+     "ma": "tm-xin1",
+     "loa": "assets/am/py/xin1.mp3",
+     "py": "xīn",
+     "hien": "＿īn",
+     "dap": "x",
+     "nhieu": [
+      "j",
+      "q"
+     ]
+    },
+    {
+     "ma": "tm-jiu3",
+     "loa": "assets/am/py/jiu3.mp3",
+     "py": "jiǔ",
+     "hien": "＿iǔ",
+     "dap": "j",
+     "nhieu": [
+      "q",
+      "x"
+     ]
+    },
+    {
+     "ma": "tm-qi1",
+     "loa": "assets/am/py/qi1.mp3",
+     "py": "qī",
+     "hien": "＿ī",
+     "dap": "q",
+     "nhieu": [
+      "j",
+      "x"
+     ]
+    },
+    {
+     "ma": "tm-xiao3",
+     "loa": "assets/am/py/xiao3.mp3",
+     "py": "xiǎo",
+     "hien": "＿iǎo",
+     "dap": "x",
+     "nhieu": [
+      "j",
+      "q"
+     ]
+    }
+   ],
+   "kieu": "tm"
+  },
+  {
+   "ten": "Nghe, chọn vận mẫu",
+   "zh": "听录音，选出听到的韵母",
+   "hd": "Bấm loa nghe âm tiết, chọn vận mẫu còn thiếu (đã có dấu thanh).",
+   "loai": "am",
+   "cau": [
+    {
+     "ma": "vm-jia1",
+     "loa": "assets/am/py/jia1.mp3",
+     "py": "jiā",
+     "hien": "j＿",
+     "dap": "iā",
+     "nhieu": [
+      "iē",
+      "iāo"
+     ]
+    },
+    {
+     "ma": "vm-xie4",
+     "loa": "assets/am/py/xie4.mp3",
+     "py": "xiè",
+     "hien": "x＿",
+     "dap": "iè",
+     "nhieu": [
+      "ià",
+      "uè"
+     ]
+    },
+    {
+     "ma": "vm-jiao4",
+     "loa": "assets/am/py/jiao4.mp3",
+     "py": "jiào",
+     "hien": "j＿",
+     "dap": "iào",
+     "nhieu": [
+      "iù",
+      "ià"
+     ]
+    },
+    {
+     "ma": "vm-jiu3",
+     "loa": "assets/am/py/jiu3.mp3",
+     "py": "jiǔ",
+     "hien": "j＿",
+     "dap": "iǔ",
+     "nhieu": [
+      "iǎo",
+      "iě"
+     ]
+    },
+    {
+     "ma": "vm-xin1",
+     "loa": "assets/am/py/xin1.mp3",
+     "py": "xīn",
+     "hien": "x＿",
+     "dap": "īn",
+     "nhieu": [
+      "īng",
+      "iān"
+     ]
+    },
+    {
+     "ma": "vm-qing3",
+     "loa": "assets/am/py/qing3.mp3",
+     "py": "qǐng",
+     "hien": "q＿",
+     "dap": "ǐng",
+     "nhieu": [
+      "ǐn",
+      "iǎng"
+     ]
+    },
+    {
+     "ma": "vm-jian4",
+     "loa": "assets/am/py/jian4.mp3",
+     "py": "jiàn",
+     "hien": "j＿",
+     "dap": "iàn",
+     "nhieu": [
+      "iàng",
+      "uàn"
+     ]
+    },
+    {
+     "ma": "vm-xiang3",
+     "loa": "assets/am/py/xiang3.mp3",
+     "py": "xiǎng",
+     "hien": "x＿",
+     "dap": "iǎng",
+     "nhieu": [
+      "iǎn",
+      "iǒng"
+     ]
+    },
+    {
+     "ma": "vm-xiong2",
+     "loa": "assets/am/py/xiong2.mp3",
+     "py": "xióng",
+     "hien": "x＿",
+     "dap": "ióng",
+     "nhieu": [
+      "iáng",
+      "íng"
+     ]
+    },
+    {
+     "ma": "vm-xue2",
+     "loa": "assets/am/py/xue2.mp3",
+     "py": "xué",
+     "hien": "x＿",
+     "dap": "ué",
+     "nhieu": [
+      "ié",
+      "uán"
+     ]
+    },
+    {
+     "ma": "vm-quan2",
+     "loa": "assets/am/py/quan2.mp3",
+     "py": "quán",
+     "hien": "q＿",
+     "dap": "uán",
+     "nhieu": [
+      "ián",
+      "ún"
+     ]
+    },
+    {
+     "ma": "vm-qun2",
+     "loa": "assets/am/py/qun2.mp3",
+     "py": "qún",
+     "hien": "q＿",
+     "dap": "ún",
+     "nhieu": [
+      "ín",
+      "uán"
+     ]
+    }
+   ],
+   "kieu": "vm"
+  },
+  {
+   "ten": "Nghe, chọn thanh điệu",
+   "zh": "听录音，选出听到的声调",
+   "hd": "Bấm loa nghe âm tiết, chọn cách viết có thanh điệu đúng.",
+   "loai": "am",
+   "cau": [
+    {
+     "ma": "td-xue2",
+     "loa": "assets/am/py/xue2.mp3",
+     "py": "xué",
+     "hien": "xue",
+     "dap": "xué",
+     "nhieu": [
+      "xuē",
+      "xuě",
+      "xuè"
+     ]
+    },
+    {
+     "ma": "td-jiao4",
+     "loa": "assets/am/py/jiao4.mp3",
+     "py": "jiào",
+     "hien": "jiao",
+     "dap": "jiào",
+     "nhieu": [
+      "jiāo",
+      "jiáo",
+      "jiǎo"
+     ]
+    },
+    {
+     "ma": "td-qun2",
+     "loa": "assets/am/py/qun2.mp3",
+     "py": "qún",
+     "hien": "qun",
+     "dap": "qún",
+     "nhieu": [
+      "qūn",
+      "qǔn",
+      "qùn"
+     ]
+    },
+    {
+     "ma": "td-jiu3",
+     "loa": "assets/am/py/jiu3.mp3",
+     "py": "jiǔ",
+     "hien": "jiu",
+     "dap": "jiǔ",
+     "nhieu": [
+      "jiū",
+      "jiú",
+      "jiù"
+     ]
+    },
+    {
+     "ma": "td-xin1",
+     "loa": "assets/am/py/xin1.mp3",
+     "py": "xīn",
+     "hien": "xin",
+     "dap": "xīn",
+     "nhieu": [
+      "xín",
+      "xǐn",
+      "xìn"
+     ]
+    },
+    {
+     "ma": "td-qing3",
+     "loa": "assets/am/py/qing3.mp3",
+     "py": "qǐng",
+     "hien": "qing",
+     "dap": "qǐng",
+     "nhieu": [
+      "qīng",
+      "qíng",
+      "qìng"
+     ]
+    },
+    {
+     "ma": "td-xia4",
+     "loa": "assets/am/py/xia4.mp3",
+     "py": "xià",
+     "hien": "xia",
+     "dap": "xià",
+     "nhieu": [
+      "xiā",
+      "xiá",
+      "xiǎ"
+     ]
+    },
+    {
+     "ma": "td-jia1",
+     "loa": "assets/am/py/jia1.mp3",
+     "py": "jiā",
+     "hien": "jia",
+     "dap": "jiā",
+     "nhieu": [
+      "jiá",
+      "jiǎ",
+      "jià"
+     ]
+    },
+    {
+     "ma": "td-qu4",
+     "loa": "assets/am/py/qu4.mp3",
+     "py": "qù",
+     "hien": "qu",
+     "dap": "qù",
+     "nhieu": [
+      "qū",
+      "qú",
+      "qǔ"
+     ]
+    },
+    {
+     "ma": "td-ji1",
+     "loa": "assets/am/py/ji1.mp3",
+     "py": "jī",
+     "hien": "ji",
+     "dap": "jī",
+     "nhieu": [
+      "jí",
+      "jǐ",
+      "jì"
+     ]
+    },
+    {
+     "ma": "td-xiao3",
+     "loa": "assets/am/py/xiao3.mp3",
+     "py": "xiǎo",
+     "hien": "xiao",
+     "dap": "xiǎo",
+     "nhieu": [
+      "xiāo",
+      "xiáo",
+      "xiào"
+     ]
+    },
+    {
+     "ma": "td-jie3",
+     "loa": "assets/am/py/jie3.mp3",
+     "py": "jiě",
+     "hien": "jie",
+     "dap": "jiě",
+     "nhieu": [
+      "jiē",
+      "jié",
+      "jiè"
+     ]
+    }
+   ],
+   "kieu": "td"
+  },
+  {
+   "ten": "Nghe hội thoại, chọn tranh",
+   "zh": "听对话，选择正确的图片",
+   "hd": "Bấm loa nghe hội thoại, chọn tranh phù hợp. Nghe xong mới hiện chữ.",
+   "loai": "tranh",
+   "anh": [
+    {
+     "k": "A",
+     "src": "assets/img/sach-bai-tap/b2-bat-tay.webp",
+     "alt": "Hai người bắt tay"
+    },
+    {
+     "k": "B",
+     "src": "assets/img/sach-bai-tap/b2-tambiet.webp",
+     "alt": "Một bạn nữ vẫy tay"
+    },
+    {
+     "k": "C",
+     "src": "assets/img/sach-bai-tap/b2-xinloi.webp",
+     "alt": "Cốc cà phê bị đổ"
+    },
+    {
+     "k": "D",
+     "src": "assets/img/sach-bai-tap/b2-gioithieu.webp",
+     "alt": "Một bạn nữ đứng nói với các bạn"
+    }
+   ],
+   "cau": [
+    {
+     "ma": "tr1",
+     "dap": "C",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "对不起！",
+       "py": "Duìbuqǐ!"
+      },
+      {
+       "ai": "B",
+       "han": "没关系。",
+       "py": "Méi guānxi."
+      }
+     ],
+     "vi": "A: Xin lỗi! — B: Không sao.",
+     "doc": "assets/am/cau/63d872d18e.mp3|assets/am/cau/e6c20f1d01.mp3"
+    },
+    {
+     "ma": "tr2",
+     "dap": "D",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "请问，你叫什么名字？",
+       "py": "Qǐngwèn, nǐ jiào shénme míngzi?"
+      },
+      {
+       "ai": "B",
+       "han": "我叫白家月。",
+       "py": "Wǒ jiào Bái Jiāyuè."
+      }
+     ],
+     "vi": "A: Xin hỏi, bạn tên là gì? — B: Mình tên là Bạch Gia Nguyệt.",
+     "doc": "assets/am/cau/c17078dc25.mp3|assets/am/cau/9db09b6d2f.mp3"
+    },
+    {
+     "ma": "tr3",
+     "dap": "A",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "认识你很高兴！",
+       "py": "Rènshi nǐ hěn gāoxìng!"
+      },
+      {
+       "ai": "B",
+       "han": "我也很高兴。",
+       "py": "Wǒ yě hěn gāoxìng."
+      }
+     ],
+     "vi": "A: Rất vui được quen anh! — B: Tôi cũng rất vui.",
+     "doc": "assets/am/cau/f4210f4d73.mp3|assets/am/cau/9ab474d742.mp3"
+    },
+    {
+     "ma": "tr4",
+     "dap": "B",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "李文，再见！",
+       "py": "Lǐ Wén, zàijiàn!"
+      },
+      {
+       "ai": "B",
+       "han": "再见！",
+       "py": "Zàijiàn!"
+      }
+     ],
+     "vi": "A: Lý Văn, tạm biệt! — B: Tạm biệt!"
+    }
+   ]
+  }
+ ]
+}
