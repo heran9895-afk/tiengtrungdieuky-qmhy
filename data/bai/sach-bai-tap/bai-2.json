@@ -483,7 +483,7 @@
       }
      ],
      "vi": "A: Xin lỗi! — B: Không sao.",
-     "doc": "assets/am/cau/63d872d18e.mp3|assets/am/cau/e6c20f1d01.mp3"
+     "doc": "assets/am/nam1/cf868ce64b.mp3|assets/am/cau/e6c20f1d01.mp3"
     },
     {
      "ma": "tr2",
@@ -501,7 +501,7 @@
       }
      ],
      "vi": "A: Xin hỏi, bạn tên là gì? — B: Mình tên là Bạch Gia Nguyệt.",
-     "doc": "assets/am/cau/c17078dc25.mp3|assets/am/cau/9db09b6d2f.mp3"
+     "doc": "assets/am/nam1/c17078dc25.mp3|assets/am/nu2/9db09b6d2f.mp3"
     },
     {
      "ma": "tr3",
@@ -519,7 +519,7 @@
       }
      ],
      "vi": "A: Rất vui được quen anh! — B: Tôi cũng rất vui.",
-     "doc": "assets/am/cau/f4210f4d73.mp3|assets/am/cau/9ab474d742.mp3"
+     "doc": "assets/am/nam1/f4210f4d73.mp3|assets/am/cau/9ab474d742.mp3"
     },
     {
      "ma": "tr4",
@@ -536,7 +536,8 @@
        "py": "Zàijiàn!"
       }
      ],
-     "vi": "A: Lý Văn, tạm biệt! — B: Tạm biệt!"
+     "vi": "A: Lý Văn, tạm biệt! — B: Tạm biệt!",
+     "doc": "assets/am/cau/5bf7a53c62.mp3|assets/am/nam1/63e7210954.mp3"
     }
    ]
   }

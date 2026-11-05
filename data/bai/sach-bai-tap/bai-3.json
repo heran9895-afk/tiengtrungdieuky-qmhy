@@ -482,7 +482,8 @@
        "py": "Tài máng le!"
       }
      ],
-     "vi": "A: A lô, công việc của bạn có bận không? — B: Bận quá!"
+     "vi": "A: A lô, công việc của bạn có bận không? — B: Bận quá!",
+     "doc": "assets/am/cau/cfc3fe46ac.mp3|assets/am/nam1/28579b3863.mp3"
     },
     {
      "ma": "tr2",
@@ -500,7 +501,7 @@
       }
      ],
      "vi": "A: Cô ấy là ai? — B: Cô ấy là bạn gái mình.",
-     "doc": "assets/am/cau/1bae105976.mp3|assets/am/cau/2422a9d373.mp3"
+     "doc": "assets/am/cau/1bae105976.mp3|assets/am/nam1/2422a9d373.mp3"
     },
     {
      "ma": "tr3",
@@ -517,7 +518,8 @@
        "py": "Duì, zhè shì Zhōngwén."
       }
      ],
-     "vi": "A: Đây là tiếng Trung à? — B: Đúng, đây là tiếng Trung."
+     "vi": "A: Đây là tiếng Trung à? — B: Đúng, đây là tiếng Trung.",
+     "doc": "assets/am/nam1/a307070c1f.mp3|assets/am/cau/9980ca5ba0.mp3"
     },
     {
      "ma": "tr4",
@@ -534,7 +536,8 @@
        "py": "Xiǎng! Wǒ hěn xiǎng qù Zhōngguó."
       }
      ],
-     "vi": "A: Bạn có muốn đi Trung Quốc không? — B: Muốn! Mình rất muốn đi Trung Quốc."
+     "vi": "A: Bạn có muốn đi Trung Quốc không? — B: Muốn! Mình rất muốn đi Trung Quốc.",
+     "doc": "assets/am/nam1/d12e48a773.mp3|assets/am/cau/202bf1dd33.mp3"
     }
    ]
   }

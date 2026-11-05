@@ -4,7 +4,7 @@
    python3 tools/sach_bai_tap/dung.py kiem   -> kiểm tra file âm, ảnh, phạm vi
    python3 tools/sach_bai_tap/dung.py ghi    -> ghi data/bai/sach-bai-tap/bai-N.json
 """
-import json, os, sys, unicodedata
+import json, os, sys, unicodedata, hashlib
 GOC = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from noi_dung import BAI
@@ -69,8 +69,15 @@ def dung(bai):
         else:
             q['cau'] = [dict(c) for c in p['cau']]
             for c in [c for c in q['cau'] if 'loi' in c]:   # hội thoại: lời nào cũng đã có file giọng Gemini thì phát lần lượt (A|B)
-                fs = [BAN_DO.get(chuan(v['han'])) for v in c['loi']]
+                # hai giọng theo quy chuẩn 14 §4b: nu1 = Sulafat (bảng tra / cau/), giọng khác ở assets/am/<giọng>/
+                gs = c.pop('giong', None) or ['nu1'] * len(c['loi'])
+                fs = []
+                for v, g in zip(c['loi'], gs):
+                    k = chuan(v['han']); h = hashlib.md5(k.encode()).hexdigest()[:10]
+                    f = (BAN_DO.get(k) or 'assets/am/cau/%s.mp3' % h) if g == 'nu1' else 'assets/am/%s/%s.mp3' % (g, h)
+                    fs.append(f if os.path.exists(os.path.join(GOC, f)) else None)
                 if 'doc' not in c and all(fs): c['doc'] = '|'.join(fs)
+                elif not all(fs): print('  ⚠ thiếu file giọng:', c['ma'], [v['han'] for v, f in zip(c['loi'], fs) if not f])
         out['phan'].append(q)
     return out
 
