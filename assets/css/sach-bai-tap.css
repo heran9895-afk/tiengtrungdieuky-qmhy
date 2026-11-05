@@ -77,3 +77,11 @@
   .sbt-pa-rieng{grid-template-columns:1fr}
   .sbt-pa-rieng .sbt-o{justify-content:flex-start;padding:6px 12px}
 }
+/* nghe chọn tranh riêng của câu */
+.sbt-pa-anh{grid-template-columns:repeat(3,1fr);gap:8px}
+.sbt-o-anh{position:relative;padding:0;overflow:hidden;min-height:0;border-width:2px}
+.sbt-o-anh img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.sbt-o-anh span{position:absolute;left:6px;top:6px;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.94);color:var(--red);font-size:15px;display:grid;place-items:center}
+.sbt-o-anh.dung{box-shadow:0 0 0 3px var(--ok)}
+.sbt-o-anh.sai{box-shadow:0 0 0 3px var(--no);opacity:.85}
+@media(max-width:600px){.sbt-pa-anh{gap:6px}}

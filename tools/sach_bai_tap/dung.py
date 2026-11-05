@@ -68,7 +68,8 @@ def dung(bai):
             q['loai'] = 'am'; q['kieu'] = p['loai']
         else:
             q['cau'] = [dict(c) for c in p['cau']]
-            for c in [c for c in q['cau'] if 'loi' in c]:   # hội thoại: lời nào cũng đã có file giọng Gemini thì phát lần lượt (A|B)
+            for c in [c for c in q['cau'] if 'loi' in c]:
+                for a in c.get('anh', []): pass   # hội thoại: lời nào cũng đã có file giọng Gemini thì phát lần lượt (A|B)
                 # hai giọng theo quy chuẩn 14 §4b: nu1 = Sulafat (bảng tra / cau/), giọng khác ở assets/am/<giọng>/
                 gs = c.pop('giong', None) or ['nu1'] * len(c['loi'])
                 fs = []
@@ -91,12 +92,12 @@ def kiem(bai, d):
                 pa = [c['dap']] + c['nhieu']
                 if len(set(pa)) != len(pa): loi.append('trùng phương án ' + c['ma'])
             if p['loai'] != 'am':
-                ks = [a['k'] for a in (c.get('pa') or p.get('anh') or p.get('luaChon') or [])]
+                ks = [a['k'] for a in (c.get('pa') or c.get('anh') or p.get('anh') or p.get('luaChon') or [])]
                 if c['dap'] not in ks: loi.append('đáp án lạ ' + c['ma'])
         if p['loai'] in ('doc-ghep', 'doc-dien', 'doc-tranh'):
             dung_ = [c['dap'] for c in p['cau']]
             if len(set(dung_)) != len(dung_): loi.append('hai câu trùng đáp án ở ' + p['ten'])
-        for a in p.get('anh', []):
+        for a in p.get('anh', []) + [x for c in p['cau'] for x in c.get('anh', [])]:
             if not os.path.exists(os.path.join(GOC, a['src'])): loi.append('thiếu ảnh ' + a['src'])
     return loi
 

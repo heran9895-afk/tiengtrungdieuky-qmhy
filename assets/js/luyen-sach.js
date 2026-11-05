@@ -4,6 +4,7 @@
    (tạo bằng tools/sach_bai_tap/dung.py). Trình bày như sách: từng Phần, cả phần hiện một lượt, bấm chọn là chấm ngay.
    Phần loai 'am' (kieu tm | vm | td): nghe âm tiết, chọn thanh mẫu / vận mẫu / thanh điệu.
    Phần loai 'tranh': nghe hội thoại, chọn tranh (A, B, C…); chữ + pinyin hiện sau khi trả lời.
+   Phần loai 'nghe' (模拟测练 · 听力): mỗi câu có `loi` (1 lời hoặc câu + 问), chọn tranh riêng `anh` hoặc phương án chữ `pa`.
    Phần loai 'doc-tranh' | 'doc-ghep' | 'doc-dien' | 'doc-hoi' (đọc hiểu): câu có pinyin trên chữ (nút Ẩn/Hiện pinyin);
    phương án là chữ cái chung của phần (tranh `anh` hoặc khung `luaChon`) hoặc phương án riêng của câu (`pa`); trả lời xong hiện nghĩa.
    Làm hết mọi câu thì hiện kết quả và gửi bài làm về Sheet (on-tap-gui.js, phan 'sbt-baiN'); không lên Bảng xếp hạng.
@@ -52,7 +53,7 @@
   function dungLuot() {
     var hs = hoSo();
     L = { phan: D.phan.map(function (p) {
-      return { p: p, cau: tron1(p.cau).map(function (c) { return { c: c, pa: p.loai === 'am' ? tron1([c.dap].concat(c.nhieu)) : (c.pa || p.anh || p.luaChon).map(function (a) { return a.k; }) }; }) };
+      return { p: p, cau: tron1(p.cau).map(function (c) { return { c: c, pa: p.loai === 'am' ? tron1([c.dap].concat(c.nhieu)) : (c.pa || c.anh || p.anh || p.luaChon).map(function (a) { return a.k; }) }; }) };
     }), kq: [], ma: G ? G.maLuot() : String(Date.now()), luc: Date.now(), batDau: new Date().toISOString(), hoTen: gon(hs.hoTen), lop: gon(hs.lop) };
     L.tong = L.phan.reduce(function (s, x) { return s + x.cau.length; }, 0);
   }
@@ -85,14 +86,31 @@
         return '<button type="button" class="sbt-o" data-j="' + j + '">' + (o ? '<b>' + esc(kk) + '</b>' + chuPy(o) : esc(kk)) + '</button>'; }).join('') + '</div>' +
       (c.vi ? '<div class="sbt-loi" hidden><p class="sbt-vi">' + esc(c.vi) + '</p></div>' : '') + '</li>';
   }
+  // Câu nghe (模拟测练 · 听力): loa phát cụm / câu hỏi / câu + câu hỏi; chọn tranh riêng của câu (c.anh) hoặc phương án chữ (c.pa)
+  function loiHtml(c) {
+    return '<div class="sbt-loi" hidden>' + c.loi.map(function (v) {
+      return '<p>' + (v.ai ? '<b>' + esc(v.ai) + '：</b>' : '') + '<span class="hanzi">' + esc(v.han) + '</span><i>' + esc(v.py) + '</i></p>'; }).join('') +
+      (c.vi ? '<p class="sbt-vi">' + esc(c.vi) + '</p>' : '') + '</div>';
+  }
+  function veCauNghe(x, k) {
+    var c = x.c, nut;
+    if (c.anh) nut = '<div class="sbt-pa sbt-pa-anh sbt-pa-' + x.pa.length + '">' + x.pa.map(function (kk, j) {
+      var a = c.anh.filter(function (z) { return z.k === kk; })[0];
+      return '<button type="button" class="sbt-o sbt-o-anh" data-j="' + j + '" aria-label="Tranh ' + esc(kk) + '"><img src="' + esc(TV.ROOT + a.src) + '" alt="' + esc(a.alt || '') + '" loading="lazy" width="720" height="480"><span>' + esc(kk) + '</span></button>'; }).join('') + '</div>';
+    else nut = '<div class="sbt-pa sbt-pa-rieng sbt-pa-' + x.pa.length + '">' + x.pa.map(function (kk, j) {
+      var o = c.pa.filter(function (a) { return a.k === kk; })[0];
+      return '<button type="button" class="sbt-o" data-j="' + j + '"><b>' + esc(kk) + '</b>' + chuPy(o) + '</button>'; }).join('') + '</div>';
+    return '<li class="sbt-cau sbt-cau-tr" data-ma="' + esc(c.ma) + '"><div class="sbt-de"><span class="sbt-so">' + (k + 1) + '</span>' +
+      TV.nutLoa(docHT(c)) + '<span class="sbt-goi">' + (c.loi.length > 1 ? 'Nghe câu và câu hỏi' : 'Nghe') + '</span></div>' + nut + loiHtml(c) + '</li>';
+  }
   function ve() {
     var hs = hoSo();
     el.innerHTML = '<div class="sbt-hs lt-hs"><label>Họ tên đầy đủ<input type="text" class="sbt-ten lt-hs-ten" autocomplete="name" placeholder="VD: Nguyễn Văn An" value="' + esc(hs.hoTen || '') + '"></label>' +
       '<label>Lớp<input type="text" class="sbt-lop lt-hs-lop" placeholder="VD: HSK1-K3" value="' + esc(hs.lop || '') + '"></label>' +
       '<p class="lt-hs-ghi">Làm xong cả bài, kết quả được gửi cho cô giáo để theo dõi. Phần này không xếp hạng.</p></div>' +
-      (D.phan.some(function (p) { return /^doc/.test(p.loai); }) ? '<div class="sbt-cong-cu"><button type="button" class="btn sbt-nut-py" aria-pressed="' + !anPy() + '">' + (anPy() ? 'Hiện pinyin' : 'Ẩn pinyin') + '</button></div>' : '') +
+      (D.phan.some(function (p) { return /^doc/.test(p.loai) || p.loai === 'nghe'; }) ? '<div class="sbt-cong-cu"><button type="button" class="btn sbt-nut-py" aria-pressed="' + !anPy() + '">' + (anPy() ? 'Hiện pinyin' : 'Ẩn pinyin') + '</button></div>' : '') +
       L.phan.map(function (x, i) {
-        var p = x.p, tranh = p.loai === 'tranh', doc = /^doc/.test(p.loai);
+        var p = x.p, tranh = p.loai === 'tranh', doc = /^doc/.test(p.loai), nghe = p.loai === 'nghe';
         return '<section class="sbt-phan card" data-i="' + i + '"><div class="sbt-phan-dau"><span class="sbt-phan-so">' + (i + 1) + '</span><div>' +
           '<h2 class="sbt-phan-ten">' + esc(p.ten) + '</h2><p class="sbt-phan-zh hanzi">' + esc(p.zh) + '</p></div>' +
           '<span class="sbt-dem" data-i="' + i + '">0 / ' + x.cau.length + '</span></div>' +
@@ -101,7 +119,7 @@
             return '<figure><img src="' + esc(TV.ROOT + a.src) + '" alt="' + esc(a.alt || ('Tranh ' + a.k)) + '" loading="lazy" width="720" height="480"><figcaption>' + esc(a.k) + '</figcaption></figure>'; }).join('') + '</div>' : '') +
           (p.luaChon ? '<div class="sbt-khung' + (p.loai === 'doc-dien' ? ' sbt-khung-tu' : '') + '">' + p.luaChon.map(function (o) {
             return '<div class="sbt-lc"><b>' + esc(o.k) + '</b>' + chuPy(o) + '</div>'; }).join('') + '</div>' : '') +
-          '<ol class="sbt-ds' + (tranh || doc ? ' sbt-ds-tr' : '') + '">' + x.cau.map(function (y, k) { return tranh ? veCauTranh(y, k) : doc ? veCauDoc(y, k) : veCauAm(y, k, p); }).join('') + '</ol></section>';
+          '<ol class="sbt-ds' + (tranh || doc || nghe ? ' sbt-ds-tr' : '') + '">' + x.cau.map(function (y, k) { return tranh ? veCauTranh(y, k) : doc ? veCauDoc(y, k) : nghe ? veCauNghe(y, k) : veCauAm(y, k, p); }).join('') + '</ol></section>';
       }).join('') +
       '<div class="sbt-ket card" aria-live="polite"><p class="sbt-ket-dem">Đã làm <b>0</b> / ' + L.tong + ' câu</p></div>';
   }
@@ -142,7 +160,7 @@
     var lo = li.querySelector('.sbt-loi'); if (lo) lo.hidden = false;
     var hs = hoSo(); L.hoTen = gon(hs.hoTen); L.lop = gon(hs.lop);
     L.kq.push({ stt: L.kq.length + 1, maCau: x.p.loai + (x.p.kieu ? '-' + x.p.kieu : '') + '/' + c.ma, dang: x.p.kieu || x.p.loai, nhom: x.p.ten,
-      deBai: c.hien || (c.loi ? c.loi.map(function (v) { return v.ai + '：' + v.han; }).join(' ') : c.han + (c.hoi ? ' ★' + c.hoi.han : '')), dapAn: c.dap, chon: pc, dung: dung ? 1 : 0, thuTu: y.pa.join(' | ') });
+      deBai: c.hien || (c.loi ? c.loi.map(function (v) { return (v.ai ? v.ai + '：' : '') + v.han; }).join(' ') : c.han + (c.hoi ? ' ★' + c.hoi.han : '')), dapAn: c.dap, chon: pc, dung: dung ? 1 : 0, thuTu: y.pa.join(' | ') });
     amThanh(dung ? 'dung' : 'sai');
     capNhatDem();
   }

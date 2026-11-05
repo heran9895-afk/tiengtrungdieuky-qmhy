@@ -134,6 +134,399 @@
    "kieu": "at"
   },
   {
+   "ten": "Nghe, chọn tranh đúng",
+   "zh": "听力 · 第一部分：听短语，选择图片",
+   "hd": "Bấm loa nghe cụm từ, chọn tranh đúng trong ba tranh.",
+   "loai": "nghe",
+   "cau": [
+    {
+     "ma": "n1-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "面包",
+       "py": "miànbāo"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b5-mi.webp",
+       "alt": "Một bát mì"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b5-banh-mi.webp",
+       "alt": "Bánh mì"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b5-goi-sui-cao.webp",
+       "alt": "Gói sủi cảo"
+      }
+     ],
+     "dap": "B",
+     "vi": "bánh mì",
+     "doc": "assets/am/tu/e51a450767.mp3"
+    },
+    {
+     "ma": "n1-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "新电脑",
+       "py": "xīn diànnǎo"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b5-sinh-nhat.webp",
+       "alt": "Bánh sinh nhật"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b5-banh-bao.webp",
+       "alt": "Bánh bao"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b5-may-tinh.webp",
+       "alt": "Máy tính xách tay"
+      }
+     ],
+     "dap": "C",
+     "vi": "máy tính mới",
+     "doc": "assets/am/tu/f677378751.mp3"
+    },
+    {
+     "ma": "n1-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "做饭",
+       "py": "zuò fàn"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b5-nau-an.webp",
+       "alt": "Nấu ăn trong bếp"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b5-nghi-ngoi.webp",
+       "alt": "Nằm nghỉ trên sofa"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b4-dong-nghiep.webp",
+       "alt": "Làm việc ở văn phòng"
+      }
+     ],
+     "dap": "A",
+     "vi": "nấu cơm",
+     "doc": "assets/am/tu/e69a3d7106.mp3"
+    }
+   ]
+  },
+  {
+   "ten": "Nghe câu hỏi, chọn câu trả lời",
+   "zh": "听力 · 第二部分：听问题，选择正确回答",
+   "hd": "Bấm loa nghe câu hỏi, chọn câu trả lời đúng.",
+   "loai": "nghe",
+   "cau": [
+    {
+     "ma": "n2-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "今天几号？",
+       "py": "Jīntiān jǐ hào?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "星期三",
+       "py": "xīngqīsān"
+      },
+      {
+       "k": "B",
+       "han": "十五号",
+       "py": "shíwǔ hào"
+      },
+      {
+       "k": "C",
+       "han": "三个",
+       "py": "sān ge"
+      }
+     ],
+     "dap": "B",
+     "vi": "Hôm nay ngày mấy?",
+     "doc": "assets/am/cau/0aeb8a0ed9.mp3"
+    },
+    {
+     "ma": "n2-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "你会做饭吗？",
+       "py": "Nǐ huì zuò fàn ma?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "会，我会做饺子。",
+       "py": "Huì, wǒ huì zuò jiǎozi."
+      },
+      {
+       "k": "B",
+       "han": "我很喜欢。",
+       "py": "Wǒ hěn xǐhuan."
+      },
+      {
+       "k": "C",
+       "han": "今天是我的生日。",
+       "py": "Jīntiān shì wǒ de shēngrì."
+      }
+     ],
+     "dap": "A",
+     "vi": "Bạn có biết nấu cơm không?",
+     "doc": "assets/am/cau/8caf9727c9.mp3"
+    },
+    {
+     "ma": "n2-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "明天星期几？",
+       "py": "Míngtiān xīngqī jǐ?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "星期五",
+       "py": "xīngqīwǔ"
+      },
+      {
+       "k": "B",
+       "han": "五月",
+       "py": "wǔ yuè"
+      },
+      {
+       "k": "C",
+       "han": "五个",
+       "py": "wǔ ge"
+      }
+     ],
+     "dap": "A",
+     "vi": "Ngày mai thứ mấy?",
+     "doc": "assets/am/cau/c4e5a26be3.mp3"
+    }
+   ]
+  },
+  {
+   "ten": "Nghe hội thoại, chọn tranh",
+   "zh": "听力 · 第三部分：听对话，选择最匹配的图片",
+   "hd": "Bấm loa nghe hội thoại, chọn tranh phù hợp. Có một tranh thừa.",
+   "loai": "tranh",
+   "anh": [
+    {
+     "k": "A",
+     "src": "assets/img/sach-bai-tap/b5-nghi-ngoi.webp",
+     "alt": "Nằm nghỉ trên sofa"
+    },
+    {
+     "k": "B",
+     "src": "assets/img/sach-bai-tap/b5-sinh-nhat.webp",
+     "alt": "Bánh sinh nhật"
+    },
+    {
+     "k": "C",
+     "src": "assets/img/sach-bai-tap/b5-may-tinh.webp",
+     "alt": "Máy tính xách tay"
+    },
+    {
+     "k": "D",
+     "src": "assets/img/sach-bai-tap/b5-banh-bao.webp",
+     "alt": "Bánh bao"
+    }
+   ],
+   "cau": [
+    {
+     "ma": "n3-1",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "这是你的新电脑吗？",
+       "py": "Zhè shì nǐ de xīn diànnǎo ma?"
+      },
+      {
+       "ai": "B",
+       "han": "对，是新的。",
+       "py": "Duì, shì xīn de."
+      }
+     ],
+     "dap": "C",
+     "vi": "A: Đây là máy tính mới của bạn à? — B: Đúng, máy mới.",
+     "doc": "assets/am/nam1/a2dfe9a63a.mp3|assets/am/cau/1c99158a6e.mp3"
+    },
+    {
+     "ma": "n3-2",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "今天你上班吗？",
+       "py": "Jīntiān nǐ shàngbān ma?"
+      },
+      {
+       "ai": "B",
+       "han": "不上班，我今天休息。",
+       "py": "Bú shàngbān, wǒ jīntiān xiūxi."
+      }
+     ],
+     "dap": "A",
+     "vi": "A: Hôm nay bạn có đi làm không? — B: Không, hôm nay tôi nghỉ.",
+     "doc": "assets/am/nam1/85ff9af055.mp3|assets/am/cau/d779a9e17b.mp3"
+    },
+    {
+     "ma": "n3-3",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "这些包子真好吃！",
+       "py": "Zhèxiē bāozi zhēn hǎochī!"
+      },
+      {
+       "ai": "B",
+       "han": "是我做的。",
+       "py": "Shì wǒ zuò de."
+      }
+     ],
+     "dap": "D",
+     "vi": "A: Mấy cái bánh bao này ngon thật! — B: Tôi làm đấy.",
+     "doc": "assets/am/nam1/5edffb17ab.mp3|assets/am/cau/8e8019f119.mp3"
+    }
+   ]
+  },
+  {
+   "ten": "Nghe câu và câu hỏi, chọn đáp án",
+   "zh": "听力 · 第四部分：听句子和问题，选择正确答案",
+   "hd": "Bấm loa nghe một câu và câu hỏi, chọn đáp án đúng.",
+   "loai": "nghe",
+   "cau": [
+    {
+     "ma": "n4-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "今天是十月一号，星期三。",
+       "py": "Jīntiān shì shí yuè yī hào, xīngqīsān."
+      },
+      {
+       "ai": "问",
+       "han": "今天星期几？",
+       "py": "Jīntiān xīngqī jǐ?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "星期一",
+       "py": "xīngqīyī"
+      },
+      {
+       "k": "B",
+       "han": "星期三",
+       "py": "xīngqīsān"
+      },
+      {
+       "k": "C",
+       "han": "星期天",
+       "py": "xīngqītiān"
+      }
+     ],
+     "dap": "B",
+     "vi": "Hôm nay là ngày 1 tháng 10, thứ Tư. — Hỏi: Hôm nay thứ mấy?",
+     "doc": "assets/am/nam1/57fdbde8b3.mp3|assets/am/cau/8edc304656.mp3"
+    },
+    {
+     "ma": "n4-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我妈妈会做面条儿，不会做饺子。",
+       "py": "Wǒ māma huì zuò miàntiáor, bú huì zuò jiǎozi."
+      },
+      {
+       "ai": "问",
+       "han": "他妈妈会做什么？",
+       "py": "Tā māma huì zuò shénme?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "饺子",
+       "py": "jiǎozi"
+      },
+      {
+       "k": "B",
+       "han": "面包",
+       "py": "miànbāo"
+      },
+      {
+       "k": "C",
+       "han": "面条儿",
+       "py": "miàntiáor"
+      }
+     ],
+     "dap": "C",
+     "vi": "Mẹ tôi biết làm mì, không biết làm sủi cảo. — Hỏi: Mẹ anh ấy biết làm gì?",
+     "doc": "assets/am/nam1/ce4f08e17a.mp3|assets/am/cau/28ecf73ead.mp3"
+    },
+    {
+     "ma": "n4-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "昨天是我的生日，我很高兴。",
+       "py": "Zuótiān shì wǒ de shēngrì, wǒ hěn gāoxìng."
+      },
+      {
+       "ai": "问",
+       "han": "他的生日是哪天？",
+       "py": "Tā de shēngrì shì nǎ tiān?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "今天",
+       "py": "jīntiān"
+      },
+      {
+       "k": "B",
+       "han": "昨天",
+       "py": "zuótiān"
+      },
+      {
+       "k": "C",
+       "han": "明天",
+       "py": "míngtiān"
+      }
+     ],
+     "dap": "B",
+     "vi": "Hôm qua là sinh nhật tôi, tôi rất vui. — Hỏi: Sinh nhật anh ấy là hôm nào?",
+     "doc": "assets/am/nam1/9ada926eb4.mp3|assets/am/cau/31ea90a7c1.mp3"
+    }
+   ]
+  },
+  {
    "ten": "Đọc câu, chọn tranh",
    "zh": "阅读 · 第一部分：选择与句子最匹配的图片",
    "hd": "Đọc câu, chọn tranh phù hợp nhất. Có một tranh thừa.",

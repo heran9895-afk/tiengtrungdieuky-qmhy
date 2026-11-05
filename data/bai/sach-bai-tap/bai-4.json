@@ -134,6 +134,399 @@
    "kieu": "at"
   },
   {
+   "ten": "Nghe, chọn tranh đúng",
+   "zh": "听力 · 第一部分：听短语，选择图片",
+   "hd": "Bấm loa nghe cụm từ, chọn tranh đúng trong ba tranh.",
+   "loai": "nghe",
+   "cau": [
+    {
+     "ma": "n1-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "两个孩子",
+       "py": "liǎng ge háizi"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b4-em-be.webp",
+       "alt": "Một em bé"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b4-hai-be.webp",
+       "alt": "Hai đứa trẻ"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b4-ong-ba.webp",
+       "alt": "Hai ông bà"
+      }
+     ],
+     "dap": "B",
+     "vi": "hai đứa trẻ",
+     "doc": "assets/am/cau/cc8fe5fb1c.mp3"
+    },
+    {
+     "ma": "n1-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我女儿",
+       "py": "wǒ nǚ'ér"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b4-be-trai.webp",
+       "alt": "Một bé trai"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b4-dong-nghiep.webp",
+       "alt": "Hai người ở văn phòng"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b4-be-gai.webp",
+       "alt": "Một bé gái"
+      }
+     ],
+     "dap": "C",
+     "vi": "con gái tôi",
+     "doc": "assets/am/cau/2178a40b21.mp3"
+    },
+    {
+     "ma": "n1-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "三口人",
+       "py": "sān kǒu rén"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b4-ba-nguoi.webp",
+       "alt": "Bố, mẹ và con gái"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b4-hai-be.webp",
+       "alt": "Hai đứa trẻ"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b4-em-be.webp",
+       "alt": "Một em bé"
+      }
+     ],
+     "dap": "A",
+     "vi": "ba người",
+     "doc": "assets/am/cau/33ce33a37a.mp3"
+    }
+   ]
+  },
+  {
+   "ten": "Nghe câu hỏi, chọn câu trả lời",
+   "zh": "听力 · 第二部分：听问题，选择正确回答",
+   "hd": "Bấm loa nghe câu hỏi, chọn câu trả lời đúng.",
+   "loai": "nghe",
+   "cau": [
+    {
+     "ma": "n2-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "你家有几口人？",
+       "py": "Nǐ jiā yǒu jǐ kǒu rén?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "五岁",
+       "py": "wǔ suì"
+      },
+      {
+       "k": "B",
+       "han": "四口人",
+       "py": "sì kǒu rén"
+      },
+      {
+       "k": "C",
+       "han": "两个",
+       "py": "liǎng ge"
+      }
+     ],
+     "dap": "B",
+     "vi": "Nhà bạn có mấy người?",
+     "doc": "assets/am/cau/1aef7c8693.mp3"
+    },
+    {
+     "ma": "n2-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "你女儿今年多大？",
+       "py": "Nǐ nǚ'ér jīnnián duō dà?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "八岁",
+       "py": "bā suì"
+      },
+      {
+       "k": "B",
+       "han": "三个",
+       "py": "sān ge"
+      },
+      {
+       "k": "C",
+       "han": "一百",
+       "py": "yìbǎi"
+      }
+     ],
+     "dap": "A",
+     "vi": "Con gái bạn năm nay bao nhiêu tuổi?",
+     "doc": "assets/am/cau/9de6857630.mp3"
+    },
+    {
+     "ma": "n2-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "你有没有妹妹？",
+       "py": "Nǐ yǒu méiyǒu mèimei?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "有，我有一个妹妹。",
+       "py": "Yǒu, wǒ yǒu yí ge mèimei."
+      },
+      {
+       "k": "B",
+       "han": "他是我哥哥。",
+       "py": "Tā shì wǒ gēge."
+      },
+      {
+       "k": "C",
+       "han": "我今年二十岁。",
+       "py": "Wǒ jīnnián èrshí suì."
+      }
+     ],
+     "dap": "A",
+     "vi": "Bạn có em gái không?",
+     "doc": "assets/am/cau/417c01d176.mp3"
+    }
+   ]
+  },
+  {
+   "ten": "Nghe hội thoại, chọn tranh",
+   "zh": "听力 · 第三部分：听对话，选择最匹配的图片",
+   "hd": "Bấm loa nghe hội thoại, chọn tranh phù hợp. Có một tranh thừa.",
+   "loai": "tranh",
+   "anh": [
+    {
+     "k": "A",
+     "src": "assets/img/sach-bai-tap/b4-ong-ba.webp",
+     "alt": "Hai ông bà"
+    },
+    {
+     "k": "B",
+     "src": "assets/img/sach-bai-tap/b4-be-gai.webp",
+     "alt": "Một bé gái"
+    },
+    {
+     "k": "C",
+     "src": "assets/img/sach-bai-tap/b4-dong-nghiep.webp",
+     "alt": "Hai người ở văn phòng"
+    },
+    {
+     "k": "D",
+     "src": "assets/img/sach-bai-tap/b4-thay-giao.webp",
+     "alt": "Một thầy giáo đứng trên lớp"
+    }
+   ],
+   "cau": [
+    {
+     "ma": "n3-1",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "这是你女儿吗？",
+       "py": "Zhè shì nǐ nǚ'ér ma?"
+      },
+      {
+       "ai": "B",
+       "han": "对，她今年六岁。",
+       "py": "Duì, tā jīnnián liù suì."
+      }
+     ],
+     "dap": "B",
+     "vi": "A: Đây là con gái chị à? — B: Đúng, năm nay cháu sáu tuổi.",
+     "doc": "assets/am/nam1/0c012fa2b2.mp3|assets/am/cau/f50b714ff2.mp3"
+    },
+    {
+     "ma": "n3-2",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "你老公做什么工作？",
+       "py": "Nǐ lǎogōng zuò shénme gōngzuò?"
+      },
+      {
+       "ai": "B",
+       "han": "他是老师。",
+       "py": "Tā shì lǎoshī."
+      }
+     ],
+     "dap": "D",
+     "vi": "A: Chồng chị làm nghề gì? — B: Anh ấy là giáo viên.",
+     "doc": "assets/am/nam1/750a84f8f7.mp3|assets/am/cau/7c4453d05f.mp3"
+    },
+    {
+     "ma": "n3-3",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "他们是谁？",
+       "py": "Tāmen shì shéi?"
+      },
+      {
+       "ai": "B",
+       "han": "他们是我爷爷、奶奶。",
+       "py": "Tāmen shì wǒ yéye, nǎinai."
+      }
+     ],
+     "dap": "A",
+     "vi": "A: Họ là ai? — B: Họ là ông bà nội của tôi.",
+     "doc": "assets/am/nam1/39d05129f4.mp3|assets/am/cau/e0c543829e.mp3"
+    }
+   ]
+  },
+  {
+   "ten": "Nghe câu và câu hỏi, chọn đáp án",
+   "zh": "听力 · 第四部分：听句子和问题，选择正确答案",
+   "hd": "Bấm loa nghe một câu và câu hỏi, chọn đáp án đúng.",
+   "loai": "nghe",
+   "cau": [
+    {
+     "ma": "n4-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我有两个哥哥，没有姐姐。",
+       "py": "Wǒ yǒu liǎng ge gēge, méiyǒu jiějie."
+      },
+      {
+       "ai": "问",
+       "han": "他有几个哥哥？",
+       "py": "Tā yǒu jǐ ge gēge?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "一个",
+       "py": "yí ge"
+      },
+      {
+       "k": "B",
+       "han": "两个",
+       "py": "liǎng ge"
+      },
+      {
+       "k": "C",
+       "han": "三个",
+       "py": "sān ge"
+      }
+     ],
+     "dap": "B",
+     "vi": "Tôi có hai anh trai, không có chị gái. — Hỏi: Anh ấy có mấy anh trai?",
+     "doc": "assets/am/nam1/d0249607aa.mp3|assets/am/cau/62eaac3af6.mp3"
+    },
+    {
+     "ma": "n4-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我有一个儿子和一个女儿。",
+       "py": "Wǒ yǒu yí ge érzi hé yí ge nǚ'ér."
+      },
+      {
+       "ai": "问",
+       "han": "他有几个孩子？",
+       "py": "Tā yǒu jǐ ge háizi?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "一个",
+       "py": "yí ge"
+      },
+      {
+       "k": "B",
+       "han": "两个",
+       "py": "liǎng ge"
+      },
+      {
+       "k": "C",
+       "han": "三个",
+       "py": "sān ge"
+      }
+     ],
+     "dap": "B",
+     "vi": "Tôi có một con trai và một con gái. — Hỏi: Anh ấy có mấy đứa con?",
+     "doc": "assets/am/nam1/25c7b5e8a9.mp3|assets/am/cau/0c12cc4aa9.mp3"
+    },
+    {
+     "ma": "n4-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我爷爷今年八十岁，奶奶七十八岁。",
+       "py": "Wǒ yéye jīnnián bāshí suì, nǎinai qīshíbā suì."
+      },
+      {
+       "ai": "问",
+       "han": "他奶奶今年多大年纪？",
+       "py": "Tā nǎinai jīnnián duō dà niánjì?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "七十八岁",
+       "py": "qīshíbā suì"
+      },
+      {
+       "k": "B",
+       "han": "八十岁",
+       "py": "bāshí suì"
+      },
+      {
+       "k": "C",
+       "han": "十八岁",
+       "py": "shíbā suì"
+      }
+     ],
+     "dap": "A",
+     "vi": "Ông tôi năm nay 80 tuổi, bà 78 tuổi. — Hỏi: Bà anh ấy năm nay bao nhiêu tuổi?",
+     "doc": "assets/am/nam1/7cae9ff65d.mp3|assets/am/cau/4b4fc82841.mp3"
+    }
+   ]
+  },
+  {
    "ten": "Đọc câu, chọn tranh",
    "zh": "阅读 · 第一部分：选择与句子最匹配的图片",
    "hd": "Đọc câu, chọn tranh phù hợp nhất. Có một tranh thừa.",

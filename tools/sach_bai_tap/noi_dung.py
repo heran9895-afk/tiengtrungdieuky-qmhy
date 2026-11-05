@@ -138,3 +138,64 @@ BAI += [
     C('d4-4', '这台电脑是新的，那台是旧的。我喜欢新电脑。', 'Zhè tái diànnǎo shì xīn de, nà tái shì jiù de. Wǒ xǐhuan xīn diànnǎo.', 'A', 'Chiếc máy tính này mới, chiếc kia cũ. Tôi thích máy tính mới.',
       hoi={'han': '他喜欢：', 'py': 'Tā xǐhuan:'}, pa=[L('A', '新电脑', 'xīn diànnǎo'), L('B', '旧电脑', 'jiù diànnǎo'), L('C', '新面包', 'xīn miànbāo')])])]},
 ]
+
+# ---------------- Bài 4–5: Nghe (模拟测练 · 听力) ----------------
+P_N1 = {'ten': 'Nghe, chọn tranh đúng', 'zh': '听力 · 第一部分：听短语，选择图片', 'hd': 'Bấm loa nghe cụm từ, chọn tranh đúng trong ba tranh.'}
+P_N2 = {'ten': 'Nghe câu hỏi, chọn câu trả lời', 'zh': '听力 · 第二部分：听问题，选择正确回答', 'hd': 'Bấm loa nghe câu hỏi, chọn câu trả lời đúng.'}
+P_N3 = {'ten': 'Nghe hội thoại, chọn tranh', 'zh': '听力 · 第三部分：听对话，选择最匹配的图片', 'hd': 'Bấm loa nghe hội thoại, chọn tranh phù hợp. Có một tranh thừa.'}
+P_N4 = {'ten': 'Nghe câu và câu hỏi, chọn đáp án', 'zh': '听力 · 第四部分：听句子和问题，选择正确答案', 'hd': 'Bấm loa nghe một câu và câu hỏi, chọn đáp án đúng.'}
+
+def T(k, ten, alt): return {'k': k, 'src': A + ten + '.webp', 'alt': alt}
+def N1(ma, han, py, anh, dap, vi): return {'ma': ma, 'giong': ['nu1'], 'loi': [{'ai': '', 'han': han, 'py': py}], 'anh': anh, 'dap': dap, 'vi': vi}
+def N2(ma, han, py, pa, dap, vi): return {'ma': ma, 'giong': ['nu1'], 'loi': [{'ai': '', 'han': han, 'py': py}], 'pa': pa, 'dap': dap, 'vi': vi}
+def N3(ma, a, b, dap, vi, giong=('nam1', 'nu1')):
+    return {'ma': ma, 'giong': list(giong), 'loi': [{'ai': 'A', 'han': a[0], 'py': a[1]}, {'ai': 'B', 'han': b[0], 'py': b[1]}], 'dap': dap, 'vi': vi}
+def N4(ma, cau, hoi, pa, dap, vi):
+    return {'ma': ma, 'giong': ['nam1', 'nu1'], 'loi': [{'ai': '', 'han': cau[0], 'py': cau[1]}, {'ai': '问', 'han': hoi[0], 'py': hoi[1]}], 'pa': pa, 'dap': dap, 'vi': vi}
+
+NGHE = {
+ 4: [
+  phan(P_N1, 'nghe', [
+    N1('n1-1', '两个孩子', 'liǎng ge háizi', [T('A', 'b4-em-be', 'Một em bé'), T('B', 'b4-hai-be', 'Hai đứa trẻ'), T('C', 'b4-ong-ba', 'Hai ông bà')], 'B', 'hai đứa trẻ'),
+    N1('n1-2', '我女儿', 'wǒ nǚ\'ér', [T('A', 'b4-be-trai', 'Một bé trai'), T('B', 'b4-dong-nghiep', 'Hai người ở văn phòng'), T('C', 'b4-be-gai', 'Một bé gái')], 'C', 'con gái tôi'),
+    N1('n1-3', '三口人', 'sān kǒu rén', [T('A', 'b4-ba-nguoi', 'Bố, mẹ và con gái'), T('B', 'b4-hai-be', 'Hai đứa trẻ'), T('C', 'b4-em-be', 'Một em bé')], 'A', 'ba người')]),
+  phan(P_N2, 'nghe', [
+    N2('n2-1', '你家有几口人？', 'Nǐ jiā yǒu jǐ kǒu rén?', [L('A', '五岁', 'wǔ suì'), L('B', '四口人', 'sì kǒu rén'), L('C', '两个', 'liǎng ge')], 'B', 'Nhà bạn có mấy người?'),
+    N2('n2-2', '你女儿今年多大？', 'Nǐ nǚ\'ér jīnnián duō dà?', [L('A', '八岁', 'bā suì'), L('B', '三个', 'sān ge'), L('C', '一百', 'yìbǎi')], 'A', 'Con gái bạn năm nay bao nhiêu tuổi?'),
+    N2('n2-3', '你有没有妹妹？', 'Nǐ yǒu méiyǒu mèimei?', [L('A', '有，我有一个妹妹。', 'Yǒu, wǒ yǒu yí ge mèimei.'), L('B', '他是我哥哥。', 'Tā shì wǒ gēge.'), L('C', '我今年二十岁。', 'Wǒ jīnnián èrshí suì.')], 'A', 'Bạn có em gái không?')]),
+  phan(P_N3, 'tranh', [
+    N3('n3-1', ('这是你女儿吗？', 'Zhè shì nǐ nǚ\'ér ma?'), ('对，她今年六岁。', 'Duì, tā jīnnián liù suì.'), 'B', 'A: Đây là con gái chị à? — B: Đúng, năm nay cháu sáu tuổi.'),
+    N3('n3-2', ('你老公做什么工作？', 'Nǐ lǎogōng zuò shénme gōngzuò?'), ('他是老师。', 'Tā shì lǎoshī.'), 'D', 'A: Chồng chị làm nghề gì? — B: Anh ấy là giáo viên.'),
+    N3('n3-3', ('他们是谁？', 'Tāmen shì shéi?'), ('他们是我爷爷、奶奶。', 'Tāmen shì wǒ yéye, nǎinai.'), 'A', 'A: Họ là ai? — B: Họ là ông bà nội của tôi.')],
+    anh=[T('A', 'b4-ong-ba', 'Hai ông bà'), T('B', 'b4-be-gai', 'Một bé gái'), T('C', 'b4-dong-nghiep', 'Hai người ở văn phòng'), T('D', 'b4-thay-giao', 'Một thầy giáo đứng trên lớp')]),
+  phan(P_N4, 'nghe', [
+    N4('n4-1', ('我有两个哥哥，没有姐姐。', 'Wǒ yǒu liǎng ge gēge, méiyǒu jiějie.'), ('他有几个哥哥？', 'Tā yǒu jǐ ge gēge?'),
+       [L('A', '一个', 'yí ge'), L('B', '两个', 'liǎng ge'), L('C', '三个', 'sān ge')], 'B', 'Tôi có hai anh trai, không có chị gái. — Hỏi: Anh ấy có mấy anh trai?'),
+    N4('n4-2', ('我有一个儿子和一个女儿。', 'Wǒ yǒu yí ge érzi hé yí ge nǚ\'ér.'), ('他有几个孩子？', 'Tā yǒu jǐ ge háizi?'),
+       [L('A', '一个', 'yí ge'), L('B', '两个', 'liǎng ge'), L('C', '三个', 'sān ge')], 'B', 'Tôi có một con trai và một con gái. — Hỏi: Anh ấy có mấy đứa con?'),
+    N4('n4-3', ('我爷爷今年八十岁，奶奶七十八岁。', 'Wǒ yéye jīnnián bāshí suì, nǎinai qīshíbā suì.'), ('他奶奶今年多大年纪？', 'Tā nǎinai jīnnián duō dà niánjì?'),
+       [L('A', '七十八岁', 'qīshíbā suì'), L('B', '八十岁', 'bāshí suì'), L('C', '十八岁', 'shíbā suì')], 'A', 'Ông tôi năm nay 80 tuổi, bà 78 tuổi. — Hỏi: Bà anh ấy năm nay bao nhiêu tuổi?')])],
+ 5: [
+  phan(P_N1, 'nghe', [
+    N1('n1-1', '面包', 'miànbāo', [T('A', 'b5-mi', 'Một bát mì'), T('B', 'b5-banh-mi', 'Bánh mì'), T('C', 'b5-goi-sui-cao', 'Gói sủi cảo')], 'B', 'bánh mì'),
+    N1('n1-2', '新电脑', 'xīn diànnǎo', [T('A', 'b5-sinh-nhat', 'Bánh sinh nhật'), T('B', 'b5-banh-bao', 'Bánh bao'), T('C', 'b5-may-tinh', 'Máy tính xách tay')], 'C', 'máy tính mới'),
+    N1('n1-3', '做饭', 'zuò fàn', [T('A', 'b5-nau-an', 'Nấu ăn trong bếp'), T('B', 'b5-nghi-ngoi', 'Nằm nghỉ trên sofa'), T('C', 'b4-dong-nghiep', 'Làm việc ở văn phòng')], 'A', 'nấu cơm')]),
+  phan(P_N2, 'nghe', [
+    N2('n2-1', '今天几号？', 'Jīntiān jǐ hào?', [L('A', '星期三', 'xīngqīsān'), L('B', '十五号', 'shíwǔ hào'), L('C', '三个', 'sān ge')], 'B', 'Hôm nay ngày mấy?'),
+    N2('n2-2', '你会做饭吗？', 'Nǐ huì zuò fàn ma?', [L('A', '会，我会做饺子。', 'Huì, wǒ huì zuò jiǎozi.'), L('B', '我很喜欢。', 'Wǒ hěn xǐhuan.'), L('C', '今天是我的生日。', 'Jīntiān shì wǒ de shēngrì.')], 'A', 'Bạn có biết nấu cơm không?'),
+    N2('n2-3', '明天星期几？', 'Míngtiān xīngqī jǐ?', [L('A', '星期五', 'xīngqīwǔ'), L('B', '五月', 'wǔ yuè'), L('C', '五个', 'wǔ ge')], 'A', 'Ngày mai thứ mấy?')]),
+  phan(P_N3, 'tranh', [
+    N3('n3-1', ('这是你的新电脑吗？', 'Zhè shì nǐ de xīn diànnǎo ma?'), ('对，是新的。', 'Duì, shì xīn de.'), 'C', 'A: Đây là máy tính mới của bạn à? — B: Đúng, máy mới.'),
+    N3('n3-2', ('今天你上班吗？', 'Jīntiān nǐ shàngbān ma?'), ('不上班，我今天休息。', 'Bú shàngbān, wǒ jīntiān xiūxi.'), 'A', 'A: Hôm nay bạn có đi làm không? — B: Không, hôm nay tôi nghỉ.'),
+    N3('n3-3', ('这些包子真好吃！', 'Zhèxiē bāozi zhēn hǎochī!'), ('是我做的。', 'Shì wǒ zuò de.'), 'D', 'A: Mấy cái bánh bao này ngon thật! — B: Tôi làm đấy.')],
+    anh=[T('A', 'b5-nghi-ngoi', 'Nằm nghỉ trên sofa'), T('B', 'b5-sinh-nhat', 'Bánh sinh nhật'), T('C', 'b5-may-tinh', 'Máy tính xách tay'), T('D', 'b5-banh-bao', 'Bánh bao')]),
+  phan(P_N4, 'nghe', [
+    N4('n4-1', ('今天是十月一号，星期三。', 'Jīntiān shì shí yuè yī hào, xīngqīsān.'), ('今天星期几？', 'Jīntiān xīngqī jǐ?'),
+       [L('A', '星期一', 'xīngqīyī'), L('B', '星期三', 'xīngqīsān'), L('C', '星期天', 'xīngqītiān')], 'B', 'Hôm nay là ngày 1 tháng 10, thứ Tư. — Hỏi: Hôm nay thứ mấy?'),
+    N4('n4-2', ('我妈妈会做面条儿，不会做饺子。', 'Wǒ māma huì zuò miàntiáor, bú huì zuò jiǎozi.'), ('他妈妈会做什么？', 'Tā māma huì zuò shénme?'),
+       [L('A', '饺子', 'jiǎozi'), L('B', '面包', 'miànbāo'), L('C', '面条儿', 'miàntiáor')], 'C', 'Mẹ tôi biết làm mì, không biết làm sủi cảo. — Hỏi: Mẹ anh ấy biết làm gì?'),
+    N4('n4-3', ('昨天是我的生日，我很高兴。', 'Zuótiān shì wǒ de shēngrì, wǒ hěn gāoxìng.'), ('他的生日是哪天？', 'Tā de shēngrì shì nǎ tiān?'),
+       [L('A', '今天', 'jīntiān'), L('B', '昨天', 'zuótiān'), L('C', '明天', 'míngtiān')], 'B', 'Hôm qua là sinh nhật tôi, tôi rất vui. — Hỏi: Sinh nhật anh ấy là hôm nào?')])]}
+for b in BAI:
+    if b['bai'] in NGHE:
+        b['phan'] = [b['phan'][0]] + NGHE[b['bai']] + b['phan'][1:]
