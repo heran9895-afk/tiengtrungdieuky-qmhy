@@ -67,6 +67,7 @@
     LECH = (d.bayGio || Date.now()) - Date.now();
     THONG_TIN = d.thongTin || null;
     var tt = d.trangThai, I = d.thongTin || {};
+    if ((tt === 'chua-co-de' || tt === 'chua-giao') && QM_TK.giaoVien && QM_TK.giaoVien()) return xemThuGv();   // tài khoản cô đang chọn hồ sơ học sinh: vẫn xem thử
     if (tt === 'chua-co-de' || tt === 'chua-giao') return man('<div class="kt-ico">📝</div><h2>Bài kiểm tra chưa được giao</h2><p>Bài kiểm tra chỉ mở khi cô giao cho lớp của bạn. Tới giờ làm bài, bạn tải lại trang này nhé.</p>');
     if (tt === 'het-han') return man('<div class="kt-ico">⏰</div><h2>Đã hết hạn làm bài</h2><p>Hạn nộp: <b>' + ngayGio(I.hanNop) + '</b>. Bạn chưa làm bài này; nếu có lý do, bạn bấm 💬 Nhắn cô ở chân trang nhé.</p>');
     if (tt === 'da-nop') return veKetQua(d.ketQua);
