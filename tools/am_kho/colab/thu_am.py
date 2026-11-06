@@ -1,0 +1,637 @@
+# -*- coding: utf-8 -*-
+"""Thu giọng Gemini (Sulafat) cho kho từ vựng 9 cấp — chạy trọn gói trên Google Colab.
+
+Sổ dùng module này: tools/am_kho/colab/thu_am_kho.ipynb
+Quy chuẩn: 14 (giọng đọc Gemini). Kế hoạch: Project claude/ke-hoach-thu-am-colab.md.
+
+Mỗi "đợt" = một cấp + một khoảng mã (vd. HSK2 từ 1 đến 100). Mọi thứ của đợt lưu ở
+<thư mục làm việc>/cap-<cấp>_<từ>-<đến>/ (Google Drive của cô), nên Colab ngắt giữa chừng
+thì chạy lại ô là làm tiếp: lượt đã có file wav thì không gọi Gemini lại (không mất tiền hai lần).
+
+  ds.json          danh sách mục cần thu (mỗi mục: chữ đọc, pinyin, loại, trạng thái…)
+  luot.json        các lượt gửi Gemini (≤ 44 dòng, Style riêng từng lượt)
+  wav/<lượt>.wav   âm thanh Gemini trả về (PCM 24 kHz)
+  ketqua/<lượt>.json  kết quả cắt + nhận dạng
+  mp3/tu|cau/…     file đã cắt, nén (chờ đẩy lên web)
+Thư mục làm việc còn có nhat_ky.csv: mỗi lần gọi Gemini một dòng (số giây âm thanh, ước tiền).
+"""
+import os, re, json, time, wave, base64, hashlib, subprocess, difflib, csv, datetime, shutil, unicodedata, sys
+
+CFG = dict(repo=None, work=None, asr=None, key=None, model=None, voice='Sulafat',
+           usd_gio=0.81,        # giá ~0,81 USD / giờ âm thanh tới 31/12/2026 (gấp đôi từ 1/1/2027)
+           vnd_usd=26000, max_dong=44, max_chu=40, so_lan_thu_lai=2, kho='heran9895-afk/tiengtrungdieuky-qmhy')
+SR = 24000
+API = 'https://generativelanguage.googleapis.com/v1beta/'
+
+
+def cai_dat(repo, work, asr, key=None, model=None, **khac):
+    """repo: thư mục kho web đã clone; work: thư mục lưu tiến độ (Drive); asr: thư mục model paraformer."""
+    CFG.update(repo=repo.rstrip('/') + '/', work=work.rstrip('/') + '/', asr=asr.rstrip('/') + '/', key=key, model=model, **khac)
+    os.makedirs(CFG['work'], exist_ok=True)
+
+
+# ============ Chữ, pinyin ============
+def chuan(s):  # giống chuanAm() trong assets/js/tu-vung-chung.js
+    s = re.sub(r'\s+', '', str(s or ''))
+    s = re.sub(r'(^|[。！？])[A-Z一-鿿]{1,4}[：:]', r'\1', s)
+    return re.sub(r'[—–\-“”"]', '', s).replace('！', '。')
+
+
+def gon(s): return re.sub(r'([。？！，])\1+', r'\1', str(s).strip())
+def han(s): return ''.join(re.findall(r'[一-鿿]', s or ''))
+def md10(s): return hashlib.md5(s.encode()).hexdigest()[:10]
+
+
+def khong_dau(p):
+    p = unicodedata.normalize('NFD', str(p or '').lower())
+    p = ''.join(c for c in p if not unicodedata.combining(c)).replace('ü', 'u').replace('v', 'u')
+    return re.sub(r'[^a-z]', '', p)
+
+
+def py_asr(s):
+    from pypinyin import lazy_pinyin
+    return [p.replace('v', 'u').replace('ü', 'u') for p in lazy_pinyin(re.sub(r'[^一-鿿]|儿', '', s)) if p]
+
+
+def cac_am(c):
+    from pypinyin import pinyin, Style
+    return list(dict.fromkeys(pinyin(c, heteronym=True, style=Style.TONE)[0]))
+
+
+def da_am(c): return len(cac_am(c)) > 1
+
+
+def chu_doc_khac(text):
+    """Chữ đa âm đọc âm phụ mà âm phụ chỉ khác âm chính ở THANH (vd. 答应 dā/dá, 部分…): máy nhận dạng không phân biệt
+    được thanh nên cô phải nghe. Chữ đa âm khác cả phụ âm / vần (重 chóng/zhòng, 便 pián/biàn) thì máy tự kiểm."""
+    from pypinyin import pinyin, Style
+    h = han(text)
+    out = []
+    for c, p in zip(h, [x[0] for x in pinyin(h, style=Style.TONE)]):
+        if c in '了的地得着么吗呢吧啊个子们一不儿' or c in out: continue   # trợ từ, biến điệu: Style đã ghi luật chung
+        if khong_dau(p) == p.replace('ü', 'u').replace('v', 'u'): continue   # thanh nhẹ: đọc nặng nhẹ đều chấp nhận
+        rs = cac_am(c)
+        if p != pinyin(c)[0][0] and any(khong_dau(r) == khong_dau(p) and r != p for r in rs): out.append(c)
+    return out
+
+
+TEN_QUEN = {'hanyu', 'hanzi', 'zhongguo', 'zhongwen', 'beijing', 'shanghai', 'chunjie', 'meiguo', 'yingguo', 'riben', 'hanguo',
+            'faguo', 'deguo', 'yingyu', 'fayu', 'riyu', 'hanyu', 'zhongqiujie', 'yuenan', 'yuenanyu', 'xianggang', 'taiwan', 'changcheng',
+            'changjiang', 'huanghe', 'yazhou', 'ouzhou', 'feizhou', 'zhongguoren', 'beijingren'}
+
+
+def ten_rieng(py, typ):
+    toks = re.findall(r"[A-Za-zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜüÜĀÁǍÀĒÉĚÈĪÍǏÌŌÓǑÒŪÚǓÙ·']+|[.!?。！？]", py or '')
+    dau = True
+    for t in toks:
+        if t in '.!?。！？': dau = True; continue
+        if t[0].isupper() and (typ != 'cau' or not dau) and khong_dau(t) not in TEN_QUEN: return True
+        dau = False
+    return False
+
+
+# ============ 1. Gom danh sách ============
+def tep_cap(cap): return CFG['repo'] + 'data/tu-vung/cap-%s.json' % cap
+
+
+def gom(cap, tu, den):
+    """Gom mục cần thu của mã thứ tu..den (đếm từ 1, gồm cả hai đầu). Giống gom2.py + thêm pinyin, cờ cần nghe."""
+    d = json.load(open(tep_cap(cap)))
+    B = json.load(open(CFG['repo'] + 'assets/am/ban-do.json'))
+    out, seen, bo = [], set(), []
+
+    def pick(doc, hien):  # chữ có 儿 đọc theo chữ hiển thị (quy chuẩn 14 §3.2)
+        if '儿' in (hien or '') and doc != '-': return hien
+        return doc or hien
+
+    def add(text, py, typ, src, o=None, o_chu=None):
+        """o: ô dữ liệu [Mã, tên ô] cần ghi thẳng đường dẫn file (ô '-'); o_chu: ô dùng nếu đây là chữ đa âm một chữ."""
+        text = (text or '').strip()
+        if not text or text.startswith('assets/') or text == '-': bo.append((src, text)); return
+        k = chuan(text)
+        if k in ('了', '么', '了。', '么。'): bo.append((src, text + ' (đứng riêng, để giọng máy)')); return
+        if o_chu and len(han(k)) == 1 and da_am(han(k)): o, typ = o or o_chu, 'chu'   # chữ đa âm một chữ: ghi thẳng ô Đọc (§8)
+        id_ = (k + '|' + khong_dau(py)) if o else k
+        if not o and k in B: return
+        if not k or id_ in seen: return
+        seen.add(id_)
+        it = dict(id=id_, k=k, text=gon(text), py=(py or '').replace('·', '').strip(), typ=typ, thu='cau' if typ == 'cau' else 'tu',
+                  src=src, ten=md10(id_ if o else k), o=o, trang='cho')
+        out.append(it)
+
+    for w in d[tu - 1:den]:
+        ma = w['Mã']; doc = (w.get('Đọc từ') or '').strip()
+        if doc.startswith('assets/'): bo.append((ma + ' từ', 'đã có file'))
+        else:
+            o = [ma, 'Đọc từ'] if doc == '-' else None
+            add(w['Chữ Hán'] if doc == '-' else pick(doc, w['Chữ Hán']), w.get('Pinyin'), 'tu', ma + ' từ', o, [ma, 'Đọc từ'])
+        for l in (w.get('Cụm từ') or '').split('\n'):
+            p = [x.strip() for x in l.split('|')]
+            if p[0]: add(p[0], p[1] if len(p) > 1 else '', 'tu', ma + ' cụm')
+    for w in d[tu - 1:den]:
+        ma = w['Mã']
+        for i in (1, 2):
+            c = w.get('Câu %d' % i); doc = (w.get('Đọc câu %d' % i) or '').strip()
+            if not c: continue
+            if doc.startswith('assets/'): bo.append((ma + ' câu%d' % i, 'đã có file')); continue
+            o = [ma, 'Đọc câu %d' % i] if doc == '-' else None
+            add(c if doc == '-' else pick(doc, c), w.get('Pinyin câu %d' % i), 'cau', ma + ' câu%d' % i, o)
+    # cờ "cô cần nghe" (nhận dạng không kiểm được thanh điệu, 儿化)
+    for it in out:
+        co = []
+        dk = chu_doc_khac(it['py'] and it['text'])
+        if it['typ'] == 'chu':
+            c = han(it['text'])
+            if khong_dau(it['py']) != khong_dau(cac_am(c)[0]) or it['py'] != cac_am(c)[0] and any(
+                    khong_dau(r) == khong_dau(it['py']) and r != it['py'] for r in cac_am(c)): dk = [c]
+        lech = it['typ'] == 'chu' or (it['py'] and '儿' not in it['text'] and khong_dau(it['py']) != ''.join(py_asr(it['text'])))
+        if dk: co.append('đa âm ' + ''.join(dk))
+        if re.search(r'.儿', it['text']): co.append('儿化')
+        if ten_rieng(it['py'], it['typ']): co.append('tên riêng')
+        it['co'] = co
+        it['alt'] = khong_dau(it['py']) if lech else ''   # pypinyin đọc khác kho → nhận dạng đối chiếu theo pinyin của kho
+    return out, bo
+
+
+# ============ 2. Chia lượt + Style ============
+NHIP = {
+    'tu': "Read as a warm, smiling female Mandarin teacher for learners: slow, clear, standard Putonghua (Beijing). "
+          "Each line is one word or short phrase; read every line exactly once, in order, with a clear pause after each line. "
+          "Do not skip, repeat, or add anything. Say each line with a falling statement intonation.",
+    'cau': "Read as a warm, slightly smiling female Mandarin teacher for learners: slow, clear, standard Putonghua (Beijing), natural sentence melody. "
+           "Each line is one sentence; read every line exactly once, in order, with a clear pause after each line. "
+           "Read ONLY the given text: do not add, skip, or repeat any words or sentences. "
+           "Intonation: statements fall at the end; questions ending in 吗 rise gently; A不A questions (好不好, 是不是) rise gently; "
+           "in questions with 什么, 谁, 哪, 哪儿, 怎么, 几, 多少, 为什么 put light stress on the question word; "
+           "make a short natural pause at commas and between a question and its answer.",
+    'chu': "Read like flipping flashcards: each line is ONE single Chinese character. Say ONLY that character, once, clearly, "
+           "in the exact reading given below, with a clear pause after each line. Do not add any other word.",
+}
+LUAT = ("Tone sandhi: two third tones -> the first becomes second tone; 一 is yí before a 4th tone and yì before 1st/2nd/3rd tones (第一 dì-yī); "
+        "不 is bú before a 4th tone, bù otherwise. "
+        "Neutral tones: 的 了 吗 呢 吧 们 子 个(ge) 着(zhe) are light and short; reduplicated kinship words have a neutral second syllable "
+        "(妈妈 māma, 哥哥 gēge); also 什么 shénme, 名字 míngzi, 朋友 péngyou, 认识 rènshi, 喜欢 xǐhuan, 休息 xiūxi, 没关系 méi guānxi, "
+        "对不起 duìbuqǐ, 客气 kèqi, 谢谢 xièxie, 东西 dōngxi (thing), 地方 dìfang, 衣服 yīfu, 知道 zhīdao, 告诉 gàosu. "
+        "常常 is chángcháng (both full second tones, never neutral). 多 in 多大 / 多高 / 多长 / 多久 is FIRST tone duō, never duó.")
+ER = ("ERHUA: 儿 written after another character is NOT a separate syllable ér. Merge it into the previous syllable as a retroflex r-ending, "
+      "curling the tongue at the end of that syllable, and stop cleanly right after the r, with no added vowel "
+      "(哪儿 nǎr, 这儿 zhèr, 一点儿 yìdiǎnr, 玩儿 wánr, 一会儿 yíhuìr). Only 儿子 érzi, 女儿 nǚ'ér, 婴儿, 儿童, 儿科 keep a full ér syllable.")
+
+
+def dong_py(it):
+    s = '%s = %s' % (it['text'], it['py']) if it['py'] else it['text']
+    if it['typ'] == 'chu':
+        khac = [p for p in cac_am(han(it['text'])) if khong_dau(p) != khong_dau(it['py']) or p != it['py']][:3]
+        if khac: s += ' (NOT %s)' % ', '.join(khac)
+    return s
+
+
+def tao_style(ds, typ, ghi_chu=''):
+    st = NHIP[typ]
+    if typ != 'chu': st += '\n' + LUAT
+    if any(re.search(r'.儿', it['text']) for it in ds): st += '\n' + ER
+    st += '\nUse exactly this pinyin for each line:\n' + '\n'.join(dict.fromkeys(dong_py(it) for it in ds))
+    if ghi_chu: st += '\n' + ghi_chu
+    return st
+
+
+def loi_nhac(style, dong):
+    """Văn bản gửi Gemini: Style + danh sách dòng (giống ô Style + ô chữ của AI Studio)."""
+    return (style + '\n\nRead aloud ONLY the lines below, one by one (never read these instructions aloud):\n'
+            + '\n'.join(gon(l) + ' <long pause>' for l in dong))
+
+
+def chia(L, n):
+    if not L: return []
+    k = -(-len(L) // n); s = -(-len(L) // k)
+    return [L[i:i + s] for i in range(0, len(L), s)]
+
+
+def chia_luot(ds):
+    out = []
+    for typ in ('tu', 'chu', 'cau'):
+        L = [it for it in ds if it['typ'] == typ]
+        for b in chia(L, CFG['max_chu'] if typ == 'chu' else CFG['max_dong']):
+            ten = 'l%02d' % (len(out) + 1)
+            out.append(dict(ten=ten, typ=typ, ids=[it['id'] for it in b], dong=[it['text'] for it in b], style=tao_style(b, typ)))
+    return out
+
+
+# ============ 3. Gọi Gemini TTS ============
+def _rq():
+    import requests
+    return requests
+
+
+def chon_model(in_ra=True):
+    r = _rq().get(API + 'models', params={'pageSize': 1000}, headers={'x-goog-api-key': CFG['key']}, timeout=60)
+    r.raise_for_status()
+    ms = [m['name'] for m in r.json().get('models', []) if 'tts' in m['name'].lower()]
+
+    def diem(n):
+        v = re.search(r'gemini-(\d+(?:\.\d+)?)', n)
+        return (float(v.group(1)) if v else 0, 'flash' in n and 'lite' not in n, 'preview' not in n, n)
+    ms.sort(key=diem, reverse=True)
+    if in_ra: print('Các model TTS mã API thấy được:', *ms, sep='\n  ')
+    if not CFG['model']: CFG['model'] = next((m for m in ms if 'flash' in m), ms[0] if ms else None)
+    if not CFG['model'].startswith('models/'): CFG['model'] = 'models/' + CFG['model']
+    print('→ Dùng:', CFG['model'], '· giọng', CFG['voice'])
+    return ms
+
+
+def ghi_nhat_ky(dot, luot, giay, meta):
+    f = CFG['work'] + 'nhat_ky.csv'
+    moi = not os.path.exists(f)
+    with open(f, 'a', newline='') as fh:
+        w = csv.writer(fh)
+        if moi: w.writerow(['thoi_gian', 'dot', 'luot', 'giay_am', 'tok_vao', 'tok_ra', 'usd_uoc', 'model'])
+        w.writerow([datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'), dot, luot, round(giay, 1),
+                    meta.get('promptTokenCount', ''), meta.get('candidatesTokenCount', ''),
+                    round(giay / 3600 * CFG['usd_gio'], 4), CFG['model']])
+
+
+def goi_tts(prompt, wav, dot, luot):
+    """Gọi Gemini một lần, ghi wav (PCM 16-bit mono). Thử lại khi lỗi mạng / 429 / 5xx. Trả về số giây âm thanh."""
+    rq = _rq()
+    body = {'contents': [{'parts': [{'text': prompt}]}],
+            'generationConfig': {'responseModalities': ['AUDIO'],
+                                 'speechConfig': {'voiceConfig': {'prebuiltVoiceConfig': {'voiceName': CFG['voice']}}}}}
+    url = API + CFG['model'] + ':generateContent'
+    loi_cuoi = ''
+    for lan in range(7):
+        if lan: time.sleep(min(20 * 2 ** (lan - 1), 300))
+        try:
+            r = rq.post(url, headers={'x-goog-api-key': CFG['key'], 'Content-Type': 'application/json'}, json=body, timeout=900)
+        except rq.RequestException as e:
+            loi_cuoi = 'mạng: %s' % e; print('   ⚠', loi_cuoi, '→ thử lại'); continue
+        if r.status_code in (429, 500, 502, 503, 504):
+            loi_cuoi = '%d %s' % (r.status_code, r.text[:200]); print('   ⚠', loi_cuoi, '→ thử lại')
+            ra = r.headers.get('Retry-After')
+            if ra and ra.isdigit(): time.sleep(min(int(ra), 300))
+            continue
+        if r.status_code != 200:
+            raise RuntimeError('Gemini báo lỗi %d: %s' % (r.status_code, r.text[:800]))
+        j = r.json()
+        parts = ((j.get('candidates') or [{}])[0].get('content') or {}).get('parts') or []
+        aud = [p['inlineData'] for p in parts if 'inlineData' in p]
+        if not aud:
+            loi_cuoi = 'không có âm thanh (finishReason=%s)' % ((j.get('candidates') or [{}])[0].get('finishReason'))
+            print('   ⚠', loi_cuoi, '→ thử lại'); continue
+        pcm = b''.join(base64.b64decode(a['data']) for a in aud)
+        m = re.search(r'rate=(\d+)', aud[0].get('mimeType', ''))
+        rate = int(m.group(1)) if m else SR
+        os.makedirs(os.path.dirname(wav), exist_ok=True)
+        with wave.open(wav + '.tmp', 'wb') as w:
+            w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate); w.writeframes(pcm)
+        os.replace(wav + '.tmp', wav)
+        giay = len(pcm) / 2 / rate
+        ghi_nhat_ky(dot, luot, giay, j.get('usageMetadata') or {})
+        return giay
+    raise RuntimeError('Gọi Gemini không được sau nhiều lần: ' + loi_cuoi)
+
+
+# ============ 4. Cắt + kiểm (theo cat.py, quet2.py) ============
+_REC = None
+
+
+def rec():
+    global _REC
+    if _REC is None:
+        import sherpa_onnx
+        M = CFG['asr']
+        _REC = sherpa_onnx.OfflineRecognizer.from_paraformer(paraformer=M + 'model.int8.onnx', tokens=M + 'tokens.txt', num_threads=4)
+    return _REC
+
+
+def asr_py(txt):
+    """pinyin không dấu từ chữ máy nhận dạng (máy có lúc trả chữ La-tinh rời, vd. 上 → "s a n g")."""
+    out = []
+    txt = re.sub(r'啦$|啦(?=[，。？！])', '了', txt or '')   # 了 cuối câu máy hay nghe thành 啦
+    for m in re.finditer(r'[一-鿿]+|[A-Za-z]+(?:\s[A-Za-z]+)*', txt):
+        g = m.group(0)
+        out += py_asr(g) if re.match(r'[一-鿿]', g) else [g.replace(' ', '').lower()]
+    return out
+
+
+def long(p): return re.sub(r'([zcs])h', r'\1', p)   # máy hay nhầm z/zh, c/ch, s/sh
+
+
+def _nhan(x, sr=16000):
+    import numpy as np
+    s = rec().create_stream()
+    s.accept_waveform(sr, np.concatenate([np.zeros(int(sr / 15), np.float32), x, np.zeros(int(sr / 7.5), np.float32)]))
+    rec().decode_stream(s)
+    return s.result.text
+
+
+def _ratio(a, b): return difflib.SequenceMatcher(None, a, b).ratio() if a or b else 1.0
+
+
+def cat_luot(wav, dong, ids, alt, ra_dir, ten_tep):
+    """Cắt wav của một lượt thành từng dòng. dong: chữ; ids: khóa từng dòng; alt: pinyin kho (không dấu) hoặc '';
+    ten_tep: tên file mp3 từng dòng. Trả về {id: {...}} + thông tin vùng."""
+    import numpy as np
+    os.makedirs(ra_dir, exist_ok=True)
+    pcm = ra_dir + '_pcm.wav'
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ignore_length', '1', '-i', wav, '-ac', '1', '-ar', str(SR), '-c:a', 'pcm_s16le', pcm], check=True)
+    with wave.open(pcm) as w: x = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
+    x16 = np.frombuffer(subprocess.run(['ffmpeg', '-v', 'error', '-i', pcm, '-f', 's16le', '-ac', '1', '-ar', '16000', '-'],
+                                       capture_output=True, check=True).stdout, np.int16).astype(np.float32) / 32768
+    seg16 = lambda a, b: x16[int(a * 16000):int(b * 16000)]
+    dur = len(x) / SR
+    out = subprocess.run(['ffmpeg', '-v', 'info', '-i', pcm, '-af', 'silencedetect=n=-40dB:d=0.2', '-f', 'null', '-'], capture_output=True, text=True).stderr
+    st = [float(v) for v in re.findall(r'silence_start: ([\d.]+)', out)]
+    en = [float(v) for v in re.findall(r'silence_end: ([\d.]+)', out)]
+    sil = list(zip(st, en + [dur] * (len(st) - len(en))))
+    vung, t = [], 0.0
+    for a, b in sil:
+        if a - t > 0.08: vung.append([t, a])
+        t = b
+    if dur - t > 0.08: vung.append([t, dur])
+    for v in vung: v.append(_nhan(seg16(v[0], v[1])))
+    n, m = len(dong), len(vung)
+    P = [[long(p) for p in py_asr(l)] for l in dong]
+    alt = [long(a) for a in alt]
+
+    def r_dong(i, txt):
+        p = [long(q) for q in asr_py(txt)]
+        return _ratio(alt[i], ''.join(p)) if alt[i] else _ratio(P[i], p)
+    NEG = -1e9
+    dp = [[NEG] * (m + 1) for _ in range(n + 1)]; bk = [[None] * (m + 1) for _ in range(n + 1)]
+    dp[0][0] = 0
+    for i in range(n + 1):
+        for j in range(m + 1):
+            c = dp[i][j]
+            if c == NEG: continue
+            if j < m and c - 0.6 > dp[i][j + 1]: dp[i][j + 1], bk[i][j + 1] = c - 0.6, ('bovung', i, j)
+            if i < n and c - 0.8 > dp[i + 1][j]: dp[i + 1][j], bk[i + 1][j] = c - 0.8, ('bodong', i, j)
+            if i < n:
+                for k in range(1, 5):
+                    if j + k > m: break
+                    txt = ''.join(v[2] for v in vung[j:j + k])
+                    r = r_dong(i, txt)
+                    sc = c + r - 0.05 * (k - 1)
+                    if sc > dp[i + 1][j + k]: dp[i + 1][j + k], bk[i + 1][j + k] = sc, ('ghep', i, j, k, r, txt)
+    i, j, kq = n, m, {}
+    while i or j:
+        b = bk[i][j]
+        if b[0] == 'ghep': kq[b[1]] = (b[2], b[3], b[4], b[5])
+        i, j = b[1], b[2]
+    res = {}
+    for i, l in enumerate(dong):
+        if i not in kq:
+            res[ids[i]] = dict(r=0, asr='', loi=['thiếu (không tìm thấy trong file)']); continue
+        j, k, r, txt = kq[i]
+        a = max(0, vung[j][0] - 0.12); b = min(dur, vung[j + k - 1][1] + 0.15)
+        if i + 1 in kq: b = min(b, vung[kq[i + 1][0]][0] - 0.02)
+        if i - 1 in kq: a = max(a, vung[kq[i - 1][0] + kq[i - 1][1] - 1][1] + 0.02)
+        d = b - a
+        tmp = ra_dir + '_c.wav'
+        dich = ra_dir + ten_tep[i] + '.mp3'
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', '%.3f' % a, '-t', '%.3f' % d, '-i', pcm,
+                        '-af', 'afade=t=in:d=0.04,afade=t=out:st=%.3f:d=0.08,apad=pad_dur=0.3,loudnorm=I=-16:TP=-1.5:LRA=11' % max(0, d - 0.08),
+                        '-ar', str(SR), tmp], check=True)
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', tmp, '-af', 'atrim=end=%.3f' % (d + 0.05), '-ac', '1', '-ar', str(SR), '-b:a', '48k', dich], check=True)
+        loi = []
+        nc = max(1, len(han(re.sub(r'(?<=.)儿', '', l))))
+        if nc == 1:   # chữ lẻ: lặp đoạn 3 lần cho máy nghe (quet2.py); đạt một trong hai cách kiểm là được
+            seg = seg16(a, b); g = np.zeros(int(0.17 * 16000), np.float32)
+            t3 = _nhan(np.concatenate([seg, g, seg, g, seg]))
+            ref = alt[i] or ''.join(P[i])
+            if ref and ref in long(''.join(asr_py(t3))): r = max(r, 1.0)
+            elif r < 0.9: loi.append('chữ lẻ nghe khác (máy nghe: %s)' % t3)
+            if d > 1.4: loi.append('âm tiết dài %.1f s' % d)
+        else:
+            if r < 0.9: loi.append('khớp thấp %.2f' % r)
+            if d / nc > 0.75: loi.append('dài bất thường %.1f s' % d)
+            elif d / nc < 0.17: loi.append('ngắn bất thường %.1f s' % d)
+        res[ids[i]] = dict(r=round(r, 3), asr=txt, dai=round(d, 2), tam=dich, loi=loi)
+    os.remove(pcm)
+    return res, dict(vung=m, dong=n, thua=max(0, m - sum(kq[i][1] for i in kq)),
+                     ds_vung=[[round(a, 2), round(b, 2), t] for a, b, t in vung])
+
+
+# ============ 5. Đợt: chạy, thu lại, nghe, đẩy ============
+def thu_muc(cap, tu, den): return CFG['work'] + 'cap-%s_%04d-%04d/' % (cap, tu, den)
+
+
+def _doc(f, mac=None):
+    return json.load(open(f)) if os.path.exists(f) else mac
+
+
+def _ghi(f, o):
+    json.dump(o, open(f + '.tmp', 'w'), ensure_ascii=False, indent=0); os.replace(f + '.tmp', f)
+
+
+def chay_dot(cap, tu, den, gioi_han_luot=None):
+    """Gom → chia lượt → gọi Gemini → cắt, kiểm → tự thu lại mục lỗi. Chạy lại được bất cứ lúc nào."""
+    D = thu_muc(cap, tu, den); os.makedirs(D + 'ketqua', exist_ok=True)
+    t0 = time.time()
+    ds = _doc(D + 'ds.json')
+    if ds is None:
+        ds, bo = gom(cap, tu, den)
+        _ghi(D + 'ds.json', ds); _ghi(D + 'bo.json', bo)
+        print('Gom HSK%s %d → %d: %d từ/cụm, %d chữ đa âm (ghi thẳng ô Đọc), %d câu · bỏ %d mục (了/么 riêng, đã có file)' % (
+            cap, tu, den, sum(it['typ'] == 'tu' for it in ds), sum(it['typ'] == 'chu' for it in ds), sum(it['typ'] == 'cau' for it in ds), len(bo)))
+    L = _doc(D + 'luot.json')
+    if L is None:
+        L = chia_luot(ds); _ghi(D + 'luot.json', L)
+    print('%d mục · %d lượt: %s' % (len(ds), len(L), ', '.join('%s(%s %d)' % (b['ten'], b['typ'], len(b['dong'])) for b in L)))
+    by = {it['id']: it for it in ds}
+    dot = 'cap-%s_%04d-%04d' % (cap, tu, den)
+    giay = 0
+    for b in L[:gioi_han_luot]:
+        wav = D + 'wav/%s.wav' % b['ten']
+        if not os.path.exists(wav):
+            print('▶ %s: gọi Gemini (%d dòng)…' % (b['ten'], len(b['dong'])), end=' ', flush=True)
+            t1 = time.time(); g = goi_tts(loi_nhac(b['style'], b['dong']), wav, dot, b['ten']); giay += g
+            print('%.0f s âm thanh, %.0f s chờ' % (g, time.time() - t1))
+        kf = D + 'ketqua/%s.json' % b['ten']
+        if os.path.exists(kf): continue
+        its = [by[i] for i in b['ids']]
+        res, meta = cat_luot(wav, b['dong'], b['ids'], [it['alt'] for it in its], D + 'tam/%s/' % b['ten'], [it['ten'] for it in its])
+        for it in its: _nhan_ket_qua(D, it, res[it['id']])
+        _ghi(kf, dict(meta=meta, res=res)); _ghi(D + 'ds.json', ds)
+        nl = sum(1 for it in its if it['loi'])
+        print('   ✂ %s: %d vùng / %d dòng%s · đạt %d · lỗi %d' % (b['ten'], meta['vung'], meta['dong'],
+              ' (thừa %d vùng)' % meta['thua'] if meta['thua'] else '', len(its) - nl, nl))
+        if nl > 0.4 * len(its):   # chốt an toàn: Gemini đọc bất thường (đọc cả Style, bỏ dòng…) → dừng, khỏi tốn tiền
+            print('\n⛔ Lượt %s lỗi %d/%d dòng — Gemini đọc bất thường. Dừng lại để khỏi tốn tiền.\n'
+                  '   Cô gửi bên soạn đoạn chữ này + file %s để xem.' % (b['ten'], nl, len(its), wav))
+            print('   Máy nghe được ở các vùng đầu:', [v[2] for v in meta['ds_vung'][:6]])
+            return
+    giay += thu_lai_tu_dong(cap, tu, den, ds)
+    bao_cao(cap, tu, den, giay_moi=giay, giay_chay=time.time() - t0)
+
+
+def _nhan_ket_qua(D, it, r):
+    it['r'], it['asr'], it['loi'] = r.get('r', 0), r.get('asr', ''), r.get('loi', [])
+    it['dai'] = r.get('dai')
+    if r.get('tam'):
+        dich = D + 'mp3/%s/%s.mp3' % (it['thu'], it['ten'])
+        os.makedirs(os.path.dirname(dich), exist_ok=True); shutil.copy(r['tam'], dich)
+        it['file'] = dich
+    it['trang'] = 'loi' if it['loi'] else 'xong'
+
+
+def thu_lai_muc(D, it, dot, ghi_chu=''):
+    """Thu lại 1 mục: một lượt đọc 4 lần, Style chỉ nói về mục đó; chọn bản tốt nhất."""
+    it['lan'] = it.get('lan', 0) + 1
+    ten = 'r-%s-%d' % (it['ten'], it['lan'])
+    st = NHIP['chu' if it['typ'] == 'chu' else it['typ']].replace('Each line is', 'The same line is written 4 times; each line is')
+    st += '\nUse exactly this pinyin: ' + dong_py(it) + ('\n' + ER if re.search(r'.儿', it['text']) else '')
+    dk = chu_doc_khac(it['text'])
+    if dk: st += '\nPay attention to: ' + ', '.join(dk) + ' (read as in the pinyin above).'
+    if len(han(it['text'])) <= 4: st += '\nSay exactly %d syllable(s) per line, do not repeat any syllable.' % len(han(re.sub(r'(?<=.)儿', '', it['text'])))
+    if ghi_chu: st += '\n' + ghi_chu
+    wav = D + 'wav/%s.wav' % ten
+    g = 0
+    if not os.path.exists(wav): g = goi_tts(loi_nhac(st, [it['text']] * 4), wav, dot, ten)
+    ids = ['%s#%d' % (it['id'], i) for i in range(4)]
+    res, meta = cat_luot(wav, [it['text']] * 4, ids, [it['alt']] * 4, D + 'tam/%s/' % ten, ['%s_%d' % (it['ten'], i) for i in range(4)])
+    tot = sorted((r for r in res.values() if r.get('tam')), key=lambda r: (len(r['loi']), -r['r']))
+    cu = dict(r=it.get('r', 0), loi=it.get('loi', []))
+    if tot and (len(tot[0]['loi']), -tot[0]['r']) <= (len(cu['loi']) if it.get('file') else 99, -cu['r']):
+        _nhan_ket_qua(D, it, tot[0])
+    return g
+
+
+def thu_lai_tu_dong(cap, tu, den, ds=None):
+    D = thu_muc(cap, tu, den); ds = ds or _doc(D + 'ds.json'); dot = 'cap-%s_%04d-%04d' % (cap, tu, den)
+    can = [it for it in ds if it.get('loi') and it.get('lan', 0) < CFG['so_lan_thu_lai']]
+    if not can: return 0
+    print('↻ Tự thu lại %d mục lỗi (tối đa %d lần mỗi mục)…' % (len(can), CFG['so_lan_thu_lai']))
+    g = 0
+    for it in can:
+        while it['loi'] and it.get('lan', 0) < CFG['so_lan_thu_lai']:
+            g += thu_lai_muc(D, it, dot); _ghi(D + 'ds.json', ds)
+        print('   %s %s · %s' % ('✓' if not it['loi'] else '✗', it['text'], ', '.join(it['loi']) or 'đạt'))
+    return g
+
+
+def can_nghe(it): return (it.get('co') or it.get('loi')) and it.get('quyet') != 'dat'
+
+
+def bao_cao(cap, tu, den, giay_moi=0, giay_chay=0):
+    D = thu_muc(cap, tu, den); ds = _doc(D + 'ds.json')
+    nk = []
+    if os.path.exists(CFG['work'] + 'nhat_ky.csv'):
+        nk = [r for r in csv.DictReader(open(CFG['work'] + 'nhat_ky.csv')) if r['dot'] == 'cap-%s_%04d-%04d' % (cap, tu, den)]
+    g = sum(float(r['giay_am']) for r in nk)
+    usd = g / 3600 * CFG['usd_gio']
+    xong = sum(1 for it in ds if it['trang'] == 'xong')
+    nghe = [it for it in ds if can_nghe(it)]
+    bc = dict(muc=len(ds), dat_tu_dong=sum(1 for it in ds if it['trang'] == 'xong' and not it.get('co')),
+              can_co_nghe=len(nghe), con_loi=sum(1 for it in ds if it.get('loi')), luot_goi=len(nk),
+              giay_am=round(g), usd=round(usd, 3), vnd=round(usd * CFG['vnd_usd']), giay_chay_lan_nay=round(giay_chay))
+    _ghi(D + 'bao_cao.json', bc)
+    print('\n══ Báo cáo đợt HSK%s %d → %d ══' % (cap, tu, den))
+    print('Mục: %d · cắt đạt: %d · máy tự kiểm đạt, không cần nghe: %d · cô cần nghe: %d (còn lỗi sau thu lại: %d)' % (
+        len(ds), xong, bc['dat_tu_dong'], len(nghe), bc['con_loi']))
+    print('Gemini: %d lần gọi · %.1f phút âm thanh · ước %.3f USD ≈ %s đ' % (len(nk), g / 60, usd, format(bc['vnd'], ',').replace(',', '.')))
+    if giay_chay: print('Thời gian chạy lần này: %.1f phút' % (giay_chay / 60))
+
+
+def bang_nghe(cap, tu, den, tat_ca=False):
+    """Bảng nghe trong Colab: chỉ các mục cần cô nghe. Tick Đạt / Thu lại (lưu ngay vào Drive)."""
+    import ipywidgets as W
+    from IPython.display import display, Audio, HTML
+    D = thu_muc(cap, tu, den); ds = _doc(D + 'ds.json')
+    hien = [it for it in ds if (tat_ca or can_nghe(it) or it.get('quyet') == 'thu_lai') and it.get('file')]
+    thieu = [it for it in ds if not it.get('file')]
+    display(HTML('<b>%d mục cần nghe</b> (đa âm, 儿化, tên riêng, máy khớp thấp). Bấm ▶ nghe, rồi chọn <b>Đạt</b> hoặc <b>Thu lại</b> '
+                 '(có thể ghi cách đọc đúng vào ô ghi chú, vd. <i>长 = zhǎng</i>). Lựa chọn tự lưu.%s' % (
+                     len(hien), '<br>⚠ %d mục chưa có file (thiếu): %s' % (len(thieu), '、'.join(it['text'] for it in thieu)) if thieu else '')))
+
+    def luu(): _ghi(D + 'ds.json', ds)
+    for n, it in enumerate(hien, 1):
+        ly_do = ', '.join((it.get('co') or []) + (it.get('loi') or []))
+        nh = W.HTML('<div style="font-size:15px;line-height:1.5"><b>%d.</b> <span style="font-size:22px">%s</span> &nbsp; <i>%s</i><br>'
+                    '<span style="color:#b45309">%s</span> <span style="color:#888">· máy nghe: %s · khớp %.2f</span></div>' % (
+                        n, it['text'], it['py'], ly_do or '—', it.get('asr', ''), it.get('r', 0)))
+        au = W.Output()
+        with au: display(Audio(it['file']))
+        tb = W.ToggleButtons(options=[('Chưa chọn', None), ('Đạt', 'dat'), ('Thu lại', 'thu_lai')], value=it.get('quyet'))
+        gc = W.Text(value=it.get('ghi_chu', ''), placeholder='ghi chú cách đọc (khi Thu lại)', layout=W.Layout(width='320px'))
+
+        def doi(ch, it=it): it['quyet'] = ch['new']; luu()
+
+        def doi_gc(ch, it=it): it['ghi_chu'] = ch['new']; luu()
+        tb.observe(doi, 'value'); gc.observe(doi_gc, 'value')
+        display(W.VBox([nh, au, W.HBox([tb, gc])], layout=W.Layout(border='1px solid #ddd', padding='6px', margin='4px 0')))
+
+
+def thu_lai_da_chon(cap, tu, den):
+    D = thu_muc(cap, tu, den); ds = _doc(D + 'ds.json'); dot = 'cap-%s_%04d-%04d' % (cap, tu, den)
+    can = [it for it in ds if it.get('quyet') == 'thu_lai']
+    print('Thu lại %d mục cô chọn…' % len(can))
+    for it in can:
+        gc = it.get('ghi_chu', '').strip()
+        thu_lai_muc(D, it, dot, ('Teacher note (follow it exactly): ' + gc) if gc else '')
+        it['quyet'] = None; it['lan_co'] = it.get('lan_co', 0) + 1
+        _ghi(D + 'ds.json', ds)
+        print('   ', it['text'], '→ bản mới, khớp %.2f' % it.get('r', 0), '· ' + ', '.join(it['loi']) if it['loi'] else '')
+    print('Xong. Chạy lại ô "Nghe" để nghe bản mới.')
+
+
+def _git(*a, an=None):
+    r = subprocess.run(['git', '-C', CFG['repo']] + list(a), capture_output=True, text=True)
+    out = (r.stdout + r.stderr)
+    if an: out = out.replace(an, '***')
+    if r.returncode: raise RuntimeError('git %s: %s' % (a[0], out[-800:]))
+    return out
+
+
+def day_len(cap, tu, den, token, ten='Nhiên (Colab)', email='heran9895@gmail.com'):
+    """Đẩy mục đã đạt (máy tự kiểm đạt + cô tick Đạt) lên main. Mục còn chờ nghe / thu lại để lần sau."""
+    D = thu_muc(cap, tu, den); ds = _doc(D + 'ds.json')
+    R = CFG['repo']
+    di = [it for it in ds if it.get('file') and not it.get('da_day') and not can_nghe(it) and it.get('quyet') != 'thu_lai']
+    cho = [it for it in ds if not it.get('da_day') and it not in di]
+    if not di: print('Không có mục mới để đẩy. Còn chờ: %d' % len(cho)); return
+    url = 'https://x-access-token:%s@github.com/%s.git' % (token, CFG['kho'])
+    _git('config', 'user.name', ten); _git('config', 'user.email', email)
+    for lan in range(3):
+        _git('fetch', '--depth', '1', url, 'main', an=token); _git('reset', '--hard', 'FETCH_HEAD')
+        them, o_cap, tep = {}, [], []
+        for it in di:
+            p = 'assets/am/%s/%s.mp3' % (it['thu'], it['ten'])
+            shutil.copy(it['file'], R + p); tep.append(p)
+            if it.get('o'): o_cap.append((it['o'], p))
+            else: them[it['k']] = p
+        if o_cap:
+            f = tep_cap(cap); s = open(f).read(); d = json.loads(s)
+            vt = {w['Mã']: w for w in d}
+            for (ma, o), p in o_cap: vt[ma][o] = p
+            out = json.dumps(d, ensure_ascii=False, indent=1) if s.startswith('[\n') else json.dumps(d, ensure_ascii=False, separators=(',', ':'))
+            open(f, 'w').write(out + ('\n' if s.endswith('\n') else ''))
+        sys.path.insert(0, R + 'tools'); import importlib, ban_do_am; importlib.reload(ban_do_am)
+        n0 = len(json.load(open(R + 'assets/am/ban-do.json'))); ban_do_am.tao(them)
+        n1 = len(json.load(open(R + 'assets/am/ban-do.json')))
+        nhom = [tep[i:i + 1900] for i in range(0, len(tep), 1900)]
+        for k, g in enumerate(nhom, 1):
+            _git('add', *g)
+            if k == len(nhom): _git('add', 'assets/am/ban-do.json', 'data/tu-vung/')
+            _git('commit', '-q', '-m', 'Giọng Gemini kho HSK%s %d→%d: %d từ/cụm + %d câu%s' % (
+                cap, tu, den, sum(it['thu'] == 'tu' for it in di), sum(it['thu'] == 'cau' for it in di),
+                ' (phần %d/%d)' % (k, len(nhom)) if len(nhom) > 1 else ''))
+        try:
+            _git('push', url, 'HEAD:main', an=token); break
+        except RuntimeError as e:
+            print('Đẩy chưa được (có thể main vừa đổi), thử lại…', e)
+    else:
+        raise RuntimeError('Đẩy không được sau 3 lần.')
+    for it in di: it['da_day'] = True
+    _ghi(D + 'ds.json', ds)
+    print('✓ Đã đẩy %d file (%d từ/cụm, %d câu); bảng tra %d → %d mục. Còn chờ nghe / thu lại: %d.' % (
+        len(di), sum(it['thu'] == 'tu' for it in di), sum(it['thu'] == 'cau' for it in di), n0, n1, len(cho)))
+    print('Web cập nhật sau vài phút: https://github.com/%s/actions' % CFG['kho'])
+
+
+def tong_tien():
+    f = CFG['work'] + 'nhat_ky.csv'
+    if not os.path.exists(f): print('Chưa gọi Gemini lần nào.'); return
+    nk = list(csv.DictReader(open(f)))
+    g = sum(float(r['giay_am']) for r in nk); usd = g / 3600 * CFG['usd_gio']
+    print('Tổng: %d lần gọi · %.1f giờ âm thanh · ước %.2f USD ≈ %s đ (giá %.2f USD/giờ)' % (
+        len(nk), g / 3600, usd, format(round(usd * CFG['vnd_usd']), ',').replace(',', '.'), CFG['usd_gio']))
