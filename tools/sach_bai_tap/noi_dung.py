@@ -199,3 +199,24 @@ NGHE = {
 for b in BAI:
     if b['bai'] in NGHE:
         b['phan'] = [b['phan'][0]] + NGHE[b['bai']] + b['phan'][1:]
+
+# ---------------- Câu ví dụ (例如) của 模拟测练 — chữ lấy đúng sách (cô cho dùng 06/11/2026), tranh Unsplash, giọng thu mới ----------------
+VD = {
+ 'P_N1': {'giong': ['nu1'], 'loi': [{'ai': '', 'han': '三个苹果', 'py': 'sān ge píngguǒ'}],
+          'anh': [T('A', 'vd-sach', 'Chồng sách'), T('B', 'b5-may-tinh', 'Máy tính xách tay'), T('C', 'vd-tao', 'Ba quả táo')], 'dap': 'C', 'vi': 'ba quả táo'},
+ 'P_N2': {'giong': ['nu1'], 'loi': [{'ai': '', 'han': '今天天气怎么样？', 'py': 'Jīntiān tiānqì zěnmeyàng?'}],
+          'pa': [L('A', '非常热', 'fēicháng rè'), L('B', '很好听', 'hěn hǎotīng'), L('C', '在喝水', 'zài hē shuǐ')], 'dap': 'A', 'vi': 'Hôm nay thời tiết thế nào? — rất nóng'},
+ 'P_N3': {'giong': ['nu1', 'nam1'], 'loi': [{'ai': '女', 'han': '你好！', 'py': 'Nǐ hǎo!'}, {'ai': '男', 'han': '你好！很高兴认识你。', 'py': 'Nǐ hǎo! Hěn gāoxìng rènshi nǐ.'}],
+          'anh': [T('A', 'b2-bat-tay', 'Hai người bắt tay')], 'dap': 'A', 'vi': 'Nữ: Xin chào! — Nam: Xin chào! Rất vui được gặp bạn.'},
+ 'P_N4': {'giong': ['nam1', 'nu1'], 'loi': [{'ai': '', 'han': '下午我去超市，我想买一些水果。', 'py': 'Xiàwǔ wǒ qù chāoshì, wǒ xiǎng mǎi yìxiē shuǐguǒ.'}, {'ai': '问', 'han': '说话人下午去哪里？', 'py': 'Shuōhuàrén xiàwǔ qù nǎlǐ?'}],
+          'pa': [L('A', '超市', 'chāoshì'), L('B', '医院', 'yīyuàn'), L('C', '学校', 'xuéxiào')], 'dap': 'A', 'vi': 'Buổi chiều tôi đi siêu thị, tôi muốn mua một ít trái cây. — Hỏi: Buổi chiều người nói đi đâu? — siêu thị'},
+ 'P_D1': {'han': '我很喜欢这本书。', 'py': 'Wǒ hěn xǐhuan zhè běn shū.', 'anh': [T('✓', 'vd-doc-sach', 'Một cô gái đang đọc sách')], 'dap': '✓', 'vi': 'Tôi rất thích cuốn sách này.'},
+ 'P_D2': {'han': '你喝水吗？', 'py': 'Nǐ hē shuǐ ma?', 'traLoi': {'han': '好的，谢谢！', 'py': 'Hǎo de, xièxie!'}, 'vi': 'Bạn có uống nước không? — Vâng, cảm ơn!'},
+ 'P_D3': {'han': '你叫什么（名字）？', 'py': 'Nǐ jiào shénme (míngzi)?', 'vi': 'Bạn tên là gì?'},
+ 'P_D4': {'han': '请问现在几点了？', 'py': 'Qǐngwèn xiànzài jǐ diǎn le?', 'hoi': {'han': '说话人想知道什么？', 'py': 'Shuōhuàrén xiǎng zhīdào shénme?'},
+          'pa': [L('A', '时间', 'shíjiān'), L('B', '名字', 'míngzi'), L('C', '房间号', 'fángjiānhào')], 'dap': 'A', 'vi': 'Xin hỏi bây giờ là mấy giờ rồi? — Hỏi: Người nói muốn biết điều gì? — thời gian'},
+}
+_ZH = {P_N1['zh']: 'P_N1', P_N2['zh']: 'P_N2', P_N3['zh']: 'P_N3', P_N4['zh']: 'P_N4', P_D1['zh']: 'P_D1', P_D2['zh']: 'P_D2', P_D3['zh']: 'P_D3', P_D4['zh']: 'P_D4'}
+for b in BAI:
+    for p in b['phan']:
+        if p['zh'] in _ZH: p['vd'] = dict(VD[_ZH[p['zh']]], ma='vd')

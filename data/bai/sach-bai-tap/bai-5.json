@@ -236,6 +236,36 @@
    "zh": "听力 · 第二部分：听问题，选择正确回答",
    "hd": "Bấm loa nghe câu hỏi, chọn câu trả lời đúng.",
    "loai": "nghe",
+   "vd": {
+    "loi": [
+     {
+      "ai": "",
+      "han": "今天天气怎么样？",
+      "py": "Jīntiān tiānqì zěnmeyàng?"
+     }
+    ],
+    "pa": [
+     {
+      "k": "A",
+      "han": "非常热",
+      "py": "fēicháng rè"
+     },
+     {
+      "k": "B",
+      "han": "很好听",
+      "py": "hěn hǎotīng"
+     },
+     {
+      "k": "C",
+      "han": "在喝水",
+      "py": "zài hē shuǐ"
+     }
+    ],
+    "dap": "A",
+    "vi": "Hôm nay thời tiết thế nào? — rất nóng",
+    "ma": "vd",
+    "doc": "assets/am/cau/f334af875b.mp3"
+   },
    "cau": [
     {
      "ma": "n2-1",
@@ -638,6 +668,16 @@
      "py": "Zhēn hǎochī!"
     }
    ],
+   "vd": {
+    "han": "你喝水吗？",
+    "py": "Nǐ hē shuǐ ma?",
+    "traLoi": {
+     "han": "好的，谢谢！",
+     "py": "Hǎo de, xièxie!"
+    },
+    "vi": "Bạn có uống nước không? — Vâng, cảm ơn!",
+    "ma": "vd"
+   },
    "cau": [
     {
      "ma": "d2-1",
@@ -713,6 +753,12 @@
      "py": "tiān"
     }
    ],
+   "vd": {
+    "han": "你叫什么（名字）？",
+    "py": "Nǐ jiào shénme (míngzi)?",
+    "vi": "Bạn tên là gì?",
+    "ma": "vd"
+   },
    "cau": [
     {
      "ma": "d3-1",
@@ -756,6 +802,34 @@
    "zh": "阅读 · 第四部分：选择正确答案",
    "hd": "Đọc câu và câu hỏi ★, chọn đáp án đúng.",
    "loai": "doc-hoi",
+   "vd": {
+    "han": "请问现在几点了？",
+    "py": "Qǐngwèn xiànzài jǐ diǎn le?",
+    "hoi": {
+     "han": "说话人想知道什么？",
+     "py": "Shuōhuàrén xiǎng zhīdào shénme?"
+    },
+    "pa": [
+     {
+      "k": "A",
+      "han": "时间",
+      "py": "shíjiān"
+     },
+     {
+      "k": "B",
+      "han": "名字",
+      "py": "míngzi"
+     },
+     {
+      "k": "C",
+      "han": "房间号",
+      "py": "fángjiānhào"
+     }
+    ],
+    "dap": "A",
+    "vi": "Xin hỏi bây giờ là mấy giờ rồi? — Hỏi: Người nói muốn biết điều gì? — thời gian",
+    "ma": "vd"
+   },
    "cau": [
     {
      "ma": "d4-1",

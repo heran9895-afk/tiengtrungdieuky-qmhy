@@ -66,53 +66,61 @@
       '<div class="sbt-pa sbt-pa-' + x.pa.length + '">' + x.pa.map(function (o, j) {
         return '<button type="button" class="sbt-o" data-j="' + j + '">' + esc(o) + '</button>'; }).join('') + '</div></li>';
   }
-  // Phương án chung của phần (tranh / khung chữ): nút chọn mang luôn tranh thu nhỏ hoặc chữ trong khung,
-  // để học sinh chọn ngay cạnh đề, không phải kéo lên xem lại tranh / khung (cô góp ý 06/11/2026)
-  function nutChung(x, p) {
-    var anh = p.anh, lc = p.luaChon;
-    function tim(ds, kk) { return (ds || []).filter(function (a) { return a.k === kk; })[0]; }
-    if (anh) return '<div class="sbt-pa sbt-pa-anh sbt-pa-anh-' + x.pa.length + '">' + x.pa.map(function (kk, j) {
-      var a = tim(anh, kk);
-      return '<button type="button" class="sbt-o sbt-o-anh" data-j="' + j + '" aria-label="Tranh ' + esc(kk) + '"><img src="' + esc(TV.ROOT + a.src) + '" alt="' + esc(a.alt || '') + '" loading="lazy" width="720" height="480"><span>' + esc(kk) + '</span></button>'; }).join('') + '</div>';
-    if (lc) return '<div class="sbt-pa sbt-pa-rieng ' + (p.loai === 'doc-dien' ? 'sbt-pa-tu' : 'sbt-pa-cau') + ' sbt-pa-' + x.pa.length + '">' + x.pa.map(function (kk, j) {
-      return '<button type="button" class="sbt-o" data-j="' + j + '"><b>' + esc(kk) + '</b>' + chuPy(tim(lc, kk)) + '</button>'; }).join('') + '</div>';
-    return '<div class="sbt-pa sbt-pa-chu sbt-pa-' + x.pa.length + '">' + x.pa.map(function (o, j) { return '<button type="button" class="sbt-o" data-j="' + j + '">' + esc(o) + '</button>'; }).join('') + '</div>';
+  function tim(ds, kk) { return (ds || []).filter(function (a) { return a.k === kk; })[0]; }
+  function anhNut(a, kk, j) {
+    return '<button type="button" class="sbt-o sbt-o-anh" data-j="' + j + '" aria-label="Tranh ' + esc(kk) + '"><img src="' + esc(TV.ROOT + a.src) + '" alt="' + esc(a.alt || '') + '" loading="lazy" width="720" height="480"><span>' + esc(kk) + '</span></button>';
   }
-  function veCauTranh(x, k, p) {
-    var c = x.c;
-    return '<li class="sbt-cau sbt-cau-tr" data-ma="' + esc(c.ma) + '"><div class="sbt-de"><span class="sbt-so">' + (k + 1) + '</span>' +
-      TV.nutLoa(docHT(c)) + '<span class="sbt-goi">Nghe hội thoại</span></div>' + nutChung(x, p) +
-      '<div class="sbt-loi" hidden>' + c.loi.map(function (v) {
-        return '<p><b>' + esc(v.ai) + '：</b><span class="hanzi">' + esc(v.han) + '</span><i>' + esc(v.py) + '</i></p>'; }).join('') +
-      (c.vi ? '<p class="sbt-vi">' + esc(c.vi) + '</p>' : '') + '</div></li>';
-  }
-  // Câu đọc hiểu: pinyin trên chữ Hán như sách (ẩn được), ★câu hỏi, phương án riêng của câu hoặc chữ cái chung của phần
+  function chuNut(o, kk, j) { return '<button type="button" class="sbt-o" data-j="' + j + '"><b>' + esc(kk) + '</b>' + chuPy(o) + '</button>'; }
+  // Câu đọc hiểu: pinyin trên chữ Hán như sách (ẩn được)
   function chuPy(o, lop) { return '<span class="sbt-chu ' + (lop || '') + '"><span class="sbt-py">' + esc(o.py) + '</span><span class="hanzi">' + esc(o.han) + '</span></span>'; }
-  function veCauDoc(x, k, p) {
-    var c = x.c, rieng = !!c.pa;
-    return '<li class="sbt-cau sbt-cau-doc" data-ma="' + esc(c.ma) + '"><div class="sbt-de sbt-de-doc"><span class="sbt-so">' + (k + 1) + '</span><div class="sbt-noi">' +
-      chuPy(c, 'sbt-cau-chu') + (c.hoi ? '<div class="sbt-hoi"><b>★</b>' + chuPy(c.hoi) + '</div>' : '') + '</div></div>' +
-      (rieng ? '<div class="sbt-pa sbt-pa-rieng sbt-pa-' + x.pa.length + '">' + x.pa.map(function (kk, j) {
-        var o = c.pa.filter(function (a) { return a.k === kk; })[0];
-        return '<button type="button" class="sbt-o" data-j="' + j + '"><b>' + esc(kk) + '</b>' + chuPy(o) + '</button>'; }).join('') + '</div>' : nutChung(x, p)) +
-      (c.vi ? '<div class="sbt-loi" hidden><p class="sbt-vi">' + esc(c.vi) + '</p></div>' : '') + '</li>';
+  function soLi(c, k, lop, noi) { return '<li class="sbt-cau ' + (lop || '') + '" data-ma="' + esc(c.ma) + '"><div class="sbt-de"><span class="sbt-so">' + (k + 1) + '</span>' + noi; }
+
+  // ----- Câu nghe (hội thoại chọn tranh; 模拟测练 · 听力): gọn, KHÔNG hiện lời sau khi chọn — lời gom vào "Tài liệu nghe" cuối bài (cô chốt 06/11) -----
+  function veCauNghe(x, k, p) {
+    var c = x.c, anh = c.anh || p.anh, nut;
+    if (anh) nut = '<div class="sbt-pa sbt-pa-anh sbt-pa-anh-' + x.pa.length + '">' + x.pa.map(function (kk, j) { return anhNut(tim(anh, kk), kk, j); }).join('') + '</div>';
+    else nut = '<div class="sbt-pa sbt-pa-rieng sbt-pa-ngang sbt-pa-' + x.pa.length + '">' + x.pa.map(function (kk, j) { return chuNut(tim(c.pa, kk), kk, j); }).join('') + '</div>';
+    return soLi(c, k, 'sbt-cau-nghe', TV.nutLoa(docHT(c)) + '</div>') + nut + '</li>';
   }
-  // Câu nghe (模拟测练 · 听力): loa phát cụm / câu hỏi / câu + câu hỏi; chọn tranh riêng của câu (c.anh) hoặc phương án chữ (c.pa)
-  function loiHtml(c) {
-    return '<div class="sbt-loi" hidden>' + c.loi.map(function (v) {
-      return '<p>' + (v.ai ? '<b>' + esc(v.ai) + '：</b>' : '') + '<span class="hanzi">' + esc(v.han) + '</span><i>' + esc(v.py) + '</i></p>'; }).join('') +
-      (c.vi ? '<p class="sbt-vi">' + esc(c.vi) + '</p>' : '') + '</div>';
+  // ----- Đọc câu, chọn tranh: tranh một lần ở đầu phần, câu xếp gọn với hàng chữ cái A–F -----
+  function nutChu(x) { return '<div class="sbt-chip">' + x.pa.map(function (kk, j) { return '<button type="button" class="sbt-o" data-j="' + j + '">' + esc(kk) + '</button>'; }).join('') + '</div>'; }
+  function veCauDocTranh(x, k) { var c = x.c; return soLi(c, k, 'sbt-cau-gon', chuPy(c, 'sbt-cau-chu') + '</div>') + nutChu(x) + '</li>'; }
+  // ----- Chọn từ điền chỗ trống: ô chọn ngay tại chỗ trống -----
+  function oChon(x) {
+    return '<select class="sbt-sel" aria-label="Chọn đáp án"><option value="">—</option>' + x.pa.map(function (kk, j) { return '<option value="' + j + '">' + esc(kk) + '</option>'; }).join('') + '</select>';
   }
-  function veCauNghe(x, k) {
-    var c = x.c, nut;
-    if (c.anh) nut = '<div class="sbt-pa sbt-pa-anh sbt-pa-' + x.pa.length + '">' + x.pa.map(function (kk, j) {
-      var a = c.anh.filter(function (z) { return z.k === kk; })[0];
-      return '<button type="button" class="sbt-o sbt-o-anh" data-j="' + j + '" aria-label="Tranh ' + esc(kk) + '"><img src="' + esc(TV.ROOT + a.src) + '" alt="' + esc(a.alt || '') + '" loading="lazy" width="720" height="480"><span>' + esc(kk) + '</span></button>'; }).join('') + '</div>';
-    else nut = '<div class="sbt-pa sbt-pa-rieng sbt-pa-' + x.pa.length + '">' + x.pa.map(function (kk, j) {
-      var o = c.pa.filter(function (a) { return a.k === kk; })[0];
-      return '<button type="button" class="sbt-o" data-j="' + j + '"><b>' + esc(kk) + '</b>' + chuPy(o) + '</button>'; }).join('') + '</div>';
-    return '<li class="sbt-cau sbt-cau-tr" data-ma="' + esc(c.ma) + '"><div class="sbt-de"><span class="sbt-so">' + (k + 1) + '</span>' +
-      TV.nutLoa(docHT(c)) + '<span class="sbt-goi">' + (c.loi.length > 1 ? 'Nghe câu và câu hỏi' : 'Nghe') + '</span></div>' + nut + loiHtml(c) + '</li>';
+  function veCauDien(x, k) {
+    var c = x.c, ps = esc(c.han).split('（　）');
+    return soLi(c, k, 'sbt-cau-gon', '<span class="sbt-chu sbt-cau-chu"><span class="sbt-py">' + esc(c.py) + '</span><span class="hanzi">' +
+      ps[0] + '（<span class="sbt-o-sel">' + oChon(x) + '</span>）' + (ps[1] || '') + '</span></span></div>') + '</li>';
+  }
+  // ----- Đọc câu + ★câu hỏi, chọn đáp án -----
+  function veCauDoc(x, k) {
+    var c = x.c;
+    return soLi(c, k, 'sbt-cau-doc', '<div class="sbt-noi">' + chuPy(c, 'sbt-cau-chu') + (c.hoi ? '<div class="sbt-hoi"><b>★</b>' + chuPy(c.hoi) + '</div>' : '') + '</div></div>') +
+      '<div class="sbt-pa sbt-pa-rieng sbt-pa-ngang sbt-pa-' + x.pa.length + '">' + x.pa.map(function (kk, j) { return chuNut(tim(c.pa, kk), kk, j); }).join('') + '</div></li>';
+  }
+  // ----- Nối câu: cột câu hỏi | cột câu trả lời A–F, hàng ô điền đáp án bên dưới -----
+  function veGhep(x, p) {
+    return '<div class="sbt-ghep"><ol class="sbt-ghep-hoi">' + x.cau.map(function (y, k) {
+        return '<li data-ma="' + esc(y.c.ma) + '"><span class="sbt-so">' + (k + 1) + '</span>' + chuPy(y.c) + '</li>'; }).join('') + '</ol>' +
+      '<div class="sbt-khung sbt-ghep-dap">' + p.luaChon.map(function (o) { return '<div class="sbt-lc"><b>' + esc(o.k) + '</b>' + chuPy(o) + '</div>'; }).join('') + '</div></div>' +
+      '<ol class="sbt-ds sbt-dap-hang">' + x.cau.map(function (y, k) {
+        return '<li class="sbt-cau sbt-cau-o" data-ma="' + esc(y.c.ma) + '"><span class="sbt-so">' + (k + 1) + '</span><span class="sbt-o-sel">' + oChon(y) + '</span></li>'; }).join('') + '</ol>';
+  }
+  // ----- Câu ví dụ (例如) lấy từ sách: hiện sẵn đáp án ✓, có nghĩa, không tính điểm -----
+  function veVD(p) {
+    var v = p.vd; if (!v) return '';
+    var h = '<div class="sbt-vd"><span class="sbt-vd-nhan">例如 · Ví dụ</span><div class="sbt-vd-noi">';
+    if (v.loi) h += '<div class="sbt-vd-loi">' + TV.nutLoa(docHT(v)) + '<div>' + v.loi.map(function (l) {
+      return '<p>' + (l.ai ? '<b>' + esc(l.ai) + '：</b>' : '') + chuPy(l) + '</p>'; }).join('') + '</div></div>';
+    if (v.han) h += '<div class="sbt-noi">' + chuPy(v, 'sbt-cau-chu') + (v.hoi ? '<div class="sbt-hoi"><b>★</b>' + chuPy(v.hoi) + '</div>' : '') + '</div>';
+    if (v.anh) h += '<div class="sbt-vd-anh">' + v.anh.map(function (a) {
+      return '<figure class="' + (a.k === v.dap ? 'dung' : '') + '"><img src="' + esc(TV.ROOT + a.src) + '" alt="' + esc(a.alt || '') + '" loading="lazy" width="720" height="480">' +
+        (a.k !== '✓' ? '<figcaption>' + esc(a.k) + '</figcaption>' : '') + (a.k === v.dap ? '<i>✓</i>' : '') + '</figure>'; }).join('') + '</div>';
+    if (v.pa) h += '<div class="sbt-vd-pa">' + v.pa.map(function (o) { return '<span class="' + (o.k === v.dap ? 'dung' : '') + '"><b>' + esc(o.k) + '</b>' + chuPy(o) + (o.k === v.dap ? ' ✓' : '') + '</span>'; }).join('') + '</div>';
+    if (v.traLoi) h += '<div class="sbt-vd-pa"><span class="dung"><b>→</b>' + chuPy(v.traLoi) + ' ✓</span></div>';
+    return h + (v.vi ? '<p class="sbt-vi">' + esc(v.vi) + '</p>' : '') + '</div></div>';
   }
   function ve() {
     var hs = hoSo();
@@ -121,18 +129,33 @@
       '<p class="lt-hs-ghi">Làm xong cả bài, kết quả được gửi cho cô giáo để theo dõi. Phần này không xếp hạng.</p></div>' +
       (D.phan.some(function (p) { return /^doc/.test(p.loai) || p.loai === 'nghe'; }) ? '<div class="sbt-cong-cu"><button type="button" class="btn sbt-nut-py" aria-pressed="' + !anPy() + '">' + (anPy() ? 'Hiện pinyin' : 'Ẩn pinyin') + '</button></div>' : '') +
       L.phan.map(function (x, i) {
-        var p = x.p, tranh = p.loai === 'tranh', doc = /^doc/.test(p.loai), nghe = p.loai === 'nghe';
-        return '<section class="sbt-phan card" data-i="' + i + '"><div class="sbt-phan-dau"><span class="sbt-phan-so">' + (i + 1) + '</span><div>' +
+        var p = x.p, L2 = p.loai, than;
+        if (L2 === 'tranh' || L2 === 'nghe') than = '<ol class="sbt-ds sbt-ds-nghe">' + x.cau.map(function (y, k) { return veCauNghe(y, k, p); }).join('') + '</ol>';
+        else if (L2 === 'doc-tranh') than = '<div class="sbt-tranh sbt-tranh-' + p.anh.length + '">' + p.anh.map(function (a) {
+            return '<figure><img src="' + esc(TV.ROOT + a.src) + '" alt="' + esc(a.alt || ('Tranh ' + a.k)) + '" loading="lazy" width="720" height="480"><figcaption>' + esc(a.k) + '</figcaption></figure>'; }).join('') + '</div>' +
+          veVD(p) + '<ol class="sbt-ds sbt-ds-2">' + x.cau.map(function (y, k) { return veCauDocTranh(y, k); }).join('') + '</ol>';
+        else if (L2 === 'doc-ghep') than = veVD(p) + veGhep(x, p);
+        else if (L2 === 'doc-dien') than = '<div class="sbt-khung sbt-khung-tu">' + p.luaChon.map(function (o) { return '<div class="sbt-lc"><b>' + esc(o.k) + '</b>' + chuPy(o) + '</div>'; }).join('') + '</div>' +
+          veVD(p) + '<ol class="sbt-ds sbt-ds-2">' + x.cau.map(function (y, k) { return veCauDien(y, k); }).join('') + '</ol>';
+        else if (L2 === 'doc-hoi') than = veVD(p) + '<ol class="sbt-ds sbt-ds-tr">' + x.cau.map(function (y, k) { return veCauDoc(y, k); }).join('') + '</ol>';
+        else than = '<ol class="sbt-ds">' + x.cau.map(function (y, k) { return veCauAm(y, k, p); }).join('') + '</ol>';
+        if (L2 === 'tranh' || L2 === 'nghe') than = veVD(p) + than;
+        return '<section class="sbt-phan card sbt-l-' + L2 + '" data-i="' + i + '"><div class="sbt-phan-dau"><span class="sbt-phan-so">' + (i + 1) + '</span><div>' +
           '<h2 class="sbt-phan-ten">' + esc(p.ten) + '</h2><p class="sbt-phan-zh hanzi">' + esc(p.zh) + '</p></div>' +
           '<span class="sbt-dem" data-i="' + i + '">0 / ' + x.cau.length + '</span></div>' +
-          '<p class="sbt-hd">' + esc(p.hd) + '</p>' +
-          (tranh ? '<div class="sbt-tranh sbt-tranh-' + p.anh.length + '">' + p.anh.map(function (a) {
-            return '<figure><img src="' + esc(TV.ROOT + a.src) + '" alt="' + esc(a.alt || ('Tranh ' + a.k)) + '" loading="lazy" width="720" height="480"><figcaption>' + esc(a.k) + '</figcaption></figure>'; }).join('') + '</div>' : '') +
-          (p.luaChon ? '<div class="sbt-khung' + (p.loai === 'doc-dien' ? ' sbt-khung-tu' : '') + '">' + p.luaChon.map(function (o) {
-            return '<div class="sbt-lc"><b>' + esc(o.k) + '</b>' + chuPy(o) + '</div>'; }).join('') + '</div>' : '') +
-          '<ol class="sbt-ds' + (tranh || doc || nghe ? ' sbt-ds-tr' : '') + '">' + x.cau.map(function (y, k) { return tranh ? veCauTranh(y, k, p) : doc ? veCauDoc(y, k, p) : nghe ? veCauNghe(y, k) : veCauAm(y, k, p); }).join('') + '</ol></section>';
+          '<p class="sbt-hd">' + esc(p.hd) + '</p>' + than + '</section>';
       }).join('') +
-      '<div class="sbt-ket card" aria-live="polite"><p class="sbt-ket-dem">Đã làm <b>0</b> / ' + L.tong + ' câu</p></div>';
+      '<div class="sbt-ket card" aria-live="polite"><p class="sbt-ket-dem">Đã làm <b>0</b> / ' + L.tong + ' câu</p></div><div class="sbt-tlnghe"></div>';
+  }
+  // Tài liệu nghe: hiện một lượt khi đã làm xong toàn bộ bài, đánh số theo thứ tự câu trên trang
+  function veTaiLieuNghe() {
+    var ds = L.phan.map(function (x, i) { return { x: x, i: i }; }).filter(function (o) { return o.x.p.loai === 'tranh' || o.x.p.loai === 'nghe'; });
+    if (!ds.length) return '';
+    return '<section class="sbt-phan card sbt-tl"><h2 class="sbt-phan-ten">🎧 Tài liệu nghe</h2>' + ds.map(function (o) {
+      return '<h3 class="sbt-tl-phan">Phần ' + (o.i + 1) + ' · ' + esc(o.x.p.ten) + '</h3><ol class="sbt-tl-ds">' + o.x.cau.map(function (y) {
+        return '<li><div>' + y.c.loi.map(function (l) { return '<p>' + (l.ai ? '<b>' + esc(l.ai) + '：</b>' : '') + chuPy(l) + '</p>'; }).join('') + '</div>' +
+          '<span class="sbt-tl-dap ' + (y.dung ? 'dung' : 'sai') + '">' + esc(y.c.dap) + '</span>' + TV.nutLoa(docHT(y.c)) + '</li>'; }).join('') + '</ol>';
+    }).join('') + '</section>';
   }
   function capNhatDem() {
     L.phan.forEach(function (x, i) {
@@ -154,26 +177,41 @@
         var d = x.cau.filter(function (y) { return y.dung; }).length;
         return '<li class="' + (d === x.cau.length ? 'dung' : '') + '"><span>' + esc(x.p.ten) + '</span><b>' + d + ' / ' + x.cau.length + '</b></li>'; }).join('') + '</ul>' +
       '<div class="sbt-luu"></div><div class="lt-nut-kq"><button type="button" class="btn solid sbt-lai">Làm lượt mới</button></div>';
+    var tln = el.querySelector('.sbt-tlnghe'); if (tln) tln.innerHTML = veTaiLieuNghe();
     amThanh(tl >= 80 ? 'xong' : 'xongVua');
     if (G) G.gui({ maLuot: L.ma, phan: 'sbt-bai' + D.bai, hoTen: L.hoTen, lop: L.lop, batDau: L.batDau, giay: L.giay, soCau: L.tong, soDung: dung, cau: L.kq },
       k.querySelector('.sbt-luu'), 'Luyện theo dạng sách bài tập Bài ' + D.bai);
   }
 
   // ---------- chấm ----------
-  function chon(b) {
-    var li = b.closest('.sbt-cau'), sec = b.closest('.sbt-phan'), x = L.phan[+sec.dataset.i], y = x.cau.filter(function (z) { return z.c.ma === li.dataset.ma; })[0];
-    if (!y || y.xong) return;
-    var c = y.c, pc = y.pa[+b.dataset.j], dung = pc === c.dap;
+  function timCau(sec, ma) { var x = L.phan[+sec.dataset.i]; return { x: x, y: x.cau.filter(function (z) { return z.c.ma === ma; })[0] }; }
+  function cham(x, y, pc, li) {
+    var c = y.c, dung = pc === c.dap;
     y.xong = true; y.dung = dung;
-    li.querySelectorAll('.sbt-o').forEach(function (o) { o.disabled = true; var p = y.pa[+o.dataset.j]; if (p === c.dap) o.classList.add('dung'); else if (o === b) o.classList.add('sai'); });
     li.classList.add(dung ? 'dung' : 'sai');
-    var a = li.querySelector('.sbt-am'), ad = li.querySelector('.sbt-am-dung'); if (a && ad) { a.hidden = true; ad.hidden = false; }
-    var lo = li.querySelector('.sbt-loi'); if (lo) lo.hidden = false;
+    var hoi = li.closest('.sbt-phan').querySelector('.sbt-ghep-hoi li[data-ma="' + c.ma + '"]'); if (hoi) hoi.classList.add(dung ? 'dung' : 'sai');
     var hs = hoSo(); L.hoTen = gon(hs.hoTen); L.lop = gon(hs.lop);
     L.kq.push({ stt: L.kq.length + 1, maCau: x.p.loai + (x.p.kieu ? '-' + x.p.kieu : '') + '/' + c.ma, dang: x.p.kieu || x.p.loai, nhom: x.p.ten,
       deBai: c.hien || (c.loi ? c.loi.map(function (v) { return (v.ai ? v.ai + '：' : '') + v.han; }).join(' ') : c.han + (c.hoi ? ' ★' + c.hoi.han : '')), dapAn: c.dap, chon: pc, dung: dung ? 1 : 0, thuTu: y.pa.join(' | ') });
     amThanh(dung ? 'dung' : 'sai');
     capNhatDem();
+  }
+  function chon(b) {
+    var li = b.closest('.sbt-cau'), t = timCau(b.closest('.sbt-phan'), li.dataset.ma), y = t.y;
+    if (!y || y.xong) return;
+    var pc = y.pa[+b.dataset.j];
+    li.querySelectorAll('.sbt-o').forEach(function (o) { o.disabled = true; var p = y.pa[+o.dataset.j]; if (p === y.c.dap) o.classList.add('dung'); else if (o === b) o.classList.add('sai'); });
+    var a = li.querySelector('.sbt-am'), ad = li.querySelector('.sbt-am-dung'); if (a && ad) { a.hidden = true; ad.hidden = false; }
+    cham(t.x, y, pc, li);
+  }
+  function chonSel(sel) {
+    if (sel.value === '') return;
+    var li = sel.closest('.sbt-cau'), t = timCau(sel.closest('.sbt-phan'), li.dataset.ma), y = t.y;
+    if (!y || y.xong) return;
+    var pc = y.pa[+sel.value], w = sel.closest('.sbt-o-sel');
+    sel.disabled = true; w.classList.add(pc === y.c.dap ? 'dung' : 'sai');
+    if (pc !== y.c.dap) w.insertAdjacentHTML('afterend', '<span class="sbt-sua">' + esc(y.c.dap) + '</span>');
+    cham(t.x, y, pc, li);
   }
 
   // ---------- sự kiện ----------
@@ -184,7 +222,10 @@
       el.classList.toggle('sbt-an-py', an); nP.textContent = an ? 'Hiện pinyin' : 'Ẩn pinyin'; nP.setAttribute('aria-pressed', String(!an)); return; }
     if (e.target.closest('.sbt-lai')) { TV.dungDoc(); dungLuot(); ve(); window.scrollTo(0, el.getBoundingClientRect().top + scrollY - 90); }
   });
-  el.addEventListener('change', function (e) { if (e.target.closest('.sbt-ten, .sbt-lop')) luuHs(); });
+  el.addEventListener('change', function (e) {
+    if (e.target.closest('.sbt-ten, .sbt-lop')) return luuHs();
+    if (e.target.classList.contains('sbt-sel')) { luuHs(); chonSel(e.target); }
+  });
 
   // ---------- nạp dữ liệu ----------
   el.innerHTML = '<div class="tv-trong">Đang tải bài luyện…</div>';
