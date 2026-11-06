@@ -4,7 +4,7 @@
 P_TM = {'ten': 'Nghe, chọn thanh mẫu', 'zh': '听录音，选出听到的声母', 'hd': 'Bấm loa nghe âm tiết, chọn thanh mẫu còn thiếu.'}
 P_VM = {'ten': 'Nghe, chọn vận mẫu', 'zh': '听录音，选出听到的韵母', 'hd': 'Bấm loa nghe âm tiết, chọn vận mẫu còn thiếu (đã có dấu thanh).'}
 P_TD = {'ten': 'Nghe, chọn thanh điệu', 'zh': '听录音，选出听到的声调', 'hd': 'Bấm loa nghe âm tiết, chọn cách viết có thanh điệu đúng.'}
-P_TR = {'ten': 'Nghe hội thoại, chọn tranh', 'zh': '听对话，选择正确的图片', 'hd': 'Bấm loa nghe hội thoại, chọn tranh phù hợp. Nghe xong mới hiện chữ.'}
+P_TR = {'ten': 'Nghe hội thoại, chọn tranh', 'zh': '听对话，选择正确的图片', 'hd': 'Bấm loa nghe hội thoại, chọn tranh phù hợp.'}
 
 def phan(mau, loai, cau, **k):
     d = dict(mau); d['loai'] = loai; d['cau'] = cau; d.update(k); return d

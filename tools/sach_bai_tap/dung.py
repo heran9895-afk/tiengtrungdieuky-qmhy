@@ -102,6 +102,16 @@ def dung(bai):
                     fs.append(f if os.path.exists(os.path.join(GOC, f)) else None)
                 if 'doc' not in c and all(fs): c['doc'] = '|'.join(fs)
                 elif not all(fs): print('  ⚠ thiếu file giọng:', c['ma'], [v['han'] for v, f in zip(c['loi'], fs) if not f])
+        # như sách: không có phương án thừa — bỏ tranh / câu / từ không phải đáp án của câu nào, đánh lại chữ cái A, B, C…
+        key = 'anh' if q.get('anh') else ('luaChon' if q.get('luaChon') else None)
+        if key:
+            dung_ = {c['dap'] for c in q['cau']} | ({q['vd']['dap']} if q.get('vd') else set())
+            giu = [a for a in q[key] if a['k'] in dung_]
+            doi = {a['k']: chr(65 + i) for i, a in enumerate(giu)}
+            q[key] = [dict(a, k=doi[a['k']]) for a in giu]
+            for c in q['cau'] + ([q['vd']] if q.get('vd') else []): c['dap'] = doi[c['dap']]
+        import re as _re
+        q['hd'] = _re.sub(r'\s*Có một (tranh|câu|từ) thừa\.', '', q['hd']).replace(', có một từ thừa.', '.')
         out['phan'].append(q)
     return out
 

@@ -392,7 +392,7 @@
   {
    "ten": "Nghe hội thoại, chọn tranh",
    "zh": "听力 · 第三部分：听对话，选择最匹配的图片",
-   "hd": "Bấm loa nghe hội thoại, chọn tranh phù hợp. Có một tranh thừa.",
+   "hd": "Bấm loa nghe hội thoại, chọn tranh phù hợp.",
    "loai": "tranh",
    "anh": [
     {
@@ -412,11 +412,6 @@
     },
     {
      "k": "D",
-     "src": "assets/img/sach-bai-tap/b4-dong-nghiep.webp",
-     "alt": "Hai người ở văn phòng"
-    },
-    {
-     "k": "E",
      "src": "assets/img/sach-bai-tap/b4-thay-giao.webp",
      "alt": "Một thầy giáo đứng trên lớp"
     }
@@ -472,7 +467,7 @@
        "py": "Tā shì lǎoshī."
       }
      ],
-     "dap": "E",
+     "dap": "D",
      "vi": "A: Chồng chị làm nghề gì? — B: Anh ấy là giáo viên.",
      "doc": "assets/am/nam1/750a84f8f7.mp3|assets/am/cau/7c4453d05f.mp3"
     },
@@ -647,7 +642,7 @@
   {
    "ten": "Đọc câu, chọn tranh",
    "zh": "阅读 · 第一部分：选择与句子最匹配的图片",
-   "hd": "Đọc câu, chọn tranh phù hợp nhất. Có một tranh thừa.",
+   "hd": "Đọc câu, chọn tranh phù hợp nhất.",
    "loai": "doc-tranh",
    "anh": [
     {
@@ -679,11 +674,6 @@
      "k": "F",
      "src": "assets/img/sach-bai-tap/b4-bo-hai-con.webp",
      "alt": "Một người bố với hai đứa con"
-    },
-    {
-     "k": "G",
-     "src": "assets/img/sach-bai-tap/b4-ong-ba.webp",
-     "alt": "Hai ông bà"
     }
    ],
    "vd": {
@@ -734,7 +724,7 @@
   {
    "ten": "Nối câu hỏi với câu trả lời",
    "zh": "阅读 · 第二部分：匹配句子",
-   "hd": "Đọc câu hỏi, chọn câu trả lời phù hợp trong khung. Có một câu thừa.",
+   "hd": "Đọc câu hỏi, chọn câu trả lời phù hợp trong khung.",
    "loai": "doc-ghep",
    "luaChon": [
     {
@@ -759,16 +749,11 @@
     },
     {
      "k": "E",
-     "han": "我爷爷今年八十岁。",
-     "py": "Wǒ yéye jīnnián bāshí suì."
-    },
-    {
-     "k": "F",
      "han": "没有，我有两个妹妹。",
      "py": "Méiyǒu, wǒ yǒu liǎng ge mèimei."
     },
     {
-     "k": "G",
+     "k": "F",
      "han": "他是我同事。",
      "py": "Tā shì wǒ tóngshì."
     }
@@ -799,7 +784,7 @@
      "ma": "d2-3",
      "han": "你有哥哥吗？",
      "py": "Nǐ yǒu gēge ma?",
-     "dap": "F",
+     "dap": "E",
      "vi": "Bạn có anh trai không?"
     },
     {
@@ -813,7 +798,7 @@
      "ma": "d2-5",
      "han": "他是谁？",
      "py": "Tā shì shéi?",
-     "dap": "G",
+     "dap": "F",
      "vi": "Anh ấy là ai?"
     }
    ]
@@ -821,7 +806,7 @@
   {
    "ten": "Chọn từ điền vào chỗ trống",
    "zh": "阅读 · 第三部分：选词填空",
-   "hd": "Chọn từ trong khung điền vào chỗ trống. Mỗi từ dùng một lần, có một từ thừa.",
+   "hd": "Chọn từ trong khung điền vào chỗ trống. Mỗi từ dùng một lần.",
    "loai": "doc-dien",
    "luaChon": [
     {
@@ -853,11 +838,6 @@
      "k": "F",
      "han": "个",
      "py": "gè"
-    },
-    {
-     "k": "G",
-     "han": "口",
-     "py": "kǒu"
     }
    ],
    "vd": {

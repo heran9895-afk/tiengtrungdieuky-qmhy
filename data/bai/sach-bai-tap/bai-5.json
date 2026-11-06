@@ -392,7 +392,7 @@
   {
    "ten": "Nghe hội thoại, chọn tranh",
    "zh": "听力 · 第三部分：听对话，选择最匹配的图片",
-   "hd": "Bấm loa nghe hội thoại, chọn tranh phù hợp. Có một tranh thừa.",
+   "hd": "Bấm loa nghe hội thoại, chọn tranh phù hợp.",
    "loai": "tranh",
    "anh": [
     {
@@ -407,16 +407,11 @@
     },
     {
      "k": "C",
-     "src": "assets/img/sach-bai-tap/b5-sinh-nhat.webp",
-     "alt": "Bánh sinh nhật"
-    },
-    {
-     "k": "D",
      "src": "assets/img/sach-bai-tap/b5-may-tinh.webp",
      "alt": "Máy tính xách tay"
     },
     {
-     "k": "E",
+     "k": "D",
      "src": "assets/img/sach-bai-tap/b5-banh-bao.webp",
      "alt": "Bánh bao"
     }
@@ -454,7 +449,7 @@
        "py": "Duì, shì xīn de."
       }
      ],
-     "dap": "D",
+     "dap": "C",
      "vi": "A: Đây là máy tính mới của bạn à? — B: Đúng, máy mới.",
      "doc": "assets/am/nam1/a2dfe9a63a.mp3|assets/am/cau/1c99158a6e.mp3"
     },
@@ -490,7 +485,7 @@
        "py": "Shì wǒ zuò de."
       }
      ],
-     "dap": "E",
+     "dap": "D",
      "vi": "A: Mấy cái bánh bao này ngon thật! — B: Tôi làm đấy.",
      "doc": "assets/am/nam1/5edffb17ab.mp3|assets/am/cau/8e8019f119.mp3"
     }
@@ -647,7 +642,7 @@
   {
    "ten": "Đọc câu, chọn tranh",
    "zh": "阅读 · 第一部分：选择与句子最匹配的图片",
-   "hd": "Đọc câu, chọn tranh phù hợp nhất. Có một tranh thừa.",
+   "hd": "Đọc câu, chọn tranh phù hợp nhất.",
    "loai": "doc-tranh",
    "anh": [
     {
@@ -679,11 +674,6 @@
      "k": "F",
      "src": "assets/img/sach-bai-tap/b5-mi.webp",
      "alt": "Một bát mì"
-    },
-    {
-     "k": "G",
-     "src": "assets/img/sach-bai-tap/b5-banh-bao.webp",
-     "alt": "Bánh bao"
     }
    ],
    "vd": {
@@ -734,7 +724,7 @@
   {
    "ten": "Nối câu hỏi với câu trả lời",
    "zh": "阅读 · 第二部分：匹配句子",
-   "hd": "Đọc câu hỏi, chọn câu trả lời phù hợp trong khung. Có một câu thừa.",
+   "hd": "Đọc câu hỏi, chọn câu trả lời phù hợp trong khung.",
    "loai": "doc-ghep",
    "luaChon": [
     {
@@ -764,11 +754,6 @@
     },
     {
      "k": "F",
-     "han": "我昨天休息。",
-     "py": "Wǒ zuótiān xiūxi."
-    },
-    {
-     "k": "G",
      "han": "真好吃！",
      "py": "Zhēn hǎochī!"
     }
@@ -806,7 +791,7 @@
      "ma": "d2-4",
      "han": "这些包子好吃吗？",
      "py": "Zhèxiē bāozi hǎochī ma?",
-     "dap": "G",
+     "dap": "F",
      "vi": "Mấy cái bánh bao này có ngon không?"
     },
     {
@@ -821,7 +806,7 @@
   {
    "ten": "Chọn từ điền vào chỗ trống",
    "zh": "阅读 · 第三部分：选词填空",
-   "hd": "Chọn từ trong khung điền vào chỗ trống. Mỗi từ dùng một lần, có một từ thừa.",
+   "hd": "Chọn từ trong khung điền vào chỗ trống. Mỗi từ dùng một lần.",
    "loai": "doc-dien",
    "luaChon": [
     {
@@ -853,11 +838,6 @@
      "k": "F",
      "han": "台",
      "py": "tái"
-    },
-    {
-     "k": "G",
-     "han": "天",
-     "py": "tiān"
     }
    ],
    "vd": {
