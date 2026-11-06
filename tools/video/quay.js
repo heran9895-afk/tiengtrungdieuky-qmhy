@@ -68,8 +68,14 @@ body::after{filter:blur(10px)!important}
     await p.waitForFunction(() => !window.__busy, null, { timeout: 8000 }).catch(() => {});
     await W(extra);
   }
+  // cuộn phần tử ra giữa CHỈ trong khung cuộn của thẻ (thẻ ngắn không cuộn thì để yên, không xê dịch trang)
+  const cuonGiua = (el) => p.evaluate(e => {
+    let c = e.parentElement; while (c && !(c.scrollHeight > c.clientHeight + 2 && /auto|scroll/.test(getComputedStyle(c).overflowY))) c = c.parentElement;
+    if (!c) return; const r = e.getBoundingClientRect(), rc = c.getBoundingClientRect();
+    c.scrollBy({ top: (r.top + r.height / 2) - (rc.top + rc.height / 2), behavior: 'smooth' });
+  }, el);
   async function smoothTo(sel) {
-    await p.evaluate(s => document.querySelector(s).scrollIntoView({ behavior: 'smooth', block: 'center' }), sel);
+    await cuonGiua(await p.$(sel));
     await W(900);
   }
 
@@ -97,7 +103,7 @@ body::after{filter:blur(10px)!important}
   const cau = hop.locator('.tv-cau li');
   for (let i = 0; i < await cau.count(); i++) {
     await tap(cau.nth(i).locator('.tv-mo-py')); await W(250);
-    await p.evaluate(k => document.querySelectorAll('.tv-hop .tv-cau li')[k].scrollIntoView({ behavior: 'smooth', block: 'center' }), i); await W(600);
+    await cuonGiua(await cau.nth(i).elementHandle()); await W(600);
     await tap(cau.nth(i).locator('.tv-loa')); await waitAudio(1300);
   }
   await W(1200);
