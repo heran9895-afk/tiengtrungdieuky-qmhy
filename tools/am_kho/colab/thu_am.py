@@ -384,7 +384,7 @@ def cat_luot(wav, dong, ids, alt, ra_dir, ten_tep):
     if dur - t > 0.08: vung.append([t, dur])
     for v in vung: v.append(_nhan(seg16(v[0], v[1])))
     # bỏ vùng chỉ là tiếng thở / "嗯", "呃" ngắn (Gemini hay thêm ở cuối file)
-    vung = [v for v in vung if not (v[1] - v[0] < 0.8 and re.fullmatch(r'[嗯呃额唔]*', re.sub(r'[^一-鿿]', '', v[2])))]
+    vung = [v for v in vung if not (v[1] - v[0] < 0.8 and v[2].strip() and re.fullmatch(r'[嗯呃额唔，。\s]*', v[2]))]
     n, m = len(dong), len(vung)
     P = [[long(p) for p in py_asr(l)] for l in dong]
     alt = [long(a) for a in alt]
