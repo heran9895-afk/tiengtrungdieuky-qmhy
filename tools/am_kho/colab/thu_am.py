@@ -191,8 +191,7 @@ def tao_style(ds, typ, ghi_chu=''):
     st = NHIP[typ]
     if typ != 'chu': st += '\n' + LUAT
     if any(re.search(r'.儿', it['text']) for it in ds): st += '\n' + ER
-    st += ('\nPronunciation guide: the transcript lines, in the same order, are pronounced exactly as this pinyin: '
-           + ' | '.join('%d. %s' % (i, dong_py(it)) for i, it in enumerate(ds, 1)))
+    st += ('\nPronunciation of the lines, in the same order: ' + '; '.join(dong_py(it).rstrip('.') for it in ds) + '.')
     if ghi_chu: st += '\n' + ghi_chu
     return st
 
@@ -200,10 +199,20 @@ def tao_style(ds, typ, ghi_chu=''):
 def ban_doc(dong): return '\n'.join(gon(l) + ' <long pause>' for l in dong)
 
 
-KIEU = ('he_thong', 'dao_dien')   # cách gói Style: chỉ dẫn hệ thống riêng / kịch bản "đạo diễn" có mục TRANSCRIPT
+# Cách gửi Style. Model 3.8: cổng `interactions`, Style ở annotations[].speech_metadata.style, ô text chỉ có lời đọc
+# (ai.google.dev/gemini-api/docs/speech-generation). 'tuong_tac_gon': chỉ gửi câu đầu của Style (nhịp, sắc thái).
+KIEU = ('tuong_tac', 'tuong_tac_gon', 'dao_dien')
+PB_KIEU = 'v3'
 
 
 def than_yeu_cau(style, dong, kieu):
+    if kieu.startswith('tuong_tac'):
+        if kieu == 'tuong_tac_gon': style = style.split('\n')[0]
+        return {'model': CFG['model'].replace('models/', ''),
+                'input': [{'type': 'user_input', 'content': [{'type': 'text', 'text': ban_doc(dong),
+                                                              'annotations': [{'type': 'speech_metadata', 'style': style}]}]}],
+                'response_format': {'type': 'audio'},
+                'generation_config': {'speech_config': [{'voice': CFG['voice']}]}}
     ten = {'responseModalities': ['AUDIO'], 'speechConfig': {'voiceConfig': {'prebuiltVoiceConfig': {'voiceName': CFG['voice']}}}}
     if kieu == 'he_thong':
         return {'systemInstruction': {'parts': [{'text': 'You are a text-to-speech voice. Speak ONLY the user text, never these instructions. ' + style}]},
@@ -266,8 +275,9 @@ def ghi_nhat_ky(dot, luot, giay, meta):
 def goi_tts(style, dong, wav, dot, luot, kieu=None):
     """Gọi Gemini một lần, ghi wav (PCM 16-bit mono). Thử lại khi lỗi mạng / 429 / 5xx. Trả về số giây âm thanh."""
     rq = _rq()
-    body = than_yeu_cau(style, dong, kieu or CFG.get('kieu') or 'he_thong')
-    url = API + CFG['model'] + ':generateContent'
+    kieu = kieu or CFG.get('kieu') or KIEU[0]
+    body = than_yeu_cau(style, dong, kieu)
+    url = API + ('interactions' if kieu.startswith('tuong_tac') else CFG['model'] + ':generateContent')
     loi_cuoi = ''
     for lan in range(7):
         if lan: time.sleep(min(20 * 2 ** (lan - 1), 300))
@@ -283,6 +293,18 @@ def goi_tts(style, dong, wav, dot, luot, kieu=None):
         if r.status_code != 200:
             raise RuntimeError('Gemini báo lỗi %d: %s' % (r.status_code, r.text[:800]))
         j = r.json()
+        if 'steps' in j:   # cổng interactions: wav có sẵn header
+            aud = [c for st in j['steps'] if st.get('type') == 'model_output' for c in st.get('content') or [] if c.get('type') == 'audio']
+            if not aud:
+                loi_cuoi = 'không có âm thanh (%s)' % str(j)[:200]; print('   ⚠', loi_cuoi, '→ thử lại'); continue
+            os.makedirs(os.path.dirname(wav), exist_ok=True)
+            open(wav + '.tmp', 'wb').write(base64.b64decode(aud[-1]['data']))
+            with wave.open(wav + '.tmp') as w: giay = w.getnframes() / w.getframerate()
+            os.replace(wav + '.tmp', wav)
+            u = j.get('usage') or j.get('usageMetadata') or {}
+            ghi_nhat_ky(dot, luot, giay, {'promptTokenCount': u.get('total_input_tokens', u.get('promptTokenCount', '')),
+                                          'candidatesTokenCount': u.get('total_output_tokens', u.get('candidatesTokenCount', ''))})
+            return giay
         parts = ((j.get('candidates') or [{}])[0].get('content') or {}).get('parts') or []
         aud = [p['inlineData'] for p in parts if 'inlineData' in p]
         if not aud:
@@ -318,6 +340,7 @@ def asr_py(txt):
     """pinyin không dấu từ chữ máy nhận dạng (máy có lúc trả chữ La-tinh rời, vd. 上 → "s a n g")."""
     out = []
     txt = re.sub(r'啦$|啦(?=[，。？！])', '了', txt or '')   # 了 cuối câu máy hay nghe thành 啦
+    txt = re.sub(r'[呀哇](?=$|[，。？！])', '啊', txt)        # 啊 biến âm (来啊 → lái ya) là đọc đúng
     for m in re.finditer(r'[一-鿿]+|[A-Za-z]+(?:\s[A-Za-z]+)*', txt):
         g = m.group(0)
         out += py_asr(g) if re.match(r'[一-鿿]', g) else [g.replace(' ', '').lower()]
@@ -438,7 +461,8 @@ def chon_kieu(ds, D, dot):
     """Thử các cách gói Style trên 8 dòng (vài giây âm thanh), chọn cách Gemini chỉ đọc đúng danh sách. Lưu vào Drive."""
     f = CFG['work'] + 'kieu.json'
     k = _doc(f, {})
-    if k.get(CFG['model']): CFG['kieu'] = k[CFG['model']]; return
+    khoa = str(CFG['model']) + '|' + PB_KIEU
+    if k.get(khoa): CFG['kieu'] = k[khoa]; return
     mau = [it for it in ds if it['typ'] == 'tu'][:6] + [it for it in ds if it['typ'] == 'cau'][:2]
     print('🔎 Thử cách gửi Style cho %s (%d dòng mẫu)…' % (CFG['model'], len(mau)))
     for kieu in KIEU:
@@ -455,9 +479,9 @@ def chon_kieu(ds, D, dot):
             dat = sum(1 for r in res.values() if not r['loi'])
             print('   %s · %s: %d vùng / %d dòng · đạt %d · máy nghe: %s' % (kieu, typ, meta['vung'], len(m), dat,
                   ' | '.join(v[2] for v in meta['ds_vung'][:10])))
-            if dat < len(m) - 1 or meta['vung'] > len(m) + 2: break
+            if dat < len(m) - (1 if typ == 'tu' else 0) or meta['vung'] > len(m) + (1 if typ == 'tu' else 2): break
         else:
-            CFG['kieu'] = k[CFG['model']] = kieu; _ghi(f, k)
+            CFG['kieu'] = k[khoa] = kieu; _ghi(f, k)
             print('→ Chọn cách:', kieu); return
     raise RuntimeError('Chưa cách gửi nào làm Gemini chỉ đọc đúng danh sách. Cô chụp màn hình phần trên gửi bên soạn.')
 
