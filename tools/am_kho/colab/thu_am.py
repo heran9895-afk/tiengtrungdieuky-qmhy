@@ -196,7 +196,7 @@ def tao_style(ds, typ, ghi_chu=''):
     return st
 
 
-def ban_doc(dong): return '\n'.join(gon(l) + ' <long pause>' for l in dong)
+def ban_doc(dong): return ' <long pause>\n'.join(gon(l) for l in dong)   # không nghỉ sau dòng cuối (đỡ tiếng "嗯" thừa)
 
 
 # Cách gửi Style. Model 3.8: cổng `interactions`, Style ở annotations[].speech_metadata.style, ô text chỉ có lời đọc
@@ -383,6 +383,8 @@ def cat_luot(wav, dong, ids, alt, ra_dir, ten_tep):
         t = b
     if dur - t > 0.08: vung.append([t, dur])
     for v in vung: v.append(_nhan(seg16(v[0], v[1])))
+    # bỏ vùng chỉ là tiếng thở / "嗯", "呃" ngắn (Gemini hay thêm ở cuối file)
+    vung = [v for v in vung if not (v[1] - v[0] < 0.8 and re.fullmatch(r'[嗯呃额唔]*', re.sub(r'[^一-鿿]', '', v[2])))]
     n, m = len(dong), len(vung)
     P = [[long(p) for p in py_asr(l)] for l in dong]
     alt = [long(a) for a in alt]
