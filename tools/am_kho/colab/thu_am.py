@@ -50,6 +50,7 @@ def khong_dau(p):
 
 def py_asr(s):
     from pypinyin import lazy_pinyin
+    s = re.sub(r'[呀哇]', '啊', s or '')   # 啊 biến âm (来啊 → lái ya) coi như đúng, cả hai phía
     return [p.replace('v', 'u').replace('ü', 'u') for p in lazy_pinyin(re.sub(r'[^一-鿿]|儿', '', s)) if p]
 
 
@@ -340,7 +341,6 @@ def asr_py(txt):
     """pinyin không dấu từ chữ máy nhận dạng (máy có lúc trả chữ La-tinh rời, vd. 上 → "s a n g")."""
     out = []
     txt = re.sub(r'啦$|啦(?=[，。？！])', '了', txt or '')   # 了 cuối câu máy hay nghe thành 啦
-    txt = re.sub(r'[呀哇](?=$|[，。？！])', '啊', txt)        # 啊 biến âm (来啊 → lái ya) là đọc đúng
     for m in re.finditer(r'[一-鿿]+|[A-Za-z]+(?:\s[A-Za-z]+)*', txt):
         g = m.group(0)
         out += py_asr(g) if re.match(r'[一-鿿]', g) else [g.replace(' ', '').lower()]
@@ -399,7 +399,9 @@ def cat_luot(wav, dong, ids, alt, ra_dir, ten_tep):
         for j in range(m + 1):
             c = dp[i][j]
             if c == NEG: continue
-            if j < m and c - 0.6 > dp[i][j + 1]: dp[i][j + 1], bk[i][j + 1] = c - 0.6, ('bovung', i, j)
+            if j < m:   # bỏ vùng thừa: vùng ngắn / có 嗯 (tiếng thở, "ừm") bỏ rẻ hơn ghép vào dòng
+                bo = 0.05 if '嗯' in vung[j][2] else (0.15 if vung[j][1] - vung[j][0] < 0.6 else 0.6)
+                if c - bo > dp[i][j + 1]: dp[i][j + 1], bk[i][j + 1] = c - bo, ('bovung', i, j)
             if i < n and c - 0.8 > dp[i + 1][j]: dp[i + 1][j], bk[i + 1][j] = c - 0.8, ('bodong', i, j)
             if i < n:
                 for k in range(1, 5):
@@ -481,6 +483,9 @@ def chon_kieu(ds, D, dot):
             dat = sum(1 for r in res.values() if not r['loi'])
             print('   %s · %s: %d vùng / %d dòng · đạt %d · máy nghe: %s' % (kieu, typ, meta['vung'], len(m), dat,
                   ' | '.join(v[2] for v in meta['ds_vung'][:10])))
+            for it in m:
+                r = res[it['id']]
+                if r['loi']: print('      ✗ %s → máy nghe "%s" · %s' % (it['text'], r.get('asr', ''), ', '.join(r['loi'])))
             if dat < len(m) - (1 if typ == 'tu' else 0) or meta['vung'] > len(m) + (1 if typ == 'tu' else 2): break
         else:
             CFG['kieu'] = k[khoa] = kieu; _ghi(f, k)
