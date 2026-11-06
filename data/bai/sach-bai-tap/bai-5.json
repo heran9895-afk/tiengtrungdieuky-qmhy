@@ -397,21 +397,26 @@
    "anh": [
     {
      "k": "A",
+     "src": "assets/img/sach-bai-tap/b2-bat-tay.webp",
+     "alt": "Hai người bắt tay"
+    },
+    {
+     "k": "B",
      "src": "assets/img/sach-bai-tap/b5-nghi-ngoi.webp",
      "alt": "Nằm nghỉ trên sofa"
     },
     {
-     "k": "B",
+     "k": "C",
      "src": "assets/img/sach-bai-tap/b5-sinh-nhat.webp",
      "alt": "Bánh sinh nhật"
     },
     {
-     "k": "C",
+     "k": "D",
      "src": "assets/img/sach-bai-tap/b5-may-tinh.webp",
      "alt": "Máy tính xách tay"
     },
     {
-     "k": "D",
+     "k": "E",
      "src": "assets/img/sach-bai-tap/b5-banh-bao.webp",
      "alt": "Bánh bao"
     }
@@ -429,14 +434,7 @@
       "py": "Nǐ hǎo! Hěn gāoxìng rènshi nǐ."
      }
     ],
-    "anh": [
-     {
-      "k": "✓",
-      "src": "assets/img/sach-bai-tap/b2-bat-tay.webp",
-      "alt": "Hai người bắt tay"
-     }
-    ],
-    "dap": "✓",
+    "dap": "A",
     "vi": "Nữ: Xin chào! — Nam: Xin chào! Rất vui được gặp bạn.",
     "ma": "vd",
     "doc": "assets/am/bai-1/cau/c23.mp3|assets/am/nam1/af0a2d6718.mp3"
@@ -456,7 +454,7 @@
        "py": "Duì, shì xīn de."
       }
      ],
-     "dap": "C",
+     "dap": "D",
      "vi": "A: Đây là máy tính mới của bạn à? — B: Đúng, máy mới.",
      "doc": "assets/am/nam1/a2dfe9a63a.mp3|assets/am/cau/1c99158a6e.mp3"
     },
@@ -474,7 +472,7 @@
        "py": "Bú shàngbān, wǒ jīntiān xiūxi."
       }
      ],
-     "dap": "A",
+     "dap": "B",
      "vi": "A: Hôm nay bạn có đi làm không? — B: Không, hôm nay tôi nghỉ.",
      "doc": "assets/am/nam1/85ff9af055.mp3|assets/am/cau/d779a9e17b.mp3"
     },
@@ -492,7 +490,7 @@
        "py": "Shì wǒ zuò de."
       }
      ],
-     "dap": "D",
+     "dap": "E",
      "vi": "A: Mấy cái bánh bao này ngon thật! — B: Tôi làm đấy.",
      "doc": "assets/am/nam1/5edffb17ab.mp3|assets/am/cau/8e8019f119.mp3"
     }
@@ -654,31 +652,36 @@
    "anh": [
     {
      "k": "A",
+     "src": "assets/img/sach-bai-tap/vd-doc-sach.webp",
+     "alt": "Một cô gái đang đọc sách"
+    },
+    {
+     "k": "B",
      "src": "assets/img/sach-bai-tap/b5-sinh-nhat.webp",
      "alt": "Bánh sinh nhật có nến"
     },
     {
-     "k": "B",
+     "k": "C",
      "src": "assets/img/sach-bai-tap/b5-goi-sui-cao.webp",
      "alt": "Tay đang gói sủi cảo"
     },
     {
-     "k": "C",
+     "k": "D",
      "src": "assets/img/sach-bai-tap/b5-may-tinh.webp",
      "alt": "Máy tính xách tay trên bàn"
     },
     {
-     "k": "D",
+     "k": "E",
      "src": "assets/img/sach-bai-tap/b5-nghi-ngoi.webp",
      "alt": "Một người nằm nghỉ trên ghế sofa"
     },
     {
-     "k": "E",
+     "k": "F",
      "src": "assets/img/sach-bai-tap/b5-mi.webp",
      "alt": "Một bát mì"
     },
     {
-     "k": "F",
+     "k": "G",
      "src": "assets/img/sach-bai-tap/b5-banh-bao.webp",
      "alt": "Bánh bao"
     }
@@ -686,14 +689,7 @@
    "vd": {
     "han": "我很喜欢这本书。",
     "py": "Wǒ hěn xǐhuan zhè běn shū.",
-    "anh": [
-     {
-      "k": "✓",
-      "src": "assets/img/sach-bai-tap/vd-doc-sach.webp",
-      "alt": "Một cô gái đang đọc sách"
-     }
-    ],
-    "dap": "✓",
+    "dap": "A",
     "vi": "Tôi rất thích cuốn sách này.",
     "ma": "vd"
    },
@@ -702,35 +698,35 @@
      "ma": "d1-1",
      "han": "今天是我的生日。",
      "py": "Jīntiān shì wǒ de shēngrì.",
-     "dap": "A",
+     "dap": "B",
      "vi": "Hôm nay là sinh nhật tôi."
     },
     {
      "ma": "d1-2",
      "han": "我妈妈会做饺子。",
      "py": "Wǒ māma huì zuò jiǎozi.",
-     "dap": "B",
+     "dap": "C",
      "vi": "Mẹ tôi biết làm sủi cảo."
     },
     {
      "ma": "d1-3",
      "han": "我有一台新电脑。",
      "py": "Wǒ yǒu yì tái xīn diànnǎo.",
-     "dap": "C",
+     "dap": "D",
      "vi": "Tôi có một chiếc máy tính mới."
     },
     {
      "ma": "d1-4",
      "han": "今天她休息，不上班。",
      "py": "Jīntiān tā xiūxi, bú shàngbān.",
-     "dap": "D",
+     "dap": "E",
      "vi": "Hôm nay cô ấy nghỉ, không đi làm."
     },
     {
      "ma": "d1-5",
      "han": "我很喜欢吃面条儿。",
      "py": "Wǒ hěn xǐhuan chī miàntiáor.",
-     "dap": "E",
+     "dap": "F",
      "vi": "Tôi rất thích ăn mì."
     }
    ]
@@ -743,31 +739,36 @@
    "luaChon": [
     {
      "k": "A",
+     "han": "好的，谢谢！",
+     "py": "Hǎo de, xièxie!"
+    },
+    {
+     "k": "B",
      "han": "会，我会做面条儿。",
      "py": "Huì, wǒ huì zuò miàntiáor."
     },
     {
-     "k": "B",
+     "k": "C",
      "han": "今天十一月五号。",
      "py": "Jīntiān shíyī yuè wǔ hào."
     },
     {
-     "k": "C",
+     "k": "D",
      "han": "我星期一上班。",
      "py": "Wǒ xīngqīyī shàngbān."
     },
     {
-     "k": "D",
+     "k": "E",
      "han": "明天星期六。",
      "py": "Míngtiān xīngqīliù."
     },
     {
-     "k": "E",
+     "k": "F",
      "han": "我昨天休息。",
      "py": "Wǒ zuótiān xiūxi."
     },
     {
-     "k": "F",
+     "k": "G",
      "han": "真好吃！",
      "py": "Zhēn hǎochī!"
     }
@@ -775,10 +776,7 @@
    "vd": {
     "han": "你喝水吗？",
     "py": "Nǐ hē shuǐ ma?",
-    "traLoi": {
-     "han": "好的，谢谢！",
-     "py": "Hǎo de, xièxie!"
-    },
+    "dap": "A",
     "vi": "Bạn có uống nước không? — Vâng, cảm ơn!",
     "ma": "vd"
    },
@@ -787,35 +785,35 @@
      "ma": "d2-1",
      "han": "今天几月几号？",
      "py": "Jīntiān jǐ yuè jǐ hào?",
-     "dap": "B",
+     "dap": "C",
      "vi": "Hôm nay là ngày mấy tháng mấy?"
     },
     {
      "ma": "d2-2",
      "han": "明天星期几？",
      "py": "Míngtiān xīngqī jǐ?",
-     "dap": "D",
+     "dap": "E",
      "vi": "Ngày mai là thứ mấy?"
     },
     {
      "ma": "d2-3",
      "han": "你会做饭吗？",
      "py": "Nǐ huì zuò fàn ma?",
-     "dap": "A",
+     "dap": "B",
      "vi": "Bạn có biết nấu cơm không?"
     },
     {
      "ma": "d2-4",
      "han": "这些包子好吃吗？",
      "py": "Zhèxiē bāozi hǎochī ma?",
-     "dap": "F",
+     "dap": "G",
      "vi": "Mấy cái bánh bao này có ngon không?"
     },
     {
      "ma": "d2-5",
      "han": "你哪天上班？",
      "py": "Nǐ nǎ tiān shàngbān?",
-     "dap": "C",
+     "dap": "D",
      "vi": "Bạn đi làm vào hôm nào?"
     }
    ]
@@ -828,38 +826,44 @@
    "luaChon": [
     {
      "k": "A",
+     "han": "名字",
+     "py": "míngzi"
+    },
+    {
+     "k": "B",
      "han": "会",
      "py": "huì"
     },
     {
-     "k": "B",
+     "k": "C",
      "han": "真",
      "py": "zhēn"
     },
     {
-     "k": "C",
+     "k": "D",
      "han": "些",
      "py": "xiē"
     },
     {
-     "k": "D",
+     "k": "E",
      "han": "号",
      "py": "hào"
     },
     {
-     "k": "E",
+     "k": "F",
      "han": "台",
      "py": "tái"
     },
     {
-     "k": "F",
+     "k": "G",
      "han": "天",
      "py": "tiān"
     }
    ],
    "vd": {
-    "han": "你叫什么（名字）？",
-    "py": "Nǐ jiào shénme (míngzi)?",
+    "han": "你叫什么（　）？",
+    "py": "Nǐ jiào shénme (　)?",
+    "dap": "A",
     "vi": "Bạn tên là gì?",
     "ma": "vd"
    },
@@ -868,35 +872,35 @@
      "ma": "d3-1",
      "han": "这（　）饺子是我妈妈做的。",
      "py": "Zhè (　) jiǎozi shì wǒ māma zuò de.",
-     "dap": "C",
+     "dap": "D",
      "vi": "Mấy cái sủi cảo này là mẹ tôi làm."
     },
     {
      "ma": "d3-2",
      "han": "我有一（　）新电脑。",
      "py": "Wǒ yǒu yì (　) xīn diànnǎo.",
-     "dap": "E",
+     "dap": "F",
      "vi": "Tôi có một chiếc máy tính mới."
     },
     {
      "ma": "d3-3",
      "han": "今天十月一（　）。",
      "py": "Jīntiān shí yuè yī (　).",
-     "dap": "D",
+     "dap": "E",
      "vi": "Hôm nay là ngày mùng một tháng mười."
     },
     {
      "ma": "d3-4",
      "han": "你（　）做饭吗？",
      "py": "Nǐ (　) zuò fàn ma?",
-     "dap": "A",
+     "dap": "B",
      "vi": "Bạn có biết nấu cơm không?"
     },
     {
      "ma": "d3-5",
      "han": "这个面包（　）好吃！",
      "py": "Zhège miànbāo (　) hǎochī!",
-     "dap": "B",
+     "dap": "C",
      "vi": "Cái bánh mì này ngon thật!"
     }
    ]

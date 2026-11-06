@@ -182,3 +182,12 @@
 .sbt-pa-4 .sbt-o{font-size:16.5px;padding:2px 3px;min-width:0}
 .sbt-l-doc-hoi .sbt-ds-tr{grid-template-columns:repeat(2,1fr)}
 @media(max-width:700px){.sbt-l-doc-hoi .sbt-ds-tr{grid-template-columns:1fr}}
+/* 07/11: câu ví dụ là câu đầu của bài tập (như sách) */
+.sbt-cau-vd{background:var(--surface-2)!important;border-style:dashed!important;border-color:var(--ok)!important}
+.sbt-cau-vd .sbt-so,.sbt-ghep-hoi li.sbt-cau-vd .sbt-so{color:var(--red);font-size:12.5px;font-weight:800;min-width:30px}
+.sbt-vd-ghi{grid-column:1/-1;margin:4px 0 0;font-size:12.5px;color:var(--muted);line-height:1.4}
+.sbt-ghep-hoi li.sbt-cau-vd{flex-wrap:wrap;background:var(--surface-2);border:1px dashed var(--ok)}
+.sbt-ghep-hoi li.sbt-cau-vd .sbt-vd-ghi{flex-basis:100%;margin:0 0 0 38px}
+.sbt-cau-o.sbt-cau-vd .sbt-so{min-width:0}
+.sbt-l-doc-tranh .sbt-tranh-7{grid-template-columns:repeat(7,1fr)}
+@media(max-width:700px){.sbt-l-doc-tranh .sbt-tranh-7{grid-template-columns:repeat(4,1fr)}}

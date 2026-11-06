@@ -397,21 +397,26 @@
    "anh": [
     {
      "k": "A",
+     "src": "assets/img/sach-bai-tap/b2-bat-tay.webp",
+     "alt": "Hai người bắt tay"
+    },
+    {
+     "k": "B",
      "src": "assets/img/sach-bai-tap/b4-ong-ba.webp",
      "alt": "Hai ông bà"
     },
     {
-     "k": "B",
+     "k": "C",
      "src": "assets/img/sach-bai-tap/b4-be-gai.webp",
      "alt": "Một bé gái"
     },
     {
-     "k": "C",
+     "k": "D",
      "src": "assets/img/sach-bai-tap/b4-dong-nghiep.webp",
      "alt": "Hai người ở văn phòng"
     },
     {
-     "k": "D",
+     "k": "E",
      "src": "assets/img/sach-bai-tap/b4-thay-giao.webp",
      "alt": "Một thầy giáo đứng trên lớp"
     }
@@ -429,14 +434,7 @@
       "py": "Nǐ hǎo! Hěn gāoxìng rènshi nǐ."
      }
     ],
-    "anh": [
-     {
-      "k": "✓",
-      "src": "assets/img/sach-bai-tap/b2-bat-tay.webp",
-      "alt": "Hai người bắt tay"
-     }
-    ],
-    "dap": "✓",
+    "dap": "A",
     "vi": "Nữ: Xin chào! — Nam: Xin chào! Rất vui được gặp bạn.",
     "ma": "vd",
     "doc": "assets/am/bai-1/cau/c23.mp3|assets/am/nam1/af0a2d6718.mp3"
@@ -456,7 +454,7 @@
        "py": "Duì, tā jīnnián liù suì."
       }
      ],
-     "dap": "B",
+     "dap": "C",
      "vi": "A: Đây là con gái chị à? — B: Đúng, năm nay cháu sáu tuổi.",
      "doc": "assets/am/nam1/0c012fa2b2.mp3|assets/am/cau/f50b714ff2.mp3"
     },
@@ -474,7 +472,7 @@
        "py": "Tā shì lǎoshī."
       }
      ],
-     "dap": "D",
+     "dap": "E",
      "vi": "A: Chồng chị làm nghề gì? — B: Anh ấy là giáo viên.",
      "doc": "assets/am/nam1/750a84f8f7.mp3|assets/am/cau/7c4453d05f.mp3"
     },
@@ -492,7 +490,7 @@
        "py": "Tāmen shì wǒ yéye, nǎinai."
       }
      ],
-     "dap": "A",
+     "dap": "B",
      "vi": "A: Họ là ai? — B: Họ là ông bà nội của tôi.",
      "doc": "assets/am/nam1/39d05129f4.mp3|assets/am/cau/e0c543829e.mp3"
     }
@@ -654,31 +652,36 @@
    "anh": [
     {
      "k": "A",
+     "src": "assets/img/sach-bai-tap/vd-doc-sach.webp",
+     "alt": "Một cô gái đang đọc sách"
+    },
+    {
+     "k": "B",
      "src": "assets/img/sach-bai-tap/b4-ba-nguoi.webp",
      "alt": "Bố, mẹ và con gái ngồi ăn"
     },
     {
-     "k": "B",
+     "k": "C",
      "src": "assets/img/sach-bai-tap/b4-be-gai.webp",
      "alt": "Một bé gái đang cười"
     },
     {
-     "k": "C",
+     "k": "D",
      "src": "assets/img/sach-bai-tap/b4-dong-nghiep.webp",
      "alt": "Hai người làm việc cạnh nhau ở văn phòng"
     },
     {
-     "k": "D",
+     "k": "E",
      "src": "assets/img/sach-bai-tap/b4-vo-chong.webp",
      "alt": "Một đôi vợ chồng"
     },
     {
-     "k": "E",
+     "k": "F",
      "src": "assets/img/sach-bai-tap/b4-bo-hai-con.webp",
      "alt": "Một người bố với hai đứa con"
     },
     {
-     "k": "F",
+     "k": "G",
      "src": "assets/img/sach-bai-tap/b4-ong-ba.webp",
      "alt": "Hai ông bà"
     }
@@ -686,14 +689,7 @@
    "vd": {
     "han": "我很喜欢这本书。",
     "py": "Wǒ hěn xǐhuan zhè běn shū.",
-    "anh": [
-     {
-      "k": "✓",
-      "src": "assets/img/sach-bai-tap/vd-doc-sach.webp",
-      "alt": "Một cô gái đang đọc sách"
-     }
-    ],
-    "dap": "✓",
+    "dap": "A",
     "vi": "Tôi rất thích cuốn sách này.",
     "ma": "vd"
    },
@@ -702,35 +698,35 @@
      "ma": "d1-1",
      "han": "我家有三口人：爸爸、妈妈和我。",
      "py": "Wǒ jiā yǒu sān kǒu rén: bàba, māma hé wǒ.",
-     "dap": "A",
+     "dap": "B",
      "vi": "Nhà tôi có ba người: bố, mẹ và tôi."
     },
     {
      "ma": "d1-2",
      "han": "我女儿今年五岁。",
      "py": "Wǒ nǚ'ér jīnnián wǔ suì.",
-     "dap": "B",
+     "dap": "C",
      "vi": "Con gái tôi năm nay năm tuổi."
     },
     {
      "ma": "d1-3",
      "han": "他是我同事。",
      "py": "Tā shì wǒ tóngshì.",
-     "dap": "C",
+     "dap": "D",
      "vi": "Anh ấy là đồng nghiệp của tôi."
     },
     {
      "ma": "d1-4",
      "han": "这是我老公，我们很好。",
      "py": "Zhè shì wǒ lǎogōng, wǒmen hěn hǎo.",
-     "dap": "D",
+     "dap": "E",
      "vi": "Đây là chồng tôi, chúng tôi rất tốt."
     },
     {
      "ma": "d1-5",
      "han": "他有两个孩子。",
      "py": "Tā yǒu liǎng ge háizi.",
-     "dap": "E",
+     "dap": "F",
      "vi": "Anh ấy có hai đứa con."
     }
    ]
@@ -743,31 +739,36 @@
    "luaChon": [
     {
      "k": "A",
+     "han": "好的，谢谢！",
+     "py": "Hǎo de, xièxie!"
+    },
+    {
+     "k": "B",
      "han": "我今年二十岁。",
      "py": "Wǒ jīnnián èrshí suì."
     },
     {
-     "k": "B",
+     "k": "C",
      "han": "我有一个儿子。",
      "py": "Wǒ yǒu yí ge érzi."
     },
     {
-     "k": "C",
+     "k": "D",
      "han": "我家有五口人。",
      "py": "Wǒ jiā yǒu wǔ kǒu rén."
     },
     {
-     "k": "D",
+     "k": "E",
      "han": "我爷爷今年八十岁。",
      "py": "Wǒ yéye jīnnián bāshí suì."
     },
     {
-     "k": "E",
+     "k": "F",
      "han": "没有，我有两个妹妹。",
      "py": "Méiyǒu, wǒ yǒu liǎng ge mèimei."
     },
     {
-     "k": "F",
+     "k": "G",
      "han": "他是我同事。",
      "py": "Tā shì wǒ tóngshì."
     }
@@ -775,10 +776,7 @@
    "vd": {
     "han": "你喝水吗？",
     "py": "Nǐ hē shuǐ ma?",
-    "traLoi": {
-     "han": "好的，谢谢！",
-     "py": "Hǎo de, xièxie!"
-    },
+    "dap": "A",
     "vi": "Bạn có uống nước không? — Vâng, cảm ơn!",
     "ma": "vd"
    },
@@ -787,35 +785,35 @@
      "ma": "d2-1",
      "han": "你家有几口人？",
      "py": "Nǐ jiā yǒu jǐ kǒu rén?",
-     "dap": "C",
+     "dap": "D",
      "vi": "Nhà bạn có mấy người?"
     },
     {
      "ma": "d2-2",
      "han": "你今年多大？",
      "py": "Nǐ jīnnián duō dà?",
-     "dap": "A",
+     "dap": "B",
      "vi": "Năm nay bạn bao nhiêu tuổi?"
     },
     {
      "ma": "d2-3",
      "han": "你有哥哥吗？",
      "py": "Nǐ yǒu gēge ma?",
-     "dap": "E",
+     "dap": "F",
      "vi": "Bạn có anh trai không?"
     },
     {
      "ma": "d2-4",
      "han": "你有几个孩子？",
      "py": "Nǐ yǒu jǐ ge háizi?",
-     "dap": "B",
+     "dap": "C",
      "vi": "Bạn có mấy đứa con?"
     },
     {
      "ma": "d2-5",
      "han": "他是谁？",
      "py": "Tā shì shéi?",
-     "dap": "F",
+     "dap": "G",
      "vi": "Anh ấy là ai?"
     }
    ]
@@ -828,38 +826,44 @@
    "luaChon": [
     {
      "k": "A",
+     "han": "名字",
+     "py": "míngzi"
+    },
+    {
+     "k": "B",
      "han": "两",
      "py": "liǎng"
     },
     {
-     "k": "B",
+     "k": "C",
      "han": "多少",
      "py": "duōshao"
     },
     {
-     "k": "C",
+     "k": "D",
      "han": "岁",
      "py": "suì"
     },
     {
-     "k": "D",
+     "k": "E",
      "han": "呢",
      "py": "ne"
     },
     {
-     "k": "E",
+     "k": "F",
      "han": "个",
      "py": "gè"
     },
     {
-     "k": "F",
+     "k": "G",
      "han": "口",
      "py": "kǒu"
     }
    ],
    "vd": {
-    "han": "你叫什么（名字）？",
-    "py": "Nǐ jiào shénme (míngzi)?",
+    "han": "你叫什么（　）？",
+    "py": "Nǐ jiào shénme (　)?",
+    "dap": "A",
     "vi": "Bạn tên là gì?",
     "ma": "vd"
    },
@@ -868,35 +872,35 @@
      "ma": "d3-1",
      "han": "我有（　）个哥哥。",
      "py": "Wǒ yǒu (　) ge gēge.",
-     "dap": "A",
+     "dap": "B",
      "vi": "Tôi có hai anh trai."
     },
     {
      "ma": "d3-2",
      "han": "中国有（　）人？",
      "py": "Zhōngguó yǒu (　) rén?",
-     "dap": "B",
+     "dap": "C",
      "vi": "Trung Quốc có bao nhiêu người?"
     },
     {
      "ma": "d3-3",
      "han": "我儿子今年五（　）。",
      "py": "Wǒ érzi jīnnián wǔ (　).",
-     "dap": "C",
+     "dap": "D",
      "vi": "Con trai tôi năm nay năm tuổi."
     },
     {
      "ma": "d3-4",
      "han": "我很好，你（　）？",
      "py": "Wǒ hěn hǎo, nǐ (　)?",
-     "dap": "D",
+     "dap": "E",
      "vi": "Tôi rất khỏe, còn bạn?"
     },
     {
      "ma": "d3-5",
      "han": "我有一（　）妹妹。",
      "py": "Wǒ yǒu yí (　) mèimei.",
-     "dap": "E",
+     "dap": "F",
      "vi": "Tôi có một em gái."
     }
    ]

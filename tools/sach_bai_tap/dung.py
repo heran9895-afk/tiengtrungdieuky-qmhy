@@ -60,7 +60,7 @@ def dung_cau_am(loai, bai, k, am, nhieu):
     return c
 
 def vd_du(v):
-    for a in v.get('anh', []):
+    for a in v.get('anh', []) + ([v['chen']] if v.get('chen', {}).get('src') else []):
         if not os.path.exists(os.path.join(GOC, a['src'])): return False
     gs = v.get('giong') or ['nu1'] * len(v.get('loi', []))
     for l, g in zip(v.get('loi', []), gs):
@@ -73,7 +73,14 @@ def dung(bai):
     out = {'bai': bai['bai'], 'ten': bai['ten'], 'tenViet': bai['tenViet'], 'phienBan': bai['phienBan'], 'phan': []}
     for p in bai['phan']:
         q = {k: v for k, v in p.items() if k != 'cau'}
-        if p.get('vd'): q['vd'] = dict(p['vd'])
+        if p.get('vd'):
+            q['vd'] = dict(p['vd'])
+            ch = q['vd'].pop('chen', None)
+            if ch:   # như sách: phương án của câu ví dụ là A của bộ chung, các phương án khác lùi một chữ cái
+                key = 'anh' if p.get('anh') else 'luaChon'
+                doi = {a['k']: chr(ord(a['k']) + 1) for a in p[key]}
+                q[key] = [dict(ch, k='A')] + [dict(a, k=doi[a['k']]) for a in p[key]]
+                q['_doi'] = doi
         if q.get('vd') and not vd_du(q['vd']):          # câu ví dụ chưa đủ ảnh / giọng thì tạm ẩn
             print('  … tạm ẩn câu ví dụ (thiếu ảnh/giọng):', p['ten']); del q['vd']
         if p['loai'] in ('tm', 'vm', 'td', 'at'):
@@ -81,6 +88,9 @@ def dung(bai):
             q['loai'] = 'am'; q['kieu'] = p['loai']
         else:
             q['cau'] = [dict(c) for c in p['cau']]
+            doi = q.pop('_doi', None)
+            if doi:
+                for c in q['cau']: c['dap'] = doi[c['dap']]
             for c in [c for c in q['cau'] + ([q['vd']] if q.get('vd') else []) if 'loi' in c]:
                 for a in c.get('anh', []): pass   # hội thoại: lời nào cũng đã có file giọng Gemini thì phát lần lượt (A|B)
                 # hai giọng theo quy chuẩn 14 §4b: nu1 = Sulafat (bảng tra / cau/), giọng khác ở assets/am/<giọng>/
@@ -110,7 +120,7 @@ def kiem(bai, d):
         if p['loai'] in ('doc-ghep', 'doc-dien', 'doc-tranh'):
             dung_ = [c['dap'] for c in p['cau']]
             if len(set(dung_)) != len(dung_): loi.append('hai câu trùng đáp án ở ' + p['ten'])
-        for a in p.get('anh', []) + [x for c in p['cau'] + ([p['vd']] if p.get('vd') else []) for x in c.get('anh', [])]:
+        for a in p.get('anh', []) + [x for c in p['cau'] + ([p['vd']] if p.get('vd') else []) for x in c.get('anh', [])] + ([p['vd']['chen']] if p.get('vd', {}).get('chen', {}).get('src') else []):
             if not os.path.exists(os.path.join(GOC, a['src'])): loi.append('thiếu ảnh ' + a['src'])
     return loi
 
