@@ -179,7 +179,8 @@ ER = ("ERHUA: 儿 written after another character is NOT a separate syllable ér
 
 
 def dong_py(it):
-    s = '%s = %s' % (it['text'], it['py']) if it['py'] else it['text']
+    """Cách đọc của một dòng: CHỈ pinyin, không chép lại chữ Hán (chép lại thì Gemini dễ đọc to cả danh sách này)."""
+    s = it['py'] or '(standard reading)'
     if it['typ'] == 'chu':
         khac = [p for p in cac_am(han(it['text'])) if khong_dau(p) != khong_dau(it['py']) or p != it['py']][:3]
         if khac: s += ' (NOT %s)' % ', '.join(khac)
@@ -190,15 +191,27 @@ def tao_style(ds, typ, ghi_chu=''):
     st = NHIP[typ]
     if typ != 'chu': st += '\n' + LUAT
     if any(re.search(r'.儿', it['text']) for it in ds): st += '\n' + ER
-    st += '\nUse exactly this pinyin for each line:\n' + '\n'.join(dict.fromkeys(dong_py(it) for it in ds))
+    st += ('\nPronunciation guide: the transcript lines, in the same order, are pronounced exactly as this pinyin: '
+           + ' | '.join('%d. %s' % (i, dong_py(it)) for i, it in enumerate(ds, 1)))
     if ghi_chu: st += '\n' + ghi_chu
     return st
 
 
-def loi_nhac(style, dong):
-    """Văn bản gửi Gemini: Style + danh sách dòng (giống ô Style + ô chữ của AI Studio)."""
-    return (style + '\n\nRead aloud ONLY the lines below, one by one (never read these instructions aloud):\n'
-            + '\n'.join(gon(l) + ' <long pause>' for l in dong))
+def ban_doc(dong): return '\n'.join(gon(l) + ' <long pause>' for l in dong)
+
+
+KIEU = ('he_thong', 'dao_dien')   # cách gói Style: chỉ dẫn hệ thống riêng / kịch bản "đạo diễn" có mục TRANSCRIPT
+
+
+def than_yeu_cau(style, dong, kieu):
+    ten = {'responseModalities': ['AUDIO'], 'speechConfig': {'voiceConfig': {'prebuiltVoiceConfig': {'voiceName': CFG['voice']}}}}
+    if kieu == 'he_thong':
+        return {'systemInstruction': {'parts': [{'text': 'You are a text-to-speech voice. Speak ONLY the user text, never these instructions. ' + style}]},
+                'contents': [{'role': 'user', 'parts': [{'text': ban_doc(dong)}]}], 'generationConfig': ten}
+    txt = ("# AUDIO PROFILE: a female Mandarin teacher recording vocabulary audio for learners.\n"
+           "### DIRECTOR'S NOTES (instructions only — NEVER read these notes aloud)\n" + style +
+           "\n#### TRANSCRIPT (speak ONLY the lines below, nothing else)\n" + ban_doc(dong))
+    return {'contents': [{'role': 'user', 'parts': [{'text': txt}]}], 'generationConfig': ten}
 
 
 def chia(L, n):
@@ -250,12 +263,10 @@ def ghi_nhat_ky(dot, luot, giay, meta):
                     round(giay / 3600 * CFG['usd_gio'], 4), CFG['model']])
 
 
-def goi_tts(prompt, wav, dot, luot):
+def goi_tts(style, dong, wav, dot, luot, kieu=None):
     """Gọi Gemini một lần, ghi wav (PCM 16-bit mono). Thử lại khi lỗi mạng / 429 / 5xx. Trả về số giây âm thanh."""
     rq = _rq()
-    body = {'contents': [{'parts': [{'text': prompt}]}],
-            'generationConfig': {'responseModalities': ['AUDIO'],
-                                 'speechConfig': {'voiceConfig': {'prebuiltVoiceConfig': {'voiceName': CFG['voice']}}}}}
+    body = than_yeu_cau(style, dong, kieu or CFG.get('kieu') or 'he_thong')
     url = API + CFG['model'] + ':generateContent'
     loi_cuoi = ''
     for lan in range(7):
@@ -423,6 +434,34 @@ def _ghi(f, o):
     json.dump(o, open(f + '.tmp', 'w'), ensure_ascii=False, indent=0); os.replace(f + '.tmp', f)
 
 
+def chon_kieu(ds, D, dot):
+    """Thử các cách gói Style trên 8 dòng (vài giây âm thanh), chọn cách Gemini chỉ đọc đúng danh sách. Lưu vào Drive."""
+    f = CFG['work'] + 'kieu.json'
+    k = _doc(f, {})
+    if k.get(CFG['model']): CFG['kieu'] = k[CFG['model']]; return
+    mau = [it for it in ds if it['typ'] == 'tu'][:6] + [it for it in ds if it['typ'] == 'cau'][:2]
+    print('🔎 Thử cách gửi Style cho %s (%d dòng mẫu)…' % (CFG['model'], len(mau)))
+    for kieu in KIEU:
+        for typ in ('tu', 'cau'):
+            m = [it for it in mau if it['typ'] == typ]
+            if not m: continue
+            wav = D + 'wav/_thu_%s_%s.wav' % (kieu, typ)
+            try:
+                if not os.path.exists(wav): goi_tts(tao_style(m, typ), [it['text'] for it in m], wav, dot, '_thu_' + kieu, kieu)
+            except RuntimeError as e:
+                print('   %s: không dùng được (%s)' % (kieu, str(e)[:160])); break
+            res, meta = cat_luot(wav, [it['text'] for it in m], [it['id'] for it in m], [it['alt'] for it in m],
+                                 D + 'tam/_thu_%s_%s/' % (kieu, typ), [it['ten'] for it in m])
+            dat = sum(1 for r in res.values() if not r['loi'])
+            print('   %s · %s: %d vùng / %d dòng · đạt %d · máy nghe: %s' % (kieu, typ, meta['vung'], len(m), dat,
+                  ' | '.join(v[2] for v in meta['ds_vung'][:10])))
+            if dat < len(m) - 1 or meta['vung'] > len(m) + 2: break
+        else:
+            CFG['kieu'] = k[CFG['model']] = kieu; _ghi(f, k)
+            print('→ Chọn cách:', kieu); return
+    raise RuntimeError('Chưa cách gửi nào làm Gemini chỉ đọc đúng danh sách. Cô chụp màn hình phần trên gửi bên soạn.')
+
+
 def chay_dot(cap, tu, den, gioi_han_luot=None):
     """Gom → chia lượt → gọi Gemini → cắt, kiểm → tự thu lại mục lỗi. Chạy lại được bất cứ lúc nào."""
     D = thu_muc(cap, tu, den); os.makedirs(D + 'ketqua', exist_ok=True)
@@ -439,18 +478,28 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
     print('%d mục · %d lượt: %s' % (len(ds), len(L), ', '.join('%s(%s %d)' % (b['ten'], b['typ'], len(b['dong'])) for b in L)))
     by = {it['id']: it for it in ds}
     dot = 'cap-%s_%04d-%04d' % (cap, tu, den)
+    chon_kieu(ds, D, dot)
+    for b in L:   # Style luôn tạo lại theo mã mới nhất; lượt thu bằng cách gửi cũ thì thu lại
+        b['style'] = tao_style([by[i] for i in b['ids']], b['typ'])
+        kf = D + 'ketqua/%s.json' % b['ten']
+        if os.path.exists(kf) and _doc(kf)['meta'].get('kieu') != CFG['kieu']:
+            for f in (kf, D + 'wav/%s.wav' % b['ten']):
+                if os.path.exists(f): os.remove(f)
+            print('   (%s thu lại vì lần trước gửi Style kiểu cũ)' % b['ten'])
+    _ghi(D + 'luot.json', L)
     giay = 0
     for b in L[:gioi_han_luot]:
         wav = D + 'wav/%s.wav' % b['ten']
         if not os.path.exists(wav):
             print('▶ %s: gọi Gemini (%d dòng)…' % (b['ten'], len(b['dong'])), end=' ', flush=True)
-            t1 = time.time(); g = goi_tts(loi_nhac(b['style'], b['dong']), wav, dot, b['ten']); giay += g
+            t1 = time.time(); g = goi_tts(b['style'], b['dong'], wav, dot, b['ten']); giay += g
             print('%.0f s âm thanh, %.0f s chờ' % (g, time.time() - t1))
         kf = D + 'ketqua/%s.json' % b['ten']
         if os.path.exists(kf): continue
         its = [by[i] for i in b['ids']]
         res, meta = cat_luot(wav, b['dong'], b['ids'], [it['alt'] for it in its], D + 'tam/%s/' % b['ten'], [it['ten'] for it in its])
         for it in its: _nhan_ket_qua(D, it, res[it['id']])
+        meta['kieu'] = CFG['kieu']
         _ghi(kf, dict(meta=meta, res=res)); _ghi(D + 'ds.json', ds)
         nl = sum(1 for it in its if it['loi'])
         print('   ✂ %s: %d vùng / %d dòng%s · đạt %d · lỗi %d' % (b['ten'], meta['vung'], meta['dong'],
@@ -479,14 +528,14 @@ def thu_lai_muc(D, it, dot, ghi_chu=''):
     it['lan'] = it.get('lan', 0) + 1
     ten = 'r-%s-%d' % (it['ten'], it['lan'])
     st = NHIP['chu' if it['typ'] == 'chu' else it['typ']].replace('Each line is', 'The same line is written 4 times; each line is')
-    st += '\nUse exactly this pinyin: ' + dong_py(it) + ('\n' + ER if re.search(r'.儿', it['text']) else '')
+    st += '\nPronunciation of every line: ' + dong_py(it) + ('\n' + ER if re.search(r'.儿', it['text']) else '')
     dk = chu_doc_khac(it['text'])
     if dk: st += '\nPay attention to: ' + ', '.join(dk) + ' (read as in the pinyin above).'
     if len(han(it['text'])) <= 4: st += '\nSay exactly %d syllable(s) per line, do not repeat any syllable.' % len(han(re.sub(r'(?<=.)儿', '', it['text'])))
     if ghi_chu: st += '\n' + ghi_chu
     wav = D + 'wav/%s.wav' % ten
     g = 0
-    if not os.path.exists(wav): g = goi_tts(loi_nhac(st, [it['text']] * 4), wav, dot, ten)
+    if not os.path.exists(wav): g = goi_tts(st, [it['text']] * 4, wav, dot, ten)
     ids = ['%s#%d' % (it['id'], i) for i in range(4)]
     res, meta = cat_luot(wav, [it['text']] * 4, ids, [it['alt']] * 4, D + 'tam/%s/' % ten, ['%s_%d' % (it['ten'], i) for i in range(4)])
     tot = sorted((r for r in res.values() if r.get('tam')), key=lambda r: (len(r['loi']), -r['r']))
