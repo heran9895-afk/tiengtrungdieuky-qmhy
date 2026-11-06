@@ -207,7 +207,7 @@ VD = {
  'P_N2': {'giong': ['nu1'], 'loi': [{'ai': '', 'han': '今天天气怎么样？', 'py': 'Jīntiān tiānqì zěnmeyàng?'}],
           'pa': [L('A', '非常热', 'fēicháng rè'), L('B', '很好听', 'hěn hǎotīng'), L('C', '在喝水', 'zài hē shuǐ')], 'dap': 'A', 'vi': 'Hôm nay thời tiết thế nào? — rất nóng'},
  'P_N3': {'giong': ['nu1', 'nam1'], 'loi': [{'ai': '女', 'han': '你好！', 'py': 'Nǐ hǎo!'}, {'ai': '男', 'han': '你好！很高兴认识你。', 'py': 'Nǐ hǎo! Hěn gāoxìng rènshi nǐ.'}],
-          'anh': [T('A', 'b2-bat-tay', 'Hai người bắt tay')], 'dap': 'A', 'vi': 'Nữ: Xin chào! — Nam: Xin chào! Rất vui được gặp bạn.'},
+          'anh': [T('✓', 'b2-bat-tay', 'Hai người bắt tay')], 'dap': '✓', 'vi': 'Nữ: Xin chào! — Nam: Xin chào! Rất vui được gặp bạn.'},
  'P_N4': {'giong': ['nam1', 'nu1'], 'loi': [{'ai': '', 'han': '下午我去超市，我想买一些水果。', 'py': 'Xiàwǔ wǒ qù chāoshì, wǒ xiǎng mǎi yìxiē shuǐguǒ.'}, {'ai': '问', 'han': '说话人下午去哪里？', 'py': 'Shuōhuàrén xiàwǔ qù nǎlǐ?'}],
           'pa': [L('A', '超市', 'chāoshì'), L('B', '医院', 'yīyuàn'), L('C', '学校', 'xuéxiào')], 'dap': 'A', 'vi': 'Buổi chiều tôi đi siêu thị, tôi muốn mua một ít trái cây. — Hỏi: Buổi chiều người nói đi đâu? — siêu thị'},
  'P_D1': {'han': '我很喜欢这本书。', 'py': 'Wǒ hěn xǐhuan zhè běn shū.', 'anh': [T('✓', 'vd-doc-sach', 'Một cô gái đang đọc sách')], 'dap': '✓', 'vi': 'Tôi rất thích cuốn sách này.'},
