@@ -85,3 +85,25 @@
 .sbt-o-anh.dung{box-shadow:0 0 0 3px var(--ok)}
 .sbt-o-anh.sai{box-shadow:0 0 0 3px var(--no);opacity:.85}
 @media(max-width:600px){.sbt-pa-anh{gap:6px}}
+/* 06/11/2026: nút chọn mang tranh thu nhỏ / chữ trong khung — chọn ngay dưới đề, không kéo lên */
+.sbt-pa-anh-4{grid-template-columns:repeat(4,1fr)}
+.sbt-pa-anh-5{grid-template-columns:repeat(5,1fr)}
+.sbt-pa-anh-6{grid-template-columns:repeat(6,1fr)}
+.sbt-pa-cau{grid-template-columns:repeat(3,1fr)}
+.sbt-pa-tu{grid-template-columns:repeat(6,1fr)}
+.sbt-pa-cau .sbt-o{justify-content:flex-start;text-align:left}
+.sbt-pa-cau .sbt-o .hanzi{font-size:16.5px}
+.sbt-tranh{grid-template-columns:repeat(3,1fr)}
+.sbt-tranh-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:600px){
+  .sbt-pa-anh-4,.sbt-pa-anh-5,.sbt-pa-anh-6,.sbt-pa-anh{grid-template-columns:repeat(3,1fr)}
+  .sbt-pa-anh-4{grid-template-columns:repeat(4,1fr)}
+  .sbt-pa-cau{grid-template-columns:repeat(2,1fr)}
+  .sbt-pa-cau .sbt-o{padding:6px 8px}
+  .sbt-pa-cau .sbt-o .hanzi{font-size:15px}
+  .sbt-pa-tu{grid-template-columns:repeat(3,1fr)}
+  .sbt-pa-rieng.sbt-pa-tu .sbt-o{justify-content:center;padding:6px}
+  .sbt-tranh,.sbt-tranh-3,.sbt-tranh-4{grid-template-columns:repeat(3,1fr);gap:6px}
+  .sbt-tranh-4{grid-template-columns:repeat(2,1fr)}
+  .sbt-o-anh span{width:22px;height:22px;font-size:13px;left:4px;top:4px}
+}

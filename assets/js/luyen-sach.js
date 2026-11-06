@@ -66,24 +66,35 @@
       '<div class="sbt-pa sbt-pa-' + x.pa.length + '">' + x.pa.map(function (o, j) {
         return '<button type="button" class="sbt-o" data-j="' + j + '">' + esc(o) + '</button>'; }).join('') + '</div></li>';
   }
-  function veCauTranh(x, k) {
+  // Phương án chung của phần (tranh / khung chữ): nút chọn mang luôn tranh thu nhỏ hoặc chữ trong khung,
+  // để học sinh chọn ngay cạnh đề, không phải kéo lên xem lại tranh / khung (cô góp ý 06/11/2026)
+  function nutChung(x, p) {
+    var anh = p.anh, lc = p.luaChon;
+    function tim(ds, kk) { return (ds || []).filter(function (a) { return a.k === kk; })[0]; }
+    if (anh) return '<div class="sbt-pa sbt-pa-anh sbt-pa-anh-' + x.pa.length + '">' + x.pa.map(function (kk, j) {
+      var a = tim(anh, kk);
+      return '<button type="button" class="sbt-o sbt-o-anh" data-j="' + j + '" aria-label="Tranh ' + esc(kk) + '"><img src="' + esc(TV.ROOT + a.src) + '" alt="' + esc(a.alt || '') + '" loading="lazy" width="720" height="480"><span>' + esc(kk) + '</span></button>'; }).join('') + '</div>';
+    if (lc) return '<div class="sbt-pa sbt-pa-rieng ' + (p.loai === 'doc-dien' ? 'sbt-pa-tu' : 'sbt-pa-cau') + ' sbt-pa-' + x.pa.length + '">' + x.pa.map(function (kk, j) {
+      return '<button type="button" class="sbt-o" data-j="' + j + '"><b>' + esc(kk) + '</b>' + chuPy(tim(lc, kk)) + '</button>'; }).join('') + '</div>';
+    return '<div class="sbt-pa sbt-pa-chu sbt-pa-' + x.pa.length + '">' + x.pa.map(function (o, j) { return '<button type="button" class="sbt-o" data-j="' + j + '">' + esc(o) + '</button>'; }).join('') + '</div>';
+  }
+  function veCauTranh(x, k, p) {
     var c = x.c;
     return '<li class="sbt-cau sbt-cau-tr" data-ma="' + esc(c.ma) + '"><div class="sbt-de"><span class="sbt-so">' + (k + 1) + '</span>' +
-      TV.nutLoa(docHT(c)) + '<span class="sbt-goi">Nghe hội thoại</span></div>' +
-      '<div class="sbt-pa sbt-pa-chu sbt-pa-' + x.pa.length + '">' + x.pa.map(function (o, j) { return '<button type="button" class="sbt-o" data-j="' + j + '">' + esc(o) + '</button>'; }).join('') + '</div>' +
+      TV.nutLoa(docHT(c)) + '<span class="sbt-goi">Nghe hội thoại</span></div>' + nutChung(x, p) +
       '<div class="sbt-loi" hidden>' + c.loi.map(function (v) {
         return '<p><b>' + esc(v.ai) + '：</b><span class="hanzi">' + esc(v.han) + '</span><i>' + esc(v.py) + '</i></p>'; }).join('') +
       (c.vi ? '<p class="sbt-vi">' + esc(c.vi) + '</p>' : '') + '</div></li>';
   }
   // Câu đọc hiểu: pinyin trên chữ Hán như sách (ẩn được), ★câu hỏi, phương án riêng của câu hoặc chữ cái chung của phần
   function chuPy(o, lop) { return '<span class="sbt-chu ' + (lop || '') + '"><span class="sbt-py">' + esc(o.py) + '</span><span class="hanzi">' + esc(o.han) + '</span></span>'; }
-  function veCauDoc(x, k) {
+  function veCauDoc(x, k, p) {
     var c = x.c, rieng = !!c.pa;
     return '<li class="sbt-cau sbt-cau-doc" data-ma="' + esc(c.ma) + '"><div class="sbt-de sbt-de-doc"><span class="sbt-so">' + (k + 1) + '</span><div class="sbt-noi">' +
       chuPy(c, 'sbt-cau-chu') + (c.hoi ? '<div class="sbt-hoi"><b>★</b>' + chuPy(c.hoi) + '</div>' : '') + '</div></div>' +
-      '<div class="sbt-pa ' + (rieng ? 'sbt-pa-rieng' : 'sbt-pa-chu') + ' sbt-pa-' + x.pa.length + '">' + x.pa.map(function (kk, j) {
-        var o = rieng ? c.pa.filter(function (a) { return a.k === kk; })[0] : null;
-        return '<button type="button" class="sbt-o" data-j="' + j + '">' + (o ? '<b>' + esc(kk) + '</b>' + chuPy(o) : esc(kk)) + '</button>'; }).join('') + '</div>' +
+      (rieng ? '<div class="sbt-pa sbt-pa-rieng sbt-pa-' + x.pa.length + '">' + x.pa.map(function (kk, j) {
+        var o = c.pa.filter(function (a) { return a.k === kk; })[0];
+        return '<button type="button" class="sbt-o" data-j="' + j + '"><b>' + esc(kk) + '</b>' + chuPy(o) + '</button>'; }).join('') + '</div>' : nutChung(x, p)) +
       (c.vi ? '<div class="sbt-loi" hidden><p class="sbt-vi">' + esc(c.vi) + '</p></div>' : '') + '</li>';
   }
   // Câu nghe (模拟测练 · 听力): loa phát cụm / câu hỏi / câu + câu hỏi; chọn tranh riêng của câu (c.anh) hoặc phương án chữ (c.pa)
@@ -119,7 +130,7 @@
             return '<figure><img src="' + esc(TV.ROOT + a.src) + '" alt="' + esc(a.alt || ('Tranh ' + a.k)) + '" loading="lazy" width="720" height="480"><figcaption>' + esc(a.k) + '</figcaption></figure>'; }).join('') + '</div>' : '') +
           (p.luaChon ? '<div class="sbt-khung' + (p.loai === 'doc-dien' ? ' sbt-khung-tu' : '') + '">' + p.luaChon.map(function (o) {
             return '<div class="sbt-lc"><b>' + esc(o.k) + '</b>' + chuPy(o) + '</div>'; }).join('') + '</div>' : '') +
-          '<ol class="sbt-ds' + (tranh || doc || nghe ? ' sbt-ds-tr' : '') + '">' + x.cau.map(function (y, k) { return tranh ? veCauTranh(y, k) : doc ? veCauDoc(y, k) : nghe ? veCauNghe(y, k) : veCauAm(y, k, p); }).join('') + '</ol></section>';
+          '<ol class="sbt-ds' + (tranh || doc || nghe ? ' sbt-ds-tr' : '') + '">' + x.cau.map(function (y, k) { return tranh ? veCauTranh(y, k, p) : doc ? veCauDoc(y, k, p) : nghe ? veCauNghe(y, k) : veCauAm(y, k, p); }).join('') + '</ol></section>';
       }).join('') +
       '<div class="sbt-ket card" aria-live="polite"><p class="sbt-ket-dem">Đã làm <b>0</b> / ' + L.tong + ' câu</p></div>';
   }
