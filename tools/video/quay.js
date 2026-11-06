@@ -17,7 +17,7 @@ body::after{filter:blur(10px)!important}
 `;
 (async () => {
   const b = await chromium.launch({ args: ['--autoplay-policy=no-user-gesture-required'] });
-  const ctx = await b.newContext({ viewport: { width: 405, height: 720 }, deviceScaleFactor: 1080 / 405, isMobile: true, hasTouch: true });
+  const ctx = await b.newContext({ viewport: { width: 375, height: 812 }, deviceScaleFactor: 1920 / 812, isMobile: true, hasTouch: true });
   await ctx.addInitScript(() => {
     window.__log = []; window.__busy = false;
     const O = window.Audio;
@@ -51,7 +51,7 @@ body::after{filter:blur(10px)!important}
     try { await cdp.send('Page.screencastFrameAck', { sessionId: f.sessionId }); } catch (e) {}
   });
   const t0 = Date.now();
-  await cdp.send('Page.startScreencast', { format: 'jpeg', quality: 92, maxWidth: 1080, maxHeight: 1920 });
+  await cdp.send('Page.startScreencast', { format: 'jpeg', quality: 92, maxWidth: 888, maxHeight: 1920 });
   // keep frames flowing even when static
   await p.evaluate(() => { const k = document.createElement('div'); k.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;opacity:.01;z-index:99999'; document.body.appendChild(k); let x = 0; setInterval(() => { x ^= 1; k.style.background = x ? '#000' : '#fff'; }, 33); });
 

@@ -15,9 +15,11 @@ for k,a in enumerate(m['log']):
     ins+=['-i',path]; flt.append(f"[{k+1}:a]aresample=48000,aformat=channel_layouts=stereo,adelay={dl}|{dl}[a{k}]")
     print(path, dl)
 n=len(m['log'])
-fc=';'.join(flt)+';'+''.join(f'[a{k}]' for k in range(n))+f"amix=inputs={n}:normalize=0,apad[aout]"
+fc=('[0:v]fps=30,scale=886:1920:flags=lanczos,split[nd][nen];'
+    '[nen]scale=1080:-2,crop=1080:1920,boxblur=40:2[mo];'   # nền: chính video phóng to + làm mờ
+    '[mo][nd]overlay=97:0,format=yuv420p[vout];')+';'.join(flt)+';'+''.join(f'[a{k}]' for k in range(n))+f"amix=inputs={n}:normalize=0,apad[aout]"
 dur=(end-T0)/1000
 cmd=['ffmpeg','-v','error','-y','-f','concat','-safe','0','-i',f'{d}/list.txt']+ins+['-filter_complex',fc,
- '-map','0:v','-map','[aout]','-vf','fps=30,scale=1080:1920:flags=lanczos,format=yuv420p','-c:v','libx264','-preset','veryfast','-crf','18',
+ '-map','[vout]','-map','[aout]','-c:v','libx264','-preset','veryfast','-crf','18',
  '-c:a','aac','-b:a','160k','-t',f'{dur:.2f}','-movflags','+faststart',out]
 subprocess.run(cmd,check=True); print('dur',dur)
