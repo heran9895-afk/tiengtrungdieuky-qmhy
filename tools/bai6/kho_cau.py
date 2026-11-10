@@ -46,7 +46,9 @@ CAU = [
  ['这家超市卖的东西很多。', 'Zhè jiā chāoshì mài de dōngxi hěn duō.', 'Siêu thị này bán rất nhiều đồ.', ''],
  ['明天星期六，我想去超市买东西。', 'Míngtiān xīngqīliù, wǒ xiǎng qù chāoshì mǎi dōngxi.', 'Ngày mai thứ bảy, tôi muốn đi siêu thị mua đồ.', ''],
  ['你去哪儿？我去商店。', 'Nǐ qù nǎr? Wǒ qù shāngdiàn.', 'Bạn đi đâu? Tôi đi cửa hàng.', ''],
- ['我不会骑马，我会骑自行车。', 'Wǒ bú huì qí mǎ, wǒ huì qí zìxíngchē.', 'Tôi không biết cưỡi ngựa, tôi biết đi xe đạp.', ''],
+ ['我不会骑马，我会骑自行车。', 'Wǒ bú huì qí mǎ, wǒ huì qí zìxíngchē.', 'Tôi không biết cưỡi ngựa, tôi biết đi xe đạp.', ''], ['他们开车去饭店吃饭。', 'Tāmen kāichē qù fàndiàn chīfàn.', 'Họ lái xe đến nhà hàng ăn cơm.', ''],
+ ['爸爸开车去上班，哥哥骑自行车去超市。', 'Bàba kāichē qù shàngbān, gēge qí zìxíngchē qù chāoshì.', 'Bố lái xe đi làm, anh trai đạp xe đi siêu thị.', ''],
+ ['你会开车吗？', 'Nǐ huì kāichē ma?', 'Bạn biết lái xe không?', ''],
 ]
 
 # ---------- Hỏi – đáp (ngoài bài khóa) ----------
