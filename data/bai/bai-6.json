@@ -58,7 +58,7 @@
    "Cấp HSK": "1",
    "Thuận bút": "",
    "Cụm từ": "手机号 | shǒujī hào\n电话号 | diànhuà hào\n门号 | mén hào",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/6a32763b19.mp3",
    "_nhom": "tuVung",
    "Câu 1": "你的手机号是多少？",
    "Pinyin câu 1": "Nǐ de shǒujī hào shì duōshao?",
@@ -126,7 +126,7 @@
    "Câu 1": "A：你们去哪儿？\nB：我们去法国。",
    "Pinyin câu 1": "A: Nǐmen qù nǎr?\nB: Wǒmen qù Fǎguó.",
    "Nghĩa câu 1": "A: Các bạn đi đâu?\nB: Chúng tôi đi Pháp.",
-   "Đọc câu 1": "你们去哪儿？我们去法国。",
+   "Đọc câu 1": "assets/am/nam1/f6aacdfa7e.mp3|assets/am/cau/aa6a3314c2.mp3",
    "Câu 2": "他们去哪儿？",
    "Pinyin câu 2": "Tāmen qù nǎr?",
    "Nghĩa câu 2": "Họ đi đâu?",
@@ -147,7 +147,7 @@
    "Câu 1": "A：你想去哪儿？\nB：我想去中国。",
    "Pinyin câu 1": "A: Nǐ xiǎng qù nǎr?\nB: Wǒ xiǎng qù Zhōngguó.",
    "Nghĩa câu 1": "A: Bạn muốn đi đâu?\nB: Tôi muốn đi Trung Quốc.",
-   "Đọc câu 1": "你想去哪儿？我想去中国。",
+   "Đọc câu 1": "assets/am/nam1/d42c4c2890.mp3|assets/am/cau/84118f2db1.mp3",
    "Câu 2": "我哥哥不想休息。",
    "Pinyin câu 2": "Wǒ gēge bù xiǎng xiūxi.",
    "Nghĩa câu 2": "Anh trai tôi không muốn nghỉ ngơi.",
@@ -231,7 +231,7 @@
    "Câu 1": "A：明天你们去哪里？\nB：我们去中国。",
    "Pinyin câu 1": "A: Míngtiān nǐmen qù nǎlǐ?\nB: Wǒmen qù Zhōngguó.",
    "Nghĩa câu 1": "A: Ngày mai các bạn đi đâu?\nB: Chúng tôi đi Trung Quốc.",
-   "Đọc câu 1": "明天你们去哪里？我们去中国。",
+   "Đọc câu 1": "assets/am/nam1/8632543333.mp3|assets/am/cau/e7259293df.mp3",
    "Câu 2": "你想去哪里吃饭？",
    "Pinyin câu 2": "Nǐ xiǎng qù nǎlǐ chī fàn?",
    "Nghĩa câu 2": "Bạn muốn đi đâu ăn cơm?",
@@ -420,7 +420,7 @@
    "Câu 1": "A：你们去哪儿吃饭？\nB：我们去饭店吃饭。",
    "Pinyin câu 1": "A: Nǐmen qù nǎr chī fàn?\nB: Wǒmen qù fàndiàn chī fàn.",
    "Nghĩa câu 1": "A: Các bạn đi đâu ăn cơm?\nB: Chúng tôi đến nhà hàng ăn cơm.",
-   "Đọc câu 1": "你们去哪儿吃饭？我们去饭店吃饭。",
+   "Đọc câu 1": "assets/am/nam1/1bdb4a8401.mp3|assets/am/cau/76dcf9fa5e.mp3",
    "Câu 2": "我不想吃面包，想吃饺子。",
    "Pinyin câu 2": "Wǒ bù xiǎng chī miànbāo, xiǎng chī jiǎozi.",
    "Nghĩa câu 2": "Tôi không muốn ăn bánh mì, muốn ăn sủi cảo.",
@@ -588,7 +588,7 @@
    "Câu 1": "A：你喝什么？\nB：我喝奶茶。",
    "Pinyin câu 1": "A: Nǐ hē shénme?\nB: Wǒ hē nǎichá.",
    "Nghĩa câu 1": "A: Bạn uống gì?\nB: Tôi uống trà sữa.",
-   "Đọc câu 1": "你喝什么？我喝奶茶。",
+   "Đọc câu 1": "assets/am/nam1/fc1bdabe42.mp3|assets/am/cau/a470b6e9bd.mp3",
    "Câu 2": "这家商店的奶茶很好喝。",
    "Pinyin câu 2": "Zhè jiā shāngdiàn de nǎichá hěn hǎohē.",
    "Nghĩa câu 2": "Trà sữa của cửa hàng này rất ngon.",
@@ -772,7 +772,7 @@
    "Cấp HSK": "1",
    "Thuận bút": "",
    "Cụm từ": "一辆车 | yí liàng chē\n坐车 | zuò chē\n新车 | xīn chē",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/a237edce26.mp3",
    "_nhom": "moRong",
    "Câu 1": "你的车很好看。",
    "Pinyin câu 1": "Nǐ de chē hěn hǎokàn.",
@@ -3135,7 +3135,8 @@
    "hoi": [
     "你的手机号是多少？",
     "Nǐ de shǒujī hào shì duōshao?",
-    "Số điện thoại di động của bạn là bao nhiêu?"
+    "Số điện thoại di động của bạn là bao nhiêu?",
+    "assets/am/nam1/f22ef8b1f2.mp3"
    ],
    "dap": [
     "我的手机号是九八七六五四三二。",
@@ -3165,7 +3166,8 @@
    "hoi": [
     "你想给谁打电话？",
     "Nǐ xiǎng gěi shéi dǎ diànhuà?",
-    "Bạn muốn gọi điện cho ai?"
+    "Bạn muốn gọi điện cho ai?",
+    "assets/am/nam1/c25bb88dc8.mp3"
    ],
    "dap": [
     "我想给妈妈打电话。",
@@ -3195,7 +3197,8 @@
    "hoi": [
     "明天你去哪儿？",
     "Míngtiān nǐ qù nǎr?",
-    "Ngày mai bạn đi đâu?"
+    "Ngày mai bạn đi đâu?",
+    "assets/am/nam1/22684721e5.mp3"
    ],
    "dap": [
     "我去超市买东西。",
@@ -3225,7 +3228,8 @@
    "hoi": [
     "你想去哪儿吃晚饭？",
     "Nǐ xiǎng qù nǎr chī wǎnfàn?",
-    "Bạn muốn đi đâu ăn tối?"
+    "Bạn muốn đi đâu ăn tối?",
+    "assets/am/nam1/67ec3d3c9a.mp3"
    ],
    "dap": [
     "我想去饭店吃。",
@@ -3255,7 +3259,8 @@
    "hoi": [
     "你去超市买什么？",
     "Nǐ qù chāoshì mǎi shénme?",
-    "Bạn đi siêu thị mua gì?"
+    "Bạn đi siêu thị mua gì?",
+    "assets/am/nam1/cff328688f.mp3"
    ],
    "dap": [
     "我想买些牛奶和面包。",
@@ -3285,7 +3290,8 @@
    "hoi": [
     "你喝牛奶吗？",
     "Nǐ hē niúnǎi ma?",
-    "Bạn có uống sữa không?"
+    "Bạn có uống sữa không?",
+    "assets/am/nam1/671161c324.mp3"
    ],
    "dap": [
     "我不喝牛奶，我喝茶。",
@@ -3315,7 +3321,8 @@
    "hoi": [
     "你早饭吃什么？",
     "Nǐ zǎofàn chī shénme?",
-    "Bữa sáng bạn ăn gì?"
+    "Bữa sáng bạn ăn gì?",
+    "assets/am/nam1/17ac7ce267.mp3"
    ],
    "dap": [
     "我早饭吃包子，喝牛奶。",
@@ -3345,7 +3352,8 @@
    "hoi": [
     "那边的包子好吃吗？",
     "Nàbiān de bāozi hǎochī ma?",
-    "Bánh bao ở bên kia có ngon không?"
+    "Bánh bao ở bên kia có ngon không?",
+    "assets/am/nam1/a6180bbcc5.mp3"
    ],
    "dap": [
     "非常好吃。",
@@ -3375,7 +3383,8 @@
    "hoi": [
     "你怎么去超市？",
     "Nǐ zěnme qù chāoshì?",
-    "Bạn đến siêu thị bằng cách nào?"
+    "Bạn đến siêu thị bằng cách nào?",
+    "assets/am/nam1/4228816b6a.mp3"
    ],
    "dap": [
     "我坐公共汽车去。",
@@ -3405,7 +3414,8 @@
    "hoi": [
     "你们怎么去饭店？",
     "Nǐmen zěnme qù fàndiàn?",
-    "Các bạn đến nhà hàng bằng cách nào?"
+    "Các bạn đến nhà hàng bằng cách nào?",
+    "assets/am/nam1/db9c1fa344.mp3"
    ],
    "dap": [
     "我们坐出租车去。",
@@ -3435,7 +3445,8 @@
    "hoi": [
     "你会骑自行车吗？",
     "Nǐ huì qí zìxíngchē ma?",
-    "Bạn biết đi xe đạp không?"
+    "Bạn biết đi xe đạp không?",
+    "assets/am/nam1/06248754d4.mp3"
    ],
    "dap": [
     "会，我哥哥有一辆自行车。",
@@ -3465,7 +3476,8 @@
    "hoi": [
     "你的新手机怎么样？",
     "Nǐ de xīn shǒujī zěnmeyàng?",
-    "Điện thoại mới của bạn thế nào?"
+    "Điện thoại mới của bạn thế nào?",
+    "assets/am/nam1/8d4827d8c7.mp3"
    ],
    "dap": [
     "非常好看，我很喜欢。",
@@ -3495,7 +3507,8 @@
    "hoi": [
     "李文问白家月什么？",
     "Lǐ Wén wèn Bái Jiāyuè shénme?",
-    "Lý Văn hỏi Bạch Gia Nguyệt điều gì?"
+    "Lý Văn hỏi Bạch Gia Nguyệt điều gì?",
+    "assets/am/nam1/78ce1c7d48.mp3"
    ],
    "dap": [
     "他问白家月的手机号是多少。",
@@ -3526,7 +3539,8 @@
    "hoi": [
     "白家月明天去哪儿？",
     "Bái Jiāyuè míngtiān qù nǎr?",
-    "Ngày mai Bạch Gia Nguyệt đi đâu?"
+    "Ngày mai Bạch Gia Nguyệt đi đâu?",
+    "assets/am/nam1/77cc8b91c3.mp3"
    ],
    "dap": [
     "她想去超市买东西。",
@@ -3557,7 +3571,8 @@
    "hoi": [
     "白家月想买什么？",
     "Bái Jiāyuè xiǎng mǎi shénme?",
-    "Bạch Gia Nguyệt muốn mua gì?"
+    "Bạch Gia Nguyệt muốn mua gì?",
+    "assets/am/nam1/8fba726f6e.mp3"
    ],
    "dap": [
     "她想买些牛奶。",
@@ -3588,7 +3603,8 @@
    "hoi": [
     "他们星期天去哪儿吃晚饭？",
     "Tāmen xīngqītiān qù nǎr chī wǎnfàn?",
-    "Chủ nhật họ đi đâu ăn tối?"
+    "Chủ nhật họ đi đâu ăn tối?",
+    "assets/am/nam1/62b6c45d64.mp3"
    ],
    "dap": [
     "他们去西安饭店吃晚饭。",
@@ -3619,7 +3635,8 @@
    "hoi": [
     "西安饭店的包子好吃吗？",
     "Xī'ān Fàndiàn de bāozi hǎochī ma?",
-    "Bánh bao của nhà hàng Tây An có ngon không?"
+    "Bánh bao của nhà hàng Tây An có ngon không?",
+    "assets/am/nam1/3f1a016761.mp3"
    ],
    "dap": [
     "非常好吃。",
@@ -3650,7 +3667,8 @@
    "hoi": [
     "刘小明想吃什么？",
     "Liú Xiǎomíng xiǎng chī shénme?",
-    "Lưu Tiểu Minh muốn ăn gì?"
+    "Lưu Tiểu Minh muốn ăn gì?",
+    "assets/am/nam1/d4e4529acb.mp3"
    ],
    "dap": [
     "他想吃米饭，不想吃包子。",
@@ -3681,7 +3699,8 @@
    "hoi": [
     "他们怎么去西安饭店？",
     "Tāmen zěnme qù Xī'ān Fàndiàn?",
-    "Họ đến nhà hàng Tây An bằng cách nào?"
+    "Họ đến nhà hàng Tây An bằng cách nào?",
+    "assets/am/nam1/d029c8e381.mp3"
    ],
    "dap": [
     "他们坐出租车去。",
@@ -4266,7 +4285,8 @@
     {
      "han": "请问，你的手机号是多少？",
      "py": "Qǐngwèn, nǐ de shǒujī hào shì duōshao?",
-     "viet": "Xin hỏi, số điện thoại của bạn là bao nhiêu?"
+     "viet": "Xin hỏi, số điện thoại của bạn là bao nhiêu?",
+     "doc": "assets/am/nam1/9416817119.mp3"
     },
     {
      "han": "我的手机号是九八七六五四三二。",
@@ -4276,7 +4296,8 @@
     {
      "han": "好的，我明天给你打电话。",
      "py": "Hǎo de, wǒ míngtiān gěi nǐ dǎ diànhuà.",
-     "viet": "Được, ngày mai mình sẽ gọi điện cho bạn."
+     "viet": "Được, ngày mai mình sẽ gọi điện cho bạn.",
+     "doc": "assets/am/nam1/671ebdae82.mp3"
     }
    ],
    "nhieu": {
@@ -4317,7 +4338,8 @@
     {
      "han": "明天你去哪儿？",
      "py": "Míngtiān nǐ qù nǎr?",
-     "viet": "Ngày mai bạn đi đâu?"
+     "viet": "Ngày mai bạn đi đâu?",
+     "doc": "assets/am/nam1/22684721e5.mp3"
     },
     {
      "han": "我想去超市买东西。你呢？",
@@ -4327,7 +4349,8 @@
     {
      "han": "我也去超市，我们一起坐地铁去。",
      "py": "Wǒ yě qù chāoshì, wǒmen yìqǐ zuò dìtiě qù.",
-     "viet": "Mình cũng đi siêu thị, chúng ta cùng đi tàu điện ngầm."
+     "viet": "Mình cũng đi siêu thị, chúng ta cùng đi tàu điện ngầm.",
+     "doc": "assets/am/nam1/c6032f05e2.mp3"
     }
    ],
    "nhieu": {
@@ -4368,7 +4391,8 @@
     {
      "han": "我们怎么去饭店？",
      "py": "Wǒmen zěnme qù fàndiàn?",
-     "viet": "Chúng ta đến nhà hàng bằng cách nào?"
+     "viet": "Chúng ta đến nhà hàng bằng cách nào?",
+     "doc": "assets/am/nam1/ed23e6dc48.mp3"
     },
     {
      "han": "我们坐出租车去。",
@@ -4378,7 +4402,8 @@
     {
      "han": "好的，我打车。",
      "py": "Hǎo de, wǒ dǎ chē.",
-     "viet": "Được, mình gọi xe."
+     "viet": "Được, mình gọi xe.",
+     "doc": "assets/am/nam1/07090c357b.mp3"
     }
    ],
    "nhieu": {
@@ -4419,17 +4444,20 @@
     {
      "han": "家月，你的手机号是多少？",
      "py": "Jiāyuè, nǐ de shǒujī hào shì duōshao?",
-     "viet": "Gia Nguyệt, số điện thoại di động của bạn là bao nhiêu?"
+     "viet": "Gia Nguyệt, số điện thoại di động của bạn là bao nhiêu?",
+     "doc": "assets/am/nam1/3beb14263e.mp3"
     },
     {
      "han": "我的手机号是九八七六五四三二。",
      "py": "Wǒ de shǒujī hào shì jiǔ bā qī liù wǔ sì sān èr.",
-     "viet": "Số điện thoại di động của mình là 98765432."
+     "viet": "Số điện thoại di động của mình là 98765432.",
+     "doc": "assets/am/nu2/3d50846b9b.mp3"
     },
     {
      "han": "好的。",
      "py": "Hǎo de.",
-     "viet": "Được rồi."
+     "viet": "Được rồi.",
+     "doc": "assets/am/nam1/dd45074525.mp3"
     }
    ],
    "nhieu": {
@@ -4457,22 +4485,26 @@
     {
      "han": "家月，明天你去哪儿？",
      "py": "Jiāyuè, míngtiān nǐ qù nǎr?",
-     "viet": "Gia Nguyệt, ngày mai bạn đi đâu?"
+     "viet": "Gia Nguyệt, ngày mai bạn đi đâu?",
+     "doc": "assets/am/nam1/668dee5816.mp3"
     },
     {
      "han": "我想去超市买东西。",
      "py": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
-     "viet": "Mình muốn đi siêu thị mua đồ."
+     "viet": "Mình muốn đi siêu thị mua đồ.",
+     "doc": "assets/am/nu2/70167aebae.mp3"
     },
     {
      "han": "你去超市买什么？",
      "py": "Nǐ qù chāoshì mǎi shénme?",
-     "viet": "Bạn đi siêu thị mua gì?"
+     "viet": "Bạn đi siêu thị mua gì?",
+     "doc": "assets/am/nam1/cff328688f.mp3"
     },
     {
      "han": "我想买些牛奶。",
      "py": "Wǒ xiǎng mǎi xiē niúnǎi.",
-     "viet": "Mình muốn mua một ít sữa."
+     "viet": "Mình muốn mua một ít sữa.",
+     "doc": "assets/am/nu2/b9b007d451.mp3"
     }
    ],
    "nhieu": {
@@ -4514,7 +4546,8 @@
     {
      "han": "星期天我们去哪儿吃晚饭？",
      "py": "Xīngqītiān wǒmen qù nǎr chī wǎnfàn?",
-     "viet": "Chủ nhật chúng ta đi đâu ăn tối?"
+     "viet": "Chủ nhật chúng ta đi đâu ăn tối?",
+     "doc": "assets/am/nam1/46b7fa7f97.mp3"
     },
     {
      "han": "我还想去西安饭店。",
@@ -4524,7 +4557,8 @@
     {
      "han": "好的。我们怎么去？",
      "py": "Hǎo de. Wǒmen zěnme qù?",
-     "viet": "Được rồi. Chúng ta đi bằng cách nào?"
+     "viet": "Được rồi. Chúng ta đi bằng cách nào?",
+     "doc": "assets/am/nam1/7bc587b786.mp3"
     },
     {
      "han": "坐出租车去。",
