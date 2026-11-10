@@ -10,7 +10,9 @@
     { ma: 'bai-2', ten: 'Bài 2', diem: 'bai2' },
     { ma: 'bai-3', ten: 'Bài 3', diem: 'bai3' },
     { ma: 'bai-4', ten: 'Bài 4', diem: 'bai4' },
-    { ma: 'bai-5', ten: 'Bài 5', diem: 'bai5' }
+    { ma: 'bai-5', ten: 'Bài 5', diem: 'bai5' },
+    { ma: 'bai-6', ten: 'Bài 6', diem: 'bai6' },
+    { ma: 'bai-7', ten: 'Bài 7', diem: 'bai7' }
   ];
   var CHUNG = { phamVi: 'h3-hsk1', tongHop: true, maDiem: '', tenDiem: 'HSK 3.0 · ', tongHopDiem: 'hsk1-tong-hop-bai0', bxh: 'bang-xep-hang.html' };   // mã điểm HSK 3.0 không có tiền tố, như Bài tập 3.0
   function cauHinh(thuMuc) {

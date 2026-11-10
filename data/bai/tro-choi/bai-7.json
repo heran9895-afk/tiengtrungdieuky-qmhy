@@ -1,0 +1,717 @@
+{
+ "chem": {
+  "P": {
+   "现在": {
+    "py": "xiànzài",
+    "why": "现在 (xiànzài): bây giờ, hiện tại. Ví dụ: 你现在想去哪儿？ Bây giờ bạn muốn đi đâu?"
+   },
+   "半": {
+    "py": "bàn",
+    "why": "半 (bàn): nửa, rưỡi. Ví dụ: 我的朋友一半是越南人，一半是中国人。 Một nửa bạn của tôi là người Việt Nam, một nửa là người Trung Quốc."
+   },
+   "早上": {
+    "py": "zǎoshang",
+    "why": "早上 (zǎoshang): buổi sáng (sáng sớm). Ví dụ: 现在早上八点四十。 Bây giờ là 8 giờ 40 sáng."
+   },
+   "上午": {
+    "py": "shàngwǔ",
+    "why": "上午 (shàngwǔ): buổi sáng (trước trưa). Ví dụ: 昨天上午我学习几个小时汉语。 Sáng hôm qua tôi học tiếng Trung mấy tiếng."
+   },
+   "下午": {
+    "py": "xiàwǔ",
+    "why": "下午 (xiàwǔ): buổi chiều. Ví dụ: 下午我们去电影院看电影吧。 Chiều nay chúng ta đi rạp xem phim nhé."
+   },
+   "晚上": {
+    "py": "wǎnshang",
+    "why": "晚上 (wǎnshang): buổi tối. Ví dụ: 星期天晚上我们去饭店吃饭。 Tối chủ nhật chúng tôi đến nhà hàng ăn cơm."
+   },
+   "点": {
+    "py": "diǎn",
+    "why": "点 (diǎn): giờ (chỉ thời điểm). Ví dụ: 现在几点？ Bây giờ là mấy giờ?"
+   },
+   "分": {
+    "py": "fēn",
+    "why": "分 (fēn): phút (chỉ thời điểm). Ví dụ: 我上午十点十分有课。 Sáng nay 10 giờ 10 phút tôi có tiết."
+   },
+   "分钟": {
+    "py": "fēnzhōng",
+    "why": "分钟 (fēnzhōng): phút (chỉ khoảng thời gian). Ví dụ: 我们休息十五分钟。 Chúng tôi nghỉ mười lăm phút."
+   },
+   "后": {
+    "py": "hòu",
+    "why": "后 (hòu): sau. Ví dụ: 买东西后我们去朋友家。 Mua đồ xong chúng tôi đến nhà bạn."
+   },
+   "课": {
+    "py": "kè",
+    "why": "课 (kè): tiết học, môn học. Ví dụ: 王老师的汉语课非常好。 Tiết tiếng Trung của cô Vương rất hay."
+   },
+   "上课": {
+    "py": "shàng∥kè",
+    "why": "上课 (shàng∥kè): lên lớp, vào học. Ví dụ: 今天晚上我们上汉语课。 Tối nay chúng tôi học tiếng Trung."
+   },
+   "下课": {
+    "py": "xià∥kè",
+    "why": "下课 (xià∥kè): tan học. Ví dụ: 我们几点上课？几点下课？ Mấy giờ chúng ta vào học? Mấy giờ tan học?"
+   },
+   "见": {
+    "py": "jiàn",
+    "why": "见 (jiàn): gặp. Ví dụ: 星期六我想去见老同学。 Thứ bảy tôi muốn đi gặp bạn học cũ."
+   },
+   "吧": {
+    "py": "ba",
+    "why": "吧 (ba): nhé, đi (đề nghị); phỏng đoán. Ví dụ: 你去超市买些牛奶吧。 Bạn đi siêu thị mua ít sữa đi."
+   },
+   "中午": {
+    "py": "zhōngwǔ",
+    "why": "中午 (zhōngwǔ): buổi trưa. Ví dụ: 我中午十二点吃午饭。 Tôi ăn trưa lúc 12 giờ."
+   },
+   "小时": {
+    "py": "xiǎoshí",
+    "why": "小时 (xiǎoshí): giờ, tiếng đồng hồ (chỉ khoảng thời gian). Ví dụ: 哥哥工作七个小时五十分钟了。 Anh trai đã làm việc bảy tiếng năm mươi phút rồi."
+   },
+   "刻": {
+    "py": "kè",
+    "why": "刻 (kè): khắc (= 15 phút). Ví dụ: 现在是七点一刻。 Bây giờ là 7 giờ 15."
+   },
+   "差": {
+    "py": "chà",
+    "why": "差 (chà): kém, thiếu. Ví dụ: 现在差五分七点。 Bây giờ là 7 giờ kém 5."
+   },
+   "前": {
+    "py": "qián",
+    "why": "前 (qián): trước. Ví dụ: 超市前是饭店。 Phía trước siêu thị là nhà hàng."
+   },
+   "杯": {
+    "py": "bēi",
+    "why": "杯 (bēi): cốc, ly. Ví dụ: 我想喝一杯茶。 Tôi muốn uống một cốc trà."
+   },
+   "节": {
+    "py": "jié",
+    "why": "节 (jié): tiết (học). Ví dụ: 他们今天上午有两节汉语课，下午还有三门课。 Sáng nay họ có hai tiết tiếng Trung, chiều còn có ba môn học."
+   },
+   "时间": {
+    "py": "shíjiān",
+    "why": "时间 (shíjiān): thời gian. Ví dụ: 你明天下午有时间吗？ Chiều mai bạn có thời gian không?"
+   },
+   "看": {
+    "py": "kàn",
+    "why": "看 (kàn): nhìn, xem, đọc; thăm. Ví dụ: 明天早上我去看一个朋友。 Sáng mai tôi đi thăm một người bạn."
+   },
+   "电影": {
+    "py": "diànyǐng",
+    "why": "电影 (diànyǐng): phim, điện ảnh. Ví dụ: 这部电影非常好看。 Bộ phim này rất hay."
+   },
+   "电影院": {
+    "py": "diànyǐngyuàn",
+    "why": "电影院 (diànyǐngyuàn): rạp chiếu phim. Ví dụ: 下午我们去电影院看电影吧。 Chiều nay chúng ta đi rạp xem phim nhé."
+   },
+   "医院": {
+    "py": "yīyuàn",
+    "why": "医院 (yīyuàn): bệnh viện. Ví dụ: 爸爸八点去医院上班。 Bố 8 giờ đến bệnh viện làm việc."
+   },
+   "事": {
+    "py": "shì",
+    "why": "事 (shì): việc, chuyện. Ví dụ: 我不想去，下午还有事。 Tôi không muốn đi, chiều còn có việc."
+   },
+   "呢": {
+    "py": "ne",
+    "why": "呢 (ne): trợ từ cuối câu: khẳng định sự thật. Ví dụ: 我明天下午两点还上课呢。 Hai giờ chiều mai tôi còn có tiết đấy."
+   },
+   "上班": {
+    "py": "shàng∥bān",
+    "why": "上班 (shàng∥bān): đi làm. Ví dụ: 你爸爸几点上班？ Bố bạn mấy giờ đi làm?"
+   },
+   "部": {
+    "py": "bù",
+    "why": "部 (bù): bộ (phim, sách). Ví dụ: 我想看一部中国电影。 Tôi muốn xem một bộ phim Trung Quốc."
+   },
+   "医生": {
+    "py": "yīshēng",
+    "why": "医生 (yīshēng): bác sĩ. Ví dụ: 她是一名医生。 Cô ấy là một bác sĩ."
+   },
+   "件": {
+    "py": "jiàn",
+    "why": "件 (jiàn): việc, chuyện (lượng từ). Ví dụ: 这件事不是他做的。 Việc này không phải do anh ấy làm."
+   },
+   "书": {
+    "py": "shū",
+    "why": "书 (shū): sách. Ví dụ: 我喜欢看书。 Tôi thích đọc sách."
+   },
+   "看病": {
+    "py": "kàn∥bìng",
+    "why": "看病 (kàn∥bìng): khám bệnh, đi khám. Ví dụ: 他们在医院看病。 Họ đang khám bệnh ở bệnh viện."
+   },
+   "在": {
+    "py": "zài",
+    "why": "在 (zài): ở; (giới từ) làm … ở …. Ví dụ: 昨天晚上他们在家。 Tối qua họ ở nhà."
+   },
+   "里": {
+    "py": "lǐ",
+    "why": "里 (lǐ): trong, bên trong. Ví dụ: 我在超市里买东西呢。 Tôi đang mua đồ trong siêu thị đây."
+   },
+   "家": {
+    "py": "jiā",
+    "why": "家 (jiā): nhà. Ví dụ: 他们在家学中文。 Họ học tiếng Trung ở nhà."
+   },
+   "店": {
+    "py": "diàn",
+    "why": "店 (diàn): cửa hàng, tiệm. Ví dụ: 这家店的包子非常好吃。 Bánh bao của tiệm này vô cùng ngon."
+   },
+   "菜": {
+    "py": "cài",
+    "why": "菜 (cài): rau; món ăn. Ví dụ: 妈妈去店里买些菜。 Mẹ vào tiệm mua ít rau."
+   },
+   "里面": {
+    "py": "lǐmiàn",
+    "why": "里面 (lǐmiàn): bên trong. Ví dụ: 饭店里面有很多人。 Bên trong nhà hàng có rất nhiều người."
+   },
+   "外面": {
+    "py": "wài·miàn",
+    "why": "外面 (wài·miàn): bên ngoài. Ví dụ: 我在饭店外面。 Tôi ở bên ngoài nhà hàng."
+   },
+   "学校": {
+    "py": "xuéxiào",
+    "why": "学校 (xuéxiào): trường học. Ví dụ: 我们几点去学校？ Mấy giờ chúng ta đến trường?"
+   },
+   "公交车": {
+    "py": "gōngjiāochē",
+    "why": "公交车 (gōngjiāochē): xe buýt. Ví dụ: 我们坐公交车去学校。 Chúng tôi đi xe buýt đến trường."
+   },
+   "都": {
+    "py": "dōu",
+    "why": "都 (dōu): đều. Ví dụ: 你们都坐公交车去上课吧？ Các bạn đều đi xe buýt đến lớp phải không?"
+   },
+   "学习": {
+    "py": "xuéxí",
+    "why": "学习 (xuéxí): học tập, học. Ví dụ: 我想学习汉语。 Tôi muốn học tiếng Trung."
+   }
+  },
+  "CONF": {
+   "现在": [
+    "小时",
+    "在",
+    "点",
+    "家"
+   ],
+   "半": [
+    "分",
+    "店",
+    "公交车",
+    "件"
+   ],
+   "早上": [
+    "晚上",
+    "中午",
+    "下午",
+    "上班"
+   ],
+   "上午": [
+    "下午",
+    "中午",
+    "晚上",
+    "上课"
+   ],
+   "下午": [
+    "中午",
+    "上午",
+    "早上",
+    "晚上"
+   ],
+   "晚上": [
+    "早上",
+    "上午",
+    "中午",
+    "下午"
+   ],
+   "点": [
+    "杯",
+    "分钟",
+    "现在",
+    "节"
+   ],
+   "分": [
+    "部",
+    "杯",
+    "点",
+    "节"
+   ],
+   "分钟": [
+    "点",
+    "节",
+    "杯",
+    "件"
+   ],
+   "后": [
+    "医生",
+    "事",
+    "现在",
+    "电影院"
+   ],
+   "课": [
+    "上课",
+    "下课",
+    "学校",
+    "节"
+   ],
+   "上课": [
+    "下课",
+    "课",
+    "上班",
+    "上午"
+   ],
+   "下课": [
+    "上课",
+    "课",
+    "学习",
+    "下午"
+   ],
+   "见": [
+    "上课",
+    "看",
+    "上班",
+    "差"
+   ],
+   "吧": [
+    "上班",
+    "看病",
+    "呢",
+    "医生"
+   ],
+   "中午": [
+    "下午",
+    "上午",
+    "晚上",
+    "早上"
+   ],
+   "小时": [
+    "时间",
+    "现在",
+    "家",
+    "里"
+   ],
+   "刻": [
+    "点",
+    "部",
+    "件",
+    "节"
+   ],
+   "差": [
+    "上课",
+    "看",
+    "看病",
+    "下课"
+   ],
+   "前": [
+    "下午",
+    "里面",
+    "电影院",
+    "上午"
+   ],
+   "杯": [
+    "件",
+    "刻",
+    "部",
+    "节"
+   ],
+   "节": [
+    "课",
+    "点",
+    "部",
+    "刻"
+   ],
+   "时间": [
+    "小时",
+    "电影",
+    "家",
+    "公交车"
+   ],
+   "看": [
+    "看病",
+    "下课",
+    "上课",
+    "差"
+   ],
+   "电影": [
+    "电影院",
+    "公交车",
+    "后",
+    "早上"
+   ],
+   "电影院": [
+    "电影",
+    "医院",
+    "医生",
+    "里面"
+   ],
+   "医院": [
+    "医生",
+    "电影院",
+    "看病",
+    "下午"
+   ],
+   "事": [
+    "早上",
+    "医生",
+    "时间",
+    "小时"
+   ],
+   "呢": [
+    "吧",
+    "看",
+    "上班",
+    "学习"
+   ],
+   "上班": [
+    "上课",
+    "看病",
+    "在",
+    "晚上"
+   ],
+   "部": [
+    "杯",
+    "分钟",
+    "点",
+    "分"
+   ],
+   "医生": [
+    "医院",
+    "公交车",
+    "课",
+    "中午"
+   ],
+   "件": [
+    "刻",
+    "节",
+    "分钟",
+    "部"
+   ],
+   "书": [
+    "医院",
+    "公交车",
+    "店",
+    "早上"
+   ],
+   "看病": [
+    "看",
+    "上班",
+    "医院",
+    "见"
+   ],
+   "在": [
+    "上班",
+    "现在",
+    "学习",
+    "差"
+   ],
+   "里": [
+    "外面",
+    "医院",
+    "书",
+    "事"
+   ],
+   "家": [
+    "小时",
+    "里",
+    "事",
+    "晚上"
+   ],
+   "店": [
+    "小时",
+    "家",
+    "前",
+    "上午"
+   ],
+   "菜": [
+    "事",
+    "早上",
+    "医院",
+    "课"
+   ],
+   "里面": [
+    "外面",
+    "电影院",
+    "后",
+    "医院"
+   ],
+   "外面": [
+    "里面",
+    "里",
+    "菜",
+    "中午"
+   ],
+   "学校": [
+    "学习",
+    "课",
+    "上课",
+    "公交车"
+   ],
+   "公交车": [
+    "里",
+    "晚上",
+    "医院",
+    "下午"
+   ],
+   "都": [
+    "早上",
+    "看病",
+    "看",
+    "呢"
+   ],
+   "学习": [
+    "学校",
+    "上课",
+    "下课",
+    "课"
+   ]
+  },
+  "MEAN": {
+   "现在": {
+    "vi": "bây giờ, hiện tại",
+    "note": ""
+   },
+   "半": {
+    "vi": "nửa, rưỡi",
+    "note": ""
+   },
+   "早上": {
+    "vi": "buổi sáng",
+    "note": "sáng sớm"
+   },
+   "上午": {
+    "vi": "buổi sáng",
+    "note": "trước trưa"
+   },
+   "下午": {
+    "vi": "buổi chiều",
+    "note": ""
+   },
+   "晚上": {
+    "vi": "buổi tối",
+    "note": ""
+   },
+   "点": {
+    "vi": "giờ",
+    "note": "chỉ thời điểm"
+   },
+   "分": {
+    "vi": "phút",
+    "note": "chỉ thời điểm"
+   },
+   "分钟": {
+    "vi": "phút",
+    "note": "chỉ khoảng thời gian"
+   },
+   "后": {
+    "vi": "sau",
+    "note": ""
+   },
+   "课": {
+    "vi": "tiết học, môn học",
+    "note": ""
+   },
+   "上课": {
+    "vi": "lên lớp, vào học",
+    "note": ""
+   },
+   "下课": {
+    "vi": "tan học",
+    "note": ""
+   },
+   "见": {
+    "vi": "gặp",
+    "note": ""
+   },
+   "吧": {
+    "vi": "nhé, đi (đề nghị); phỏng đoán",
+    "note": ""
+   },
+   "中午": {
+    "vi": "buổi trưa",
+    "note": ""
+   },
+   "小时": {
+    "vi": "giờ, tiếng đồng hồ",
+    "note": "chỉ khoảng thời gian"
+   },
+   "刻": {
+    "vi": "khắc",
+    "note": "= 15 phút"
+   },
+   "差": {
+    "vi": "kém, thiếu",
+    "note": ""
+   },
+   "前": {
+    "vi": "trước",
+    "note": ""
+   },
+   "杯": {
+    "vi": "cốc, ly",
+    "note": ""
+   },
+   "节": {
+    "vi": "tiết",
+    "note": "học"
+   },
+   "时间": {
+    "vi": "thời gian",
+    "note": ""
+   },
+   "看": {
+    "vi": "nhìn, xem, đọc; thăm",
+    "note": ""
+   },
+   "电影": {
+    "vi": "phim, điện ảnh",
+    "note": ""
+   },
+   "电影院": {
+    "vi": "rạp chiếu phim",
+    "note": ""
+   },
+   "医院": {
+    "vi": "bệnh viện",
+    "note": ""
+   },
+   "事": {
+    "vi": "việc, chuyện",
+    "note": ""
+   },
+   "呢": {
+    "vi": "trợ từ cuối câu: khẳng định sự thật",
+    "note": ""
+   },
+   "上班": {
+    "vi": "đi làm",
+    "note": ""
+   },
+   "部": {
+    "vi": "bộ",
+    "note": "phim, sách"
+   },
+   "医生": {
+    "vi": "bác sĩ",
+    "note": ""
+   },
+   "件": {
+    "vi": "việc, chuyện",
+    "note": "lượng từ"
+   },
+   "书": {
+    "vi": "sách",
+    "note": ""
+   },
+   "看病": {
+    "vi": "khám bệnh, đi khám",
+    "note": ""
+   },
+   "在": {
+    "vi": "ở; (giới từ) làm … ở …",
+    "note": ""
+   },
+   "里": {
+    "vi": "trong, bên trong",
+    "note": ""
+   },
+   "家": {
+    "vi": "nhà",
+    "note": ""
+   },
+   "店": {
+    "vi": "cửa hàng, tiệm",
+    "note": ""
+   },
+   "菜": {
+    "vi": "rau; món ăn",
+    "note": ""
+   },
+   "里面": {
+    "vi": "bên trong",
+    "note": ""
+   },
+   "外面": {
+    "vi": "bên ngoài",
+    "note": ""
+   },
+   "学校": {
+    "vi": "trường học",
+    "note": ""
+   },
+   "公交车": {
+    "vi": "xe buýt",
+    "note": ""
+   },
+   "都": {
+    "vi": "đều",
+    "note": ""
+   },
+   "学习": {
+    "vi": "học tập, học",
+    "note": ""
+   }
+  },
+  "TRANH": {
+   "现在": [],
+   "半": [],
+   "早上": [],
+   "上午": [],
+   "下午": [],
+   "晚上": [],
+   "点": [],
+   "分": [],
+   "分钟": [],
+   "后": [],
+   "课": [],
+   "上课": [],
+   "下课": [],
+   "见": [],
+   "吧": [
+    "去",
+    "走"
+   ],
+   "中午": [],
+   "小时": [],
+   "刻": [],
+   "差": [],
+   "前": [],
+   "杯": [],
+   "节": [],
+   "时间": [],
+   "看": [],
+   "电影": [],
+   "电影院": [],
+   "医院": [],
+   "事": [],
+   "呢": [],
+   "上班": [],
+   "部": [],
+   "医生": [],
+   "件": [],
+   "书": [],
+   "看病": [],
+   "在": [],
+   "里": [
+    "里面"
+   ],
+   "家": [],
+   "店": [
+    "商店"
+   ],
+   "菜": [],
+   "里面": [
+    "里"
+   ],
+   "外面": [],
+   "学校": [],
+   "公交车": [
+    "公共汽车"
+   ],
+   "都": [],
+   "学习": []
+  }
+ },
+ "ghep": {
+  "PART": {},
+  "CHARS": []
+ }
+}

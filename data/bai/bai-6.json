@@ -1,0 +1,5659 @@
+{
+ "bai": 6,
+ "ten": "第六课：你的手机号是多少？",
+ "tenViet": "Bài 6: Số điện thoại di động của bạn là bao nhiêu?",
+ "pinyinTen": "Dì liù kè: Nǐ de shǒujī hào shì duōshao?",
+ "tenRieng": [],
+ "maBaiTap": "bai6-bai-tap",
+ "tu": [
+  {
+   "Mã": "1-0340",
+   "Chữ Hán": "手机",
+   "Pinyin": "shǒujī",
+   "Âm Hán Việt": "THỦ CƠ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "điện thoại di động",
+   "Cấp HSK": "1",
+   "Thuận bút": "手机",
+   "Cụm từ": "新手机 | xīn shǒujī\n一台手机 | yì tái shǒujī\n手机号 | shǒujī hào",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "她的新手机很好看。",
+   "Pinyin câu 1": "Tā de xīn shǒujī hěn hǎokàn.",
+   "Nghĩa câu 1": "Điện thoại mới của cô ấy rất đẹp.",
+   "Đọc câu 1": "",
+   "Câu 2": "我的手机是新的。",
+   "Pinyin câu 2": "Wǒ de shǒujī shì xīn de.",
+   "Nghĩa câu 2": "Điện thoại của tôi là điện thoại mới.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0078",
+   "Chữ Hán": "电话",
+   "Pinyin": "diànhuà",
+   "Âm Hán Việt": "ĐIỆN THOẠI",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "điện thoại (bàn); cuộc gọi",
+   "Cấp HSK": "1",
+   "Thuận bút": "话",
+   "Cụm từ": "打电话 | dǎ diànhuà\n一个电话 | yí ge diànhuà\n给妈妈打电话 | gěi māma dǎ diànhuà",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "他们想给爸妈打电话。",
+   "Pinyin câu 1": "Tāmen xiǎng gěi bàmā dǎ diànhuà.",
+   "Nghĩa câu 1": "Họ muốn gọi điện cho bố mẹ.",
+   "Đọc câu 1": "",
+   "Câu 2": "你想给谁打电话？",
+   "Pinyin câu 2": "Nǐ xiǎng gěi shéi dǎ diànhuà?",
+   "Nghĩa câu 2": "Bạn muốn gọi điện cho ai?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0143",
+   "Chữ Hán": "号",
+   "Pinyin": "hào",
+   "Âm Hán Việt": "HIỆU",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "số (số điện thoại, số cửa)",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "手机号 | shǒujī hào\n电话号 | diànhuà hào\n门号 | mén hào",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你的手机号是多少？",
+   "Pinyin câu 1": "Nǐ de shǒujī hào shì duōshao?",
+   "Nghĩa câu 1": "Số điện thoại di động của bạn là bao nhiêu?",
+   "Đọc câu 1": "",
+   "Câu 2": "我的手机号是九八七六五四三二。",
+   "Pinyin câu 2": "Wǒ de shǒujī hào shì jiǔ bā qī liù wǔ sì sān èr.",
+   "Nghĩa câu 2": "Số điện thoại di động của tôi là 98765432.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0248",
+   "Chữ Hán": "明天",
+   "Pinyin": "míngtiān",
+   "Âm Hán Việt": "MINH THIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "ngày mai",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "明天见 | míngtiān jiàn\n明天星期几 | míngtiān xīngqī jǐ\n明天休息 | míngtiān xiūxi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "明天我休息，不上班。",
+   "Pinyin câu 1": "Míngtiān wǒ xiūxi, bú shàngbān.",
+   "Nghĩa câu 1": "Ngày mai tôi nghỉ, không đi làm.",
+   "Đọc câu 1": "",
+   "Câu 2": "明天是星期六，我们不上班。",
+   "Pinyin câu 2": "Míngtiān shì xīngqīliù, wǒmen bú shàngbān.",
+   "Nghĩa câu 2": "Ngày mai là thứ bảy, chúng tôi không đi làm.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0302",
+   "Chữ Hán": "去",
+   "Pinyin": "qù",
+   "Âm Hán Việt": "KHỨ",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "đi",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "去学汉语 | qù xué Hànyǔ\n去上班 | qù shàngbān\n去做饭 | qù zuò fàn",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "爸爸去上班了。",
+   "Pinyin câu 1": "Bàba qù shàngbān le.",
+   "Nghĩa câu 1": "Bố đi làm rồi.",
+   "Đọc câu 1": "",
+   "Câu 2": "我们去中国，你们呢？",
+   "Pinyin câu 2": "Wǒmen qù Zhōngguó, nǐmen ne?",
+   "Nghĩa câu 2": "Chúng tôi đi Trung Quốc, còn các bạn?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0252",
+   "Chữ Hán": "哪儿",
+   "Pinyin": "nǎr",
+   "Âm Hán Việt": "NA NHI",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "đâu, chỗ nào",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "去哪儿 | qù nǎr\n你去哪儿 | nǐ qù nǎr\n他们去哪儿 | tāmen qù nǎr",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：你们去哪儿？\nB：我们去法国。",
+   "Pinyin câu 1": "A: Nǐmen qù nǎr?\nB: Wǒmen qù Fǎguó.",
+   "Nghĩa câu 1": "A: Các bạn đi đâu?\nB: Chúng tôi đi Pháp.",
+   "Đọc câu 1": "你们去哪儿？我们去法国。",
+   "Câu 2": "他们去哪儿？",
+   "Pinyin câu 2": "Tāmen qù nǎr?",
+   "Nghĩa câu 2": "Họ đi đâu?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0400",
+   "Chữ Hán": "想",
+   "Pinyin": "xiǎng",
+   "Âm Hán Việt": "TƯỞNG",
+   "Từ loại": "động từ năng nguyện",
+   "Nghĩa tiếng Việt": "muốn; (想 + người) nhớ",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "想去 | xiǎng qù\n想吃 | xiǎng chī\n不想去 | bù xiǎng qù",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：你想去哪儿？\nB：我想去中国。",
+   "Pinyin câu 1": "A: Nǐ xiǎng qù nǎr?\nB: Wǒ xiǎng qù Zhōngguó.",
+   "Nghĩa câu 1": "A: Bạn muốn đi đâu?\nB: Tôi muốn đi Trung Quốc.",
+   "Đọc câu 1": "你想去哪儿？我想去中国。",
+   "Câu 2": "我哥哥不想休息。",
+   "Pinyin câu 2": "Wǒ gēge bù xiǎng xiūxi.",
+   "Nghĩa câu 2": "Anh trai tôi không muốn nghỉ ngơi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0056",
+   "Chữ Hán": "打",
+   "Pinyin": "dǎ",
+   "Âm Hán Việt": "ĐẢ",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "đánh; gọi (điện thoại)",
+   "Cấp HSK": "1",
+   "Thuận bút": "打",
+   "Cụm từ": "打电话 | dǎ diànhuà\n打车 | dǎ chē\n不打电话 | bù dǎ diànhuà",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我想给他打电话。",
+   "Pinyin câu 1": "Wǒ xiǎng gěi tā dǎ diànhuà.",
+   "Nghĩa câu 1": "Tôi muốn gọi điện cho anh ấy.",
+   "Đọc câu 1": "",
+   "Câu 2": "她不想给我打电话。",
+   "Pinyin câu 2": "Tā bù xiǎng gěi wǒ dǎ diànhuà.",
+   "Nghĩa câu 2": "Cô ấy không muốn gọi điện cho tôi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0121",
+   "Chữ Hán": "给",
+   "Pinyin": "gěi",
+   "Âm Hán Việt": "CẤP",
+   "Từ loại": "giới từ",
+   "Nghĩa tiếng Việt": "cho; giúp, đối với (…) (giới từ)",
+   "Cấp HSK": "1",
+   "Thuận bút": "给",
+   "Cụm từ": "给你 | gěi nǐ\n给他打电话 | gěi tā dǎ diànhuà\n给爸妈打电话 | gěi bàmā dǎ diànhuà",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我明天给你打电话。",
+   "Pinyin câu 1": "Wǒ míngtiān gěi nǐ dǎ diànhuà.",
+   "Nghĩa câu 1": "Ngày mai tôi sẽ gọi điện cho bạn.",
+   "Đọc câu 1": "",
+   "Câu 2": "爸爸给我一个新手机。",
+   "Pinyin câu 2": "Bàba gěi wǒ yí ge xīn shǒujī.",
+   "Nghĩa câu 2": "Bố cho tôi một chiếc điện thoại mới.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "4-0316",
+   "Chữ Hán": "号码",
+   "Pinyin": "hàomǎ",
+   "Âm Hán Việt": "HIỆU MÃ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "số, mã số",
+   "Cấp HSK": "4",
+   "Thuận bút": "码",
+   "Cụm từ": "手机号码 | shǒujī hàomǎ\n电话号码 | diànhuà hàomǎ\n号码是多少 | hàomǎ shì duōshao",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "你哥哥的手机号码是多少？我想给他打电话。",
+   "Pinyin câu 1": "Nǐ gēge de shǒujī hàomǎ shì duōshao? Wǒ xiǎng gěi tā dǎ diànhuà.",
+   "Nghĩa câu 1": "Số điện thoại di động của anh trai bạn là bao nhiêu? Tôi muốn gọi điện cho anh ấy.",
+   "Đọc câu 1": "",
+   "Câu 2": "请问，你的电话号码是多少？",
+   "Pinyin câu 2": "Qǐngwèn, nǐ de diànhuà hàomǎ shì duōshao?",
+   "Nghĩa câu 2": "Xin hỏi, số điện thoại của bạn là bao nhiêu?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0251",
+   "Chữ Hán": "哪里",
+   "Pinyin": "nǎ·lǐ",
+   "Âm Hán Việt": "NA LÝ",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "đâu, ở đâu",
+   "Cấp HSK": "1",
+   "Thuận bút": "里",
+   "Cụm từ": "去哪里 | qù nǎlǐ\n想去哪里 | xiǎng qù nǎlǐ\n他们去哪里 | tāmen qù nǎlǐ",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "A：明天你们去哪里？\nB：我们去中国。",
+   "Pinyin câu 1": "A: Míngtiān nǐmen qù nǎlǐ?\nB: Wǒmen qù Zhōngguó.",
+   "Nghĩa câu 1": "A: Ngày mai các bạn đi đâu?\nB: Chúng tôi đi Trung Quốc.",
+   "Đọc câu 1": "明天你们去哪里？我们去中国。",
+   "Câu 2": "你想去哪里吃饭？",
+   "Pinyin câu 2": "Nǐ xiǎng qù nǎlǐ chī fàn?",
+   "Nghĩa câu 2": "Bạn muốn đi đâu ăn cơm?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0060",
+   "Chữ Hán": "超市",
+   "Pinyin": "chāoshì",
+   "Âm Hán Việt": "SIÊU THỊ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "siêu thị",
+   "Cấp HSK": "2",
+   "Thuận bút": "超市",
+   "Cụm từ": "去超市 | qù chāoshì\n大超市 | dà chāoshì\n这家超市 | zhè jiā chāoshì",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我想去超市。",
+   "Pinyin câu 1": "Wǒ xiǎng qù chāoshì.",
+   "Nghĩa câu 1": "Tôi muốn đi siêu thị.",
+   "Đọc câu 1": "",
+   "Câu 2": "星期天你去超市吗？",
+   "Pinyin câu 2": "Xīngqītiān nǐ qù chāoshì ma?",
+   "Nghĩa câu 2": "Chủ nhật bạn có đi siêu thị không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0100",
+   "Chữ Hán": "饭店",
+   "Pinyin": "fàndiàn",
+   "Âm Hán Việt": "PHẠN ĐIẾM",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "nhà hàng; khách sạn",
+   "Cấp HSK": "1",
+   "Thuận bút": "店",
+   "Cụm từ": "去饭店 | qù fàndiàn\n这家饭店 | zhè jiā fàndiàn\n饭店的菜 | fàndiàn de cài",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我还想去西安饭店。",
+   "Pinyin câu 1": "Wǒ hái xiǎng qù Xī'ān Fàndiàn.",
+   "Nghĩa câu 1": "Tôi còn muốn đi nhà hàng Tây An.",
+   "Đọc câu 1": "",
+   "Câu 2": "这家饭店的菜非常好吃。",
+   "Pinyin câu 2": "Zhè jiā fàndiàn de cài fēicháng hǎochī.",
+   "Nghĩa câu 2": "Món ăn của nhà hàng này rất ngon.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0228",
+   "Chữ Hán": "买",
+   "Pinyin": "mǎi",
+   "Âm Hán Việt": "MÃI",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "mua",
+   "Cấp HSK": "1",
+   "Thuận bút": "买",
+   "Cụm từ": "买东西 | mǎi dōngxi\n买什么 | mǎi shénme\n买菜 | mǎi cài",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "妈妈去超市买菜。",
+   "Pinyin câu 1": "Māma qù chāoshì mǎi cài.",
+   "Nghĩa câu 1": "Mẹ đi siêu thị mua thức ăn.",
+   "Đọc câu 1": "",
+   "Câu 2": "你去超市买什么？",
+   "Pinyin câu 2": "Nǐ qù chāoshì mǎi shénme?",
+   "Nghĩa câu 2": "Bạn đi siêu thị mua gì?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0086",
+   "Chữ Hán": "东西",
+   "Pinyin": "dōngxi",
+   "Âm Hán Việt": "ĐÔNG TÂY",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "đồ, đồ vật",
+   "Cấp HSK": "1",
+   "Thuận bút": "东西",
+   "Cụm từ": "买东西 | mǎi dōngxi\n吃东西 | chī dōngxi\n很多东西 | hěn duō dōngxi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我想去超市买东西。",
+   "Pinyin câu 1": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
+   "Nghĩa câu 1": "Tôi muốn đi siêu thị mua đồ.",
+   "Đọc câu 1": "",
+   "Câu 2": "你想买什么东西？",
+   "Pinyin câu 2": "Nǐ xiǎng mǎi shénme dōngxi?",
+   "Nghĩa câu 2": "Bạn muốn mua đồ gì?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0242",
+   "Chữ Hán": "米饭",
+   "Pinyin": "mǐfàn",
+   "Âm Hán Việt": "MỄ PHẠN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "cơm (cơm trắng)",
+   "Cấp HSK": "1",
+   "Thuận bút": "米",
+   "Cụm từ": "吃米饭 | chī mǐfàn\n一碗米饭 | yì wǎn mǐfàn\n米饭和菜 | mǐfàn hé cài",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "妈妈，我想吃米饭，不想吃包子。",
+   "Pinyin câu 1": "Māma, wǒ xiǎng chī mǐfàn, bù xiǎng chī bāozi.",
+   "Nghĩa câu 1": "Mẹ ơi, con muốn ăn cơm, không muốn ăn bánh bao.",
+   "Đọc câu 1": "",
+   "Câu 2": "他们去西安饭店吃两碗米饭和一些菜。",
+   "Pinyin câu 2": "Tāmen qù Xī'ān Fàndiàn chī liǎng wǎn mǐfàn hé yìxiē cài.",
+   "Nghĩa câu 2": "Họ đến nhà hàng Tây An ăn hai bát cơm và một ít món ăn.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0373",
+   "Chữ Hán": "晚饭",
+   "Pinyin": "wǎnfàn",
+   "Âm Hán Việt": "VÃN PHẠN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bữa tối",
+   "Cấp HSK": "1",
+   "Thuận bút": "晚",
+   "Cụm từ": "吃晚饭 | chī wǎnfàn\n做晚饭 | zuò wǎnfàn\n去哪儿吃晚饭 | qù nǎr chī wǎnfàn",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "星期天我们去饭店吃晚饭。",
+   "Pinyin câu 1": "Xīngqītiān wǒmen qù fàndiàn chī wǎnfàn.",
+   "Nghĩa câu 1": "Chủ nhật chúng tôi đến nhà hàng ăn tối.",
+   "Đọc câu 1": "",
+   "Câu 2": "今天妈妈做晚饭。",
+   "Pinyin câu 2": "Jīntiān māma zuò wǎnfàn.",
+   "Nghĩa câu 2": "Hôm nay mẹ nấu bữa tối.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "4-0812",
+   "Chữ Hán": "些",
+   "Pinyin": "xiē",
+   "Âm Hán Việt": "TA",
+   "Từ loại": "lượng từ",
+   "Nghĩa tiếng Việt": "một ít, một vài",
+   "Cấp HSK": "4",
+   "Thuận bút": "",
+   "Cụm từ": "这些包子 | zhèxiē bāozi\n哪些东西 | nǎxiē dōngxi\n买些东西 | mǎi xiē dōngxi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我想买些包子。",
+   "Pinyin câu 1": "Wǒ xiǎng mǎi xiē bāozi.",
+   "Nghĩa câu 1": "Tôi muốn mua một ít bánh bao.",
+   "Đọc câu 1": "",
+   "Câu 2": "我们去超市买些东西。",
+   "Pinyin câu 2": "Wǒmen qù chāoshì mǎi xiē dōngxi.",
+   "Nghĩa câu 2": "Chúng tôi đi siêu thị mua một ít đồ.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0275",
+   "Chữ Hán": "牛奶",
+   "Pinyin": "niúnǎi",
+   "Âm Hán Việt": "NGƯU NÃI",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "sữa bò",
+   "Cấp HSK": "1",
+   "Thuận bút": "牛",
+   "Cụm từ": "喝牛奶 | hē niúnǎi\n买牛奶 | mǎi niúnǎi\n一些牛奶 | yìxiē niúnǎi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你喝牛奶吗？",
+   "Pinyin câu 1": "Nǐ hē niúnǎi ma?",
+   "Nghĩa câu 1": "Bạn có uống sữa không?",
+   "Đọc câu 1": "",
+   "Câu 2": "我不喝牛奶，你想喝吗？",
+   "Pinyin câu 2": "Wǒ bù hē niúnǎi, nǐ xiǎng hē ma?",
+   "Nghĩa câu 2": "Tôi không uống sữa, bạn muốn uống không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0046",
+   "Chữ Hán": "吃",
+   "Pinyin": "chī",
+   "Âm Hán Việt": "KHIẾT",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "ăn",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "吃饭 | chī fàn\n吃什么 | chī shénme\n想吃饺子 | xiǎng chī jiǎozi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：你们去哪儿吃饭？\nB：我们去饭店吃饭。",
+   "Pinyin câu 1": "A: Nǐmen qù nǎr chī fàn?\nB: Wǒmen qù fàndiàn chī fàn.",
+   "Nghĩa câu 1": "A: Các bạn đi đâu ăn cơm?\nB: Chúng tôi đến nhà hàng ăn cơm.",
+   "Đọc câu 1": "你们去哪儿吃饭？我们去饭店吃饭。",
+   "Câu 2": "我不想吃面包，想吃饺子。",
+   "Pinyin câu 2": "Wǒ bù xiǎng chī miànbāo, xiǎng chī jiǎozi.",
+   "Nghĩa câu 2": "Tôi không muốn ăn bánh mì, muốn ăn sủi cảo.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0372",
+   "Chữ Hán": "卖",
+   "Pinyin": "mài",
+   "Âm Hán Việt": "MẠI",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "bán",
+   "Cấp HSK": "2",
+   "Thuận bút": "卖",
+   "Cụm từ": "卖东西 | mài dōngxi\n卖饺子 | mài jiǎozi\n卖牛奶 | mài niúnǎi",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "这家超市卖很多东西。",
+   "Pinyin câu 1": "Zhè jiā chāoshì mài hěn duō dōngxi.",
+   "Nghĩa câu 1": "Siêu thị này bán rất nhiều đồ.",
+   "Đọc câu 1": "",
+   "Câu 2": "这家超市卖饺子吗？",
+   "Pinyin câu 2": "Zhè jiā chāoshì mài jiǎozi ma?",
+   "Nghĩa câu 2": "Siêu thị này có bán sủi cảo không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0314",
+   "Chữ Hán": "商店",
+   "Pinyin": "shāngdiàn",
+   "Âm Hán Việt": "THƯƠNG ĐIẾM",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "cửa hàng, cửa tiệm",
+   "Cấp HSK": "1",
+   "Thuận bút": "商",
+   "Cụm từ": "去商店 | qù shāngdiàn\n小商店 | xiǎo shāngdiàn\n那家商店 | nà jiā shāngdiàn",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "那家商店很小。",
+   "Pinyin câu 1": "Nà jiā shāngdiàn hěn xiǎo.",
+   "Nghĩa câu 1": "Cửa hàng kia rất nhỏ.",
+   "Đọc câu 1": "",
+   "Câu 2": "我想去商店买一些牛奶。",
+   "Pinyin câu 2": "Wǒ xiǎng qù shāngdiàn mǎi yìxiē niúnǎi.",
+   "Nghĩa câu 2": "Tôi muốn đến cửa hàng mua một ít sữa.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0564",
+   "Chữ Hán": "碗",
+   "Pinyin": "wǎn",
+   "Âm Hán Việt": "OẢN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bát; (lượng từ) bát",
+   "Cấp HSK": "2",
+   "Thuận bút": "碗",
+   "Cụm từ": "一碗米饭 | yì wǎn mǐfàn\n两碗饺子 | liǎng wǎn jiǎozi\n一大碗 | yí dà wǎn",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我想吃一碗米饭。",
+   "Pinyin câu 1": "Wǒ xiǎng chī yì wǎn mǐfàn.",
+   "Nghĩa câu 1": "Tôi muốn ăn một bát cơm.",
+   "Đọc câu 1": "",
+   "Câu 2": "这碗饺子很好吃。",
+   "Pinyin câu 2": "Zhè wǎn jiǎozi hěn hǎochī.",
+   "Nghĩa câu 2": "Bát sủi cảo này rất ngon.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0458",
+   "Chữ Hán": "早饭",
+   "Pinyin": "zǎofàn",
+   "Âm Hán Việt": "TẢO PHẠN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bữa sáng",
+   "Cấp HSK": "1",
+   "Thuận bút": "早",
+   "Cụm từ": "吃早饭 | chī zǎofàn\n做早饭 | zuò zǎofàn\n早饭吃什么 | zǎofàn chī shénme",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "你早饭吃什么？",
+   "Pinyin câu 1": "Nǐ zǎofàn chī shénme?",
+   "Nghĩa câu 1": "Bữa sáng bạn ăn gì?",
+   "Đọc câu 1": "",
+   "Câu 2": "我早饭吃包子和牛奶。",
+   "Pinyin câu 2": "Wǒ zǎofàn chī bāozi hé niúnǎi.",
+   "Nghĩa câu 2": "Bữa sáng tôi ăn bánh bao và uống sữa.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0383",
+   "Chữ Hán": "午饭",
+   "Pinyin": "wǔfàn",
+   "Âm Hán Việt": "NGỌ PHẠN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bữa trưa",
+   "Cấp HSK": "1",
+   "Thuận bút": "午",
+   "Cụm từ": "吃午饭 | chī wǔfàn\n做午饭 | zuò wǔfàn\n午饭吃什么 | wǔfàn chī shénme",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "星期六我不做午饭。",
+   "Pinyin câu 1": "Xīngqīliù wǒ bú zuò wǔfàn.",
+   "Nghĩa câu 1": "Thứ bảy tôi không nấu bữa trưa.",
+   "Đọc câu 1": "",
+   "Câu 2": "你午饭想吃什么？",
+   "Pinyin câu 2": "Nǐ wǔfàn xiǎng chī shénme?",
+   "Nghĩa câu 2": "Bữa trưa bạn muốn ăn gì?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0037",
+   "Chữ Hán": "茶",
+   "Pinyin": "chá",
+   "Âm Hán Việt": "TRÀ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "trà",
+   "Cấp HSK": "1",
+   "Thuận bút": "茶",
+   "Cụm từ": "喝茶 | hē chá\n中国茶 | Zhōngguó chá\n买茶 | mǎi chá",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "你喝茶吗？",
+   "Pinyin câu 1": "Nǐ hē chá ma?",
+   "Nghĩa câu 1": "Bạn có uống trà không?",
+   "Đọc câu 1": "",
+   "Câu 2": "我不喝茶，我喝牛奶。",
+   "Pinyin câu 2": "Wǒ bù hē chá, wǒ hē niúnǎi.",
+   "Nghĩa câu 2": "Tôi không uống trà, tôi uống sữa.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0345",
+   "Chữ Hán": "水",
+   "Pinyin": "shuǐ",
+   "Âm Hán Việt": "THỦY",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "nước",
+   "Cấp HSK": "1",
+   "Thuận bút": "水",
+   "Cụm từ": "喝水 | hē shuǐ\n买水 | mǎi shuǐ\n没有水 | méiyǒu shuǐ",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "你想喝水吗？",
+   "Pinyin câu 1": "Nǐ xiǎng hē shuǐ ma?",
+   "Nghĩa câu 1": "Bạn có muốn uống nước không?",
+   "Đọc câu 1": "",
+   "Câu 2": "我想买一些水和牛奶。",
+   "Pinyin câu 2": "Wǒ xiǎng mǎi yìxiē shuǐ hé niúnǎi.",
+   "Nghĩa câu 2": "Tôi muốn mua một ít nước và sữa.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "3-0499",
+   "Chữ Hán": "奶茶",
+   "Pinyin": "nǎichá",
+   "Âm Hán Việt": "NÃI TRÀ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "trà sữa",
+   "Cấp HSK": "3",
+   "Thuận bút": "",
+   "Cụm từ": "喝奶茶 | hē nǎichá\n买奶茶 | mǎi nǎichá\n好喝的奶茶 | hǎohē de nǎichá",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "A：你喝什么？\nB：我喝奶茶。",
+   "Pinyin câu 1": "A: Nǐ hē shénme?\nB: Wǒ hē nǎichá.",
+   "Nghĩa câu 1": "A: Bạn uống gì?\nB: Tôi uống trà sữa.",
+   "Đọc câu 1": "你喝什么？我喝奶茶。",
+   "Câu 2": "这家商店的奶茶很好喝。",
+   "Pinyin câu 2": "Zhè jiā shāngdiàn de nǎichá hěn hǎohē.",
+   "Nghĩa câu 2": "Trà sữa của cửa hàng này rất ngon.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0255",
+   "Chữ Hán": "那边",
+   "Pinyin": "nàbiān",
+   "Âm Hán Việt": "NA BIÊN",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "bên kia, chỗ đó",
+   "Cấp HSK": "1",
+   "Thuận bút": "边",
+   "Cụm từ": "那边的包子 | nàbiān de bāozi\n那边的人 | nàbiān de rén\n那边是超市 | nàbiān shì chāoshì",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "那边的包子很好吃。",
+   "Pinyin câu 1": "Nàbiān de bāozi hěn hǎochī.",
+   "Nghĩa câu 1": "Bánh bao ở bên kia rất ngon.",
+   "Đọc câu 1": "",
+   "Câu 2": "这边是饭店，那边是超市。",
+   "Pinyin câu 2": "Zhèbiān shì fàndiàn, nàbiān shì chāoshì.",
+   "Nghĩa câu 2": "Bên này là nhà hàng, bên kia là siêu thị.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0108",
+   "Chữ Hán": "非常",
+   "Pinyin": "fēicháng",
+   "Âm Hán Việt": "PHI THƯỜNG",
+   "Từ loại": "phó từ",
+   "Nghĩa tiếng Việt": "rất, vô cùng",
+   "Cấp HSK": "1",
+   "Thuận bút": "非常",
+   "Cụm từ": "非常忙 | fēicháng máng\n非常好吃 | fēicháng hǎochī\n非常喜欢 | fēicháng xǐhuan",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我非常喜欢学汉语。",
+   "Pinyin câu 1": "Wǒ fēicháng xǐhuan xué Hànyǔ.",
+   "Nghĩa câu 1": "Tôi vô cùng thích học tiếng Trung.",
+   "Đọc câu 1": "",
+   "Câu 2": "她的新手机非常好看。",
+   "Pinyin câu 2": "Tā de xīn shǒujī fēicháng hǎokàn.",
+   "Nghĩa câu 2": "Điện thoại mới của cô ấy đẹp vô cùng.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0139",
+   "Chữ Hán": "好吃",
+   "Pinyin": "hǎochī",
+   "Âm Hán Việt": "HẢO CẬT",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "ngon (đồ ăn)",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "很好吃 | hěn hǎochī\n非常好吃 | fēicháng hǎochī\n不好吃 | bù hǎochī",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "这家饭店的包子非常好吃。",
+   "Pinyin câu 1": "Zhè jiā fàndiàn de bāozi fēicháng hǎochī.",
+   "Nghĩa câu 1": "Bánh bao của nhà hàng này vô cùng ngon.",
+   "Đọc câu 1": "",
+   "Câu 2": "西安饭店的包子好吃吗？",
+   "Pinyin câu 2": "Xī'ān Fàndiàn de bāozi hǎochī ma?",
+   "Nghĩa câu 2": "Bánh bao của nhà hàng Tây An có ngon không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0016",
+   "Chữ Hán": "包子",
+   "Pinyin": "bāozi",
+   "Âm Hán Việt": "BAO TỬ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bánh bao",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "这些包子 | zhèxiē bāozi\n吃包子 | chī bāozi\n一些包子 | yìxiē bāozi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "这些包子很好吃。",
+   "Pinyin câu 1": "Zhèxiē bāozi hěn hǎochī.",
+   "Nghĩa câu 1": "Những cái bánh bao này rất ngon.",
+   "Đọc câu 1": "",
+   "Câu 2": "我哥哥爱吃包子。",
+   "Pinyin câu 2": "Wǒ gēge ài chī bāozi.",
+   "Nghĩa câu 2": "Anh trai tôi thích ăn bánh bao.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0460",
+   "Chữ Hán": "怎么",
+   "Pinyin": "zěnme",
+   "Âm Hán Việt": "CHẨM MA",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "thế nào, bằng cách nào",
+   "Cấp HSK": "1",
+   "Thuận bút": "怎",
+   "Cụm từ": "怎么去 | zěnme qù\n怎么做 | zěnme zuò\n怎么吃 | zěnme chī",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "饺子怎么做？",
+   "Pinyin câu 1": "Jiǎozi zěnme zuò?",
+   "Nghĩa câu 1": "Sủi cảo làm như thế nào?",
+   "Đọc câu 1": "",
+   "Câu 2": "我们怎么去？",
+   "Pinyin câu 2": "Wǒmen zěnme qù?",
+   "Nghĩa câu 2": "Chúng ta đi bằng cách nào?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0498",
+   "Chữ Hán": "坐",
+   "Pinyin": "zuò",
+   "Âm Hán Việt": "TỌA",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "ngồi; đi (ô tô, xe buýt…)",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "请坐 | qǐng zuò\n坐出租车 | zuò chūzūchē\n坐地铁 | zuò dìtiě",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "请坐！",
+   "Pinyin câu 1": "Qǐng zuò!",
+   "Nghĩa câu 1": "Mời ngồi!",
+   "Đọc câu 1": "",
+   "Câu 2": "她坐出租车去超市。",
+   "Pinyin câu 2": "Tā zuò chūzūchē qù chāoshì.",
+   "Nghĩa câu 2": "Cô ấy đi taxi đến siêu thị.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0076",
+   "Chữ Hán": "出租车",
+   "Pinyin": "chūzūchē",
+   "Âm Hán Việt": "XUẤT TÔ XA",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "xe taxi",
+   "Cấp HSK": "2",
+   "Thuận bút": "出租车",
+   "Cụm từ": "坐出租车 | zuò chūzūchē\n打出租车 | dǎ chūzūchē\n一辆出租车 | yí liàng chūzūchē",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我们坐出租车去西安饭店。",
+   "Pinyin câu 1": "Wǒmen zuò chūzūchē qù Xī'ān Fàndiàn.",
+   "Nghĩa câu 1": "Chúng tôi đi taxi đến nhà hàng Tây An.",
+   "Đọc câu 1": "",
+   "Câu 2": "爸爸坐出租车去上班。",
+   "Pinyin câu 2": "Bàba zuò chūzūchē qù shàngbān.",
+   "Nghĩa câu 2": "Bố đi taxi đi làm.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0465",
+   "Chữ Hán": "这边",
+   "Pinyin": "zhèbiān",
+   "Âm Hán Việt": "GIÁ BIÊN",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "bên này, chỗ này",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "这边的超市 | zhèbiān de chāoshì\n这边的菜 | zhèbiān de cài\n这边是饭店 | zhèbiān shì fàndiàn",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "这边有一家大超市。",
+   "Pinyin câu 1": "Zhèbiān yǒu yì jiā dà chāoshì.",
+   "Nghĩa câu 1": "Bên này có một siêu thị lớn.",
+   "Đọc câu 1": "",
+   "Câu 2": "你是哪边的人？",
+   "Pinyin câu 2": "Nǐ shì nǎbiān de rén?",
+   "Nghĩa câu 2": "Bạn là người ở bên nào?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0042",
+   "Chữ Hán": "车",
+   "Pinyin": "chē",
+   "Âm Hán Việt": "XA",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "xe, xe cộ",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "一辆车 | yí liàng chē\n坐车 | zuò chē\n新车 | xīn chē",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "你的车很好看。",
+   "Pinyin câu 1": "Nǐ de chē hěn hǎokàn.",
+   "Nghĩa câu 1": "Xe của bạn rất đẹp.",
+   "Đọc câu 1": "",
+   "Câu 2": "这辆车是我爸爸的。",
+   "Pinyin câu 2": "Zhè liàng chē shì wǒ bàba de.",
+   "Nghĩa câu 2": "Chiếc xe này là của bố tôi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0358",
+   "Chữ Hán": "辆",
+   "Pinyin": "liàng",
+   "Âm Hán Việt": "LƯỢNG",
+   "Từ loại": "lượng từ",
+   "Nghĩa tiếng Việt": "chiếc (lượng từ dùng cho xe)",
+   "Cấp HSK": "2",
+   "Thuận bút": "辆",
+   "Cụm từ": "一辆车 | yí liàng chē\n一辆自行车 | yí liàng zìxíngchē\n两辆出租车 | liǎng liàng chūzūchē",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我有一辆新自行车。",
+   "Pinyin câu 1": "Wǒ yǒu yí liàng xīn zìxíngchē.",
+   "Nghĩa câu 1": "Tôi có một chiếc xe đạp mới.",
+   "Đọc câu 1": "",
+   "Câu 2": "那辆车是谁的？",
+   "Pinyin câu 2": "Nà liàng chē shì shéi de?",
+   "Nghĩa câu 2": "Chiếc xe kia là của ai?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0752",
+   "Chữ Hán": "自行车",
+   "Pinyin": "zìxíngchē",
+   "Âm Hán Việt": "TỰ HÀNH XA",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "xe đạp",
+   "Cấp HSK": "2",
+   "Thuận bút": "自行",
+   "Cụm từ": "骑自行车 | qí zìxíngchē\n一辆自行车 | yí liàng zìxíngchē\n买自行车 | mǎi zìxíngchē",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我哥哥有一辆自行车。",
+   "Pinyin câu 1": "Wǒ gēge yǒu yí liàng zìxíngchē.",
+   "Nghĩa câu 1": "Anh trai tôi có một chiếc xe đạp.",
+   "Đọc câu 1": "",
+   "Câu 2": "这辆自行车很新。",
+   "Pinyin câu 2": "Zhè liàng zìxíngchē hěn xīn.",
+   "Nghĩa câu 2": "Chiếc xe đạp này rất mới.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0428",
+   "Chữ Hán": "骑",
+   "Pinyin": "qí",
+   "Âm Hán Việt": "KỴ",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "cưỡi, đi (xe đạp, xe máy, ngựa)",
+   "Cấp HSK": "2",
+   "Thuận bút": "骑",
+   "Cụm từ": "骑车 | qí chē\n骑自行车 | qí zìxíngchē\n骑马 | qí mǎ",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "他们不骑车去饭店，他们坐出租车去。",
+   "Pinyin câu 1": "Tāmen bù qí chē qù fàndiàn, tāmen zuò chūzūchē qù.",
+   "Nghĩa câu 1": "Họ không đạp xe đến nhà hàng, họ đi taxi.",
+   "Đọc câu 1": "",
+   "Câu 2": "你会骑自行车吗？",
+   "Pinyin câu 2": "Nǐ huì qí zìxíngchē ma?",
+   "Nghĩa câu 2": "Bạn biết đi xe đạp không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0125",
+   "Chữ Hán": "地铁",
+   "Pinyin": "dìtiě",
+   "Âm Hán Việt": "ĐỊA THIẾT",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "tàu điện ngầm",
+   "Cấp HSK": "2",
+   "Thuận bút": "地铁",
+   "Cụm từ": "坐地铁 | zuò dìtiě\n坐地铁去 | zuò dìtiě qù\n新地铁 | xīn dìtiě",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我们坐地铁去超市。",
+   "Pinyin câu 1": "Wǒmen zuò dìtiě qù chāoshì.",
+   "Nghĩa câu 1": "Chúng tôi đi tàu điện ngầm đến siêu thị.",
+   "Đọc câu 1": "",
+   "Câu 2": "爸爸不坐地铁，他骑自行车上班。",
+   "Pinyin câu 2": "Bàba bú zuò dìtiě, tā qí zìxíngchē shàngbān.",
+   "Nghĩa câu 2": "Bố không đi tàu điện ngầm, bố đạp xe đi làm.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0188",
+   "Chữ Hán": "公共汽车",
+   "Pinyin": "gōnggòng qìchē",
+   "Âm Hán Việt": "CÔNG CỘNG KHÍ XA",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "xe buýt",
+   "Cấp HSK": "2",
+   "Thuận bút": "共汽",
+   "Cụm từ": "坐公共汽车 | zuò gōnggòng qìchē\n一辆公共汽车 | yí liàng gōnggòng qìchē\n公共汽车去超市 | gōnggòng qìchē qù chāoshì",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我想坐公共汽车去。",
+   "Pinyin câu 1": "Wǒ xiǎng zuò gōnggòng qìchē qù.",
+   "Nghĩa câu 1": "Tôi muốn đi bằng xe buýt.",
+   "Đọc câu 1": "",
+   "Câu 2": "这辆公共汽车去哪儿？",
+   "Pinyin câu 2": "Zhè liàng gōnggòng qìchē qù nǎr?",
+   "Nghĩa câu 2": "Chiếc xe buýt này đi đâu?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0490",
+   "Chữ Hán": "走",
+   "Pinyin": "zǒu",
+   "Âm Hán Việt": "TẨU",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "đi, đi bộ; rời đi",
+   "Cấp HSK": "1",
+   "Thuận bút": "走",
+   "Cụm từ": "怎么走 | zěnme zǒu\n去超市怎么走 | qù chāoshì zěnme zǒu\n走了 | zǒu le",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "去超市怎么走？",
+   "Pinyin câu 1": "Qù chāoshì zěnme zǒu?",
+   "Nghĩa câu 1": "Đến siêu thị đi như thế nào?",
+   "Đọc câu 1": "",
+   "Câu 2": "爸爸走了，我也想走。",
+   "Pinyin câu 2": "Bàba zǒu le, wǒ yě xiǎng zǒu.",
+   "Nghĩa câu 2": "Bố đi rồi, tôi cũng muốn đi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0710",
+   "Chữ Hán": "怎么样",
+   "Pinyin": "zěnmeyàng",
+   "Âm Hán Việt": "CHẨM MA DẠNG",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "thế nào, ra sao",
+   "Cấp HSK": "2",
+   "Thuận bút": "样",
+   "Cụm từ": "你的电脑怎么样 | nǐ de diànnǎo zěnmeyàng\n饭店怎么样 | fàndiàn zěnmeyàng\n怎么样 | zěnmeyàng",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "你的新电脑怎么样？",
+   "Pinyin câu 1": "Nǐ de xīn diànnǎo zěnmeyàng?",
+   "Nghĩa câu 1": "Máy tính mới của bạn thế nào?",
+   "Đọc câu 1": "",
+   "Câu 2": "那家饭店怎么样？",
+   "Pinyin câu 2": "Nà jiā fàndiàn zěnmeyàng?",
+   "Nghĩa câu 2": "Nhà hàng kia thế nào?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "4-0189",
+   "Chữ Hán": "电动车",
+   "Pinyin": "diàndòngchē",
+   "Âm Hán Việt": "ĐIỆN ĐỘNG XA",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "xe điện, xe đạp điện",
+   "Cấp HSK": "4",
+   "Thuận bút": "动",
+   "Cụm từ": "一辆电动车 | yí liàng diàndòngchē\n骑电动车 | qí diàndòngchē\n新电动车 | xīn diàndòngchē",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "他骑电动车去上班。",
+   "Pinyin câu 1": "Tā qí diàndòngchē qù shàngbān.",
+   "Nghĩa câu 1": "Anh ấy đi làm bằng xe điện.",
+   "Đọc câu 1": "",
+   "Câu 2": "我哥哥有一辆新电动车。",
+   "Pinyin câu 2": "Wǒ gēge yǒu yí liàng xīn diàndòngchē.",
+   "Nghĩa câu 2": "Anh trai tôi có một chiếc xe điện mới.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "3-0471",
+   "Chữ Hán": "马",
+   "Pinyin": "mǎ",
+   "Âm Hán Việt": "MÃ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "ngựa",
+   "Cấp HSK": "3",
+   "Thuận bút": "马",
+   "Cụm từ": "骑马 | qí mǎ\n小马 | xiǎo mǎ\n那是马 | nà shì mǎ",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我想骑马。",
+   "Pinyin câu 1": "Wǒ xiǎng qí mǎ.",
+   "Nghĩa câu 1": "Tôi muốn cưỡi ngựa.",
+   "Đọc câu 1": "",
+   "Câu 2": "这是我的小马。",
+   "Pinyin câu 2": "Zhè shì wǒ de xiǎo mǎ.",
+   "Nghĩa câu 2": "Đây là chú ngựa nhỏ của tôi.",
+   "Đọc câu 2": ""
+  }
+ ],
+ "boThu": [
+  {
+   "boThu": "刀",
+   "ten": "Bộ đao",
+   "pinyin": "dāo",
+   "nghia": "con dao",
+   "docAm": "刀",
+   "chuChua": [
+    {
+     "hanzi": "超",
+     "pinyin": "chāo",
+     "nghia": "vượt; siêu (trong 超市)"
+    }
+   ]
+  },
+  {
+   "boThu": "亠",
+   "ten": "Bộ đầu",
+   "pinyin": "tóu",
+   "nghia": "cái nắp, đỉnh",
+   "docAm": "头",
+   "chuChua": [
+    {
+     "hanzi": "市",
+     "pinyin": "shì",
+     "nghia": "chợ; thành phố (trong 超市)"
+    }
+   ]
+  },
+  {
+   "boThu": "巾",
+   "ten": "Bộ cân",
+   "pinyin": "jīn",
+   "nghia": "cái khăn",
+   "docAm": "巾",
+   "chuChua": [
+    {
+     "hanzi": "市",
+     "pinyin": "shì",
+     "nghia": "chợ; thành phố (trong 超市)"
+    }
+   ],
+   "ghiChu": "Phân biệt với bộ cân 斤 (cái rìu) ở Bài 5: 巾 là cái khăn."
+  },
+  {
+   "boThu": "广",
+   "ten": "Bộ nghiễm",
+   "pinyin": "yǎn",
+   "nghia": "mái nhà",
+   "docAm": "广",
+   "chuChua": [
+    {
+     "hanzi": "店",
+     "pinyin": "diàn",
+     "nghia": "cửa hàng, tiệm"
+    }
+   ],
+   "ghiChu": "Bộ này còn đọc là guǎng (广字旁)."
+  },
+  {
+   "boThu": "力",
+   "ten": "Bộ lực",
+   "pinyin": "lì",
+   "nghia": "sức lực",
+   "docAm": "力",
+   "chuChua": [
+    {
+     "hanzi": "边",
+     "pinyin": "biān",
+     "nghia": "bên, phía (trong 那边)"
+    }
+   ]
+  }
+ ],
+ "thanhPhan": {
+  "免": {
+   "pinyin": "miǎn",
+   "ten": "chữ 免",
+   "nghia": "tránh, miễn"
+  },
+  "走": {
+   "pinyin": "zǒu",
+   "ten": "chữ 走",
+   "nghia": "đi, đi bộ"
+  },
+  "口": {
+   "pinyin": "kǒu",
+   "ten": "Bộ khẩu",
+   "nghia": "cái miệng"
+  },
+  "日": {
+   "pinyin": "rì",
+   "ten": "Bộ nhật",
+   "nghia": "mặt trời"
+  },
+  "辶": {
+   "pinyin": "chuò",
+   "ten": "Bộ quai xước",
+   "nghia": "bước đi"
+  }
+ },
+ "ghepChu": [
+  {
+   "chu": "超",
+   "phan": [
+    "走",
+    "刀",
+    "口"
+   ]
+  },
+  {
+   "chu": "市",
+   "phan": [
+    "亠",
+    "巾"
+   ]
+  },
+  {
+   "chu": "晚",
+   "phan": [
+    "日",
+    "免"
+   ]
+  },
+  {
+   "chu": "边",
+   "phan": [
+    "辶",
+    "力"
+   ]
+  }
+ ],
+ "chang": [
+  {
+   "so": 1,
+   "ten": "Ôn tập từ vựng 1",
+   "tu": [
+    "手机",
+    "电话",
+    "号",
+    "明天",
+    "去",
+    "哪儿",
+    "想",
+    "打",
+    "给",
+    "号码",
+    "哪里"
+   ],
+   "ghepChu": []
+  },
+  {
+   "so": 2,
+   "ten": "Ôn tập từ vựng 2",
+   "tu": [
+    "超市",
+    "饭店",
+    "买",
+    "东西",
+    "米饭",
+    "晚饭",
+    "些",
+    "牛奶",
+    "吃",
+    "卖",
+    "商店",
+    "碗",
+    "早饭",
+    "午饭",
+    "茶",
+    "水",
+    "奶茶"
+   ],
+   "ghepChu": [
+    "超",
+    "市",
+    "晚"
+   ]
+  },
+  {
+   "so": 3,
+   "ten": "Ôn tập từ vựng 3",
+   "tu": [
+    "那边",
+    "非常",
+    "好吃",
+    "包子",
+    "怎么",
+    "坐",
+    "出租车",
+    "这边",
+    "车",
+    "辆",
+    "自行车",
+    "骑",
+    "地铁",
+    "公共汽车",
+    "走",
+    "怎么样",
+    "电动车",
+    "马"
+   ],
+   "ghepChu": [
+    "边"
+   ]
+  }
+ ],
+ "nguPhap": [
+  {
+   "id": "soDT",
+   "ten": "Cách đọc số điện thoại: từng chữ số, 1 → yāo, 0 → líng",
+   "congThuc": [
+    [
+     [
+      "Số điện thoại",
+      "dt"
+     ],
+     [
+      "đọc từng chữ số một",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "1",
+      "st"
+     ],
+     [
+      "→ yāo",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "0",
+      "st"
+     ],
+     [
+      "→ líng",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "Số điện thoại **đọc từng chữ số một**, không đọc như số đếm. Hai chữ số đặc biệt: **1 đọc là yāo** (không đọc yī, để khỏi nhầm với 7 qī) và **0 đọc là líng**. Hỏi số điện thoại dùng **……是多少？**",
+   "y": [
+    {
+     "noiDung": "Đọc từng chữ số một",
+     "cum": [
+      [
+       "九八七六",
+       "jiǔ bā qī liù",
+       "",
+       [
+        [
+         "九八七六",
+         "st"
+        ]
+       ]
+      ],
+      [
+       "五四三二",
+       "wǔ sì sān èr",
+       "",
+       [
+        [
+         "五四三二",
+         "st"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我的手机号是九八七六五四三二。",
+       "Wǒ de shǒujī hào shì jiǔ bā qī liù wǔ sì sān èr.",
+       "",
+       [
+        [
+         "我的手机号是",
+         null
+        ],
+        [
+         "九八七六五四三二",
+         "st"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Số 1 đọc là yāo · số 0 đọc là líng",
+     "cum": [
+      [
+       "一三八〇",
+       "yāo sān bā líng",
+       "",
+       [
+        [
+         "一",
+         "codinh"
+        ],
+        [
+         "三八",
+         "st"
+        ],
+        [
+         "〇",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "一一〇",
+       "yāo yāo líng",
+       "",
+       [
+        [
+         "一一",
+         "codinh"
+        ],
+        [
+         "〇",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我的手机号是一三八〇五九六四二三八。",
+       "Wǒ de shǒujī hào shì yāo sān bā líng wǔ jiǔ liù sì èr sān bā.",
+       "",
+       [
+        [
+         "我的手机号是",
+         null
+        ],
+        [
+         "一",
+         "codinh"
+        ],
+        [
+         "三八",
+         "st"
+        ],
+        [
+         "〇",
+         "codinh"
+        ],
+        [
+         "五九六四二三八",
+         "st"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Số khẩn cấp ở Trung Quốc: 110 · 119 · 120",
+     "cum": [
+      [
+       "一一〇",
+       "yāo yāo líng",
+       "cảnh sát",
+       [
+        [
+         "一一〇",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "一一九",
+       "yāo yāo jiǔ",
+       "cứu hỏa",
+       [
+        [
+         "一一九",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "一二〇",
+       "yāo èr líng",
+       "cấp cứu",
+       [
+        [
+         "一二〇",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你的手机号是多少？",
+       "Nǐ de shǒujī hào shì duōshao?",
+       "",
+       [
+        [
+         "你的",
+         null
+        ],
+        [
+         "手机号",
+         "dt"
+        ],
+        [
+         "是多少",
+         "codinh"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Số **1 đọc là yāo**, không đọc yī: 110 đọc là **yāo yāo líng**.",
+    "Số điện thoại **đọc từng chữ số**, không nói 一千三百…: 九八七六 = **jiǔ bā qī liù**.",
+    "Hỏi số điện thoại: **你的手机号是多少？** Trả lời: **我的手机号是……**"
+   ]
+  },
+  {
+   "id": "gei",
+   "ten": "给 + người + ĐT: 给……打电话",
+   "congThuc": [
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "给",
+      "codinh"
+     ],
+     [
+      "Người",
+      "dt"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ]
+    ],
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "想 / 不想",
+      "codinh"
+     ],
+     [
+      "给",
+      "codinh"
+     ],
+     [
+      "Người",
+      "dt"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ]
+    ]
+   ],
+   "giaiThich": "**给** là **giới từ**, nghĩa \"cho, giúp, đối với\", đặt **trước người nhận** và **trước động từ**: **给 + người + ĐT**. Hay gặp nhất là **给……打电话** = gọi điện cho… Tiếng Việt nói \"gọi điện **cho** anh ấy\" (cho đứng sau), tiếng Trung đặt **给 + người ở trước 打电话**.",
+   "y": [
+    {
+     "noiDung": "给 + người + 打电话",
+     "cum": [
+      [
+       "给妈妈打电话",
+       "gěi māma dǎ diànhuà",
+       "",
+       [
+        [
+         "给",
+         "codinh"
+        ],
+        [
+         "妈妈",
+         "dt"
+        ],
+        [
+         "打电话",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "给你打电话",
+       "gěi nǐ dǎ diànhuà",
+       "",
+       [
+        [
+         "给",
+         "codinh"
+        ],
+        [
+         "你",
+         "dt"
+        ],
+        [
+         "打电话",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "给他打电话",
+       "gěi tā dǎ diànhuà",
+       "",
+       [
+        [
+         "给",
+         "codinh"
+        ],
+        [
+         "他",
+         "dt"
+        ],
+        [
+         "打电话",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "她给爸爸打电话。",
+       "Tā gěi bàba dǎ diànhuà.",
+       "",
+       [
+        [
+         "她",
+         "dt"
+        ],
+        [
+         "给",
+         "codinh"
+        ],
+        [
+         "爸爸",
+         "dt"
+        ],
+        [
+         "打电话",
+         "dgt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "想 / 不想 đặt trước 给",
+     "cum": [
+      [
+       "想给他打电话",
+       "xiǎng gěi tā dǎ diànhuà",
+       "",
+       [
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "给",
+         "codinh"
+        ],
+        [
+         "他",
+         "dt"
+        ],
+        [
+         "打电话",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "不想给我打电话",
+       "bù xiǎng gěi wǒ dǎ diànhuà",
+       "",
+       [
+        [
+         "不想",
+         "codinh"
+        ],
+        [
+         "给",
+         "codinh"
+        ],
+        [
+         "我",
+         "dt"
+        ],
+        [
+         "打电话",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我想给爸妈打电话。",
+       "Wǒ xiǎng gěi bàmā dǎ diànhuà.",
+       "",
+       [
+        [
+         "我",
+         "dt"
+        ],
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "给",
+         "codinh"
+        ],
+        [
+         "爸妈",
+         "dt"
+        ],
+        [
+         "打电话",
+         "dgt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Thứ tự: **CN + 想 / 不 + 给 + người + ĐT**: nói 我想给他打电话, không nói 我给他想打电话.",
+    "**给** còn là **động từ** \"cho, đưa cho\": 爸爸给我一个新手机 (给 + người + vật).",
+    "Hỏi người nhận: **给谁打电话？** (gọi điện cho ai)."
+   ]
+  },
+  {
+   "id": "xiang",
+   "ten": "想 + ĐT · 不想 · 想不想 · 想 + người",
+   "congThuc": [
+    [
+     [
+      "想",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ]
+    ],
+    [
+     [
+      "不想",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ]
+    ],
+    [
+     [
+      "想不想",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "想",
+      "codinh"
+     ],
+     [
+      "Người",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "**想** là **động từ năng nguyện**, đặt **trước động từ chính**, nghĩa là **\"muốn (làm gì)\"**. Phủ định **不想**; hỏi **想不想…？** hoặc **想…吗？** Khi **想 + người** thì nghĩa là **\"nhớ\"** (đã học ở Bài 3).",
+   "y": [
+    {
+     "noiDung": "想 + ĐT: muốn làm gì",
+     "cum": [
+      [
+       "想去",
+       "xiǎng qù",
+       "",
+       [
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "去",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "想吃",
+       "xiǎng chī",
+       "",
+       [
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "吃",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "想休息",
+       "xiǎng xiūxi",
+       "",
+       [
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "休息",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你想去中国吗？",
+       "Nǐ xiǎng qù Zhōngguó ma?",
+       "",
+       [
+        [
+         "你",
+         null
+        ],
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "去中国",
+         "dgt"
+        ],
+        [
+         "吗？",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "不想 + ĐT: không muốn làm gì",
+     "cum": [
+      [
+       "不想去",
+       "bù xiǎng qù",
+       "",
+       [
+        [
+         "不想",
+         "codinh"
+        ],
+        [
+         "去",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "不想吃",
+       "bù xiǎng chī",
+       "",
+       [
+        [
+         "不想",
+         "codinh"
+        ],
+        [
+         "吃",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我哥哥不想休息。",
+       "Wǒ gēge bù xiǎng xiūxi.",
+       "",
+       [
+        [
+         "我哥哥",
+         null
+        ],
+        [
+         "不想",
+         "codinh"
+        ],
+        [
+         "休息",
+         "dgt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Hỏi: 想不想…？ / 想…吗？",
+     "cum": [
+      [
+       "想不想吃",
+       "xiǎng bu xiǎng chī",
+       "",
+       [
+        [
+         "想不想",
+         "codinh"
+        ],
+        [
+         "吃",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你想不想吃饺子？",
+       "Nǐ xiǎng bu xiǎng chī jiǎozi?",
+       "",
+       [
+        [
+         "你",
+         null
+        ],
+        [
+         "想不想",
+         "codinh"
+        ],
+        [
+         "吃饺子",
+         "dgt"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "想 + người: nhớ ai",
+     "cum": [
+      [
+       "想妈妈",
+       "xiǎng māma",
+       "",
+       [
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "妈妈",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "很想爸妈",
+       "hěn xiǎng bàmā",
+       "",
+       [
+        [
+         "很",
+         null
+        ],
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "爸妈",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我很想妈妈。",
+       "Wǒ hěn xiǎng māma.",
+       "",
+       [
+        [
+         "我很",
+         null
+        ],
+        [
+         "想",
+         "codinh"
+        ],
+        [
+         "妈妈",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Phủ định dùng **不想**, không nói 没想.",
+    "Trong 想不想, 不 đọc **nhẹ**: **xiǎng bu xiǎng**. Câu đã dùng **想不想** thì **không thêm 吗**.",
+    "**想 + ĐT** = muốn làm gì; **想 + người** = nhớ ai: 我想去中国 ≠ 我想中国人.",
+    "Trả lời ngắn: **想。/ 不想。**"
+   ]
+  },
+  {
+   "id": "xie",
+   "ten": "哪些 + DT · ĐT + 些 + DT",
+   "congThuc": [
+    [
+     [
+      "哪些",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "ĐT",
+      "dgt"
+     ],
+     [
+      "些",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "Bài 5 đã học **一些 / 这些 / 那些 + DT**. Bài này thêm **哪些 + DT** hỏi \"những … nào?\" và cách nói rút gọn: sau động từ, **一些** có thể **bỏ 一** thành **些**: 买些东西 = 买一些东西. Sau 些 vẫn **không cần lượng từ**.",
+   "y": [
+    {
+     "noiDung": "哪些 + DT: những … nào?",
+     "cum": [
+      [
+       "哪些东西",
+       "nǎxiē dōngxi",
+       "",
+       [
+        [
+         "哪些",
+         "codinh"
+        ],
+        [
+         "东西",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "哪些菜",
+       "nǎxiē cài",
+       "",
+       [
+        [
+         "哪些",
+         "codinh"
+        ],
+        [
+         "菜",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "哪些东西是你的？",
+       "Nǎxiē dōngxi shì nǐ de?",
+       "",
+       [
+        [
+         "哪些",
+         "codinh"
+        ],
+        [
+         "东西",
+         "dt"
+        ],
+        [
+         "是你的？",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "ĐT + 些 + DT: rút gọn từ 一些",
+     "cum": [
+      [
+       "买些东西",
+       "mǎi xiē dōngxi",
+       "",
+       [
+        [
+         "买",
+         "dgt"
+        ],
+        [
+         "些",
+         "codinh"
+        ],
+        [
+         "东西",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "买些牛奶",
+       "mǎi xiē niúnǎi",
+       "",
+       [
+        [
+         "买",
+         "dgt"
+        ],
+        [
+         "些",
+         "codinh"
+        ],
+        [
+         "牛奶",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "吃些包子",
+       "chī xiē bāozi",
+       "",
+       [
+        [
+         "吃",
+         "dgt"
+        ],
+        [
+         "些",
+         "codinh"
+        ],
+        [
+         "包子",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我想买些牛奶。",
+       "Wǒ xiǎng mǎi xiē niúnǎi.",
+       "",
+       [
+        [
+         "我想",
+         null
+        ],
+        [
+         "买",
+         "dgt"
+        ],
+        [
+         "些",
+         "codinh"
+        ],
+        [
+         "牛奶",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**哪些** hỏi \"những … nào\", sau đó **không thêm lượng từ**: 哪些东西, không nói 哪些个东西.",
+    "Chỉ nói **ĐT + 些 + DT** (bỏ 一) khi 些 đứng **sau động từ**: 买些东西 = 买一些东西.",
+    "**这些 / 那些 / 哪些** có thể đứng đầu câu làm chủ ngữ: 这些包子很好吃。"
+   ]
+  },
+  {
+   "id": "feichang",
+   "ten": "非常 + TT / ĐT tâm lý",
+   "congThuc": [
+    [
+     [
+      "非常",
+      "codinh"
+     ],
+     [
+      "TT",
+      "tt"
+     ]
+    ],
+    [
+     [
+      "非常",
+      "codinh"
+     ],
+     [
+      "ĐT tâm lý",
+      "dgt"
+     ]
+    ]
+   ],
+   "giaiThich": "**非常** là **phó từ**, nghĩa là **\"rất, vô cùng\"**, đặt **trước tính từ hoặc động từ tâm lý**. Mức độ **tăng dần**: **很** < **非常**: 很好吃 → 非常好吃.",
+   "y": [
+    {
+     "noiDung": "非常 + TT",
+     "cum": [
+      [
+       "非常好",
+       "fēicháng hǎo",
+       "",
+       [
+        [
+         "非常",
+         "codinh"
+        ],
+        [
+         "好",
+         "tt"
+        ]
+       ]
+      ],
+      [
+       "非常忙",
+       "fēicháng máng",
+       "",
+       [
+        [
+         "非常",
+         "codinh"
+        ],
+        [
+         "忙",
+         "tt"
+        ]
+       ]
+      ],
+      [
+       "非常好吃",
+       "fēicháng hǎochī",
+       "",
+       [
+        [
+         "非常",
+         "codinh"
+        ],
+        [
+         "好吃",
+         "tt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "妈妈今天非常忙。",
+       "Māma jīntiān fēicháng máng.",
+       "",
+       [
+        [
+         "妈妈今天",
+         null
+        ],
+        [
+         "非常",
+         "codinh"
+        ],
+        [
+         "忙",
+         "tt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "非常 + ĐT tâm lý",
+     "cum": [
+      [
+       "非常喜欢",
+       "fēicháng xǐhuan",
+       "",
+       [
+        [
+         "非常",
+         "codinh"
+        ],
+        [
+         "喜欢",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "非常想",
+       "fēicháng xiǎng",
+       "",
+       [
+        [
+         "非常",
+         "codinh"
+        ],
+        [
+         "想",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我非常想去中国。",
+       "Wǒ fēicháng xiǎng qù Zhōngguó.",
+       "",
+       [
+        [
+         "我",
+         null
+        ],
+        [
+         "非常",
+         "codinh"
+        ],
+        [
+         "想",
+         "dgt"
+        ],
+        [
+         "去中国",
+         null
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Mức độ tăng dần: **很好吃 < 非常好吃**.",
+    "**非常 + TT** không thêm **了** ở cuối câu (khác khung 太……了): nói 非常好吃, không nói 非常好吃了.",
+    "非常 đứng **sau chủ ngữ, trước tính từ / động từ**: 我非常喜欢汉语."
+   ]
+  },
+  {
+   "id": "zenme",
+   "ten": "怎么 + ĐT · 怎么样",
+   "congThuc": [
+    [
+     [
+      "怎么",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "怎么",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "……",
+      "dt"
+     ],
+     [
+      "怎么样",
+      "codinh"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "**怎么 + ĐT** hỏi **cách thức** (\"làm thế nào, bằng cách nào\"): 怎么去? 怎么做? 怎么吃? **怎么样** hỏi **tình trạng, chất lượng** (\"thế nào, ra sao\"): 你的新电脑怎么样？",
+   "y": [
+    {
+     "noiDung": "怎么 + ĐT: hỏi cách thức",
+     "cum": [
+      [
+       "怎么去",
+       "zěnme qù",
+       "",
+       [
+        [
+         "怎么",
+         "codinh"
+        ],
+        [
+         "去",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "怎么做",
+       "zěnme zuò",
+       "",
+       [
+        [
+         "怎么",
+         "codinh"
+        ],
+        [
+         "做",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "怎么吃",
+       "zěnme chī",
+       "",
+       [
+        [
+         "怎么",
+         "codinh"
+        ],
+        [
+         "吃",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "怎么走",
+       "zěnme zǒu",
+       "",
+       [
+        [
+         "怎么",
+         "codinh"
+        ],
+        [
+         "走",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "饺子怎么做？",
+       "Jiǎozi zěnme zuò?",
+       "",
+       [
+        [
+         "饺子",
+         "dt"
+        ],
+        [
+         "怎么",
+         "codinh"
+        ],
+        [
+         "做",
+         "dgt"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "CN + 怎么 + ĐT",
+     "viDu": [
+      [
+       "你怎么去超市？",
+       "Nǐ zěnme qù chāoshì?",
+       "",
+       [
+        [
+         "你",
+         "dt"
+        ],
+        [
+         "怎么",
+         "codinh"
+        ],
+        [
+         "去",
+         "dgt"
+        ],
+        [
+         "超市",
+         null
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "怎么样: hỏi tình trạng",
+     "cum": [
+      [
+       "怎么样",
+       "zěnmeyàng",
+       "",
+       [
+        [
+         "怎么样",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你的新电脑怎么样？",
+       "Nǐ de xīn diànnǎo zěnmeyàng?",
+       "",
+       [
+        [
+         "你的新电脑",
+         null
+        ],
+        [
+         "怎么样",
+         "codinh"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**怎么 đứng trước động từ**: 怎么做, 怎么吃; câu hỏi đã có 怎么 thì **không thêm 吗**.",
+    "Trả lời 怎么去？ bằng **坐 / 骑 + phương tiện + 去**: 坐出租车去。",
+    "Phân biệt: **怎么 + ĐT** hỏi **cách làm**, **怎么样** hỏi **tình trạng**: 怎么做饺子？ ≠ 饺子怎么样？"
+   ]
+  },
+  {
+   "id": "lienDong",
+   "ten": "Câu liên động (1): 去 + nơi chốn + ĐT · 坐 + phương tiện + 去",
+   "congThuc": [
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "去",
+      "codinh"
+     ],
+     [
+      "Nơi chốn",
+      "dt"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ],
+     [
+      "(TN)",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "坐",
+      "codinh"
+     ],
+     [
+      "Phương tiện",
+      "dt"
+     ],
+     [
+      "去",
+      "codinh"
+     ],
+     [
+      "(Nơi chốn)",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "CN",
+      "dt"
+     ],
+     [
+      "坐",
+      "codinh"
+     ],
+     [
+      "Phương tiện",
+      "dt"
+     ],
+     [
+      "去",
+      "codinh"
+     ],
+     [
+      "Nơi chốn",
+      "dt"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ],
+     [
+      "(TN)",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "**Câu liên động** là câu có vị ngữ gồm **hai (hoặc nhiều) cụm động từ nối tiếp**, cùng một chủ ngữ: **S + V1 (+ O1) + V2 (+ O2)**. Có hai kiểu: **(1) Chỉ MỤC ĐÍCH**: V2 là mục đích của V1, ví dụ 去超市买东西 (đi siêu thị **để** mua đồ). **(2) Chỉ CÁCH THỨC**: V1 là cách thức của V2, ví dụ 坐出租车去 (**đi bằng** taxi).",
+   "y": [
+    {
+     "noiDung": "Mục đích: 去 + nơi chốn + ĐT (+ TN)",
+     "cum": [
+      [
+       "去超市买菜",
+       "qù chāoshì mǎi cài",
+       "",
+       [
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "超市",
+         "dt"
+        ],
+        [
+         "买菜",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "去饭店吃晚饭",
+       "qù fàndiàn chī wǎnfàn",
+       "",
+       [
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "饭店",
+         "dt"
+        ],
+        [
+         "吃晚饭",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "去中国学汉语",
+       "qù Zhōngguó xué Hànyǔ",
+       "",
+       [
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "中国",
+         "dt"
+        ],
+        [
+         "学汉语",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我们去西安饭店吃晚饭。",
+       "Wǒmen qù Xī'ān Fàndiàn chī wǎnfàn.",
+       "",
+       [
+        [
+         "我们",
+         null
+        ],
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "西安饭店",
+         "dt"
+        ],
+        [
+         "吃晚饭",
+         "dgt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Cách thức: 坐 + phương tiện + 去 (+ nơi chốn)",
+     "cum": [
+      [
+       "坐出租车去",
+       "zuò chūzūchē qù",
+       "",
+       [
+        [
+         "坐",
+         "codinh"
+        ],
+        [
+         "出租车",
+         "dt"
+        ],
+        [
+         "去",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "坐地铁去超市",
+       "zuò dìtiě qù chāoshì",
+       "",
+       [
+        [
+         "坐",
+         "codinh"
+        ],
+        [
+         "地铁",
+         "dt"
+        ],
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "超市",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "骑自行车去",
+       "qí zìxíngchē qù",
+       "",
+       [
+        [
+         "骑",
+         "codinh"
+        ],
+        [
+         "自行车",
+         "dt"
+        ],
+        [
+         "去",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "她坐出租车去超市。",
+       "Tā zuò chūzūchē qù chāoshì.",
+       "",
+       [
+        [
+         "她",
+         null
+        ],
+        [
+         "坐",
+         "codinh"
+        ],
+        [
+         "出租车",
+         "dt"
+        ],
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "超市",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Kết hợp: cách thức trước, mục đích sau",
+     "viDu": [
+      [
+       "我坐出租车去超市买东西。",
+       "Wǒ zuò chūzūchē qù chāoshì mǎi dōngxi.",
+       "",
+       [
+        [
+         "我",
+         null
+        ],
+        [
+         "坐",
+         "codinh"
+        ],
+        [
+         "出租车",
+         "dt"
+        ],
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "超市",
+         "dt"
+        ],
+        [
+         "买东西",
+         "dgt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**不 / 想** đặt **trước V1**: 我想去超市买东西。 他们不骑车去饭店。",
+    "Kết hợp hai kiểu: **cách thức trước, mục đích sau**: 我坐出租车去超市买东西.",
+    "Thứ tự động từ là **thứ tự hành động xảy ra**: nói 我去超市买东西, không nói 我买东西去超市.",
+    "Câu hỏi dùng **吗** ở **cuối câu**: 你去超市买东西吗？"
+   ]
+  },
+  {
+   "id": "luongTu",
+   "ten": "Lượng từ: 台 · 家 · 碗 · 辆",
+   "congThuc": [
+    [
+     [
+      "Số / 这 / 那 / 几",
+      "st"
+     ],
+     [
+      "台 / 家 / 碗 / 辆",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "Mỗi loại vật dùng **lượng từ riêng**: **台** cho máy móc (手机, 电脑), **家** cho cửa hàng, công ty (超市, 饭店), **碗** cho bát đựng đồ ăn (米饭, 饺子), **辆** cho xe cộ (车, 自行车). Cấu trúc: **số / 这 / 那 / 几 + lượng từ + danh từ**.",
+   "y": [
+    {
+     "noiDung": "台: máy móc",
+     "cum": [
+      [
+       "一台手机",
+       "yì tái shǒujī",
+       "",
+       [
+        [
+         "一",
+         "st"
+        ],
+        [
+         "台",
+         "codinh"
+        ],
+        [
+         "手机",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "这台手机很新。",
+       "Zhè tái shǒujī hěn xīn.",
+       "",
+       [
+        [
+         "这",
+         "st"
+        ],
+        [
+         "台",
+         "codinh"
+        ],
+        [
+         "手机",
+         "dt"
+        ],
+        [
+         "很新。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "家: cửa hàng, công ty",
+     "cum": [
+      [
+       "这家超市",
+       "zhè jiā chāoshì",
+       "",
+       [
+        [
+         "这",
+         "st"
+        ],
+        [
+         "家",
+         "codinh"
+        ],
+        [
+         "超市",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "那家饭店",
+       "nà jiā fàndiàn",
+       "",
+       [
+        [
+         "那",
+         "st"
+        ],
+        [
+         "家",
+         "codinh"
+        ],
+        [
+         "饭店",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "这家超市很大。",
+       "Zhè jiā chāoshì hěn dà.",
+       "",
+       [
+        [
+         "这",
+         "st"
+        ],
+        [
+         "家",
+         "codinh"
+        ],
+        [
+         "超市",
+         "dt"
+        ],
+        [
+         "很大。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "碗: bát đựng đồ ăn",
+     "cum": [
+      [
+       "一碗米饭",
+       "yì wǎn mǐfàn",
+       "",
+       [
+        [
+         "一",
+         "st"
+        ],
+        [
+         "碗",
+         "codinh"
+        ],
+        [
+         "米饭",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "两碗饺子",
+       "liǎng wǎn jiǎozi",
+       "",
+       [
+        [
+         "两",
+         "st"
+        ],
+        [
+         "碗",
+         "codinh"
+        ],
+        [
+         "饺子",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我想吃两碗饺子。",
+       "Wǒ xiǎng chī liǎng wǎn jiǎozi.",
+       "",
+       [
+        [
+         "我想吃",
+         null
+        ],
+        [
+         "两",
+         "st"
+        ],
+        [
+         "碗",
+         "codinh"
+        ],
+        [
+         "饺子",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "辆: xe cộ",
+     "cum": [
+      [
+       "一辆车",
+       "yí liàng chē",
+       "",
+       [
+        [
+         "一",
+         "st"
+        ],
+        [
+         "辆",
+         "codinh"
+        ],
+        [
+         "车",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "两辆自行车",
+       "liǎng liàng zìxíngchē",
+       "",
+       [
+        [
+         "两",
+         "st"
+        ],
+        [
+         "辆",
+         "codinh"
+        ],
+        [
+         "自行车",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "爸爸有一辆新车。",
+       "Bàba yǒu yí liàng xīn chē.",
+       "",
+       [
+        [
+         "爸爸有",
+         null
+        ],
+        [
+         "一",
+         "st"
+        ],
+        [
+         "辆",
+         "codinh"
+        ],
+        [
+         "新车",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Xe cộ dùng **辆**, máy móc dùng **台**: một chiếc xe = **一辆车**, một cái máy tính = **一台电脑**.",
+    "**两** đứng trước lượng từ (không nói 二台): 两台手机, 两辆车.",
+    "Lượng từ **家** chỉ cửa hàng, công ty; **家** chỉ gia đình, nhà thì là danh từ: 我家, 这家超市."
+   ]
+  }
+ ],
+ "hoiDap": [
+  {
+   "hoi": [
+    "你的手机号是多少？",
+    "Nǐ de shǒujī hào shì duōshao?",
+    "Số điện thoại di động của bạn là bao nhiêu?"
+   ],
+   "dap": [
+    "我的手机号是九八七六五四三二。",
+    "Wǒ de shǒujī hào shì jiǔ bā qī liù wǔ sì sān èr.",
+    "Số điện thoại di động của mình là 98765432."
+   ],
+   "nhieu": [
+    [
+     "我有两台手机。",
+     "Wǒ yǒu liǎng tái shǒujī.",
+     ""
+    ],
+    [
+     "我的手机很新。",
+     "Wǒ de shǒujī hěn xīn.",
+     ""
+    ],
+    [
+     "我今年二十岁。",
+     "Wǒ jīnnián èrshí suì.",
+     ""
+    ]
+   ],
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "你想给谁打电话？",
+    "Nǐ xiǎng gěi shéi dǎ diànhuà?",
+    "Bạn muốn gọi điện cho ai?"
+   ],
+   "dap": [
+    "我想给妈妈打电话。",
+    "Wǒ xiǎng gěi māma dǎ diànhuà.",
+    "Mình muốn gọi điện cho mẹ."
+   ],
+   "nhieu": [
+    [
+     "我有一个新手机。",
+     "Wǒ yǒu yí ge xīn shǒujī.",
+     ""
+    ],
+    [
+     "妈妈是老师。",
+     "Māma shì lǎoshī.",
+     ""
+    ],
+    [
+     "我想吃饺子。",
+     "Wǒ xiǎng chī jiǎozi.",
+     ""
+    ]
+   ],
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "明天你去哪儿？",
+    "Míngtiān nǐ qù nǎr?",
+    "Ngày mai bạn đi đâu?"
+   ],
+   "dap": [
+    "我去超市买东西。",
+    "Wǒ qù chāoshì mǎi dōngxi.",
+    "Mình đi siêu thị mua đồ."
+   ],
+   "nhieu": [
+    [
+     "明天星期六。",
+     "Míngtiān xīngqīliù.",
+     ""
+    ],
+    [
+     "我很喜欢超市。",
+     "Wǒ hěn xǐhuan chāoshì.",
+     ""
+    ],
+    [
+     "我是越南人。",
+     "Wǒ shì Yuènán rén.",
+     ""
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你想去哪儿吃晚饭？",
+    "Nǐ xiǎng qù nǎr chī wǎnfàn?",
+    "Bạn muốn đi đâu ăn tối?"
+   ],
+   "dap": [
+    "我想去饭店吃。",
+    "Wǒ xiǎng qù fàndiàn chī.",
+    "Mình muốn đến nhà hàng ăn."
+   ],
+   "nhieu": [
+    [
+     "我不想吃晚饭。",
+     "Wǒ bù xiǎng chī wǎnfàn.",
+     ""
+    ],
+    [
+     "晚饭很好吃。",
+     "Wǎnfàn hěn hǎochī.",
+     ""
+    ],
+    [
+     "妈妈做晚饭。",
+     "Māma zuò wǎnfàn.",
+     ""
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你去超市买什么？",
+    "Nǐ qù chāoshì mǎi shénme?",
+    "Bạn đi siêu thị mua gì?"
+   ],
+   "dap": [
+    "我想买些牛奶和面包。",
+    "Wǒ xiǎng mǎi xiē niúnǎi hé miànbāo.",
+    "Mình muốn mua một ít sữa và bánh mì."
+   ],
+   "nhieu": [
+    [
+     "这家超市很大。",
+     "Zhè jiā chāoshì hěn dà.",
+     ""
+    ],
+    [
+     "我星期天去超市。",
+     "Wǒ xīngqītiān qù chāoshì.",
+     ""
+    ],
+    [
+     "我不喝牛奶。",
+     "Wǒ bù hē niúnǎi.",
+     ""
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你喝牛奶吗？",
+    "Nǐ hē niúnǎi ma?",
+    "Bạn có uống sữa không?"
+   ],
+   "dap": [
+    "我不喝牛奶，我喝茶。",
+    "Wǒ bù hē niúnǎi, wǒ hē chá.",
+    "Mình không uống sữa, mình uống trà."
+   ],
+   "nhieu": [
+    [
+     "我想买牛奶。",
+     "Wǒ xiǎng mǎi niúnǎi.",
+     ""
+    ],
+    [
+     "这是我的茶。",
+     "Zhè shì wǒ de chá.",
+     ""
+    ],
+    [
+     "我有一些朋友。",
+     "Wǒ yǒu yìxiē péngyou.",
+     ""
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你早饭吃什么？",
+    "Nǐ zǎofàn chī shénme?",
+    "Bữa sáng bạn ăn gì?"
+   ],
+   "dap": [
+    "我早饭吃包子，喝牛奶。",
+    "Wǒ zǎofàn chī bāozi, hē niúnǎi.",
+    "Bữa sáng mình ăn bánh bao, uống sữa."
+   ],
+   "nhieu": [
+    [
+     "我很喜欢吃饭。",
+     "Wǒ hěn xǐhuan chī fàn.",
+     ""
+    ],
+    [
+     "我早上很忙。",
+     "Wǒ zǎoshang hěn máng.",
+     ""
+    ],
+    [
+     "妈妈做早饭。",
+     "Māma zuò zǎofàn.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "那边的包子好吃吗？",
+    "Nàbiān de bāozi hǎochī ma?",
+    "Bánh bao ở bên kia có ngon không?"
+   ],
+   "dap": [
+    "非常好吃。",
+    "Fēicháng hǎochī.",
+    "Rất ngon."
+   ],
+   "nhieu": [
+    [
+     "我不想吃包子。",
+     "Wǒ bù xiǎng chī bāozi.",
+     ""
+    ],
+    [
+     "那边有一家饭店。",
+     "Nàbiān yǒu yì jiā fàndiàn.",
+     ""
+    ],
+    [
+     "我会做包子。",
+     "Wǒ huì zuò bāozi.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你怎么去超市？",
+    "Nǐ zěnme qù chāoshì?",
+    "Bạn đến siêu thị bằng cách nào?"
+   ],
+   "dap": [
+    "我坐公共汽车去。",
+    "Wǒ zuò gōnggòng qìchē qù.",
+    "Mình đi bằng xe buýt."
+   ],
+   "nhieu": [
+    [
+     "我想去超市。",
+     "Wǒ xiǎng qù chāoshì.",
+     ""
+    ],
+    [
+     "超市很大。",
+     "Chāoshì hěn dà.",
+     ""
+    ],
+    [
+     "我去买东西。",
+     "Wǒ qù mǎi dōngxi.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你们怎么去饭店？",
+    "Nǐmen zěnme qù fàndiàn?",
+    "Các bạn đến nhà hàng bằng cách nào?"
+   ],
+   "dap": [
+    "我们坐出租车去。",
+    "Wǒmen zuò chūzūchē qù.",
+    "Chúng mình đi taxi."
+   ],
+   "nhieu": [
+    [
+     "我们去吃晚饭。",
+     "Wǒmen qù chī wǎnfàn.",
+     ""
+    ],
+    [
+     "这家饭店很大。",
+     "Zhè jiā fàndiàn hěn dà.",
+     ""
+    ],
+    [
+     "我们是同事。",
+     "Wǒmen shì tóngshì.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你会骑自行车吗？",
+    "Nǐ huì qí zìxíngchē ma?",
+    "Bạn biết đi xe đạp không?"
+   ],
+   "dap": [
+    "会，我哥哥有一辆自行车。",
+    "Huì, wǒ gēge yǒu yí liàng zìxíngchē.",
+    "Biết, anh trai mình có một chiếc xe đạp."
+   ],
+   "nhieu": [
+    [
+     "我想买自行车。",
+     "Wǒ xiǎng mǎi zìxíngchē.",
+     ""
+    ],
+    [
+     "我坐地铁去上班。",
+     "Wǒ zuò dìtiě qù shàngbān.",
+     ""
+    ],
+    [
+     "我会说汉语。",
+     "Wǒ huì shuō Hànyǔ.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你的新手机怎么样？",
+    "Nǐ de xīn shǒujī zěnmeyàng?",
+    "Điện thoại mới của bạn thế nào?"
+   ],
+   "dap": [
+    "非常好看，我很喜欢。",
+    "Fēicháng hǎokàn, wǒ hěn xǐhuan.",
+    "Rất đẹp, mình rất thích."
+   ],
+   "nhieu": [
+    [
+     "这是我的手机。",
+     "Zhè shì wǒ de shǒujī.",
+     ""
+    ],
+    [
+     "我有一台新电脑。",
+     "Wǒ yǒu yì tái xīn diànnǎo.",
+     ""
+    ],
+    [
+     "我想买手机。",
+     "Wǒ xiǎng mǎi shǒujī.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "李文问白家月什么？",
+    "Lǐ Wén wèn Bái Jiāyuè shénme?",
+    "Lý Văn hỏi Bạch Gia Nguyệt điều gì?"
+   ],
+   "dap": [
+    "他问白家月的手机号是多少。",
+    "Tā wèn Bái Jiāyuè de shǒujī hào shì duōshao.",
+    "Anh ấy hỏi số điện thoại di động của Bạch Gia Nguyệt là bao nhiêu."
+   ],
+   "nhieu": [
+    [
+     "他是白家月的同学。",
+     "Tā shì Bái Jiāyuè de tóngxué.",
+     ""
+    ],
+    [
+     "他想去超市。",
+     "Tā xiǎng qù chāoshì.",
+     ""
+    ],
+    [
+     "他有一个新手机。",
+     "Tā yǒu yí ge xīn shǒujī.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "白家月明天去哪儿？",
+    "Bái Jiāyuè míngtiān qù nǎr?",
+    "Ngày mai Bạch Gia Nguyệt đi đâu?"
+   ],
+   "dap": [
+    "她想去超市买东西。",
+    "Tā xiǎng qù chāoshì mǎi dōngxi.",
+    "Cô ấy muốn đi siêu thị mua đồ."
+   ],
+   "nhieu": [
+    [
+     "她是法国人。",
+     "Tā shì Fǎguó rén.",
+     ""
+    ],
+    [
+     "明天星期六。",
+     "Míngtiān xīngqīliù.",
+     ""
+    ],
+    [
+     "她喜欢喝牛奶。",
+     "Tā xǐhuan hē niúnǎi.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "白家月想买什么？",
+    "Bái Jiāyuè xiǎng mǎi shénme?",
+    "Bạch Gia Nguyệt muốn mua gì?"
+   ],
+   "dap": [
+    "她想买些牛奶。",
+    "Tā xiǎng mǎi xiē niúnǎi.",
+    "Cô ấy muốn mua một ít sữa."
+   ],
+   "nhieu": [
+    [
+     "她去超市。",
+     "Tā qù chāoshì.",
+     ""
+    ],
+    [
+     "她很喜欢超市。",
+     "Tā hěn xǐhuan chāoshì.",
+     ""
+    ],
+    [
+     "她是陈天中的同学。",
+     "Tā shì Chén Tiānzhōng de tóngxué.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "他们星期天去哪儿吃晚饭？",
+    "Tāmen xīngqītiān qù nǎr chī wǎnfàn?",
+    "Chủ nhật họ đi đâu ăn tối?"
+   ],
+   "dap": [
+    "他们去西安饭店吃晚饭。",
+    "Tāmen qù Xī'ān Fàndiàn chī wǎnfàn.",
+    "Họ đến nhà hàng Tây An ăn tối."
+   ],
+   "nhieu": [
+    [
+     "他们星期天休息。",
+     "Tāmen xīngqītiān xiūxi.",
+     ""
+    ],
+    [
+     "他们是一家人。",
+     "Tāmen shì yì jiā rén.",
+     ""
+    ],
+    [
+     "他们想吃饺子。",
+     "Tāmen xiǎng chī jiǎozi.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "西安饭店的包子好吃吗？",
+    "Xī'ān Fàndiàn de bāozi hǎochī ma?",
+    "Bánh bao của nhà hàng Tây An có ngon không?"
+   ],
+   "dap": [
+    "非常好吃。",
+    "Fēicháng hǎochī.",
+    "Rất ngon."
+   ],
+   "nhieu": [
+    [
+     "他们想吃米饭。",
+     "Tāmen xiǎng chī mǐfàn.",
+     ""
+    ],
+    [
+     "那边有一家饭店。",
+     "Nàbiān yǒu yì jiā fàndiàn.",
+     ""
+    ],
+    [
+     "我会做包子。",
+     "Wǒ huì zuò bāozi.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "刘小明想吃什么？",
+    "Liú Xiǎomíng xiǎng chī shénme?",
+    "Lưu Tiểu Minh muốn ăn gì?"
+   ],
+   "dap": [
+    "他想吃米饭，不想吃包子。",
+    "Tā xiǎng chī mǐfàn, bù xiǎng chī bāozi.",
+    "Cậu ấy muốn ăn cơm, không muốn ăn bánh bao."
+   ],
+   "nhieu": [
+    [
+     "他是刘明的儿子。",
+     "Tā shì Liú Míng de érzi.",
+     ""
+    ],
+    [
+     "他很喜欢包子。",
+     "Tā hěn xǐhuan bāozi.",
+     ""
+    ],
+    [
+     "他今年五岁。",
+     "Tā jīnnián wǔ suì.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "他们怎么去西安饭店？",
+    "Tāmen zěnme qù Xī'ān Fàndiàn?",
+    "Họ đến nhà hàng Tây An bằng cách nào?"
+   ],
+   "dap": [
+    "他们坐出租车去。",
+    "Tāmen zuò chūzūchē qù.",
+    "Họ đi taxi."
+   ],
+   "nhieu": [
+    [
+     "他们去吃晚饭。",
+     "Tāmen qù chī wǎnfàn.",
+     ""
+    ],
+    [
+     "西安饭店很大。",
+     "Xī'ān Fàndiàn hěn dà.",
+     ""
+    ],
+    [
+     "他们很喜欢饭店。",
+     "Tāmen hěn xǐhuan fàndiàn.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "3"
+  }
+ ],
+ "cauLuyen": [
+  {
+   "han": "你的手机号是多少？",
+   "py": "Nǐ de shǒujī hào shì duōshao?",
+   "viet": "Số điện thoại di động của bạn là bao nhiêu?",
+   "tu": [
+    "手机",
+    "号"
+   ],
+   "np": "soDT"
+  },
+  {
+   "han": "我的电话号码是九八七六五四三二。",
+   "py": "Wǒ de diànhuà hàomǎ shì jiǔ bā qī liù wǔ sì sān èr.",
+   "viet": "Số điện thoại của tôi là 98765432.",
+   "tu": [
+    "电话",
+    "号码"
+   ],
+   "np": "soDT"
+  },
+  {
+   "han": "请问，他的手机号是多少？",
+   "py": "Qǐngwèn, tā de shǒujī hào shì duōshao?",
+   "viet": "Xin hỏi, số điện thoại của anh ấy là bao nhiêu?",
+   "tu": [
+    "手机",
+    "号"
+   ],
+   "np": "soDT"
+  },
+  {
+   "han": "一二〇是什么电话？",
+   "py": "Yāo èr líng shì shénme diànhuà?",
+   "viet": "120 là số điện thoại gì?",
+   "tu": [
+    "电话"
+   ],
+   "np": "soDT"
+  },
+  {
+   "han": "她给爸爸打电话。",
+   "py": "Tā gěi bàba dǎ diànhuà.",
+   "viet": "Cô ấy gọi điện cho bố.",
+   "tu": [
+    "电话",
+    "打",
+    "给"
+   ],
+   "np": "gei"
+  },
+  {
+   "han": "我想给妈妈打电话。",
+   "py": "Wǒ xiǎng gěi māma dǎ diànhuà.",
+   "viet": "Tôi muốn gọi điện cho mẹ.",
+   "tu": [
+    "电话",
+    "想",
+    "打",
+    "给"
+   ],
+   "np": "gei"
+  },
+  {
+   "han": "明天他给你打电话。",
+   "py": "Míngtiān tā gěi nǐ dǎ diànhuà.",
+   "viet": "Ngày mai anh ấy gọi điện cho bạn.",
+   "tu": [
+    "电话",
+    "明天",
+    "打",
+    "给"
+   ],
+   "np": "gei"
+  },
+  {
+   "han": "你想不想给朋友打电话？",
+   "py": "Nǐ xiǎng bu xiǎng gěi péngyou dǎ diànhuà?",
+   "viet": "Bạn có muốn gọi điện cho bạn bè không?",
+   "tu": [
+    "电话",
+    "想",
+    "打",
+    "给"
+   ],
+   "np": "gei"
+  },
+  {
+   "han": "我不想去，我想休息。",
+   "py": "Wǒ bù xiǎng qù, wǒ xiǎng xiūxi.",
+   "viet": "Tôi không muốn đi, tôi muốn nghỉ ngơi.",
+   "tu": [
+    "去",
+    "想"
+   ],
+   "np": "xiang"
+  },
+  {
+   "han": "你想吃什么？",
+   "py": "Nǐ xiǎng chī shénme?",
+   "viet": "Bạn muốn ăn gì?",
+   "tu": [
+    "想",
+    "吃"
+   ],
+   "np": "xiang"
+  },
+  {
+   "han": "你想不想去中国？",
+   "py": "Nǐ xiǎng bu xiǎng qù Zhōngguó?",
+   "viet": "Bạn có muốn đi Trung Quốc không?",
+   "tu": [
+    "去",
+    "想"
+   ],
+   "np": "xiang"
+  },
+  {
+   "han": "我很想爸爸妈妈。",
+   "py": "Wǒ hěn xiǎng bàba māma.",
+   "viet": "Tôi rất nhớ bố mẹ.",
+   "tu": [
+    "想"
+   ],
+   "np": "xiang"
+  },
+  {
+   "han": "这些东西是谁的？",
+   "py": "Zhèxiē dōngxi shì shéi de?",
+   "viet": "Những đồ này là của ai?",
+   "tu": [
+    "东西",
+    "些"
+   ],
+   "np": "xie"
+  },
+  {
+   "han": "哪些菜好吃？",
+   "py": "Nǎxiē cài hǎochī?",
+   "viet": "Những món nào ngon?",
+   "tu": [
+    "些",
+    "好吃"
+   ],
+   "np": "xie"
+  },
+  {
+   "han": "我们去商店买些水。",
+   "py": "Wǒmen qù shāngdiàn mǎi xiē shuǐ.",
+   "viet": "Chúng tôi đến cửa hàng mua một ít nước.",
+   "tu": [
+    "去",
+    "买",
+    "些",
+    "商店",
+    "水"
+   ],
+   "np": "xie"
+  },
+  {
+   "han": "妈妈想买些牛奶和面包。",
+   "py": "Māma xiǎng mǎi xiē niúnǎi hé miànbāo.",
+   "viet": "Mẹ muốn mua một ít sữa và bánh mì.",
+   "tu": [
+    "想",
+    "买",
+    "些",
+    "牛奶"
+   ],
+   "np": "xie"
+  },
+  {
+   "han": "这家饭店的菜非常好吃。",
+   "py": "Zhè jiā fàndiàn de cài fēicháng hǎochī.",
+   "viet": "Món ăn của nhà hàng này vô cùng ngon.",
+   "tu": [
+    "饭店",
+    "非常",
+    "好吃"
+   ],
+   "np": "feichang"
+  },
+  {
+   "han": "爸爸今天非常忙。",
+   "py": "Bàba jīntiān fēicháng máng.",
+   "viet": "Hôm nay bố rất bận.",
+   "tu": [
+    "非常"
+   ],
+   "np": "feichang"
+  },
+  {
+   "han": "我非常喜欢吃饺子。",
+   "py": "Wǒ fēicháng xǐhuan chī jiǎozi.",
+   "viet": "Tôi vô cùng thích ăn sủi cảo.",
+   "tu": [
+    "吃",
+    "非常"
+   ],
+   "np": "feichang"
+  },
+  {
+   "han": "这台电脑非常新。",
+   "py": "Zhè tái diànnǎo fēicháng xīn.",
+   "viet": "Chiếc máy tính này rất mới.",
+   "tu": [
+    "非常"
+   ],
+   "np": "feichang"
+  },
+  {
+   "han": "去超市怎么走？",
+   "py": "Qù chāoshì zěnme zǒu?",
+   "viet": "Đến siêu thị đi như thế nào?",
+   "tu": [
+    "去",
+    "超市",
+    "怎么",
+    "走"
+   ],
+   "np": "zenme"
+  },
+  {
+   "han": "你们怎么去饭店？",
+   "py": "Nǐmen zěnme qù fàndiàn?",
+   "viet": "Các bạn đến nhà hàng bằng cách nào?",
+   "tu": [
+    "去",
+    "饭店",
+    "怎么"
+   ],
+   "np": "zenme"
+  },
+  {
+   "han": "这个菜怎么吃？",
+   "py": "Zhè ge cài zěnme chī?",
+   "viet": "Món này ăn như thế nào?",
+   "tu": [
+    "吃",
+    "怎么"
+   ],
+   "np": "zenme"
+  },
+  {
+   "han": "这道菜怎么做？",
+   "py": "Zhè dào cài zěnme zuò?",
+   "viet": "Món này làm như thế nào?",
+   "tu": [
+    "怎么"
+   ],
+   "np": "zenme"
+  },
+  {
+   "han": "你的手机怎么样？",
+   "py": "Nǐ de shǒujī zěnmeyàng?",
+   "viet": "Điện thoại của bạn thế nào?",
+   "tu": [
+    "手机",
+    "怎么样"
+   ],
+   "np": "zenme"
+  },
+  {
+   "han": "我们去饭店吃晚饭。",
+   "py": "Wǒmen qù fàndiàn chī wǎnfàn.",
+   "viet": "Chúng tôi đến nhà hàng ăn tối.",
+   "tu": [
+    "去",
+    "饭店",
+    "晚饭",
+    "吃"
+   ],
+   "np": "lienDong"
+  },
+  {
+   "han": "妈妈去商店买牛奶。",
+   "py": "Māma qù shāngdiàn mǎi niúnǎi.",
+   "viet": "Mẹ đến cửa hàng mua sữa.",
+   "tu": [
+    "去",
+    "买",
+    "牛奶",
+    "商店"
+   ],
+   "np": "lienDong"
+  },
+  {
+   "han": "他们坐地铁去上班。",
+   "py": "Tāmen zuò dìtiě qù shàngbān.",
+   "viet": "Họ đi tàu điện ngầm đi làm.",
+   "tu": [
+    "去",
+    "坐",
+    "地铁"
+   ],
+   "np": "lienDong"
+  },
+  {
+   "han": "我想坐出租车去超市买东西。",
+   "py": "Wǒ xiǎng zuò chūzūchē qù chāoshì mǎi dōngxi.",
+   "viet": "Tôi muốn đi taxi đến siêu thị mua đồ.",
+   "tu": [
+    "去",
+    "想",
+    "超市",
+    "买",
+    "东西",
+    "坐",
+    "出租车"
+   ],
+   "np": "lienDong"
+  },
+  {
+   "han": "哥哥骑自行车去上班。",
+   "py": "Gēge qí zìxíngchē qù shàngbān.",
+   "viet": "Anh trai đạp xe đi làm.",
+   "tu": [
+    "去",
+    "自行车",
+    "骑"
+   ],
+   "np": "lienDong"
+  },
+  {
+   "han": "我想买一台新电脑。",
+   "py": "Wǒ xiǎng mǎi yì tái xīn diànnǎo.",
+   "viet": "Tôi muốn mua một chiếc máy tính mới.",
+   "tu": [
+    "想",
+    "买"
+   ],
+   "np": "luongTu"
+  },
+  {
+   "han": "那家商店卖牛奶吗？",
+   "py": "Nà jiā shāngdiàn mài niúnǎi ma?",
+   "viet": "Cửa hàng kia có bán sữa không?",
+   "tu": [
+    "牛奶",
+    "卖",
+    "商店"
+   ],
+   "np": "luongTu"
+  },
+  {
+   "han": "妈妈做了两碗面条儿。",
+   "py": "Māma zuò le liǎng wǎn miàntiáor.",
+   "viet": "Mẹ nấu hai bát mì.",
+   "tu": [
+    "碗"
+   ],
+   "np": "luongTu",
+   "doc": "妈妈做了两碗面条。"
+  },
+  {
+   "han": "我哥哥有两辆车。",
+   "py": "Wǒ gēge yǒu liǎng liàng chē.",
+   "viet": "Anh trai tôi có hai chiếc xe.",
+   "tu": [
+    "车",
+    "辆"
+   ],
+   "np": "luongTu"
+  },
+  {
+   "han": "我想喝奶茶，不想喝水。",
+   "py": "Wǒ xiǎng hē nǎichá, bù xiǎng hē shuǐ.",
+   "viet": "Tôi muốn uống trà sữa, không muốn uống nước.",
+   "tu": [
+    "想",
+    "水",
+    "奶茶"
+   ]
+  },
+  {
+   "han": "你早饭吃什么？我吃面包。",
+   "py": "Nǐ zǎofàn chī shénme? Wǒ chī miànbāo.",
+   "viet": "Bữa sáng bạn ăn gì? Tôi ăn bánh mì.",
+   "tu": [
+    "吃",
+    "早饭"
+   ]
+  },
+  {
+   "han": "午饭我吃一碗米饭和一些菜。",
+   "py": "Wǔfàn wǒ chī yì wǎn mǐfàn hé yìxiē cài.",
+   "viet": "Bữa trưa tôi ăn một bát cơm và một ít món ăn.",
+   "tu": [
+    "米饭",
+    "些",
+    "吃",
+    "碗",
+    "午饭"
+   ]
+  },
+  {
+   "han": "这边的包子很好吃，那边的不好吃。",
+   "py": "Zhèbiān de bāozi hěn hǎochī, nàbiān de bù hǎochī.",
+   "viet": "Bánh bao ở bên này rất ngon, bên kia không ngon.",
+   "tu": [
+    "那边",
+    "好吃",
+    "包子",
+    "这边"
+   ]
+  },
+  {
+   "han": "这家超市卖的东西很多。",
+   "py": "Zhè jiā chāoshì mài de dōngxi hěn duō.",
+   "viet": "Siêu thị này bán rất nhiều đồ.",
+   "tu": [
+    "超市",
+    "东西",
+    "卖"
+   ]
+  },
+  {
+   "han": "明天星期六，我想去超市买东西。",
+   "py": "Míngtiān xīngqīliù, wǒ xiǎng qù chāoshì mǎi dōngxi.",
+   "viet": "Ngày mai thứ bảy, tôi muốn đi siêu thị mua đồ.",
+   "tu": [
+    "明天",
+    "去",
+    "想",
+    "超市",
+    "买",
+    "东西"
+   ]
+  },
+  {
+   "han": "你去哪儿？我去商店。",
+   "py": "Nǐ qù nǎr? Wǒ qù shāngdiàn.",
+   "viet": "Bạn đi đâu? Tôi đi cửa hàng.",
+   "tu": [
+    "去",
+    "哪儿",
+    "商店"
+   ]
+  },
+  {
+   "han": "我不会骑马，我会骑自行车。",
+   "py": "Wǒ bú huì qí mǎ, wǒ huì qí zìxíngchē.",
+   "viet": "Tôi không biết cưỡi ngựa, tôi biết đi xe đạp.",
+   "tu": [
+    "自行车",
+    "骑",
+    "马"
+   ]
+  },
+  {
+   "han": "家月，你的手机号是多少？",
+   "py": "Jiāyuè, nǐ de shǒujī hào shì duōshao?",
+   "viet": "Gia Nguyệt, số điện thoại di động của bạn là bao nhiêu?",
+   "tu": [
+    "手机",
+    "号"
+   ],
+   "nguon": "baiKhoa",
+   "np": "soDT"
+  },
+  {
+   "han": "家月，明天你去哪儿？",
+   "py": "Jiāyuè, míngtiān nǐ qù nǎr?",
+   "viet": "Gia Nguyệt, ngày mai bạn đi đâu?",
+   "tu": [
+    "明天",
+    "去",
+    "哪儿"
+   ],
+   "nguon": "baiKhoa"
+  },
+  {
+   "han": "白家月想去超市买牛奶。",
+   "py": "Bái Jiāyuè xiǎng qù chāoshì mǎi niúnǎi.",
+   "viet": "Bạch Gia Nguyệt muốn đi siêu thị mua sữa.",
+   "tu": [
+    "去",
+    "想",
+    "超市",
+    "买",
+    "牛奶"
+   ],
+   "nguon": "baiKhoa",
+   "np": "lienDong"
+  },
+  {
+   "han": "星期天我们去哪儿吃晚饭？",
+   "py": "Xīngqītiān wǒmen qù nǎr chī wǎnfàn?",
+   "viet": "Chủ nhật chúng ta đi đâu ăn tối?",
+   "tu": [
+    "去",
+    "哪儿",
+    "晚饭",
+    "吃"
+   ],
+   "nguon": "baiKhoa",
+   "np": "lienDong"
+  },
+  {
+   "han": "那边的包子非常好吃，我想吃包子。",
+   "py": "Nàbiān de bāozi fēicháng hǎochī, wǒ xiǎng chī bāozi.",
+   "viet": "Bánh bao ở bên kia vô cùng ngon, con muốn ăn bánh bao.",
+   "tu": [
+    "想",
+    "吃",
+    "那边",
+    "非常",
+    "好吃",
+    "包子"
+   ],
+   "nguon": "baiKhoa",
+   "np": "feichang"
+  },
+  {
+   "han": "好的。我们怎么去？",
+   "py": "Hǎo de. Wǒmen zěnme qù?",
+   "viet": "Được rồi. Chúng ta đi bằng cách nào?",
+   "tu": [
+    "去",
+    "怎么"
+   ],
+   "nguon": "baiKhoa",
+   "np": "zenme"
+  },
+  {
+   "han": "坐出租车去。",
+   "py": "Zuò chūzūchē qù.",
+   "viet": "Đi bằng taxi.",
+   "tu": [
+    "去",
+    "坐",
+    "出租车"
+   ],
+   "nguon": "baiKhoa",
+   "np": "lienDong"
+  },
+  {
+   "han": "刘小明想吃米饭，不想吃包子。",
+   "py": "Liú Xiǎomíng xiǎng chī mǐfàn, bù xiǎng chī bāozi.",
+   "viet": "Lưu Tiểu Minh muốn ăn cơm, không muốn ăn bánh bao.",
+   "tu": [
+    "想",
+    "米饭",
+    "吃",
+    "包子"
+   ],
+   "nguon": "baiKhoa",
+   "np": "xiang"
+  }
+ ],
+ "hoiThoai": [
+  {
+   "ten": "Hỏi số điện thoại",
+   "luot": [
+    {
+     "han": "请问，你的手机号是多少？",
+     "py": "Qǐngwèn, nǐ de shǒujī hào shì duōshao?",
+     "viet": "Xin hỏi, số điện thoại của bạn là bao nhiêu?"
+    },
+    {
+     "han": "我的手机号是九八七六五四三二。",
+     "py": "Wǒ de shǒujī hào shì jiǔ bā qī liù wǔ sì sān èr.",
+     "viet": "Số điện thoại của mình là 98765432."
+    },
+    {
+     "han": "好的，我明天给你打电话。",
+     "py": "Hǎo de, wǒ míngtiān gěi nǐ dǎ diànhuà.",
+     "viet": "Được, ngày mai mình sẽ gọi điện cho bạn."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我的手机很新。",
+      "py": "Wǒ de shǒujī hěn xīn."
+     },
+     {
+      "han": "我是越南人。",
+      "py": "Wǒ shì Yuènán rén."
+     },
+     {
+      "han": "我有两个哥哥。",
+      "py": "Wǒ yǒu liǎng ge gēge."
+     }
+    ],
+    "2": [
+     {
+      "han": "不客气！",
+      "py": "Bú kèqi!"
+     },
+     {
+      "han": "我也想吃饺子。",
+      "py": "Wǒ yě xiǎng chī jiǎozi."
+     },
+     {
+      "han": "明天星期六。",
+      "py": "Míngtiān xīngqīliù."
+     }
+    ]
+   },
+   "chang": "1"
+  },
+  {
+   "ten": "Đi siêu thị mua gì",
+   "luot": [
+    {
+     "han": "明天你去哪儿？",
+     "py": "Míngtiān nǐ qù nǎr?",
+     "viet": "Ngày mai bạn đi đâu?"
+    },
+    {
+     "han": "我想去超市买东西。你呢？",
+     "py": "Wǒ xiǎng qù chāoshì mǎi dōngxi. Nǐ ne?",
+     "viet": "Mình muốn đi siêu thị mua đồ. Còn bạn?"
+    },
+    {
+     "han": "我也去超市，我们一起坐地铁去。",
+     "py": "Wǒ yě qù chāoshì, wǒmen yìqǐ zuò dìtiě qù.",
+     "viet": "Mình cũng đi siêu thị, chúng ta cùng đi tàu điện ngầm."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我想去中国。",
+      "py": "Wǒ xiǎng qù Zhōngguó."
+     },
+     {
+      "han": "明天星期六。",
+      "py": "Míngtiān xīngqīliù."
+     },
+     {
+      "han": "我是学生。",
+      "py": "Wǒ shì xué·shēng."
+     }
+    ],
+    "2": [
+     {
+      "han": "超市很大。",
+      "py": "Chāoshì hěn dà."
+     },
+     {
+      "han": "我不喝牛奶。",
+      "py": "Wǒ bù hē niúnǎi."
+     },
+     {
+      "han": "我坐出租车去。",
+      "py": "Wǒ zuò chūzūchē qù."
+     }
+    ]
+   },
+   "chang": "3"
+  },
+  {
+   "ten": "Đi taxi đến nhà hàng",
+   "luot": [
+    {
+     "han": "我们怎么去饭店？",
+     "py": "Wǒmen zěnme qù fàndiàn?",
+     "viet": "Chúng ta đến nhà hàng bằng cách nào?"
+    },
+    {
+     "han": "我们坐出租车去。",
+     "py": "Wǒmen zuò chūzūchē qù.",
+     "viet": "Chúng ta đi taxi."
+    },
+    {
+     "han": "好的，我打车。",
+     "py": "Hǎo de, wǒ dǎ chē.",
+     "viet": "Được, mình gọi xe."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我想吃米饭。",
+      "py": "Wǒ xiǎng chī mǐfàn."
+     },
+     {
+      "han": "这家饭店很大。",
+      "py": "Zhè jiā fàndiàn hěn dà."
+     },
+     {
+      "han": "我不去饭店。",
+      "py": "Wǒ bú qù fàndiàn."
+     }
+    ],
+    "2": [
+     {
+      "han": "我想去超市。",
+      "py": "Wǒ xiǎng qù chāoshì."
+     },
+     {
+      "han": "明天我休息。",
+      "py": "Míngtiān wǒ xiūxi."
+     },
+     {
+      "han": "我喜欢骑自行车。",
+      "py": "Wǒ xǐhuan qí zìxíngchē."
+     }
+    ]
+   },
+   "chang": "3"
+  },
+  {
+   "ten": "Bài khóa · Hỏi số điện thoại",
+   "luot": [
+    {
+     "han": "家月，你的手机号是多少？",
+     "py": "Jiāyuè, nǐ de shǒujī hào shì duōshao?",
+     "viet": "Gia Nguyệt, số điện thoại di động của bạn là bao nhiêu?"
+    },
+    {
+     "han": "我的手机号是九八七六五四三二。",
+     "py": "Wǒ de shǒujī hào shì jiǔ bā qī liù wǔ sì sān èr.",
+     "viet": "Số điện thoại di động của mình là 98765432."
+    },
+    {
+     "han": "好的。",
+     "py": "Hǎo de.",
+     "viet": "Được rồi."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我的手机很新。",
+      "py": "Wǒ de shǒujī hěn xīn."
+     },
+     {
+      "han": "我想去超市。",
+      "py": "Wǒ xiǎng qù chāoshì."
+     },
+     {
+      "han": "明天星期六。",
+      "py": "Míngtiān xīngqīliù."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "1"
+  },
+  {
+   "ten": "Bài khóa · Ngày mai đi siêu thị",
+   "luot": [
+    {
+     "han": "家月，明天你去哪儿？",
+     "py": "Jiāyuè, míngtiān nǐ qù nǎr?",
+     "viet": "Gia Nguyệt, ngày mai bạn đi đâu?"
+    },
+    {
+     "han": "我想去超市买东西。",
+     "py": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
+     "viet": "Mình muốn đi siêu thị mua đồ."
+    },
+    {
+     "han": "你去超市买什么？",
+     "py": "Nǐ qù chāoshì mǎi shénme?",
+     "viet": "Bạn đi siêu thị mua gì?"
+    },
+    {
+     "han": "我想买些牛奶。",
+     "py": "Wǒ xiǎng mǎi xiē niúnǎi.",
+     "viet": "Mình muốn mua một ít sữa."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我想去中国。",
+      "py": "Wǒ xiǎng qù Zhōngguó."
+     },
+     {
+      "han": "明天我休息。",
+      "py": "Míngtiān wǒ xiūxi."
+     },
+     {
+      "han": "我很喜欢超市。",
+      "py": "Wǒ hěn xǐhuan chāoshì."
+     }
+    ],
+    "3": [
+     {
+      "han": "我去超市。",
+      "py": "Wǒ qù chāoshì."
+     },
+     {
+      "han": "超市很大。",
+      "py": "Chāoshì hěn dà."
+     },
+     {
+      "han": "我不喝牛奶。",
+      "py": "Wǒ bù hē niúnǎi."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "ten": "Bài khóa · Ăn tối ở nhà hàng",
+   "luot": [
+    {
+     "han": "星期天我们去哪儿吃晚饭？",
+     "py": "Xīngqītiān wǒmen qù nǎr chī wǎnfàn?",
+     "viet": "Chủ nhật chúng ta đi đâu ăn tối?"
+    },
+    {
+     "han": "我还想去西安饭店。",
+     "py": "Wǒ hái xiǎng qù Xī'ān Fàndiàn.",
+     "viet": "Con còn muốn đến nhà hàng Tây An."
+    },
+    {
+     "han": "好的。我们怎么去？",
+     "py": "Hǎo de. Wǒmen zěnme qù?",
+     "viet": "Được rồi. Chúng ta đi bằng cách nào?"
+    },
+    {
+     "han": "坐出租车去。",
+     "py": "Zuò chūzūchē qù.",
+     "viet": "Đi bằng taxi."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我想吃饺子。",
+      "py": "Wǒ xiǎng chī jiǎozi."
+     },
+     {
+      "han": "晚饭很好吃。",
+      "py": "Wǎnfàn hěn hǎochī."
+     },
+     {
+      "han": "我不想去。",
+      "py": "Wǒ bù xiǎng qù."
+     }
+    ],
+    "3": [
+     {
+      "han": "我们去吃晚饭。",
+      "py": "Wǒmen qù chī wǎnfàn."
+     },
+     {
+      "han": "出租车很新。",
+      "py": "Chūzūchē hěn xīn."
+     },
+     {
+      "han": "饭店很大。",
+      "py": "Fàndiàn hěn dà."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "3"
+  }
+ ],
+ "ctTruoc": {
+  "天": {
+   "ma": "1-0181",
+   "han": "今天",
+   "bai": "Bài 5",
+   "url": "chuong-trinh-hsk/hsk1/bai-5/tu-vung.html"
+  },
+  "明": {
+   "ma": "1-0247",
+   "han": "明年",
+   "bai": "Bài 4",
+   "url": "chuong-trinh-hsk/hsk1/bai-4/tu-vung.html"
+  },
+  "哪": {
+   "ma": "1-0250",
+   "han": "哪",
+   "bai": "Bài 3",
+   "url": "chuong-trinh-hsk/hsk1/bai-3/tu-vung.html"
+  },
+  "想": {
+   "ma": "1-0400",
+   "han": "想",
+   "bai": "Bài 3",
+   "url": "chuong-trinh-hsk/hsk1/bai-3/tu-vung.html"
+  },
+  "好": {
+   "ma": "1-0138",
+   "han": "好",
+   "bai": "Bài 1",
+   "url": "chuong-trinh-hsk/hsk1/bai-1/tu-vung.html"
+  },
+  "这": {
+   "ma": "1-0464",
+   "han": "这",
+   "bai": "Bài 3",
+   "url": "chuong-trinh-hsk/hsk1/bai-3/tu-vung.html"
+  }
+ },
+ "nguPhapLuyen": {
+  "phienBan": "2026-10-29a",
+  "dacDiem": [
+   {
+    "ma": "sd-doc",
+    "np": "soDT",
+    "ten": "Số điện thoại đọc từng chữ số một",
+    "nguon": "y1-L2"
+   },
+   {
+    "ma": "sd-yao",
+    "np": "soDT",
+    "ten": "Số 1 đọc là yāo · số 0 đọc là líng",
+    "nguon": "y2-y3-L1"
+   },
+   {
+    "ma": "sd-hoi",
+    "np": "soDT",
+    "ten": "Hỏi số điện thoại: ……是多少？",
+    "nguon": "L3"
+   },
+   {
+    "ma": "ge-ptd",
+    "np": "gei",
+    "ten": "给 + người + ĐT: 给……打电话",
+    "nguon": "y1"
+   },
+   {
+    "ma": "ge-xiang",
+    "np": "gei",
+    "ten": "想 / 不想 đặt trước 给",
+    "nguon": "y2-L1"
+   },
+   {
+    "ma": "ge-dongtu",
+    "np": "gei",
+    "ten": "给 là động từ: 给 + người + vật",
+    "nguon": "L2"
+   },
+   {
+    "ma": "xi-kd",
+    "np": "xiang",
+    "ten": "想 + ĐT: muốn làm gì",
+    "nguon": "y1"
+   },
+   {
+    "ma": "xi-pd",
+    "np": "xiang",
+    "ten": "Phủ định 不想, không nói 没想",
+    "nguon": "y2-L1"
+   },
+   {
+    "ma": "xi-hoi",
+    "np": "xiang",
+    "ten": "Hỏi 想不想…？ (không thêm 吗)",
+    "nguon": "y3-L2"
+   },
+   {
+    "ma": "xi-nho",
+    "np": "xiang",
+    "ten": "想 + người: nhớ ai",
+    "nguon": "y4-L3"
+   },
+   {
+    "ma": "xe-na",
+    "np": "xie",
+    "ten": "哪些 + DT: những … nào?",
+    "nguon": "y1"
+   },
+   {
+    "ma": "xe-bo",
+    "np": "xie",
+    "ten": "ĐT + 些 + DT: rút gọn từ 一些",
+    "nguon": "y2-L2"
+   },
+   {
+    "ma": "xe-lt",
+    "np": "xie",
+    "ten": "Sau 些 không thêm lượng từ",
+    "nguon": "L1"
+   },
+   {
+    "ma": "fc-tt",
+    "np": "feichang",
+    "ten": "非常 + TT: rất, vô cùng",
+    "nguon": "y1"
+   },
+   {
+    "ma": "fc-dt",
+    "np": "feichang",
+    "ten": "非常 + ĐT tâm lý",
+    "nguon": "y2"
+   },
+   {
+    "ma": "fc-le",
+    "np": "feichang",
+    "ten": "非常 + TT không thêm 了 (khác 太……了)",
+    "nguon": "L2"
+   },
+   {
+    "ma": "zm-cach",
+    "np": "zenme",
+    "ten": "怎么 + ĐT: hỏi cách thức",
+    "nguon": "y1-y2"
+   },
+   {
+    "ma": "zm-yang",
+    "np": "zenme",
+    "ten": "怎么样: hỏi tình trạng, chất lượng",
+    "nguon": "y3"
+   },
+   {
+    "ma": "zm-pb",
+    "np": "zenme",
+    "ten": "Phân biệt 怎么 (cách làm) và 怎么样 (tình trạng)",
+    "nguon": "L3"
+   },
+   {
+    "ma": "zm-ma",
+    "np": "zenme",
+    "ten": "Câu có 怎么 không thêm 吗",
+    "nguon": "L1"
+   },
+   {
+    "ma": "ld-md",
+    "np": "lienDong",
+    "ten": "Mục đích: 去 + nơi chốn + ĐT",
+    "nguon": "y1"
+   },
+   {
+    "ma": "ld-ct",
+    "np": "lienDong",
+    "ten": "Cách thức: 坐 + phương tiện + 去",
+    "nguon": "y2"
+   },
+   {
+    "ma": "ld-kh",
+    "np": "lienDong",
+    "ten": "Kết hợp: cách thức trước, mục đích sau",
+    "nguon": "y3-L2"
+   },
+   {
+    "ma": "ld-bu",
+    "np": "lienDong",
+    "ten": "不 / 想 đặt trước V1",
+    "nguon": "L1"
+   },
+   {
+    "ma": "ld-tt",
+    "np": "lienDong",
+    "ten": "Thứ tự động từ = thứ tự hành động",
+    "nguon": "L3"
+   },
+   {
+    "ma": "lt-tai",
+    "np": "luongTu",
+    "ten": "台: máy móc",
+    "nguon": "y1"
+   },
+   {
+    "ma": "lt-jia",
+    "np": "luongTu",
+    "ten": "家: cửa hàng, công ty",
+    "nguon": "y2"
+   },
+   {
+    "ma": "lt-wan",
+    "np": "luongTu",
+    "ten": "碗: bát đựng đồ ăn",
+    "nguon": "y3"
+   },
+   {
+    "ma": "lt-liang",
+    "np": "luongTu",
+    "ten": "辆: xe cộ",
+    "nguon": "y4-L1"
+   },
+   {
+    "ma": "lt-hai",
+    "np": "luongTu",
+    "ten": "Trước lượng từ dùng 两, không dùng 二",
+    "nguon": "L2"
+   }
+  ],
+  "cau": [
+   {
+    "ma": "b6-sd-doc-1",
+    "np": "soDT",
+    "dang": "chon",
+    "dd": "sd-doc",
+    "cau": "我的手机号是＿。",
+    "py": "Wǒ de shǒujī hào shì jiǔ bā qī liù wǔ sì sān èr.",
+    "nghia": "Số điện thoại của tôi là 98765432.",
+    "dap": "九八七六五四三二",
+    "nhieu": [
+     "九千八百七十六万",
+     "九八七六万五四三二"
+    ],
+    "gt": "Số điện thoại **đọc từng chữ số một**, không đọc như số đếm."
+   },
+   {
+    "ma": "b6-sd-doc-2",
+    "np": "soDT",
+    "dang": "dungSai",
+    "dd": "sd-doc",
+    "cau": "我的电话号码是九千八百七十六。",
+    "py": "Wǒ de diànhuà hàomǎ shì jiǔqiān bābǎi qīshíliù.",
+    "dung": false,
+    "gt": "Số điện thoại **đọc từng chữ số**, không đọc như số đếm.",
+    "sua": "我的电话号码是九八七六。",
+    "pySua": "Wǒ de diànhuà hàomǎ shì jiǔ bā qī liù.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b6-sd-yao-1",
+    "np": "soDT",
+    "dang": "chon",
+    "kieu": "py",
+    "dd": "sd-yao",
+    "cau": "我的手机号是一三八〇五九六四二三八。",
+    "py": "Wǒ de shǒujī hào shì yāo sān bā líng wǔ jiǔ liù sì èr sān bā.",
+    "tu": "一",
+    "dap": "yāo",
+    "nhieu": [
+     "yī",
+     "yí"
+    ],
+    "gt": "Trong số điện thoại, **1 đọc là yāo** để khỏi nhầm với 7 (qī)."
+   },
+   {
+    "ma": "b6-sd-yao-2",
+    "np": "soDT",
+    "dang": "chon",
+    "kieu": "py",
+    "dd": "sd-yao",
+    "cau": "一一〇是什么电话？",
+    "py": "Yāo yāo líng shì shénme diànhuà?",
+    "tu": "〇",
+    "dap": "líng",
+    "nhieu": [
+     "yāo",
+     "lìng"
+    ],
+    "gt": "Số **0 đọc là líng**."
+   },
+   {
+    "ma": "b6-sd-hoi-1",
+    "np": "soDT",
+    "dang": "chon",
+    "dd": "sd-hoi",
+    "cau": "你的电话号码是＿？",
+    "py": "Nǐ de diànhuà hàomǎ shì duōshao?",
+    "nghia": "Số điện thoại của bạn là bao nhiêu?",
+    "dap": "多少",
+    "nhieu": [
+     "几岁",
+     "怎么"
+    ],
+    "gt": "Hỏi số điện thoại dùng **是多少**."
+   },
+   {
+    "ma": "b6-sd-hoi-2",
+    "np": "soDT",
+    "dang": "hoi",
+    "dd": "sd-hoi",
+    "dap": "我的手机号是九八七六五四三二。",
+    "pyDap": "Wǒ de shǒujī hào shì jiǔ bā qī liù wǔ sì sān èr.",
+    "hoi": "你的手机号是多少？",
+    "pyHoi": "Nǐ de shǒujī hào shì duōshao?",
+    "nhieu": [
+     "你今年多大？",
+     "你有几个手机？"
+    ],
+    "gt": "Đáp là một dãy số → hỏi **手机号是多少**."
+   },
+   {
+    "ma": "b6-ge-ptd-1",
+    "np": "gei",
+    "dang": "chon",
+    "dd": "ge-ptd",
+    "cau": "她＿爸爸打电话。",
+    "py": "Tā gěi bàba dǎ diànhuà.",
+    "nghia": "Cô ấy gọi điện cho bố.",
+    "dap": "给",
+    "nhieu": [
+     "是",
+     "很"
+    ],
+    "gt": "\"gọi điện **cho** ai\" là **给 + người + 打电话**."
+   },
+   {
+    "ma": "b6-ge-ptd-2",
+    "np": "gei",
+    "dang": "xep",
+    "dd": "ge-ptd",
+    "cau": "他给妈妈打电话。",
+    "py": "Tā gěi māma dǎ diànhuà.",
+    "nghia": "Anh ấy gọi điện cho mẹ.",
+    "khoi": [
+     "他",
+     "给",
+     "妈妈",
+     "打电话"
+    ],
+    "npPhu": [
+     "gei"
+    ]
+   },
+   {
+    "ma": "b6-ge-xiang-1",
+    "np": "gei",
+    "dang": "chon",
+    "dd": "ge-xiang",
+    "cau": "我＿给他打电话。",
+    "py": "Wǒ xiǎng gěi tā dǎ diànhuà.",
+    "nghia": "Tôi muốn gọi điện cho anh ấy.",
+    "dap": "想",
+    "nhieu": [
+     "很",
+     "太"
+    ],
+    "gt": "**想** đặt **trước 给**: CN + 想 + 给 + người + ĐT."
+   },
+   {
+    "ma": "b6-ge-xiang-2",
+    "np": "gei",
+    "dang": "dungSai",
+    "dd": "ge-xiang",
+    "cau": "我给他想打电话。",
+    "py": "Wǒ gěi tā xiǎng dǎ diànhuà.",
+    "dung": false,
+    "gt": "**想 / 不** đặt **trước 给**.",
+    "sua": "我想给他打电话。",
+    "pySua": "Wǒ xiǎng gěi tā dǎ diànhuà.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b6-ge-dongtu-1",
+    "np": "gei",
+    "dang": "chon",
+    "dd": "ge-dongtu",
+    "cau": "爸爸＿我一个新手机。",
+    "py": "Bàba gěi wǒ yí ge xīn shǒujī.",
+    "nghia": "Bố cho tôi một chiếc điện thoại mới.",
+    "dap": "给",
+    "nhieu": [
+     "打",
+     "买"
+    ],
+    "gt": "**给 + người + vật** = cho ai cái gì."
+   },
+   {
+    "ma": "b6-ge-dongtu-2",
+    "np": "gei",
+    "dang": "dungSai",
+    "dd": "ge-dongtu",
+    "cau": "妈妈给我一台新电脑。",
+    "py": "Māma gěi wǒ yì tái xīn diànnǎo.",
+    "dung": true,
+    "gt": "给 làm động từ: **给 + người + vật**."
+   },
+   {
+    "ma": "b6-xi-kd-1",
+    "np": "xiang",
+    "dang": "chon",
+    "dd": "xi-kd",
+    "cau": "我＿去超市买东西。",
+    "py": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
+    "nghia": "Tôi muốn đi siêu thị mua đồ.",
+    "dap": "想",
+    "nhieu": [
+     "是",
+     "很"
+    ],
+    "gt": "\"muốn làm gì\" là **想 + ĐT**."
+   },
+   {
+    "ma": "b6-xi-kd-2",
+    "np": "xiang",
+    "dang": "dungSai",
+    "dd": "xi-kd",
+    "cau": "你想吃什么？",
+    "py": "Nǐ xiǎng chī shénme?",
+    "dung": true,
+    "gt": "**想 + ĐT** đặt trước động từ chính."
+   },
+   {
+    "ma": "b6-xi-pd-1",
+    "np": "xiang",
+    "dang": "chon",
+    "dd": "xi-pd",
+    "cau": "我哥哥＿想休息。",
+    "py": "Wǒ gēge bù xiǎng xiūxi.",
+    "nghia": "Anh trai tôi không muốn nghỉ ngơi.",
+    "dap": "不",
+    "nhieu": [
+     "没",
+     "很"
+    ],
+    "gt": "Phủ định là **不想**."
+   },
+   {
+    "ma": "b6-xi-pd-2",
+    "np": "xiang",
+    "dang": "dungSai",
+    "dd": "xi-pd",
+    "cau": "我没想去中国。",
+    "py": "Wǒ méi xiǎng qù Zhōngguó.",
+    "dung": false,
+    "gt": "Phủ định của 想 là **不想**.",
+    "sua": "我不想去中国。",
+    "pySua": "Wǒ bù xiǎng qù Zhōngguó.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b6-xi-hoi-1",
+    "np": "xiang",
+    "dang": "chon",
+    "dd": "xi-hoi",
+    "cau": "你想＿想吃饺子？",
+    "py": "Nǐ xiǎng bu xiǎng chī jiǎozi?",
+    "nghia": "Bạn có muốn ăn sủi cảo không?",
+    "dap": "不",
+    "nhieu": [
+     "没",
+     "吗"
+    ],
+    "gt": "Hỏi chính phản: **想不想**."
+   },
+   {
+    "ma": "b6-xi-hoi-2",
+    "np": "xiang",
+    "dang": "dungSai",
+    "dd": "xi-hoi",
+    "cau": "你想不想吃饺子吗？",
+    "py": "Nǐ xiǎng bu xiǎng chī jiǎozi ma?",
+    "dung": false,
+    "gt": "Đã dùng **想不想** thì **không thêm 吗**.",
+    "sua": "你想不想吃饺子？",
+    "pySua": "Nǐ xiǎng bu xiǎng chī jiǎozi?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b6-xi-nho-1",
+    "np": "xiang",
+    "dang": "chon",
+    "dd": "xi-nho",
+    "cau": "我很＿妈妈。",
+    "py": "Wǒ hěn xiǎng māma.",
+    "nghia": "Tôi rất nhớ mẹ.",
+    "dap": "想",
+    "nhieu": [
+     "去",
+     "会"
+    ],
+    "gt": "**想 + người** = nhớ ai."
+   },
+   {
+    "ma": "b6-xi-nho-2",
+    "np": "xiang",
+    "dang": "hoi",
+    "dd": "xi-nho",
+    "dap": "我很想妈妈。",
+    "pyDap": "Wǒ hěn xiǎng māma.",
+    "hoi": "你想谁？",
+    "pyHoi": "Nǐ xiǎng shéi?",
+    "nhieu": [
+     "你想去哪儿？",
+     "你想吃什么？"
+    ],
+    "gt": "Đáp \"rất nhớ mẹ\" → hỏi **你想谁？**"
+   },
+   {
+    "ma": "b6-xe-na-1",
+    "np": "xie",
+    "dang": "chon",
+    "dd": "xe-na",
+    "cau": "＿东西是你的？",
+    "py": "Nǎxiē dōngxi shì nǐ de?",
+    "nghia": "Những đồ nào là của bạn?",
+    "dap": "哪些",
+    "nhieu": [
+     "怎么",
+     "多少"
+    ],
+    "gt": "Hỏi \"những … nào\" dùng **哪些 + DT**."
+   },
+   {
+    "ma": "b6-xe-na-2",
+    "np": "xie",
+    "dang": "hoi",
+    "dd": "xe-na",
+    "dap": "这些包子是我的。",
+    "pyDap": "Zhèxiē bāozi shì wǒ de.",
+    "hoi": "哪些包子是你的？",
+    "pyHoi": "Nǎxiē bāozi shì nǐ de?",
+    "nhieu": [
+     "你想吃包子吗？",
+     "这家饭店的包子好吃吗？"
+    ],
+    "gt": "Đáp bằng **这些…** → hỏi **哪些…**"
+   },
+   {
+    "ma": "b6-xe-bo-1",
+    "np": "xie",
+    "dang": "chon",
+    "dd": "xe-bo",
+    "cau": "我想买＿牛奶。",
+    "py": "Wǒ xiǎng mǎi xiē niúnǎi.",
+    "nghia": "Tôi muốn mua một ít sữa.",
+    "dap": "些",
+    "nhieu": [
+     "个",
+     "台"
+    ],
+    "gt": "Sau động từ, **一些 = 些** (bỏ 一)."
+   },
+   {
+    "ma": "b6-xe-bo-2",
+    "np": "xie",
+    "dang": "xep",
+    "dd": "xe-bo",
+    "cau": "我们去超市买些东西。",
+    "py": "Wǒmen qù chāoshì mǎi xiē dōngxi.",
+    "nghia": "Chúng tôi đi siêu thị mua một ít đồ.",
+    "khoi": [
+     "我们",
+     "去",
+     "超市",
+     "买",
+     "些",
+     "东西"
+    ],
+    "npPhu": [
+     "xie"
+    ]
+   },
+   {
+    "ma": "b6-xe-lt-1",
+    "np": "xie",
+    "dang": "dungSai",
+    "dd": "xe-lt",
+    "cau": "哪些个东西是你的？",
+    "py": "Nǎxiē ge dōngxi shì nǐ de?",
+    "dung": false,
+    "gt": "Sau **哪些** không thêm lượng từ.",
+    "sua": "哪些东西是你的？",
+    "pySua": "Nǎxiē dōngxi shì nǐ de?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b6-xe-lt-2",
+    "np": "xie",
+    "dang": "dungSai",
+    "dd": "xe-lt",
+    "cau": "这些包子很好吃。",
+    "py": "Zhèxiē bāozi hěn hǎochī.",
+    "dung": true,
+    "gt": "这些 + DT, không thêm lượng từ."
+   },
+   {
+    "ma": "b6-fc-tt-1",
+    "np": "feichang",
+    "dang": "chon",
+    "dd": "fc-tt",
+    "cau": "这家饭店的菜＿好吃。",
+    "py": "Zhè jiā fàndiàn de cài fēicháng hǎochī.",
+    "nghia": "Món ăn của nhà hàng này vô cùng ngon.",
+    "dap": "非常",
+    "nhieu": [
+     "怎么",
+     "哪些"
+    ],
+    "gt": "\"rất, vô cùng\" là **非常 + TT**."
+   },
+   {
+    "ma": "b6-fc-tt-2",
+    "np": "feichang",
+    "dang": "xep",
+    "dd": "fc-tt",
+    "cau": "妈妈今天非常忙。",
+    "py": "Māma jīntiān fēicháng máng.",
+    "nghia": "Hôm nay mẹ rất bận.",
+    "khoi": [
+     "妈妈",
+     "今天",
+     "非常",
+     "忙"
+    ],
+    "khac": [
+     "今天妈妈非常忙。"
+    ],
+    "npPhu": [
+     "feichang"
+    ]
+   },
+   {
+    "ma": "b6-fc-dt-1",
+    "np": "feichang",
+    "dang": "chon",
+    "dd": "fc-dt",
+    "cau": "我＿喜欢学汉语。",
+    "py": "Wǒ fēicháng xǐhuan xué Hànyǔ.",
+    "nghia": "Tôi vô cùng thích học tiếng Trung.",
+    "dap": "非常",
+    "nhieu": [
+     "怎么",
+     "一些"
+    ],
+    "gt": "**非常 + ĐT tâm lý**."
+   },
+   {
+    "ma": "b6-fc-dt-2",
+    "np": "feichang",
+    "dang": "dungSai",
+    "dd": "fc-dt",
+    "cau": "我非常想去中国。",
+    "py": "Wǒ fēicháng xiǎng qù Zhōngguó.",
+    "dung": true,
+    "gt": "非常 + ĐT tâm lý (想)."
+   },
+   {
+    "ma": "b6-fc-le-1",
+    "np": "feichang",
+    "dang": "dungSai",
+    "dd": "fc-le",
+    "cau": "这些包子非常好吃了。",
+    "py": "Zhèxiē bāozi fēicháng hǎochī le.",
+    "dung": false,
+    "gt": "**非常 + TT** không thêm 了.",
+    "sua": "这些包子非常好吃。",
+    "pySua": "Zhèxiē bāozi fēicháng hǎochī.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b6-fc-le-2",
+    "np": "feichang",
+    "dang": "chon",
+    "dd": "fc-le",
+    "cau": "这些包子太好吃＿！",
+    "py": "Zhèxiē bāozi tài hǎochī le!",
+    "nghia": "Những cái bánh bao này ngon quá!",
+    "dap": "了",
+    "nhieu": [
+     "吗",
+     "呢"
+    ],
+    "gt": "Khung **太……了** phải có 了; 非常 thì không."
+   },
+   {
+    "ma": "b6-zm-cach-1",
+    "np": "zenme",
+    "dang": "chon",
+    "dd": "zm-cach",
+    "cau": "饺子＿做？",
+    "py": "Jiǎozi zěnme zuò?",
+    "nghia": "Sủi cảo làm như thế nào?",
+    "dap": "怎么",
+    "nhieu": [
+     "什么",
+     "哪些"
+    ],
+    "gt": "Hỏi cách thức: **怎么 + ĐT**."
+   },
+   {
+    "ma": "b6-zm-cach-2",
+    "np": "zenme",
+    "dang": "hoi",
+    "dd": "zm-cach",
+    "dap": "坐出租车去。",
+    "pyDap": "Zuò chūzūchē qù.",
+    "hoi": "你们怎么去？",
+    "pyHoi": "Nǐmen zěnme qù?",
+    "nhieu": [
+     "你们去哪儿？",
+     "你们去做什么？"
+    ],
+    "gt": "Đáp bằng phương tiện → hỏi **怎么去**."
+   },
+   {
+    "ma": "b6-zm-yang-1",
+    "np": "zenme",
+    "dang": "chon",
+    "dd": "zm-yang",
+    "cau": "你的新电脑＿？",
+    "py": "Nǐ de xīn diànnǎo zěnmeyàng?",
+    "nghia": "Máy tính mới của bạn thế nào?",
+    "dap": "怎么样",
+    "nhieu": [
+     "怎么",
+     "什么"
+    ],
+    "gt": "Hỏi tình trạng, chất lượng: **怎么样**."
+   },
+   {
+    "ma": "b6-zm-yang-2",
+    "np": "zenme",
+    "dang": "hoi",
+    "dd": "zm-yang",
+    "dap": "很好看，我很喜欢。",
+    "pyDap": "Hěn hǎokàn, wǒ hěn xǐhuan.",
+    "hoi": "你的新手机怎么样？",
+    "pyHoi": "Nǐ de xīn shǒujī zěnmeyàng?",
+    "nhieu": [
+     "你有新手机吗？",
+     "你的手机号是多少？"
+    ],
+    "gt": "Đáp nhận xét → hỏi **怎么样**."
+   },
+   {
+    "ma": "b6-zm-pb-1",
+    "np": "zenme",
+    "dang": "chon",
+    "dd": "zm-pb",
+    "cau": "去超市＿走？",
+    "py": "Qù chāoshì zěnme zǒu?",
+    "nghia": "Đến siêu thị đi như thế nào?",
+    "dap": "怎么",
+    "nhieu": [
+     "怎么样",
+     "什么"
+    ],
+    "gt": "Hỏi cách đi: **怎么 + 走**."
+   },
+   {
+    "ma": "b6-zm-pb-2",
+    "np": "zenme",
+    "dang": "dungSai",
+    "dd": "zm-pb",
+    "cau": "去超市怎么样走？",
+    "py": "Qù chāoshì zěnmeyàng zǒu?",
+    "dung": false,
+    "gt": "Hỏi cách làm dùng **怎么 + ĐT**, không dùng 怎么样.",
+    "sua": "去超市怎么走？",
+    "pySua": "Qù chāoshì zěnme zǒu?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b6-zm-ma-1",
+    "np": "zenme",
+    "dang": "dungSai",
+    "dd": "zm-ma",
+    "cau": "你们怎么去吗？",
+    "py": "Nǐmen zěnme qù ma?",
+    "dung": false,
+    "gt": "Câu có 怎么 thì **không thêm 吗**.",
+    "sua": "你们怎么去？",
+    "pySua": "Nǐmen zěnme qù?",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b6-zm-ma-2",
+    "np": "zenme",
+    "dang": "dungSai",
+    "dd": "zm-ma",
+    "cau": "你怎么去超市？",
+    "py": "Nǐ zěnme qù chāoshì?",
+    "dung": true,
+    "gt": "Câu hỏi có 怎么, cuối câu không có 吗."
+   },
+   {
+    "ma": "b6-ld-md-1",
+    "np": "lienDong",
+    "dang": "chon",
+    "dd": "ld-md",
+    "cau": "我们去饭店＿晚饭。",
+    "py": "Wǒmen qù fàndiàn chī wǎnfàn.",
+    "nghia": "Chúng tôi đến nhà hàng ăn tối.",
+    "dap": "吃",
+    "nhieu": [
+     "坐",
+     "给"
+    ],
+    "gt": "去 + nơi chốn + **ĐT chỉ mục đích**."
+   },
+   {
+    "ma": "b6-ld-md-2",
+    "np": "lienDong",
+    "dang": "xep",
+    "dd": "ld-md",
+    "cau": "妈妈去超市买菜。",
+    "py": "Māma qù chāoshì mǎi cài.",
+    "nghia": "Mẹ đi siêu thị mua thức ăn.",
+    "khoi": [
+     "妈妈",
+     "去",
+     "超市",
+     "买菜"
+    ],
+    "npPhu": [
+     "lienDong"
+    ]
+   },
+   {
+    "ma": "b6-ld-ct-1",
+    "np": "lienDong",
+    "dang": "chon",
+    "dd": "ld-ct",
+    "cau": "她＿出租车去超市。",
+    "py": "Tā zuò chūzūchē qù chāoshì.",
+    "nghia": "Cô ấy đi taxi đến siêu thị.",
+    "dap": "坐",
+    "nhieu": [
+     "买",
+     "想"
+    ],
+    "gt": "Đi bằng phương tiện: **坐 + phương tiện + 去**."
+   },
+   {
+    "ma": "b6-ld-ct-2",
+    "np": "lienDong",
+    "dang": "xep",
+    "dd": "ld-ct",
+    "cau": "我们坐地铁去上班。",
+    "py": "Wǒmen zuò dìtiě qù shàngbān.",
+    "nghia": "Chúng tôi đi tàu điện ngầm đi làm.",
+    "khoi": [
+     "我们",
+     "坐",
+     "地铁",
+     "去",
+     "上班"
+    ],
+    "npPhu": [
+     "lienDong"
+    ]
+   },
+   {
+    "ma": "b6-ld-kh-1",
+    "np": "lienDong",
+    "dang": "xep",
+    "dd": "ld-kh",
+    "cau": "我坐出租车去超市买东西。",
+    "py": "Wǒ zuò chūzūchē qù chāoshì mǎi dōngxi.",
+    "nghia": "Tôi đi taxi đến siêu thị mua đồ.",
+    "khoi": [
+     "我",
+     "坐",
+     "出租车",
+     "去",
+     "超市",
+     "买东西"
+    ],
+    "npPhu": [
+     "lienDong"
+    ]
+   },
+   {
+    "ma": "b6-ld-kh-2",
+    "np": "lienDong",
+    "dang": "dungSai",
+    "dd": "ld-kh",
+    "cau": "我去超市坐出租车买东西。",
+    "py": "Wǒ qù chāoshì zuò chūzūchē mǎi dōngxi.",
+    "dung": false,
+    "gt": "**Cách thức trước, mục đích sau**.",
+    "sua": "我坐出租车去超市买东西。",
+    "pySua": "Wǒ zuò chūzūchē qù chāoshì mǎi dōngxi.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b6-ld-bu-1",
+    "np": "lienDong",
+    "dang": "chon",
+    "dd": "ld-bu",
+    "cau": "他们＿骑车去饭店，他们坐出租车去。",
+    "py": "Tāmen bù qí chē qù fàndiàn, tāmen zuò chūzūchē qù.",
+    "nghia": "Họ không đạp xe đến nhà hàng, họ đi taxi.",
+    "dap": "不",
+    "nhieu": [
+     "吗",
+     "很"
+    ],
+    "gt": "**不 / 想** đặt **trước V1**."
+   },
+   {
+    "ma": "b6-ld-bu-2",
+    "np": "lienDong",
+    "dang": "dungSai",
+    "dd": "ld-bu",
+    "cau": "我去想超市买东西。",
+    "py": "Wǒ qù xiǎng chāoshì mǎi dōngxi.",
+    "dung": false,
+    "gt": "**想** đặt **trước V1 (去)**.",
+    "sua": "我想去超市买东西。",
+    "pySua": "Wǒ xiǎng qù chāoshì mǎi dōngxi.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b6-ld-tt-1",
+    "np": "lienDong",
+    "dang": "dungSai",
+    "dd": "ld-tt",
+    "cau": "我买东西去超市。",
+    "py": "Wǒ mǎi dōngxi qù chāoshì.",
+    "dung": false,
+    "gt": "Thứ tự động từ là **thứ tự hành động**.",
+    "sua": "我去超市买东西。",
+    "pySua": "Wǒ qù chāoshì mǎi dōngxi.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b6-ld-tt-2",
+    "np": "lienDong",
+    "dang": "hoi",
+    "dd": "ld-tt",
+    "dap": "我去超市买东西。",
+    "pyDap": "Wǒ qù chāoshì mǎi dōngxi.",
+    "hoi": "你去超市做什么？",
+    "pyHoi": "Nǐ qù chāoshì zuò shénme?",
+    "nhieu": [
+     "你怎么去超市？",
+     "你想去哪儿？"
+    ],
+    "gt": "Đáp **mục đích** (买东西) → hỏi **做什么**."
+   },
+   {
+    "ma": "b6-lt-tai-1",
+    "np": "luongTu",
+    "dang": "chon",
+    "dd": "lt-tai",
+    "cau": "我想买一＿新手机。",
+    "py": "Wǒ xiǎng mǎi yì tái xīn shǒujī.",
+    "nghia": "Tôi muốn mua một chiếc điện thoại mới.",
+    "dap": "台",
+    "nhieu": [
+     "辆",
+     "碗"
+    ],
+    "gt": "Máy móc dùng **台**."
+   },
+   {
+    "ma": "b6-lt-tai-2",
+    "np": "luongTu",
+    "dang": "dungSai",
+    "dd": "lt-tai",
+    "cau": "我有一辆新电脑。",
+    "py": "Wǒ yǒu yí liàng xīn diànnǎo.",
+    "dung": false,
+    "gt": "Máy tính dùng **台**, không dùng 辆.",
+    "sua": "我有一台新电脑。",
+    "pySua": "Wǒ yǒu yì tái xīn diànnǎo.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b6-lt-jia-1",
+    "np": "luongTu",
+    "dang": "chon",
+    "dd": "lt-jia",
+    "cau": "这＿超市很大。",
+    "py": "Zhè jiā chāoshì hěn dà.",
+    "nghia": "Siêu thị này rất lớn.",
+    "dap": "家",
+    "nhieu": [
+     "台",
+     "辆"
+    ],
+    "gt": "Cửa hàng, công ty dùng **家**."
+   },
+   {
+    "ma": "b6-lt-jia-2",
+    "np": "luongTu",
+    "dang": "dungSai",
+    "dd": "lt-jia",
+    "cau": "那家饭店的菜很好吃。",
+    "py": "Nà jiā fàndiàn de cài hěn hǎochī.",
+    "dung": true,
+    "gt": "Nhà hàng dùng lượng từ **家**."
+   },
+   {
+    "ma": "b6-lt-wan-1",
+    "np": "luongTu",
+    "dang": "chon",
+    "dd": "lt-wan",
+    "cau": "我想吃一＿米饭。",
+    "py": "Wǒ xiǎng chī yì wǎn mǐfàn.",
+    "nghia": "Tôi muốn ăn một bát cơm.",
+    "dap": "碗",
+    "nhieu": [
+     "辆",
+     "家"
+    ],
+    "gt": "Bát đựng đồ ăn dùng **碗**."
+   },
+   {
+    "ma": "b6-lt-wan-2",
+    "np": "luongTu",
+    "dang": "dungSai",
+    "dd": "lt-wan",
+    "cau": "我吃两碗饺子。",
+    "py": "Wǒ chī liǎng wǎn jiǎozi.",
+    "dung": true,
+    "gt": "Bát sủi cảo: **两碗饺子**."
+   },
+   {
+    "ma": "b6-lt-liang-1",
+    "np": "luongTu",
+    "dang": "chon",
+    "dd": "lt-liang",
+    "cau": "爸爸有一＿新车。",
+    "py": "Bàba yǒu yí liàng xīn chē.",
+    "nghia": "Bố có một chiếc xe mới.",
+    "dap": "辆",
+    "nhieu": [
+     "台",
+     "家"
+    ],
+    "gt": "Xe cộ dùng **辆**."
+   },
+   {
+    "ma": "b6-lt-liang-2",
+    "np": "luongTu",
+    "dang": "dungSai",
+    "dd": "lt-liang",
+    "cau": "我哥哥有一个自行车。",
+    "py": "Wǒ gēge yǒu yí ge zìxíngchē.",
+    "dung": false,
+    "gt": "Xe đạp dùng **辆**.",
+    "sua": "我哥哥有一辆自行车。",
+    "pySua": "Wǒ gēge yǒu yí liàng zìxíngchē.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b6-lt-hai-1",
+    "np": "luongTu",
+    "dang": "chon",
+    "dd": "lt-hai",
+    "cau": "我有＿辆车。",
+    "py": "Wǒ yǒu liǎng liàng chē.",
+    "nghia": "Tôi có hai chiếc xe.",
+    "dap": "两",
+    "nhieu": [
+     "二",
+     "多"
+    ],
+    "gt": "Trước lượng từ dùng **两**, không dùng 二."
+   },
+   {
+    "ma": "b6-lt-hai-2",
+    "np": "luongTu",
+    "dang": "dungSai",
+    "dd": "lt-hai",
+    "cau": "我有二台电脑。",
+    "py": "Wǒ yǒu èr tái diànnǎo.",
+    "dung": false,
+    "gt": "Trước lượng từ dùng **两**, không dùng 二.",
+    "sua": "我有两台电脑。",
+    "pySua": "Wǒ yǒu liǎng tái diànnǎo.",
+    "nguon": "lưu ý thẻ"
+   }
+  ]
+ }
+}

@@ -19,7 +19,9 @@ CHU = {1: "一三不个五们你八再吃同喝大天好学客家小师很您明
        2: "中么也事什俄关兴十口只叫名国坐女妮子字安对我文斯日是月本李没爱白系罗美英认识说请起进门问陈高",
        3: "了人他作做南去友吗哥哪喂太奶她妈妹姐姥工弟忙想有朋法泰爷爸男的谁越还这那雪",
        4: "〇七万丈两乐九二亿今位儿公六几刘千呢和四多夫妻婆孩少岁年杨百第米纪零",
-       5: "号星期休息会饭面条饺些菜下班新电脑真看喜欢它昨道包上旧台听"}
+       5: "号星期休息会饭面条饺些菜下班新电脑真看喜欢它昨道包上旧台听",
+       6: "手机话超市买东西牛晚边非常怎出租车店打给码里韩卖走商碗早午茶水样自行辆摩托动马共汽地铁骑",
+       7: "点半现在分吧影院医钟后杯时间刻差前节都交校书部件外病习课"}
 NGUON = {'luuY': 'lưu ý thẻ', 'quyChuan': 'quy chuẩn 05', 'deXuat': 'cô duyệt 29/10/2026'}
 
 
@@ -27,7 +29,7 @@ def nap(tep):
     sp = importlib.util.spec_from_file_location('kho', os.path.join(GOC, 'tools', 'np_luyen', tep))
     m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m); return m
 
-KHO = [nap('kho_bai2_4.py'), nap('kho_bai5.py')]
+KHO = [nap('kho_bai2_4.py'), nap('kho_bai5.py'), nap('kho_bai6.py'), nap('kho_bai7.py')]
 
 
 def strip(p):
@@ -51,9 +53,8 @@ def kiem():
                 ng = [c for c in han(s) if c not in von]
                 if ng: loi.append(f'B{n} {nhan}: chữ ngoài vốn {ng} :: {s}')
                 if py is not None:
-                    a = strip(''.join('ling' if c == '〇' else lazy_pinyin(c)[0] for c in han(s)))
-                    r = strip(''.join('ling' if c == '〇' else 'r' if c == '儿' else lazy_pinyin(c)[0] for c in han(s)))   # 面条儿 miàntiáor
-                    if strip(py) not in (a, r): loi.append(f'B{n} {nhan}: pinyin lệch :: {s} | {py}')
+                    ds = {strip(''.join('ling' if c == '〇' else 'yao' if (y and c == '一') else 'r' if (e and c == '儿') else lazy_pinyin(c)[0] for c in han(s))) for y in (0, 1) for e in (0, 1)}   # 面条儿 miàntiáor · số 1 trong số điện thoại đọc yāo
+                    if strip(py) not in ds: loi.append(f'B{n} {nhan}: pinyin lệch :: {s} | {py}')
             for it in cau:
                 if it['dd'] not in dds: loi.append(f'B{n}: đặc điểm lạ {it["dd"]}'); continue
                 if not it.get('bo'): dem[it['dd']] += 1
@@ -90,10 +91,12 @@ def kiem():
     return ds, loi
 
 
-def gop():
+def gop(chi=None):
+    # chi = các bài cần ghi (python3 tools/ngu_phap_luyen.py gop 6 7); ghi lại bài cũ sẽ xoá giọng đọc (doc) đã ánh xạ
     ds, loi = kiem()
     if loi: sys.exit('Còn lỗi, chưa ghi.')
     for n, (dd, cau) in ds.items():
+        if chi and n not in chi: continue
         np_cua = {d[1]: d[0] for d in dd}; stt = {}; out = []
         for it in cau:
             o = dict(it); stt[o['dd']] = stt.get(o['dd'], 0) + 1
@@ -111,4 +114,5 @@ def gop():
 
 
 if __name__ == '__main__':
-    {'kiem': kiem, 'gop': gop}.get(sys.argv[1] if len(sys.argv) > 1 else 'kiem', kiem)()
+    if len(sys.argv) > 1 and sys.argv[1] == 'gop': gop([int(x) for x in sys.argv[2:]] or None)
+    else: kiem()
