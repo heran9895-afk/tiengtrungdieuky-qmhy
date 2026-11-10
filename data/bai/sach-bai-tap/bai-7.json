@@ -1,0 +1,1030 @@
+{
+ "bai": 7,
+ "ten": "我晚上六点半下班",
+ "tenViet": "Tôi tan làm lúc 6 rưỡi tối",
+ "phienBan": "2026-11-11a",
+ "phan": [
+  {
+   "ten": "Nghe, chọn âm tiết",
+   "zh": "听录音，选择听到的音节",
+   "hd": "Bấm loa nghe âm tiết, chọn âm tiết vừa nghe.",
+   "loai": "am",
+   "cau": [
+    {
+     "ma": "at-dian3",
+     "loa": "assets/am/py/dian3.mp3",
+     "py": "diǎn",
+     "hien": "",
+     "dap": "diǎn",
+     "nhieu": [
+      "diàn",
+      "tiǎn",
+      "diǎo"
+     ]
+    },
+    {
+     "ma": "at-ban4",
+     "loa": "assets/am/py/ban4.mp3",
+     "py": "bàn",
+     "hien": "",
+     "dap": "bàn",
+     "nhieu": [
+      "pàn",
+      "bàng",
+      "bǎn"
+     ]
+    },
+    {
+     "ma": "at-yuan4",
+     "loa": "assets/am/py/yuan4.mp3",
+     "py": "yuàn",
+     "hien": "",
+     "dap": "yuàn",
+     "nhieu": [
+      "yuán",
+      "yùn",
+      "yàn"
+     ]
+    },
+    {
+     "ma": "at-hou4",
+     "loa": "assets/am/py/hou4.mp3",
+     "py": "hòu",
+     "hien": "",
+     "dap": "hòu",
+     "nhieu": [
+      "hǒu",
+      "gòu",
+      "huò"
+     ]
+    },
+    {
+     "ma": "at-bei1",
+     "loa": "assets/am/py/bei1.mp3",
+     "py": "bēi",
+     "hien": "",
+     "dap": "bēi",
+     "nhieu": [
+      "pēi",
+      "bī",
+      "běi"
+     ]
+    },
+    {
+     "ma": "at-jian1",
+     "loa": "assets/am/py/jian1.mp3",
+     "py": "jiān",
+     "hien": "",
+     "dap": "jiān",
+     "nhieu": [
+      "qiān",
+      "jīn",
+      "jiǎn"
+     ]
+    },
+    {
+     "ma": "at-ke4",
+     "loa": "assets/am/py/ke4.mp3",
+     "py": "kè",
+     "hien": "",
+     "dap": "kè",
+     "nhieu": [
+      "gè",
+      "kě",
+      "hè"
+     ]
+    },
+    {
+     "ma": "at-cha4",
+     "loa": "assets/am/py/cha4.mp3",
+     "py": "chà",
+     "hien": "",
+     "dap": "chà",
+     "nhieu": [
+      "chài",
+      "zhà",
+      "chá"
+     ]
+    },
+    {
+     "ma": "at-qian2",
+     "loa": "assets/am/py/qian2.mp3",
+     "py": "qián",
+     "hien": "",
+     "dap": "qián",
+     "nhieu": [
+      "jián",
+      "qín",
+      "qiǎn"
+     ]
+    },
+    {
+     "ma": "at-xiao4",
+     "loa": "assets/am/py/xiao4.mp3",
+     "py": "xiào",
+     "hien": "",
+     "dap": "xiào",
+     "nhieu": [
+      "xiǎo",
+      "qiào",
+      "xuè"
+     ]
+    }
+   ],
+   "kieu": "at"
+  },
+  {
+   "ten": "Nghe, chọn tranh đúng",
+   "zh": "听力 · 第一部分：听短语，选择图片",
+   "hd": "Bấm loa nghe cụm từ, chọn tranh đúng trong ba tranh.",
+   "loai": "nghe",
+   "vd": {
+    "loi": [
+     {
+      "ai": "",
+      "han": "三个苹果",
+      "py": "sān ge píngguǒ"
+     }
+    ],
+    "anh": [
+     {
+      "k": "A",
+      "src": "assets/img/sach-bai-tap/vd-sach.webp",
+      "alt": "Chồng sách"
+     },
+     {
+      "k": "B",
+      "src": "assets/img/sach-bai-tap/b5-may-tinh.webp",
+      "alt": "Máy tính xách tay"
+     },
+     {
+      "k": "C",
+      "src": "assets/img/sach-bai-tap/vd-tao.webp",
+      "alt": "Ba quả táo"
+     }
+    ],
+    "dap": "C",
+    "vi": "ba quả táo",
+    "ma": "vd",
+    "doc": "assets/am/cau/e908d3f25b.mp3"
+   },
+   "cau": [
+    {
+     "ma": "n1-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "看电影",
+       "py": "kàn diànyǐng"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b7-xem-phim.webp",
+       "alt": "Xem phim ở rạp"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b7-benh-vien.webp",
+       "alt": "Bệnh viện"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b7-dong-ho.webp",
+       "alt": "Đồng hồ"
+      }
+     ],
+     "dap": "A",
+     "vi": "",
+     "doc": "assets/am/tu/2d41be02ec.mp3"
+    },
+    {
+     "ma": "n1-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "一杯茶",
+       "py": "yì bēi chá"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b7-ly-tra.webp",
+       "alt": "Một tách trà"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b7-sach.webp",
+       "alt": "Sách"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b7-truong.webp",
+       "alt": "Trường học"
+      }
+     ],
+     "dap": "A",
+     "vi": "",
+     "doc": "assets/am/tu/848345a183.mp3"
+    },
+    {
+     "ma": "n1-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "去医院",
+       "py": "qù yīyuàn"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b7-xem-phim.webp",
+       "alt": "Xem phim ở rạp"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b7-benh-vien.webp",
+       "alt": "Bệnh viện"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b7-truong.webp",
+       "alt": "Trường học"
+      }
+     ],
+     "dap": "B",
+     "vi": "",
+     "doc": "assets/am/tu/13bf1ab47b.mp3"
+    }
+   ]
+  },
+  {
+   "ten": "Nghe câu hỏi, chọn câu trả lời",
+   "zh": "听力 · 第二部分：听问题，选择正确回答",
+   "hd": "Bấm loa nghe câu hỏi, chọn câu trả lời đúng.",
+   "loai": "nghe",
+   "vd": {
+    "loi": [
+     {
+      "ai": "",
+      "han": "今天天气怎么样？",
+      "py": "Jīntiān tiānqì zěnmeyàng?"
+     }
+    ],
+    "pa": [
+     {
+      "k": "A",
+      "han": "非常热",
+      "py": "fēicháng rè"
+     },
+     {
+      "k": "B",
+      "han": "很好听",
+      "py": "hěn hǎotīng"
+     },
+     {
+      "k": "C",
+      "han": "在喝水",
+      "py": "zài hē shuǐ"
+     }
+    ],
+    "dap": "A",
+    "vi": "Hôm nay thời tiết thế nào? — rất nóng",
+    "ma": "vd",
+    "doc": "assets/am/cau/f334af875b.mp3"
+   },
+   "cau": [
+    {
+     "ma": "n2-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "现在几点？",
+       "py": "Xiànzài jǐ diǎn?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "明天下午。",
+       "py": "Míngtiān xiàwǔ."
+      },
+      {
+       "k": "B",
+       "han": "现在八点半。",
+       "py": "Xiànzài bā diǎn bàn."
+      },
+      {
+       "k": "C",
+       "han": "我在家。",
+       "py": "Wǒ zài jiā."
+      }
+     ],
+     "dap": "B",
+     "vi": "",
+     "doc": "assets/am/cau/0ad267da55.mp3"
+    },
+    {
+     "ma": "n2-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "你几点下班？",
+       "py": "Nǐ jǐ diǎn xiàbān?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "我六点下班。",
+       "py": "Wǒ liù diǎn xiàbān."
+      },
+      {
+       "k": "B",
+       "han": "我在医院。",
+       "py": "Wǒ zài yīyuàn."
+      },
+      {
+       "k": "C",
+       "han": "我想看电影。",
+       "py": "Wǒ xiǎng kàn diànyǐng."
+      }
+     ],
+     "dap": "A",
+     "vi": "",
+     "doc": "assets/am/cau/953685e261.mp3"
+    },
+    {
+     "ma": "n2-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "你在哪儿学习？",
+       "py": "Nǐ zài nǎr xuéxí?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "我学习汉语。",
+       "py": "Wǒ xuéxí Hànyǔ."
+      },
+      {
+       "k": "B",
+       "han": "我八点上课。",
+       "py": "Wǒ bā diǎn shàngkè."
+      },
+      {
+       "k": "C",
+       "han": "我在学校学习。",
+       "py": "Wǒ zài xuéxiào xuéxí."
+      }
+     ],
+     "dap": "C",
+     "vi": ""
+    }
+   ]
+  },
+  {
+   "ten": "Nghe hội thoại, chọn tranh",
+   "zh": "听力 · 第三部分：听对话，选择最匹配的图片",
+   "hd": "Bấm loa nghe hội thoại, chọn tranh phù hợp.",
+   "loai": "tranh",
+   "anh": [
+    {
+     "k": "A",
+     "src": "assets/img/sach-bai-tap/b2-bat-tay.webp",
+     "alt": "Hai người bắt tay"
+    },
+    {
+     "k": "B",
+     "src": "assets/img/sach-bai-tap/b7-sach.webp",
+     "alt": "Sách"
+    },
+    {
+     "k": "C",
+     "src": "assets/img/sach-bai-tap/b7-benh-vien.webp",
+     "alt": "Bệnh viện"
+    },
+    {
+     "k": "D",
+     "src": "assets/img/sach-bai-tap/b7-dong-ho.webp",
+     "alt": "Đồng hồ"
+    }
+   ],
+   "vd": {
+    "loi": [
+     {
+      "ai": "女",
+      "han": "你好！",
+      "py": "Nǐ hǎo!"
+     },
+     {
+      "ai": "男",
+      "han": "你好！很高兴认识你。",
+      "py": "Nǐ hǎo! Hěn gāoxìng rènshi nǐ."
+     }
+    ],
+    "dap": "A",
+    "vi": "Nữ: Xin chào! — Nam: Xin chào! Rất vui được gặp bạn.",
+    "ma": "vd",
+    "doc": "assets/am/bai-1/cau/c23.mp3|assets/am/nam1/af0a2d6718.mp3"
+   },
+   "cau": [
+    {
+     "ma": "n3-1",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "你看书吗？",
+       "py": "Nǐ kàn shū ma?"
+      },
+      {
+       "ai": "B",
+       "han": "对，我很喜欢看书。",
+       "py": "Duì, wǒ hěn xǐhuan kàn shū."
+      }
+     ],
+     "dap": "B",
+     "vi": ""
+    },
+    {
+     "ma": "n3-2",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "你去哪儿？",
+       "py": "Nǐ qù nǎr?"
+      },
+      {
+       "ai": "B",
+       "han": "我去医院看病。",
+       "py": "Wǒ qù yīyuàn kànbìng."
+      }
+     ],
+     "dap": "C",
+     "vi": ""
+    },
+    {
+     "ma": "n3-3",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "现在几点了？",
+       "py": "Xiànzài jǐ diǎn le?"
+      },
+      {
+       "ai": "B",
+       "han": "差五分八点。",
+       "py": "Chà wǔ fēn bā diǎn."
+      }
+     ],
+     "dap": "D",
+     "vi": ""
+    }
+   ]
+  },
+  {
+   "ten": "Nghe câu và câu hỏi, chọn đáp án",
+   "zh": "听力 · 第四部分：听句子和问题，选择正确答案",
+   "hd": "Bấm loa nghe một câu và câu hỏi, chọn đáp án đúng.",
+   "loai": "nghe",
+   "vd": {
+    "loi": [
+     {
+      "ai": "",
+      "han": "下午我去超市，我想买一些水果。",
+      "py": "Xiàwǔ wǒ qù chāoshì, wǒ xiǎng mǎi yìxiē shuǐguǒ."
+     },
+     {
+      "ai": "问",
+      "han": "说话人下午去哪里？",
+      "py": "Shuōhuàrén xiàwǔ qù nǎlǐ?"
+     }
+    ],
+    "pa": [
+     {
+      "k": "A",
+      "han": "超市",
+      "py": "chāoshì"
+     },
+     {
+      "k": "B",
+      "han": "医院",
+      "py": "yīyuàn"
+     },
+     {
+      "k": "C",
+      "han": "学校",
+      "py": "xuéxiào"
+     }
+    ],
+    "dap": "A",
+    "vi": "Buổi chiều tôi đi siêu thị, tôi muốn mua một ít trái cây. — Hỏi: Buổi chiều người nói đi đâu? — siêu thị",
+    "ma": "vd",
+    "doc": "assets/am/nam1/bc4175663c.mp3|assets/am/cau/be61d5db09.mp3"
+   },
+   "cau": [
+    {
+     "ma": "n4-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我早上七点半上班，晚上六点下班。",
+       "py": "Wǒ zǎoshang qī diǎn bàn shàngbān, wǎnshang liù diǎn xiàbān."
+      },
+      {
+       "ai": "问",
+       "han": "他几点上班？",
+       "py": "Tā jǐ diǎn shàngbān?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "七点半",
+       "py": "qī diǎn bàn"
+      },
+      {
+       "k": "B",
+       "han": "六点半",
+       "py": "liù diǎn bàn"
+      },
+      {
+       "k": "C",
+       "han": "八点",
+       "py": "bā diǎn"
+      }
+     ],
+     "dap": "A",
+     "vi": ""
+    },
+    {
+     "ma": "n4-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "今天下午我有两节课，晚上我去看电影。",
+       "py": "Jīntiān xiàwǔ wǒ yǒu liǎng jié kè, wǎnshang wǒ qù kàn diànyǐng."
+      },
+      {
+       "ai": "问",
+       "han": "他晚上做什么？",
+       "py": "Tā wǎnshang zuò shénme?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "上课",
+       "py": "shàngkè"
+      },
+      {
+       "k": "B",
+       "han": "看电影",
+       "py": "kàn diànyǐng"
+      },
+      {
+       "k": "C",
+       "han": "看书",
+       "py": "kàn shū"
+      }
+     ],
+     "dap": "B",
+     "vi": ""
+    },
+    {
+     "ma": "n4-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我明天上午在医院，下午在家。",
+       "py": "Wǒ míngtiān shàngwǔ zài yīyuàn, xiàwǔ zài jiā."
+      },
+      {
+       "ai": "问",
+       "han": "他下午在哪儿？",
+       "py": "Tā xiàwǔ zài nǎr?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "医院",
+       "py": "yīyuàn"
+      },
+      {
+       "k": "B",
+       "han": "学校",
+       "py": "xuéxiào"
+      },
+      {
+       "k": "C",
+       "han": "家",
+       "py": "jiā"
+      }
+     ],
+     "dap": "C",
+     "vi": ""
+    }
+   ]
+  },
+  {
+   "ten": "Đọc câu, chọn tranh",
+   "zh": "阅读 · 第一部分：选择与句子最匹配的图片",
+   "hd": "Đọc câu, chọn tranh phù hợp nhất.",
+   "loai": "doc-tranh",
+   "anh": [
+    {
+     "k": "A",
+     "src": "assets/img/sach-bai-tap/vd-doc-sach.webp",
+     "alt": "Một cô gái đang đọc sách"
+    },
+    {
+     "k": "B",
+     "src": "assets/img/sach-bai-tap/b7-benh-vien.webp",
+     "alt": "Bệnh viện"
+    },
+    {
+     "k": "C",
+     "src": "assets/img/sach-bai-tap/b7-dong-ho.webp",
+     "alt": "Đồng hồ"
+    },
+    {
+     "k": "D",
+     "src": "assets/img/sach-bai-tap/b7-xem-phim.webp",
+     "alt": "Xem phim ở rạp"
+    },
+    {
+     "k": "E",
+     "src": "assets/img/sach-bai-tap/b7-sach.webp",
+     "alt": "Sách"
+    },
+    {
+     "k": "F",
+     "src": "assets/img/sach-bai-tap/b7-ly-tra.webp",
+     "alt": "Một tách trà"
+    }
+   ],
+   "vd": {
+    "han": "我很喜欢这本书。",
+    "py": "Wǒ hěn xǐhuan zhè běn shū.",
+    "dap": "A",
+    "vi": "Tôi rất thích cuốn sách này.",
+    "ma": "vd"
+   },
+   "cau": [
+    {
+     "ma": "d1-1",
+     "han": "我在医院看病。",
+     "py": "Wǒ zài yīyuàn kànbìng.",
+     "dap": "B",
+     "vi": ""
+    },
+    {
+     "ma": "d1-2",
+     "han": "现在是十二点半。",
+     "py": "Xiànzài shì shí'èr diǎn bàn.",
+     "dap": "C",
+     "vi": ""
+    },
+    {
+     "ma": "d1-3",
+     "han": "我们今天晚上去看电影。",
+     "py": "Wǒmen jīntiān wǎnshang qù kàn diànyǐng.",
+     "dap": "D",
+     "vi": ""
+    },
+    {
+     "ma": "d1-4",
+     "han": "我在家看书。",
+     "py": "Wǒ zài jiā kàn shū.",
+     "dap": "E",
+     "vi": ""
+    },
+    {
+     "ma": "d1-5",
+     "han": "我想喝一杯茶。",
+     "py": "Wǒ xiǎng hē yì bēi chá.",
+     "dap": "F",
+     "vi": ""
+    }
+   ]
+  },
+  {
+   "ten": "Nối câu hỏi với câu trả lời",
+   "zh": "阅读 · 第二部分：匹配句子",
+   "hd": "Đọc câu hỏi, chọn câu trả lời phù hợp trong khung.",
+   "loai": "doc-ghep",
+   "luaChon": [
+    {
+     "k": "A",
+     "han": "好的，谢谢！",
+     "py": "Hǎo de, xièxie!"
+    },
+    {
+     "k": "B",
+     "han": "现在九点一刻。",
+     "py": "Xiànzài jiǔ diǎn yí kè."
+    },
+    {
+     "k": "C",
+     "han": "我八点上课。",
+     "py": "Wǒ bā diǎn shàngkè."
+    },
+    {
+     "k": "D",
+     "han": "我在家看书。",
+     "py": "Wǒ zài jiā kàn shū."
+    },
+    {
+     "k": "E",
+     "han": "好，我们下午去吧。",
+     "py": "Hǎo, wǒmen xiàwǔ qù ba."
+    },
+    {
+     "k": "F",
+     "han": "我在医院工作。",
+     "py": "Wǒ zài yīyuàn gōngzuò."
+    }
+   ],
+   "vd": {
+    "han": "你喝水吗？",
+    "py": "Nǐ hē shuǐ ma?",
+    "dap": "A",
+    "vi": "Bạn có uống nước không? — Vâng, cảm ơn!",
+    "ma": "vd"
+   },
+   "cau": [
+    {
+     "ma": "d2-1",
+     "han": "现在几点？",
+     "py": "Xiànzài jǐ diǎn?",
+     "dap": "B",
+     "vi": ""
+    },
+    {
+     "ma": "d2-2",
+     "han": "你几点上课？",
+     "py": "Nǐ jǐ diǎn shàngkè?",
+     "dap": "C",
+     "vi": ""
+    },
+    {
+     "ma": "d2-3",
+     "han": "你在哪儿看书？",
+     "py": "Nǐ zài nǎr kàn shū?",
+     "dap": "D",
+     "vi": ""
+    },
+    {
+     "ma": "d2-4",
+     "han": "你想看电影吗？",
+     "py": "Nǐ xiǎng kàn diànyǐng ma?",
+     "dap": "E",
+     "vi": ""
+    },
+    {
+     "ma": "d2-5",
+     "han": "你在哪儿工作？",
+     "py": "Nǐ zài nǎr gōngzuò?",
+     "dap": "F",
+     "vi": ""
+    }
+   ]
+  },
+  {
+   "ten": "Chọn từ điền vào chỗ trống",
+   "zh": "阅读 · 第三部分：选词填空",
+   "hd": "Chọn từ trong khung điền vào chỗ trống. Mỗi từ dùng một lần.",
+   "loai": "doc-dien",
+   "luaChon": [
+    {
+     "k": "A",
+     "han": "名字",
+     "py": "míngzi"
+    },
+    {
+     "k": "B",
+     "han": "点",
+     "py": "diǎn"
+    },
+    {
+     "k": "C",
+     "han": "吧",
+     "py": "ba"
+    },
+    {
+     "k": "D",
+     "han": "在",
+     "py": "zài"
+    },
+    {
+     "k": "E",
+     "han": "杯",
+     "py": "bēi"
+    },
+    {
+     "k": "F",
+     "han": "半",
+     "py": "bàn"
+    }
+   ],
+   "vd": {
+    "han": "你叫什么（　）？",
+    "py": "Nǐ jiào shénme (　)?",
+    "dap": "A",
+    "vi": "Bạn tên là gì?",
+    "ma": "vd"
+   },
+   "cau": [
+    {
+     "ma": "d3-1",
+     "han": "现在八（　）。",
+     "py": "Xiànzài bā (　).",
+     "dap": "B",
+     "vi": ""
+    },
+    {
+     "ma": "d3-2",
+     "han": "我们去看电影（　）！",
+     "py": "Wǒmen qù kàn diànyǐng (　)!",
+     "dap": "C",
+     "vi": ""
+    },
+    {
+     "ma": "d3-3",
+     "han": "他（　）学校学习。",
+     "py": "Tā (　) xuéxiào xuéxí.",
+     "dap": "D",
+     "vi": ""
+    },
+    {
+     "ma": "d3-4",
+     "han": "我想喝一（　）茶。",
+     "py": "Wǒ xiǎng hē yì (　) chá.",
+     "dap": "E",
+     "vi": ""
+    },
+    {
+     "ma": "d3-5",
+     "han": "现在六点（　），我们去吃饭吧。",
+     "py": "Xiànzài liù diǎn (　), wǒmen qù chīfàn ba.",
+     "dap": "F",
+     "vi": ""
+    }
+   ]
+  },
+  {
+   "ten": "Đọc câu, chọn đáp án đúng",
+   "zh": "阅读 · 第四部分：选择正确答案",
+   "hd": "Đọc câu và câu hỏi ★, chọn đáp án đúng.",
+   "loai": "doc-hoi",
+   "vd": {
+    "han": "请问现在几点了？",
+    "py": "Qǐngwèn xiànzài jǐ diǎn le?",
+    "hoi": {
+     "han": "说话人想知道什么？",
+     "py": "Shuōhuàrén xiǎng zhīdào shénme?"
+    },
+    "pa": [
+     {
+      "k": "A",
+      "han": "时间",
+      "py": "shíjiān"
+     },
+     {
+      "k": "B",
+      "han": "名字",
+      "py": "míngzi"
+     },
+     {
+      "k": "C",
+      "han": "房间号",
+      "py": "fángjiānhào"
+     }
+    ],
+    "dap": "A",
+    "vi": "Xin hỏi bây giờ là mấy giờ rồi? — Hỏi: Người nói muốn biết điều gì? — thời gian",
+    "ma": "vd"
+   },
+   "cau": [
+    {
+     "ma": "d4-1",
+     "han": "现在是下午三点，我四点下课。",
+     "py": "Xiànzài shì xiàwǔ sān diǎn, wǒ sì diǎn xiàkè.",
+     "dap": "B",
+     "vi": "",
+     "hoi": {
+      "han": "他几点下课？",
+      "py": "Tā jǐ diǎn xiàkè?"
+     },
+     "pa": [
+      {
+       "k": "A",
+       "han": "三点",
+       "py": "sān diǎn"
+      },
+      {
+       "k": "B",
+       "han": "四点",
+       "py": "sì diǎn"
+      },
+      {
+       "k": "C",
+       "han": "五点",
+       "py": "wǔ diǎn"
+      }
+     ]
+    },
+    {
+     "ma": "d4-2",
+     "han": "我在家学习，晚上看电影。",
+     "py": "Wǒ zài jiā xuéxí, wǎnshang kàn diànyǐng.",
+     "dap": "C",
+     "vi": "",
+     "hoi": {
+      "han": "他在哪儿学习？",
+      "py": "Tā zài nǎr xuéxí?"
+     },
+     "pa": [
+      {
+       "k": "A",
+       "han": "学校",
+       "py": "xuéxiào"
+      },
+      {
+       "k": "B",
+       "han": "医院",
+       "py": "yīyuàn"
+      },
+      {
+       "k": "C",
+       "han": "家",
+       "py": "jiā"
+      }
+     ]
+    },
+    {
+     "ma": "d4-3",
+     "han": "我上午有课，下午去医院看病。",
+     "py": "Wǒ shàngwǔ yǒu kè, xiàwǔ qù yīyuàn kànbìng.",
+     "dap": "B",
+     "vi": "",
+     "hoi": {
+      "han": "他下午做什么？",
+      "py": "Tā xiàwǔ zuò shénme?"
+     },
+     "pa": [
+      {
+       "k": "A",
+       "han": "上课",
+       "py": "shàngkè"
+      },
+      {
+       "k": "B",
+       "han": "看病",
+       "py": "kànbìng"
+      },
+      {
+       "k": "C",
+       "han": "看电影",
+       "py": "kàn diànyǐng"
+      }
+     ]
+    },
+    {
+     "ma": "d4-4",
+     "han": "我们晚上七点看电影，六点半在电影院见。",
+     "py": "Wǒmen wǎnshang qī diǎn kàn diànyǐng, liù diǎn bàn zài diànyǐngyuàn jiàn.",
+     "dap": "B",
+     "vi": "",
+     "hoi": {
+      "han": "他们几点在电影院见？",
+      "py": "Tāmen jǐ diǎn zài diànyǐngyuàn jiàn?"
+     },
+     "pa": [
+      {
+       "k": "A",
+       "han": "六点",
+       "py": "liù diǎn"
+      },
+      {
+       "k": "B",
+       "han": "六点半",
+       "py": "liù diǎn bàn"
+      },
+      {
+       "k": "C",
+       "han": "七点",
+       "py": "qī diǎn"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
