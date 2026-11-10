@@ -221,7 +221,7 @@ def dung_ghep(b):
 # còn thiếu thì tra bảng dưới (âm đọc khi đứng riêng, theo 等级标准)
 TEN_PY = {'李文': 'Lǐ Wén', '安妮': 'Ānnī', '李月': 'Lǐ Yuè'}   # theo pinyin câu ví dụ đã duyệt
 AM_RIENG = {'安': 'ān', '请': 'qǐng', '认': 'rèn', '识': 'shí', '语': 'yǔ', '法': 'fǎ', '谢': 'xiè', '对': 'duì', '起': 'qǐ', '没': 'méi', '什': 'shén', '名': 'míng', '字': 'zì', '李': 'lǐ', '越': 'yuè',
-            '南': 'nán', '爸': 'bà', '姐': 'jiě', '奶': 'nǎi', '期': 'qī', '休': 'xiū', '息': 'xī', '欢': 'huān'}
+            '南': 'nán', '爸': 'bà', '姐': 'jiě', '奶': 'nǎi', '期': 'qī', '休': 'xiū', '息': 'xī', '欢': 'huān', '超': 'chāo', '市': 'shì', '晚': 'wǎn', '边': 'biān'}
 MOT_CHU = {}
 for b in BAI:
     for w in WEB[b]['tu']:

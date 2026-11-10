@@ -96,6 +96,8 @@ def tep_cap(cap): return CFG['repo'] + 'data/tu-vung/cap-%s.json' % cap
 
 
 def gom(cap, tu, den):
+    if str(cap).startswith('bai'):
+        import thu_am_bai; return thu_am_bai.gom_bai(sys.modules[__name__], cap)
     """Gom mục cần thu của mã thứ tu..den (đếm từ 1, gồm cả hai đầu). Giống gom2.py + thêm pinyin, cờ cần nghe."""
     d = json.load(open(tep_cap(cap)))
     B = json.load(open(CFG['repo'] + 'assets/am/ban-do.json'))
@@ -188,8 +190,9 @@ def dong_py(it):
     return s
 
 
-def tao_style(ds, typ, ghi_chu=''):
+def tao_style(ds, typ, ghi_chu='', giong='Sulafat'):
     st = NHIP[typ]
+    if GIONG_TA.get(giong, 'female') == 'male': st = st.replace('female Mandarin teacher', 'male Mandarin teacher')
     if typ != 'chu': st += '\n' + LUAT
     if any(re.search(r'.儿', it['text']) for it in ds): st += '\n' + ER
     st += ('\nPronunciation of the lines, in the same order: ' + '; '.join(dong_py(it).rstrip('.') for it in ds) + '.')
@@ -232,11 +235,12 @@ def chia(L, n):
 
 def chia_luot(ds):
     out = []
-    for typ in ('tu', 'chu', 'cau'):
-        L = [it for it in ds if it['typ'] == typ]
+    for gi in ['Sulafat'] + sorted({it.get('giong', 'Sulafat') for it in ds} - {'Sulafat'}):
+      for typ in ('tu', 'chu', 'cau'):
+        L = [it for it in ds if it['typ'] == typ and it.get('giong', 'Sulafat') == gi]
         for b in chia(L, CFG['max_chu'] if typ == 'chu' else CFG['max_dong']):
             ten = 'l%02d' % (len(out) + 1)
-            out.append(dict(ten=ten, typ=typ, ids=[it['id'] for it in b], dong=[it['text'] for it in b], style=tao_style(b, typ)))
+            out.append(dict(ten=ten, typ=typ, giong=gi, ids=[it['id'] for it in b], dong=[it['text'] for it in b], style=tao_style(b, typ, giong=gi)))
     return out
 
 
@@ -273,7 +277,19 @@ def ghi_nhat_ky(dot, luot, giay, meta):
                     round(giay / 3600 * CFG['usd_gio'], 4), CFG['model']])
 
 
-def goi_tts(style, dong, wav, dot, luot, kieu=None):
+GIONG_DIR = {'Sulafat': None, 'Achird': 'nam1', 'Iapetus': 'nam2', 'Charon': 'nam3', 'Puck': 'nam4', 'Leda': 'nu2', 'Gacrux': 'nu3', 'Despina': 'nu4'}   # quy chuẩn 14 §4b
+GIONG_TA = {'Sulafat': 'female', 'Achird': 'male', 'Iapetus': 'male', 'Charon': 'male', 'Puck': 'male', 'Leda': 'female', 'Gacrux': 'female', 'Despina': 'female'}
+
+
+def goi_tts(style, dong, wav, dot, luot, kieu=None, giong=None):
+    """giong: giọng khác Sulafat (hội thoại hai giọng, quy chuẩn 14 §4b)."""
+    v0 = CFG['voice']
+    if giong: CFG['voice'] = giong
+    try: return _goi_tts(style, dong, wav, dot, luot, kieu)
+    finally: CFG['voice'] = v0
+
+
+def _goi_tts(style, dong, wav, dot, luot, kieu=None):
     """Gọi Gemini một lần, ghi wav (PCM 16-bit mono). Thử lại khi lỗi mạng / 429 / 5xx. Trả về số giây âm thanh."""
     rq = _rq()
     kieu = kieu or CFG.get('kieu') or KIEU[0]
@@ -506,12 +522,12 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
     L = _doc(D + 'luot.json')
     if L is None:
         L = chia_luot(ds); _ghi(D + 'luot.json', L)
-    print('%d mục · %d lượt: %s' % (len(ds), len(L), ', '.join('%s(%s %d)' % (b['ten'], b['typ'], len(b['dong'])) for b in L)))
+    print('%d mục · %d lượt: %s' % (len(ds), len(L), ', '.join('%s(%s %s %d)' % (b['ten'], b['typ'], b.get('giong', ''), len(b['dong'])) for b in L)))
     by = {it['id']: it for it in ds}
     dot = 'cap-%s_%04d-%04d' % (cap, tu, den)
     chon_kieu(ds, D, dot)
     for b in L:   # Style luôn tạo lại theo mã mới nhất; lượt thu bằng cách gửi cũ thì thu lại
-        b['style'] = tao_style([by[i] for i in b['ids']], b['typ'])
+        b['style'] = tao_style([by[i] for i in b['ids']], b['typ'], giong=b.get('giong', 'Sulafat'))
         kf = D + 'ketqua/%s.json' % b['ten']
         if os.path.exists(kf) and _doc(kf)['meta'].get('kieu') != CFG['kieu']:
             for f in (kf, D + 'wav/%s.wav' % b['ten']):
@@ -523,7 +539,7 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
         wav = D + 'wav/%s.wav' % b['ten']
         if not os.path.exists(wav):
             print('▶ %s: gọi Gemini (%d dòng)…' % (b['ten'], len(b['dong'])), end=' ', flush=True)
-            t1 = time.time(); g = goi_tts(b['style'], b['dong'], wav, dot, b['ten']); giay += g
+            t1 = time.time(); g = goi_tts(b['style'], b['dong'], wav, dot, b['ten'], giong=b.get('giong')); giay += g
             print('%.0f s âm thanh, %.0f s chờ' % (g, time.time() - t1))
         kf = D + 'ketqua/%s.json' % b['ten']
         if os.path.exists(kf): continue
@@ -558,7 +574,9 @@ def thu_lai_muc(D, it, dot, ghi_chu=''):
     """Thu lại 1 mục: một lượt đọc 4 lần, Style chỉ nói về mục đó; chọn bản tốt nhất."""
     it['lan'] = it.get('lan', 0) + 1
     ten = 'r-%s-%d' % (it['ten'], it['lan'])
-    st = NHIP['chu' if it['typ'] == 'chu' else it['typ']].replace('Each line is', 'The same line is written 4 times; each line is')
+    st = NHIP['chu' if it['typ'] == 'chu' else it['typ']]
+    if GIONG_TA.get(it.get('giong', 'Sulafat'), 'female') == 'male': st = st.replace('female Mandarin teacher', 'male Mandarin teacher')
+    st = st.replace('Each line is', 'The same line is written 4 times; each line is')
     st += '\nPronunciation of every line: ' + dong_py(it) + ('\n' + ER if re.search(r'.儿', it['text']) else '')
     dk = chu_doc_khac(it['text'])
     if dk: st += '\nPay attention to: ' + ', '.join(dk) + ' (read as in the pinyin above).'
@@ -566,7 +584,7 @@ def thu_lai_muc(D, it, dot, ghi_chu=''):
     if ghi_chu: st += '\n' + ghi_chu
     wav = D + 'wav/%s.wav' % ten
     g = 0
-    if not os.path.exists(wav): g = goi_tts(st, [it['text']] * 4, wav, dot, ten)
+    if not os.path.exists(wav): g = goi_tts(st, [it['text']] * 4, wav, dot, ten, giong=it.get('giong'))
     ids = ['%s#%d' % (it['id'], i) for i in range(4)]
     res, meta = cat_luot(wav, [it['text']] * 4, ids, [it['alt']] * 4, D + 'tam/%s/' % ten, ['%s_%d' % (it['ten'], i) for i in range(4)])
     tot = sorted((r for r in res.values() if r.get('tam')), key=lambda r: (len(r['loi']), -r['r']))
@@ -664,6 +682,8 @@ def _git(*a, an=None):
 
 def day_len(cap, tu, den, token, ten='Nhiên (Colab)', email='heran9895@gmail.com'):
     """Đẩy mục đã đạt (máy tự kiểm đạt + cô tick Đạt) lên main. Mục còn chờ nghe / thu lại để lần sau."""
+    if str(cap).startswith('bai'):
+        import thu_am_bai; return thu_am_bai.day_len_bai(sys.modules[__name__], cap, tu, den, token, ten, email)
     D = thu_muc(cap, tu, den); ds = _doc(D + 'ds.json')
     R = CFG['repo']
     di = [it for it in ds if it.get('file') and not it.get('da_day') and not can_nghe(it) and it.get('quyet') != 'thu_lai']
