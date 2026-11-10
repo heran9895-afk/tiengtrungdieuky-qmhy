@@ -281,8 +281,21 @@ GIONG_DIR = {'Sulafat': None, 'Achird': 'nam1', 'Iapetus': 'nam2', 'Charon': 'na
 GIONG_TA = {'Sulafat': 'female', 'Achird': 'male', 'Iapetus': 'male', 'Charon': 'male', 'Puck': 'male', 'Leda': 'female', 'Gacrux': 'female', 'Despina': 'female'}
 
 
+def doc_tts(t):
+    """Chữ GỬI cho Gemini (chỉ ở khâu đọc; dữ liệu/hiển thị trên web giữ nguyên).
+    - Dãy số điện thoại / số khẩn cấp: 一 đọc yāo -> viết 幺 (Gemini hay đọc 一 thành yī dù Style dặn).
+    - 广 đứng một mình (bộ thủ) đọc yǎn -> gửi 眼 (cùng âm yǎn)."""
+    t = str(t)
+    if han(t) == '广' and len(t.strip()) <= 2: return '眼'
+    def doi(m):
+        g = m.group(0)
+        return g.replace('一', '幺') if ('〇' in g or '零' in g or '一一' in g) else g
+    return re.sub(r'[〇零一二三四五六七八九]{2,}', doi, t)
+
+
 def goi_tts(style, dong, wav, dot, luot, kieu=None, giong=None):
     """giong: giọng khác Sulafat (hội thoại hai giọng, quy chuẩn 14 §4b)."""
+    dong = [doc_tts(l) for l in dong]
     v0 = CFG['voice']
     if giong: CFG['voice'] = giong
     try: return _goi_tts(style, dong, wav, dot, luot, kieu)
