@@ -577,6 +577,7 @@ def _nhan_ket_qua(D, it, r):
     it['r'], it['asr'], it['loi'] = r.get('r', 0), r.get('asr', ''), r.get('loi', [])
     it['dai'] = r.get('dai')
     if r.get('tam'):
+        it['da_day'] = False; it['tts2'] = True   # file mới: lần "Đẩy lên web" sau phải đẩy lại
         dich = D + 'mp3/%s/%s.mp3' % (it['thu'], it['ten'])
         os.makedirs(os.path.dirname(dich), exist_ok=True); shutil.copy(r['tam'], dich)
         it['file'] = dich
@@ -675,8 +676,13 @@ def bang_nghe(cap, tu, den, tat_ca=False):
 
 def thu_lai_da_chon(cap, tu, den):
     D = thu_muc(cap, tu, den); ds = _doc(D + 'ds.json'); dot = 'cap-%s_%04d-%04d' % (cap, tu, den)
+    # Mục có dãy số (一→幺) hoặc 广 thu từ trước khi có cách gửi mới mà máy cho qua: tự thu lại một lần
+    DA_SUA = {'一三八〇', '一一〇', '一一九', '一二〇', '一一〇是什么电话？', '广'}
+    for it in ds:
+        if it.get('file') and not it.get('tts2') and it.get('text') not in DA_SUA and doc_tts(it['text']) != it['text'] and it.get('quyet') != 'thu_lai':
+            it['quyet'] = 'thu_lai'; it['ghi_chu'] = it.get('ghi_chu') or ''
     can = [it for it in ds if it.get('quyet') == 'thu_lai']
-    print('Thu lại %d mục cô chọn…' % len(can))
+    print('Thu lại %d mục cô chọn (gồm mục có số 幺 tự thêm)…' % len(can))
     for it in can:
         gc = it.get('ghi_chu', '').strip()
         thu_lai_muc(D, it, dot, ('Teacher note (follow it exactly): ' + gc) if gc else '', ep=True)
