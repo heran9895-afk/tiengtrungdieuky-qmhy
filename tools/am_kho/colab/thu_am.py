@@ -583,7 +583,7 @@ def _nhan_ket_qua(D, it, r):
     it['trang'] = 'loi' if it['loi'] else 'xong'
 
 
-def thu_lai_muc(D, it, dot, ghi_chu=''):
+def thu_lai_muc(D, it, dot, ghi_chu='', ep=False):
     """Thu lại 1 mục: một lượt đọc 4 lần, Style chỉ nói về mục đó; chọn bản tốt nhất."""
     it['lan'] = it.get('lan', 0) + 1
     ten = 'r-%s-%d' % (it['ten'], it['lan'])
@@ -602,7 +602,8 @@ def thu_lai_muc(D, it, dot, ghi_chu=''):
     res, meta = cat_luot(wav, [it['text']] * 4, ids, [it['alt']] * 4, D + 'tam/%s/' % ten, ['%s_%d' % (it['ten'], i) for i in range(4)])
     tot = sorted((r for r in res.values() if r.get('tam')), key=lambda r: (len(r['loi']), -r['r']))
     cu = dict(r=it.get('r', 0), loi=it.get('loi', []))
-    if tot and (len(tot[0]['loi']), -tot[0]['r']) <= (len(cu['loi']) if it.get('file') else 99, -cu['r']):
+    # ep=True (cô bấm Thu lại): luôn nhận bản mới, vì máy nghe không phân biệt được yāo/yī, dā/dá… nên điểm không nói bản nào đúng hơn
+    if tot and (ep or (len(tot[0]['loi']), -tot[0]['r']) <= (len(cu['loi']) if it.get('file') else 99, -cu['r'])):
         _nhan_ket_qua(D, it, tot[0])
     return g
 
@@ -678,7 +679,7 @@ def thu_lai_da_chon(cap, tu, den):
     print('Thu lại %d mục cô chọn…' % len(can))
     for it in can:
         gc = it.get('ghi_chu', '').strip()
-        thu_lai_muc(D, it, dot, ('Teacher note (follow it exactly): ' + gc) if gc else '')
+        thu_lai_muc(D, it, dot, ('Teacher note (follow it exactly): ' + gc) if gc else '', ep=True)
         it['quyet'] = None; it['lan_co'] = it.get('lan_co', 0) + 1
         _ghi(D + 'ds.json', ds)
         print('   ', it['text'], '→ bản mới, khớp %.2f' % it.get('r', 0), '· ' + ', '.join(it['loi']) if it['loi'] else '')
