@@ -384,7 +384,8 @@
       }
      ],
      "dap": "C",
-     "vi": ""
+     "vi": "",
+     "doc": "assets/am/cau/af1550049b.mp3"
     }
    ]
   },
@@ -449,7 +450,8 @@
       }
      ],
      "dap": "B",
-     "vi": ""
+     "vi": "",
+     "doc": "assets/am/nam1/b4bbe597dd.mp3|assets/am/cau/a62104ad9a.mp3"
     },
     {
      "ma": "n3-2",
@@ -466,7 +468,8 @@
       }
      ],
      "dap": "C",
-     "vi": ""
+     "vi": "",
+     "doc": "assets/am/nam1/fd84d80e42.mp3|assets/am/cau/91db52aedf.mp3"
     },
     {
      "ma": "n3-3",
@@ -483,7 +486,8 @@
       }
      ],
      "dap": "D",
-     "vi": ""
+     "vi": "",
+     "doc": "assets/am/nam1/bfd29ffb6b.mp3|assets/am/cau/fe9441bdd9.mp3"
     }
    ]
   },
@@ -560,7 +564,8 @@
       }
      ],
      "dap": "A",
-     "vi": ""
+     "vi": "",
+     "doc": "assets/am/nam1/62fdb42293.mp3|assets/am/cau/245ff642e3.mp3"
     },
     {
      "ma": "n4-2",
@@ -594,7 +599,8 @@
       }
      ],
      "dap": "B",
-     "vi": ""
+     "vi": "",
+     "doc": "assets/am/nam1/c433e66d5c.mp3|assets/am/cau/665e7348dd.mp3"
     },
     {
      "ma": "n4-3",
@@ -628,7 +634,8 @@
       }
      ],
      "dap": "C",
-     "vi": ""
+     "vi": "",
+     "doc": "assets/am/nam1/4c609ea10b.mp3|assets/am/cau/2fe9c4ec71.mp3"
     }
    ]
   },
