@@ -522,6 +522,21 @@ def chon_kieu(ds, D, dot):
     raise RuntimeError('Chưa cách gửi nào làm Gemini chỉ đọc đúng danh sách. Cô chụp màn hình phần trên gửi bên soạn.')
 
 
+def bo_sung_moi(cap, tu, den, D, ds):
+    """Bài đã thu rồi mà dữ liệu bài có thêm chữ / câu mới: gom lại, chỉ THÊM mục chưa có vào ds và thêm lượt mới (không thu lại mục cũ)."""
+    ds2, bo2 = gom(cap, tu, den)
+    co = {it['id'] for it in ds}
+    moi = [it for it in ds2 if it['id'] not in co]
+    if not moi: return
+    L = _doc(D + 'luot.json')
+    Lm = chia_luot(moi)
+    if L is None: return   # chưa chia lượt: chay_dot sẽ chia từ ds đã có thêm mục mới
+    for i, b in enumerate(Lm): b['ten'] = 'l%02d' % (len(L) + i + 1)
+    ds.extend(moi); L.extend(Lm)
+    _ghi(D + 'ds.json', ds); _ghi(D + 'luot.json', L); _ghi(D + 'bo.json', bo2)
+    print('Bổ sung %d mục mới vào bài đã thu: %s' % (len(moi), ' '.join(it['text'] for it in moi[:12])))
+
+
 def chay_dot(cap, tu, den, gioi_han_luot=None):
     """Gom → chia lượt → gọi Gemini → cắt, kiểm → tự thu lại mục lỗi. Chạy lại được bất cứ lúc nào."""
     D = thu_muc(cap, tu, den); os.makedirs(D + 'ketqua', exist_ok=True)
@@ -532,6 +547,7 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
         _ghi(D + 'ds.json', ds); _ghi(D + 'bo.json', bo)
         print('Gom HSK%s %d → %d: %d từ/cụm, %d chữ đa âm (ghi thẳng ô Đọc), %d câu · bỏ %d mục (了/么 riêng, đã có file)' % (
             cap, tu, den, sum(it['typ'] == 'tu' for it in ds), sum(it['typ'] == 'chu' for it in ds), sum(it['typ'] == 'cau' for it in ds), len(bo)))
+    elif str(cap).startswith('bai'): bo_sung_moi(cap, tu, den, D, ds)
     L = _doc(D + 'luot.json')
     if L is None:
         L = chia_luot(ds); _ghi(D + 'luot.json', L)

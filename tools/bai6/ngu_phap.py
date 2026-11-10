@@ -111,7 +111,7 @@ NGU_PHAP = [
  dict(id='lienDong', ten='Câu liên động (1): 去 + nơi chốn + ĐT · 坐 + phương tiện + 去',
   congThuc=[[['CN', 'dt'], ['去', 'codinh'], ['Nơi chốn', 'dt'], ['ĐT', 'dgt'], ['(TN)', 'dt']], [['CN', 'dt'], ['坐', 'codinh'], ['Phương tiện', 'dt'], ['去', 'codinh'], ['(Nơi chốn)', 'dt']],
             [['CN', 'dt'], ['坐', 'codinh'], ['Phương tiện', 'dt'], ['去', 'codinh'], ['Nơi chốn', 'dt'], ['ĐT', 'dgt'], ['(TN)', 'dt']]],
-  giaiThich='**Câu liên động** là câu có vị ngữ gồm **hai (hoặc nhiều) cụm động từ nối tiếp**, cùng một chủ ngữ: **S + V1 (+ O1) + V2 (+ O2)**. Có hai kiểu: **(1) Chỉ MỤC ĐÍCH**: V2 là mục đích của V1, ví dụ 去超市买东西 (đi siêu thị **để** mua đồ). **(2) Chỉ CÁCH THỨC**: V1 là cách thức của V2, ví dụ 坐出租车去 (**đi bằng** taxi).',
+  giaiThich='**Câu liên động** là câu có vị ngữ gồm **hai (hoặc nhiều) cụm động từ nối tiếp**, cùng một chủ ngữ: **S + V1 (+ O1) + V2 (+ O2)**. Có hai kiểu: **(1) Chỉ MỤC ĐÍCH**: V2 là mục đích của V1, ví dụ 去超市买东西 (đi siêu thị **để** mua đồ). **(2) Chỉ CÁCH THỨC**: V1 là cách thức của V2, ví dụ 坐出租车去 (**đi bằng** taxi), 开车去 (**lái xe** đi).',
   y=[
    dict(noiDung='Mục đích: 去 + nơi chốn + ĐT (+ TN)',
     cum=[['去超市买菜', 'qù chāoshì mǎi cài', '', S(('去', 'codinh'), ('超市', 'dt'), ('买菜', 'dgt'))], ['去饭店吃晚饭', 'qù fàndiàn chī wǎnfàn', '', S(('去', 'codinh'), ('饭店', 'dt'), ('吃晚饭', 'dgt'))],
@@ -122,10 +122,11 @@ NGU_PHAP = [
          ['骑自行车去', 'qí zìxíngchē qù', '', S(('骑', 'codinh'), ('自行车', 'dt'), ('去', 'codinh'))]],
     viDu=[['她坐出租车去超市。', 'Tā zuò chūzūchē qù chāoshì.', '', S(('她', None), ('坐', 'codinh'), ('出租车', 'dt'), ('去', 'codinh'), ('超市', 'dt'), ('。', None))]]),
    dict(noiDung='Kết hợp: cách thức trước, mục đích sau',
-    viDu=[['我坐出租车去超市买东西。', 'Wǒ zuò chūzūchē qù chāoshì mǎi dōngxi.', '', S(('我', None), ('坐', 'codinh'), ('出租车', 'dt'), ('去', 'codinh'), ('超市', 'dt'), ('买东西', 'dgt'), ('。', None))]]),
+    viDu=[['我坐出租车去超市买东西。', 'Wǒ zuò chūzūchē qù chāoshì mǎi dōngxi.', '', S(('我', None), ('坐', 'codinh'), ('出租车', 'dt'), ('去', 'codinh'), ('超市', 'dt'), ('买东西', 'dgt'), ('。', None))],
+          ['他们开车去饭店吃饭。', 'Tāmen kāichē qù fàndiàn chīfàn.', '', S(('他们', None), ('开车', 'codinh'), ('去', 'codinh'), ('饭店', 'dt'), ('吃饭', 'dgt'), ('。', None))]]),
   ],
   luuY=['**不 / 想** đặt **trước V1**: 我想去超市买东西。 他们不骑车去饭店。',
-        'Kết hợp hai kiểu: **cách thức trước, mục đích sau**: 我坐出租车去超市买东西.',
+        'Kết hợp hai kiểu: **cách thức trước, mục đích sau**: 我坐出租车去超市买东西. **开车** (lái xe) cũng là cách thức, giống 坐车 / 骑车: 他们开车去饭店吃饭.',
         'Thứ tự động từ là **thứ tự hành động xảy ra**: nói 我去超市买东西, không nói 我买东西去超市.',
         'Câu hỏi dùng **吗** ở **cuối câu**: 你去超市买东西吗？']),
 

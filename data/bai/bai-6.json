@@ -847,6 +847,27 @@
    "Đọc câu 2": ""
   },
   {
+   "Mã": "1-0188",
+   "Chữ Hán": "开",
+   "Pinyin": "kāi",
+   "Âm Hán Việt": "KHAI",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "mở; lái (xe)",
+   "Cấp HSK": "1",
+   "Thuận bút": "开",
+   "Cụm từ": "开车 | kāi chē\n开车去 | kāi chē qù\n开车去上班 | kāi chē qù shàngbān",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "他们开车去饭店吃饭。",
+   "Pinyin câu 1": "Tāmen kāichē qù fàndiàn chīfàn.",
+   "Nghĩa câu 1": "Họ lái xe đến nhà hàng ăn cơm.",
+   "Đọc câu 1": "",
+   "Câu 2": "爸爸开车去上班。",
+   "Pinyin câu 2": "Bàba kāichē qù shàngbān.",
+   "Nghĩa câu 2": "Bố lái xe đi làm.",
+   "Đọc câu 2": ""
+  },
+  {
    "Mã": "2-0125",
    "Chữ Hán": "地铁",
    "Pinyin": "dìtiě",
@@ -1168,6 +1189,7 @@
     "辆",
     "自行车",
     "骑",
+    "开",
     "地铁",
     "公共汽车",
     "走",
@@ -2600,7 +2622,7 @@
      ]
     ]
    ],
-   "giaiThich": "**Câu liên động** là câu có vị ngữ gồm **hai (hoặc nhiều) cụm động từ nối tiếp**, cùng một chủ ngữ: **S + V1 (+ O1) + V2 (+ O2)**. Có hai kiểu: **(1) Chỉ MỤC ĐÍCH**: V2 là mục đích của V1, ví dụ 去超市买东西 (đi siêu thị **để** mua đồ). **(2) Chỉ CÁCH THỨC**: V1 là cách thức của V2, ví dụ 坐出租车去 (**đi bằng** taxi).",
+   "giaiThich": "**Câu liên động** là câu có vị ngữ gồm **hai (hoặc nhiều) cụm động từ nối tiếp**, cùng một chủ ngữ: **S + V1 (+ O1) + V2 (+ O2)**. Có hai kiểu: **(1) Chỉ MỤC ĐÍCH**: V2 là mục đích của V1, ví dụ 去超市买东西 (đi siêu thị **để** mua đồ). **(2) Chỉ CÁCH THỨC**: V1 là cách thức của V2, ví dụ 坐出租车去 (**đi bằng** taxi), 开车去 (**lái xe** đi).",
    "y": [
     {
      "noiDung": "Mục đích: 去 + nơi chốn + ĐT (+ TN)",
@@ -2829,13 +2851,44 @@
          null
         ]
        ]
+      ],
+      [
+       "他们开车去饭店吃饭。",
+       "Tāmen kāichē qù fàndiàn chīfàn.",
+       "",
+       [
+        [
+         "他们",
+         null
+        ],
+        [
+         "开车",
+         "codinh"
+        ],
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "饭店",
+         "dt"
+        ],
+        [
+         "吃饭",
+         "dgt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
       ]
      ]
     }
    ],
    "luuY": [
     "**不 / 想** đặt **trước V1**: 我想去超市买东西。 他们不骑车去饭店。",
-    "Kết hợp hai kiểu: **cách thức trước, mục đích sau**: 我坐出租车去超市买东西.",
+    "Kết hợp hai kiểu: **cách thức trước, mục đích sau**: 我坐出租车去超市买东西. **开车** (lái xe) cũng là cách thức, giống 坐车 / 骑车: 他们开车去饭店吃饭.",
     "Thứ tự động từ là **thứ tự hành động xảy ra**: nói 我去超市买东西, không nói 我买东西去超市.",
     "Câu hỏi dùng **吗** ở **cuối câu**: 你去超市买东西吗？"
    ]
