@@ -32,6 +32,7 @@ def so_bai(cap): return int(re.sub(r'\D', '', str(cap)))
 
 
 def gom_bai(T, cap):
+    if str(cap).endswith('sbt'): return gom_sbt(T, cap)
     n = so_bai(cap); R = T.CFG['repo']
     d = json.load(open(R + 'data/bai/bai-%d.json' % n))
     B = json.load(open(R + 'assets/am/ban-do.json'))
@@ -143,6 +144,35 @@ def gom_bai(T, cap):
         it['co'] = co
         it['alt'] = T.khong_dau(it['py']) if lech else ''
     return out, bo
+
+
+GIONG_SBT = {'nu1': 'Sulafat', 'nam1': 'Achird', 'nu2': 'Leda', 'nu3': 'Gacrux', 'nam3': 'Charon'}
+
+
+def gom_sbt(T, cap):
+    """CAP = 'bai6sbt' / 'bai7sbt': lời nghe của Sách bài tập (tools/sach_bai_tap/noi_dung.py) chưa có file giọng Gemini."""
+    n = so_bai(cap); R = T.CFG['repo']
+    sys.path.insert(0, R + 'tools/sach_bai_tap')
+    import importlib, noi_dung; importlib.reload(noi_dung)
+    B = json.load(open(R + 'assets/am/ban-do.json'))
+    out, by = [], {}
+    bai = [b for b in noi_dung.BAI if b['bai'] == n][0]
+    for p in bai['phan']:
+        for c in p['cau']:
+            if not isinstance(c, dict) or 'loi' not in c: continue
+            gs = c.get('giong') or ['nu1'] * len(c['loi'])
+            for l, g in zip(c['loi'], gs):
+                giong = GIONG_SBT[g]; k = T.chuan(l['han'])
+                if giong == 'Sulafat' and k in B: continue
+                thu = T.GIONG_DIR.get(giong) or 'cau'; ten = T.md10(k)
+                if os.path.exists(R + 'assets/am/%s/%s.mp3' % (thu, ten)): continue
+                id_ = k + '|' + giong
+                if id_ in by: continue
+                py = (l.get('py') or '').replace('·', '').strip()
+                it = dict(id=id_, k=k, text=T.gon(l['han']), py=py, typ='cau', thu=thu, src='Sách bài tập · ' + p['ten'], ten=ten, o=None,
+                          trang='cho', giong=giong, tg=[], co=[], alt='')
+                by[id_] = it; out.append(it)
+    return out, []
 
 
 def day_len_bai(T, cap, tu, den, token, ten, email):
