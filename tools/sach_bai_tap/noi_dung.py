@@ -196,6 +196,128 @@ NGHE = {
        [L('A', '饺子', 'jiǎozi'), L('B', '面包', 'miànbāo'), L('C', '面条儿', 'miàntiáor')], 'C', 'Mẹ tôi biết làm mì, không biết làm sủi cảo. — Hỏi: Mẹ anh ấy biết làm gì?'),
     N4('n4-3', ('昨天是我的生日，我很高兴。', 'Zuótiān shì wǒ de shēngrì, wǒ hěn gāoxìng.'), ('他的生日是哪天？', 'Tā de shēngrì shì nǎ tiān?'),
        [L('A', '今天', 'jīntiān'), L('B', '昨天', 'zuótiān'), L('C', '明天', 'míngtiān')], 'B', 'Hôm qua là sinh nhật tôi, tôi rất vui. — Hỏi: Sinh nhật anh ấy là hôm nào?')])]}
+# ---------------- Bài 6–7: soạn 11/11/2026 (chỉ làm Sách bài tập; chờ ảnh Unsplash + thu giọng) ----------------
+BAI += [
+ {'bai': 6, 'ten': '你的手机号是多少？', 'tenViet': 'Số điện thoại di động của bạn là bao nhiêu?', 'phienBan': '2026-11-11a', 'phan': [
+  phan(P_AT, 'at', [('shou3', ['shou4', 'sou3', 'zhou3']), ('ji1', ['qi1', 'ji2', 'xi1']), ('hao4', ['hou4', 'gao4', 'hao3']), ('mai3', ['mei3', 'man3', 'mai4']),
+                    ('wan3', ['wang3', 'wen3', 'wan4']), ('che1', ['zhe1', 'che2', 'ce1']), ('zou3', ['zhou3', 'zuo3', 'zou4']), ('qi2', ['ji2', 'qi4', 'xi2']),
+                    ('chao1', ['zhao1', 'cao1', 'chao2']), ('xiang3', ['xiang4', 'jiang3', 'xiong3'])]),
+  phan(P_D1, 'doc-tranh', [
+    C('d1-1', '他骑自行车去上班。', 'Tā qí zìxíngchē qù shàngbān.', 'A', ''),
+    C('d1-2', '我给妈妈打电话。', 'Wǒ gěi māma dǎ diànhuà.', 'B', ''),
+    C('d1-3', '我很想喝奶茶。', 'Wǒ hěn xiǎng hē nǎichá.', 'C', ''),
+    C('d1-4', '他们坐出租车去饭店。', 'Tāmen zuò chūzūchē qù fàndiàn.', 'D', ''),
+    C('d1-5', '我想去超市买东西。', 'Wǒ xiǎng qù chāoshì mǎi dōngxi.', 'E', '')],
+    anh=[{'k': 'A', 'src': A + 'b6-xe-dap.webp', 'alt': 'Xe đạp'}, {'k': 'B', 'src': A + 'b6-dien-thoai.webp', 'alt': 'Người đang gọi điện thoại'},
+         {'k': 'C', 'src': A + 'b6-tra-sua.webp', 'alt': 'Ly trà sữa'}, {'k': 'D', 'src': A + 'b6-taxi.webp', 'alt': 'Xe taxi'},
+         {'k': 'E', 'src': A + 'b6-sieu-thi.webp', 'alt': 'Người đẩy xe trong siêu thị'}, {'k': 'F', 'src': A + 'b5-banh-bao.webp', 'alt': 'Bánh bao'}]),
+  phan(P_D2, 'doc-ghep', [
+    C('d2-1', '你的手机号码是多少？', 'Nǐ de shǒujī hàomǎ shì duōshao?', 'A', ''),
+    C('d2-2', '你想吃什么？', 'Nǐ xiǎng chī shénme?', 'B', ''),
+    C('d2-3', '你怎么去超市？', 'Nǐ zěnme qù chāoshì?', 'C', ''),
+    C('d2-4', '你给谁打电话？', 'Nǐ gěi shéi dǎ diànhuà?', 'D', ''),
+    C('d2-5', '这家饭店的米饭好吃吗？', 'Zhè jiā fàndiàn de mǐfàn hǎochī ma?', 'F', '')],
+    luaChon=[L('A', '我的手机号码是一三八〇五九六四二三八。', 'Wǒ de shǒujī hàomǎ shì yāo sān bā líng wǔ jiǔ liù sì èr sān bā.'), L('B', '我想吃包子。', 'Wǒ xiǎng chī bāozi.'),
+             L('C', '我坐公共汽车去。', 'Wǒ zuò gōnggòng qìchē qù.'), L('D', '我给妈妈打电话。', 'Wǒ gěi māma dǎ diànhuà.'),
+             L('E', '我明天去商店。', 'Wǒ míngtiān qù shāngdiàn.'), L('F', '非常好吃！', 'Fēicháng hǎochī!')]),
+  phan(P_D3, 'doc-dien', [
+    C('d3-1', '我（　）去超市买东西。', 'Wǒ (　) qù chāoshì mǎi dōngxi.', 'A', ''),
+    C('d3-2', '他（　）我打电话。', 'Tā (　) wǒ dǎ diànhuà.', 'B', ''),
+    C('d3-3', '我有一（　）自行车。', 'Wǒ yǒu yí (　) zìxíngchē.', 'C', ''),
+    C('d3-4', '这个包子（　）好吃！', 'Zhège bāozi (　) hǎochī!', 'D', ''),
+    C('d3-5', '你想买哪（　）东西？', 'Nǐ xiǎng mǎi nǎ (　) dōngxi?', 'E', '')],
+    luaChon=[L('A', '想', 'xiǎng'), L('B', '给', 'gěi'), L('C', '辆', 'liàng'), L('D', '非常', 'fēicháng'), L('E', '些', 'xiē'), L('F', '碗', 'wǎn')]),
+  phan(P_D4, 'doc-hoi', [
+    C('d4-1', '我早饭吃包子，午饭吃米饭，晚饭吃面条儿。', 'Wǒ zǎofàn chī bāozi, wǔfàn chī mǐfàn, wǎnfàn chī miàntiáor.', 'C', '',
+      hoi={'han': '他晚饭吃：', 'py': 'Tā wǎnfàn chī:'}, pa=[L('A', '包子', 'bāozi'), L('B', '米饭', 'mǐfàn'), L('C', '面条儿', 'miàntiáor')]),
+    C('d4-2', '我不坐出租车，我骑自行车去商店。', 'Wǒ bú zuò chūzūchē, wǒ qí zìxíngchē qù shāngdiàn.', 'B', '',
+      hoi={'han': '他怎么去商店？', 'py': 'Tā zěnme qù shāngdiàn?'}, pa=[L('A', '坐出租车', 'zuò chūzūchē'), L('B', '骑自行车', 'qí zìxíngchē'), L('C', '坐地铁', 'zuò dìtiě')]),
+    C('d4-3', '我没有妈妈的手机号，我给爸爸打电话。', 'Wǒ méiyǒu māma de shǒujī hào, wǒ gěi bàba dǎ diànhuà.', 'B', '',
+      hoi={'han': '他给谁打电话？', 'py': 'Tā gěi shéi dǎ diànhuà?'}, pa=[L('A', '妈妈', 'māma'), L('B', '爸爸', 'bàba'), L('C', '哥哥', 'gēge')]),
+    C('d4-4', '这家商店卖牛奶、茶和米饭，不卖包子。', 'Zhè jiā shāngdiàn mài niúnǎi, chá hé mǐfàn, bú mài bāozi.', 'C', '',
+      hoi={'han': '这家商店不卖：', 'py': 'Zhè jiā shāngdiàn bú mài:'}, pa=[L('A', '牛奶', 'niúnǎi'), L('B', '茶', 'chá'), L('C', '包子', 'bāozi')])])]},
+ {'bai': 7, 'ten': '我晚上六点半下班', 'tenViet': 'Tôi tan làm lúc 6 rưỡi tối', 'phienBan': '2026-11-11a', 'phan': [
+  phan(P_AT, 'at', [('dian3', ['dian4', 'tian3', 'diao3']), ('ban4', ['pan4', 'bang4', 'ban3']), ('yuan4', ['yuan2', 'yun4', 'yan4']), ('hou4', ['hou3', 'gou4', 'huo4']),
+                    ('bei1', ['pei1', 'bi1', 'bei3']), ('jian1', ['qian1', 'jin1', 'jian3']), ('ke4', ['ge4', 'ke3', 'he4']), ('cha4', ['chai4', 'zha4', 'cha2']),
+                    ('qian2', ['jian2', 'qin2', 'qian3']), ('xiao4', ['xiao3', 'qiao4', 'xue4'])]),
+  phan(P_D1, 'doc-tranh', [
+    C('d1-1', '我在医院看病。', 'Wǒ zài yīyuàn kànbìng.', 'A', ''),
+    C('d1-2', '现在是十二点半。', 'Xiànzài shì shí\'èr diǎn bàn.', 'B', ''),
+    C('d1-3', '我们今天晚上去看电影。', 'Wǒmen jīntiān wǎnshang qù kàn diànyǐng.', 'C', ''),
+    C('d1-4', '我在家看书。', 'Wǒ zài jiā kàn shū.', 'D', ''),
+    C('d1-5', '我想喝一杯茶。', 'Wǒ xiǎng hē yì bēi chá.', 'E', '')],
+    anh=[{'k': 'A', 'src': A + 'b7-benh-vien.webp', 'alt': 'Bệnh viện'}, {'k': 'B', 'src': A + 'b7-dong-ho.webp', 'alt': 'Đồng hồ'},
+         {'k': 'C', 'src': A + 'b7-xem-phim.webp', 'alt': 'Xem phim ở rạp'}, {'k': 'D', 'src': A + 'b7-sach.webp', 'alt': 'Sách'},
+         {'k': 'E', 'src': A + 'b7-ly-tra.webp', 'alt': 'Một tách trà'}, {'k': 'F', 'src': A + 'b7-truong.webp', 'alt': 'Trường học'}]),
+  phan(P_D2, 'doc-ghep', [
+    C('d2-1', '现在几点？', 'Xiànzài jǐ diǎn?', 'A', ''),
+    C('d2-2', '你几点上课？', 'Nǐ jǐ diǎn shàngkè?', 'B', ''),
+    C('d2-3', '你在哪儿看书？', 'Nǐ zài nǎr kàn shū?', 'C', ''),
+    C('d2-4', '你想看电影吗？', 'Nǐ xiǎng kàn diànyǐng ma?', 'D', ''),
+    C('d2-5', '你在哪儿工作？', 'Nǐ zài nǎr gōngzuò?', 'E', '')],
+    luaChon=[L('A', '现在九点一刻。', 'Xiànzài jiǔ diǎn yí kè.'), L('B', '我八点上课。', 'Wǒ bā diǎn shàngkè.'), L('C', '我在家看书。', 'Wǒ zài jiā kàn shū.'),
+             L('D', '好，我们下午去吧。', 'Hǎo, wǒmen xiàwǔ qù ba.'), L('E', '我在医院工作。', 'Wǒ zài yīyuàn gōngzuò.'), L('F', '差十分十点。', 'Chà shí fēn shí diǎn.')]),
+  phan(P_D3, 'doc-dien', [
+    C('d3-1', '现在八（　）。', 'Xiànzài bā (　).', 'A', ''),
+    C('d3-2', '我们去看电影（　）！', 'Wǒmen qù kàn diànyǐng (　)!', 'B', ''),
+    C('d3-3', '他（　）学校学习。', 'Tā (　) xuéxiào xuéxí.', 'C', ''),
+    C('d3-4', '我想喝一（　）茶。', 'Wǒ xiǎng hē yì (　) chá.', 'D', ''),
+    C('d3-5', '现在六点（　），我们去吃饭吧。', 'Xiànzài liù diǎn (　), wǒmen qù chīfàn ba.', 'E', '')],
+    luaChon=[L('A', '点', 'diǎn'), L('B', '吧', 'ba'), L('C', '在', 'zài'), L('D', '杯', 'bēi'), L('E', '半', 'bàn'), L('F', '差', 'chà')]),
+  phan(P_D4, 'doc-hoi', [
+    C('d4-1', '现在是下午三点，我四点下课。', 'Xiànzài shì xiàwǔ sān diǎn, wǒ sì diǎn xiàkè.', 'B', '',
+      hoi={'han': '他几点下课？', 'py': 'Tā jǐ diǎn xiàkè?'}, pa=[L('A', '三点', 'sān diǎn'), L('B', '四点', 'sì diǎn'), L('C', '五点', 'wǔ diǎn')]),
+    C('d4-2', '我在家学习，晚上看电影。', 'Wǒ zài jiā xuéxí, wǎnshang kàn diànyǐng.', 'C', '',
+      hoi={'han': '他在哪儿学习？', 'py': 'Tā zài nǎr xuéxí?'}, pa=[L('A', '学校', 'xuéxiào'), L('B', '医院', 'yīyuàn'), L('C', '家', 'jiā')]),
+    C('d4-3', '我上午有课，下午去医院看病。', 'Wǒ shàngwǔ yǒu kè, xiàwǔ qù yīyuàn kànbìng.', 'B', '',
+      hoi={'han': '他下午做什么？', 'py': 'Tā xiàwǔ zuò shénme?'}, pa=[L('A', '上课', 'shàngkè'), L('B', '看病', 'kànbìng'), L('C', '看电影', 'kàn diànyǐng')]),
+    C('d4-4', '我们晚上七点看电影，六点半在电影院见。', 'Wǒmen wǎnshang qī diǎn kàn diànyǐng, liù diǎn bàn zài diànyǐngyuàn jiàn.', 'B', '',
+      hoi={'han': '他们几点在电影院见？', 'py': 'Tāmen jǐ diǎn zài diànyǐngyuàn jiàn?'}, pa=[L('A', '六点', 'liù diǎn'), L('B', '六点半', 'liù diǎn bàn'), L('C', '七点', 'qī diǎn')])])]},
+]
+
+NGHE[6] = [
+  phan(P_N1, 'nghe', [
+    N1('n1-1', '出租车', 'chūzūchē', [T('A', 'b6-taxi', 'Xe taxi'), T('B', 'b6-xe-dap', 'Xe đạp'), T('C', 'b6-tau-dien', 'Tàu điện ngầm')], 'A', ''),
+    N1('n1-2', '一碗米饭', 'yì wǎn mǐfàn', [T('A', 'b6-com', 'Một bát cơm'), T('B', 'b6-tra-sua', 'Ly trà sữa'), T('C', 'b6-sieu-thi', 'Siêu thị')], 'A', ''),
+    N1('n1-3', '奶茶', 'nǎichá', [T('A', 'b6-com', 'Một bát cơm'), T('B', 'b6-tra-sua', 'Ly trà sữa'), T('C', 'b6-dien-thoai', 'Điện thoại')], 'B', '')]),
+  phan(P_N2, 'nghe', [
+    N2('n2-1', '你怎么去超市？', 'Nǐ zěnme qù chāoshì?', [L('A', '我想买牛奶。', 'Wǒ xiǎng mǎi niúnǎi.'), L('B', '我坐地铁去。', 'Wǒ zuò dìtiě qù.'), L('C', '这家超市很大。', 'Zhè jiā chāoshì hěn dà.')], 'B', ''),
+    N2('n2-2', '你想买什么？', 'Nǐ xiǎng mǎi shénme?', [L('A', '我想买牛奶。', 'Wǒ xiǎng mǎi niúnǎi.'), L('B', '我坐出租车去。', 'Wǒ zuò chūzūchē qù.'), L('C', '这家商店很大。', 'Zhè jiā shāngdiàn hěn dà.')], 'A', ''),
+    N2('n2-3', '你给谁打电话？', 'Nǐ gěi shéi dǎ diànhuà?', [L('A', '我的手机很新。', 'Wǒ de shǒujī hěn xīn.'), L('B', '明天去商店。', 'Míngtiān qù shāngdiàn.'), L('C', '我给妈妈打电话。', 'Wǒ gěi māma dǎ diànhuà.')], 'C', '')]),
+  phan(P_N3, 'tranh', [
+    N3('n3-1', ('你想吃米饭吗？', 'Nǐ xiǎng chī mǐfàn ma?'), ('不想，我想吃包子。', 'Bù xiǎng, wǒ xiǎng chī bāozi.'), 'B', ''),
+    N3('n3-2', ('你怎么去上班？', 'Nǐ zěnme qù shàngbān?'), ('我骑自行车去。', 'Wǒ qí zìxíngchē qù.'), 'A', ''),
+    N3('n3-3', ('你喝茶吗？', 'Nǐ hē chá ma?'), ('我想喝奶茶。', 'Wǒ xiǎng hē nǎichá.'), 'C', '')],
+    anh=[T('A', 'b6-xe-dap', 'Xe đạp'), T('B', 'b5-banh-bao', 'Bánh bao'), T('C', 'b6-tra-sua', 'Ly trà sữa'), T('D', 'b6-dien-thoai', 'Điện thoại')]),
+  phan(P_N4, 'nghe', [
+    N4('n4-1', ('我明天去超市买东西，我想买牛奶。', 'Wǒ míngtiān qù chāoshì mǎi dōngxi, wǒ xiǎng mǎi niúnǎi.'), ('他明天去哪儿？', 'Tā míngtiān qù nǎr?'),
+       [L('A', '超市', 'chāoshì'), L('B', '饭店', 'fàndiàn'), L('C', '商店', 'shāngdiàn')], 'A', ''),
+    N4('n4-2', ('我坐公共汽车去，不坐出租车。', 'Wǒ zuò gōnggòng qìchē qù, bú zuò chūzūchē.'), ('他怎么去？', 'Tā zěnme qù?'),
+       [L('A', '坐公共汽车', 'zuò gōnggòng qìchē'), L('B', '坐出租车', 'zuò chūzūchē'), L('C', '骑自行车', 'qí zìxíngchē')], 'A', ''),
+    N4('n4-3', ('我早饭吃包子，午饭吃米饭。', 'Wǒ zǎofàn chī bāozi, wǔfàn chī mǐfàn.'), ('他午饭吃什么？', 'Tā wǔfàn chī shénme?'),
+       [L('A', '包子', 'bāozi'), L('B', '米饭', 'mǐfàn'), L('C', '面条儿', 'miàntiáor')], 'B', '')])]
+NGHE[7] = [
+  phan(P_N1, 'nghe', [
+    N1('n1-1', '看电影', 'kàn diànyǐng', [T('A', 'b7-xem-phim', 'Xem phim ở rạp'), T('B', 'b7-benh-vien', 'Bệnh viện'), T('C', 'b7-dong-ho', 'Đồng hồ')], 'A', ''),
+    N1('n1-2', '一杯茶', 'yì bēi chá', [T('A', 'b7-ly-tra', 'Một tách trà'), T('B', 'b7-sach', 'Sách'), T('C', 'b7-truong', 'Trường học')], 'A', ''),
+    N1('n1-3', '去医院', 'qù yīyuàn', [T('A', 'b7-xem-phim', 'Xem phim ở rạp'), T('B', 'b7-benh-vien', 'Bệnh viện'), T('C', 'b7-truong', 'Trường học')], 'B', '')]),
+  phan(P_N2, 'nghe', [
+    N2('n2-1', '现在几点？', 'Xiànzài jǐ diǎn?', [L('A', '明天下午。', 'Míngtiān xiàwǔ.'), L('B', '现在八点半。', 'Xiànzài bā diǎn bàn.'), L('C', '我在家。', 'Wǒ zài jiā.')], 'B', ''),
+    N2('n2-2', '你几点下班？', 'Nǐ jǐ diǎn xiàbān?', [L('A', '我六点下班。', 'Wǒ liù diǎn xiàbān.'), L('B', '我在医院。', 'Wǒ zài yīyuàn.'), L('C', '我想看电影。', 'Wǒ xiǎng kàn diànyǐng.')], 'A', ''),
+    N2('n2-3', '你在哪儿学习？', 'Nǐ zài nǎr xuéxí?', [L('A', '我学习汉语。', 'Wǒ xuéxí Hànyǔ.'), L('B', '我八点上课。', 'Wǒ bā diǎn shàngkè.'), L('C', '我在学校学习。', 'Wǒ zài xuéxiào xuéxí.')], 'C', '')]),
+  phan(P_N3, 'tranh', [
+    N3('n3-1', ('你看书吗？', 'Nǐ kàn shū ma?'), ('对，我很喜欢看书。', 'Duì, wǒ hěn xǐhuan kàn shū.'), 'A', ''),
+    N3('n3-2', ('你去哪儿？', 'Nǐ qù nǎr?'), ('我去医院看病。', 'Wǒ qù yīyuàn kànbìng.'), 'B', ''),
+    N3('n3-3', ('现在几点了？', 'Xiànzài jǐ diǎn le?'), ('差五分八点。', 'Chà wǔ fēn bā diǎn.'), 'C', '')],
+    anh=[T('A', 'b7-sach', 'Sách'), T('B', 'b7-benh-vien', 'Bệnh viện'), T('C', 'b7-dong-ho', 'Đồng hồ'), T('D', 'b7-xem-phim', 'Xem phim ở rạp')]),
+  phan(P_N4, 'nghe', [
+    N4('n4-1', ('我早上七点半上班，晚上六点下班。', 'Wǒ zǎoshang qī diǎn bàn shàngbān, wǎnshang liù diǎn xiàbān.'), ('他几点上班？', 'Tā jǐ diǎn shàngbān?'),
+       [L('A', '七点半', 'qī diǎn bàn'), L('B', '六点半', 'liù diǎn bàn'), L('C', '八点', 'bā diǎn')], 'A', ''),
+    N4('n4-2', ('今天下午我有两节课，晚上我去看电影。', 'Jīntiān xiàwǔ wǒ yǒu liǎng jié kè, wǎnshang wǒ qù kàn diànyǐng.'), ('他晚上做什么？', 'Tā wǎnshang zuò shénme?'),
+       [L('A', '上课', 'shàngkè'), L('B', '看电影', 'kàn diànyǐng'), L('C', '看书', 'kàn shū')], 'B', ''),
+    N4('n4-3', ('我明天上午在医院，下午在家。', 'Wǒ míngtiān shàngwǔ zài yīyuàn, xiàwǔ zài jiā.'), ('他下午在哪儿？', 'Tā xiàwǔ zài nǎr?'),
+       [L('A', '医院', 'yīyuàn'), L('B', '学校', 'xuéxiào'), L('C', '家', 'jiā')], 'C', '')])]
+
 for b in BAI:
     if b['bai'] in NGHE:
         b['phan'] = [b['phan'][0]] + NGHE[b['bai']] + b['phan'][1:]
