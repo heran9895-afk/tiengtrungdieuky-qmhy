@@ -182,7 +182,7 @@ HD = {
  dict(hoi=L('白家月上午几点有课？', 'Bái Jiāyuè shàngwǔ jǐ diǎn yǒu kè?', 'Sáng nay mấy giờ Bạch Gia Nguyệt có tiết?'), dap=L('她上午十点有课。', 'Tā shàngwǔ shí diǎn yǒu kè.', 'Cô ấy 10 giờ sáng có tiết.'),
       nhieu=[L('她是美国人。', 'Tā shì Měiguó rén.'), L('她下午有事。', 'Tā xiàwǔ yǒu shì.'), L('她很喜欢上课。', 'Tā hěn xǐhuan shàngkè.')]),
  dict(hoi=L('她们几点见？', 'Tāmen jǐ diǎn jiàn?', 'Mấy giờ hai bạn ấy gặp nhau?'), dap=L('她们下午两点见。', 'Tāmen xiàwǔ liǎng diǎn jiàn.', 'Hai bạn ấy 2 giờ chiều gặp nhau.'),
-      nhieu=[L('她们是同学。', 'Tāmen shì tóngxué.'), L('她们都有课。', 'Tāmen dōu yǒu kè.'), L('她们想去超市。', 'Tāmen xiǎng qù chāoshì.')]),
+      nhieu=[L('她们是同学。', 'Tāmen shì tóngxué.'), L('她们有课。', 'Tāmen yǒu kè.'), L('她们想去超市。', 'Tāmen xiǎng qù chāoshì.')]),
  dict(hoi=L('李文下午想去哪儿？', 'Lǐ Wén xiàwǔ xiǎng qù nǎr?', 'Chiều nay Lý Văn muốn đi đâu?'), dap=L('他想去电影院看电影。', 'Tā xiǎng qù diànyǐngyuàn kàn diànyǐng.', 'Anh ấy muốn đi rạp xem phim.'),
       nhieu=[L('他想去超市。', 'Tā xiǎng qù chāoshì.'), L('他是中国人。', 'Tā shì Zhōngguó rén.'), L('他明天有课。', 'Tā míngtiān yǒu kè.')]),
  dict(hoi=L('白家月明天下午几点下课？', 'Bái Jiāyuè míngtiān xiàwǔ jǐ diǎn xiàkè?', 'Chiều mai mấy giờ Bạch Gia Nguyệt tan học?'), dap=L('她四点半下课。', 'Tā sì diǎn bàn xiàkè.', 'Cô ấy 4 rưỡi tan học.'),

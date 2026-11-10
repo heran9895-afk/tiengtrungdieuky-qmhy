@@ -931,27 +931,6 @@
    "Đọc câu 2": ""
   },
   {
-   "Mã": "1-0089",
-   "Chữ Hán": "都",
-   "Pinyin": "dōu",
-   "Âm Hán Việt": "ĐÔ",
-   "Từ loại": "phó từ",
-   "Nghĩa tiếng Việt": "đều",
-   "Cấp HSK": "1",
-   "Thuận bút": "都",
-   "Cụm từ": "都去 | dōu qù\n都是 | dōu shì\n都很好 | dōu hěn hǎo",
-   "Đọc từ": "",
-   "_nhom": "moRong",
-   "Câu 1": "你们都坐公交车去上课吧？",
-   "Pinyin câu 1": "Nǐmen dōu zuò gōngjiāochē qù shàngkè ba?",
-   "Nghĩa câu 1": "Các bạn đều đi xe buýt đến lớp phải không?",
-   "Đọc câu 1": "",
-   "Câu 2": "我们都很喜欢看电影。",
-   "Pinyin câu 2": "Wǒmen dōu hěn xǐhuan kàn diànyǐng.",
-   "Nghĩa câu 2": "Chúng tôi đều rất thích xem phim.",
-   "Đọc câu 2": ""
-  },
-  {
    "Mã": "1-0420",
    "Chữ Hán": "学习",
    "Pinyin": "xuéxí",
@@ -1039,7 +1018,6 @@
     "外面",
     "学校",
     "公交车",
-    "都",
     "学习"
    ],
    "ghepChu": []
@@ -1803,7 +1781,7 @@
      ]
     ]
    ],
-   "giaiThich": "**吧** là **trợ từ ngữ khí đứng cuối câu**. Hai cách dùng: **(1) Đề nghị, rủ rê, yêu cầu** (\"…nhé, …đi\"): 我们下午三点见吧。 **(2) Phỏng đoán** khi hỏi, người nói đã đoán trước và chỉ cần xác nhận: 你们都坐公交车去上课吧？ Phỏng đoán thì **không dùng 吗**.",
+   "giaiThich": "**吧** là **trợ từ ngữ khí đứng cuối câu**. Hai cách dùng: **(1) Đề nghị, rủ rê, yêu cầu** (\"…nhé, …đi\"): 我们下午三点见吧。 **(2) Phỏng đoán** khi hỏi, người nói đã đoán trước và chỉ cần xác nhận: 你们坐公交车去上课吧？ Phỏng đoán thì **không dùng 吗**.",
    "y": [
     {
      "noiDung": "Đề nghị, rủ rê: …吧。",
@@ -1928,12 +1906,12 @@
        ]
       ],
       [
-       "你们都坐公交车去上课吧？",
-       "Nǐmen dōu zuò gōngjiāochē qù shàngkè ba?",
+       "你们坐公交车去上课吧？",
+       "Nǐmen zuò gōngjiāochē qù shàngkè ba?",
        "",
        [
         [
-         "你们都坐公交车去上课",
+         "你们坐公交车去上课",
          null
         ],
         [
@@ -2174,7 +2152,7 @@
      ]
     ]
    ],
-   "giaiThich": "**Phó từ** (不, 很, 还, 也, 都, 非常…) **luôn đứng sau chủ ngữ, trước động từ hoặc tính từ**. **Từ chỉ thời gian** làm trạng ngữ cũng đứng **trước động từ**, nhưng có thể đứng **trước hoặc sau chủ ngữ**: 明天下午我还上课呢 = 我明天下午还上课呢.",
+   "giaiThich": "**Phó từ** (不, 很, 还, 也, 非常…) **luôn đứng sau chủ ngữ, trước động từ hoặc tính từ**. **Từ chỉ thời gian** làm trạng ngữ cũng đứng **trước động từ**, nhưng có thể đứng **trước hoặc sau chủ ngữ**: 明天下午我还上课呢 = 我明天下午还上课呢.",
    "y": [
     {
      "noiDung": "Phó từ: sau chủ ngữ, trước ĐT / TT",
@@ -3323,8 +3301,8 @@
      ""
     ],
     [
-     "我们都很忙。",
-     "Wǒmen dōu hěn máng.",
+     "我们很忙。",
+     "Wǒmen hěn máng.",
      ""
     ]
    ],
@@ -3468,8 +3446,8 @@
      ""
     ],
     [
-     "我们都是学生。",
-     "Wǒmen dōu shì xuésheng.",
+     "我们是学生。",
+     "Wǒmen shì xuésheng.",
      ""
     ],
     [
@@ -3529,8 +3507,8 @@
      ""
     ],
     [
-     "她们都有课。",
-     "Tāmen dōu yǒu kè.",
+     "她们有课。",
+     "Tāmen yǒu kè.",
      ""
     ],
     [
@@ -3882,13 +3860,12 @@
    "np": "ba"
   },
   {
-   "han": "你们今天都坐公交车去吧？",
-   "py": "Nǐmen jīntiān dōu zuò gōngjiāochē qù ba?",
-   "viet": "Hôm nay các bạn đều đi xe buýt đi phải không?",
+   "han": "你们今天坐公交车去吧？",
+   "py": "Nǐmen jīntiān zuò gōngjiāochē qù ba?",
+   "viet": "Hôm nay các bạn đi xe buýt đi phải không?",
    "tu": [
     "吧",
-    "公交车",
-    "都"
+    "公交车"
    ],
    "np": "ba"
   },
@@ -3956,13 +3933,12 @@
    "np": "trangNgu"
   },
   {
-   "han": "明天下午我们都有课。",
-   "py": "Míngtiān xiàwǔ wǒmen dōu yǒu kè.",
-   "viet": "Chiều mai chúng tôi đều có tiết.",
+   "han": "明天下午我们有课。",
+   "py": "Míngtiān xiàwǔ wǒmen yǒu kè.",
+   "viet": "Chiều mai chúng tôi có tiết.",
    "tu": [
     "下午",
-    "课",
-    "都"
+    "课"
    ],
    "np": "trangNgu"
   },
@@ -4595,6 +4571,38 @@
    "chang": "3"
   }
  ],
+ "ctTruoc": {
+  "早": {
+   "ma": "1-0458",
+   "han": "早饭",
+   "bai": "Bài 6",
+   "url": "chuong-trinh-hsk/hsk1/bai-6/tu-vung.html"
+  },
+  "晚": {
+   "ma": "1-0373",
+   "han": "晚饭",
+   "bai": "Bài 6",
+   "url": "chuong-trinh-hsk/hsk1/bai-6/tu-vung.html"
+  },
+  "看": {
+   "ma": "1-0140",
+   "han": "好看",
+   "bai": "Bài 5",
+   "url": "chuong-trinh-hsk/hsk1/bai-5/tu-vung.html"
+  },
+  "家": {
+   "ma": "2-0093",
+   "han": "大家",
+   "bai": "Bài 1",
+   "url": "chuong-trinh-hsk/hsk1/bai-1/tu-vung.html"
+  },
+  "菜": {
+   "ma": "1-0035",
+   "han": "菜",
+   "bai": "Bài 5",
+   "url": "chuong-trinh-hsk/hsk1/bai-5/tu-vung.html"
+  }
+ },
  "nguPhapLuyen": {
   "phienBan": "2026-10-29a",
   "dacDiem": [
@@ -5178,8 +5186,8 @@
     "np": "ba",
     "dang": "dungSai",
     "dd": "ba-pd",
-    "cau": "你们都去电影院吧？",
-    "py": "Nǐmen dōu qù diànyǐngyuàn ba?",
+    "cau": "你们去电影院吧？",
+    "py": "Nǐmen qù diànyǐngyuàn ba?",
     "dung": true,
     "gt": "**吧？** = phỏng đoán."
    },
@@ -5704,37 +5712,5 @@
     "gt": "Việc dùng **件**."
    }
   ]
- },
- "ctTruoc": {
-  "早": {
-   "ma": "1-0458",
-   "han": "早饭",
-   "bai": "Bài 6",
-   "url": "chuong-trinh-hsk/hsk1/bai-6/tu-vung.html"
-  },
-  "晚": {
-   "ma": "1-0373",
-   "han": "晚饭",
-   "bai": "Bài 6",
-   "url": "chuong-trinh-hsk/hsk1/bai-6/tu-vung.html"
-  },
-  "看": {
-   "ma": "1-0140",
-   "han": "好看",
-   "bai": "Bài 5",
-   "url": "chuong-trinh-hsk/hsk1/bai-5/tu-vung.html"
-  },
-  "家": {
-   "ma": "2-0093",
-   "han": "大家",
-   "bai": "Bài 1",
-   "url": "chuong-trinh-hsk/hsk1/bai-1/tu-vung.html"
-  },
-  "菜": {
-   "ma": "1-0035",
-   "han": "菜",
-   "bai": "Bài 5",
-   "url": "chuong-trinh-hsk/hsk1/bai-5/tu-vung.html"
-  }
  }
 }

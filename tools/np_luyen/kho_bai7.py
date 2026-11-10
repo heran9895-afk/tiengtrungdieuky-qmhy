@@ -69,7 +69,7 @@ CAU = {7: [
  C('ba-dn', '我们下午三点见＿。', 'Wǒmen xiàwǔ sān diǎn jiàn ba.', 'Chúng ta 3 giờ chiều gặp nhau nhé.', '吧', ['吗', '呢'], '**吧** cuối câu: đề nghị.'),
  X('ba-dn', ['ba'], '你去超市买些牛奶吧。', 'Nǐ qù chāoshì mǎi xiē niúnǎi ba.', 'Bạn đi siêu thị mua ít sữa đi.', ['你', '去', '超市', '买些牛奶', '吧']),
  C('ba-pd', '今天中午你吃饭了＿？', 'Jīntiān zhōngwǔ nǐ chī fàn le ba?', 'Trưa nay bạn ăn cơm rồi phải không?', '吧', ['呢', '后'], '**吧？** = phỏng đoán.'),
- D('ba-pd', '你们都去电影院吧？', 'Nǐmen dōu qù diànyǐngyuàn ba?', '**吧？** = phỏng đoán.'),
+ D('ba-pd', '你们去电影院吧？', 'Nǐmen qù diànyǐngyuàn ba?', '**吧？** = phỏng đoán.'),
  D('ba-ma', '你去吧吗？', 'Nǐ qù ba ma?', 'Đã có **吧** thì không thêm 吗.', '你去吧？', 'Nǐ qù ba?', 'luuY'),
  C('ba-ma', '你想去超市买些牛奶＿？', 'Nǐ xiǎng qù chāoshì mǎi xiē niúnǎi ma?', 'Bạn muốn đi siêu thị mua ít sữa không?', '吗', ['吧', '呢'], 'Hỏi có / không dùng **吗**; đề nghị hoặc phỏng đoán dùng **吧**.'),
  # 呢

@@ -54,7 +54,7 @@ NGU_PHAP = [
 
  dict(id='ba', ten='Trợ từ 吧: đề nghị · phỏng đoán',
   congThuc=[[['Câu trần thuật', 'cau'], ['吧', 'codinh'], ['。', 'codinh']], [['Câu hỏi phỏng đoán', 'cau'], ['吧', 'codinh'], ['？', 'codinh']]],
-  giaiThich='**吧** là **trợ từ ngữ khí đứng cuối câu**. Hai cách dùng: **(1) Đề nghị, rủ rê, yêu cầu** ("…nhé, …đi"): 我们下午三点见吧。 **(2) Phỏng đoán** khi hỏi, người nói đã đoán trước và chỉ cần xác nhận: 你们都坐公交车去上课吧？ Phỏng đoán thì **không dùng 吗**.',
+  giaiThich='**吧** là **trợ từ ngữ khí đứng cuối câu**. Hai cách dùng: **(1) Đề nghị, rủ rê, yêu cầu** ("…nhé, …đi"): 我们下午三点见吧。 **(2) Phỏng đoán** khi hỏi, người nói đã đoán trước và chỉ cần xác nhận: 你们坐公交车去上课吧？ Phỏng đoán thì **không dùng 吗**.',
   y=[
    dict(noiDung='Đề nghị, rủ rê: …吧。',
     cum=[['去吧', 'qù ba', '', S(('去', 'dgt'), ('吧', 'codinh'))], ['见吧', 'jiàn ba', '', S(('见', 'dgt'), ('吧', 'codinh'))]],
@@ -63,7 +63,7 @@ NGU_PHAP = [
    dict(noiDung='Phỏng đoán: …吧？',
     cum=[['你吃饭了吧？', 'nǐ chī fàn le ba?', '', S(('你吃饭了', None), ('吧', 'codinh'), ('？', 'codinh'))]],
     viDu=[['今天中午你吃饭了吧？', 'Jīntiān zhōngwǔ nǐ chī fàn le ba?', '', S(('今天中午你吃饭了', None), ('吧', 'codinh'), ('？', 'codinh'))],
-          ['你们都坐公交车去上课吧？', 'Nǐmen dōu zuò gōngjiāochē qù shàngkè ba?', '', S(('你们都坐公交车去上课', None), ('吧', 'codinh'), ('？', 'codinh'))]]),
+          ['你们坐公交车去上课吧？', 'Nǐmen zuò gōngjiāochē qù shàngkè ba?', '', S(('你们坐公交车去上课', None), ('吧', 'codinh'), ('？', 'codinh'))]]),
   ],
   luuY=['**吧** đứng **cuối câu**, đọc **nhẹ** (thanh nhẹ): ba.',
         '**吧** = đề nghị: 去吧 (đi đi nhé). **吧？** = phỏng đoán: 你累了吧？',
@@ -87,7 +87,7 @@ NGU_PHAP = [
 
  dict(id='trangNgu', ten='Vị trí của phó từ và từ chỉ thời gian',
   congThuc=[[['CN', 'dt'], ['Phó từ', 'pho'], ['ĐT / TT', 'dgt']], [['Thời gian', 'dt'], ['CN', 'dt'], ['ĐT', 'dgt']], [['CN', 'dt'], ['Thời gian', 'dt'], ['ĐT', 'dgt']]],
-  giaiThich='**Phó từ** (不, 很, 还, 也, 都, 非常…) **luôn đứng sau chủ ngữ, trước động từ hoặc tính từ**. **Từ chỉ thời gian** làm trạng ngữ cũng đứng **trước động từ**, nhưng có thể đứng **trước hoặc sau chủ ngữ**: 明天下午我还上课呢 = 我明天下午还上课呢.',
+  giaiThich='**Phó từ** (不, 很, 还, 也, 非常…) **luôn đứng sau chủ ngữ, trước động từ hoặc tính từ**. **Từ chỉ thời gian** làm trạng ngữ cũng đứng **trước động từ**, nhưng có thể đứng **trước hoặc sau chủ ngữ**: 明天下午我还上课呢 = 我明天下午还上课呢.',
   y=[
    dict(noiDung='Phó từ: sau chủ ngữ, trước ĐT / TT',
     cum=[['不想去', 'bù xiǎng qù', '', S(('不', 'pho'), ('想去', 'dgt'))], ['很高兴', 'hěn gāoxìng', '', S(('很', 'pho'), ('高兴', 'tt'))], ['非常好看', 'fēicháng hǎokàn', '', S(('非常', 'pho'), ('好看', 'tt'))]],
