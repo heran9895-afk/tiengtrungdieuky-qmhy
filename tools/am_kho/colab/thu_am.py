@@ -31,15 +31,6 @@ def cai_dat(repo, work, asr, key=None, model=None, **khac):
 
 
 # ============ Chữ, pinyin ============
-def co_hh(t):
-    """Có 好好 / 毫好 (ô Đọc thay cho giọng máy) → Gemini đọc hǎohāor (bác Nhiên chốt 12/11/2026)."""
-    return '毫好' in (t or '') or bool(re.search(r'好好(?!儿)', t or ''))
-
-
-# Mục 好好 đã lên web trước 12/11 (đọc háohǎo/hǎohǎo), không nằm trong thư mục đợt nào → gom lại khi gặp
-OLD_HHR = {'家长要毫好教育孩子。', '明天考试，今天要毫好复习。', '医生说他的肠有点儿问题，需要好好休息。', '好好休息', '好好复习'}
-
-
 def chuan(s):  # giống chuanAm() trong assets/js/tu-vung-chung.js
     s = re.sub(r'\s+', '', str(s or ''))
     s = re.sub(r'(^|[。！？])[A-Z一-鿿]{1,4}[：:]', r'\1', s)
@@ -124,7 +115,7 @@ def gom(cap, tu, den):
         if k in ('了', '么', '了。', '么。'): bo.append((src, text + ' (đứng riêng, để giọng máy)')); return
         if o_chu and len(han(k)) == 1 and da_am(han(k)): o, typ = o or o_chu, 'chu'   # chữ đa âm một chữ: ghi thẳng ô Đọc (§8)
         id_ = (k + '|' + khong_dau(py)) if o else k
-        if not o and k in B and k not in OLD_HHR: return
+        if not o and k in B: return
         if not k or id_ in seen: return
         seen.add(id_)
         it = dict(id=id_, k=k, text=gon(text), py=(py or '').replace('·', '').strip(), typ=typ, thu='cau' if typ == 'cau' else 'tu',
@@ -159,7 +150,6 @@ def gom(cap, tu, den):
         lech = it['typ'] == 'chu' or (it['py'] and '儿' not in it['text'] and khong_dau(it['py']) != ''.join(py_asr(it['text'])))
         if dk: co.append('đa âm ' + ''.join(dk))
         if re.search(r'.儿', it['text']): co.append('儿化')
-        if co_hh(it['text']): co.append('好好儿 hǎohāor'); it['hhr'] = True
         if ten_rieng(it['py'], it['typ']): co.append('tên riêng')
         it['co'] = co
         it['alt'] = khong_dau(it['py']) if lech else ''   # pypinyin đọc khác kho → nhận dạng đối chiếu theo pinyin của kho
@@ -191,13 +181,9 @@ ER = ("ERHUA: 儿 written after another character is NOT a separate syllable ér
       "(哪儿 nǎr, 这儿 zhèr, 一点儿 yìdiǎnr, 玩儿 wánr, 一会儿 yíhuìr). Only 儿子 érzi, 女儿 nǚ'ér, 婴儿, 儿童, 儿科 keep a full ér syllable.")
 
 
-HHR = "好好儿 is pronounced hǎohāor: first 好 third tone, second 好 FIRST tone hāo with the r-ending; never háohǎo, never a separate ér."
-
-
 def dong_py(it):
     """Cách đọc của một dòng: CHỈ pinyin, không chép lại chữ Hán (chép lại thì Gemini dễ đọc to cả danh sách này)."""
     s = it['py'] or '(standard reading)'
-    if co_hh(it['text']): s = re.sub(r'(?i)h[aǎá]oh[aǎáā]o(?!r)', lambda m: m.group(0)[:3] + 'hāor', s)
     if it['typ'] == 'chu':
         khac = [p for p in cac_am(han(it['text'])) if khong_dau(p) != khong_dau(it['py']) or p != it['py']][:3]
         if khac: s += ' (NOT %s)' % ', '.join(khac)
@@ -208,8 +194,7 @@ def tao_style(ds, typ, ghi_chu='', giong='Sulafat'):
     st = NHIP[typ]
     if GIONG_TA.get(giong, 'female') == 'male': st = st.replace('female Mandarin teacher', 'male Mandarin teacher')
     if typ != 'chu': st += '\n' + LUAT
-    if any(re.search(r'.儿', it['text']) or co_hh(it['text']) for it in ds): st += '\n' + ER
-    if any(co_hh(it['text']) for it in ds): st += '\n' + HHR
+    if any(re.search(r'.儿', it['text']) for it in ds): st += '\n' + ER
     st += ('\nPronunciation of the lines, in the same order: ' + '; '.join(dong_py(it).rstrip('.') for it in ds) + '.')
     if ghi_chu: st += '\n' + ghi_chu
     return st
@@ -301,7 +286,6 @@ def doc_tts(t):
     - Dãy số điện thoại / số khẩn cấp: 一 đọc yāo -> viết 幺 (Gemini hay đọc 一 thành yī dù Style dặn).
     - 广 đứng một mình (bộ thủ) đọc yǎn -> gửi 眼 (cùng âm yǎn)."""
     t = str(t)
-    t = re.sub(r'好好(?!儿)', '好好儿', t.replace('毫好', '好好'))   # ô Đọc ghi 毫好 cho giọng máy; Gemini đọc hǎohāor (chốt 12/11/2026)
     if han(t) == '广' and len(t.strip()) <= 2: return '眼'
     def doi(m):
         g = m.group(0)
@@ -571,7 +555,6 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
         print('Gom HSK%s %d → %d: %d từ/cụm, %d chữ đa âm (ghi thẳng ô Đọc), %d câu · bỏ %d mục (了/么 riêng, đã có file)' % (
             cap, tu, den, sum(it['typ'] == 'tu' for it in ds), sum(it['typ'] == 'chu' for it in ds), sum(it['typ'] == 'cau' for it in ds), len(bo)))
     elif str(cap).startswith('bai'): bo_sung_moi(cap, tu, den, D, ds)
-    if ds is not None: danh_dau_hhr(D, ds)
     L = _doc(D + 'luot.json')
     if L is None:
         L = chia_luot(ds); _ghi(D + 'luot.json', L)
@@ -620,18 +603,6 @@ def _chay_cac_luot(cap, tu, den, D, L, by, ds, dot, gioi_han_luot):
             return None
     giay += thu_lai_tu_dong(cap, tu, den, ds)
     return giay
-
-
-def danh_dau_hhr(D, ds):
-    """Mục 毫好 thu trước 12/11 (đọc háohǎo) → đánh dấu tự thu lại thành hǎohāor."""
-    n = 0
-    for it in ds:
-        if co_hh(it.get('text', '')) and not it.get('hhr'):
-            it['hhr'] = True; it['lan'] = 0; it['quyet'] = None
-            it['loi'] = ['thu lại thành hǎohāor']; it['co'] = list(dict.fromkeys((it.get('co') or []) + ['好好儿 hǎohāor']))
-            n += 1
-    if n:
-        _ghi(D + 'ds.json', ds); print('↻ %d mục 好好 sẽ thu lại thành hǎohāor' % n)
 
 
 def _nhan_ket_qua(D, it, r):
