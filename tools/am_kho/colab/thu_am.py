@@ -19,7 +19,7 @@ import os, re, json, time, wave, base64, hashlib, subprocess, difflib, csv, date
 
 CFG = dict(repo=None, work=None, asr=None, key=None, model=None, voice='Sulafat',
            usd_gio=0.81,        # giá ~0,81 USD / giờ âm thanh tới 31/12/2026 (gấp đôi từ 1/1/2027)
-           vnd_usd=26000, max_dong=44, max_chu=40, so_lan_thu_lai=2, kho='heran9895-afk/tiengtrungdieuky-qmhy')
+           vnd_usd=26000, tran_kho=80, max_dong=44, max_chu=40, so_lan_thu_lai=2, kho='heran9895-afk/tiengtrungdieuky-qmhy')
 SR = 24000
 API = 'https://generativelanguage.googleapis.com/v1beta/'
 
@@ -293,8 +293,27 @@ def doc_tts(t):
     return re.sub(r'[〇零一二三四五六七八九]{2,}', doi, t)
 
 
+def luot_hom_nay():
+    """Số lần đã gọi Gemini từ lúc hạn mức đặt lại gần nhất (0 giờ giờ Mỹ Thái Bình Dương ≈ 14–15 giờ VN), mọi đợt cộng lại."""
+    import zoneinfo
+    f = CFG['work'] + 'nhat_ky.csv'
+    if not os.path.exists(f): return 0
+    pt = datetime.datetime.now(zoneinfo.ZoneInfo('America/Los_Angeles'))
+    moc = pt.replace(hour=0, minute=0, second=0, microsecond=0).astimezone(datetime.timezone.utc).replace(tzinfo=None)
+    n = 0
+    for r in csv.DictReader(open(f)):
+        try:
+            if datetime.datetime.strptime(r['thoi_gian'], '%Y-%m-%d %H:%M:%S') >= moc: n += 1
+        except ValueError: pass
+    return n
+
+
 def goi_tts(style, dong, wav, dot, luot, kieu=None, giong=None):
     """giong: giọng khác Sulafat (hội thoại hai giọng, quy chuẩn 14 §4b)."""
+    if re.match(r'cap-[0-9]', dot) and CFG.get('tran_kho'):   # kho 9 cấp: chừa lượt cho bài học (bác Nhiên 12/11/2026)
+        n = luot_hom_nay()
+        if n >= CFG['tran_kho']:
+            raise HetHanMuc('Hôm nay đã gọi %d lần; kho từ vựng dừng ở %d để chừa %d lần cho bài học' % (n, CFG['tran_kho'], 100 - CFG['tran_kho']))
     dong = [doc_tts(l) for l in dong]
     v0 = CFG['voice']
     if giong: CFG['voice'] = giong
