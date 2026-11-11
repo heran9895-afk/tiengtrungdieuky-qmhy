@@ -302,6 +302,10 @@ def goi_tts(style, dong, wav, dot, luot, kieu=None, giong=None):
     finally: CFG['voice'] = v0
 
 
+class HetHanMuc(RuntimeError):
+    """Hết hạn mức số lần gọi Gemini trong ngày (Tier 1: 100 lần/ngày/model; đặt lại lúc 0 giờ giờ Mỹ Thái Bình Dương ≈ 15 giờ VN)."""
+
+
 def _goi_tts(style, dong, wav, dot, luot, kieu=None):
     """Gọi Gemini một lần, ghi wav (PCM 16-bit mono). Thử lại khi lỗi mạng / 429 / 5xx. Trả về số giây âm thanh."""
     rq = _rq()
@@ -315,6 +319,9 @@ def _goi_tts(style, dong, wav, dot, luot, kieu=None):
             r = rq.post(url, headers={'x-goog-api-key': CFG['key'], 'Content-Type': 'application/json'}, json=body, timeout=900)
         except rq.RequestException as e:
             loi_cuoi = 'mạng: %s' % e; print('   ⚠', loi_cuoi, '→ thử lại'); continue
+        if r.status_code == 429 and re.search(r'per day|PerDay|requests_per_day|RPD', r.text):
+            m = re.search(r'retry in ([\dhms.]+)', r.text)
+            raise HetHanMuc('Hết hạn mức gọi Gemini hôm nay (100 lần/ngày)%s.' % (', mở lại sau ' + m.group(1) if m else ''))
         if r.status_code in (429, 500, 502, 503, 504):
             loi_cuoi = '%d %s' % (r.status_code, r.text[:200]); print('   ⚠', loi_cuoi, '→ thử lại')
             ra = r.headers.get('Retry-After')
@@ -563,6 +570,15 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
                 if os.path.exists(f): os.remove(f)
             print('   (%s thu lại vì lần trước gửi Style kiểu cũ)' % b['ten'])
     _ghi(D + 'luot.json', L)
+    try:
+        giay = _chay_cac_luot(cap, tu, den, D, L, by, ds, dot, gioi_han_luot)
+    except HetHanMuc as e:
+        _ghi(D + 'ds.json', ds); bao_cao(cap, tu, den, giay_chay=time.time() - t0); bao_het_han_muc(e); return
+    if giay is None: return
+    bao_cao(cap, tu, den, giay_moi=giay, giay_chay=time.time() - t0)
+
+
+def _chay_cac_luot(cap, tu, den, D, L, by, ds, dot, gioi_han_luot):
     giay = 0
     for b in L[:gioi_han_luot]:
         wav = D + 'wav/%s.wav' % b['ten']
@@ -582,11 +598,11 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
               ' (thừa %d vùng)' % meta['thua'] if meta['thua'] else '', len(its) - nl, nl))
         if nl > 0.4 * len(its):   # chốt an toàn: Gemini đọc bất thường (đọc cả Style, bỏ dòng…) → dừng, khỏi tốn tiền
             print('\n⛔ Lượt %s lỗi %d/%d dòng — Gemini đọc bất thường. Dừng lại để khỏi tốn tiền.\n'
-                  '   Cô gửi bên soạn đoạn chữ này + file %s để xem.' % (b['ten'], nl, len(its), wav))
+                  '   Bác gửi bên soạn đoạn chữ này + file %s để xem.' % (b['ten'], nl, len(its), wav))
             print('   Máy nghe được ở các vùng đầu:', [v[2] for v in meta['ds_vung'][:6]])
-            return
+            return None
     giay += thu_lai_tu_dong(cap, tu, den, ds)
-    bao_cao(cap, tu, den, giay_moi=giay, giay_chay=time.time() - t0)
+    return giay
 
 
 def _nhan_ket_qua(D, it, r):
@@ -600,42 +616,65 @@ def _nhan_ket_qua(D, it, r):
     it['trang'] = 'loi' if it['loi'] else 'xong'
 
 
-def thu_lai_muc(D, it, dot, ghi_chu='', ep=False):
-    """Thu lại 1 mục: một lượt đọc 4 lần, Style chỉ nói về mục đó; chọn bản tốt nhất."""
-    it['lan'] = it.get('lan', 0) + 1
-    ten = 'r-%s-%d' % (it['ten'], it['lan'])
-    st = NHIP['chu' if it['typ'] == 'chu' else it['typ']]
-    if GIONG_TA.get(it.get('giong', 'Sulafat'), 'female') == 'male': st = st.replace('female Mandarin teacher', 'male Mandarin teacher')
-    st = st.replace('Each line is', 'The same line is written 4 times; each line is')
-    st += '\nPronunciation of every line: ' + dong_py(it) + ('\n' + ER if re.search(r'.儿', it['text']) else '')
-    dk = chu_doc_khac(it['text'])
+def thu_lai_nhom(D, its, dot, ep=False):
+    """Thu lại NHIỀU mục trong MỘT lần gọi (đỡ tốn hạn mức 100 lần/ngày): mỗi mục đọc 2 lần (danh sách lặp 2 vòng),
+    Style chỉ nói về các mục đó (+ ghi chú của cô). Mỗi mục chọn bản tốt hơn. its: cùng loại, cùng giọng, ≤ 12 mục."""
+    it0 = its[0]; typ = 'chu' if it0['typ'] == 'chu' else it0['typ']; giong = it0.get('giong', 'Sulafat')
+    st = tao_style(its, typ, giong=giong).replace('Pronunciation of the lines, in the same order:',
+                                                    'The list is read twice (two rounds). Pronunciation of the lines of each round, in order:')
+    dk = sorted({c for it in its for c in chu_doc_khac(it['text'])})
     if dk: st += '\nPay attention to: ' + ', '.join(dk) + ' (read as in the pinyin above).'
-    if len(han(it['text'])) <= 4: st += '\nSay exactly %d syllable(s) per line, do not repeat any syllable.' % len(han(re.sub(r'(?<=.)儿', '', it['text'])))
-    if ghi_chu: st += '\n' + ghi_chu
+    gc = [(it['text'], it.get('ghi_chu', '').strip()) for it in its if it.get('ghi_chu', '').strip()]
+    if gc: st += '\nTeacher notes (follow exactly): ' + '; '.join('%s: %s' % x for x in gc)
+    ngan = [it for it in its if len(han(it['text'])) <= 4]
+    if ngan: st += '\nShort lines: say exactly the written syllables, never repeat a syllable.'
+    lan = max(it.get('lan', 0) for it in its) + 1
+    ten = 'r-%s-%d-n%d' % (it0['ten'], lan, len(its))
     wav = D + 'wav/%s.wav' % ten
+    dong = [it['text'] for it in its] * 2
     g = 0
-    if not os.path.exists(wav): g = goi_tts(st, [it['text']] * 4, wav, dot, ten, giong=it.get('giong'))
-    ids = ['%s#%d' % (it['id'], i) for i in range(4)]
-    res, meta = cat_luot(wav, [it['text']] * 4, ids, [it['alt']] * 4, D + 'tam/%s/' % ten, ['%s_%d' % (it['ten'], i) for i in range(4)])
-    tot = sorted((r for r in res.values() if r.get('tam')), key=lambda r: (len(r['loi']), -r['r']))
-    cu = dict(r=it.get('r', 0), loi=it.get('loi', []))
-    # ep=True (cô bấm Thu lại): luôn nhận bản mới, vì máy nghe không phân biệt được yāo/yī, dā/dá… nên điểm không nói bản nào đúng hơn
-    if tot and (ep or (len(tot[0]['loi']), -tot[0]['r']) <= (len(cu['loi']) if it.get('file') else 99, -cu['r'])):
-        _nhan_ket_qua(D, it, tot[0])
+    if not os.path.exists(wav): g = goi_tts(st, dong, wav, dot, ten, giong=it0.get('giong'))
+    for it in its: it['lan'] = it.get('lan', 0) + 1
+    ids = ['%s#%d' % (it['id'], v) for v in range(2) for it in its]
+    res, meta = cat_luot(wav, dong, ids, [it['alt'] for it in its] * 2, D + 'tam/%s/' % ten,
+                         ['%s_%d' % (it['ten'], v) for v in range(2) for it in its])
+    for it in its:
+        tot = sorted((r for k, r in res.items() if k.rsplit('#', 1)[0] == it['id'] and r.get('tam')), key=lambda r: (len(r['loi']), -r['r']))
+        cu = dict(r=it.get('r', 0), loi=it.get('loi', []))
+        # ep=True (cô bấm Thu lại): luôn nhận bản mới, vì máy nghe không phân biệt được yāo/yī, dā/dá… nên điểm không nói bản nào đúng hơn
+        if tot and (ep or (len(tot[0]['loi']), -tot[0]['r']) <= (len(cu['loi']) if it.get('file') else 99, -cu['r'])):
+            _nhan_ket_qua(D, it, tot[0])
     return g
+
+
+def _nhom(its, n=12):
+    out = {}
+    for it in its: out.setdefault((it['typ'], it.get('giong', 'Sulafat')), []).append(it)
+    return [g[i:i + n] for g in out.values() for i in range(0, len(g), n)]
+
+
+def thu_lai_muc(D, it, dot, ghi_chu='', ep=False):
+    if ghi_chu: it['ghi_chu'] = it.get('ghi_chu') or ghi_chu
+    return thu_lai_nhom(D, [it], dot, ep)
 
 
 def thu_lai_tu_dong(cap, tu, den, ds=None):
     D = thu_muc(cap, tu, den); ds = ds or _doc(D + 'ds.json'); dot = 'cap-%s_%04d-%04d' % (cap, tu, den)
-    can = [it for it in ds if it.get('loi') and it.get('lan', 0) < CFG['so_lan_thu_lai']]
-    if not can: return 0
-    print('↻ Tự thu lại %d mục lỗi (tối đa %d lần mỗi mục)…' % (len(can), CFG['so_lan_thu_lai']))
     g = 0
-    for it in can:
-        while it['loi'] and it.get('lan', 0) < CFG['so_lan_thu_lai']:
-            g += thu_lai_muc(D, it, dot); _ghi(D + 'ds.json', ds)
-        print('   %s %s · %s' % ('✓' if not it['loi'] else '✗', it['text'], ', '.join(it['loi']) or 'đạt'))
+    for vong in range(CFG['so_lan_thu_lai']):
+        can = [it for it in ds if it.get('loi') and it.get('lan', 0) < CFG['so_lan_thu_lai']]
+        if not can: break
+        nh = _nhom(can)
+        print('↻ Tự thu lại %d mục lỗi, gộp %d lần gọi (vòng %d)…' % (len(can), len(nh), vong + 1))
+        for its in nh:
+            g += thu_lai_nhom(D, its, dot); _ghi(D + 'ds.json', ds)
+            for it in its: print('   %s %s · %s' % ('✓' if not it['loi'] else '✗', it['text'], ', '.join(it['loi']) or 'đạt'))
     return g
+
+
+def bao_het_han_muc(e):
+    print('\n⏸ %s\n   Phần đã thu vẫn lưu trong Drive. Sau khoảng 15 giờ chiều (giờ VN) chạy lại ô 2 → ô 3: sổ làm tiếp, không thu lại phần đã có.\n'
+          '   Trong lúc chờ có thể chạy ô 4 (nghe) và ô 6 (đẩy phần đạt lên web).' % e)
 
 
 def can_nghe(it): return (it.get('co') or it.get('loi')) and it.get('quyet') != 'dat'
@@ -655,7 +694,7 @@ def bao_cao(cap, tu, den, giay_moi=0, giay_chay=0):
               giay_am=round(g), usd=round(usd, 3), vnd=round(usd * CFG['vnd_usd']), giay_chay_lan_nay=round(giay_chay))
     _ghi(D + 'bao_cao.json', bc)
     print('\n══ Báo cáo đợt HSK%s %d → %d ══' % (cap, tu, den))
-    print('Mục: %d · cắt đạt: %d · máy tự kiểm đạt, không cần nghe: %d · cô cần nghe: %d (còn lỗi sau thu lại: %d)' % (
+    print('Mục: %d · cắt đạt: %d · máy tự kiểm đạt, không cần nghe: %d · bác cần nghe: %d (còn lỗi sau thu lại: %d)' % (
         len(ds), xong, bc['dat_tu_dong'], len(nghe), bc['con_loi']))
     print('Gemini: %d lần gọi · %.1f phút âm thanh · ước %.3f USD ≈ %s đ' % (len(nk), g / 60, usd, format(bc['vnd'], ',').replace(',', '.')))
     if giay_chay: print('Thời gian chạy lần này: %.1f phút' % (giay_chay / 60))
@@ -698,13 +737,17 @@ def thu_lai_da_chon(cap, tu, den):
         if it.get('file') and not it.get('tts2') and it.get('text') not in DA_SUA and doc_tts(it['text']) != it['text'] and it.get('quyet') != 'thu_lai':
             it['quyet'] = 'thu_lai'; it['ghi_chu'] = it.get('ghi_chu') or ''
     can = [it for it in ds if it.get('quyet') == 'thu_lai']
-    print('Thu lại %d mục cô chọn (gồm mục có số 幺 tự thêm)…' % len(can))
-    for it in can:
-        gc = it.get('ghi_chu', '').strip()
-        thu_lai_muc(D, it, dot, ('Teacher note (follow it exactly): ' + gc) if gc else '', ep=True)
-        it['quyet'] = None; it['lan_co'] = it.get('lan_co', 0) + 1
-        _ghi(D + 'ds.json', ds)
-        print('   ', it['text'], '→ bản mới, khớp %.2f' % it.get('r', 0), '· ' + ', '.join(it['loi']) if it['loi'] else '')
+    nh = _nhom(can, 8)
+    print('Thu lại %d mục bác chọn, gộp %d lần gọi…' % (len(can), len(nh)))
+    try:
+        for its in nh:
+            thu_lai_nhom(D, its, dot, ep=True)
+            for it in its:
+                it['quyet'] = None; it['lan_co'] = it.get('lan_co', 0) + 1
+                print('   ', it['text'], '→ bản mới, khớp %.2f' % it.get('r', 0), '· ' + ', '.join(it['loi']) if it['loi'] else '')
+            _ghi(D + 'ds.json', ds)
+    except HetHanMuc as e:
+        _ghi(D + 'ds.json', ds); bao_het_han_muc(e); return
     print('Xong. Chạy lại ô "Nghe" để nghe bản mới.')
 
 
