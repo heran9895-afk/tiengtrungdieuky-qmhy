@@ -662,7 +662,7 @@ def thu_lai_tu_dong(cap, tu, den, ds=None):
     D = thu_muc(cap, tu, den); ds = ds or _doc(D + 'ds.json'); dot = 'cap-%s_%04d-%04d' % (cap, tu, den)
     g = 0
     for vong in range(CFG['so_lan_thu_lai']):
-        can = [it for it in ds if it.get('loi') and it.get('lan', 0) < CFG['so_lan_thu_lai']]
+        can = [it for it in ds if it.get('loi') and it.get('lan', 0) < CFG['so_lan_thu_lai'] and it.get('quyet') != 'dat']   # bác đã nghe, chọn Đạt thì giữ
         if not can: break
         nh = _nhom(can)
         print('↻ Tự thu lại %d mục lỗi, gộp %d lần gọi (vòng %d)…' % (len(can), len(nh), vong + 1))
