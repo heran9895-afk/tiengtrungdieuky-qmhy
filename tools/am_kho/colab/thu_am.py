@@ -31,6 +31,11 @@ def cai_dat(repo, work, asr, key=None, model=None, **khac):
 
 
 # ============ Chữ, pinyin ============
+# Mục đã lên web nhưng đọc sai, cần thu lại (bác Nhiên báo 12/11/2026: 头发 đọc 发 thanh 4) → gom lại khi chạy HSK2
+REDO_HSK2 = {'吹头发', '头发', '她的头发又黑又常。', '她的头发又黑又常，非常漂亮。', '她的头发很常。', '她的头发很短。', '她的头发是黄的。',
+             '洗头发', '洗完澡要吹头发。', '短头发', '长头发', '黄头发', '黑头发'}
+
+
 def chuan(s):  # giống chuanAm() trong assets/js/tu-vung-chung.js
     s = re.sub(r'\s+', '', str(s or ''))
     s = re.sub(r'(^|[。！？])[A-Z一-鿿]{1,4}[：:]', r'\1', s)
@@ -95,7 +100,7 @@ def ten_rieng(py, typ):
 def tep_cap(cap): return CFG['repo'] + 'data/tu-vung/cap-%s.json' % cap
 
 
-def gom(cap, tu, den):
+def gom(cap, tu, den, ep=None):
     if str(cap).startswith('bai'):
         import thu_am_bai; return thu_am_bai.gom_bai(sys.modules[__name__], cap)
     """Gom mục cần thu của mã thứ tu..den (đếm từ 1, gồm cả hai đầu). Giống gom2.py + thêm pinyin, cờ cần nghe."""
@@ -115,7 +120,7 @@ def gom(cap, tu, den):
         if k in ('了', '么', '了。', '么。'): bo.append((src, text + ' (đứng riêng, để giọng máy)')); return
         if o_chu and len(han(k)) == 1 and da_am(han(k)): o, typ = o or o_chu, 'chu'   # chữ đa âm một chữ: ghi thẳng ô Đọc (§8)
         id_ = (k + '|' + khong_dau(py)) if o else k
-        if not o and k in B: return
+        if not o and k in B and k not in (ep or ()): return
         if not k or id_ in seen: return
         seen.add(id_)
         it = dict(id=id_, k=k, text=gon(text), py=(py or '').replace('·', '').strip(), typ=typ, thu='cau' if typ == 'cau' else 'tu',
@@ -150,6 +155,7 @@ def gom(cap, tu, den):
         lech = it['typ'] == 'chu' or (it['py'] and '儿' not in it['text'] and khong_dau(it['py']) != ''.join(py_asr(it['text'])))
         if dk: co.append('đa âm ' + ''.join(dk))
         if re.search(r'.儿', it['text']): co.append('儿化')
+        if '头发' in it['text']: co.append('头发 tóufa')
         if ten_rieng(it['py'], it['typ']): co.append('tên riêng')
         it['co'] = co
         it['alt'] = khong_dau(it['py']) if lech else ''   # pypinyin đọc khác kho → nhận dạng đối chiếu theo pinyin của kho
@@ -174,7 +180,7 @@ LUAT = ("Tone sandhi: two third tones -> the first becomes second tone; 一 is y
         "不 is bú before a 4th tone, bù otherwise. "
         "Neutral tones: 的 了 吗 呢 吧 们 子 个(ge) 着(zhe) are light and short; reduplicated kinship words have a neutral second syllable "
         "(妈妈 māma, 哥哥 gēge); also 什么 shénme, 名字 míngzi, 朋友 péngyou, 认识 rènshi, 喜欢 xǐhuan, 休息 xiūxi, 没关系 méi guānxi, "
-        "对不起 duìbuqǐ, 客气 kèqi, 谢谢 xièxie, 东西 dōngxi (thing), 地方 dìfang, 衣服 yīfu, 知道 zhīdao, 告诉 gàosu. "
+        "头发 tóufa (发 is a short light neutral tone, NEVER fà); 头 after 里/外/前/后/上/下 is neutral tou; 对不起 duìbuqǐ, 客气 kèqi, 谢谢 xièxie, 东西 dōngxi (thing), 地方 dìfang, 衣服 yīfu, 知道 zhīdao, 告诉 gàosu. "
         "常常 is chángcháng (both full second tones, never neutral). 多 in 多大 / 多高 / 多长 / 多久 is FIRST tone duō, never duó.")
 ER = ("ERHUA: 儿 written after another character is NOT a separate syllable ér. Merge it into the previous syllable as a retroflex r-ending, "
       "curling the tongue at the end of that syllable, and stop cleanly right after the r, with no added vowel "
@@ -184,6 +190,8 @@ ER = ("ERHUA: 儿 written after another character is NOT a separate syllable ér
 def dong_py(it):
     """Cách đọc của một dòng: CHỈ pinyin, không chép lại chữ Hán (chép lại thì Gemini dễ đọc to cả danh sách này)."""
     s = it['py'] or '(standard reading)'
+    if it['typ'] == 'chu' and it['py'] and khong_dau(it['py']) == it['py'].lower():
+        s += ' (NEUTRAL tone: short, light, mid pitch, no rise and no fall)'
     if it['typ'] == 'chu':
         khac = [p for p in cac_am(han(it['text'])) if khong_dau(p) != khong_dau(it['py']) or p != it['py']][:3]
         if khac: s += ' (NOT %s)' % ', '.join(khac)
@@ -548,9 +556,10 @@ def chon_kieu(ds, D, dot):
     raise RuntimeError('Chưa cách gửi nào làm Gemini chỉ đọc đúng danh sách. Cô chụp màn hình phần trên gửi bên soạn.')
 
 
-def bo_sung_moi(cap, tu, den, D, ds):
-    """Bài đã thu rồi mà dữ liệu bài có thêm chữ / câu mới: gom lại, chỉ THÊM mục chưa có vào ds và thêm lượt mới (không thu lại mục cũ)."""
-    ds2, bo2 = gom(cap, tu, den)
+def bo_sung_moi(cap, tu, den, D, ds, ep=None):
+    """Bài đã thu rồi mà dữ liệu bài có thêm chữ / câu mới: gom lại, chỉ THÊM mục chưa có vào ds và thêm lượt mới (không thu lại mục cũ).
+    ep: khóa đã có file nhưng phải thu lại (REDO_HSK2)."""
+    ds2, bo2 = gom(cap, tu, den, ep)
     co = {it['id'] for it in ds}
     moi = [it for it in ds2 if it['id'] not in co]
     if not moi: return
@@ -569,11 +578,12 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
     t0 = time.time()
     ds = _doc(D + 'ds.json')
     if ds is None:
-        ds, bo = gom(cap, tu, den)
+        ds, bo = gom(cap, tu, den, REDO_HSK2 if str(cap) == '2' else None)
         _ghi(D + 'ds.json', ds); _ghi(D + 'bo.json', bo)
         print('Gom HSK%s %d → %d: %d từ/cụm, %d chữ đa âm (ghi thẳng ô Đọc), %d câu · bỏ %d mục (了/么 riêng, đã có file)' % (
             cap, tu, den, sum(it['typ'] == 'tu' for it in ds), sum(it['typ'] == 'chu' for it in ds), sum(it['typ'] == 'cau' for it in ds), len(bo)))
     elif str(cap).startswith('bai'): bo_sung_moi(cap, tu, den, D, ds)
+    elif str(cap) == '2': bo_sung_moi(cap, tu, den, D, ds, REDO_HSK2)
     L = _doc(D + 'luot.json')
     if L is None:
         L = chia_luot(ds); _ghi(D + 'luot.json', L)
