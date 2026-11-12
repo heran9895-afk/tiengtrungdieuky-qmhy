@@ -424,6 +424,35 @@ def _nhan(x, sr=16000):
 def _ratio(a, b): return difflib.SequenceMatcher(None, a, b).ratio() if a or b else 1.0
 
 
+def _xep(n, m, vung, r_dong):
+    """Ghép n dòng vào m vùng (quy hoạch động). Bỏ vùng thừa phải RẺ hơn ghép nhầm: Gemini có lúc đọc lặp lại
+    cả đoạn cuối lượt (HSK3 l62, 13/11/2026) — nếu bỏ vùng đắt, máy dồn nhiều câu vào một dòng (âm thanh lệch chữ)."""
+    NEG = -1e9
+    dp = [[NEG] * (m + 1) for _ in range(n + 1)]; bk = [[None] * (m + 1) for _ in range(n + 1)]
+    dp[0][0] = 0
+    for i in range(n + 1):
+        for j in range(m + 1):
+            c = dp[i][j]
+            if c == NEG: continue
+            if j < m:   # bỏ vùng thừa: vùng ngắn / có 嗯 (tiếng thở, "ừm") bỏ rẻ hơn ghép vào dòng
+                bo = 0.05 if '嗯' in vung[j][2] else 0.12
+                if c - bo > dp[i][j + 1]: dp[i][j + 1], bk[i][j + 1] = c - bo, ('bovung', i, j)
+            if i < n and c - 0.8 > dp[i + 1][j]: dp[i + 1][j], bk[i + 1][j] = c - 0.8, ('bodong', i, j)
+            if i < n:
+                for k in range(1, 5):
+                    if j + k > m: break
+                    txt = ''.join(v[2] for v in vung[j:j + k])
+                    r = r_dong(i, txt)
+                    sc = c + r - 0.05 * (k - 1)
+                    if sc > dp[i + 1][j + k]: dp[i + 1][j + k], bk[i + 1][j + k] = sc, ('ghep', i, j, k, r, txt)
+    i, j, kq = n, m, {}
+    while i or j:
+        b = bk[i][j]
+        if b[0] == 'ghep': kq[b[1]] = (b[2], b[3], b[4], b[5])
+        i, j = b[1], b[2]
+    return kq
+
+
 def cat_luot(wav, dong, ids, alt, ra_dir, ten_tep):
     """Cắt wav của một lượt thành từng dòng. dong: chữ; ids: khóa từng dòng; alt: pinyin kho (không dấu) hoặc '';
     ten_tep: tên file mp3 từng dòng. Trả về {id: {...}} + thông tin vùng."""
@@ -455,29 +484,7 @@ def cat_luot(wav, dong, ids, alt, ra_dir, ten_tep):
     def r_dong(i, txt):
         p = [long(q) for q in asr_py(txt)]
         return _ratio(alt[i], ''.join(p)) if alt[i] else _ratio(P[i], p)
-    NEG = -1e9
-    dp = [[NEG] * (m + 1) for _ in range(n + 1)]; bk = [[None] * (m + 1) for _ in range(n + 1)]
-    dp[0][0] = 0
-    for i in range(n + 1):
-        for j in range(m + 1):
-            c = dp[i][j]
-            if c == NEG: continue
-            if j < m:   # bỏ vùng thừa: vùng ngắn / có 嗯 (tiếng thở, "ừm") bỏ rẻ hơn ghép vào dòng
-                bo = 0.05 if '嗯' in vung[j][2] else (0.15 if vung[j][1] - vung[j][0] < 0.6 else 0.6)
-                if c - bo > dp[i][j + 1]: dp[i][j + 1], bk[i][j + 1] = c - bo, ('bovung', i, j)
-            if i < n and c - 0.8 > dp[i + 1][j]: dp[i + 1][j], bk[i + 1][j] = c - 0.8, ('bodong', i, j)
-            if i < n:
-                for k in range(1, 5):
-                    if j + k > m: break
-                    txt = ''.join(v[2] for v in vung[j:j + k])
-                    r = r_dong(i, txt)
-                    sc = c + r - 0.05 * (k - 1)
-                    if sc > dp[i + 1][j + k]: dp[i + 1][j + k], bk[i + 1][j + k] = sc, ('ghep', i, j, k, r, txt)
-    i, j, kq = n, m, {}
-    while i or j:
-        b = bk[i][j]
-        if b[0] == 'ghep': kq[b[1]] = (b[2], b[3], b[4], b[5])
-        i, j = b[1], b[2]
+    kq = _xep(n, m, vung, r_dong)
     res = {}
     for i, l in enumerate(dong):
         if i not in kq:
@@ -607,6 +614,28 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
     bao_cao(cap, tu, den, giay_moi=giay, giay_chay=time.time() - t0)
 
 
+PB_CAT = 2   # 2: bỏ vùng thừa rẻ (sửa lỗi dồn nhiều câu vào một dòng, 13/11/2026)
+
+
+def cat_lai(D, b, by, ds, kf, wav):
+    """Lượt cắt bằng bản cũ mà còn mục lỗi (chưa đẩy, bác chưa chọn Đạt): cắt lại từ file wav đã có — không gọi Gemini."""
+    kq = _doc(kf)
+    if kq['meta'].get('pb', 1) >= PB_CAT or not os.path.exists(wav): return
+    its = [by[i] for i in b['ids'] if i in by]
+    loi = [it for it in its if it.get('loi') and not it.get('da_day') and it.get('quyet') != 'dat']
+    if loi:
+        res, meta = cat_luot(wav, b['dong'], b['ids'], [by[i]['alt'] for i in b['ids']], D + 'tam/%s/' % b['ten'], [by[i]['ten'] for i in b['ids']])
+        sua = 0
+        for it in loi:
+            r = res[it['id']]
+            if r.get('tam') and len(r['loi']) < len(it['loi']):
+                _nhan_ket_qua(D, it, r); it['lan'] = 0; it['quyet'] = None; sua += 1
+        kq = dict(meta=meta, res=res)
+        print('   ✂ cắt lại %s (không tốn lượt): sửa được %d/%d mục lỗi' % (b['ten'], sua, len(loi)))
+    kq['meta']['pb'] = PB_CAT
+    _ghi(kf, kq); _ghi(D + 'ds.json', ds)
+
+
 def _chay_cac_luot(cap, tu, den, D, L, by, ds, dot, gioi_han_luot):
     giay = 0
     for b in L[:gioi_han_luot]:
@@ -616,11 +645,12 @@ def _chay_cac_luot(cap, tu, den, D, L, by, ds, dot, gioi_han_luot):
             t1 = time.time(); g = goi_tts(b['style'], b['dong'], wav, dot, b['ten'], giong=b.get('giong')); giay += g
             print('%.0f s âm thanh, %.0f s chờ' % (g, time.time() - t1))
         kf = D + 'ketqua/%s.json' % b['ten']
-        if os.path.exists(kf): continue
+        if os.path.exists(kf):
+            cat_lai(D, b, by, ds, kf, wav); continue
         its = [by[i] for i in b['ids']]
         res, meta = cat_luot(wav, b['dong'], b['ids'], [it['alt'] for it in its], D + 'tam/%s/' % b['ten'], [it['ten'] for it in its])
         for it in its: _nhan_ket_qua(D, it, res[it['id']])
-        meta['kieu'] = CFG['kieu']
+        meta['kieu'] = CFG['kieu']; meta['pb'] = PB_CAT
         _ghi(kf, dict(meta=meta, res=res)); _ghi(D + 'ds.json', ds)
         nl = sum(1 for it in its if it['loi'])
         print('   ✂ %s: %d vùng / %d dòng%s · đạt %d · lỗi %d' % (b['ten'], meta['vung'], meta['dong'],
