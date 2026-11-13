@@ -42,7 +42,9 @@ def chuan(s):  # giống chuanAm() trong assets/js/tu-vung-chung.js
     return re.sub(r'[—–\-“”"]', '', s).replace('！', '。')
 
 
-def gon(s): return re.sub(r'([。？！，])\1+', r'\1', str(s).strip())
+def gon(s):
+    # bỏ dấu "……" ở đầu (……极了, ……得不得了): Gemini đọc thành tiếng ngập ngừng "嗯" dính vào chữ đầu (khóa chuan(text) giữ nguyên nên bảng tra không đổi)
+    return re.sub(r'([。？！，])\1+', r'\1', re.sub(r'^[…⋯.·\s]+', '', str(s).strip()))
 def han(s): return ''.join(re.findall(r'[一-鿿]', s or ''))
 def md10(s): return hashlib.md5(s.encode()).hexdigest()[:10]
 
@@ -727,6 +729,7 @@ def _chuan_toc_do(mp3, text):
 def thu_lai_nhom(D, its, dot, ep=False):
     """Thu lại NHIỀU mục trong MỘT lần gọi (đỡ tốn hạn mức 100 lần/ngày): mỗi mục đọc 2 lần (danh sách lặp 2 vòng),
     Style chỉ nói về các mục đó (+ ghi chú của cô). Mỗi mục chọn bản tốt hơn. its: cùng loại, cùng giọng, ≤ 12 mục."""
+    for it in its: it['text'] = gon(it['text'])   # mục đã gom từ trước vẫn còn "……" ở đầu
     it0 = its[0]; typ = 'chu' if it0['typ'] == 'chu' else it0['typ']; giong = it0.get('giong', 'Sulafat')
     st = tao_style(its, typ, giong=giong).replace('Pronunciation of the lines, in the same order:',
                                                     'The list is read twice (two rounds). Pronunciation of the lines of each round, in order:')
