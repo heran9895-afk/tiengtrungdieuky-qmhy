@@ -239,6 +239,9 @@
         return '<p>' + (v.ai ? '<b class="hanzi">' + esc(v.ai) + '：</b>' : '') + '<span class="hanzi">' + esc(v.han) + '</span><i class="ot-van-py" hidden>' + esc(v.py) + '</i></p>'; }).join('') + '</div></details>';
   }
   function veCau() {
+    if (window.QM_LT_LOP && QM_LT_LOP.dangBat() && L.ds[L.i] && L.ds[L.i].c.dang === 'xep') {            // phòng lớp (3a): chỉ các dạng chọn đáp án → bỏ câu xếp
+      L.ds.splice(L.i, 1); if (L.i >= L.ds.length) return veKetQua(); return veCau();
+    }
     var x = L.ds[L.i], c = x.c, de = '', dap = '', pa;
     x.t0 = Date.now();
     var dau = '<div class="lnp-hang"><span class="lnp-ten-dang">' + TEN_DANG[c.dang] + '</span><span class="lnp-phai"><span class="lt-dem">' + (L.i + 1) + ' / ' + L.ds.length + '</span>' + nutAm() + '</span></div>' +
@@ -281,6 +284,7 @@
     el.innerHTML = veBaiDoc() + '<div class="lnp-khung ot-khung"><div class="lt-vach lt-vach-bai"><i class="thuoc" style="width:' + (L.i / L.ds.length * 100) + '%"></i></div>' +
       '<div class="lt-de lnp-de">' + dau + de + '</div>' + dap + '<div class="lnp-giai" aria-live="polite"></div></div>';
     if (c.loa && c.dang === 'chon' && (c.anDe || c.hienSau || !c.de && !c.cau)) setTimeout(function () { var b = el.querySelector('.ot-khung .tv-loa'); if (b && L && L.ds[L.i] === x) TV.doc(c.loa, b); }, 350);
+    if (window.QM_LT_LOP && QM_LT_LOP.dangBat() && (c.dang === 'chon' || c.dang === 'dungSai')) QM_LT_LOP.sauVeCau();
   }
   function veDongXep() {
     var x = L.ds[L.i], dong = el.querySelector('.ot-xep-dong');
@@ -382,7 +386,7 @@
       BAI_DOC = P.bai[+cb.dataset.k]; dungLuot(); luuDo(); amThanh('batDau'); veCau(); veDau(); return; }
     if (t.closest('.ot-bat-dau')) { luuHs(); if (LD) LD.xoa(khoaLD()); dungLuot(); luuDo(); amThanh('batDau'); veCau(); veDau(); return; }
     var dn = t.closest('.ot-dau-nut'); if (dn && !dn.disabled) { L.ds[L.i].dat.push(dn.dataset.d); amThanh('dau'); return veDongXep(); }
-    var o = t.closest('.lt-dap-o'); if (o) return traLoi(o);
+    var o = t.closest('.lt-dap-o'); if (o) { if (window.QM_LT_LOP && QM_LT_LOP.dangBat()) return; return traLoi(o); }   // phòng lớp: học sinh trả lời trên máy các em
     var k = t.closest('.ot-khoi'); if (k && !k.disabled) { var x = L.ds[L.i]; if (x.dat.indexOf(+k.dataset.k) < 0) { x.dat.push(+k.dataset.k); amThanh('cham'); veDongXep(); } return; }
     var tr = t.closest('.ot-tren'); if (tr && !tr.disabled) { L.ds[L.i].dat.splice(+tr.dataset.j, 1); amThanh('cham'); return veDongXep(); }
     if (t.closest('.ot-xep-xoa')) { L.ds[L.i].dat = []; return veDongXep(); }
@@ -395,11 +399,25 @@
   document.addEventListener('keydown', function (e) {
     if (!L || /INPUT|TEXTAREA|SELECT/.test(e.target.tagName) || !el.querySelector('.ot-khung')) return;
     if (e.key === 'Enter') { var tp = el.querySelector('.ot-tiep'), kt = el.querySelector('.ot-xep-kt:not(:disabled)'); if (tp) { e.preventDefault(); tp.click(); } else if (kt) { e.preventDefault(); kiemTraXep(); } return; }
+    if (window.QM_LT_LOP && QM_LT_LOP.dangBat()) return;
     var os = el.querySelectorAll('.lnp-dap:not(.xong) .lt-dap-o'), n = +e.key;
     if (n >= 1 && n <= os.length) { e.preventDefault(); traLoi(os[n - 1]); }
   });
 
   document.addEventListener('qm-luot-do-nap', function () { if (P && !el.querySelector('.ot-khung') && !el.querySelector('.lt-ket-qua')) veBatDau(); });
+
+  // Cho phong-lop-gv.js (phòng lớp): cùng giao diện với luyen-tap.js
+  window.QM_LT_API = { khu: el, tenBai: function () { return TEN; },
+    chu: function (html) { var d = document.createElement('div'); d.innerHTML = html; return d.textContent.trim(); },
+    traLoi: function (o) { return traLoi(o); },
+    B: function () {
+      var x = L && L.ds[L.i]; if (!x || !x.pa) return null; var c = x.c;
+      var nut = el.querySelectorAll('.lt-dap-o');
+      return { i: L.i, hang: L.ds, dap: { ds: x.pa.map(function (p, k) {
+        var b = nut[k] ? nut[k].cloneNode(true) : null; if (b) { var so = b.querySelector('.lt-so'); if (so) so.remove(); }
+        return { html: b ? b.innerHTML : esc(p), dung: c.dang === 'dungSai' ? (p === 'Đúng') === !!c.dung : p === c.dap };
+      }) } };
+    } };
 
   // ---------- nạp dữ liệu ----------
   el.innerHTML = '<div class="tv-trong">Đang tải bài ôn tập…</div>';

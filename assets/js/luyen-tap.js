@@ -548,6 +548,7 @@
       w = B.hang[B.i]; if (k2 !== k) { B.kieu[B.i] = k2; k = k2; }
       var de = cauDeCua(w, k); if (de) chotCau(de);
     }
+    if (window.QM_LT_LOP && QM_LT_LOP.dangBat() && ['ghep', 'xep', 'dich', 'bo', 'go'].indexOf(k) >= 0) { B.hang.splice(B.i, 1); B.kieu.splice(B.i, 1); return veCau(); }   // phòng lớp (3a): chỉ các dạng chọn đáp án
     if (k === 'ghep') return veGhep();
     if (k === 'xep' || k === 'dich') return veXep(w, k);
     if (k === 'bo') return veBo(w);
@@ -898,6 +899,7 @@
       }).join('') + '</div>' +
       '<div class="lt-nut-the lt-nut-tiep" hidden><button type="button" class="btn solid lt-tiep"></button></div>';
     if (D.sauKhiVe) D.sauKhiVe(w);
+    if (window.QM_LT_LOP && QM_LT_LOP.dangBat()) QM_LT_LOP.sauVeCau();
   }
   function traLoi(nut) {
     var w = B.hang[B.i], hop = khuBai.querySelector('.lt-dap');
@@ -1225,6 +1227,7 @@
   }
 
   // ---------- Sự kiện ----------
+  window.QM_LT_API = { khu: khuBai, B: function () { return B; }, traLoi: traLoi, chu: chu, tenBai: function () { return BAI ? BAI.ten : ''; } };   // cho phong-lop-gv.js (phòng lớp)
   khuBai.addEventListener('click', function (e) {
     var t = e.target;
     var sao = t.closest('.lt-sao');
@@ -1236,7 +1239,7 @@
     if (t.closest('.tv-loa')) return;
     var am = t.closest('.lt-am'); if (am) return doiAm(am);
     var gy = t.closest('.lt-goi-y-nut'); if (gy) { gy.outerHTML = '<span class="lt-goi-y-viet">' + esc(gy.dataset.viet) + '</span>'; return; }
-    var o = t.closest('.lt-dap-o'); if (o) return traLoi(o);
+    var o = t.closest('.lt-dap-o'); if (o) { if (window.QM_LT_LOP && QM_LT_LOP.dangBat()) return; return traLoi(o); }   // phòng lớp: học sinh trả lời trên máy các em, cô không bấm trực tiếp
     var g = t.closest('.lt-gh-o'); if (g) return chamGhep(g);
     var k = t.closest('.lt-khoi'); if (k) return chamXep(k);
     var bo = t.closest('.lt-bo-o'); if (bo) return chamBo(bo);

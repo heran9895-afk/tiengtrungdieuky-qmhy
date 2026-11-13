@@ -34,9 +34,12 @@
      học sinh chỉ nhận đề khi lớp được giao "<mục>/bai-kiem-tra" và đang trong khung giờ; máy chủ giữ giờ, tự lưu bài,
      chấm khi nộp / hết giờ; cô chấm tay câu dịch, cho làm lại, công bố đáp án. Nhớ chạy "caiDat" một lần (thêm KiemTraDe,
      KiemTraBai, KiemTraCongBo).
+   2026-11-14a: BUỔI HỌC TRÊN LỚP (Phòng lớp): cô bấm Kết thúc buổi → lưu bộ câu hỏi + đáp án đúng + (chỉ cô thấy) ai trả lời gì vào trang BuoiHoc;
+     học sinh của lớp xem lại câu hỏi + đáp án đúng trong tài khoản. Lệnh mới: gvLuuBuoiHoc, gvDsBuoiHoc, buoiHocCuaToi.
+     Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-05a';
+var PHIEN_BAN = '2026-11-14a';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -59,6 +62,7 @@ var TRANG = {
   KiemTraDe: ['maDe', 'phienBan', 'luuLuc', 'json1', 'json2', 'json3', 'json4', 'nguoiLuu'],
   KiemTraBai: ['maDe', 'hoSoId', 'sub', 'hoTenHocSinh', 'lop', 'maLop', 'maDot', 'batDauLuc', 'hetGioLuc', 'nopLuc', 'traLoi', 'nghe', 'chamTay', 'tong', 'trangThai', 'thietBi'],
   KiemTraCongBo: ['maDe', 'maLop', 'luc'],
+  BuoiHoc:   ['maBuoi', 'taoLuc', 'maLop', 'tieuDe', 'phan', 'soCau', 'json'],
   PhienChoi: ['maPhien', 'taoLuc', 'maLop', 'tro', 'tenTro', 'tenBai', 'muc', 'lesson', 'trang', 'ketThucLuc', 'ghiChu', 'bai']
 };
 
@@ -142,6 +146,9 @@ function doPost(e) {
       case 'gvKtCham':   return traVe(coKhoa(function () { return gvKtCham(xacGV(d), d); }));
       case 'gvKtLamLai': return traVe(coKhoa(function () { return gvKtLamLai(xacGV(d), d); }));
       case 'gvKtCongBo': return traVe(coKhoa(function () { return gvKtCongBo(xacGV(d), d); }));
+      case 'gvLuuBuoiHoc': return traVe(coKhoa(function () { return gvLuuBuoiHoc(xacGV(d), d); }));
+      case 'gvDsBuoiHoc':  xacGV(d); return traVe(buoiHocDs(d.maLop, true));
+      case 'buoiHocCuaToi': { var p0 = xacPhien(d), hs0 = hoSoCua(p0, d.hoSoId); return traVe(buoiHocDs(hs0.maLop, false)); }
       default:           return traVe({ ok: false, loi: 'Lệnh không hợp lệ: ' + d.action });
     }
   } catch (x) {
@@ -313,6 +320,31 @@ function hoSoCua(p, hoSoId) {
   var ds = dsHoSo(p.sub);
   for (var i = 0; i < ds.length; i++) if (ds[i].hoSoId === hoSoId) return ds[i];
   throw new Error('Hồ sơ không thuộc tài khoản này');
+}
+
+// ---------------- Buổi học trên lớp (Phòng lớp) ----------------
+// cau[] = { n, kieu, de, dapAn, giai?, cacDap?[], goi?: [{ten, chon, dung}] }  — "goi" (ai trả lời gì) chỉ trả cho giáo viên.
+function gvLuuBuoiHoc(gv, d) {
+  var maLop = chuanMa(d.maLop);
+  if (!maLop || !lopTheoMa(maLop)) throw new Error('Chưa chọn lớp hợp lệ');
+  var cau = Array.isArray(d.cau) ? d.cau.slice(0, 80) : [];
+  if (!cau.length) throw new Error('Buổi học chưa có câu nào');
+  var js = JSON.stringify(cau);
+  while (js.length > TOI_DA_O && cau.length > 1) { cau.pop(); js = JSON.stringify(cau); }   // ô Sheet tối đa 50.000 ký tự
+  var ma = 'bh' + Date.now().toString(36) + Math.floor(Math.random() * 1296).toString(36);
+  trang('BuoiHoc').appendRow([ma, new Date(), maLop, gon(d.tieuDe, 120), gon(d.phan, 120), cau.length, js]);
+  return { ok: true, maBuoi: ma, soCau: cau.length };
+}
+function buoiHocDs(maLop, laGV) {
+  maLop = chuanMa(maLop);
+  if (!maLop) return { ok: true, buoi: [] };
+  var ds = bang('BuoiHoc').filter(function (r) { return r[0] && String(r[2]) === maLop; })
+    .sort(function (a, b) { return ms(b[1]) - ms(a[1]); }).slice(0, 30).map(function (r) {
+      var cau = []; try { cau = JSON.parse(r[6] || '[]'); } catch (e) {}
+      if (!laGV) cau = cau.map(function (c) { delete c.goi; return c; });                // học sinh không thấy ai làm gì
+      return { maBuoi: String(r[0]), taoLuc: ms(r[1]), maLop: String(r[2]), tieuDe: String(r[3]), phan: String(r[4]), soCau: +r[5] || cau.length, cau: cau };
+    });
+  return { ok: true, buoi: ds };
 }
 
 // ---------------- Tiến độ học ----------------

@@ -3,7 +3,7 @@
    Không có ảnh nặng: mọi hình đều là emoji/CSS, chỉ nạp khi cô bấm mở. */
 (function () {
   'use strict';
-  if (window.QM_GOI_TEN) return; window.QM_GOI_TEN = 1;
+  if (window.QM_GOI_TEN) return;
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
@@ -34,6 +34,7 @@
   };
 
   // ---------- trạng thái ----------
+  var CH = null;                                   // chế độ CHỌN MỘT BẠN cho Phòng lớp: { lop, khiChon(hs) }
   var QS = new URLSearchParams(location.search);
   var S = { lop: [], maLop: QS.get('lop') || ls.get('lop', ''), ds: [], game: ls.get('game', 'quay'), soBan: 1, khongLap: ls.get('khongLap', true),
     daGoi: [], vang: [], tam: [], dangChay: false, ketQua: [] };
@@ -143,11 +144,12 @@
 
   function moBang() {
     dung_ui(); bg.hidden = false; document.body.style.overflow = 'hidden';
+    if (CH) { S.soBan = 1; soSel.value = '1'; soSel.disabled = true; if (CH.lop) S.maLop = CH.lop; } else soSel.disabled = false;
     stage.innerHTML = '<div class="gt-rong">⏳ Đang nạp danh sách lớp…</div>'; veGames();
     taiLop().then(function () { veLopSel(); doiLop(S.maLop || (S.lop[0] && S.lop[0].maLop) || 'tay'); })
       .catch(function (e) { S.lop = []; veLopSel(); doiLop('tay'); });
   }
-  function dongBang() { dung(); bg.hidden = true; document.body.style.overflow = ''; }
+  function dongBang() { dung(); bg.hidden = true; document.body.style.overflow = ''; if (CH) { var h = CH.khiHuy; CH = null; if (h) h(); } }
 
   function taiLop() {
     if (S.lop.length) return Promise.resolve();
@@ -155,8 +157,9 @@
     return QM_TK.goi('gvDuLieu', {}).then(function (D) {
       var cac = (D.lop || []).filter(function (l) { return !l.dong; });
       S.lop = cac.map(function (l) {
-        return { maLop: l.maLop, tenLop: l.tenLop || l.maLop, hs: (D.hocSinh || []).filter(function (h) { return h.maLop === l.maLop; })
-          .map(function (h) { return String(h.hoTen || '').replace(/\s+/g, ' ').trim(); }).filter(Boolean) };
+        var ids = {}, hs = (D.hocSinh || []).filter(function (h) { return h.maLop === l.maLop; }).map(function (h) {
+          var ten = String(h.hoTen || '').replace(/\s+/g, ' ').trim(); if (ten && !ids[ten]) ids[ten] = h.hoSoId; return ten; }).filter(Boolean);
+        return { maLop: l.maLop, tenLop: l.tenLop || l.maLop, hs: hs, ids: ids };
       });
     });
   }
@@ -358,6 +361,13 @@
       '<button class="gt-btn gt-phu" id="gtDoi" type="button">🔁 Đổi bạn khác</button>' +
       '<button class="gt-btn gt-phu" id="gtVv" type="button">🚫 Bạn vắng</button></div>';
     stage.appendChild(k); phao(k);
+    if (CH) {
+      var tb = $('#gtTiep', k); tb.textContent = '✅ Gọi bạn này';
+      tb.onclick = function () {
+        var l = S.lop.filter(function (x) { return x.maLop === S.maLop; })[0], f = CH.khiChon; CH = null;
+        dongBang(); if (f) f({ hoTen: ds[0], hoSoId: l && l.ids ? l.ids[ds[0]] || '' : '' });
+      };
+    } else
     $('#gtTiep', k).onclick = function () { S.tam = []; veNen(); };
     $('#gtDoi', k).onclick = function () {       // trả lại các bạn vừa gọi, bỏ qua họ trong lần quay này
       ds.forEach(function (n) { S.daGoi = S.daGoi.filter(function (x) { return x !== n; }); if (S.tam.indexOf(n) < 0) S.tam.push(n); });
@@ -385,6 +395,7 @@
     var b = document.createElement('button'); b.type = 'button'; b.className = 'gt-fab'; b.textContent = '🎲 Gọi tên'; b.title = 'Bảng gọi tên (chỉ cô thấy)';
     b.onclick = moBang; document.body.appendChild(b);
   }
+  window.QM_GOI_TEN = { mo: function (o) { CH = o || null; moBang(); }, daSan: true };
   var lan = 0;
   (function cho() {
     if (window.QM_TK && QM_TK.giaoVien && QM_TK.giaoVien()) return gan();

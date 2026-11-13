@@ -14,15 +14,15 @@
       if (n === 3) { L.push(['⚡ Ôn tập 1', d + 'on-tap-1.html'], ['⚡ Ôn tập 2', d + 'on-tap-2.html'], ['⚡ Ôn tập 3.1', d + 'on-tap-3-1.html'], ['⚡ Ôn tập 3.2', d + 'on-tap-3-2.html']); }
       else L.push(['⚡ Ôn tập 1', d + 'on-tap-1.html'], ['⚡ Ôn tập 2', d + 'on-tap-2.html'], ['⚡ Ôn tập 3', d + 'on-tap-3.html']);
     }
-    L.push(['🎯 Bài tập', d + 'bai-tap.html', 1], ['📒 Luyện theo sách bài tập', d + 'sach-bai-tap.html', 1]);
+    L.push(['🎯 Bài tập', d + 'bai-tap.html', 1], ['📒 Luyện theo sách bài tập', d + 'sach-bai-tap.html', 3]);
     if (n > 1) L.push(['📝 Test đầu giờ', d + 'test-dau-gio.html']);
     return L;
   }
   var MUC = [];
   for (var i = 1; i <= 7; i++) MUC.push({ k: 'bai-' + i, ten: 'Bài ' + i, phan: phanBai(i) });
   MUC.push({ k: 'on-tap-1-5', ten: 'Ôn tập tổng hợp Bài 1–5', phan: [
-    ['📚 Từ vựng', 'on-tap-1-5/tu-vung.html'], ['🔤 Ngữ âm', 'on-tap-1-5/ngu-am.html'], ['✍️ Chữ Hán', 'on-tap-1-5/chu-han.html'], ['📐 Ngữ pháp', 'on-tap-1-5/ngu-phap.html'],
-    ['🎧 Nghe', 'on-tap-1-5/nghe.html'], ['📖 Đọc hiểu', 'on-tap-1-5/doc-hieu.html'], ['🌏 Dịch Việt → Trung', 'on-tap-1-5/dich.html', 1], ['🔀 Trộn tổng hợp', 'on-tap-1-5/tong-hop.html', 1]] });
+    ['📚 Từ vựng', 'on-tap-1-5/tu-vung.html', 2], ['🔤 Ngữ âm', 'on-tap-1-5/ngu-am.html', 2], ['✍️ Chữ Hán', 'on-tap-1-5/chu-han.html', 2], ['📐 Ngữ pháp', 'on-tap-1-5/ngu-phap.html', 2],
+    ['🎧 Nghe', 'on-tap-1-5/nghe.html', 2], ['📖 Đọc hiểu', 'on-tap-1-5/doc-hieu.html', 2], ['🌏 Dịch Việt → Trung', 'on-tap-1-5/dich.html', 3], ['🔀 Trộn tổng hợp', 'on-tap-1-5/tong-hop.html', 1]] });
 
   var CSS = '.gvd-hang{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin-bottom:14px}' +
     '.gvd-hang label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:700;color:var(--muted,#667)}' +
@@ -75,7 +75,7 @@
         '<div class="gvd-hang"><label>Lớp<select class="gv-chon gvd-lop">' + (lop.length ? lop.map(function (l) { return '<option value="' + esc(l.maLop) + '"' + (l.maLop === cur.lop ? ' selected' : '') + '>' + esc(l.tenLop) + ' (' + dem(l.maLop) + ' em)</option>'; }).join('') : '<option value="">(chưa có lớp)</option>') + '</select></label></div>' +
         '<div class="gvd-bai">' + MUC.map(function (x) { return '<button type="button" data-b="' + x.k + '" class="' + (x.k === cur.bai ? 'on' : '') + '">' + esc(x.ten) + '</button>'; }).join('') + '</div>' +
         '<div class="gvd-luoi">' + m.phan.map(function (p, i) {
-          return '<div class="gvd-the"><b>' + esc(p[0]) + '</b>' + (p[2] ? '<small>🎲 có Gọi tên</small>' : '') +
+          return '<div class="gvd-the"><b>' + esc(p[0]) + '</b>' + (p[2] === 1 ? '<small>🎲 Gọi tên · 🏫 Phòng lớp</small>' : p[2] === 2 ? '<small>🏫 Phòng lớp</small>' : p[2] === 3 ? '<small>🎲 Gọi tên</small>' : '') +
             '<div class="gvd-nut"><button type="button" class="gv-nut chinh" data-m="' + i + '">▶ Dạy</button><button type="button" class="gv-nut" data-h="' + i + '">👁 Như học sinh</button></div></div>';
         }).join('') + '</div></div>';
       noi.querySelector('.gvd-lop').onchange = function () { cur.lop = this.value; nho(); };
