@@ -298,7 +298,7 @@ def dich():
           for h in D.HOI_THOAI]
     dv = [dict(ma=d['ma'], ten=d['ten'], np=d['np'], cau=[muc_dich(f"{d['ma']}-{i}", l['vi'], l['zh'], l.get('goiY', [])) for i, l in enumerate(d['cau'], 1)]) for d in D.DOAN_VAN]
     ten_viet = {'王老师': 'Cô Vương', '同学们': 'Các bạn học', '白家月': 'Bạch Gia Nguyệt', '李文': 'Lý Văn', '陈天中': 'Trần Thiên Trung',
-                '王一飞': 'Vương Nhất Phi', '王一雪': 'Vương Nhất Tuyết', '杨同乐': 'Dương Đồng Lạc', '刘明': 'Lưu Minh', '安妮': 'An Ni'}
+                '王一飞': 'Vương Nhất Phi', '王一雪': 'Vương Nhất Tuyết', '杨同乐': 'Dương Đồng Lạc', '刘明': 'Lưu Minh', '安妮': 'Annie'}
     return dict(phienBanDe='goc-' + PHIEN_BAN, soCauMoiLuot=20, tenViet=ten_viet, cau=cau, hoiThoai=ht, doanVan=dv)
 
 
