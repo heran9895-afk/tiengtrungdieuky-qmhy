@@ -2886,36 +2886,6 @@
   },
   {
    "hoi": [
-    "你会包饺子吗？",
-    "Nǐ huì bāo jiǎozi ma?",
-    "Bạn có biết gói sủi cảo không?"
-   ],
-   "dap": [
-    "会，我会包饺子，也会包包子。",
-    "Huì, wǒ huì bāo jiǎozi, yě huì bāo bāozi.",
-    "Biết, mình biết gói sủi cảo, cũng biết gói bánh bao."
-   ],
-   "nhieu": [
-    [
-     "我喜欢吃饺子。",
-     "Wǒ xǐhuan chī jiǎozi.",
-     ""
-    ],
-    [
-     "这些包子很好吃。",
-     "Zhèxiē bāozi hěn hǎochī.",
-     ""
-    ],
-    [
-     "我会说汉语。",
-     "Wǒ huì shuō Hànyǔ.",
-     ""
-    ]
-   ],
-   "chang": "2"
-  },
-  {
-   "hoi": [
     "刘明今天休息吗？",
     "Liú Míng jīntiān xiūxi ma?",
     "Hôm nay Lưu Minh có nghỉ không?",
@@ -3618,63 +3588,6 @@
    "doc": "assets/am/cau/68a941c731.mp3"
   },
   {
-   "han": "我妈妈会包饺子，不会包包子。",
-   "py": "Wǒ māma huì bāo jiǎozi, bú huì bāo bāozi.",
-   "viet": "Mẹ tôi biết gói sủi cảo, không biết gói bánh bao.",
-   "tu": [
-    "会",
-    "饺子",
-    "包子",
-    "包"
-   ],
-   "np": "hui"
-  },
-  {
-   "han": "你会包饺子吗？",
-   "py": "Nǐ huì bāo jiǎozi ma?",
-   "viet": "Bạn có biết gói sủi cảo không?",
-   "tu": [
-    "会",
-    "饺子",
-    "包"
-   ],
-   "np": "hui"
-  },
-  {
-   "han": "你会不会包包子？",
-   "py": "Nǐ huì bu huì bāo bāozi?",
-   "viet": "Bạn có biết gói bánh bao không?",
-   "tu": [
-    "会",
-    "包子",
-    "包"
-   ],
-   "np": "hui"
-  },
-  {
-   "han": "星期天我们包饺子。",
-   "py": "Xīngqītiān wǒmen bāo jiǎozi.",
-   "viet": "Chủ nhật chúng tôi gói sủi cảo.",
-   "tu": [
-    "星期天",
-    "饺子",
-    "包"
-   ],
-   "np": "trangNgu"
-  },
-  {
-   "han": "明天我想包一些包子。",
-   "py": "Míngtiān wǒ xiǎng bāo yìxiē bāozi.",
-   "viet": "Ngày mai tôi muốn gói một ít bánh bao.",
-   "tu": [
-    "一些",
-    "明天",
-    "包子",
-    "包"
-   ],
-   "np": "yixie"
-  },
-  {
    "han": "今天星期日，刘明休息。",
    "py": "Jīntiān xīngqīrì, Liú Míng xiūxi.",
    "viet": "Hôm nay chủ nhật, Lưu Minh nghỉ.",
@@ -3931,57 +3844,6 @@
       "han": "她是中国人。",
       "py": "Tā shì Zhōngguó rén.",
       "doc": "assets/am/nam1/1346366518.mp3"
-     }
-    ]
-   },
-   "chang": "3"
-  },
-  {
-   "ten": "Gói sủi cảo",
-   "luot": [
-    {
-     "han": "你会包饺子吗？",
-     "py": "Nǐ huì bāo jiǎozi ma?",
-     "viet": "Bạn có biết gói sủi cảo không?"
-    },
-    {
-     "han": "会，我妈妈星期天包饺子，我也包。",
-     "py": "Huì, wǒ māma xīngqītiān bāo jiǎozi, wǒ yě bāo.",
-     "viet": "Biết, chủ nhật mẹ mình gói sủi cảo, mình cũng gói."
-    },
-    {
-     "han": "这些饺子真好吃！",
-     "py": "Zhèxiē jiǎozi zhēn hǎochī!",
-     "viet": "Những cái sủi cảo này ngon thật!"
-    }
-   ],
-   "nhieu": {
-    "1": [
-     {
-      "han": "我会做饭。",
-      "py": "Wǒ huì zuò fàn."
-     },
-     {
-      "han": "今天星期天。",
-      "py": "Jīntiān xīngqītiān."
-     },
-     {
-      "han": "我是学生。",
-      "py": "Wǒ shì xué·shēng."
-     }
-    ],
-    "2": [
-     {
-      "han": "我不会包饺子。",
-      "py": "Wǒ bú huì bāo jiǎozi."
-     },
-     {
-      "han": "我有一台新电脑。",
-      "py": "Wǒ yǒu yì tái xīn diànnǎo."
-     },
-     {
-      "han": "明天我休息。",
-      "py": "Míngtiān wǒ xiūxi."
      }
     ]
    },
@@ -4862,25 +4724,6 @@
      "yixie"
     ],
     "doc": "assets/am/cau/12fc766043.mp3"
-   },
-   {
-    "ma": "b5-hui-kd-4",
-    "np": "hui",
-    "dang": "xep",
-    "dd": "hui-kd",
-    "cau": "我妈妈会包饺子。",
-    "py": "Wǒ māma huì bāo jiǎozi.",
-    "nghia": "Mẹ tôi biết gói sủi cảo.",
-    "khoi": [
-     "我",
-     "妈妈",
-     "会",
-     "包",
-     "饺子"
-    ],
-    "npPhu": [
-     "hui"
-    ]
    },
    {
     "ma": "b5-hui-pd-1",
