@@ -48,12 +48,13 @@
     t.innerHTML = '<div class="gtl-hang"><span>Mã <b>' + esc(R.ma) + '</b> · ' + esc(R.tenLop) + ' · đã vào <b id="gtlVao">' + R.vao + '</b>/' + R.ros.length + '</span> <button class="phu" id="gtlMa" type="button">📱 Hiện mã cho lớp</button></div>' +
       (c ? '<div>Câu <b>' + c.n + '</b>: ' + (c.goi ? 'bạn <span class="ten">' + esc(c.goi.ten) + '</span> ' + (R.tt === 'cho' ? '<small>đang trả lời…</small>' : R.tt === 'dung' ? '✅ đúng' : R.tt === 'sai' ? '❌ chưa đúng' : '') : '<small>chưa gọi ai</small>') + '</div>' +
         '<div class="gtl-hang">' + (R.tt === 'dung' || R.tt === 'hien' ? '<small>Bấm “Câu tiếp ›” trên đề để sang câu sau.</small>' :
-          '<button class="nut" id="gtlGoi" type="button">🎲 ' + (c.goi ? 'Gọi bạn khác' : 'Gọi tên') + '</button><button class="phu" id="gtlHien" type="button">💡 Hiện đáp án</button>') + '</div>'
+          '<button class="nut" id="gtlGoi" type="button">🎲 ' + (c.goi ? 'Gọi bạn khác' : 'Gọi tên') + '</button><button class="phu" id="gtlHien" type="button">💡 Hiện đáp án</button><button class="phu" id="gtlBo" type="button">⏭ Bỏ qua câu</button>') + '</div>' + (R.tt === 'dung' || R.tt === 'hien' ? '' : '<small>Cô cũng có thể bấm thẳng vào đáp án trên đề để tự chọn.</small>')
         : '<small>Chọn dạng bài rồi bấm bắt đầu để hiện câu đầu tiên.</small>') +
       '<div class="gtl-hang"><button class="do" id="gtlKet" type="button">🏁 Kết thúc buổi</button></div><small id="gtlLoi"></small>';
     $('#gtlMa').onclick = hienMa;
     var g = $('#gtlGoi'); if (g) g.onclick = goiTen;
     var h = $('#gtlHien'); if (h) h.onclick = hienDapAn;
+    var bo = $('#gtlBo'); if (bo) bo.onclick = boQua;
     $('#gtlKet').onclick = ketThuc;
   }
   function loi(m) { var e = $('#gtlLoi'); if (e) e.textContent = m || ''; }
@@ -192,6 +193,20 @@
     }
     c.html = chup(); ve(); publish();
   }
+  function boQua() {                                       // cô sang câu sau luôn: hiện đáp án rồi bấm "Câu tiếp"
+    hienDapAn();
+    setTimeout(function () { var n = khu().querySelector('.lt-nut-tiep:not([hidden]) .lt-tiep, .ot-tiep'); if (n) n.click(); }, 350);
+  }
+  function coChon(k) {                                     // cô tự bấm đáp án trên đề: đúng thì hiện, sai thì chỉ tô đỏ ô đó
+    var A = QM_LT_API, B = A.B(), c = R.cau, nut = khu().querySelectorAll('.lt-dap-o')[k];
+    if (!c || c.xong || !nut || !B.dap.ds[k] || nut.disabled) return;
+    stopCho(); moLai(c);
+    var dung = !!B.dap.ds[k].dung;
+    c.tries.push({ ten: 'Cô', chon: opt(B.dap.ds[k]), dung: dung }); c.chon = k;
+    if (dung) { A.traLoi(nut); c.xong = true; R.tt = 'dung'; c.nhatKy = nhatKy(true); }
+    else { nut.classList.add('sai'); nut.disabled = true; R.tt = 'sai'; }
+    c.html = chup(); ve(); publish();
+  }
   function hienDapAn() {
     var A = QM_LT_API, B = A.B(), c = R.cau; if (!c) return;
     stopCho(); moLai(c);
@@ -229,6 +244,10 @@
     setTimeout(function () { R.bat = false; R.cau = null; R.log = []; try { sessionStorage.removeItem(SS); } catch (e) {} if (!daLuu) ve(); else { ve(); loi('✅ Đã lưu buổi học.'); } }, 1200);
   }
 
+  document.addEventListener('click', function (e) {
+    if (!R.bat) return; var o = e.target.closest && e.target.closest('.lt-dap-o'); if (!o || !khu() || !khu().contains(o)) return;
+    var k = Array.prototype.indexOf.call(khu().querySelectorAll('.lt-dap-o'), o); if (k >= 0) coChon(k);
+  });
   window.QM_LT_LOP = { dangBat: function () { return R.bat; }, sauVeCau: sauVeCau };
 
   // chỉ hiện với giáo viên (không phải chế độ xem như học sinh)
