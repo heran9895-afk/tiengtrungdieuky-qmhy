@@ -768,6 +768,14 @@ body::after{content:"";position:fixed;left:50%;top:56%;width:min(72vw,560px);asp
 @media(max-width:600px){.tvb-chua{grid-template-columns:repeat(2,1fr)}.tvb-bo{font-size:50px;min-width:54px}}
 .tv-che-do button{white-space:nowrap}
 @media(max-width:600px){.tv-che-do{gap:4px}.tv-che-do button{padding:6px 10px;font-size:12.5px}}
+/* Mục lục theo khoảng từ (1–100, 101–200…) ở trang Kho từ vựng */
+.tv-muc-luc{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;align-items:center;max-width:860px;margin:-6px auto 18px}
+.tv-muc-luc[hidden]{display:none}
+.tv-muc-luc-nhan{font-weight:800;font-size:13px;color:var(--muted);margin-right:4px}
+.tv-muc-luc button{border:1.5px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:5px 12px;font:inherit;font-weight:800;font-size:13px;cursor:pointer;transition:.15s;white-space:nowrap}
+.tv-muc-luc button:hover{border-color:var(--brand);color:var(--brand)}
+.tv-muc-luc button.on{background:var(--brand-soft);border-color:var(--brand);color:var(--brand)}
+@media(max-width:600px){.tv-muc-luc{gap:4px}.tv-muc-luc button{padding:5px 9px;font-size:12.5px}}
 
 /* =========================================================
    NGỮ PHÁP · LƯỢT NHANH (đồng hồ) · TỔNG KẾT LỚP

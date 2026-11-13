@@ -31,7 +31,9 @@
       (MOT_KHO ? '' : '<a class="btn solid tv-luyen" href="' + ROOT + 'thu-vien/tu-vung/luyen-tap/">✍️ Luyện tập</a>') + '</div>' +
     '<div class="tv-che-do" role="group" aria-label="Cách xem từ vựng"><button type="button" data-cd="luoi">▦ Danh sách</button><button type="button" data-cd="the">🃏 Thẻ lật</button>' +
       (MOT_KHO ? '<button type="button" data-cd="bo" hidden>🀄 Thẻ bộ thủ</button>' : '') + '</div>' +
+    '<nav class="tv-muc-luc" aria-label="Mục lục theo khoảng từ" hidden></nav>' +
     '<div class="tv-luoi"></div>';
+  var mucLuc = el.querySelector('.tv-muc-luc'), khoang = null;   // khoang = [từ, đến) theo vị trí trong cấp; null = xem tất cả
   var luoi = el.querySelector('.tv-luoi'), dem = el.querySelector('.tv-dem'), tim = el.querySelector('.tv-tim'), nutLuyen = el.querySelector('.tv-luyen');
   // Cấu tạo chữ: chữ nào trong từ đã có dữ liệu tách bộ thủ (HSK 1–3, cô đã duyệt) thì hiện cách ghép + giải thích từng thành phần
   var CT = { chu: {}, tp: {} };
@@ -119,11 +121,30 @@
     return '<button type="button" class="tv-sao' + (on ? ' on' : '') + '" data-ma="' + esc(w.ma) + '" aria-pressed="' + on + '" aria-label="' + (on ? 'Bỏ khỏi' : 'Thêm vào') + ' danh sách từ khó">' + (on ? '★' : '☆') + '<span>' + (on ? 'Từ khó' : 'Đánh dấu từ khó') + '</span></button>';
   }
 
+  // Mục lục theo khoảng (1–100, 101–200…) để nhảy nhanh tới từ cuối cấp; chỉ ở trang Kho 9 cấp, ẩn khi đang tìm kiếm
+  function veMucLuc(k) {
+    var n = ds.length;
+    if (MOT_KHO || k || n <= 100) { mucLuc.hidden = true; mucLuc.innerHTML = ''; return; }
+    var b = n > 1500 ? 200 : 100;
+    var h = '<span class="tv-muc-luc-nhan">Mục lục</span><button type="button" class="' + (khoang ? '' : 'on') + '" data-a="">Tất cả · ' + n + '</button>';
+    for (var a = 0; a < n; a += b) {
+      var e = Math.min(a + b, n), on = khoang && khoang[0] === a;
+      h += '<button type="button" class="' + (on ? 'on' : '') + '" data-a="' + a + '" data-b="' + e + '" aria-pressed="' + !!on + '">' + (a + 1) + '–' + e + '</button>';
+    }
+    mucLuc.innerHTML = h; mucLuc.hidden = false;
+  }
+  mucLuc.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    khoang = b.dataset.a === '' ? null : [+b.dataset.a, +b.dataset.b];
+    fc.thuTu = null; veLuoi();
+  });
+
   function veLuoi(them) {
     var k = boDau(loc);
     if (!them) {
       soHien = MOI_TRANG;
-      if (!k) hien = ds;
+      veMucLuc(k);
+      if (!k) { hien = khoang && khoang[0] < ds.length ? ds.slice(khoang[0], khoang[1]) : (khoang = null, ds); if (khoang) soHien = hien.length; }
       else {
         var luot = ++luotTim;
         if (CAP.some(function (c) { return !KHO[c]; })) {
@@ -139,7 +160,7 @@
           .sort(function (a, b) { return a[0] - b[0] || a[1] - b[1]; }).map(function (x) { return x[2]; });
       }
     }
-    dem.textContent = k && !MOT_KHO ? hien.length + ' từ · cả 9 cấp' : hien.length + ' từ';
+    dem.textContent = k && !MOT_KHO ? hien.length + ' từ · cả 9 cấp' : khoang && !k ? hien.length + ' từ · mục ' + (khoang[0] + 1) + '–' + khoang[1] + ' / ' + ds.length : hien.length + ' từ';
     if (!k && !ds.length) { luoi.innerHTML = '<div class="tv-trong">Cấp này đang được cô cập nhật, bạn quay lại sau nhé! 🌱</div>'; return; }
     if (!hien.length) { luoi.innerHTML = '<div class="tv-trong">Không tìm thấy từ nào phù hợp.</div>'; return; }
     luoi.classList.toggle('tv-luoi-the', cheDo === 'the' || cheDo === 'bo');   // chế độ thẻ: một thẻ chiếm cả bề ngang, không chia cột
@@ -233,7 +254,7 @@
   el.querySelectorAll('.tv-che-do button').forEach(function (b) { b.classList.toggle('on', b.dataset.cd === cheDo); b.setAttribute('aria-pressed', b.dataset.cd === cheDo); });
 
   function chonCap(c) {
-    capDang = c;
+    capDang = c; khoang = null;
     el.querySelector('.tv-mr-note').hidden = c !== 'MR';
     el.querySelectorAll('.tv-cap button').forEach(function (b) { b.classList.toggle('on', MOT_KHO ? b.dataset.nhom === nhomDang : b.dataset.cap === c); });
     luoi.innerHTML = '<div class="tv-trong">Đang tải từ vựng…</div>';
