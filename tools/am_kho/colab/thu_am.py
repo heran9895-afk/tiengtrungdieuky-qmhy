@@ -453,6 +453,35 @@ def _xep(n, m, vung, r_dong):
     return kq
 
 
+def _bo_nhieu_cuoi(x, a, b):
+    """Gemini hay thêm một vệt nhiễu dải rộng (~0,15 s, nghe như rè/đứt đột ngột) ngay sau câu, cách giọng chỉ 30–80 ms nên
+    silencedetect (d=0.2) gộp luôn vào vùng tiếng nói. Tìm vệt đó ở cuối đoạn [a, b] giây của x và kéo b về trước nó."""
+    import numpy as np
+    seg = x[int(a * SR):int(b * SR)]
+    n = int(0.01 * SR); k = len(seg) // n
+    if k < 20: return b
+    db = 20 * np.log10(np.sqrt((seg[:k * n].reshape(k, n) ** 2).mean(1)) + 1e-9)
+    on = db > db.max() - 32
+    rs, i = [], 0
+    while i < k:
+        if on[i]:
+            j = i
+            while j < k and on[j]: j += 1
+            rs.append([i * 0.01, j * 0.01]); i = j
+        else: i += 1
+    m = []
+    for r in rs:
+        if m and r[0] - m[-1][1] < 0.03: m[-1][1] = r[1]
+        else: m.append(r)
+    moi = b
+    while len(m) > 1 and m[-1][1] - m[-1][0] < 0.30:
+        s0 = seg[int(m[-1][0] * SR):int(m[-1][1] * SR)]
+        sp = np.abs(np.fft.rfft(s0 * np.hanning(len(s0)))) ** 2; fr = np.fft.rfftfreq(len(s0), 1 / SR)
+        if sp[fr > 4000].sum() / (sp.sum() + 1e-12) <= 0.2: break
+        moi = a + max(m[-2][1] + 0.02, m[-1][0] - 0.02); m.pop()
+    return moi
+
+
 def cat_luot(wav, dong, ids, alt, ra_dir, ten_tep):
     """Cắt wav của một lượt thành từng dòng. dong: chữ; ids: khóa từng dòng; alt: pinyin kho (không dấu) hoặc '';
     ten_tep: tên file mp3 từng dòng. Trả về {id: {...}} + thông tin vùng."""
@@ -493,6 +522,7 @@ def cat_luot(wav, dong, ids, alt, ra_dir, ten_tep):
         a = max(0, vung[j][0] - 0.12); b = min(dur, vung[j + k - 1][1] + 0.15)
         if i + 1 in kq: b = min(b, vung[kq[i + 1][0]][0] - 0.02)
         if i - 1 in kq: a = max(a, vung[kq[i - 1][0] + kq[i - 1][1] - 1][1] + 0.02)
+        b = _bo_nhieu_cuoi(x, a, b)   # bỏ vệt nhiễu rè Gemini thêm cuối câu
         d = b - a
         tmp = ra_dir + '_c.wav'
         dich = ra_dir + ten_tep[i] + '.mp3'
