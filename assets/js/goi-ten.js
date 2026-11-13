@@ -34,7 +34,8 @@
   };
 
   // ---------- trạng thái ----------
-  var S = { lop: [], maLop: ls.get('lop', ''), ds: [], game: ls.get('game', 'quay'), soBan: 1, khongLap: ls.get('khongLap', true),
+  var QS = new URLSearchParams(location.search);
+  var S = { lop: [], maLop: QS.get('lop') || ls.get('lop', ''), ds: [], game: ls.get('game', 'quay'), soBan: 1, khongLap: ls.get('khongLap', true),
     daGoi: [], vang: [], tam: [], dangChay: false, ketQua: [] };
   var TM = [], RAF = 0, GEN = 0;
   function sau(fn, ms) { var g = GEN, t = setTimeout(function () { if (g === GEN) fn(); }, ms); TM.push(t); return t; }
