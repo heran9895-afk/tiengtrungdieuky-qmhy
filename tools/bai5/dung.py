@@ -60,6 +60,11 @@ CAU = [
  ['这道菜叫什么名字？', 'Zhè dào cài jiào shénme míngzi?', 'Món này tên là gì?', ''],
  ['明天是我的生日。', 'Míngtiān shì wǒ de shēngrì.', 'Ngày mai là sinh nhật của tôi.', ''],
  ['妈妈下班了。', 'Māma xiàbān le.', 'Mẹ tan làm rồi.', ''],
+ ['我妈妈会包饺子，不会包包子。', 'Wǒ māma huì bāo jiǎozi, bú huì bāo bāozi.', 'Mẹ tôi biết gói sủi cảo, không biết gói bánh bao.', 'hui'],
+ ['你会包饺子吗？', 'Nǐ huì bāo jiǎozi ma?', 'Bạn có biết gói sủi cảo không?', 'hui'],
+ ['你会不会包包子？', 'Nǐ huì bu huì bāo bāozi?', 'Bạn có biết gói bánh bao không?', 'hui'],
+ ['星期天我们包饺子。', 'Xīngqītiān wǒmen bāo jiǎozi.', 'Chủ nhật chúng tôi gói sủi cảo.', 'trangNgu'],
+ ['明天我想包一些包子。', 'Míngtiān wǒ xiǎng bāo yìxiē bāozi.', 'Ngày mai tôi muốn gói một ít bánh bao.', 'yixie'],
 ]
 
 # ---------- Hỏi – đáp (ngoài bài khóa) ----------
@@ -90,6 +95,8 @@ HD = [
       nhieu=[L('这些是饺子。', 'Zhèxiē shì jiǎozi.'), L('我会做饺子。', 'Wǒ huì zuò jiǎozi.'), L('我想吃面条儿。', 'Wǒ xiǎng chī miàntiáor.')]),
  dict(hoi=L('那些人是谁？', 'Nàxiē rén shì shéi?', 'Những người kia là ai?'), dap=L('那些人是我的同事。', 'Nàxiē rén shì wǒ de tóngshì.', 'Những người kia là đồng nghiệp của mình.'),
       nhieu=[L('他们很忙。', 'Tāmen hěn máng.'), L('那些菜很好吃。', 'Nàxiē cài hěn hǎochī.'), L('我有很多同事。', 'Wǒ yǒu hěn duō tóngshì.')]),
+ dict(hoi=L('你会包饺子吗？', 'Nǐ huì bāo jiǎozi ma?', 'Bạn có biết gói sủi cảo không?'), dap=L('会，我会包饺子，也会包包子。', 'Huì, wǒ huì bāo jiǎozi, yě huì bāo bāozi.', 'Biết, mình biết gói sủi cảo, cũng biết gói bánh bao.'),
+      nhieu=[L('我喜欢吃饺子。', 'Wǒ xǐhuan chī jiǎozi.'), L('这些包子很好吃。', 'Zhèxiē bāozi hěn hǎochī.'), L('我会说汉语。', 'Wǒ huì shuō Hànyǔ.')]),
  dict(hoi=L('你的小猫几岁了？', 'Nǐ de xiǎo māo jǐ suì le?', 'Con mèo nhỏ của bạn mấy tuổi rồi?'), dap=L('它两岁了。', 'Tā liǎng suì le.', 'Nó hai tuổi rồi.'),
       nhieu=[L('它很好看。', 'Tā hěn hǎokàn.'), L('它是我的猫。', 'Tā shì wǒ de māo.'), L('我有一只猫。', 'Wǒ yǒu yì zhī māo.')]),
 ]
@@ -111,6 +118,11 @@ HT = [
       L('真好看！', 'Zhēn hǎokàn!', 'Đẹp thật!')],
       nhieu={1: [L('这是电脑。', 'Zhè shì diànnǎo.'), L('我很忙。', 'Wǒ hěn máng.'), L('我会做饭。', 'Wǒ huì zuò fàn.')],
              2: [L('我会做面条儿。', 'Wǒ huì zuò miàntiáor.'), L('今天星期几？', 'Jīntiān xīngqī jǐ?'), L('她是中国人。', 'Tā shì Zhōngguó rén.')]}),
+ dict(ten='Gói sủi cảo', luot=[L('你会包饺子吗？', 'Nǐ huì bāo jiǎozi ma?', 'Bạn có biết gói sủi cảo không?'),
+      L('会，我妈妈星期天包饺子，我也包。', 'Huì, wǒ māma xīngqītiān bāo jiǎozi, wǒ yě bāo.', 'Biết, chủ nhật mẹ mình gói sủi cảo, mình cũng gói.'),
+      L('这些饺子真好吃！', 'Zhèxiē jiǎozi zhēn hǎochī!', 'Những cái sủi cảo này ngon thật!')],
+      nhieu={1: [L('我会做饭。', 'Wǒ huì zuò fàn.'), L('今天星期天。', 'Jīntiān xīngqītiān.'), L('我是学生。', 'Wǒ shì xué·shēng.')],
+             2: [L('我不会包饺子。', 'Wǒ bú huì bāo jiǎozi.'), L('我有一台新电脑。', 'Wǒ yǒu yì tái xīn diànnǎo.'), L('明天我休息。', 'Míngtiān wǒ xiūxi.')]}),
 ]
 
 
