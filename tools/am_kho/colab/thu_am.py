@@ -737,6 +737,9 @@ def thu_lai_nhom(D, its, dot, ep=False):
     if dk: st += '\nPay attention to: ' + ', '.join(dk) + ' (read as in the pinyin above).'
     gc = [(it['text'], it.get('ghi_chu', '').strip()) for it in its if it.get('ghi_chu', '').strip()]
     if gc: st += '\nTeacher notes (follow exactly): ' + '; '.join('%s: %s' % x for x in gc)
+    # mục có "……" ở giữa (像……似的): Gemini hay nuốt chữ đầu hoặc đọc chữ đầu quá ngắn, sổ lại tưởng là tiếng thở rồi bỏ
+    ell = [it['text'] for it in its if '……' in it['text'].strip('…')]
+    if ell: st += '\nLines with "……": ' + '; '.join(ell) + ' — say every written syllable before and after "……" clearly, including the very first word, with a short pause of about half a second at "……"; never add 嗯.'
     ngan = [it for it in its if len(han(it['text'])) <= 4]
     if ngan: st += '\nShort lines: say exactly the written syllables, never repeat a syllable.'
     lan = max(it.get('lan', 0) for it in its) + 1
