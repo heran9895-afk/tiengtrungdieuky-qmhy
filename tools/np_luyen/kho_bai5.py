@@ -71,6 +71,7 @@ CAU = {5: [
  C('hui-kd', '我＿说越南语和汉语。', 'Wǒ huì shuō Yuènányǔ hé Hànyǔ.', 'Tôi biết nói tiếng Việt và tiếng Trung.', '会', ['是', '很'], '"biết (nói)" là **会 + ĐT**.'),
  H('hui-kd', '我会做饺子，也会做一些菜。', 'Wǒ huì zuò jiǎozi, yě huì zuò yìxiē cài.', '你会做什么？', 'Nǐ huì zuò shénme?', ['你喜欢什么菜？', '这是谁的电脑？'], 'Đáp "biết làm sủi cảo…" → hỏi **你会做什么？**'),
  X('hui-kd', ['hui', 'yixie'], '我会做一些越南菜。', 'Wǒ huì zuò yìxiē Yuènán cài.', 'Tôi biết nấu vài món Việt Nam.', ['我', '会', '做', '一些', '越南菜']),
+ X('hui-kd', ['hui'], '我妈妈会包饺子。', 'Wǒ māma huì bāo jiǎozi.', 'Mẹ tôi biết gói sủi cảo.', ['我', '妈妈', '会', '包', '饺子']),
  C('hui-pd', '我＿做菜，我妈妈会做。', 'Wǒ bú huì zuò cài, wǒ māma huì zuò.', 'Tôi không biết nấu ăn, mẹ tôi biết.', '不会', ['没会', '不是'], 'Phủ định của 会 là **不会**, không nói 没会.'),
  D('hui-pd', '我没会说法语。', 'Wǒ méi huì shuō Fǎyǔ.', 'Phủ định dùng **不会**.', '我不会说法语。', 'Wǒ bú huì shuō Fǎyǔ.', 'luuY'),
  C('hui-hoi', '你会＿会做饭？', 'Nǐ huì bu huì zuò fàn?', 'Bạn có biết nấu cơm không?', '不', ['没', '吗'], 'Hỏi chính phản: **会不会**.'),

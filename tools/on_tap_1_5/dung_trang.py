@@ -3,7 +3,7 @@
 import os
 GOC = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 THU = os.path.join(GOC, 'chuong-trinh-hsk', 'hsk1', 'on-tap-1-5')
-V = '20261031h'
+V = '20261114a'
 R = '../../../'
 TEP = f"{R}data/bai/on-tap-1-5.json?v={V}"
 
@@ -94,8 +94,8 @@ js_tv = f'''<script>
 <script src="{R}assets/js/luot-do.js?v={V}"></script>
 <script src="{R}assets/js/luyen-tap.js?v={V}"></script>
 <script src="{R}assets/js/on-tap-tong-hop.js?v={V}"></script>'''
-trang('tu-vung.html', 'Từ vựng', 'Ôn tập từ vựng Bài 1–5 HSK 1: 160 từ, 30 câu mỗi lượt, phân loại từ.', '词语', '📚 Từ vựng',
-      'Phần trên: luyện tổng hợp 160 từ của 5 bài (30 câu mỗi lượt, bốc ngẫu nhiên). Phần dưới: phân loại từ theo nhóm.', than_tv, js_tv)
+trang('tu-vung.html', 'Từ vựng', 'Ôn tập từ vựng Bài 1–5 HSK 1: 161 từ, 30 câu mỗi lượt, phân loại từ.', '词语', '📚 Từ vựng',
+      'Phần trên: luyện tổng hợp 161 từ của 5 bài (30 câu mỗi lượt, bốc ngẫu nhiên). Phần dưới: phân loại từ theo nhóm.', than_tv, js_tv)
 
 # ---- Dịch ----
 trang('dich.html', 'Dịch Việt → Trung', 'Bài dịch Việt – Trung Bài 1–5 HSK 1: dịch câu, hội thoại, đoạn văn.', '翻译', '🌏 Dịch Việt → Trung',
@@ -105,7 +105,7 @@ trang('dich.html', 'Dịch Việt → Trung', 'Bài dịch Việt – Trung Bài
 # ---- Trang chính của thẻ ----
 THE = [('ngu-am.html', '🔤', 'Ngữ âm', 'Thanh mẫu, vận mẫu, thanh điệu, biến điệu 不 · 一, thanh nhẹ, 儿 hóa, quy tắc viết pinyin. 20 câu mỗi lượt.'),
        ('chu-han.html', '✍️', 'Chữ Hán', 'Đếm nét, nét cơ bản, loại hình chữ, kết cấu, thuận bút, bộ thủ, ghép chữ. 20 câu mỗi lượt.'),
-       ('tu-vung.html', '📚', 'Từ vựng', '160 từ của 5 bài: chọn chữ, nghe, pinyin, ghép cặp, điền từ, xếp câu; phân loại từ.'),
+       ('tu-vung.html', '📚', 'Từ vựng', '161 từ của 5 bài: chọn chữ, nghe, pinyin, ghép cặp, điền từ, xếp câu; phân loại từ.'),
        ('ngu-phap.html', '📐', 'Ngữ pháp', 'Mọi điểm ngữ pháp Bài 2–5 và câu tổng hợp so sánh giữa các bài.'),
        ('doc-hieu.html', '📖', 'Đọc hiểu', 'Ba bài đọc: đoạn văn, hội thoại, tin nhắn.'),
        ('nghe.html', '🎧', 'Nghe', 'Nghe số, ngày tháng, thứ, hội thoại ngắn. 15 câu mỗi lượt.'),

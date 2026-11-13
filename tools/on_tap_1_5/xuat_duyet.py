@@ -40,7 +40,7 @@ w('1. **Bài dịch – cách chấm.** Học sinh gõ bản dịch từng câu 
 w('2. **Loại hình chữ Hán** (mục B3): bên soạn chỉ chọn chữ có cách phân loại **thống nhất** trong các sách văn tự học phổ thông. Đã **bỏ** các chữ còn tranh cãi: 天 (chỉ sự / hội ý), 十, 小, 家 (Thuyết văn xếp hình thanh), 字 (hình thanh kiêm hội ý), 他, 认, 欢, 汉 (giản thể làm mất phần biểu âm). Cô xem lại 大 (tượng hình), 见 (hội ý theo chữ phồn thể 見), 名 (hội ý), 本 (chỉ sự).')
 w('3. **Nghe ngày tháng** (F2): đáp án ghi bằng số (8/9, 2026) và **Thứ 2 … Chủ nhật**. Nếu cô muốn tuyệt đối không có tiếng Việt thì đổi sang đáp án chữ Hán (nghe 星期三, chọn 星期三 / 星期四 / 星期二).')
 w('4. **Kết cấu chữ** (B4): dùng đúng 13 tên kết cấu của mục *Kết cấu chữ Hán* ở Nhập môn. Không đưa 我 vào (Bài 2 dạy ghép 我 = 手 + 戈, còn quy chuẩn 11 coi 我 là độc thể), 年, 菜, 喜, 真 (các sách xếp khác nhau).')
-w('5. **Từ vựng** (C1) dùng lại bộ máy Bài tập với toàn bộ 160 từ của 5 bài; một lượt **30 câu** bốc ngẫu nhiên (ưu tiên ⭐ từ khó, từ đang yếu), mỗi lượt khác nhau. Cô muốn số câu khác thì báo.')
+w('5. **Từ vựng** (C1) dùng lại bộ máy Bài tập với toàn bộ 161 từ của 5 bài; một lượt **30 câu** bốc ngẫu nhiên (ưu tiên ⭐ từ khó, từ đang yếu), mỗi lượt khác nhau. Cô muốn số câu khác thì báo.')
 w('6. **Ngữ pháp** (D): mỗi lượt = **mỗi thẻ ngữ pháp Bài 2–5 một câu** bốc từ kho Luyện ngữ pháp đã duyệt (28 thẻ) + **6 câu tổng hợp liên bài** bốc từ 36 câu mới ở mục D (cần cô duyệt). Câu sai trong dạng Đúng/Sai lấy đúng lỗi ghi ở ô *Lưu ý* của thẻ.')
 w('7. **Tên nhân vật trong đề dịch tiếng Việt:** Lý Văn, Bạch Gia Nguyệt, Trần Thiên Trung, Annie, cô Vương (王一飞 = Vương Nhất Phi), Vương Nhất Tuyết, Lưu Minh, Dương Đồng Lạc. Bên soạn giữ đúng các điều đã biết về nhân vật (王一雪 có con trai 5 tuổi, con gái 12 tuổi, hai anh trai; 杨同乐 nhà 4 người…). Những điều **mới thêm** để có ngữ cảnh: gia đình 李文 (bố, mẹ, em trai 7 tuổi; ông nội 80, bà nội 79), gia đình 陈天中 (6 người), gia đình 安妮 (4 người, người Anh), 刘明 có một chị gái, 白家月 có máy tính mới, em gái 杨同乐 20 tuổi. Cô thấy chỗ nào lệch với bài sau thì báo.')
 w('8. **Thứ tự 8 phần** và tên nút như mục 0. Phần **Nói** để \"Sắp có\" đến khi cô gửi yêu cầu.\n')
@@ -142,7 +142,7 @@ w('**B7 · Ghép bộ thủ:** dùng lại 36 chữ ghép đã duyệt của Bà
 
 # ---------------- Từ vựng ----------------
 w('## 5. 📚 Từ vựng\n')
-w('**C1 · Luyện tổng hợp** — dùng lại bộ máy Bài tập (Chọn chữ Hán, Nghe chọn từ, Chọn pinyin, Ghép cặp, Ghép cụm từ, Điền từ, Sắp xếp câu) với 160 từ của 5 bài, câu ví dụ và kho câu đã duyệt. Không soạn câu mới.\n')
+w('**C1 · Luyện tổng hợp** — dùng lại bộ máy Bài tập (Chọn chữ Hán, Nghe chọn từ, Chọn pinyin, Ghép cặp, Ghép cụm từ, Điền từ, Sắp xếp câu) với 161 từ của 5 bài, câu ví dụ và kho câu đã duyệt. Không soạn câu mới.\n')
 w('**C2 · Xếp từ vào nhóm** (soạn mới; mỗi lượt bốc 3 nhóm × 3 từ, một từ chỉ thuộc một nhóm):\n')
 for k, ds in T.NHOM_TU.items():
     w(f"- **{k}:** {' '.join(ds)}")
