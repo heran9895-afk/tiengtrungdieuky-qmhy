@@ -705,6 +705,25 @@ def _nhan_ket_qua(D, it, r):
     it['trang'] = 'loi' if it['loi'] else 'xong'
 
 
+TOC_DO_CHUAN, TOC_DO_THAP = 4.3, 3.7   # chữ/giây của câu: trung vị HSK3 ≈ 4,7, phân vị 25% ≈ 4,3; chậm hơn 3,7 (≈ 80% trung vị) thì tăng tốc
+
+
+def _chuan_toc_do(mp3, text):
+    """Bản thu lại (Style riêng + ghi chú của cô + đọc 2 vòng) hay bị Gemini đọc chậm hơn hẳn các câu khác ("như tua chậm").
+    Câu từ 8 chữ trở lên đọc dưới TOC_DO_THAP chữ/giây → tăng tốc bằng atempo (giữ nguyên cao độ, tối đa ×1,5), ghi đè mp3.
+    Trả về (tốc độ cũ, hệ số) nếu có chỉnh, không thì None."""
+    if len(han(text)) < 8: return None
+    dur = float(subprocess.run(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', mp3],
+                               capture_output=True, text=True).stdout.strip() or 0)
+    toc = len(han(text)) / max(0.3, dur - 0.35)
+    if toc >= TOC_DO_THAP: return None
+    he = min(1.5, TOC_DO_CHUAN / toc)
+    tmp = mp3 + '.t.mp3'
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', mp3, '-af', 'atempo=%.3f' % he, '-ac', '1', '-ar', str(SR), '-b:a', '48k', tmp], check=True)
+    os.replace(tmp, mp3)
+    return round(toc, 2), round(he, 2)
+
+
 def thu_lai_nhom(D, its, dot, ep=False):
     """Thu lại NHIỀU mục trong MỘT lần gọi (đỡ tốn hạn mức 100 lần/ngày): mỗi mục đọc 2 lần (danh sách lặp 2 vòng),
     Style chỉ nói về các mục đó (+ ghi chú của cô). Mỗi mục chọn bản tốt hơn. its: cùng loại, cùng giọng, ≤ 12 mục."""
@@ -732,6 +751,9 @@ def thu_lai_nhom(D, its, dot, ep=False):
         cu = dict(r=it.get('r', 0), loi=it.get('loi', []))
         # ep=True (cô bấm Thu lại): luôn nhận bản mới, vì máy nghe không phân biệt được yāo/yī, dā/dá… nên điểm không nói bản nào đúng hơn
         if tot and (ep or (len(tot[0]['loi']), -tot[0]['r']) <= (len(cu['loi']) if it.get('file') else 99, -cu['r'])):
+            if typ == 'cau':
+                t = _chuan_toc_do(tot[0]['tam'], it['text'])
+                if t: print('   ⏩ %s: đọc chậm (%.1f chữ/giây) → tăng tốc ×%.2f' % (it['text'], t[0], t[1]))
             _nhan_ket_qua(D, it, tot[0])
     return g
 
