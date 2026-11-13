@@ -1215,7 +1215,7 @@
       .then(function (r) { return r.json(); })
       .then(function (d) {
         if (!d || !d.ok) throw new Error((d && d.loi) || 'Máy chủ không nhận kết quả');
-        khu.innerHTML = '<p class="lt-luu-ok">✅ Đã lưu kết quả (lượt ' + d.attemptNo + ', ' + d.soCau + ' câu).' + (/bai-tap$/.test(BAI.ma) ? ' <a href="bang-xep-hang.html">Xem Bảng xếp hạng ›</a>' : '') + '</p>';
+        khu.innerHTML = '<p class="lt-luu-ok">✅ Đã lưu kết quả (lượt ' + d.attemptNo + ', ' + d.soCau + ' câu).' + '</p>';
       })
       .catch(function (e) {
         var m = e.message || 'lỗi mạng';

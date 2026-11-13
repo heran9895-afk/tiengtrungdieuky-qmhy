@@ -319,7 +319,7 @@
       '<div class="tk-menu"><button type="button" class="tk-btn" data-x="hs">Xoá hồ sơ "' + esc(h.hoTen) + '" và tiến độ của hồ sơ này</button>' +
       '<button type="button" class="tk-btn do" data-x="tk">Xoá toàn bộ tài khoản: mọi hồ sơ, tiến độ, lượt truy cập</button>' +
       '<button type="button" class="tk-btn" data-x="thoi">Thôi, quay lại</button></div><p class="tk-bao" aria-live="polite"></p>' +
-      '<p class="tk-nho">Điểm các bài đã nộp nằm ở Bảng xếp hạng (máy chủ điểm riêng). Muốn xoá điểm, bạn nhắn cô qua Zalo nhé.</p>');
+      '<p class="tk-nho">Điểm các bài đã nộp do cô xem trong trang quản lý (máy chủ điểm riêng). Muốn xoá điểm, bạn nhắn cô qua Zalo nhé.</p>');
     b.addEventListener('click', function (e) {
       var x = (e.target.closest('[data-x]') || {}).dataset; if (!x) return;
       if (x.x === 'thoi') return manTaiKhoan();

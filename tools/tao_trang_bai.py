@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Tạo bộ trang chuong-trinh-hsk/hsk1/bai-N/ từ khung Bài 5 (bài đã duyệt). Dùng cho Bài 6, 7…
   python3 tools/tao_trang_bai.py 6        # đọc data/bai/bai-6.json (ten, tenViet, pinyinTen, nguPhap, tu)
-Trang tạo: index, tu-vung, ngu-phap, on-tap-1..3, bai-tap, bang-xep-hang, test-dau-gio (kiểm Bài N-1).
+Trang tạo: index, tu-vung, ngu-phap, on-tap-1..3, bai-tap, test-dau-gio (kiểm Bài N-1).
 Chưa tạo: sach-bai-tap.html (cần giọng âm tiết + tranh, làm riêng).
 Quy ước: bai-tap / on-tap nạp mọi bài trước làm TRUOC; test đầu giờ kiểm Bài N-1 (TRUOC = mọi bài trước N-1)."""
 import json, os, re, sys
@@ -10,7 +10,7 @@ GOC = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAU = os.path.join(GOC, 'chuong-trinh-hsk', 'hsk1', 'bai-5')
 SO = {1: '一', 2: '二', 3: '三', 4: '四', 5: '五', 6: '六', 7: '七', 8: '八', 9: '九'}
 V = '20261111a'                                           # đổi khi sửa data để trình duyệt nạp lại
-TRANG = ['index', 'tu-vung', 'ngu-phap', 'on-tap-1', 'on-tap-2', 'on-tap-3', 'bai-tap', 'bang-xep-hang', 'test-dau-gio']
+TRANG = ['index', 'tu-vung', 'ngu-phap', 'on-tap-1', 'on-tap-2', 'on-tap-3', 'bai-tap', 'test-dau-gio']
 # Mô tả ngắn từng điểm ngữ pháp trên thẻ ở trang bài (sửa cho khớp bài)
 NP_MOTA = {
  6: ('Cách đọc số điện thoại · <span class="hanzi">给</span>…打电话 · <span class="hanzi">想</span> · <span class="hanzi">哪些 / 些 · 非常 · 怎么 / 怎么样</span> · câu liên động · lượng từ',
