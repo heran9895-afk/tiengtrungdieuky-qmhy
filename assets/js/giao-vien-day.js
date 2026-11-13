@@ -50,7 +50,7 @@
 
     function ten(ma) { var l = lop.filter(function (x) { return x.maLop === ma; })[0]; return l ? l.tenLop : ''; }
     function dem(ma) { return D.hocSinh.filter(function (h) { return h.maLop === ma; }).length; }
-    function url(path, hs) { return ROOT + HSK + path + '?day=1' + (cur.lop ? '&lop=' + encodeURIComponent(cur.lop) : '') + (hs ? '&xemhs=1' : ''); }
+    function url(path, hs) { return ROOT + HSK + path + '?day=1&t=' + Date.now() + (cur.lop ? '&lop=' + encodeURIComponent(cur.lop) : '') + (hs ? '&xemhs=1' : ''); }
 
     function mo(path, tieu, hs) {
       var cu = document.querySelector('.gvd-on'); if (cu) cu.remove();
