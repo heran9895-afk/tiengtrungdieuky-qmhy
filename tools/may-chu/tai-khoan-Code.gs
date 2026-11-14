@@ -43,7 +43,7 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-15e';
+var PHIEN_BAN = '2026-11-15f';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -173,6 +173,7 @@ function doPost(e) {
       case 'buoiHocCuaToi': { var p0 = xacPhien(d), hs0 = hoSoCua(p0, d.hoSoId), ls0 = dsLopCuaHs(hs0); if (ls0.length <= 1) return traVe(buoiHocDs(hs0.maLop, false, hs0.hoSoId));
         var gop = []; ls0.forEach(function (m) { gop = gop.concat(buoiHocDs(m, false, hs0.hoSoId).buoi); });
         gop.sort(function (a, b) { return b.taoLuc - a.taoLuc; }); return traVe({ ok: true, buoi: gop.slice(0, 30) }); }
+      case 'gvTheoDoiLop': return traVe(coKhoa(function () { return gvTheoDoiLop(xacGV(d), d); }));
       case 'gvGiuc':     return traVe(coKhoa(function () { return gvGiuc(xacGV(d), d); }));
       case 'gvThemLop':  return traVe(coKhoa(function () { return gvThemLop(xacGV(d), d); }));
       default:           return traVe({ ok: false, loi: 'Lệnh không hợp lệ: ' + d.action });
@@ -1349,4 +1350,33 @@ function gvGiuc(gv, d) {
   });
   if (them.length) sh.getRange(sh.getLastRow() + 1, 1, them.length, 5).setValues(them);
   return { ok: true, soGiuc: soGiuc, boQua: boQua, giuc: dsGiuc() };
+}
+
+// ---------------- Theo dõi lớp trực tiếp (2026-11-15f) ----------------
+// Mỗi em trong lớp đã làm bao nhiêu câu, đúng / sai bao nhiêu, kể từ mốc tu. Chỉ tính phần em TỰ làm (không tính buổi cô dạy bằng Phòng lớp).
+function gvTheoDoiLop(gv, d) {
+  var maL = chuanMa(d.maLop); if (!lopTheoMa(maL)) throw new Error('Không tìm thấy lớp ' + maL);
+  var bayGio = Date.now(), tu = Math.min(Math.max(+d.tu || bayGio - 3600000, bayGio - 864e5), bayGio), tv = {}, ds = [];
+  bang('HoSo').forEach(function (r) {
+    if (!r[0] || String(r[10]) === 'x' || laGiaoVien(String(r[2] || ''))) return;
+    var lop = [chuanMa(r[8])].concat(String(r[11] || '').split(',').map(chuanMa));
+    if (lop.indexOf(maL) < 0) return;
+    var o = { id: String(r[0]), hoTen: String(r[3]), n: 0, d: 0, cuoi: 0, phan: '', bai: '', sai: [] }; tv[o.id] = o; ds.push(o);
+  });
+  var ss = SpreadsheetApp.getActive(), t0 = new Date(tu), thang = [];
+  for (var y = t0.getFullYear(), m = t0.getMonth(); y < new Date().getFullYear() || (y === new Date().getFullYear() && m <= new Date().getMonth()); ) {
+    thang.push('NhatKy-' + y + '-' + ('0' + (m + 1)).slice(-2)); if (++m > 11) { m = 0; y++; }
+  }
+  thang.forEach(function (ten) {
+    var sh = ss.getSheetByName(ten); if (!sh || sh.getLastRow() < 2) return;
+    var n = Math.min(sh.getLastRow() - 1, 4000);
+    sh.getRange(sh.getLastRow() - n + 1, 1, n, NK_COT.length).getValues().forEach(function (r) {
+      var t = ms(r[0]); if (t < tu) return;
+      var M = tv[String(r[1])]; if (!M || String(r[6]) === 'lop-co-gv') return;
+      M.n++; if (+r[17] === 1) M.d++; else M.sai.push({ t: t, q: String(r[14]).slice(0, 60), a: String(r[15]).slice(0, 40), c: String(r[16]).slice(0, 40) });
+      if (t >= M.cuoi) { M.cuoi = t; M.phan = String(r[9]); M.bai = String(r[10]); }
+    });
+  });
+  ds.forEach(function (M) { M.sai = M.sai.sort(function (a, b) { return b.t - a.t; }).slice(0, 8); });
+  return { ok: true, tu: tu, bayGio: bayGio, hs: ds };
 }

@@ -622,9 +622,10 @@
     });
     noi.addEventListener('keydown', function (e) { var r = e.target.closest('tr[data-hs]'); if (r && e.key === 'Enter') return moHocSinh(r.dataset.hs); var d = e.target.closest('.gv-lop-dau[data-l=mo]'); if (d && e.target === d && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); bamLop({ target: d }); } });
     noi.addEventListener('change', doiMoBai);
+    var tdo = noi.querySelector('.gv-td-lop'); if (tdo) khoiDongTheoDoi(tdo);
   }
   var LOP_TAB = {};
-  var LOP_TABS = [['tien-trinh', '📈 Tiến trình'], ['bai-giao', '📋 Bài giao'], ['sai', '❓ Câu hay sai'], ['hoc-sinh', '🧑‍🎓 Hồ sơ từng em'], ['mo-bai', '📖 Mở bài'], ['quan-ly', '⚙️ Quản lý']];
+  var LOP_TABS = [['tien-trinh', '📈 Tiến trình'], ['theo-doi', '📡 Theo dõi'], ['bai-giao', '📋 Bài giao'], ['sai', '❓ Câu hay sai'], ['hoc-sinh', '🧑‍🎓 Hồ sơ từng em'], ['mo-bai', '📖 Mở bài'], ['quan-ly', '⚙️ Quản lý']];
   function ptLop(l) {                          // tab Tiến trình lớp
     var ds = hsTrongLop(l.maLop).filter(tinhHs), bayGio = Date.now(), rows = tienDoLopBai(l.maLop);
     var hoc7 = ds.filter(function (h) { return (HOAT[h.hoSoId] || 0) > bayGio - 7 * 864e5; }).length;
@@ -672,11 +673,66 @@
       '<button type="button" class="gv-nut nho' + (l.dong ? '' : ' nhe') + '" data-l="dong">' + (l.dong ? '↺ Mở lại lớp' : '🔒 Đóng lớp') + '</button></div>' +
       '<p class="gv-trong">Mã lớp: <b>' + esc(l.maLop) + '</b>' + (l.ghiChu ? ' · ' + esc(l.ghiChu) : '') + (choLop(l.maLop).length ? ' · <b>' + choLop(l.maLop).length + ' email đang chờ</b> em đăng nhập' : '') + '.</p>';
   }
+  // ---- Theo dõi lớp trực tiếp: mỗi em đã làm bao nhiêu câu, đúng / sai (chỉ phần em tự làm) ----
+  var TD = { moc: {}, chon: {}, tuDong: {}, data: {} };
+  function tenLamBai(p, b) {
+    var m = String(p || '').match(/^sbt-bai(\d+)/); if (m) return 'Sách bài tập · Bài ' + m[1];
+    var g = tenBaiGon(b), tr = /bai-tap$/.test(p || '') ? ' · Bài tập' : p === 'dich' ? ' · Dịch' : '';
+    return (g || p || '—') + tr;
+  }
+  function tuTD(ma) {
+    var c = TD.chon[ma] || (TD.moc[ma] ? 'moc' : '60'), bayGio = Date.now();
+    if (c === 'moc') return TD.moc[ma] || bayGio - 36e5;
+    if (c === 'hnay') { var d = new Date(); d.setHours(0, 0, 0, 0); return d.getTime(); }
+    return bayGio - (+c) * 6e4;
+  }
+  function khoiDongTheoDoi(o) {
+    var ma = o.dataset.ma, lan = PC_LAN;
+    try { var mc = +localStorage.getItem('gv-moc-' + ma); if (mc && Date.now() - mc < 864e5) TD.moc[ma] = mc; } catch (e) {}
+    if (TD.tuDong[ma] == null) TD.tuDong[ma] = true;
+    o.innerHTML = '<div class="gv-loc"><select class="gv-chon" name="tdtu">' + [['15', '15 phút gần nhất'], ['30', '30 phút gần nhất'], ['60', '1 giờ gần nhất'], ['120', '2 giờ gần nhất'], ['hnay', 'Từ 0 giờ hôm nay']].concat(TD.moc[ma] ? [['moc', 'Từ mốc ' + ngayGio(TD.moc[ma]).slice(0, 5)]] : []).map(function (x) {
+        return '<option value="' + x[0] + '"' + ((TD.chon[ma] || (TD.moc[ma] ? 'moc' : '60')) === x[0] ? ' selected' : '') + '>Tính câu làm: ' + x[1] + '</option>'; }).join('') + '</select>' +
+      '<button type="button" class="gv-nut nho" data-td="moc">⏱ Đặt mốc từ bây giờ</button><label class="gv-tick"><input type="checkbox" name="tdtd"' + (TD.tuDong[ma] ? ' checked' : '') + '> tự cập nhật 20 giây</label>' +
+      '<button type="button" class="gv-nut nho" data-td="lam">↻ Cập nhật</button></div><p class="gv-ghi">Chỉ tính các câu em <b>tự làm</b> trên máy mình (không tính buổi cô dạy bằng Phòng lớp). Máy em gửi số liệu về khoảng 25 giây một lần nên bảng chậm hơn thực tế chút ít.</p><div class="gv-td-bang"><p class="gv-cho">⏳ Đang tải…</p></div>';
+    function ve1() {
+      var kq = TD.data[ma], b = o.querySelector('.gv-td-bang'); if (!kq || !b) return;
+      var bayGio = Date.now(), ds = kq.hs.slice().sort(function (a, c) { return (c.cuoi - a.cuoi) || a.hoTen.localeCompare(c.hoTen, 'vi'); });
+      var lam = ds.filter(function (x) { return x.n; }), tn = lam.reduce(function (s, x) { return s + x.n; }, 0), td = lam.reduce(function (s, x) { return s + x.d; }, 0);
+      b.innerHTML = '<div class="gv-o-so nho">' + oSo('Đã làm bài', lam.length + '/' + ds.length, 'em', 'xanh') + oSo('Tổng số câu', tn, 'cả lớp', 'lam') + oSo('Đúng', tn ? Math.round(td / tn * 100) + '%' : '—', td + ' đúng · ' + (tn - td) + ' sai', tn && td / tn < .5 ? 'do' : 'vang') + '</div>' +
+        '<div class="gv-cuon"><table class="gv-bang gon"><thead><tr><th>Em</th><th>Đang làm</th><th>Đã làm</th><th>Đúng</th><th>Sai</th><th>Tỉ lệ</th><th>Cập nhật</th></tr></thead><tbody>' + ds.map(function (x) {
+          var gap = x.cuoi ? bayGio - x.cuoi : 0, nhan = !x.n ? '<span class="gv-chip xam">chưa làm</span>' : gap < 9e4 ? '<span class="gv-chip xong">● đang làm</span>' : gap < 18e4 ? '<span class="gv-chip vang">vừa làm</span>' : '<span class="gv-chip qua">dừng ' + Math.round(gap / 6e4) + ' phút</span>';
+          return '<tr data-td-hs="' + esc(x.id) + '" tabindex="0"><td data-n="Em"><b>' + esc(x.hoTen) + '</b></td><td data-n="Đang làm"><small>' + (x.n ? esc(tenLamBai(x.phan, x.bai)) : '—') + '</small></td>' +
+            '<td data-n="Đã làm"><b>' + x.n + '</b></td><td data-n="Đúng"><span class="gv-so-xong">' + x.d + '</span></td><td data-n="Sai"><b style="color:#c62828">' + (x.n - x.d) + '</b></td>' +
+            '<td data-n="Tỉ lệ">' + (x.n ? '<b class="gv-diem-so ' + (x.d / x.n >= .8 ? 'tot' : x.d / x.n >= .5 ? 'kha' : 'yeu') + '">' + Math.round(x.d / x.n * 100) + '%</b>' : '—') + '</td><td data-n="Cập nhật">' + nhan + '</td></tr>' +
+            (TD.mo === x.id && x.sai.length ? '<tr class="gv-td-sai"><td colspan="7"><b>Các câu em vừa sai:</b><ul class="gv-gd-hs">' + x.sai.map(function (c) { return '<li>' + esc(c.q) + ' → đúng: <b>' + esc(c.a) + '</b> · em chọn: <b style="color:#c62828">' + esc(c.c) + '</b> <small>' + truoc(c.t) + '</small></li>'; }).join('') + '</ul></td></tr>' : '');
+        }).join('') + '</tbody></table></div><p class="gv-ghi">Cập nhật lúc ' + ngayGio(kq.bayGio).slice(0, 5) + ' · tính từ ' + ngayGio(kq.tu) + '. Bấm tên em để xem các câu em vừa sai.</p>';
+    }
+    function keo() {
+      clearTimeout(PC_HEN);
+      goiMC('gvTheoDoiLop', { maLop: ma, tu: tuTD(ma) }).then(function (r) { TD.data[ma] = r; }, function (x) {
+        var b = o.querySelector('.gv-td-bang'); if (b) b.innerHTML = '<p class="gv-trong">⚠️ ' + esc(/Lệnh không hợp lệ/i.test(String(x && x.message)) ? 'Máy chủ chưa là bản 2026-11-15f (cô dán file mới vào Apps Script).' : x.message) + '</p>';
+      }).then(function () {
+        if (lan !== PC_LAN || TAB !== 'lop' || !document.body.contains(o)) return;
+        ve1(); if (TD.tuDong[ma]) PC_HEN = setTimeout(keo, document.hidden ? 60000 : 20000);
+      });
+    }
+    o.addEventListener('change', function (e) {
+      if (e.target.name === 'tdtu') { TD.chon[ma] = e.target.value; keo(); } else if (e.target.name === 'tdtd') { TD.tuDong[ma] = e.target.checked; if (e.target.checked) keo(); else clearTimeout(PC_HEN); }
+    });
+    o.addEventListener('click', function (e) {
+      var n = e.target.closest('[data-td]');
+      if (n && n.dataset.td === 'moc') { TD.moc[ma] = Date.now(); TD.chon[ma] = 'moc'; try { localStorage.setItem('gv-moc-' + ma, TD.moc[ma]); } catch (x) {} bao('Đã đặt mốc: từ giờ chỉ tính câu em làm sau lúc này'); return ve(); }
+      if (n && n.dataset.td === 'lam') return keo();
+      var r = e.target.closest('tr[data-td-hs]'); if (r) { TD.mo = TD.mo === r.dataset.tdHs ? '' : r.dataset.tdHs; ve1(); }
+    });
+    if (TD.data[ma]) ve1();
+    keo();
+  }
   function theLop(l) {                         // mỗi lớp là một thư mục: bấm tên để mở, bên trong chia tab
     var ds = hsTrongLop(l.maLop), mo = D.moBai.filter(function (m) { return m.maLop === l.maLop; }).length, mở = LOP_MO === l.maLop, tab = LOP_TAB[l.maLop] || 'tien-trinh';
     var thanh = '';
     if (mở) {
-      var noiTab = { 'tien-trinh': ptLop, 'bai-giao': bgLop, 'sai': function (x) { taiPhanTich(); return loiHtml(loiLop(x.maLop)); }, 'hoc-sinh': hsLopBang, 'mo-bai': moBaiLop, 'quan-ly': quanLyLop }[tab](l);
+      var noiTab = { 'tien-trinh': ptLop, 'theo-doi': function (x) { return '<div class="gv-td-lop" data-ma="' + esc(x.maLop) + '"></div>'; }, 'bai-giao': bgLop, 'sai': function (x) { taiPhanTich(); return loiHtml(loiLop(x.maLop)); }, 'hoc-sinh': hsLopBang, 'mo-bai': moBaiLop, 'quan-ly': quanLyLop }[tab](l);
       thanh = '<div class="gv-tabs gv-tabs-nho gv-tabs-lop" role="tablist">' + LOP_TABS.map(function (t) {
         return '<button type="button" class="gv-tab' + (t[0] === tab ? ' on' : '') + '" data-l="tab" data-t="' + t[0] + '">' + t[1] + '</button>'; }).join('') + '</div><div class="gv-lop-than">' + noiTab + '</div>';
     }
