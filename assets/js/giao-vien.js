@@ -169,7 +169,7 @@
     return Object.keys(m).map(function (k) { return m[k]; });
   }
   function moTuDo(khoa) { return (window.QM_MO_TU_DO || []).indexOf(khoa) >= 0; }
-  function trongLop(h, ma) { return !!ma && (h.maLop === ma || (h.lopThem || []).indexOf(ma) >= 0); }   // một em có thể thuộc nhiều lớp (lớp chính + lớp thêm)
+  function trongLop(h, ma) { return !!ma && (h.maLop === ma || (h.lopThem || []).indexOf(ma) >= 0 || (!!h.laGv && !!LOP[ma] && !LOP[ma].dong)); }   // một em có thể thuộc nhiều lớp (lớp chính + lớp thêm)
   function hsTrongLop(maLop) { return D.hocSinh.filter(function (h) { return trongLop(h, maLop); }); }
   function trangThaiGiao(g, h) {           // một em với một bài được giao
     var x = (TT[h.hoSoId] || {})[g.phan], bayGio = Date.now();
@@ -651,7 +651,7 @@
   }
   function choLop(maLop) { return (D.moiLop || []).filter(function (m) { return m.maLop === maLop && !m.daNhan; }); }
   function moThemHs(ma) {
-    var l = LOP[ma], ngoai = D.hocSinh.filter(function (h) { return h.maLop !== ma; })
+    var l = LOP[ma], ngoai = D.hocSinh.filter(function (h) { return !trongLop(h, ma); })
       .sort(function (a, b) { return (a.maLop ? 1 : 0) - (b.maLop ? 1 : 0) || a.hoTen.localeCompare(b.hoTen, 'vi'); });
     var chon = {};
     var b = moBang('<h3 class="gv-pop-tieu">➕ Thêm học sinh vào lớp ' + esc(l.tenLop) + '</h3>' +
@@ -682,8 +682,12 @@
       }
       if (e.target.closest('.gv-xep')) {
         var ids = Object.keys(chon);
-        apChuyenLop(ids, ma); dongBang(); LOP_MO = ''; ve(); bao('Đã xếp ' + ids.length + ' em vào lớp ' + l.tenLop);
-        return luuNen('gvChuyenLop', { hoSoId: ids, maLop: ma }, 'Xếp lớp').catch(function () {});
+        var chuaLop = ids.filter(function (id) { return !(HS[id] && HS[id].maLop); }), daLop = ids.filter(function (id) { return HS[id] && HS[id].maLop; });
+        apChuyenLop(chuaLop, ma);
+        daLop.forEach(function (id) { var h = HS[id]; h.lopThem = (h.lopThem || []).concat(ma); });   // em đã có lớp: THÊM lớp này, không đẩy khỏi lớp cũ
+        dongBang(); LOP_MO = ''; ve(); bao('Đã thêm ' + ids.length + ' em vào lớp ' + l.tenLop);
+        return (chuaLop.length ? luuNen('gvChuyenLop', { hoSoId: chuaLop, maLop: ma }, 'Xếp lớp') : Promise.resolve())
+          .then(function () { return daLop.length ? luuNen('gvThemLop', { hoSoId: daLop, maLop: [ma], che: 'them' }, 'Thêm lớp') : null; }).catch(function () {});
       }
       if (e.target.closest('.gv-gui-email')) {
         var nut = e.target.closest('.gv-gui-email'), ds = docDanh(b.querySelector('.gv-dan').value);

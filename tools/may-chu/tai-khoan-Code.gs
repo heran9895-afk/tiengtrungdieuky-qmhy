@@ -43,7 +43,7 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-15b';
+var PHIEN_BAN = '2026-11-15c';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -689,9 +689,14 @@ function gvMoiLop(gv, d) {
     var khop = function (i) { var a = boDau(hv[i][3]), b = boDau(hoTen); return a === b || a.indexOf(b) >= 0 || b.indexOf(a) >= 0; };
     var chon = hoTen ? cua.filter(khop) : (cua.length === 1 ? cua : []);   // có họ tên: phải khớp tên (tránh xếp nhầm anh chị em dùng chung email)
     if (chon.length === 1) {
-      var i = chon[0];
-      hs.getRange(i + 1, 5).setValue(l.tenLop); hs.getRange(i + 1, 9).setValue(l.maLop); hv[i][4] = l.tenLop; hv[i][8] = l.maLop;
-      doiTenTrangThai(String(hv[i][0]), String(hv[i][3]), l.tenLop);
+      var i = chon[0], chinh = chuanMa(hv[i][8]);
+      if (chinh && chinh !== l.maLop && lopTheoMa(chinh)) {    // em đã có lớp khác: THÊM lớp này, giữ lớp cũ
+        var cur = String(hv[i][11] || '').split(',').map(chuanMa).filter(Boolean);
+        if (cur.indexOf(l.maLop) < 0) { cur.push(l.maLop); hs.getRange(i + 1, 12).setValue(cur.join(',')); hv[i][11] = cur.join(','); }
+      } else {
+        hs.getRange(i + 1, 5).setValue(l.tenLop); hs.getRange(i + 1, 9).setValue(l.maLop); hv[i][4] = l.tenLop; hv[i][8] = l.maLop;
+        doiTenTrangThai(String(hv[i][0]), String(hv[i][3]), l.tenLop);
+      }
       daXep.push(String(hv[i][3]));
       ghiMoi(email, hoTen || String(hv[i][3]), String(hv[i][0]));
     } else {
