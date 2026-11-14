@@ -642,7 +642,26 @@
       o.addEventListener('click', function (e) { if (e.target.closest('.tk-giao-them')) { o.classList.add('tk-mo-het'); e.target.remove(); } });
     }
   }
-  function veLop() { veKhoa(); if (TK) veGiao(); }
+  // Thông báo "cô vừa giao bài" trên MỌI trang: hiện mỗi bài giao mới (đã tới giờ bắt đầu, chưa xong, chưa hết hạn) cho tới khi em bấm "Đã xem" hoặc vào bài
+  function thongBaoGiao() {
+    var h = hoSoDang(), L = lopDang(); if (!h || !L || TK.giaoVien) return;
+    var kh = 'qmhy:daThayGiao:' + h.hoSoId, thay = []; try { thay = JSON.parse(localStorage.getItem(kh) || '[]'); } catch (e) {}
+    var bayGio = Date.now(), moi = [], theo = {};
+    (L.giaoBai || []).forEach(function (g) { if ((!g.batDau || g.batDau <= bayGio) && g.hanNop > bayGio) theo[g.phan + '|' + g.hanNop] = g; });
+    Object.keys(theo).forEach(function (k) { var g = theo[k], x = PHAN.phan[g.phan]; if (thay.indexOf(k) < 0 && !(x && x.tt === 'xong')) moi.push({ k: k, g: g }); });
+    var cu = document.querySelector('.tk-tb-giao'); if (cu) cu.remove();
+    if (!moi.length) return;
+    var d = document.createElement('div'); d.className = 'tk-tb-giao'; d.setAttribute('role', 'status');
+    d.style.cssText = 'position:fixed;left:12px;right:12px;bottom:' + (document.querySelector('.tk-tb-nc') ? '150px' : '12px') + ';z-index:9997;max-width:560px;margin:0 auto;background:#fff8e1;border:2px solid #e0a800;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.2);padding:12px 14px;font-size:15px;line-height:1.45';
+    d.innerHTML = '<div><b>📋 Cô vừa giao bài mới</b></div><ul style="margin:6px 0 8px 18px;padding:0">' + moi.slice(0, 4).map(function (o) {
+      return '<li><a href="' + ROOT + urlTuKhoa(o.g.phan) + '" data-k="' + esc(o.k) + '"><b>' + esc(o.g.tenPhan || o.g.phan) + '</b></a> <small>· hạn ' + ngayGio(o.g.hanNop) + '</small></li>'; }).join('') +
+      (moi.length > 4 ? '<li>và ' + (moi.length - 4) + ' bài nữa…</li>' : '') + '</ul><button type="button" class="tk-btn chinh">Đã xem</button>';
+    function danhDau(ks) { try { localStorage.setItem(kh, JSON.stringify(thay.concat(ks).slice(-200))); } catch (e) {} }
+    d.querySelector('button').addEventListener('click', function () { danhDau(moi.map(function (o) { return o.k; })); d.remove(); });
+    d.addEventListener('click', function (e) { var a = e.target.closest('a[data-k]'); if (a) danhDau([a.dataset.k]); });
+    document.body.appendChild(d);
+  }
+  function veLop() { veKhoa(); if (TK) { veGiao(); thongBaoGiao(); } }
   // Thông tin lớp từ máy chủ là chuẩn: cô có thể vừa xếp / chuyển / bỏ lớp cho hồ sơ này (bản hồ sơ trên máy có từ lúc đăng nhập)
   function apLop(L) {
     TK.lop = L || null; TK.lopLuc = Date.now(); DA_HOI_LOP = true;
