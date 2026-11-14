@@ -208,11 +208,11 @@
     return Object.keys(m).map(function (k) { return m[k]; }).sort(function (a, b) { return a.hanNop - b.hanNop; });
   }
   // ---- Tổng quan mới (14/11/2026): 1 Ai cần quan tâm · Bài đang giao · 2 Lớp nào đang ở đâu · 3 Cả lớp sai ở đâu · 4 Hồ sơ từng em ----
-  var PT = null, PT_NGAY = 0, PT_DANG = false, PT_LOI = '', TQ = { lop: '', ngay: 30, thu: false };
+  var PT = null, PT_NGAY = 0, PT_HT = 'tu-hoc', PT_DANG = false, PT_LOI = '', TQ = { lop: '', ngay: 30, thu: false, ht: 'tu-hoc' };
   function taiPhanTich() {
-    if (PT_DANG || PT_LOI || (PT && PT_NGAY === TQ.ngay)) return;
+    if (PT_DANG || PT_LOI || (PT && PT_NGAY === TQ.ngay && PT_HT === TQ.ht)) return;
     PT_DANG = true;
-    goiMC('gvPhanTich', { ngay: TQ.ngay }).then(function (r) { PT = r; PT_NGAY = r.ngay; }, function (e) {
+    goiMC('gvPhanTich', { ngay: TQ.ngay, ht: TQ.ht }).then(function (r) { PT = r; PT_NGAY = r.ngay; PT_HT = TQ.ht; }, function (e) {
       PT_LOI = /Lệnh không hợp lệ/i.test(String(e && e.message)) ? 'Máy chủ chưa là bản 2026-11-14g (cô dán file mới vào Apps Script) nên chưa có số liệu phân tích.' : String(e && e.message || e);
     }).then(function () { PT_DANG = false; if (TAB === 'tong-quan' && app.querySelector('.gv-tq')) ve(); });
   }
@@ -295,6 +295,7 @@
     var s = (tinMoi().length ? '<button type="button" class="gv-bao-tin" data-di="tin">💬 Có <b>' + tinMoi().length + '</b> tin nhắn chưa xử lý (xin mở bài, báo lỗi…) <span>Xem →</span></button>' : '') +
       '<div class="gv-tq"><div class="gv-loc gv-loc-tq">' + chonLopHtml(TQ.lop, true, 'tqlop') +
         '<select class="gv-chon" name="tqngay">' + [7, 30, 60, 90].map(function (n) { return '<option value="' + n + '"' + (TQ.ngay === n ? ' selected' : '') + '>Số liệu ' + n + ' ngày gần đây</option>'; }).join('') + '</select>' +
+        '<select class="gv-chon" name="tqht"><option value="tu-hoc"' + (TQ.ht === 'tu-hoc' ? ' selected' : '') + '>Hình thức: tự học</option><option value="lop-co-gv"' + (TQ.ht === 'lop-co-gv' ? ' selected' : '') + '>Hình thức: lớp có cô</option><option value=""' + (TQ.ht === '' ? ' selected' : '') + '>Hình thức: cả hai</option></select>' +
         '<label class="gv-tick"><input type="checkbox" name="tqthu"' + (TQ.thu ? ' checked' : '') + '> gồm tài khoản thử</label></div>' +
       '<div class="gv-o-so">' +
         oSo('Học sinh', tong, trongLop + ' em trong lớp', 'xanh') +
@@ -353,7 +354,7 @@
     });
     noi.addEventListener('change', function (e) {
       var n = e.target.name;
-      if (n === 'tqlop') TQ.lop = e.target.value; else if (n === 'tqngay') { TQ.ngay = +e.target.value; PT_LOI = ''; } else if (n === 'tqthu') TQ.thu = e.target.checked; else return;
+      if (n === 'tqlop') TQ.lop = e.target.value; else if (n === 'tqngay') { TQ.ngay = +e.target.value; PT_LOI = ''; } else if (n === 'tqthu') TQ.thu = e.target.checked; else if (n === 'tqht') { TQ.ht = e.target.value; PT_LOI = ''; } else return;
       ve();
     });
   }

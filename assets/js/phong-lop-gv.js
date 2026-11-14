@@ -50,12 +50,13 @@
         '<div class="gtl-hang">' + (R.tt === 'dung' || R.tt === 'hien' ? '<small>Bấm “Câu tiếp ›” trên đề để sang câu sau.</small>' :
           '<button class="nut" id="gtlGoi" type="button">🎲 ' + (c.goi ? 'Gọi bạn khác' : 'Gọi tên') + '</button><button class="phu" id="gtlHien" type="button">💡 Hiện đáp án</button><button class="phu" id="gtlBo" type="button">⏭ Bỏ qua câu</button>') + '</div>' + (R.tt === 'dung' || R.tt === 'hien' ? '' : '<small>Cô cũng có thể bấm thẳng vào đáp án trên đề để tự chọn.</small>')
         : '<small>Chọn dạng bài rồi bấm bắt đầu để hiện câu đầu tiên.</small>') +
-      '<div class="gtl-hang"><button class="do" id="gtlKet" type="button">🏁 Kết thúc buổi</button></div><small id="gtlLoi"></small>';
+      '<div class="gtl-hang"><button class="do" id="gtlKet" type="button">🏁 Kết thúc buổi</button><button class="phu" id="gtlKhongLuu" type="button">✖ Đóng phòng, không lưu</button></div><small id="gtlLoi"></small>';
     $('#gtlMa').onclick = hienMa;
     var g = $('#gtlGoi'); if (g) g.onclick = goiTen;
     var h = $('#gtlHien'); if (h) h.onclick = hienDapAn;
     var bo = $('#gtlBo'); if (bo) bo.onclick = boQua;
     $('#gtlKet').onclick = ketThuc;
+    $('#gtlKhongLuu').onclick = function () { if (confirm('Đóng phòng và KHÔNG lưu buổi học này? (Kết quả các em đã trả lời vẫn nằm trong nhật ký.)')) dongPhong(false); };
   }
   function loi(m) { var e = $('#gtlLoi'); if (e) e.textContent = m || ''; }
 
@@ -131,7 +132,17 @@
   }
   function chotCauTruoc() {                                // ghi câu vừa xong vào nhật ký buổi
     var c = R.cau; if (!c || c.daGhi || !c.xong) return; c.daGhi = true;
-    R.log.push(c.nhatKy); luuSS();
+    R.log.push(c.nhatKy); luuSS(); guiNhatKy(c);
+  }
+  // Kết quả từng lượt trả lời của MỖI EM được gọi → nhật ký chung (hinhThuc 'lop-co-gv'), tách khỏi tự học
+  function guiNhatKy(c) {
+    var nk = c.nhatKy || {}, dong = [], t = Date.now();
+    (c.tries || []).forEach(function (x, j) {
+      if (!x.id) return;
+      dong.push({ t: t, hs: x.id, maLuot: 'pl' + R.ma, phan: (QM_LT_API.tenBai() || '').slice(0, 60), stt: c.n, dang: c.kieu, maCau: 'c' + c.n, deBai: c.de || '', dapAn: nk.dapAn || '', chon: x.chon, dung: x.dung, lanThu: j + 1 });
+    });
+    if (!dong.length || !window.QM_TK) return;
+    QM_TK.goi('gvNhatKyLop', { dong: dong }).catch(function () {});
   }
   function deCau() {                                       // chữ của đề lúc câu vừa hiện (trước khi trả lời, lời giải còn chưa chen vào)
     var A = QM_LT_API, de = khu().querySelector('.lt-de'); if (!de) return '';
@@ -186,7 +197,7 @@
     var A = QM_LT_API, B = A.B(), c = R.cau, nut = khu().querySelectorAll('.lt-dap-o')[k];
     if (!nut || !B.dap.ds[k]) return choDapAn();
     var dung = !!B.dap.ds[k].dung;
-    c.tries.push({ ten: c.goi.ten, chon: opt(B.dap.ds[k]), dung: dung });
+    c.tries.push({ id: c.goi.id, ten: c.goi.ten, chon: opt(B.dap.ds[k]), dung: dung });
     c.chon = k;
     if (dung) {
       A.traLoi(nut); c.xong = true; R.tt = 'dung'; c.nhatKy = nhatKy(true);

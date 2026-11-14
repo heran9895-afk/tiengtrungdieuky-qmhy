@@ -43,7 +43,7 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-14g';
+var PHIEN_BAN = '2026-11-14h';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -68,7 +68,9 @@ var TRANG = {
   KiemTraBai: ['maDe', 'hoSoId', 'sub', 'hoTenHocSinh', 'lop', 'maLop', 'maDot', 'batDauLuc', 'hetGioLuc', 'nopLuc', 'traLoi', 'nghe', 'chamTay', 'tong', 'trangThai', 'thietBi'],
   KiemTraCongBo: ['maDe', 'maLop', 'luc'],
   NoiDungSua: ['tep', 'duongDan', 'goc', 'moi', 'suaLuc', 'nguoi'],
-  BuoiHoc:   ['maBuoi', 'taoLuc', 'maLop', 'tieuDe', 'phan', 'soCau', 'json', 'dsHs'],
+  BuoiHoc:   ['maBuoi', 'taoLuc', 'maLop', 'tieuDe', 'phan', 'soCau', 'json', 'dsHs', 'maBoDe'],
+  // Bộ đề lớp (2026-11-14h): một bộ đề CỐ ĐỊNH cho một lớp, dạy được nhiều buổi (tiepTuc = câu kế tiếp, 0-based). plan = danh sách câu + dạng đã chốt.
+  BoDe:      ['maBoDe', 'taoLuc', 'capNhat', 'maLop', 'phan', 'bai', 'nhomBo', 'tong', 'tiepTuc', 'trangThai', 'json'],
   // Nhật ký (2026-11-14d): mỗi LƯỢT làm một dòng (NhatKyLuot); từng CÂU ghi ở các tab NhatKy-YYYY-MM (xem NK_COT); thời gian học thực tế theo lượt truy cập
   NhatKyLuot: ['maLuot', 'hoSoId', 'hoTen', 'lop', 'maLop', 'maMay', 'hinhThuc', 'nhomBo', 'phan', 'bai', 'maBoDe', 'maBuoi', 'lanLam', 'batDau', 'capNhat', 'soCau', 'soDung', 'giay', 'trangThai', 'thietBi'],
   ThoiGianHoc: ['maLuotTruyCap', 'hoSoId', 'hoTen', 'lop', 'maLop', 'maMay', 'batDau', 'capNhat', 'giayThucHoc', 'cacTrang', 'thietBi'],
@@ -129,6 +131,9 @@ function doPost(e) {
       case 'lopCuaToi':  return traVe(lopCuaToi(xacPhien(d), d));
       // ----- giáo viên -----
       case 'gvDuLieu':   return traVe(gvDuLieu(xacGV(d)));
+      case 'gvBoDeDo':   return traVe(gvBoDeDo(xacGV(d), d));
+      case 'gvBoDeLuu':  return traVe(coKhoa(function () { return gvBoDeLuu(xacGV(d), d); }));
+      case 'gvNhatKyLop': return traVe(coKhoa(function () { return gvNhatKyLop(xacGV(d), d); }));
       case 'gvPhanTich': return traVe(gvPhanTich(xacGV(d), d));
       case 'gvDatThu':   return traVe(coKhoa(function () { return gvDatThu(xacGV(d), d); }));
       case 'gvLuuLop':   return traVe(coKhoa(function () { return gvLuuLop(xacGV(d), d); }));
@@ -383,7 +388,7 @@ function gvLuuBuoiHoc(gv, d) {
   var js = JSON.stringify(cau);
   while (js.length > TOI_DA_O && cau.length > 1) { cau.pop(); js = JSON.stringify(cau); }   // ô Sheet tối đa 50.000 ký tự
   var ma = 'bh' + Date.now().toString(36) + Math.floor(Math.random() * 1296).toString(36);
-  trang('BuoiHoc').appendRow([ma, new Date(), maLop, gon(d.tieuDe, 120), gon(d.phan, 120), cau.length, js, dsHs.join(',')]);
+  trang('BuoiHoc').appendRow([ma, new Date(), maLop, gon(d.tieuDe, 120), gon(d.phan, 120), cau.length, js, dsHs.join(','), gon(d.maBoDe, 40)]);
   return { ok: true, maBuoi: ma, soCau: cau.length };
 }
 function buoiHocDs(maLop, laGV, hoSoId) {
@@ -394,8 +399,10 @@ function buoiHocDs(maLop, laGV, hoSoId) {
     return !!hoSoId && String(r[7] || '').split(',').indexOf(hoSoId) >= 0;     // phòng mở: em có tên trong danh sách có mặt
   }).sort(function (a, b) { return ms(b[1]) - ms(a[1]); }).slice(0, 30).map(function (r) {
       var cau = []; try { cau = JSON.parse(r[6] || '[]'); } catch (e) {}
-      if (!laGV) cau = cau.map(function (c) { delete c.goi; return c; });                // học sinh không thấy ai làm gì
-      return { maBuoi: String(r[0]), taoLuc: ms(r[1]), maLop: String(r[2]), tieuDe: String(r[3]), phan: String(r[4]), soCau: +r[5] || cau.length, cau: cau };
+      if (!laGV) cau = cau.map(function (c) {                                             // học sinh không thấy ai làm gì: chỉ thấy các đáp án sai đã xuất hiện (ẩn danh, không số bạn chọn)
+        var sai = []; (c.goi || []).forEach(function (g) { if (!g.dung && g.chon && sai.indexOf(g.chon) < 0) sai.push(g.chon); });
+        c.sai = sai; delete c.goi; return c; });
+      return { maBuoi: String(r[0]), taoLuc: ms(r[1]), maLop: String(r[2]), tieuDe: String(r[3]), phan: String(r[4]), soCau: +r[5] || cau.length, maBoDe: String(r[8] || ''), cau: cau };
     });
   return { ok: true, buoi: ds };
 }
@@ -1143,7 +1150,7 @@ function gvDatThu(gv, d) {
 }
 function gvPhanTich(gv, d) {
   var ngay = Math.min(Math.max(+d.ngay || 30, 1), 120), bayGio = Date.now(), tu = bayGio - ngay * 864e5;
-  var loai = {}, lopCua = {};
+  var ht = d.ht === undefined ? 'tu-hoc' : String(d.ht), loai = {}, lopCua = {};    // hình thức: 'tu-hoc' (mặc định) | 'lop-co-gv' | '' (cả hai); thống kê tách riêng
   bang('HoSo').forEach(function (r) {
     var id = String(r[0]); if (!id) return;
     if (laGiaoVien(String(r[2] || '')) || String(r[10]) === 'x') loai[id] = 1;
@@ -1157,7 +1164,7 @@ function gvPhanTich(gv, d) {
   thang.forEach(function (ten) {
     var sh = ss.getSheetByName(ten); if (!sh || sh.getLastRow() < 2) return;
     sh.getRange(2, 1, sh.getLastRow() - 1, NK_COT.length).getValues().forEach(function (r) {
-      var t = ms(r[0]), id = String(r[1]); if (!id || t < tu || loai[id]) return;
+      var t = ms(r[0]), id = String(r[1]); if (!id || t < tu || loai[id] || (ht && String(r[6]) !== ht)) return;
       var phan = String(r[9]), ma = String(r[13]), dang = String(r[12]).split(' · ')[0], dung = +r[17] === 1;
       var H = hs[id] = hs[id] || { d: {} }; var D = H.d[dang] = H.d[dang] || [0, 0]; D[0]++; if (!dung) D[1]++;
       var kk = id + '|' + phan + '|' + ma; if (thay[kk]) return; thay[kk] = 1;       // lần đầu của em với câu này
@@ -1183,4 +1190,47 @@ function gvPhanTich(gv, d) {
   });
   Object.keys(tg).forEach(function (id) { tg[id].ds = tg[id].ds.sort(function (a, b) { return b.c - a.c; }).slice(0, 12); });
   return { ok: true, ngay: ngay, bayGio: bayGio, cau: dsCau, hs: hs, luot: luot, tg: tg };
+}
+
+
+// =====================================================================
+// BỘ ĐỀ LỚP (2026-11-14h)
+//  gvBoDeDo: bộ đề đang dạy dở của lớp + phần + bộ (để "Tiếp tục từ câu N" hoặc "Làm lại từ đầu")
+//  gvBoDeLuu: tạo / cập nhật bộ đề (plan chỉ gửi lúc tạo; sau đó chỉ tiepTuc, trangThai: 'dang' | 'xong' | 'huy')
+//  gvNhatKyLop: cô gửi kết quả từng câu CỦA HỌC SINH (em được gọi) vào nhật ký, hinhThuc 'lop-co-gv'
+// =====================================================================
+function gvBoDeDo(gv, d) {
+  var maLop = String(d.maLop || ''), phan = gon(d.phan, 120), nhomBo = gon(d.nhomBo, 12), kq = null;
+  bang('BoDe').forEach(function (r) {
+    if (String(r[9]) !== 'dang' || String(r[3]) !== maLop || String(r[4]) !== phan || String(r[6]) !== nhomBo) return;
+    if (!kq || ms(r[2]) > kq.cn) kq = { maBoDe: String(r[0]), cn: ms(r[2]), tong: +r[7] || 0, tiepTuc: +r[8] || 0, plan: String(r[10] || '') };
+  });
+  return { ok: true, boDe: kq };
+}
+function gvBoDeLuu(gv, d) {
+  var sh = trang('BoDe'), v = sh.getDataRange().getValues(), bay = new Date(), ma = gon(d.maBoDe, 40);
+  var tt = d.trangThai === 'xong' || d.trangThai === 'huy' ? d.trangThai : 'dang';
+  if (ma) {
+    for (var i = 1; i < v.length; i++) if (String(v[i][0]) === ma) {
+      var hang = v[i]; hang[2] = bay; if (d.tiepTuc != null) hang[8] = +d.tiepTuc || 0; hang[9] = tt;
+      if (d.plan) hang[10] = String(d.plan).slice(0, TOI_DA_O);
+      sh.getRange(i + 1, 1, 1, TRANG.BoDe.length).setValues([hang]); return { ok: true, maBoDe: ma };
+    }
+  }
+  if (!d.plan) throw new Error('Thiếu bộ đề');
+  ma = 'bd' + Date.now().toString(36) + Math.floor(Math.random() * 1296).toString(36);
+  sh.appendRow([ma, bay, bay, gon(d.maLop, 20), gon(d.phan, 120), gon(d.bai, 120), gon(d.nhomBo, 12), +d.tong || 0, +d.tiepTuc || 0, tt, String(d.plan).slice(0, TOI_DA_O)]);
+  return { ok: true, maBoDe: ma };
+}
+function gvNhatKyLop(gv, d) {
+  var dong = (d.dong || []).slice(0, 60), ten = {};
+  bang('HoSo').forEach(function (r) { ten[String(r[0])] = { hoTen: String(r[3]), lop: String(r[4]), maLop: String(r[8] || '') }; });
+  var sh = nkTrangThang(new Date()), bay = Date.now();
+  var rows = dong.map(function (r) {
+    var h = ten[String(r.hs)] || { hoTen: gon(r.hoTen, 60), lop: '', maLop: '' };
+    return [new Date(+r.t || bay), String(r.hs || ''), h.hoTen, h.lop, h.maLop, 'phong-lop', 'lop-co-gv', nkChuoi(r.maLuot, 40), nkChuoi(r.nhom, 12), nkChuoi(r.phan, 60), nkChuoi(r.bai, 30), +r.stt || 0,
+      nkChuoi(r.dang, 80), nkChuoi(r.maCau, 40), nkChuoi(r.deBai, 300), nkChuoi(r.dapAn, 200), nkChuoi(r.chon, 200), r.dung ? 1 : 0, +r.lanThu || 1, +r.giayDung || 0];
+  });
+  if (rows.length) sh.getRange(sh.getLastRow() + 1, 1, rows.length, NK_COT.length).setValues(rows);
+  return { ok: true };
 }
