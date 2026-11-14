@@ -10,7 +10,7 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
   var SS = 'qm-phong-lop';
-  var R = { mo: false, bat: false, ma: '', khoa: '', lop: '', tenLop: '', ros: [], tt: 'bat', cau: null, log: [], dem: 0, vao: 0, hen: null, genP: 0 };
+  var R = { boDe: '', plan: null, daLam0: [], off: 0, mo: false, bat: false, ma: '', khoa: '', lop: '', tenLop: '', ros: [], tt: 'bat', cau: null, log: [], dem: 0, vao: 0, hen: null, genP: 0 };
 
   var ROOT = (function () { var l = document.querySelector('script[src*="phong-lop-gv.js"]'); var u = l ? l.src : ''; return u.substring(0, u.indexOf('assets/js/phong-lop-gv.js')); })();
 
@@ -56,7 +56,7 @@
     var h = $('#gtlHien'); if (h) h.onclick = hienDapAn;
     var bo = $('#gtlBo'); if (bo) bo.onclick = boQua;
     $('#gtlKet').onclick = ketThuc;
-    $('#gtlKhongLuu').onclick = function () { if (confirm('Đóng phòng và KHÔNG lưu buổi học này? (Kết quả các em đã trả lời vẫn nằm trong nhật ký.)')) dongPhong(false); };
+    $('#gtlKhongLuu').onclick = function () { if (confirm('Đóng phòng và KHÔNG lưu buổi học này? (Kết quả các em đã trả lời vẫn nằm trong nhật ký.)')) { luuBo('huy'); dongPhong(false); } };
   }
   function loi(m) { var e = $('#gtlLoi'); if (e) e.textContent = m || ''; }
 
@@ -80,17 +80,44 @@
       var mo = ma === '__mo', ros = mo ? rongRos() : (D.hocSinh || []).filter(function (h) { return h.maLop === ma; }).slice(0, 60).map(function (h) { return { id: h.hoSoId, ten: String(h.hoTen || '').replace(/\s+/g, ' ').trim() }; });
       R.mo = mo; R.bat = true; R.ma = p.ma; R.khoa = p.khoa; R.lop = mo ? '' : ma; R.tenLop = mo ? 'Phòng mở' : (l.tenLop || ma); R.ros = ros; R.log = []; R.cau = null; R.tt = 'bat'; R.dem = 0;
       luuSS(); dangBai(); publish(); ve(); theoDoi(); hienMa();
-      // đang đứng ở một câu trắc nghiệm thì đưa luôn lên phòng
-      if (khu() && khu().querySelector('.lt-dap-o')) sauVeCau();
-      else { var sd = $('.lt-chon-dang'); if (sd) sd.dispatchEvent(new Event('change', { bubbles: true })); }   // đang ở câu ghép / xếp…: làm lại lượt (phòng lớp bỏ các dạng này)
+      R.boDe = ''; R.plan = null; R.daLam0 = []; R.off = 0;
+      khoiBo();
     }).catch(function (e) { loi('Không mở được phòng: ' + (e.message || e)); });
   }
+  // ---------- Bộ đề lớp: bộ câu cố định, dạy nhiều buổi ----------
+  function phanId() { return location.pathname.replace(/^.*hsk1\//, '').replace(/\.html$/, '').slice(0, 100); }
+  function khoiBo() {
+    var A = QM_LT_API;
+    function moi() {
+      A.batDau(); R.plan = A.chotBo(); R.daLam0 = []; R.off = 0;
+      if (!R.plan) return;
+      if (R.lop) QM_TK.goi('gvBoDeLuu', { maLop: R.lop, phan: phanId(), bai: A.tenBai(), nhomBo: A.bo(), tong: R.plan.hang.length, tiepTuc: 0, plan: JSON.stringify({ plan: R.plan, daLam: [] }) })
+        .then(function (r) { R.boDe = r.maBoDe; }).catch(function () { loi('Chưa lưu được bộ đề lên máy chủ (vẫn dạy bình thường, nhưng buổi sau chưa tiếp tục được).'); });
+    }
+    if (!R.lop) return moi();                                   // phòng mở: không có lớp để nhớ bộ đề
+    QM_TK.goi('gvBoDeDo', { maLop: R.lop, phan: phanId(), nhomBo: A.bo() }).then(function (r) {
+      var b = r.boDe, o = null; if (b) { try { o = JSON.parse(b.plan); } catch (e) {} }
+      if (b && o && o.plan && b.tiepTuc < b.tong && confirm('Lớp này còn bộ đề đang dạy dở (đã xong ' + b.tiepTuc + '/' + b.tong + ' câu).\n\nOK = Tiếp tục từ câu ' + (b.tiepTuc + 1) + '\nHủy = Làm lại từ đầu (bộ đề mới)')) {
+        R.plan = o.plan; R.daLam0 = o.daLam || []; R.off = R.daLam0.length; R.boDe = b.maBoDe;
+        if (!A.napBo(o.plan, R.daLam0)) { loi('Bộ đề cũ không còn dựng lại được, cô làm lại từ đầu nhé.'); moi(); }
+        return;
+      }
+      if (b) QM_TK.goi('gvBoDeLuu', { maBoDe: b.maBoDe, trangThai: 'huy' }).catch(function () {});
+      moi();
+    }).catch(function () { loi('Chưa hỏi được bộ đề cũ, cô thử mở lại phòng.'); });
+  }
+  function luuBo(tt, xongCauNay) {
+    if (!R.boDe || !R.plan) return;
+    var dl = R.daLam0.concat(QM_LT_API.daLam(!!xongCauNay)), B = QM_LT_API.B();
+    var het = B && B.i + (xongCauNay ? 1 : 0) >= B.hang.length;
+    QM_TK.goi('gvBoDeLuu', { maBoDe: R.boDe, tiepTuc: dl.length, trangThai: tt || (het ? 'xong' : 'dang'), plan: JSON.stringify({ plan: R.plan, daLam: dl }) }).catch(function () {});
+  }
   function rongRos() { var a = []; for (var i = 0; i < 60; i++) a.push({ id: '', ten: '' }); return a; }
-  function luuSS() { try { sessionStorage.setItem(SS, JSON.stringify({ mo: R.mo, ma: R.ma, khoa: R.khoa, lop: R.lop, tenLop: R.tenLop, ros: R.ros, log: R.log })); } catch (e) {} }
+  function luuSS() { try { sessionStorage.setItem(SS, JSON.stringify({ mo: R.mo, ma: R.ma, khoa: R.khoa, lop: R.lop, tenLop: R.tenLop, ros: R.ros, log: R.log, boDe: R.boDe, plan: R.plan, daLam0: R.daLam0, off: R.off })); } catch (e) {} }
   function khoiPhuc() {
     var o; try { o = JSON.parse(sessionStorage.getItem(SS) || 'null'); } catch (e) {}
     if (!o || !o.ma) return;
-    R.mo = !!o.mo; R.bat = true; R.ma = o.ma; R.khoa = o.khoa; R.lop = o.lop; R.tenLop = o.tenLop; R.ros = o.ros || []; R.log = o.log || []; R.tt = 'bat';
+    R.mo = !!o.mo; R.bat = true; R.ma = o.ma; R.khoa = o.khoa; R.lop = o.lop; R.tenLop = o.tenLop; R.ros = o.ros || []; R.log = o.log || []; R.tt = 'bat'; R.boDe = o.boDe || ''; R.plan = o.plan || null; R.daLam0 = o.daLam0 || []; R.off = o.off || 0;
     theoDoi();
   }
   function hienMa() {
@@ -127,19 +154,35 @@
     var A = QM_LT_API, B = A.B(); if (!B || !B.dap) return;
     chotCauTruoc();
     var dem = khu().querySelector('.lnp-ten-dang') || khu().querySelector('.lt-dem'), kieu = dem ? dem.textContent.split('·')[0].replace(/^[^\wÀ-ỹ]+/, '').trim() : '';
-    R.cau = { i: B.i, n: B.i + 1, tong: B.hang.length, kieu: kieu, html: chup(), goi: null, lan: 0, ma: '', chon: null, tries: [], xong: false, de: deCau() };
+    R.cau = { i: B.i, n: R.off + B.i + 1, tong: R.off + B.hang.length, kieu: kieu, html: chup(), goi: null, lan: 0, ma: '', chon: null, tries: [], xong: false, de: deCau() };
     R.tt = 'cho-goi'; ve(); publish();
   }
-  function chotCauTruoc() {                                // ghi câu vừa xong vào nhật ký buổi
-    var c = R.cau; if (!c || c.daGhi || !c.xong) return; c.daGhi = true;
-    R.log.push(c.nhatKy); luuSS(); guiNhatKy(c);
+  function cauKhac(k) {                                    // ghép / xếp / bộ thủ / gõ chữ: cô thao tác theo lời em, máy tự chấm
+    var B = QM_LT_API.B(); if (!B) return;
+    chotCauTruoc();
+    var dem = khu().querySelector('.lt-dem'), kieu = dem ? dem.textContent.split('·')[0].replace(/^[^\wÀ-ỹ]+/, '').trim() : k;
+    R.cau = { i: B.i, n: R.off + B.i + 1, tong: R.off + B.hang.length, kieu: kieu, html: chup(), goi: null, lan: 0, ma: '', chon: null, tries: [], xong: false, khac: true, de: '' };
+    R.tt = 'cho-goi'; ve(); publish();
+  }
+  function onGhi(dung, ct) {
+    var c = R.cau; if (!c || !c.khac) return;
+    c.tries.push({ id: c.goi ? c.goi.id : '', ten: c.goi ? c.goi.ten : 'Cô', chon: String(ct.chon || '').slice(0, 200), dung: !!dung, dang: ct.dang, de: String(ct.cauHoi || '').slice(0, 300), da: String(ct.dapAn || '').slice(0, 200) });
+    if (!c.de) c.de = String(ct.cauHoi || '').slice(0, 300);
+    if (dung) R.tt = 'dung';
+    ve();
+  }
+  function chotCauTruoc(dangKetThuc) {                                // ghi câu vừa xong vào nhật ký buổi
+    var c = R.cau; if (!c || c.daGhi || !(c.xong || (c.khac && c.tries.length))) return; c.daGhi = true;
+    if (c.khac && !c.nhatKy && c.tries.length) { var t0 = c.tries[c.tries.length - 1]; c.nhatKy = { n: c.n, kieu: c.kieu, de: c.de, cacDap: [], dapAn: t0.da || '', giai: '', goi: c.tries.slice() }; }
+    if (!c.nhatKy) return;
+    R.log.push(c.nhatKy); luuSS(); guiNhatKy(c); luuBo('', !!dangKetThuc);
   }
   // Kết quả từng lượt trả lời của MỖI EM được gọi → nhật ký chung (hinhThuc 'lop-co-gv'), tách khỏi tự học
   function guiNhatKy(c) {
     var nk = c.nhatKy || {}, dong = [], t = Date.now();
     (c.tries || []).forEach(function (x, j) {
       if (!x.id) return;
-      dong.push({ t: t, hs: x.id, maLuot: 'pl' + R.ma, phan: (QM_LT_API.tenBai() || '').slice(0, 60), stt: c.n, dang: c.kieu, maCau: 'c' + c.n, deBai: c.de || '', dapAn: nk.dapAn || '', chon: x.chon, dung: x.dung, lanThu: j + 1 });
+      dong.push({ t: t, hs: x.id, maLuot: 'pl' + R.ma + (R.boDe ? '-' + R.boDe : ''), phan: (QM_LT_API.tenBai() || '').slice(0, 60), stt: c.n, dang: x.dang || c.kieu, maCau: 'c' + c.n, deBai: x.de || c.de || '', dapAn: x.da || nk.dapAn || '', chon: x.chon, dung: x.dung, lanThu: j + 1 });
     });
     if (!dong.length || !window.QM_TK) return;
     QM_TK.goi('gvNhatKyLop', { dong: dong }).catch(function () {});
@@ -171,6 +214,7 @@
       var i = R.ros.map(function (x) { return x.id; }).indexOf(hs.hoSoId);
       if (i < 0) { loi('Bạn ' + hs.hoTen + ' chưa có hồ sơ trong lớp nên chưa trả lời bằng máy được. Cô gọi bạn khác nhé.'); return; }
       moLai(c); c.lan++; c.goi = { id: hs.hoSoId, ten: R.ros[i].ten, i: i }; c.ma = c.i + '-' + c.lan; c.chon = null;
+      if (c.khac) { R.tt = 'cho-goi'; c.html = chup(); ve(); publish(); return; }
       R.tt = 'cho'; c.html = chup(); ve(); publish(); choDapAn();
     } });
   }
@@ -222,6 +266,7 @@
   }
   function hienDapAn() {
     var A = QM_LT_API, B = A.B(), c = R.cau; if (!c) return;
+    if (c.khac) return loi('Dạng này cô thao tác trực tiếp trên đề rồi bấm Câu tiếp.');
     stopCho(); moLai(c);
     var ds = B.dap.ds, k = 0; ds.forEach(function (x, i) { if (x.dung) k = i; });
     var nut = khu().querySelectorAll('.lt-dap-o')[k];
@@ -248,12 +293,12 @@
 
   // ---------- kết thúc ----------
   function ketThuc() {
-    var c = R.cau; if (c && c.xong) chotCauTruoc();
+    var c = R.cau; if (c && (c.xong || (c.khac && c.tries.length))) chotCauTruoc(true);
     if (!R.log.length) { if (!confirm('Buổi này chưa có câu nào hoàn thành. Đóng phòng, không lưu?')) return; return dongPhong(); }
     if (!confirm('Kết thúc buổi và lưu ' + R.log.length + ' câu vào ' + (R.mo ? 'phòng mở (' + R.vao + ' bạn)' : 'lớp ' + R.tenLop) + '?')) return;
     loi('⏳ Đang lưu…');
     var tieu = (QM_LT_API.tenBai() || document.title.split('·')[0]).trim();
-    QM_TK.goi('gvLuuBuoiHoc', { maLop: R.lop, dsHs: R.mo ? R.ros.filter(function (x) { return x.id; }).map(function (x) { return x.id; }) : null, tieuDe: tieu + ' · ' + new Date().toLocaleDateString('vi-VN'), phan: document.title.split('·')[0].trim(), cau: R.log })
+    QM_TK.goi('gvLuuBuoiHoc', { maBoDe: R.boDe, maLop: R.lop, dsHs: R.mo ? R.ros.filter(function (x) { return x.id; }).map(function (x) { return x.id; }) : null, tieuDe: tieu + ' · ' + new Date().toLocaleDateString('vi-VN'), phan: document.title.split('·')[0].trim(), cau: R.log })
       .then(function (d) { loi('✅ Đã lưu ' + d.soCau + ' câu. Học sinh xem lại trong trang “Buổi học” của lớp.'); dongPhong(true); })
       .catch(function (e) { loi('Chưa lưu được: ' + (e.message || e) + '. Cô bấm Kết thúc lại nhé (dữ liệu vẫn còn).'); });
   }
@@ -266,7 +311,7 @@
     if (!R.bat) return; var o = e.target.closest && e.target.closest('.lt-dap-o'); if (!o || !khu() || !khu().contains(o)) return;
     var k = Array.prototype.indexOf.call(khu().querySelectorAll('.lt-dap-o'), o); if (k >= 0) coChon(k);
   });
-  window.QM_LT_LOP = { dangBat: function () { return R.bat; }, sauVeCau: sauVeCau };
+  window.QM_LT_LOP = { dangBat: function () { return R.bat; }, sauVeCau: sauVeCau, cauKhac: cauKhac, onGhi: onGhi };
 
   // chỉ hiện với giáo viên (không phải chế độ xem như học sinh)
   var lan = 0;

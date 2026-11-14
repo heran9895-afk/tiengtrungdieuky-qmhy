@@ -13,7 +13,7 @@
     '.lop-ma{display:flex;gap:8px;justify-content:center;margin:10px 0}.lop-ma input{font:800 26px/1 inherit;width:140px;text-align:center;letter-spacing:.2em;padding:10px;border-radius:12px;border:2px solid var(--line-soft,#cde)}' +
     '.lop-buoi{border:1px solid var(--line-soft,#dde);border-radius:14px;margin:10px 0;background:#fff}.lop-buoi>summary{padding:12px 14px;cursor:pointer;font-weight:700}' +
     '.lop-cau{padding:10px 14px;border-top:1px dashed var(--line-soft,#dde)}.lop-cau .de{font-weight:700;margin-bottom:6px}' +
-    '.lop-cau ol{margin:4px 0 4px 20px;padding:0}.lop-cau li.dung{color:#14803c;font-weight:700}.lop-cau .giai{font-size:13px;opacity:.85;margin-top:4px}';
+    '.lop-cau ol{margin:4px 0 4px 20px;padding:0}.lop-cau li.dung{color:#14803c;font-weight:700}.lop-cau li.sai{color:#c62828;font-weight:700}.lop-cau .giai{font-size:13px;opacity:.85;margin-top:4px}';
   if (MA.length === 4) CSS += '.sh-header{display:none!important}';          // trong phòng: bỏ biển hiệu lớn cho rộng chỗ trên điện thoại
   var st = document.createElement('style'); st.textContent = CSS; document.head.appendChild(st);
 
@@ -45,7 +45,8 @@
       k.innerHTML = b.map(function (x) {
         return '<details class="lop-buoi"><summary>' + esc(x.tieuDe) + ' <small>(' + x.soCau + ' câu)</small></summary>' + (x.cau || []).map(function (c) {
           return '<div class="lop-cau"><div class="de">Câu ' + c.n + (c.kieu ? ' · ' + esc(c.kieu) : '') + ': ' + esc(c.de || '') + '</div><ol>' +
-            (c.cacDap || []).map(function (t) { return '<li' + (t === c.dapAn ? ' class="dung"' : '') + '>' + esc(t) + (t === c.dapAn ? ' ✓' : '') + '</li>'; }).join('') + '</ol>' +
+            ((c.cacDap || []).length ? (c.cacDap || []).map(function (t) { var sai = (c.sai || []).indexOf(t) >= 0; return '<li' + (t === c.dapAn ? ' class="dung"' : sai ? ' class="sai"' : '') + '>' + esc(t) + (t === c.dapAn ? ' ✓' : sai ? ' ✗' : '') + '</li>'; }).join('')
+              : (c.dapAn ? '<li class="dung">' + esc(c.dapAn) + ' ✓</li>' : '') + (c.sai || []).map(function (t) { return '<li class="sai">' + esc(t) + ' ✗</li>'; }).join('')) + '</ol>' +
             (c.giai ? '<div class="giai">' + esc(c.giai) + '</div>' : '') + '</div>';
         }).join('') + '</details>';
       }).join('');

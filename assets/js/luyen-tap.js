@@ -602,11 +602,11 @@
       w = B.hang[B.i]; if (k2 !== k) { B.kieu[B.i] = k2; k = k2; }
       var de = cauDeCua(w, k); if (de) chotCau(de);
     }
-    if (window.QM_LT_LOP && QM_LT_LOP.dangBat() && ['ghep', 'xep', 'dich', 'bo', 'go'].indexOf(k) >= 0) { B.hang.splice(B.i, 1); B.kieu.splice(B.i, 1); return veCau(); }   // phòng lớp (3a): chỉ các dạng chọn đáp án
-    if (k === 'ghep') return veGhep();
-    if (k === 'xep' || k === 'dich') return veXep(w, k);
-    if (k === 'bo') return veBo(w);
-    if (k === 'go') return veGo(w);
+    if (['ghep', 'xep', 'dich', 'bo', 'go'].indexOf(k) >= 0) {
+      if (k === 'ghep') veGhep(); else if (k === 'xep' || k === 'dich') veXep(w, k); else if (k === 'bo') veBo(w); else veGo(w);
+      if (window.QM_LT_LOP && QM_LT_LOP.dangBat() && QM_LT_LOP.cauKhac) QM_LT_LOP.cauKhac(k);   // phòng lớp: cô thao tác thay em trên máy mình
+      return;
+    }
     veTracNghiem(w, k);
   }
   function dauCau(w, k) {                                    // hàng trên của mỗi câu: tiến độ lượt + dạng + nút ⭐
@@ -624,6 +624,7 @@
   function ghiKetQua(w, dung, tuThemKho, ct) {
     if (dung) { B.chuoi++; B.chuoiMax = Math.max(B.chuoiMax, B.chuoi); } else B.chuoi = 0;
     if (ct) B.ct.push({ stt: B.ct.length + 1, dang: ct.dang, cauHoi: ct.cauHoi, dapAn: ct.dapAn, chon: ct.chon, dung: dung });
+    if (ct && window.QM_LT_LOP && QM_LT_LOP.onGhi && QM_LT_LOP.dangBat()) { try { QM_LT_LOP.onGhi(dung, ct); } catch (e) {} }
     if (ct && TD.ghiLoi) {                                   // Sổ lỗi: sai thì vào sổ, đúng liên tiếp 3 lần thì ra
       try {
         var tenB = BAI ? (BAI.ten || '') : '', de = chu(String(ct.cauHoi || '')), da = chu(String(ct.dapAn || ''));
@@ -1296,7 +1297,37 @@
   }
 
   // ---------- Sự kiện ----------
-  window.QM_LT_API = { khu: khuBai, B: function () { return B; }, traLoi: traLoi, chu: chu, tenBai: function () { return BAI ? BAI.ten : ''; } };   // cho phong-lop-gv.js (phòng lớp)
+  function maPlan(m) { return m.laBo ? { bo: m.han, phan: m.phan } : m.laGhep ? { ghep: m.ghepDs.map(function (w) { return w.ma; }) } : m.laNP ? { np: m.ma } : m.laHD ? { hd: m.ma } : { w: m.ma }; }
+  function maCua(m) { return m.laGhep ? m.ghepDs.map(function (w) { return w.ma; }) : [m.ma]; }
+  // Bộ đề lớp: chụp danh sách câu + dạng của lượt hiện tại (chốt cố định) / dựng lại lượt từ bản chụp, bỏ các câu đã làm
+  function chotBo() {
+    if (!B || !B.hang || !B.hang.length || B.nhanh) return null;
+    for (var j = 0; j < B.hang.length; j++) kieuCau(j);
+    return { v: 1, bo: S.bo || '', dang: S.dang, hang: B.hang.map(maPlan), kieu: B.hang.map(function (m, j) { return kieuCau(j); }) };
+  }
+  function daLamBo(xongCauNay) { var a = []; B.hang.slice(0, B.i + (xongCauNay ? 1 : 0)).forEach(function (m) { a = a.concat(maCua(m)); }); return a; }
+  function napBo(plan, daLam) {
+    if (!plan || !plan.hang) return 0;
+    if (plan.bo && BAI) { S.bo = plan.bo; apDungBo(); var sb = el.querySelector('.lt-chon-bo'); if (sb) sb.value = plan.bo; }
+    S.dang = plan.dang || 'tron'; if (selDang) selDang.value = S.dang;
+    dungDongHo(); CAU_DIEN = {}; CAU_XEP = {};
+    var theo = {}, np = {}, hd = {}, da = {}; (daLam || []).forEach(function (m) { da[m] = 1; });
+    S.kho.concat(S.ds).forEach(function (w) { theo[w.ma] = w; });
+    NP_BAI.concat((GOC && GOC.np) || []).forEach(function (n) { (Array.isArray(n) ? n : [n]).forEach(function (m) { np[m.ma] = m; }); });
+    HD_BAI.concat((GOC && GOC.hd) || []).forEach(function (m) { hd[m.ma] = m; });
+    var hang = [], kieu = [];
+    plan.hang.forEach(function (h, j) {
+      var m = h.w ? theo[h.w] : h.np ? np[h.np] : h.hd ? hd[h.hd] : h.bo ? { ma: 'bo:' + h.bo, han: h.bo, phan: h.phan, laBo: true } : null;
+      if (h.ghep) { var g = h.ghep.map(function (x) { return theo[x]; }); if (g.some(function (x) { return !x; })) return; m = { ma: 'ghep:' + j, han: g.map(function (w) { return w.han; }).join(' · '), laGhep: true, ghepDs: g }; }
+      if (!m || maCua(m).some(function (x) { return da[x]; })) return;
+      hang.push(m); kieu.push(plan.kieu[j]);
+    });
+    if (!hang.length) return 0;
+    B = { goc: hang, hang: hang, i: 0, dung: 0, sai: 0, daSai: {}, kieu: kieu, ct: [], chuoi: 0, chuoiMax: 0, luc: Date.now(), dayDu: true };
+    TV.dungDoc(); veCau(); return hang.length;
+  }
+  window.QM_LT_API = { khu: khuBai, B: function () { return B; }, traLoi: traLoi, chu: chu, tenBai: function () { return BAI ? BAI.ten : ''; },
+    batDau: function () { batDau(); }, chotBo: chotBo, napBo: napBo, daLam: daLamBo, bo: function () { return S.bo || ''; } };   // cho phong-lop-gv.js (phòng lớp)
   khuBai.addEventListener('click', function (e) {
     var t = e.target;
     var sao = t.closest('.lt-sao');

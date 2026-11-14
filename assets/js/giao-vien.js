@@ -279,6 +279,27 @@
     return Object.keys(H.d).filter(function (k) { return H.d[k][0] >= 5 && H.d[k][1] > 0; }).sort(function (a, b) { return H.d[b][1] / H.d[b][0] - H.d[a][1] / H.d[a][0]; }).slice(0, so || 2)
       .map(function (k) { return esc(k) + ' ' + Math.round(H.d[k][1] / H.d[k][0] * 100) + '%'; }).join(' · ');
   }
+  function taiBuoiLop(noi) {
+    var k = noi.querySelector('#gvBuoi'); if (!k) return;
+    var ml = TQ.lop && TQ.lop !== '-' ? TQ.lop : ((D.lop.filter(function (l) { return !l.dong; })[0] || {}).maLop || '');
+    if (!ml) { k.innerHTML = '<p class="gv-trong">Cô chọn một lớp ở bộ lọc phía trên nhé.</p>'; return; }
+    k.innerHTML = '<p class="gv-cho">⏳ Đang tải…</p>';
+    var hsLop = D.hocSinh.filter(function (h) { return h.maLop === ml; });
+    goiMC('gvDsBuoiHoc', { maLop: ml }).then(function (r) {
+      var b = r.buoi || []; if (!b.length) { k.innerHTML = '<p class="gv-trong">Lớp này chưa có buổi học nào được lưu.</p>'; return; }
+      k.innerHTML = b.map(function (x) {
+        var cot = hsLop.filter(function (h) { return (x.cau || []).some(function (c) { return (c.goi || []).some(function (g) { return g.id === h.hoSoId; }); }); });
+        return '<details class="gv-buoi"><summary><b>' + esc(x.tieuDe) + '</b> <small>(' + x.soCau + ' câu · ' + cot.length + ' em được gọi)</small></summary><div class="gv-bang-cuon"><table class="gv-bang"><thead><tr><th>Câu</th><th>Dạng</th>' +
+          cot.map(function (h) { return '<th>' + esc(String(h.hoTen).split(' ').slice(-1)[0]) + '</th>'; }).join('') + '</tr></thead><tbody>' +
+          (x.cau || []).map(function (c) {
+            return '<tr><td>' + c.n + '</td><td><small>' + esc(c.kieu || '') + '</small></td>' + cot.map(function (h) {
+              var t = (c.goi || []).filter(function (g) { return g.id === h.hoSoId; });
+              return '<td title="' + esc(t.map(function (g) { return g.chon; }).join(' | ')) + '">' + (t.length ? (t.some(function (g) { return g.dung; }) ? '✅' : '❌') + (t.length > 1 ? '<small>×' + t.length + '</small>' : '') : '') + '</td>';
+            }).join('') + '</tr>';
+          }).join('') + '</tbody></table></div></details>';
+      }).join('');
+    }).catch(function (e) { k.innerHTML = '<p class="gv-trong">⚠️ ' + esc(e.message || e) + '</p>'; });
+  }
   function veTongQuan(noi) {
     taiPhanTich();
     var bayGio = Date.now(), ds = dsHsTQ(), tong = ds.length, trongLop = ds.filter(function (h) { return h.maLop; }).length;
@@ -346,11 +367,13 @@
               '<td data-n="Hay sai"><small>' + (dangSaiCua(h.hoSoId, 2) || '—') + '</small></td></tr>';
           }).join('') + '</tbody></table></div>' : '<p class="gv-trong">Chưa có học sinh.</p>') + '</div>' +
       // Hoạt động gần đây
+      '<div class="gv-the"><div class="gv-the-dau"><h3>🏫 Buổi học trên lớp</h3><button type="button" class="gv-nut nho" data-buoi="1">Xem các buổi đã lưu</button></div><div id="gvBuoi"><p class="gv-trong">Bảng từng em × từng câu của các buổi dạy bằng Phòng lớp (ô trống = em không được gọi ở câu đó).</p></div></div>' +
       '<div class="gv-the"><div class="gv-the-dau"><h3>🕒 Hoạt động gần đây</h3></div>' + hoatDong() + '</div></div>';
     noi.innerHTML = s;
     noi.addEventListener('click', function (e) {
       var di = e.target.closest('[data-di]'); if (di) return moTab(di.dataset.di);
       var hs = e.target.closest('[data-hs]'); if (hs) return moHocSinh(hs.dataset.hs);
+      if (e.target.closest('[data-buoi]')) return taiBuoiLop(noi);
     });
     noi.addEventListener('change', function (e) {
       var n = e.target.name;
