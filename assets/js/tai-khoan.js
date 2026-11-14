@@ -407,12 +407,12 @@
   document.addEventListener('qm-tien-do', function (e) { if (!(e.detail && e.detail.nap)) ban = true; });
   document.addEventListener('qm-phan', function () { ban = true; });
   document.addEventListener('qm-luot-do', function () { ban = true; });
-  function duLieuMay() { var td = doc(K_TD) || {}; return { tu: td.tu || {}, kho: td.kho || {}, phan: (doc(K_PHAN) || {}).phan || {}, luotDo: (doc(K_LD) || {}).ds || {} }; }
+  function duLieuMay() { var td = doc(K_TD) || {}; return { tu: td.tu || {}, kho: td.kho || {}, loi: td.loi || {}, phan: (doc(K_PHAN) || {}).phan || {}, luotDo: (doc(K_LD) || {}).ds || {} }; }
   function dongBo() {                                        // gửi bản trên máy, máy chủ trộn với bản đã lưu rồi trả về bản chung
     if (!TK || !TK.hoSoId) return Promise.resolve();
     ban = false;
     return goi('luuTienDo', { hoSoId: TK.hoSoId, duLieu: duLieuMay() }).then(function (d) {
-      var m = d.duLieu || {}, td = { v: 1, tu: m.tu || {}, kho: m.kho || {}, capNhat: Date.now() };
+      var m = d.duLieu || {}, td = { v: 1, tu: m.tu || {}, kho: m.kho || {}, loi: m.loi || (doc(K_TD) || {}).loi || {}, capNhat: Date.now() };
       if (window.QM_TIENDO && QM_TIENDO.nap) QM_TIENDO.nap(td); else ghi(K_TD, td);
       PHAN = { v: 1, phan: m.phan || {} }; ghi(K_PHAN, PHAN);
       if (m.luotDo) {                                        // máy chủ bản cũ không trả luotDo: giữ nguyên bản trên máy

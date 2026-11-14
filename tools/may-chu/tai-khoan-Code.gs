@@ -43,7 +43,7 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-14e';
+var PHIEN_BAN = '2026-11-14f';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -404,7 +404,7 @@ function buoiHocDs(maLop, laGV, hoSoId) {
 // Trộn: mỗi từ / mỗi phần / mỗi lượt dở lấy bản có thời điểm mới hơn; từ khó gộp cả hai bên; phần "xong" không bao giờ lùi về "đang học".
 function docTienDo(sub, hoSoId, v) {
   v = v || trang('Progress').getDataRange().getValues();
-  var kq = { tu: {}, kho: {}, phan: {}, luotDo: {} };
+  var kq = { tu: {}, kho: {}, phan: {}, luotDo: {}, loi: {} };
   for (var i = 1; i < v.length; i++) {
     if (String(v[i][0]) !== sub || String(v[i][1]) !== hoSoId) continue;
     var khoa = String(v[i][2]), o = {};
@@ -413,11 +413,14 @@ function docTienDo(sub, hoSoId, v) {
     else if (khoa === 'kho') kq.kho = o;
     else if (khoa === 'phan') kq.phan = o;
     else if (khoa === 'luotDo') kq.luotDo = o;
+    else if (khoa === 'loi') kq.loi = o;
   }
   return kq;
 }
 function tron(a, b) {
-  var kq = { tu: {}, kho: {}, phan: {}, luotDo: {} };
+  var kq = { tu: {}, kho: {}, phan: {}, luotDo: {}, loi: {} };
+  [a.loi || {}, b.loi || {}].forEach(function (m) { Object.keys(m).forEach(function (k) {   // Sổ lỗi: mỗi mục lấy bản có thời điểm mới hơn (mục đã vào lại 3 lần đúng liên tiếp mang dấu x)
+    if (String(k).length < 120 && (!kq.loi[k] || (+m[k].t || 0) > (+kq.loi[k].t || 0))) kq.loi[k] = m[k]; }); });
   [a.tu || {}, b.tu || {}].forEach(function (m) { Object.keys(m).forEach(function (k) {
     if (!kq.tu[k] || (+m[k].t || 0) > (+kq.tu[k].t || 0)) kq.tu[k] = m[k]; }); });
   [a.kho || {}, b.kho || {}].forEach(function (m) { Object.keys(m).forEach(function (k) { kq.kho[k] = m[k]; }); });
@@ -440,6 +443,11 @@ function tron(a, b) {
   }); });
   return kq;
 }
+function gonLoi(l) {                       // Sổ lỗi vừa một ô: bỏ mục đã xong cũ trước, rồi mục cũ nhất
+  var ds = Object.keys(l).sort(function (x, y) { return (l[x].x ? 0 : 1) - (l[y].x ? 0 : 1) || (+l[x].t || 0) - (+l[y].t || 0); });
+  while (ds.length && JSON.stringify(l).length > TOI_DA_O) delete l[ds.shift()];
+  return l;
+}
 function gonLuotDo(ld) {                   // giữ vừa một ô: quá dài thì bỏ dấu xoá cũ trước, rồi đến lượt dở cũ nhất
   var ds = Object.keys(ld).sort(function (x, y) { return (ld[x].xoa ? 0 : 1) - (ld[y].xoa ? 0 : 1) || (+ld[x].t || 0) - (+ld[y].t || 0); });
   while (ds.length && JSON.stringify(ld).length > TOI_DA_O) delete ld[ds.shift()];
@@ -449,7 +457,7 @@ function layTienDo(p, d) { hoSoCua(p, d.hoSoId); return { ok: true, duLieu: docT
 function luuTienDo(p, d) {
   var hs = hoSoCua(p, d.hoSoId), sh = trang('Progress'), v = sh.getDataRange().getValues();
   var cu = docTienDo(p.sub, d.hoSoId, v), moi = tron(cu, d.duLieu || {}), bayGio = new Date();
-  moi.luotDo = gonLuotDo(moi.luotDo);
+  moi.luotDo = gonLuotDo(moi.luotDo); moi.loi = gonLoi(moi.loi || {});
   var dong = [];
   var ma = Object.keys(moi.tu).sort();
   for (var i = 0; i < ma.length; i += TU_MOI_DONG) {
@@ -459,6 +467,7 @@ function luuTienDo(p, d) {
   dong.push([p.sub, d.hoSoId, 'kho', JSON.stringify(moi.kho), bayGio]);
   dong.push([p.sub, d.hoSoId, 'phan', JSON.stringify(moi.phan), bayGio]);
   dong.push([p.sub, d.hoSoId, 'luotDo', JSON.stringify(moi.luotDo), bayGio]);
+  dong.push([p.sub, d.hoSoId, 'loi', JSON.stringify(moi.loi), bayGio]);
   // Ghi đè tại chỗ khi các dòng cũ của hồ sơ nằm liền nhau và đủ số dòng (trường hợp thường gặp): một lệnh ghi, không xoá dòng
   var cuDong = [];
   for (var j = 1; j < v.length; j++) if (String(v[j][0]) === p.sub && String(v[j][1]) === d.hoSoId) cuDong.push(j + 1);

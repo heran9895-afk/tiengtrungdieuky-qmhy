@@ -9,9 +9,10 @@
    ========================================================= */
 (function () {
   var KHOA = 'qm-tien-do-v1', THUOC = 3, TOI_DA = 4;
-  var D = { v: 1, tu: {}, kho: {}, capNhat: 0 };
+  var D = { v: 1, tu: {}, kho: {}, loi: {}, capNhat: 0 };
   try { var cu = JSON.parse(localStorage.getItem(KHOA)); if (cu && cu.v === 1) D = cu; } catch (e) {}
-  D.tu = D.tu || {}; D.kho = D.kho || {};
+  D.tu = D.tu || {}; D.kho = D.kho || {}; D.loi = D.loi || {};
+  var RA_SO = 3, TOI_DA_LOI = 250;      // Sổ lỗi: đúng liên tiếp 3 lần thì ra khỏi sổ (giữ dấu x để máy khác không đưa lại); tối đa 250 mục
 
   function luu(ma) {
     D.capNhat = Date.now();
@@ -31,6 +32,24 @@
       if (dung) { t.d++; t.h = Math.min(TOI_DA, t.h + 1); } else { t.s++; t.h = 1; }
       t.t = Date.now(); luu(w.ma);
     },
+    // ---- SỔ LỖI ----
+    // khoa: 'w|<mã từ>' (từ vựng, luyện lại được) hoặc 'c|<dạng>|<đề>' (câu ngữ pháp / hỏi đáp / ôn tập, chỉ để xem lại)
+    ghiLoi: function (khoa, dung, o) {
+      khoa = String(khoa).slice(0, 110); var e = D.loi[khoa], bay = Date.now();
+      if (dung) { if (!e || e.x) return; e.lt = (e.lt || 0) + 1; e.t = bay; if (e.lt >= RA_SO) { e.x = 1; } }
+      else {
+        if (!e || e.x) e = D.loi[khoa] = { n: 0 };
+        e.n = (e.n || 0) + 1; e.lt = 0; e.t = bay; delete e.x;
+        o = o || {}; ['ma', 'cap', 'dang', 'de', 'da', 'b', 'bid'].forEach(function (k) { if (o[k] != null && o[k] !== '') e[k] = String(o[k]).slice(0, 70); });
+        var ks = Object.keys(D.loi);
+        if (ks.length > TOI_DA_LOI) { ks.sort(function (a, b) { return (D.loi[a].x ? 0 : 1) - (D.loi[b].x ? 0 : 1) || D.loi[a].t - D.loi[b].t; }); delete D.loi[ks[0]]; }
+      }
+      luu(null);
+    },
+    dsLoi: function () {                          // mục còn trong sổ, sai nhiều nhất lên đầu
+      return Object.keys(D.loi).filter(function (k) { return !D.loi[k].x; }).map(function (k) { var e = D.loi[k]; return Object.assign({ khoa: k }, e); })
+        .sort(function (a, b) { return (b.n - a.n) || (b.t - a.t); });
+    },
     laKho: function (ma) { return !!D.kho[ma]; },
     datKho: function (w, bat) {                    // bật/tắt ⭐ từ khó; lưu kèm cấp để biết tải dữ liệu cấp nào
       if (bat) D.kho[w.ma] = w.cap; else delete D.kho[w.ma];
@@ -42,11 +61,11 @@
       var r = { moi: 0, dang: 0, thuoc: 0 };
       ds.forEach(function (w) { r[trangThai(w.ma)]++; }); return r;
     },
-    xoaHet: function () { D = { v: 1, tu: {}, kho: {}, capNhat: Date.now() }; luu(null); },
+    xoaHet: function () { D = { v: 1, tu: {}, kho: {}, loi: {}, capNhat: Date.now() }; luu(null); },
     // Đồng bộ tài khoản (tai-khoan.js): thay toàn bộ bản ghi bằng bản đã trộn với máy chủ; báo "nap" để không bị coi là thay đổi mới
     nap: function (moi) {
       if (!moi || moi.v !== 1) return;
-      D = moi; D.tu = D.tu || {}; D.kho = D.kho || {};
+      D = moi; D.tu = D.tu || {}; D.kho = D.kho || {}; D.loi = D.loi || {};
       try { localStorage.setItem(KHOA, JSON.stringify(D)); } catch (e) {}
       document.dispatchEvent(new CustomEvent('qm-tien-do', { detail: { ma: null, nap: true } }));
     }

@@ -72,7 +72,8 @@
   el.innerHTML =
     '<div class="tv-cap lt-cap" role="tablist">' + CAP.map(function (c) {
       return '<button type="button" role="tab" data-cap="' + c + '"' + (c === 'MR' ? ' class="tv-cap-mr"' : '') + '>' + TV.tenCap(c) + '</button>'; }).join('') +
-      '<button type="button" role="tab" data-cap="KHO" class="lt-cap-kho">⭐ Từ khó <span class="lt-so-kho"></span></button></div>' +
+      '<button type="button" role="tab" data-cap="KHO" class="lt-cap-kho">⭐ Từ khó <span class="lt-so-kho"></span></button>' +
+      '<button type="button" role="tab" data-cap="LOI" class="lt-cap-kho">📕 Sổ lỗi <span class="lt-so-loi"></span></button></div>' +
     (BAI ? '<div class="lt-hs"><label>Họ tên đầy đủ<input type="text" class="lt-hs-ten" autocomplete="name" placeholder="VD: Nguyễn Văn An"></label>' +
       '<label>Lớp<input type="text" class="lt-hs-lop" placeholder="VD: HSK1-K3"></label>' +
       '<p class="lt-hs-ghi">' + (BAI.onTap ? 'Bài làm từng câu được gửi về cho cô giáo để theo dõi và cải tiến bài học. Phần này không xếp hạng.' : 'Điền để lưu điểm lên Bảng xếp hạng. Không điền vẫn làm bài được, chỉ là không lưu điểm.') + '</p></div>' : '') +
@@ -102,7 +103,9 @@
     }); });
   }
   var daTuongTac = false;                                   // lần mở trang đầu: không tự cuộn
-  function demKho() { var n = TD.dsKho().length; el.querySelector('.lt-so-kho').textContent = n ? '(' + n + ')' : ''; }
+  function demKho() { var n = TD.dsKho().length; el.querySelector('.lt-so-kho').textContent = n ? '(' + n + ')' : ''; var m = TD.dsLoi ? TD.dsLoi().length : 0; var o = el.querySelector('.lt-so-loi'); if (o) o.textContent = m ? '(' + m + ')' : ''; }
+  function laKhoLoi(c) { return c === 'KHO' || c === 'LOI'; }
+  var LOC_BAI = '';                                          // Sổ lỗi: lọc theo bài ('' = tất cả)
 
   // ---------- Cấp ----------
   var GHEP_BAI = [], BO_THU = {};                            // chữ ghép + bộ thủ của bài (chế độ bài học)
@@ -111,13 +114,13 @@
   var CT = { chu: {}, tp: {} };                              // cấu tạo chữ HSK 1–3 (Thư viện), dùng chung với trang tra cứu
   TV.taiCauTao().then(function (d) { CT = d; });
   function chonCap(c) {
-    S.cap = c; S.pinyin = c === 'KHO' || c === 'BAI' || SO_CAP.indexOf(c) >= 0;
+    S.cap = c; S.pinyin = laKhoLoi(c) || c === 'BAI' || SO_CAP.indexOf(c) >= 0;
     el.querySelectorAll('.lt-cap button').forEach(function (b) { b.classList.toggle('on', b.dataset.cap === c); });
     khuBai.innerHTML = '<div class="tv-trong">Đang tải từ vựng…</div>'; khuTong.innerHTML = '';
-    if (!BAI) try { history.replaceState(null, '', c === 'KHO' ? '#tu-kho' : '#hsk' + c); } catch (e) {}
+    if (!BAI) try { history.replaceState(null, '', c === 'KHO' ? '#tu-kho' : c === 'LOI' ? '#so-loi' : '#hsk' + c); } catch (e) {}
     var coTruoc = BAI && (window.QM_TEP || {}).TRUOC;
     var hsk = BAI ? ['1', '2', '3'].map(function (x) { return TV.taiCap(x).catch(function () { return []; }); }) : [];
-    var tai = c === 'KHO' ? taiTuKho() : Promise.all([TV.taiCap(c), coTruoc ? TV.taiCap('TRUOC').catch(function () { return []; }) : []].concat(hsk)).then(function (kq) {
+    var tai = c === 'KHO' ? taiTuKho() : c === 'LOI' ? taiSoLoi() : Promise.all([TV.taiCap(c), coTruoc ? TV.taiCap('TRUOC').catch(function () { return []; }) : []].concat(hsk)).then(function (kq) {
       var d = kq[0], truoc = kq[1];
       if (BAI) { TU_DIEN = {}; kq.slice(2).forEach(function (ds) { ds.forEach(function (w) { TU_DIEN[w.han] = 1; }); }); CUM_CACHE = {}; }
       if (!BAI) return { kho: d, ds: d };
@@ -296,10 +299,35 @@
     });
   }
 
+  // Sổ lỗi: các từ còn sai trong sổ (sai nhiều nhất lên đầu); lọc theo bài; câu ngữ pháp / hỏi đáp chỉ liệt kê để xem lại
+  function taiSoLoi() {
+    var tat = TD.dsLoi(), caps = {};
+    S.loiTat = tat;
+    tat.forEach(function (e) { if (e.ma) caps[e.cap] = 1; });
+    return Promise.all(Object.keys(caps).map(function (c) { return TV.taiCap(c).catch(function () { return []; }); })).then(function (nhom) {
+      var tatCa = [].concat.apply([], nhom), theoMa = {};
+      tatCa.forEach(function (w) { theoMa[w.ma] = w; });
+      var ds = tat.filter(function (e) { return e.ma && (!LOC_BAI || e.b === LOC_BAI); }).map(function (e) { return theoMa[e.ma]; }).filter(Boolean);
+      return { kho: tatCa, ds: ds };
+    });
+  }
+  function veSoLoi() {                                       // phần trên danh sách luyện: lọc theo bài + bảng lỗi hay sai (kể cả câu)
+    var tat = S.loiTat || [], bai = [];
+    tat.forEach(function (e) { if (e.b && bai.indexOf(e.b) < 0) bai.push(e.b); });
+    var cau = tat.filter(function (e) { return !e.ma && (!LOC_BAI || e.b === LOC_BAI); });
+    var tu = tat.filter(function (e) { return e.ma && (!LOC_BAI || e.b === LOC_BAI); });
+    var li = function (e) { return '<li><b>' + esc(e.de || '') + '</b> → ' + esc(e.da || '') + ' <small>sai ' + e.n + ' lần · ' + esc(e.dang || '') + (e.b ? ' · ' + esc(e.b) : '') + '</small></li>'; };
+    khuTong.innerHTML = '<div class="lt-so-loi-dau"><label>Bài <select class="lt-loc-loi"><option value="">Tất cả bài</option>' + bai.map(function (b) { return '<option value="' + esc(b) + '"' + (b === LOC_BAI ? ' selected' : '') + '>' + esc(b) + '</option>'; }).join('') + '</select></label>' +
+      '<span class="lt-goi-y"> · ' + tu.length + ' từ · ' + cau.length + ' câu · đúng liên tiếp 3 lần thì ra khỏi sổ</span></div>' +
+      (tu.length ? '<ul class="lt-so-loi-ds">' + tu.slice(0, 12).map(li).join('') + (tu.length > 12 ? '<li><small>… và ' + (tu.length - 12) + ' từ nữa</small></li>' : '') + '</ul>' : '') +
+      (cau.length ? '<div class="lt-nhan">Câu cần xem lại (ngữ pháp, hỏi – đáp, ôn tập)</div><ul class="lt-so-loi-ds">' + cau.slice(0, 15).map(li).join('') + '</ul>' : '');
+    var s = khuTong.querySelector('.lt-loc-loi'); if (s) s.addEventListener('change', function () { LOC_BAI = this.value; chonCap('LOI'); });
+  }
+
   // ---------- Thanh điều khiển: Chặng · Dạng bài · Pinyin ----------
   function veThanh() {
     demKho();
-    var ds = S.ds, kho = S.cap === 'KHO';
+    var ds = S.ds, kho = laKhoLoi(S.cap);
     if (BAI) {
       selChang.innerHTML = '<option value="0">' + (BAI.tenLuot || 'Toàn bài') + ' · ' + ds.length + ' từ' + (GHEP_BAI.length ? ' + ' + GHEP_BAI.length + ' chữ ghép' : '') +
         (!NHANH && NP_BAI.length ? ' + ' + NP_BAI.length + ' câu ngữ pháp' : '') + (!NHANH && HD_BAI.length ? ' + ' + Math.min(HD_TOI_DA, HD_BAI.length) + ' hỏi – đáp' : '') +
@@ -307,7 +335,7 @@
         (NHANH ? ' · ' + NHANH.soCau + ' câu · ' + NHANH.phut + ' phút' : '') + '</option>';
       selChang.disabled = true;
     } else if (kho) {
-      selChang.innerHTML = '<option value="0">⭐ ' + ds.length + ' từ khó · ' + Math.min(CHANG, ds.length) + ' từ/lượt</option>';
+      selChang.innerHTML = '<option value="0">' + (S.cap === 'LOI' ? '📕 ' + ds.length + ' từ trong sổ lỗi' : '⭐ ' + ds.length + ' từ khó') + ' · ' + Math.min(CHANG, ds.length) + ' từ/lượt</option>';
       selChang.disabled = true;
     } else {
       var soChang = Math.ceil(ds.length / CHANG), daHoc = ds.some(function (w) { return TD.chiTiet(w.ma); });
@@ -329,6 +357,7 @@
     var d = TD.dem(ds), n = ds.length || 1;                  // tổng tiến độ của cấp
     khuTong.innerHTML = ds.length ? '<div class="lt-vach"><i class="thuoc" style="width:' + (d.thuoc / n * 100) + '%"></i><i class="dang" style="width:' + (d.dang / n * 100) + '%"></i></div>' +
       '<div class="lt-chu-thich"><span><i class="thuoc"></i>Đã thuộc ' + d.thuoc + '</span><span><i class="dang"></i>Đang học ' + d.dang + '</span><span><i class="moi"></i>Mới ' + d.moi + '</span></div>' : '';
+    if (S.cap === 'LOI') veSoLoi();
   }
   function capNhatPy() {
     nutPy.setAttribute('aria-pressed', S.pinyin); nutPy.classList.toggle('on', S.pinyin);
@@ -356,6 +385,7 @@
     var ds = S.ds;
     if (BAI) return ds.slice();                               // bài học: làm hết kho của bài, không chia chặng 20 từ
     if (S.cap === 'KHO') return tron(ds).sort(function (a, b) { return TD.hop(a.ma) - TD.hop(b.ma); }).slice(0, CHANG);
+    if (S.cap === 'LOI') return ds.slice(0, CHANG);           // Sổ lỗi: sai nhiều nhất làm trước (ds đã xếp sẵn)
     if (S.chang === ON_TM) return onThongMinh(ds);
     if (S.chang === NGAU) {
       var chua = ds.filter(function (w) { return TD.trangThai(w.ma) !== 'thuoc'; });
@@ -402,7 +432,7 @@
   var B = null;   // lượt đang làm: hàng đợi, vị trí, đúng/sai, dạng của từng câu (khi trộn)
   function batDau(dsRieng) {
     if (!S.ds.length) {
-      khuBai.innerHTML = '<div class="tv-trong">' + (S.cap === 'KHO' ? 'Bạn chưa có từ khó nào. Làm bài sai, từ đó sẽ tự vào đây; hoặc bấm ☆ ở trang tra cứu để tự thêm. 🌱'
+      khuBai.innerHTML = '<div class="tv-trong">' + (S.cap === 'LOI' ? 'Sổ lỗi đang trống' + (LOC_BAI ? ' ở bài này' : '') + ' 🎉 Làm bài sai, từ đó sẽ tự vào đây; đúng liên tiếp 3 lần thì tự ra khỏi sổ.' : S.cap === 'KHO' ? 'Bạn chưa có từ khó nào. Làm bài sai, từ đó sẽ tự vào đây; hoặc bấm ☆ ở trang tra cứu để tự thêm. 🌱'
         : 'Cấp này đang được cô cập nhật, bạn quay lại sau nhé! 🌱') + '</div>';
       return;
     }
@@ -594,9 +624,16 @@
   function ghiKetQua(w, dung, tuThemKho, ct) {
     if (dung) { B.chuoi++; B.chuoiMax = Math.max(B.chuoiMax, B.chuoi); } else B.chuoi = 0;
     if (ct) B.ct.push({ stt: B.ct.length + 1, dang: ct.dang, cauHoi: ct.cauHoi, dapAn: ct.dapAn, chon: ct.chon, dung: dung });
+    if (ct && TD.ghiLoi) {                                   // Sổ lỗi: sai thì vào sổ, đúng liên tiếp 3 lần thì ra
+      try {
+        var tenB = BAI ? (BAI.ten || '') : '', de = chu(String(ct.cauHoi || '')), da = chu(String(ct.dapAn || ''));
+        if (dacBiet(w)) TD.ghiLoi('c|' + ct.dang + '|' + de.slice(0, 50), dung, { dang: ct.dang, de: de, da: da, b: tenB });
+        else TD.ghiLoi('w|' + w.ma, dung, { ma: w.ma, cap: w.cap, dang: ct.dang, de: de, da: da, b: tenB || (S.cap && !laKhoLoi(S.cap) ? TV.tenCap(S.cap) : '') });
+      } catch (e) {}
+    }
     if (ct && window.QM_NK) {                                // nhật ký từng câu (mọi chế độ, kể cả luyện riêng và lượt bỏ dở) — gửi về máy chủ tài khoản
       try {
-        if (!B.nk) B.nk = QM_NK.batDauLuot({ phan: BAI ? BAI.ma : (S.cap === 'KHO' ? 'thu-vien-tu-kho' : 'thu-vien-hsk' + S.cap), bai: BAI ? (BAI.ten || '') + (BAI.tenLuot ? ' · ' + BAI.tenLuot : '') : (S.cap === 'KHO' ? 'Từ khó' : TV.tenCap(S.cap)),
+        if (!B.nk) B.nk = QM_NK.batDauLuot({ phan: BAI ? BAI.ma : (S.cap === 'LOI' ? 'thu-vien-so-loi' : S.cap === 'KHO' ? 'thu-vien-tu-kho' : 'thu-vien-hsk' + S.cap), bai: BAI ? (BAI.ten || '') + (BAI.tenLuot ? ' · ' + BAI.tenLuot : '') : (S.cap === 'KHO' ? 'Từ khó' : TV.tenCap(S.cap)),
           nhomBo: S.bo || 'tongHop' });
         QM_NK.cau(B.nk, { stt: B.ct.length, dang: ct.dang, maCau: w && w.ma ? w.ma : '', deBai: ct.cauHoi, dapAn: ct.dapAn, chon: ct.chon, dung: dung, nhom: nhomTu(w) });
       } catch (e) {}
@@ -895,7 +932,7 @@
   };
   var DANG_DS = ['tron', 'chu', 'nghe', 'py', 'ghep', 'cum', 'dien', 'xep', 'hoidap', 'bo', 'go'].filter(function (k) { return !(NHANH && k === 'go') && (BAI || ['cum', 'dich', 'hoidap'].indexOf(k) < 0); });   // lượt nhanh: tắt gõ chữ; cụm, theo nghĩa, hỏi đáp: chỉ bài học
   var HD_TOI_DA = 8;                                         // Bài tập: mỗi lượt tối đa 8 cặp hỏi – đáp (bốc ngẫu nhiên, lượt sau đổi)
-  var CAP_BO = ['1', '2', '3', 'KHO'];                       // Thư viện: Ghép bộ thủ chỉ áp dụng HSK 1–3 (và Từ khó)
+  var CAP_BO = ['1', '2', '3', 'KHO', 'LOI'];                       // Thư viện: Ghép bộ thủ chỉ áp dụng HSK 1–3 (và Từ khó)
   function coBo() { return BAI || CAP_BO.indexOf(S.cap) >= 0; }
   function giaiTu(w) { return '<div class="lt-giai-tu"><span class="hanzi">' + esc(w.han) + '</span>' + TV.nutLoa(w.han, false, w.doc) + '<span class="lt-tu-py">' + TV.pyHtml(w.py) + '</span></div>'; }
 
@@ -1198,7 +1235,7 @@
     var tl = tong ? Math.round(B.dung / tong * 100) : 0;
     var loi = tl === 100 ? 'Xuất sắc! Đúng hết rồi 🎉' : tl >= 80 ? 'Rất tốt! Ôn lại vài từ còn sai là chắc 💪' : tl >= 50 ? 'Khá rồi, luyện thêm một lượt nữa nhé 🌱' : 'Từ mới mà, cứ từ từ. Làm lại lượt nữa sẽ nhớ hơn 🌱';
     amThanh(tl >= 80 ? 'xong' : 'xongVua');
-    var coChangSau = !BAI && S.cap !== 'KHO' && S.chang >= 0 && (S.chang + 1) * CHANG < S.ds.length;
+    var coChangSau = !BAI && !laKhoLoi(S.cap) && S.chang >= 0 && (S.chang + 1) * CHANG < S.ds.length;
     veThanh();                                                // cập nhật số "thuộc x/20" trong ô chặng và thanh tổng
     khuBai.innerHTML = '<div class="lt-ket-qua card">' + (B.hetGio ? '<p class="lt-het-gio">⏰ Hết giờ! Bài đã tự nộp, câu chưa làm tính là sai.</p>' : '') + '<div class="lt-diem">' + tl + '%</div><p class="lt-loi">' + loi + '</p>' +
       '<p class="lt-goi-y">Đúng ' + B.dung + ' / ' + tong + ' câu' + (BAI ? ' · 🔥 Chuỗi dài nhất ' + B.chuoiMax + ' · ⏱ ' + thoiGian(B.giay = Math.round((Date.now() - B.luc) / 1000)) : '') + '</p>' +
@@ -1316,5 +1353,6 @@
   var h = location.hash;
   if (BAI) chonCap('BAI');
   else if (/^#tu-kho/.test(h)) chonCap('KHO');
+  else if (/^#so-loi/.test(h)) chonCap('LOI');
   else { var c = (h.match(/hsk([\dMR-]+)/) || [])[1]; chonCap(CAP.indexOf(c) >= 0 ? c : '1'); }
 })();
