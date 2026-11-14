@@ -1,3 +1,63 @@
+/* Sửa nội dung bài học (2026-11-14): chỗ cô sửa ở trang giáo viên (tab Bộ câu hỏi) được chồng lên các tệp data/*.json lúc tải.
+   An toàn: máy chủ chậm / lỗi / bản gốc đã đổi → dùng bản gốc, trang không hỏng. Địa chỉ máy chủ = QM_TK_API (cau-hinh.js), có bản dự phòng vì header.js chạy trước. */
+(function () {
+  try {
+    if (window.QM_SUA || !window.fetch) return;
+    var GOC = window.fetch.bind(window), KHOA = 'qm-nds-v1', HAN = 5 * 60000, CHO = 2000;
+    var DU_PHONG = 'https://script.google.com/macros/s/AKfycbyG-GAzZtfnWdmRwJAzY5-FKruv1Bc1BXDQOcL8mYMkR_9sgF8ldfGzANWFeda5-wO6/exec';
+    function api() { return window.QM_TK_API || DU_PHONG; }
+    function docLS() { try { return JSON.parse(localStorage.getItem(KHOA) || '{}'); } catch (e) { return {}; } }
+    function ghiLS(o) { try { localStorage.setItem(KHOA, JSON.stringify(o)); } catch (e) {} }
+    function tepCua(u) { var m = String(u).split('?')[0].match(/(?:^|\/)data\/(.+\.json)$/); return m ? m[1] : null; }
+    var DANG = {};
+    function tai(tep, ep) {                         // → Promise<{đường dẫn: {m, g}}>
+      var ls = docLS(), c = ls[tep];
+      if (!ep && c && Date.now() - c.t < HAN) return Promise.resolve(c.d);
+      var p = DANG[tep];
+      if (!p || ep) p = DANG[tep] = GOC(api(), { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ action: 'noiDungSua', tep: [tep] }) })
+        .then(function (r) { return r.json(); })
+        .then(function (o) { if (!o || !o.ok) throw 0; var d = (o.sua && o.sua[tep]) || {}, l = docLS(); l[tep] = { t: Date.now(), d: d }; ghiLS(l); delete DANG[tep]; return d; })
+        .catch(function () { delete DANG[tep]; throw 0; });
+      var cho = new Promise(function (_, no) { setTimeout(no, CHO); });
+      return Promise.race([p, cho]).catch(function () { return c ? c.d : {}; });
+    }
+    function di(goc, duong) {                       // đi theo đường dẫn "a/3/b" → {cha, khoa} hoặc null
+      var ks = duong.split('/').map(decodeURIComponent), cur = goc;
+      for (var i = 0; i < ks.length - 1; i++) { if (cur == null || typeof cur !== 'object') return null; cur = cur[ks[i]]; }
+      return cur != null && typeof cur === 'object' ? { cha: cur, khoa: ks[ks.length - 1] } : null;
+    }
+    function ap(goc, sua) {                         // chồng bản sửa lên dữ liệu; câu "__xoa" gỡ ra sau cùng (từ chỉ số lớn xuống nhỏ)
+      var xoa = [];
+      Object.keys(sua || {}).forEach(function (dd) {
+        try {
+          var x = sua[dd], v = di(goc, dd); if (!v || v.cha[v.khoa] === undefined) return;
+          if (JSON.stringify(v.cha[v.khoa]) !== x.g) return;     // bản gốc đã đổi: bỏ bản sửa cũ
+          if (x.m === '__xoa') xoa.push(v); else v.cha[v.khoa] = JSON.parse(x.m);
+        } catch (e) {}
+      });
+      xoa.sort(function (a, b) { return (+b.khoa || 0) - (+a.khoa || 0); }).forEach(function (v) {
+        if (Array.isArray(v.cha)) v.cha.splice(+v.khoa, 1); else delete v.cha[v.khoa];
+      });
+      return goc;
+    }
+    window.QM_SUA = { tai: function (t) { return tai(t, true).catch(function () { return {}; }); }, ap: ap, ghiNho: function (t, d) { var l = docLS(); l[t] = { t: Date.now(), d: d }; ghiLS(l); }, tepCua: tepCua };
+    window.fetch = function (u, o) {
+      try {
+        var url = typeof u === 'string' ? u : (u && u.url) || '', tep = tepCua(url);
+        if (!tep || /[?&]goc=1/.test(url) || (o && o.method && o.method !== 'GET')) return GOC(u, o);
+        return GOC(u, o).then(function (r) {
+          if (!r.ok) return r;
+          return r.clone().json().then(function (d) {
+            return tai(tep).then(function (sua) {
+              if (!sua || !Object.keys(sua).length) return r;
+              return new Response(JSON.stringify(ap(d, sua)), { status: 200, headers: { 'Content-Type': 'application/json' } });
+            });
+          }).catch(function () { return r; });
+        });
+      } catch (e) { return GOC(u, o); }
+    };
+  } catch (e) {}
+})();
 /* Chế độ dạy trên lớp (mở từ tab "Dạy trên lớp" của trang giáo viên, trong khung iframe): ?day=1 ẩn header/chân trang cho rộng màn hình;
    &xemhs=1 = xem như học sinh (ẩn công cụ giáo viên). */
 (function () {

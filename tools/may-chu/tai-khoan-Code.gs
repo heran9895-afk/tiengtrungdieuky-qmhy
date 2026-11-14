@@ -34,12 +34,14 @@
      học sinh chỉ nhận đề khi lớp được giao "<mục>/bai-kiem-tra" và đang trong khung giờ; máy chủ giữ giờ, tự lưu bài,
      chấm khi nộp / hết giờ; cô chấm tay câu dịch, cho làm lại, công bố đáp án. Nhớ chạy "caiDat" một lần (thêm KiemTraDe,
      KiemTraBai, KiemTraCongBo).
+   2026-11-14b: SỬA NỘI DUNG BÀI HỌC từ trang giáo viên (tab Bộ câu hỏi): chỗ cô sửa lưu ở trang NoiDungSua, web học sinh chồng lên tệp data/*.json khi tải.
+     Lệnh mới: noiDungSua (ai cũng đọc được — là nội dung bài), gvSuaNoiDung (chỉ giáo viên). Nhớ chạy "caiDat" để tạo trang NoiDungSua.
    2026-11-14a: BUỔI HỌC TRÊN LỚP (Phòng lớp): cô bấm Kết thúc buổi → lưu bộ câu hỏi + đáp án đúng + (chỉ cô thấy) ai trả lời gì vào trang BuoiHoc;
      học sinh của lớp xem lại câu hỏi + đáp án đúng trong tài khoản. Lệnh mới: gvLuuBuoiHoc, gvDsBuoiHoc, buoiHocCuaToi.
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-14a';
+var PHIEN_BAN = '2026-11-14b';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -62,6 +64,7 @@ var TRANG = {
   KiemTraDe: ['maDe', 'phienBan', 'luuLuc', 'json1', 'json2', 'json3', 'json4', 'nguoiLuu'],
   KiemTraBai: ['maDe', 'hoSoId', 'sub', 'hoTenHocSinh', 'lop', 'maLop', 'maDot', 'batDauLuc', 'hetGioLuc', 'nopLuc', 'traLoi', 'nghe', 'chamTay', 'tong', 'trangThai', 'thietBi'],
   KiemTraCongBo: ['maDe', 'maLop', 'luc'],
+  NoiDungSua: ['tep', 'duongDan', 'goc', 'moi', 'suaLuc', 'nguoi'],
   BuoiHoc:   ['maBuoi', 'taoLuc', 'maLop', 'tieuDe', 'phan', 'soCau', 'json'],
   PhienChoi: ['maPhien', 'taoLuc', 'maLop', 'tro', 'tenTro', 'tenBai', 'muc', 'lesson', 'trang', 'ketThucLuc', 'ghiChu', 'bai']
 };
@@ -146,6 +149,8 @@ function doPost(e) {
       case 'gvKtCham':   return traVe(coKhoa(function () { return gvKtCham(xacGV(d), d); }));
       case 'gvKtLamLai': return traVe(coKhoa(function () { return gvKtLamLai(xacGV(d), d); }));
       case 'gvKtCongBo': return traVe(coKhoa(function () { return gvKtCongBo(xacGV(d), d); }));
+      case 'noiDungSua':   return traVe(ndsDoc(d.tep));
+      case 'gvSuaNoiDung': return traVe(coKhoa(function () { return gvSuaNoiDung(xacGV(d), d); }));
       case 'gvLuuBuoiHoc': return traVe(coKhoa(function () { return gvLuuBuoiHoc(xacGV(d), d); }));
       case 'gvDsBuoiHoc':  xacGV(d); return traVe(buoiHocDs(d.maLop, true));
       case 'buoiHocCuaToi': { var p0 = xacPhien(d), hs0 = hoSoCua(p0, d.hoSoId); return traVe(buoiHocDs(hs0.maLop, false)); }
@@ -324,6 +329,39 @@ function hoSoCua(p, hoSoId) {
 
 // ---------------- Buổi học trên lớp (Phòng lớp) ----------------
 // cau[] = { n, kieu, de, dapAn, giai?, cacDap?[], goi?: [{ten, chon, dung}] }  — "goi" (ai trả lời gì) chỉ trả cho giáo viên.
+// ---- Sửa nội dung bài học (2026-11-14b) ----
+// Mỗi dòng: tệp (vd bai/bai-5.json) · đường dẫn tới câu (vd cauLuyen/3) · bản gốc (JSON) · bản mới (JSON, hoặc "__xoa" = ẩn câu)
+function ndsTep(t) { return String(t || '').replace(/[^a-zA-Z0-9\/._-]/g, '').slice(0, 80); }
+function ndsDoc(ds) {
+  var C = CacheService.getScriptCache(), kq = {}, can = [];
+  [].concat(ds || []).slice(0, 12).forEach(function (t) {
+    t = ndsTep(t); if (!t) return;
+    var s = C.get('nds:' + t); if (s) kq[t] = JSON.parse(s); else { can.push(t); kq[t] = {}; }
+  });
+  if (can.length) {
+    bang('NoiDungSua').forEach(function (r) {
+      var t = String(r[0]); if (can.indexOf(t) < 0 || r[3] === '') return;
+      kq[t][String(r[1])] = { m: String(r[3]), g: String(r[2]) };
+    });
+    can.forEach(function (t) { var s = JSON.stringify(kq[t]); if (s.length < 90000) C.put('nds:' + t, s, 21600); });
+  }
+  return { ok: true, sua: kq, bayGio: Date.now() };
+}
+function gvSuaNoiDung(gv, d) {
+  var tep = ndsTep(d.tep), dd = String(d.duongDan || '').slice(0, 300);
+  if (!/^[a-z0-9\/._-]+\.json$/.test(tep) || !dd) throw new Error('Thiếu tệp hoặc vị trí câu');
+  var moi = d.moi == null ? '' : String(d.moi);
+  if (moi.length > TOI_DA_O || String(d.goc || '').length > TOI_DA_O) throw new Error('Nội dung quá dài');
+  if (moi && moi !== '__xoa') JSON.parse(moi);                       // phải là JSON hợp lệ
+  var sh = trang('NoiDungSua'), v = sh.getDataRange().getValues(), dong = -1;
+  for (var i = 1; i < v.length; i++) if (String(v[i][0]) === tep && String(v[i][1]) === dd) { dong = i + 1; break; }
+  if (!moi) { if (dong > 0) sh.deleteRow(dong); }                    // khôi phục bản gốc = bỏ dòng sửa
+  else if (dong > 0) sh.getRange(dong, 3, 1, 4).setValues([[String(d.goc || ''), moi, new Date(), gv.email]]);
+  else sh.appendRow([tep, dd, String(d.goc || ''), moi, new Date(), gv.email]);
+  CacheService.getScriptCache().remove('nds:' + tep);
+  return ndsDoc([tep]);
+}
+
 function gvLuuBuoiHoc(gv, d) {
   var maLop = chuanMa(d.maLop);
   if (!maLop || !lopTheoMa(maLop)) throw new Error('Chưa chọn lớp hợp lệ');

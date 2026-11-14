@@ -179,7 +179,7 @@
   var NHAN_TT = { xong: '✓ Đã xong', muon: '✓ Xong muộn', dang: '● Đang làm', chua: 'Chưa làm', qua: '⏰ Quá hạn' };
 
   // ---------------- khung trang ----------------
-  var TABS = [['tong-quan', '📊 Tổng quan'], ['day', '🏫 Dạy trên lớp'], ['hoc-sinh', '🧑‍🎓 Học sinh'], ['lop', '🏫 Lớp & mở bài'], ['giao-bai', '📋 Giao bài'], ['kiem-tra', '📝 Kiểm tra'], ['tro-choi', '🎮 Trò chơi'], ['tin', '💬 Tin nhắn']];
+  var TABS = [['tong-quan', '📊 Tổng quan'], ['day', '🏫 Dạy trên lớp'], ['bo-cau', '📚 Bộ câu hỏi'], ['hoc-sinh', '🧑‍🎓 Học sinh'], ['lop', '🏫 Lớp & mở bài'], ['giao-bai', '📋 Giao bài'], ['kiem-tra', '📝 Kiểm tra'], ['tro-choi', '🎮 Trò chơi'], ['tin', '💬 Tin nhắn']];
   function tinMoi() { return (D.tinNhan || []).filter(function (t) { return t.trangThai !== 'xong'; }); }
   function ve() {
     app.innerHTML = '<nav class="gv-tabs" role="tablist">' + TABS.map(function (t) {
@@ -192,7 +192,7 @@
   function veTab() {
     var noi = app.querySelector('.gv-noi');
     dungTheoDoi();
-    ({ 'tong-quan': veTongQuan, 'day': function (n) { if (window.QM_GV_DAY) QM_GV_DAY.ve(n, D, ROOT); else n.innerHTML = '<p class="gv-cho">Chưa nạp được tab Dạy trên lớp, cô tải lại trang nhé.</p>'; }, 'hoc-sinh': veHocSinh, 'lop': veLop, 'giao-bai': veGiaoBai, 'kiem-tra': veKiemTra, 'tro-choi': veTroChoi, 'tin': veTin })[TAB](noi);
+    ({ 'tong-quan': veTongQuan, 'day': function (n) { if (window.QM_GV_DAY) QM_GV_DAY.ve(n, D, ROOT); else n.innerHTML = '<p class="gv-cho">Chưa nạp được tab Dạy trên lớp, cô tải lại trang nhé.</p>'; }, 'bo-cau': function (n) { if (window.QM_GV_BO) QM_GV_BO.ve(n, D, ROOT); else n.innerHTML = '<p class="gv-cho">Chưa nạp được tab Bộ câu hỏi, cô tải lại trang nhé.</p>'; }, 'hoc-sinh': veHocSinh, 'lop': veLop, 'giao-bai': veGiaoBai, 'kiem-tra': veKiemTra, 'tro-choi': veTroChoi, 'tin': veTin })[TAB](noi);
   }
 
   // =====================================================================
