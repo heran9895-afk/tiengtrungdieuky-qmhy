@@ -340,3 +340,14 @@ body.gv-mo{overflow:hidden}
 .gv-kt-tk-o{display:inline-flex;flex-direction:column;align-items:center;min-width:44px;padding:4px 6px;border-radius:8px;font-size:12px;line-height:1.25}
 .gv-kt-tk-o b{font-size:13px}
 .gv-kt-tk-o.tot{background:var(--ok-bg);color:var(--ok)}.gv-kt-tk-o.vua{background:#fff6d6;color:#7a5a00}.gv-kt-tk-o.kem{background:var(--no-bg);color:var(--no)}
+
+/* Tổng quan mới (14/11/2026) */
+.gv-loc-tq{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.gv-tick{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#6b6257}
+.gv-tq-dong{display:grid;grid-template-columns:minmax(120px,1.2fr) 2fr 48px;gap:4px 10px;align-items:center;padding:6px 0;border-bottom:1px dashed #eadfc8}
+.gv-tq-dong small{grid-column:1/-1;color:#7a6a55}
+.gv-pt-bar{display:block;height:10px;border-radius:6px;background:#f1ece2;overflow:hidden}
+.gv-pt-bar i{display:block;height:100%;background:#4f9d69}
+.gv-tq-so{text-align:right}
+.gv-chip.vang{background:#fff3cd;color:#8a6d00}
+.gv-cuon{overflow-x:auto}

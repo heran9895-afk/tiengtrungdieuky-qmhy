@@ -43,7 +43,7 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-14f';
+var PHIEN_BAN = '2026-11-14g';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -55,7 +55,7 @@ var HAN_PHIEN = 21600;                     // phiên chơi: tiến trình giữ 
 
 var TRANG = {
   Users:     ['sub', 'email', 'hoTen', 'anh', 'taoLuc', 'lanCuoi'],
-  HoSo:      ['hoSoId', 'sub', 'email', 'hoTenHocSinh', 'lop', 'dongY', 'dongYLuc', 'taoLuc', 'maLop', 'daDocThongBaoLuc'],
+  HoSo:      ['hoSoId', 'sub', 'email', 'hoTenHocSinh', 'lop', 'dongY', 'dongYLuc', 'taoLuc', 'maLop', 'daDocThongBaoLuc', 'taiKhoanThu'],
   Progress:  ['sub', 'hoSoId', 'khoa', 'duLieu', 'capNhatLuc'],
   TrangThai: ['hoSoId', 'hoTenHocSinh', 'lop', 'phan', 'tenPhan', 'trangThai', 'capNhatLuc', 'moRong'],
   Visits:    ['thoiDiem', 'trang', 'sub', 'hoSoId', 'maPhien', 'thietBi'],
@@ -129,6 +129,8 @@ function doPost(e) {
       case 'lopCuaToi':  return traVe(lopCuaToi(xacPhien(d), d));
       // ----- giáo viên -----
       case 'gvDuLieu':   return traVe(gvDuLieu(xacGV(d)));
+      case 'gvPhanTich': return traVe(gvPhanTich(xacGV(d), d));
+      case 'gvDatThu':   return traVe(coKhoa(function () { return gvDatThu(xacGV(d), d); }));
       case 'gvLuuLop':   return traVe(coKhoa(function () { return gvLuuLop(xacGV(d), d); }));
       case 'gvChuyenLop':return traVe(coKhoa(function () { return gvChuyenLop(xacGV(d), d); }));
       case 'gvMoBai':    return traVe(coKhoa(function () { return gvMoBai(xacGV(d), d); }));
@@ -511,7 +513,7 @@ function gvDuLieu(gv) {
   var hocSinh = bang('HoSo').filter(function (r) { return r[0]; }).map(function (r) {
     var u = users[String(r[1])] || {};
     return { hoSoId: String(r[0]), email: String(r[2] || u.email || ''), hoTen: String(r[3]), lop: String(r[4]), maLop: String(r[8] || ''),
-      taoLuc: ms(r[7]), dangNhapLuc: u.lanCuoi || 0 };
+      taoLuc: ms(r[7]), dangNhapLuc: u.lanCuoi || 0, thu: String(r[10]) === 'x', laGv: laGiaoVien(String(r[2] || u.email || '')) };
   });
   var trangThai = bang('TrangThai').filter(function (r) { return r[0]; }).map(function (r) {
     return { hoSoId: String(r[0]), phan: String(r[3]), tenPhan: String(r[4]), tt: String(r[5]) === 'xong' ? 'xong' : 'dang-hoc', t: ms(r[6]), mr: String(r[7]) === 'xong' ? 'xong' : String(r[7]) ? 'dang' : '' };
@@ -1124,4 +1126,61 @@ function saoLuu() {
 function caiSaoLuu() {
   ScriptApp.getProjectTriggers().forEach(function (t) { if (t.getHandlerFunction() === 'saoLuu') ScriptApp.deleteTrigger(t); });
   ScriptApp.newTrigger('saoLuu').timeBased().onWeekDay(ScriptApp.WeekDay.SUNDAY).atHour(3).create();
+}
+
+
+// =====================================================================
+// PHÂN TÍCH CHO TRANG TỔNG QUAN (2026-11-14g): gộp từ nhật ký — trang giáo viên không phải tải từng dòng
+//  cau: mỗi (lớp, phần, câu) — số em làm, số em sai, tỉ lệ chọn từng đáp án; tính trên LẦN ĐẦU của mỗi em với câu đó
+//  hs:  mỗi em — đúng/sai theo dạng bài (mọi lần làm)
+//  luot: các lượt gần đây (xong / bỏ dở, điểm) · tg: thời gian học thực theo lượt truy cập
+//  Tự loại tài khoản giáo viên và tài khoản đã đánh dấu "thử".
+// =====================================================================
+function gvDatThu(gv, d) {
+  var sh = trang('HoSo'), v = sh.getDataRange().getValues(), c = TRANG.HoSo.indexOf('taiKhoanThu') + 1;
+  for (var i = 1; i < v.length; i++) if (String(v[i][0]) === String(d.hoSoId)) { sh.getRange(i + 1, c).setValue(d.thu ? 'x' : ''); return { ok: true }; }
+  throw new Error('Không thấy hồ sơ');
+}
+function gvPhanTich(gv, d) {
+  var ngay = Math.min(Math.max(+d.ngay || 30, 1), 120), bayGio = Date.now(), tu = bayGio - ngay * 864e5;
+  var loai = {}, lopCua = {};
+  bang('HoSo').forEach(function (r) {
+    var id = String(r[0]); if (!id) return;
+    if (laGiaoVien(String(r[2] || '')) || String(r[10]) === 'x') loai[id] = 1;
+    lopCua[id] = String(r[8] || '') || ('t:' + String(r[4] || ''));
+  });
+  var ss = SpreadsheetApp.getActive(), cau = {}, hs = {}, thay = {};
+  var thang = [], t0 = new Date(tu);
+  for (var y = t0.getFullYear(), m = t0.getMonth(); y < new Date().getFullYear() || (y === new Date().getFullYear() && m <= new Date().getMonth()); ) {
+    thang.push('NhatKy-' + y + '-' + ('0' + (m + 1)).slice(-2)); if (++m > 11) { m = 0; y++; }
+  }
+  thang.forEach(function (ten) {
+    var sh = ss.getSheetByName(ten); if (!sh || sh.getLastRow() < 2) return;
+    sh.getRange(2, 1, sh.getLastRow() - 1, NK_COT.length).getValues().forEach(function (r) {
+      var t = ms(r[0]), id = String(r[1]); if (!id || t < tu || loai[id]) return;
+      var phan = String(r[9]), ma = String(r[13]), dang = String(r[12]).split(' · ')[0], dung = +r[17] === 1;
+      var H = hs[id] = hs[id] || { d: {} }; var D = H.d[dang] = H.d[dang] || [0, 0]; D[0]++; if (!dung) D[1]++;
+      var kk = id + '|' + phan + '|' + ma; if (thay[kk]) return; thay[kk] = 1;       // lần đầu của em với câu này
+      var ck = (lopCua[id] || '') + '|' + phan + '|' + ma, C = cau[ck] = cau[ck] || { l: lopCua[id] || '', p: phan, b: String(r[10]), m: ma, d: dang, q: String(r[14]).slice(0, 90), a: String(r[15]).slice(0, 60), n: 0, s: 0, c: {} };
+      C.n++; if (!dung) { C.s++; var x = String(r[16]).slice(0, 60); C.c[x] = (C.c[x] || 0) + 1; }
+    });
+  });
+  var dsCau = Object.keys(cau).map(function (k) { return cau[k]; }).filter(function (c) { return c.s > 0; }).sort(function (a, b) { return b.s - a.s || b.n - a.n; }).slice(0, 1500);
+  dsCau.forEach(function (c) { var top = Object.keys(c.c).sort(function (a, b) { return c.c[b] - c.c[a]; }).slice(0, 4), o = {}; top.forEach(function (k) { o[k] = c.c[k]; }); c.c = o; });
+  // cũng cần tổng số em làm mỗi câu (kể cả đúng hết) để tính tỉ lệ sai: cau chỉ giữ câu có sai; tổng nằm ở c.n
+  var luot = trang('NhatKyLuot').getDataRange().getValues().slice(1).filter(function (r) { return r[0] && ms(r[14]) >= tu && !loai[String(r[1])]; })
+    .sort(function (a, b) { return ms(b[14]) - ms(a[14]); }).slice(0, 2500).map(function (r) {
+      return { id: String(r[1]), l: String(r[4] || ''), ph: String(r[8]), b: String(r[9]), bo: String(r[7]), ht: String(r[6]), lan: +r[12] || 1, bd: ms(r[13]), cn: ms(r[14]), sc: +r[15] || 0, sd: +r[16] || 0, g: +r[17] || 0, tt: String(r[18]) };
+    });
+  var tg = {}, ve = {};
+  trang('ThoiGianHoc').getDataRange().getValues().slice(1).forEach(function (r) {
+    var id = String(r[1]), cn = ms(r[7]); if (!id || cn < tu || loai[id]) return;
+    var T = tg[id] = tg[id] || { g7: 0, v7: 0, gT: 0, vT: 0, cuoi: null, ds: [] }, g = +r[8] || 0;
+    T.gT += g; T.vT++;
+    if (cn >= bayGio - 7 * 864e5) { T.g7 += g; T.v7++; }
+    var v = { b: ms(r[6]), c: cn, g: g, t: String(r[9]).slice(0, 120) };
+    T.ds.push(v); if (!T.cuoi || cn > T.cuoi.c) T.cuoi = v;
+  });
+  Object.keys(tg).forEach(function (id) { tg[id].ds = tg[id].ds.sort(function (a, b) { return b.c - a.c; }).slice(0, 12); });
+  return { ok: true, ngay: ngay, bayGio: bayGio, cau: dsCau, hs: hs, luot: luot, tg: tg };
 }
