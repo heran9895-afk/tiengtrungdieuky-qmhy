@@ -43,7 +43,7 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-14h';
+var PHIEN_BAN = '2026-11-14i';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -381,8 +381,7 @@ function gvSuaNoiDung(gv, d) {
 function gvLuuBuoiHoc(gv, d) {
   var maLop = chuanMa(d.maLop), dsHs = [].concat(d.dsHs || []).slice(0, 80).map(function (x) { return gon(x, 24); }).filter(Boolean);
   if (maLop) { if (!lopTheoMa(maLop)) throw new Error('Chưa chọn lớp hợp lệ'); }
-  else if (dsHs.length) maLop = 'MO';                                    // phòng mở: không thuộc lớp nào, xem lại theo danh sách hồ sơ có mặt
-  else throw new Error('Chưa chọn lớp hợp lệ');
+  else maLop = 'MO';                                                     // phòng mở: không thuộc lớp nào, xem lại theo danh sách hồ sơ có mặt (cô tự thử một mình thì danh sách trống vẫn lưu được)
   var cau = Array.isArray(d.cau) ? d.cau.slice(0, 80) : [];
   if (!cau.length) throw new Error('Buổi học chưa có câu nào');
   var js = JSON.stringify(cau);
