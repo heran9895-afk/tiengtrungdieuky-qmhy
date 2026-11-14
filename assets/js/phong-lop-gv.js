@@ -91,11 +91,10 @@
     function moi() {
       A.batDau(); R.plan = A.chotBo(); R.daLam0 = []; R.off = 0;
       if (!R.plan) return;
-      if (R.lop) QM_TK.goi('gvBoDeLuu', { maLop: R.lop, phan: phanId(), bai: A.tenBai(), nhomBo: A.bo(), tong: R.plan.hang.length, tiepTuc: 0, plan: JSON.stringify({ plan: R.plan, daLam: [] }) })
+      QM_TK.goi('gvBoDeLuu', { maLop: R.lop || 'MO', phan: phanId(), bai: A.tenBai(), nhomBo: A.bo(), tong: R.plan.hang.length, tiepTuc: 0, plan: JSON.stringify({ plan: R.plan, daLam: [] }) })
         .then(function (r) { R.boDe = r.maBoDe; }).catch(function () { loi('Chưa lưu được bộ đề lên máy chủ (vẫn dạy bình thường, nhưng buổi sau chưa tiếp tục được).'); });
     }
-    if (!R.lop) return moi();                                   // phòng mở: không có lớp để nhớ bộ đề
-    QM_TK.goi('gvBoDeDo', { maLop: R.lop, phan: phanId(), nhomBo: A.bo() }).then(function (r) {
+    QM_TK.goi('gvBoDeDo', { maLop: R.lop || 'MO', phan: phanId(), nhomBo: A.bo() }).then(function (r) {
       var b = r.boDe, o = null; if (b) { try { o = JSON.parse(b.plan); } catch (e) {} }
       if (b && o && o.plan && b.tiepTuc < b.tong && confirm('Lớp này còn bộ đề đang dạy dở (đã xong ' + b.tiepTuc + '/' + b.tong + ' câu).\n\nOK = Tiếp tục từ câu ' + (b.tiepTuc + 1) + '\nHủy = Làm lại từ đầu (bộ đề mới)')) {
         R.plan = o.plan; R.daLam0 = o.daLam || []; R.off = R.daLam0.length; R.boDe = b.maBoDe;
