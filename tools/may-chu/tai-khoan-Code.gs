@@ -43,7 +43,7 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-15d';
+var PHIEN_BAN = '2026-11-15e';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -63,6 +63,7 @@ var TRANG = {
   MoBai:     ['maLop', 'bai', 'tenBai', 'moLuc'],
   GiaoBai:   ['maGiao', 'maDot', 'maLop', 'phan', 'tenPhan', 'batDau', 'hanNop', 'ghiChu', 'taoLuc'],
   MoiLop:    ['email', 'hoTen', 'maLop', 'taoLuc', 'daNhan'],
+  GiucBai:   ['hoSoId', 'phan', 'giucLuc', 'soLan', 'giucBoi'],     // cô giục nộp bài: mỗi (em, phần) một dòng, giục lại thì cập nhật giucLuc
   TinNhan:   ['maTin', 'thoiDiem', 'loai', 'noiDung', 'trang', 'muc', 'hoTen', 'lienHe', 'email', 'sub', 'hoSoId', 'maLop', 'trangThai', 'traLoi', 'traLoiLuc'],
   KiemTraDe: ['maDe', 'phienBan', 'luuLuc', 'json1', 'json2', 'json3', 'json4', 'nguoiLuu'],
   KiemTraBai: ['maDe', 'hoSoId', 'sub', 'hoTenHocSinh', 'lop', 'maLop', 'maDot', 'batDauLuc', 'hetGioLuc', 'nopLuc', 'traLoi', 'nghe', 'chamTay', 'tong', 'trangThai', 'thietBi'],
@@ -172,6 +173,7 @@ function doPost(e) {
       case 'buoiHocCuaToi': { var p0 = xacPhien(d), hs0 = hoSoCua(p0, d.hoSoId), ls0 = dsLopCuaHs(hs0); if (ls0.length <= 1) return traVe(buoiHocDs(hs0.maLop, false, hs0.hoSoId));
         var gop = []; ls0.forEach(function (m) { gop = gop.concat(buoiHocDs(m, false, hs0.hoSoId).buoi); });
         gop.sort(function (a, b) { return b.taoLuc - a.taoLuc; }); return traVe({ ok: true, buoi: gop.slice(0, 30) }); }
+      case 'gvGiuc':     return traVe(coKhoa(function () { return gvGiuc(xacGV(d), d); }));
       case 'gvThemLop':  return traVe(coKhoa(function () { return gvThemLop(xacGV(d), d); }));
       default:           return traVe({ ok: false, loi: 'Lệnh không hợp lệ: ' + d.action });
     }
@@ -278,6 +280,11 @@ function dsLopCuaHs(hs) {
   return kq;
 }
 function thongTinLopHs(hs) {
+  var kq = thongTinLopHs0(hs);
+  if (kq) kq.giuc = giucCua(hs.hoSoId, kq.giaoBai || []);     // cô giục nộp bài: học sinh thấy cho tới khi nộp xong
+  return kq;
+}
+function thongTinLopHs0(hs) {
   var ls = dsLopCuaHs(hs);
   if (ls.length <= 1) return thongTinLop(ls[0] || hs.maLop);
   var ts = ls.map(thongTinLop).filter(Boolean), mo = {}, giao = [];
@@ -554,7 +561,7 @@ function gvDuLieu(gv) {
       batDau: ms(r[5]), hanNop: ms(r[6]), ghiChu: String(r[7]), taoLuc: ms(r[8]) };
   });
   var moiLop = bang('MoiLop').filter(function (r) { return r[0]; }).map(function (r) { return { email: String(r[0]), hoTen: String(r[1]), maLop: String(r[2]), taoLuc: ms(r[3]), daNhan: String(r[4] || '') }; });
-  return { ok: true, phienBan: PHIEN_BAN, gv: gv.email, bayGio: Date.now(), lop: dsLop(), hocSinh: hocSinh, trangThai: trangThai, moBai: moBai, giaoBai: giaoBai, moiLop: moiLop, tinNhan: dsTin(function () { return true; }, 300),
+  return { ok: true, phienBan: PHIEN_BAN, gv: gv.email, bayGio: Date.now(), lop: dsLop(), hocSinh: hocSinh, trangThai: trangThai, moBai: moBai, giaoBai: giaoBai, moiLop: moiLop, giuc: dsGiuc(), tinNhan: dsTin(function () { return true; }, 300),
     phienChoi: dsPhien().slice(0, 40) };
 }
 function taoMaLop() {
@@ -1228,10 +1235,10 @@ function gvPhanTich(gv, d) {
     var sh = ss.getSheetByName(ten); if (!sh || sh.getLastRow() < 2) return;
     sh.getRange(2, 1, sh.getLastRow() - 1, NK_COT.length).getValues().forEach(function (r) {
       var t = ms(r[0]), id = String(r[1]); if (!id || t < tu || loai[id] || (ht && String(r[6]) !== ht)) return;
-      var phan = String(r[9]), ma = String(r[13]), dang = String(r[12]).split(' · ')[0], dung = +r[17] === 1;
+      var phan = String(r[9]), ma = String(r[13]), dang = String(r[12]).split(' · ')[0], pn = String(r[12]).split(' · ').slice(1).join(' · ').slice(0, 80), dung = +r[17] === 1;
       var H = hs[id] = hs[id] || { d: {} }; var D = H.d[dang] = H.d[dang] || [0, 0]; D[0]++; if (!dung) D[1]++;
       var kk = id + '|' + phan + '|' + ma; if (thay[kk]) return; thay[kk] = 1;       // lần đầu của em với câu này
-      var ck = (lopCua[id] || '') + '|' + phan + '|' + ma, C = cau[ck] = cau[ck] || { l: lopCua[id] || '', p: phan, b: String(r[10]), m: ma, d: dang, q: String(r[14]).slice(0, 90), a: String(r[15]).slice(0, 60), n: 0, s: 0, c: {} };
+      var ck = (lopCua[id] || '') + '|' + phan + '|' + ma, C = cau[ck] = cau[ck] || { l: lopCua[id] || '', p: phan, b: String(r[10]), pn: pn, m: ma, d: dang, q: String(r[14]).slice(0, 90), a: String(r[15]).slice(0, 60), n: 0, s: 0, c: {} };
       C.n++; if (!dung) { C.s++; var x = String(r[16]).slice(0, 60); C.c[x] = (C.c[x] || 0) + 1; }
     });
   });
@@ -1312,4 +1319,34 @@ function gvThemLop(gv, d) {
     sh.getRange(i + 1, 12).setValue(cur.join(',')); n++;
   }
   return { ok: true, soHs: n };
+}
+
+// ---------------- Giục nộp bài (2026-11-15e) ----------------
+var GIUC_CACH = 3 * 3600 * 1000;           // một em, một phần: giục lại sau tối thiểu 3 giờ
+function dsGiuc() {
+  return bang('GiucBai').filter(function (r) { return r[0]; }).map(function (r) { return { hoSoId: String(r[0]), phan: String(r[1]), giucLuc: ms(r[2]), soLan: +r[3] || 1 }; });
+}
+function giucCua(hoSoId, giaoBai) {          // các lời giục còn hiệu lực của một em: phần đó đang nằm trong bài giao của em
+  var han = {};
+  (giaoBai || []).forEach(function (g) { if (!han[g.phan] || g.hanNop > han[g.phan].hanNop) han[g.phan] = g; });
+  return dsGiuc().filter(function (x) { return x.hoSoId === hoSoId && han[x.phan]; })
+    .map(function (x) { return { phan: x.phan, tenPhan: han[x.phan].tenPhan || x.phan, hanNop: han[x.phan].hanNop, giucLuc: x.giucLuc }; });
+}
+// muc: [{hoSoId, phan}] — giục từng em với từng phần
+function gvGiuc(gv, d) {
+  var muc = [].concat(d.muc || []).slice(0, 400), sh = trang('GiucBai'), v = sh.getDataRange().getValues(), co = {}, hs = {}, bayGio = Date.now();
+  for (var i = 1; i < v.length; i++) co[String(v[i][0]) + '|' + String(v[i][1])] = i;
+  bang('HoSo').forEach(function (r) { if (r[0]) hs[String(r[0])] = 1; });
+  var them = [], soGiuc = 0, boQua = 0;
+  muc.forEach(function (m) {
+    var id = String(m.hoSoId || ''), phan = String(m.phan || '').slice(0, 80);
+    if (!hs[id] || !/^[A-Za-z0-9\/_-]{3,80}$/.test(phan)) return;
+    var k = id + '|' + phan, i = co[k];
+    if (i != null) {
+      if (bayGio - ms(v[i][2]) < GIUC_CACH) { boQua++; return; }
+      sh.getRange(i + 1, 3, 1, 3).setValues([[new Date(), (+v[i][3] || 1) + 1, gv.email]]); v[i][2] = new Date(); soGiuc++;
+    } else { them.push([id, phan, new Date(), 1, gv.email]); co[k] = -1; soGiuc++; }
+  });
+  if (them.length) sh.getRange(sh.getLastRow() + 1, 1, them.length, 5).setValues(them);
+  return { ok: true, soGiuc: soGiuc, boQua: boQua, giuc: dsGiuc() };
 }

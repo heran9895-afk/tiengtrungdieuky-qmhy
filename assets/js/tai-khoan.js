@@ -652,7 +652,7 @@
     var cu = document.querySelector('.tk-tb-giao'); if (cu) cu.remove();
     if (!moi.length) return;
     var d = document.createElement('div'); d.className = 'tk-tb-giao'; d.setAttribute('role', 'status');
-    d.style.cssText = 'position:fixed;left:12px;right:12px;bottom:' + (document.querySelector('.tk-tb-nc') ? '150px' : '12px') + ';z-index:9997;max-width:560px;margin:0 auto;background:#fff8e1;border:2px solid #e0a800;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.2);padding:12px 14px;font-size:15px;line-height:1.45';
+    d.style.cssText = 'position:fixed;left:12px;right:12px;bottom:' + (document.querySelector('.tk-tb-giuc') ? (document.querySelector('.tk-tb-giuc').offsetHeight + 22) + 'px' : document.querySelector('.tk-tb-nc') ? '150px' : '12px') + ';z-index:9997;max-width:560px;margin:0 auto;background:#fff8e1;border:2px solid #e0a800;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.2);padding:12px 14px;font-size:15px;line-height:1.45';
     d.innerHTML = '<div><b>📋 Cô vừa giao bài mới</b></div><ul style="margin:6px 0 8px 18px;padding:0">' + moi.slice(0, 4).map(function (o) {
       return '<li><a href="' + ROOT + urlTuKhoa(o.g.phan) + '" data-k="' + esc(o.k) + '"><b>' + esc(o.g.tenPhan || o.g.phan) + '</b></a> <small>· hạn ' + ngayGio(o.g.hanNop) + '</small></li>'; }).join('') +
       (moi.length > 4 ? '<li>và ' + (moi.length - 4) + ' bài nữa…</li>' : '') + '</ul><button type="button" class="tk-btn chinh">Đã xem</button>';
@@ -661,7 +661,24 @@
     d.addEventListener('click', function (e) { var a = e.target.closest('a[data-k]'); if (a) danhDau([a.dataset.k]); });
     document.body.appendChild(d);
   }
-  function veLop() { veKhoa(); if (TK) { veGiao(); thongBaoGiao(); } }
+  // Cô giục nộp bài: hộp đỏ hiện trên MỌI trang cho tới khi em NỘP XONG phần đó (không có nút tắt; chỉ thu nhỏ được trong lúc đang xem trang)
+  function thongBaoGiuc() {
+    var h = hoSoDang(), L = lopDang(), cu = document.querySelector('.tk-tb-giuc');
+    var ds = (h && L && !TK.giaoVien ? L.giuc || [] : []).filter(function (g) { var x = PHAN.phan[g.phan]; return !(x && x.tt === 'xong'); })
+      .sort(function (a, b) { return a.hanNop - b.hanNop; });
+    if (!ds.length) { if (cu) cu.remove(); return; }
+    var nho = false; try { nho = sessionStorage.getItem('qmhy:giucNho') === '1'; } catch (e) {}
+    var d = cu || document.createElement('div'); d.className = 'tk-tb-giuc'; d.setAttribute('role', 'alert');
+    d.style.cssText = 'position:fixed;left:12px;right:12px;bottom:12px;z-index:9998;max-width:560px;margin:0 auto;background:#ffebee;border:2px solid #d32f2f;border-radius:12px;padding:10px 14px;box-shadow:0 6px 22px rgba(0,0,0,.25);font-size:15px;line-height:1.5;color:#3b1d1d';
+    d.innerHTML = '<div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><b>⏰ Cô nhắc bạn nộp bài (' + ds.length + ' phần chưa xong)</b>' +
+      '<button type="button" class="tk-giuc-thu" style="border:0;background:transparent;font-size:14px;cursor:pointer;color:#b71c1c;font-weight:700">' + (nho ? 'Mở ▲' : 'Thu nhỏ ▼') + '</button></div>' +
+      (nho ? '' : '<ul style="margin:6px 0 2px 18px;padding:0">' + ds.slice(0, 5).map(function (g) {
+        return '<li><a href="' + ROOT + urlTuKhoa(g.phan) + '"><b>' + esc(g.tenPhan || g.phan) + '</b></a> <small>· hạn ' + ngayGio(g.hanNop) + (g.hanNop < Date.now() ? ' · <b style="color:#b71c1c">đã quá hạn</b>' : '') + '</small></li>'; }).join('') +
+        (ds.length > 5 ? '<li>và ' + (ds.length - 5) + ' phần nữa…</li>' : '') + '</ul><div style="font-size:13px;color:#7a3b3b">Nộp xong phần nào thì phần đó tự biến mất khỏi nhắc nhở.</div>');
+    d.querySelector('.tk-giuc-thu').onclick = function () { try { sessionStorage.setItem('qmhy:giucNho', nho ? '0' : '1'); } catch (e) {} thongBaoGiuc(); };
+    if (!cu) document.body.appendChild(d);
+  }
+  function veLop() { veKhoa(); if (TK) { veGiao(); thongBaoGiuc(); thongBaoGiao(); } }
   // Thông tin lớp từ máy chủ là chuẩn: cô có thể vừa xếp / chuyển / bỏ lớp cho hồ sơ này (bản hồ sơ trên máy có từ lúc đăng nhập)
   function apLop(L) {
     TK.lop = L || null; TK.lopLuc = Date.now(); DA_HOI_LOP = true;

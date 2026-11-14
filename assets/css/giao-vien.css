@@ -53,7 +53,7 @@
 .gv-o-so.nho .gv-o{padding:10px 12px 9px}.gv-o-so.nho .gv-o b{font-size:22px}
 .gv-o-so.nho .gv-o b:empty{display:none}
 
-.gv-hai-cot{display:grid;grid-template-columns:1.25fr 1fr;gap:16px;align-items:start}
+.gv-hai-cot{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
 
 /* chip trạng thái */
 .gv-chip{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:800;background:#f1ece2;color:#6b6257;white-space:nowrap;vertical-align:middle}
@@ -360,3 +360,4 @@ body.gv-mo{overflow:hidden}
 .gv-lop-than{padding-top:4px}
 .gv-tao-lop-the>summary{cursor:pointer;color:var(--brand);font-weight:800}
 .gv-cau-sai li{display:block;line-height:1.7}.gv-cau-sai li small{display:block;color:var(--muted)}
+.gv-hai-cot-sai{align-items:start}.gv-vitri{display:block;margin-top:4px;color:var(--muted)}.gv-vitri b{color:var(--ink,#333)}.gv-vitri a{font-weight:800}
