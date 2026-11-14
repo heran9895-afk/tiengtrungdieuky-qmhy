@@ -626,7 +626,7 @@
   window.QM_TK = { hoSoId: function () { return TK && TK.hoSoId || ''; }, hoSoDang: hoSoDang, dangNhap: manDangNhap,
     dongBo: function () { return dongBo().catch(function () {}); }, veLop: veLop,
     // trang giáo viên dùng chung phiên đăng nhập
-    giaoVien: function () { return !!(TK && TK.giaoVien) && !/[?&]xemhs=1/.test(location.search); }, nguoiDung: function () { return TK && TK.nguoiDung || null; },
+    giaoVien: function () { return !!(TK && TK.giaoVien) && !/[?&]xemhs=1/.test(location.search) && window.name !== 'qm-day-hs'; }, nguoiDung: function () { return TK && TK.nguoiDung || null; },
     goi: function (a, d) { return goi(a, d); }, moTaiKhoan: moNut, phien: function () { return TK && TK.phien || ''; },
     laGiaoVien: function () { if (TK && !TK.giaoVien) { TK.giaoVien = true; luuTK(); veNut(); } } };
   var LA_TRANG_GV = /\/giao-vien\/(index\.html)?$/.test(location.pathname);

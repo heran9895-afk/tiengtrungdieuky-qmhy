@@ -61,9 +61,9 @@
 /* Chế độ dạy trên lớp (mở từ tab "Dạy trên lớp" của trang giáo viên, trong khung iframe): ?day=1 ẩn header/chân trang cho rộng màn hình;
    &xemhs=1 = xem như học sinh (ẩn công cụ giáo viên). */
 (function () {
-  var q = location.search; if (!/[?&]day=1/.test(q)) return;
+  var q = location.search + ' ' + (window.name || ''); if (!/[?&]day=1/.test(q) && !/^qm-day/.test(window.name || '')) return;   // window.name giữ chế độ khi cô bấm sang trang khác ngay trong khung
   var css = '.sh-header,.sh-nav-bar,.sf,.sf-end{display:none!important}body{padding-bottom:0!important}';
-  if (/[?&]xemhs=1/.test(q)) css += '.dc-gv,.dc-khu-gv,.gt-fab{display:none!important}';
+  if (/[?&]xemhs=1/.test(q) || window.name === 'qm-day-hs') css += '.dc-gv,.dc-khu-gv,.gt-fab{display:none!important}';
   var st = document.createElement('style'); st.textContent = css; (document.head || document.documentElement).appendChild(st);
 })();
 /* =========================================================

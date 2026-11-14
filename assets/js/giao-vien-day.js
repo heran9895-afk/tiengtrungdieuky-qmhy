@@ -58,7 +58,7 @@
       o.innerHTML = '<div class="gvd-top"><span class="tieu">' + esc(tieu) + (cur.lop ? ' · ' + esc(ten(cur.lop)) : '') + (hs ? ' · 👁 đang xem như học sinh' : '') + '</span>' +
         '<button type="button" data-a="hs" class="' + (hs ? 'on' : '') + '">' + (hs ? '🧑‍🏫 Về chế độ cô' : '👁 Xem như học sinh') + '</button>' +
         '<button type="button" data-a="fs">⛶ Toàn màn hình</button><a href="' + esc(url(path, hs).replace('?day=1&', '?').replace('?day=1', '')) + '" target="_blank" rel="noopener">↗ Tab riêng</a>' +
-        '<button type="button" data-a="x">✕ Đóng</button></div><iframe src="' + esc(url(path, hs)) + '" allow="autoplay; fullscreen"></iframe>';
+        '<button type="button" data-a="x">✕ Đóng</button></div><iframe name="' + (hs ? 'qm-day-hs' : 'qm-day') + '" src="' + esc(url(path, hs)) + '" allow="autoplay; fullscreen"></iframe>';
       document.body.appendChild(o); document.body.style.overflow = 'hidden';
       o.querySelector('.gvd-top').addEventListener('click', function (e) {
         var b = e.target.closest('button[data-a]'); if (!b) return;
