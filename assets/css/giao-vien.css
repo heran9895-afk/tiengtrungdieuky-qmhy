@@ -359,3 +359,4 @@ body.gv-mo{overflow:hidden}
 .gv-tabs-lop{margin:12px 0 10px;flex-wrap:wrap}
 .gv-lop-than{padding-top:4px}
 .gv-tao-lop-the>summary{cursor:pointer;color:var(--brand);font-weight:800}
+.gv-cau-sai li{display:block;line-height:1.7}.gv-cau-sai li small{display:block;color:var(--muted)}

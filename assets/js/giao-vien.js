@@ -259,6 +259,9 @@
     }); });
     return kq;
   }
+  var TEN_DANG = { tm: 'Chọn thanh mẫu (phụ âm đầu)', vm: 'Chọn vận mẫu (vần)', td: 'Chọn thanh điệu', tranh: 'Nghe, chọn tranh', nghe: 'Nghe hiểu', 'doc-tranh': 'Đọc, chọn tranh', 'doc-ghep': 'Đọc, ghép', 'doc-dien': 'Đọc, điền từ', 'doc-hoi': 'Đọc, trả lời câu hỏi' };
+  function tenDang(k) { return TEN_DANG[k] || k; }
+  function tenBaiGon(b) { return String(b || '').replace(/\s*·\s*(?=·|$)/g, '').replace(/[\s·]+$/, ''); }
   function loiLop() {                         // câu cả lớp hay sai (lần đầu của mỗi em), gộp theo lớp đang lọc
     if (!PT) return { cau: [], dang: [] };
     var m = {};
@@ -278,7 +281,7 @@
   function dangSaiCua(id, so) {
     var H = PT && PT.hs[id]; if (!H) return '';
     return Object.keys(H.d).filter(function (k) { return H.d[k][0] >= 5 && H.d[k][1] > 0; }).sort(function (a, b) { return H.d[b][1] / H.d[b][0] - H.d[a][1] / H.d[a][0]; }).slice(0, so || 2)
-      .map(function (k) { return esc(k) + ' ' + Math.round(H.d[k][1] / H.d[k][0] * 100) + '%'; }).join(' · ');
+      .map(function (k) { return esc(tenDang(k)) + ' ' + Math.round(H.d[k][1] / H.d[k][0] * 100) + '%'; }).join(' · ');
   }
   function taiBuoiLop(noi) {
     var k = noi.querySelector('#gvBuoi'); if (!k) return;
@@ -333,12 +336,14 @@
               x[1].map(function (h) { return '<button type="button" class="gv-ten-hs" data-hs="' + esc(h.hoSoId) + '">' + esc(h.hoTen) + '</button>'; }).join(', ') + '</li>'; }).join('') + '</ul>' : '') + '</div>' +
       '</div>' +
       // 3. Cả lớp sai ở đâu
-      '<div class="gv-the"><div class="gv-the-dau"><h3>1️⃣ Cả lớp sai ở đâu</h3><small>tính lần đầu của mỗi em với từng câu</small></div>' +
-        (!PT ? '<p class="gv-trong">' + (PT_DANG ? 'Đang tải…' : 'Chưa có số liệu.') + '</p>' : (loi.cau.length ? '<ul class="gv-ds-chu-y">' + loi.cau.map(function (x) {
-          return '<li><b>' + esc(x.q) + '</b> → ' + esc(x.a) + ' <span class="gv-chip do">' + x.s + '/' + x.n + ' em sai (' + Math.round(x.s / x.n * 100) + '%)</span><br><small>' + esc(x.d) + (x.b ? ' · ' + esc(x.b) : '') +
-            (Object.keys(x.c).length ? ' · hay chọn nhầm: ' + Object.keys(x.c).sort(function (a, b) { return x.c[b] - x.c[a]; }).slice(0, 3).map(function (k) { return esc(k) + ' (' + x.c[k] + ')'; }).join(', ') : '') + '</small></li>'; }).join('') + '</ul>'
+      '<div class="gv-the"><div class="gv-the-dau"><h3>1️⃣ Cả lớp sai ở đâu</h3><small>Câu nhiều em trả lời sai ngay lần đầu làm (từ 3 em trở lên làm câu đó)</small></div>' +
+        (!PT ? '<p class="gv-trong">' + (PT_DANG ? 'Đang tải…' : 'Chưa có số liệu.') + '</p>' : (loi.cau.length ? '<ul class="gv-ds-chu-y gv-cau-sai">' + loi.cau.map(function (x) {
+          var nham = Object.keys(x.c).sort(function (a, b) { return x.c[b] - x.c[a]; }).slice(0, 3).map(function (k) { return '<b>' + esc(k) + '</b> (' + x.c[k] + ' lần)'; }).join(', ');
+          return '<li><div><span class="gv-chip do">' + x.s + '/' + x.n + ' em sai (' + Math.round(x.s / x.n * 100) + '%)</span> Câu: <b>' + esc(x.q) + '</b></div>' +
+            '<div>✅ Đáp án đúng: <b>' + esc(x.a) + '</b>' + (nham ? ' &nbsp;·&nbsp; ❌ Các em hay chọn nhầm: ' + nham : '') + '</div>' +
+            '<small>Dạng: ' + esc(tenDang(x.d)) + (tenBaiGon(x.b) ? ' · ' + esc(tenBaiGon(x.b)) : '') + '</small></li>'; }).join('') + '</ul>'
           : '<p class="gv-trong">Chưa có câu nào ≥ 3 em làm mà nhiều em sai.</p>') +
-          (loi.dang.length ? '<h4>Dạng bài cả lớp hay sai</h4><ul class="gv-ds-chu-y">' + loi.dang.map(function (x) { return '<li>' + esc(x.t) + ' <span class="gv-chip vang">' + Math.round(x.s / x.n * 100) + '% sai</span> <small>' + x.s + '/' + x.n + ' lượt trả lời</small></li>'; }).join('') + '</ul>' : '')) + '</div>' +
+          (loi.dang.length ? '<h4>Dạng bài cả lớp hay sai</h4><ul class="gv-ds-chu-y">' + loi.dang.map(function (x) { return '<li><b>' + esc(tenDang(x.t)) + '</b> <span class="gv-chip vang">sai ' + Math.round(x.s / x.n * 100) + '%</span> <small>(' + x.s + ' câu sai trên ' + x.n + ' lượt trả lời)</small></li>'; }).join('') + '</ul>' : '')) + '</div>' +
       // 4. Hồ sơ từng em
       '<div class="gv-the"><div class="gv-the-dau"><h3>2️⃣ Hồ sơ từng em</h3><small>bấm tên để xem chi tiết</small></div>' +
         (ds.length ? '<div class="gv-cuon"><table class="gv-bang gon"><thead><tr><th>Em</th><th>Lần học gần nhất</th><th>7 ngày</th><th>Lượt gần nhất</th><th>Hay sai</th></tr></thead><tbody>' +
