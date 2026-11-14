@@ -19,7 +19,7 @@
    "Cấp HSK": "1",
    "Thuận bút": "会",
    "Cụm từ": "会汉语 | huì Hànyǔ\n会说汉语 | huì shuō Hànyǔ\n不会说汉语 | bú huì shuō Hànyǔ",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/3f342407b6.mp3",
    "_nhom": "tuVung",
    "Câu 1": "我们会汉语。",
    "Pinyin câu 1": "Wǒmen huì Hànyǔ.",
@@ -66,7 +66,7 @@
    "Câu 1": "A：你妈妈会说汉语吗？\nB：她不会说。",
    "Pinyin câu 1": "A: Nǐ māma huì shuō Hànyǔ ma?\nB: Tā bú huì shuō.",
    "Nghĩa câu 1": "A: Mẹ bạn biết nói tiếng Trung không?\nB: Mẹ mình không biết nói.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/nam1/7d9f6e1fce.mp3|assets/am/cau/3bfa2199bf.mp3",
    "Câu 2": "我妈妈会说汉语，也会说英语。",
    "Pinyin câu 2": "Wǒ māma huì shuō Hànyǔ, yě huì shuō Yīngyǔ.",
    "Nghĩa câu 2": "Mẹ tôi biết nói tiếng Trung, cũng biết nói tiếng Anh.",
@@ -129,7 +129,7 @@
    "Câu 1": "A：中国菜好吃吗？\nB：中国菜很好吃。",
    "Pinyin câu 1": "A: Zhōngguó cài hǎochī ma?\nB: Zhōngguó cài hěn hǎochī.",
    "Nghĩa câu 1": "A: Món Trung Quốc có ngon không?\nB: Món Trung Quốc rất ngon.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/nam1/1ba64b9a41.mp3|assets/am/cau/59247252d8.mp3",
    "Câu 2": "越南菜很好吃。",
    "Pinyin câu 2": "Yuènán cài hěn hǎochī.",
    "Nghĩa câu 2": "Món Việt Nam rất ngon.",
@@ -154,7 +154,7 @@
    "Câu 2": "A：你会做中国菜吗？\nB：我不会做。",
    "Pinyin câu 2": "A: Nǐ huì zuò Zhōngguó cài ma?\nB: Wǒ bú huì zuò.",
    "Nghĩa câu 2": "A: Bạn biết nấu món Trung Quốc không?\nB: Mình không biết nấu.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/nam1/ba7f8923c9.mp3|assets/am/cau/3022969bb2.mp3"
   },
   {
    "Mã": "1-0409",
@@ -175,7 +175,7 @@
    "Câu 2": "A：你会写汉字吗？\nB：我会写。",
    "Pinyin câu 2": "A: Nǐ huì xiě Hànzì ma?\nB: Wǒ huì xiě.",
    "Nghĩa câu 2": "A: Bạn biết viết chữ Hán không?\nB: Mình biết viết.",
-   "Đọc câu 2": ""
+   "Đọc câu 2": "assets/am/nam1/ea1d5f720d.mp3|assets/am/cau/d45b7d4d70.mp3"
   },
   {
    "Mã": "1-0137",
@@ -276,7 +276,7 @@
    "Câu 1": "A：你吃什么？\nB：我吃越南菜。",
    "Pinyin câu 1": "A: Nǐ chī shénme?\nB: Wǒ chī Yuènán cài.",
    "Nghĩa câu 1": "A: Bạn ăn gì?\nB: Mình ăn món Việt Nam.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/nam1/17ab23f9e1.mp3|assets/am/cau/fde6d9bdeb.mp3",
    "Câu 2": "我妹妹不吃中国菜。",
    "Pinyin câu 2": "Wǒ mèimei bù chī Zhōngguó cài.",
    "Nghĩa câu 2": "Em gái tôi không ăn món Trung Quốc.",
@@ -929,7 +929,8 @@
    "hoi": [
     "你会说汉语吗？",
     "Nǐ huì shuō Hànyǔ ma?",
-    "Bạn biết nói tiếng Trung không?"
+    "Bạn biết nói tiếng Trung không?",
+    "assets/am/nam1/eb0435d5c8.mp3"
    ],
    "dap": [
     "我会说汉语。",
@@ -959,7 +960,8 @@
    "hoi": [
     "你妈妈会说汉语吗？",
     "Nǐ māma huì shuō Hànyǔ ma?",
-    "Mẹ bạn biết nói tiếng Trung không?"
+    "Mẹ bạn biết nói tiếng Trung không?",
+    "assets/am/nam1/7d9f6e1fce.mp3"
    ],
    "dap": [
     "她不会说。",
@@ -989,7 +991,8 @@
    "hoi": [
     "中国菜好吃吗？",
     "Zhōngguó cài hǎochī ma?",
-    "Món Trung Quốc có ngon không?"
+    "Món Trung Quốc có ngon không?",
+    "assets/am/nam1/1ba64b9a41.mp3"
    ],
    "dap": [
     "中国菜很好吃。",
@@ -1019,7 +1022,8 @@
    "hoi": [
     "你会做中国菜吗？",
     "Nǐ huì zuò Zhōngguó cài ma?",
-    "Bạn biết nấu món Trung Quốc không?"
+    "Bạn biết nấu món Trung Quốc không?",
+    "assets/am/nam1/ba7f8923c9.mp3"
    ],
    "dap": [
     "我不会做。",
@@ -1049,7 +1053,8 @@
    "hoi": [
     "这个字怎么写？",
     "Zhè ge zì zěnme xiě?",
-    "Chữ này viết thế nào?"
+    "Chữ này viết thế nào?",
+    "assets/am/nam1/6f9f110e39.mp3"
    ],
    "dap": [
     "对不起，这个字我不会写。",
@@ -1079,7 +1084,8 @@
    "hoi": [
     "这个汉字怎么读？",
     "Zhè ge Hànzì zěnme dú?",
-    "Chữ Hán này đọc thế nào?"
+    "Chữ Hán này đọc thế nào?",
+    "assets/am/nam1/59822db178.mp3"
    ],
    "dap": [
     "这个字我会读，不会写。",
@@ -1109,7 +1115,8 @@
    "hoi": [
     "你吃什么？",
     "Nǐ chī shénme?",
-    "Bạn ăn gì?"
+    "Bạn ăn gì?",
+    "assets/am/nam1/17ab23f9e1.mp3"
    ],
    "dap": [
     "我吃越南菜。",
@@ -1139,7 +1146,8 @@
    "hoi": [
     "你喝什么？",
     "Nǐ hē shénme?",
-    "Bạn uống gì?"
+    "Bạn uống gì?",
+    "assets/am/nam1/fc1bdabe42.mp3"
    ],
    "dap": [
     "我不吃，我喝。",
@@ -1541,7 +1549,8 @@
     {
      "han": "你会说汉语吗？",
      "py": "Nǐ huì shuō Hànyǔ ma?",
-     "viet": "Bạn biết nói tiếng Trung không?"
+     "viet": "Bạn biết nói tiếng Trung không?",
+     "doc": "assets/am/nam1/eb0435d5c8.mp3"
     },
     {
      "han": "我会说汉语。",
@@ -1551,7 +1560,8 @@
     {
      "han": "你妈妈会说汉语吗？",
      "py": "Nǐ māma huì shuō Hànyǔ ma?",
-     "viet": "Mẹ bạn biết nói tiếng Trung không?"
+     "viet": "Mẹ bạn biết nói tiếng Trung không?",
+     "doc": "assets/am/nam1/7d9f6e1fce.mp3"
     },
     {
      "han": "她不会说。",
@@ -1597,7 +1607,8 @@
     {
      "han": "中国菜好吃吗？",
      "py": "Zhōngguó cài hǎochī ma?",
-     "viet": "Món Trung Quốc có ngon không?"
+     "viet": "Món Trung Quốc có ngon không?",
+     "doc": "assets/am/nam1/1ba64b9a41.mp3"
     },
     {
      "han": "中国菜很好吃。",
@@ -1607,7 +1618,8 @@
     {
      "han": "你会做中国菜吗？",
      "py": "Nǐ huì zuò Zhōngguó cài ma?",
-     "viet": "Bạn biết nấu món Trung Quốc không?"
+     "viet": "Bạn biết nấu món Trung Quốc không?",
+     "doc": "assets/am/nam1/ba7f8923c9.mp3"
     },
     {
      "han": "我不会做。",
@@ -1653,7 +1665,8 @@
     {
      "han": "你会写汉字吗？",
      "py": "Nǐ huì xiě Hànzì ma?",
-     "viet": "Bạn biết viết chữ Hán không?"
+     "viet": "Bạn biết viết chữ Hán không?",
+     "doc": "assets/am/nam1/ea1d5f720d.mp3"
     },
     {
      "han": "我会写。",
@@ -1663,7 +1676,8 @@
     {
      "han": "这个字怎么写？",
      "py": "Zhè ge zì zěnme xiě?",
-     "viet": "Chữ này viết thế nào?"
+     "viet": "Chữ này viết thế nào?",
+     "doc": "assets/am/nam1/6f9f110e39.mp3"
     },
     {
      "han": "对不起，这个字我会读，不会写。",
