@@ -352,3 +352,10 @@ body.gv-mo{overflow:hidden}
 .gv-chip.vang{background:#fff3cd;color:#8a6d00}
 .gv-cuon{overflow-x:auto}
 .gv-tick-ds{display:flex;flex-wrap:wrap;gap:6px 14px;margin:6px 0}
+
+.gv-lop-dau[data-l=mo]{cursor:pointer}
+.gv-lop-dau[data-l=mo]:hover h3{color:var(--brand)}
+.gv-lop.mo{border-color:var(--brand)}
+.gv-tabs-lop{margin:12px 0 10px;flex-wrap:wrap}
+.gv-lop-than{padding-top:4px}
+.gv-tao-lop-the>summary{cursor:pointer;color:var(--brand);font-weight:800}

@@ -309,9 +309,8 @@
     var conHan = tatGiao.filter(function (g) { return g.hanNop >= bayGio; }), hetHan = tatGiao.filter(function (g) { return g.hanNop < bayGio; }).reverse();
     var chuaNop = [];
     hetHan.forEach(function (g) { var ten = hsTrongLop(g.maLop).filter(function (h) { return tinhHs(h) && trangThaiGiao(g, h) === 'qua'; }); if (ten.length) chuaNop.push([g, ten]); });
-    var cq = canQuanTam(), soChuaNop = chuaNop.reduce(function (s, x) { return s + x[1].length; }, 0);
+    var soChuaNop = chuaNop.reduce(function (s, x) { return s + x[1].length; }, 0);
     var tinh = PT_DANG ? '<p class="gv-cho">⏳ Đang tải số liệu từ nhật ký…</p>' : PT_LOI ? '<p class="gv-trong">⚠️ ' + esc(PT_LOI) + '</p>' : '';
-    var lopChon = D.lop.filter(function (l) { return !l.dong && (!TQ.lop || TQ.lop === '-' || l.maLop === TQ.lop); });
     var loi = loiLop();
 
     var s = (tinMoi().length ? '<button type="button" class="gv-bao-tin" data-di="tin">💬 Có <b>' + tinMoi().length + '</b> tin nhắn chưa xử lý (xin mở bài, báo lỗi…) <span>Xem →</span></button>' : '') +
@@ -325,39 +324,23 @@
         oSo('Bài đang giao', conHan.length, 'còn hạn', 'lam') +
         oSo('Chưa nộp', soChuaNop, 'lượt em × bài đã hết hạn', soChuaNop ? 'do' : 'xam') +
       '</div>' + tinh +
-      // 1. Ai cần quan tâm + bài đang giao
+      // Bài đang giao (chi tiết từng lớp: tab 🏫 Lớp & mở bài)
       '<div class="gv-hai-cot">' +
-        '<div class="gv-the"><div class="gv-the-dau"><h3>1️⃣ Ai cần quan tâm</h3></div>' +
-          (cq.length ? '<ul class="gv-ds-chu-y">' + cq.slice(0, 12).map(function (c) {
-            return '<li><button type="button" class="gv-ten-hs" data-hs="' + esc(c.h.hoSoId) + '">' + esc(c.h.hoTen) + '</button> <small>' + esc(c.h.lop) + '</small>' +
-              c.ly.map(function (x) { return '<span class="gv-chip ' + x[0] + '">' + esc(x[1]) + '</span>'; }).join('') + '</li>';
-          }).join('') + '</ul>' + (cq.length > 12 ? '<p class="gv-trong">… và ' + (cq.length - 12) + ' em nữa</p>' : '') : '<p class="gv-trong">Không có em nào cần chú ý. 🎉</p>') +
-          '<p class="gv-ghi">Xếp theo mức khẩn: quá hạn › vắng ≥ 7 ngày › điểm lượt gần nhất thấp › bỏ dở nhiều › học rất ít (&lt; 5 phút/tuần).</p></div>' +
         '<div class="gv-the"><div class="gv-the-dau"><h3>📋 Bài đang giao</h3><button type="button" class="gv-nut nho" data-di="giao-bai">+ Giao bài</button></div>' +
           (conHan.length ? '<div class="gv-ds-giao">' + conHan.map(dongGiao).join('') + '</div>' : '<p class="gv-trong">Không có bài nào còn hạn. Bấm <b>+ Giao bài</b> để giao cho lớp.</p>') +
           (chuaNop.length ? '<div class="gv-the-dau" style="margin-top:14px"><h4>⏰ Hết hạn, chưa nộp</h4></div><ul class="gv-ds-chu-y">' + chuaNop.slice(0, 8).map(function (x) {
             return '<li><b>' + esc(PHAN_TEN[x[0].phan] || x[0].tenPhan) + '</b> <small>' + esc((LOP[x[0].maLop] || {}).tenLop || '') + ' · hạn ' + ngayGio(x[0].hanNop) + '</small><br>' +
               x[1].map(function (h) { return '<button type="button" class="gv-ten-hs" data-hs="' + esc(h.hoSoId) + '">' + esc(h.hoTen) + '</button>'; }).join(', ') + '</li>'; }).join('') + '</ul>' : '') + '</div>' +
       '</div>' +
-      // 2. Lớp nào đang ở đâu
-      '<div class="gv-the"><div class="gv-the-dau"><h3>2️⃣ Lớp nào đang ở đâu</h3><small>% xong Kiến thức chung (từ vựng, ngữ pháp, ôn tập, bài tập); Mở rộng tính riêng</small></div>' +
-        (lopChon.length ? lopChon.map(function (l) {
-          var rows = tienDoLopBai(l.maLop), n = hsTrongLop(l.maLop).filter(tinhHs).length;
-          return '<h4>' + esc(l.tenLop) + ' <small>· ' + n + ' em</small></h4>' + (rows.length ? '<div class="gv-tq-bai">' + rows.map(function (r) {
-            return '<div class="gv-tq-dong"><span class="gv-tq-ten"><b>' + esc(r.b.ten) + '</b>' + (r.mo ? '' : ' <small>(chưa mở)</small>') + '</span>' +
-              '<span class="gv-pt-bar"><i style="width:' + r.pt + '%"></i></span><b class="gv-tq-so">' + r.pt + '%</b>' +
-              '<small>' + r.batDau + '/' + r.n + ' em đã bắt đầu' + (r.mrX || r.mrD ? ' · Mở rộng: ' + r.mrX + ' xong, ' + r.mrD + ' đang' : '') + '</small></div>'; }).join('') + '</div>'
-            : '<p class="gv-trong">Lớp chưa mở bài nào.</p>');
-        }).join('') : '<p class="gv-trong">Chưa có lớp.</p>') + '</div>' +
       // 3. Cả lớp sai ở đâu
-      '<div class="gv-the"><div class="gv-the-dau"><h3>3️⃣ Cả lớp sai ở đâu</h3><small>tính lần đầu của mỗi em với từng câu</small></div>' +
+      '<div class="gv-the"><div class="gv-the-dau"><h3>1️⃣ Cả lớp sai ở đâu</h3><small>tính lần đầu của mỗi em với từng câu</small></div>' +
         (!PT ? '<p class="gv-trong">' + (PT_DANG ? 'Đang tải…' : 'Chưa có số liệu.') + '</p>' : (loi.cau.length ? '<ul class="gv-ds-chu-y">' + loi.cau.map(function (x) {
           return '<li><b>' + esc(x.q) + '</b> → ' + esc(x.a) + ' <span class="gv-chip do">' + x.s + '/' + x.n + ' em sai (' + Math.round(x.s / x.n * 100) + '%)</span><br><small>' + esc(x.d) + (x.b ? ' · ' + esc(x.b) : '') +
             (Object.keys(x.c).length ? ' · hay chọn nhầm: ' + Object.keys(x.c).sort(function (a, b) { return x.c[b] - x.c[a]; }).slice(0, 3).map(function (k) { return esc(k) + ' (' + x.c[k] + ')'; }).join(', ') : '') + '</small></li>'; }).join('') + '</ul>'
           : '<p class="gv-trong">Chưa có câu nào ≥ 3 em làm mà nhiều em sai.</p>') +
           (loi.dang.length ? '<h4>Dạng bài cả lớp hay sai</h4><ul class="gv-ds-chu-y">' + loi.dang.map(function (x) { return '<li>' + esc(x.t) + ' <span class="gv-chip vang">' + Math.round(x.s / x.n * 100) + '% sai</span> <small>' + x.s + '/' + x.n + ' lượt trả lời</small></li>'; }).join('') + '</ul>' : '')) + '</div>' +
       // 4. Hồ sơ từng em
-      '<div class="gv-the"><div class="gv-the-dau"><h3>4️⃣ Hồ sơ từng em</h3><small>bấm tên để xem chi tiết</small></div>' +
+      '<div class="gv-the"><div class="gv-the-dau"><h3>2️⃣ Hồ sơ từng em</h3><small>bấm tên để xem chi tiết</small></div>' +
         (ds.length ? '<div class="gv-cuon"><table class="gv-bang gon"><thead><tr><th>Em</th><th>Lần học gần nhất</th><th>7 ngày</th><th>Lượt gần nhất</th><th>Hay sai</th></tr></thead><tbody>' +
           ds.slice().sort(function (a, b) { return hoatCuoi(b) - hoatCuoi(a); }).map(function (h) {
             var T = PT && PT.tg[h.hoSoId], c = T && T.cuoi, lt = luotCua(h.hoSoId).filter(function (l) { return l.tt === 'xong' && l.sc; })[0], hoat = hoatCuoi(h);
@@ -571,46 +554,97 @@
   var LOP_MO = '';
   function veLop(noi) {
     var ds = D.lop.slice().sort(function (a, b) { return (a.dong - b.dong) || b.taoLuc - a.taoLuc; });
-    noi.innerHTML = '<div class="gv-the"><div class="gv-the-dau"><h3>➕ Tạo lớp mới</h3></div><form class="gv-tao-lop">' +
+    noi.innerHTML = '<details class="gv-the gv-tao-lop-the"><summary><b>➕ Tạo lớp mới</b></summary><form class="gv-tao-lop">' +
         '<label>Tên lớp<input name="tenLop" required maxlength="40" placeholder="VD: HSK1 tối 2-4-6"></label>' +
         '<label>Mã lớp <span class="gv-phu">(bỏ trống: tự tạo)</span><input name="maMoi" maxlength="16" placeholder="VD: HSK1T3" style="text-transform:uppercase"></label>' +
         '<label class="rong">Ghi chú<input name="ghiChu" maxlength="200" placeholder="Lịch học, phòng…"></label>' +
         '<button type="submit" class="gv-nut chinh">Tạo lớp</button></form>' +
-        '<p class="gv-trong">Học sinh vào lớp bằng cách: đăng nhập Google → tạo / sửa hồ sơ → nhập <b>mã lớp</b>. Em trong lớp chỉ vào được các bài cô đã mở cho lớp.</p></div>' +
+        '<p class="gv-trong">Bấm 📁 tên lớp để mở thư mục lớp. Học sinh vào lớp bằng cách: đăng nhập Google → tạo / sửa hồ sơ → nhập <b>mã lớp</b>. Em trong lớp chỉ vào được các bài cô đã mở cho lớp.</p></details>' +
       (ds.length ? ds.map(theLop).join('') : '<div class="gv-the"><p class="gv-trong">Chưa có lớp nào.</p></div>');
     noi.querySelector('.gv-tao-lop').addEventListener('submit', function (e) {
       e.preventDefault(); var f = e.target, n = f.querySelector('button'); n.disabled = true; n.textContent = '⏳ Đang tạo…';
       goiMC('gvLuuLop', { tenLop: f.tenLop.value, maMoi: f.maMoi.value, ghiChu: f.ghiChu.value }).then(function (d) {
-        bao('Đã tạo lớp · mã ' + d.maLop); LOP_MO = d.maLop;
+        bao('Đã tạo lớp · mã ' + d.maLop); LOP_MO = d.maLop; LOP_TAB[d.maLop] = 'mo-bai';
         if (d.lop) { D.lop = d.lop; lamChiMuc(); ve(); }        // hiện lớp mới ngay, rồi tải lại toàn bộ ở nền
         taiDuLieu(true);
       }).catch(function (x) { n.disabled = false; n.textContent = 'Tạo lớp'; bao('⚠️ ' + x.message, true); });
     });
-    noi.addEventListener('click', bamLop);
+    noi.addEventListener('click', function (e) {
+      var di = e.target.closest('[data-di]'); if (di) return moTab(di.dataset.di);
+      var hs = e.target.closest('tr[data-hs]'); if (hs) return moHocSinh(hs.dataset.hs);
+      var ten = e.target.closest('button[data-hs]'); if (ten) return moHocSinh(ten.dataset.hs);
+      bamLop(e);
+    });
+    noi.addEventListener('keydown', function (e) { var r = e.target.closest('tr[data-hs]'); if (r && e.key === 'Enter') return moHocSinh(r.dataset.hs); var d = e.target.closest('.gv-lop-dau[data-l=mo]'); if (d && e.target === d && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); bamLop({ target: d }); } });
     noi.addEventListener('change', doiMoBai);
   }
-  function theLop(l) {
-    var ds = hsTrongLop(l.maLop), mo = D.moBai.filter(function (m) { return m.maLop === l.maLop; }).map(function (m) { return m.bai; });
-    return '<div class="gv-the gv-lop' + (l.dong ? ' dong' : '') + '" data-lop="' + esc(l.maLop) + '">' +
-      '<div class="gv-lop-dau"><div><h3>' + esc(l.tenLop) + (l.dong ? ' <span class="gv-chip xam">đã đóng</span>' : '') + '</h3>' +
-        '<small>' + ds.length + ' học sinh' + (choLop(l.maLop).length ? ' · <b>' + choLop(l.maLop).length + ' email đang chờ</b>' : '') + ' · mở ' + mo.length + ' bài' + (l.ghiChu ? ' · ' + esc(l.ghiChu) : '') + '</small></div>' +
-        '<button type="button" class="gv-ma" data-l="chep" title="Chép mã lớp"><small>Mã lớp</small><b>' + esc(l.maLop) + '</b><span>⧉ chép</span></button></div>' +
-      '<div class="gv-lop-nut">' + (l.dong ? '' : '<button type="button" class="gv-nut nho chinh" data-l="them">➕ Thêm học sinh</button>') + '<button type="button" class="gv-nut nho" data-l="hs">🧑‍🎓 Xem học sinh</button><button type="button" class="gv-nut nho" data-l="sua">✏️ Đổi tên</button>' +
-        '<button type="button" class="gv-nut nho' + (l.dong ? '' : ' nhe') + '" data-l="dong">' + (l.dong ? '↺ Mở lại lớp' : '🔒 Đóng lớp') + '</button></div>' +
-      '<details class="gv-mo-bai"' + (LOP_MO === l.maLop ? ' open' : '') + '><summary>📖 Mở bài cho lớp <span class="gv-chip ' + (mo.length ? 'xong' : 'xam') + '">' + mo.length + ' bài đã mở</span></summary>' +
-        CAT.map(function (c) {
-          return '<div class="gv-mb-cap"><div class="gv-mb-cap-dau"><b>' + esc(c.ten) + '</b><span><button type="button" class="gv-lk" data-l="mo-het" data-cap="' + esc(c.ct + '/' + c.cap) + '">Mở cả cấp</button> · <button type="button" class="gv-lk" data-l="khoa-het" data-cap="' + esc(c.ct + '/' + c.cap) + '">Khoá cả cấp</button></span></div>' +
-            '<div class="gv-mb-ds">' + c.bai.map(function (b) {
-              if (b.laKt) return '<div class="gv-cong tu-do" title="Bài kiểm tra không mở / khoá: học sinh chỉ thấy khi cô giao (tab 📋 Giao bài)"><span class="gv-cong-nut"></span><span><b>' + esc(b.tenNgan) + '</b><small>📝 Hiện khi cô giao bài</small></span></div>';
-              if (moTuDo(b.khoa)) return '<div class="gv-cong on tu-do" title="Mở cho mọi người, kể cả chưa đăng nhập"><span class="gv-cong-nut"></span><span><b>' + esc(b.tenNgan) + '</b><small>🌐 Mở cho mọi người</small></span></div>';
-              var on = mo.indexOf(b.khoa) >= 0;
-              return '<label class="gv-cong' + (on ? ' on' : '') + '"><input type="checkbox" data-bai="' + esc(b.khoa) + '"' + (on ? ' checked' : '') + '><span class="gv-cong-nut"></span><span><b>' + esc(b.tenNgan) + '</b><small>' + esc(b.tieuDe) + '</small></span></label>';
-            }).join('') + '</div></div>';
-        }).join('') + '<p class="gv-trong">Bật là mở ngay cho lớp (học sinh thấy sau tối đa vài phút, hoặc khi tải lại trang). Giao bài thuộc bài chưa mở thì bài đó tự mở. Thư viện, Nhập môn và mục 🌐 luôn mở cho mọi người; mục khác chỉ học viên lớp được mở mới vào được.</p></details></div>';
+  var LOP_TAB = {};
+  var LOP_TABS = [['tien-trinh', '📈 Tiến trình'], ['bai-giao', '📋 Bài giao'], ['hoc-sinh', '🧑‍🎓 Hồ sơ từng em'], ['mo-bai', '📖 Mở bài'], ['quan-ly', '⚙️ Quản lý']];
+  function ptLop(l) {                          // tab Tiến trình lớp
+    var ds = hsTrongLop(l.maLop).filter(tinhHs), bayGio = Date.now(), rows = tienDoLopBai(l.maLop);
+    var hoc7 = ds.filter(function (h) { return (HOAT[h.hoSoId] || 0) > bayGio - 7 * 864e5; }).length;
+    var giao = nhomGiao(true).filter(function (g) { return g.maLop === l.maLop && g.hanNop >= bayGio; }).length;
+    return '<div class="gv-o-so nho">' + oSo('Học sinh', ds.length, 'em trong lớp', 'xanh') + oSo('Học trong 7 ngày', hoc7, ds.length ? Math.round(hoc7 / ds.length * 100) + '% số em' : '', 'vang') + oSo('Bài đang giao', giao, 'còn hạn', 'lam') + '</div>' +
+      '<p class="gv-ghi">% xong Kiến thức chung (từ vựng, ngữ pháp, ôn tập, bài tập); Mở rộng tính riêng.</p>' +
+      (rows.length ? '<div class="gv-tq-bai">' + rows.map(function (r) {
+        return '<div class="gv-tq-dong"><span class="gv-tq-ten"><b>' + esc(r.b.ten) + '</b>' + (r.mo ? '' : ' <small>(chưa mở)</small>') + '</span>' +
+          '<span class="gv-pt-bar"><i style="width:' + r.pt + '%"></i></span><b class="gv-tq-so">' + r.pt + '%</b>' +
+          '<small>' + r.batDau + '/' + r.n + ' em đã bắt đầu' + (r.mrX || r.mrD ? ' · Mở rộng: ' + r.mrX + ' xong, ' + r.mrD + ' đang' : '') + '</small></div>'; }).join('') + '</div>'
+        : '<p class="gv-trong">Lớp chưa mở bài nào.</p>');
+  }
+  function bgLop(l) {                          // tab Bài giao: đang giao + đã hết hạn
+    var bayGio = Date.now(), tat = nhomGiao(false).filter(function (g) { return g.maLop === l.maLop; });
+    var con = tat.filter(function (g) { return g.hanNop >= bayGio; }), het = tat.filter(function (g) { return g.hanNop < bayGio; }).reverse();
+    return '<div class="gv-the-dau"><h4>Đang giao (' + con.length + ')</h4><button type="button" class="gv-nut nho chinh" data-di="giao-bai">+ Giao bài</button></div>' +
+      (con.length ? '<div class="gv-ds-giao">' + con.map(dongGiao).join('') + '</div>' : '<p class="gv-trong">Không có bài nào còn hạn.</p>') +
+      '<div class="gv-the-dau" style="margin-top:14px"><h4>Đã hết hạn (' + het.length + ')</h4></div>' +
+      (het.length ? '<div class="gv-ds-giao">' + het.slice(0, 20).map(dongGiao).join('') + '</div>' + (het.length > 20 ? '<p class="gv-trong">… và ' + (het.length - 20) + ' bài cũ hơn</p>' : '') : '<p class="gv-trong">Chưa có bài nào hết hạn.</p>');
+  }
+  function hsLopBang(l) {                      // tab Hồ sơ từng em
+    var ds = hsTrongLop(l.maLop).map(function (h) { return { h: h, s: soLieuHs(h) }; }).sort(function (a, b) { return a.h.hoTen.split(' ').pop().localeCompare(b.h.hoTen.split(' ').pop(), 'vi') || a.h.hoTen.localeCompare(b.h.hoTen, 'vi'); });
+    if (!ds.length) return '<p class="gv-trong">Lớp chưa có học sinh. Bấm <b>➕ Thêm học sinh</b> ở tab ⚙️ Quản lý.</p>';
+    return '<div class="gv-cuon"><table class="gv-bang gon"><thead><tr><th>Em</th><th>Đã xong</th><th>Đang học</th><th>Bài cô giao</th><th>Học gần nhất</th></tr></thead><tbody>' + ds.map(function (x) {
+      var h = x.h, s = x.s;
+      return '<tr data-hs="' + esc(h.hoSoId) + '" tabindex="0"><td data-n="Em"><b>' + esc(h.hoTen) + '</b>' + (h.laGv ? ' <span class="gv-chip xam">giáo viên</span>' : h.thu ? ' <span class="gv-chip xam">thử</span>' : '') + '<small>' + esc(h.email) + '</small></td>' +
+        '<td data-n="Đã xong"><span><b class="gv-so-xong">' + s.xong + '</b> phần</span></td><td data-n="Đang học"><span>' + s.dang + ' phần</span></td>' +
+        '<td data-n="Bài cô giao"><span>' + (s.giao ? s.giaoXong + '/' + s.giao + (s.quaHan ? ' <span class="gv-chip qua">' + s.quaHan + ' quá hạn</span>' : '') : '—') + '</span></td>' +
+        '<td data-n="Học gần nhất">' + truoc(s.hoat) + '</td></tr>'; }).join('') + '</tbody></table></div>';
+  }
+  function moBaiLop(l) {                       // tab Mở bài
+    var mo = D.moBai.filter(function (m) { return m.maLop === l.maLop; }).map(function (m) { return m.bai; });
+    return CAT.map(function (c) {
+      return '<div class="gv-mb-cap"><div class="gv-mb-cap-dau"><b>' + esc(c.ten) + '</b><span><button type="button" class="gv-lk" data-l="mo-het" data-cap="' + esc(c.ct + '/' + c.cap) + '">Mở cả cấp</button> · <button type="button" class="gv-lk" data-l="khoa-het" data-cap="' + esc(c.ct + '/' + c.cap) + '">Khoá cả cấp</button></span></div>' +
+        '<div class="gv-mb-ds">' + c.bai.map(function (b) {
+          if (b.laKt) return '<div class="gv-cong tu-do" title="Bài kiểm tra không mở / khoá: học sinh chỉ thấy khi cô giao (tab 📋 Giao bài)"><span class="gv-cong-nut"></span><span><b>' + esc(b.tenNgan) + '</b><small>📝 Hiện khi cô giao bài</small></span></div>';
+          if (moTuDo(b.khoa)) return '<div class="gv-cong on tu-do" title="Mở cho mọi người, kể cả chưa đăng nhập"><span class="gv-cong-nut"></span><span><b>' + esc(b.tenNgan) + '</b><small>🌐 Mở cho mọi người</small></span></div>';
+          var on = mo.indexOf(b.khoa) >= 0;
+          return '<label class="gv-cong' + (on ? ' on' : '') + '"><input type="checkbox" data-bai="' + esc(b.khoa) + '"' + (on ? ' checked' : '') + '><span class="gv-cong-nut"></span><span><b>' + esc(b.tenNgan) + '</b><small>' + esc(b.tieuDe) + '</small></span></label>';
+        }).join('') + '</div></div>';
+    }).join('') + '<p class="gv-trong">Bật là mở ngay cho lớp (học sinh thấy sau tối đa vài phút, hoặc khi tải lại trang). Giao bài thuộc bài chưa mở thì bài đó tự mở. Thư viện, Nhập môn và mục 🌐 luôn mở cho mọi người; mục khác chỉ học viên lớp được mở mới vào được.</p>';
+  }
+  function quanLyLop(l) {                      // tab Quản lý
+    return '<div class="gv-lop-nut">' + (l.dong ? '' : '<button type="button" class="gv-nut nho chinh" data-l="them">➕ Thêm học sinh</button>') + '<button type="button" class="gv-nut nho" data-l="sua">✏️ Đổi tên</button>' +
+      '<button type="button" class="gv-nut nho' + (l.dong ? '' : ' nhe') + '" data-l="dong">' + (l.dong ? '↺ Mở lại lớp' : '🔒 Đóng lớp') + '</button></div>' +
+      '<p class="gv-trong">Mã lớp: <b>' + esc(l.maLop) + '</b>' + (l.ghiChu ? ' · ' + esc(l.ghiChu) : '') + (choLop(l.maLop).length ? ' · <b>' + choLop(l.maLop).length + ' email đang chờ</b> em đăng nhập' : '') + '.</p>';
+  }
+  function theLop(l) {                         // mỗi lớp là một thư mục: bấm tên để mở, bên trong chia tab
+    var ds = hsTrongLop(l.maLop), mo = D.moBai.filter(function (m) { return m.maLop === l.maLop; }).length, mở = LOP_MO === l.maLop, tab = LOP_TAB[l.maLop] || 'tien-trinh';
+    var thanh = '';
+    if (mở) {
+      var noiTab = { 'tien-trinh': ptLop, 'bai-giao': bgLop, 'hoc-sinh': hsLopBang, 'mo-bai': moBaiLop, 'quan-ly': quanLyLop }[tab](l);
+      thanh = '<div class="gv-tabs gv-tabs-nho gv-tabs-lop" role="tablist">' + LOP_TABS.map(function (t) {
+        return '<button type="button" class="gv-tab' + (t[0] === tab ? ' on' : '') + '" data-l="tab" data-t="' + t[0] + '">' + t[1] + '</button>'; }).join('') + '</div><div class="gv-lop-than">' + noiTab + '</div>';
+    }
+    return '<div class="gv-the gv-lop' + (l.dong ? ' dong' : '') + (mở ? ' mo' : '') + '" data-lop="' + esc(l.maLop) + '">' +
+      '<div class="gv-lop-dau" data-l="mo" role="button" tabindex="0"><div><h3>' + (mở ? '📂 ' : '📁 ') + esc(l.tenLop) + (l.dong ? ' <span class="gv-chip xam">đã đóng</span>' : '') + '</h3>' +
+        '<small>' + ds.length + ' học sinh' + (choLop(l.maLop).length ? ' · <b>' + choLop(l.maLop).length + ' email đang chờ</b>' : '') + ' · mở ' + mo + ' bài' + (l.ghiChu ? ' · ' + esc(l.ghiChu) : '') + '</small></div>' +
+        '<button type="button" class="gv-ma" data-l="chep" title="Chép mã lớp"><small>Mã lớp</small><b>' + esc(l.maLop) + '</b><span>⧉ chép</span></button></div>' + thanh + '</div>';
   }
   function bamLop(e) {
     var n = e.target.closest('[data-l]'), the = e.target.closest('[data-lop]'); if (!n || !the) return;
     var ma = the.dataset.lop, l = LOP[ma];
+    if (n.dataset.l === 'mo') { LOP_MO = LOP_MO === ma ? '' : ma; ve(); return; }
+    if (n.dataset.l === 'tab') { LOP_TAB[ma] = n.dataset.t; ve(); return; }
     if (n.dataset.l === 'chep') {
       var xong = function () { bao('Đã chép mã lớp ' + ma); };
       if (navigator.clipboard) navigator.clipboard.writeText(ma).then(xong, function () { prompt('Mã lớp', ma); }); else prompt('Mã lớp', ma);
