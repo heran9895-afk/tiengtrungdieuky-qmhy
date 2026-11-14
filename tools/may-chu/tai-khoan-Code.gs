@@ -43,7 +43,7 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-15f';
+var PHIEN_BAN = '2026-11-15g';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -248,8 +248,11 @@ function dsLop() {
   return bang('Lop').map(function (r) { return { maLop: String(r[0]), tenLop: String(r[1]), ghiChu: String(r[2]), taoLuc: ms(r[3]), dong: String(r[4]) === 'có' }; })
     .filter(function (l) { return l.maLop; });
 }
-function lopTheoMa(ma) { ma = chuanMa(ma); return dsLop().filter(function (l) { return l.maLop === ma; })[0] || null; }
+var LOP_MO = { maLop: 'MO', tenLop: 'Lớp mở', ghiChu: 'Em chưa có lớp / khách học ké (không tính thống kê)', taoLuc: 0, dong: false };
+function laLopThat(ma) { ma = chuanMa(ma); return !!ma && ma !== 'MO'; }       // 'MO' = Lớp mở (ảo): ai chưa có lớp thật thì thuộc lớp này
+function lopTheoMa(ma) { ma = chuanMa(ma); if (ma === 'MO') return LOP_MO; return dsLop().filter(function (l) { return l.maLop === ma; })[0] || null; }
 function kiemMaLop(ma) {
+  if (chuanMa(ma) === 'MO') return { ok: false, loi: 'Mã lớp không đúng hoặc lớp đã đóng. Bạn hỏi lại cô mã lớp nhé.' };      // Lớp mở là lớp ảo, không vào bằng mã
   var l = lopTheoMa(ma);
   if (!l || l.dong) return { ok: false, loi: 'Mã lớp không đúng hoặc lớp đã đóng. Bạn hỏi lại cô mã lớp nhé.' };
   return { ok: true, maLop: l.maLop, tenLop: l.tenLop };
@@ -267,7 +270,7 @@ function thongTinLop(maLop) {
   var l = maLop ? lopTheoMa(maLop) : null;
   if (!l) return null;
   var bayGio = Date.now();
-  return { maLop: l.maLop, tenLop: l.tenLop, dong: l.dong, moBai: moBaiCua(l.maLop),
+  return { maLop: l.maLop, tenLop: l.tenLop, dong: l.dong, mo: l.maLop === 'MO', moBai: moBaiCua(l.maLop),
     giaoBai: giaoBaiCua(l.maLop).filter(function (g) { return !g.batDau || g.batDau <= bayGio; }) };
 }
 // Một hồ sơ có thể thuộc NHIỀU lớp (2026-11-15): lớp chính (cột maLop) + các lớp thêm (cột lopThem, cách nhau dấu phẩy).
@@ -277,7 +280,8 @@ function dsLopCuaHs(hs) {
   function them(m) { m = chuanMa(m); if (m && !co[m] && lopTheoMa(m)) { co[m] = 1; kq.push(m); } }
   them(hs.maLop);
   String(hs.lopThem || '').split(',').forEach(them);
-  if (laGiaoVien(hs.email) || laGiaoVien(emailCua(hs.sub))) dsLop().forEach(function (l) { if (!l.dong) them(l.maLop); });
+  if (laGiaoVien(hs.email) || laGiaoVien(emailCua(hs.sub))) { dsLop().forEach(function (l) { if (!l.dong) them(l.maLop); }); them('MO'); }
+  if (!kq.length) kq.push('MO');             // chưa có lớp thật: vào Lớp mở
   return kq;
 }
 function thongTinLopHs(hs) {
@@ -1224,7 +1228,8 @@ function gvPhanTich(gv, d) {
   var ht = d.ht === undefined ? 'tu-hoc' : String(d.ht), loai = {}, lopCua = {};    // hình thức: 'tu-hoc' (mặc định) | 'lop-co-gv' | '' (cả hai); thống kê tách riêng
   bang('HoSo').forEach(function (r) {
     var id = String(r[0]); if (!id) return;
-    if (laGiaoVien(String(r[2] || '')) || String(r[10]) === 'x') loai[id] = 1;
+    var coLopThat = laLopThat(r[8]) || String(r[11] || '').split(',').some(laLopThat);
+    if (laGiaoVien(String(r[2] || '')) || String(r[10]) === 'x' || !coLopThat) loai[id] = 1;      // GV, tài khoản thử, em ở Lớp mở: không tính thống kê
     lopCua[id] = String(r[8] || '') || ('t:' + String(r[4] || ''));
   });
   var ss = SpreadsheetApp.getActive(), cau = {}, hs = {}, thay = {};
@@ -1360,7 +1365,7 @@ function gvTheoDoiLop(gv, d) {
   bang('HoSo').forEach(function (r) {
     if (!r[0] || String(r[10]) === 'x' || laGiaoVien(String(r[2] || ''))) return;
     var lop = [chuanMa(r[8])].concat(String(r[11] || '').split(',').map(chuanMa));
-    if (lop.indexOf(maL) < 0) return;
+    if (maL === 'MO' ? lop.some(laLopThat) : lop.indexOf(maL) < 0) return;      // Lớp mở: mọi em chưa có lớp thật
     var o = { id: String(r[0]), hoTen: String(r[3]), n: 0, d: 0, cuoi: 0, phan: '', bai: '', sai: [] }; tv[o.id] = o; ds.push(o);
   });
   var ss = SpreadsheetApp.getActive(), t0 = new Date(tu), thang = [];

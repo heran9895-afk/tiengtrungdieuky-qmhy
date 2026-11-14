@@ -155,6 +155,7 @@
   function lamChiMuc() {
     HS = {}; LOP = {}; TT = {}; HOAT = {}; PHAN_TEN = {}; BAI_THEO_KHOA = {};
     D.lop.forEach(function (l) { LOP[l.maLop] = l; });
+    LOP.MO = { maLop: 'MO', tenLop: 'Lớp mở', dong: false, ao: true, ghiChu: 'Em chưa có lớp · khách học ké · không tính thống kê' };
     D.hocSinh.forEach(function (h) { HS[h.hoSoId] = h; });
     D.trangThai.forEach(function (r) {
       (TT[r.hoSoId] = TT[r.hoSoId] || {})[r.phan] = r;
@@ -169,7 +170,8 @@
     return Object.keys(m).map(function (k) { return m[k]; });
   }
   function moTuDo(khoa) { return (window.QM_MO_TU_DO || []).indexOf(khoa) >= 0; }
-  function trongLop(h, ma) { return !!ma && (h.maLop === ma || (h.lopThem || []).indexOf(ma) >= 0 || (!!h.laGv && !!LOP[ma] && !LOP[ma].dong)); }   // một em có thể thuộc nhiều lớp (lớp chính + lớp thêm)
+  function coLop(h) { return (!!h.maLop && h.maLop !== 'MO') || (h.lopThem || []).some(function (x) { return x && x !== 'MO'; }); }   // có ít nhất một lớp THẬT; không có = thuộc Lớp mở
+  function trongLop(h, ma) { if (ma === 'MO') return !coLop(h) || !!h.laGv; return !!ma && (h.maLop === ma || (h.lopThem || []).indexOf(ma) >= 0 || (!!h.laGv && !!LOP[ma] && !LOP[ma].dong)); }   // một em có thể thuộc nhiều lớp (lớp chính + lớp thêm)
   function hsTrongLop(maLop) { return D.hocSinh.filter(function (h) { return trongLop(h, maLop); }); }
   function trangThaiGiao(g, h) {           // một em với một bài được giao
     var x = (TT[h.hoSoId] || {})[g.phan], bayGio = Date.now();
@@ -218,7 +220,7 @@
     }).then(function () { PT_DANG = false; if ((TAB === 'tong-quan' && app.querySelector('.gv-tq')) || (TAB === 'hoc-sinh' && app.querySelector('.gv-bang-hs')) || (TAB === 'lop' && app.querySelector('.gv-lop.mo') && LOP_TAB[LOP_MO] === 'sai')) ve(); });
   }
   function phut(g) { g = Math.round(+g || 0); return g < 60 ? g + ' giây' : Math.round(g / 60) + ' phút'; }
-  function tinhHs(h) { return !h.laGv && (TQ.thu || !h.thu); }
+  function tinhHs(h) { return !h.laGv && coLop(h) && (TQ.thu || !h.thu); }   // em ở Lớp mở (chưa có lớp thật) không tính thống kê
   function dsHsTQ() { return D.hocSinh.filter(function (h) { return tinhHs(h) && (!TQ.lop || (TQ.lop === '-' ? !h.maLop : trongLop(h, TQ.lop))); }); }
   function hoatCuoi(h) { var t = PT && PT.tg[h.hoSoId], x = HOAT[h.hoSoId] || 0; return Math.max(x, t && t.cuoi ? t.cuoi.c : 0); }
   function luotCua(id) { return PT ? PT.luot.filter(function (l) { return l.id === id; }) : []; }   // mới nhất trước
@@ -445,7 +447,7 @@
   function locHs() {
     var tim = boDau(LOC.tim).trim();
     var ds = D.hocSinh.filter(function (h) {
-      if (LOC.lop === '-' ? h.maLop : LOC.lop && !trongLop(h, LOC.lop)) return false;
+      if (LOC.lop === '-' ? coLop(h) : LOC.lop && !trongLop(h, LOC.lop)) return false;
       return !tim || boDau(h.hoTen + ' ' + h.email + ' ' + h.lop).indexOf(tim) >= 0;
     }).map(function (h) { return { h: h, s: soLieuHs(h) }; });
     var xep = { 'hoat-dong': function (a, b) { return b.s.hoat - a.s.hoat; }, 'ten': function (a, b) { return a.h.hoTen.split(' ').pop().localeCompare(b.h.hoTen.split(' ').pop(), 'vi') || a.h.hoTen.localeCompare(b.h.hoTen, 'vi'); },
@@ -455,7 +457,7 @@
   function chonLopHtml(giaTri, coTatCa, ten) {
     return '<select class="gv-chon" name="' + (ten || 'lop') + '">' + (coTatCa ? '<option value="">Tất cả lớp</option>' : '<option value="">— Không có lớp (tự học) —</option>') +
       D.lop.filter(function (l) { return !l.dong || l.maLop === giaTri; }).map(function (l) { return '<option value="' + esc(l.maLop) + '"' + (l.maLop === giaTri ? ' selected' : '') + '>' + esc(l.tenLop) + ' (' + esc(l.maLop) + ')</option>'; }).join('') +
-      (coTatCa ? '<option value="-"' + (giaTri === '-' ? ' selected' : '') + '>Chưa vào lớp nào</option>' : '') + '</select>';
+      (coTatCa ? '<option value="-"' + (giaTri === '-' ? ' selected' : '') + '>Lớp mở (chưa có lớp)</option>' : '') + '</select>';
   }
   function veHocSinh(noi) {
     noi.innerHTML = '<div class="gv-the"><div class="gv-loc">' + chonLopHtml(LOC.lop, true) +
@@ -470,7 +472,7 @@
         ds.map(function (x) {
           var h = x.h, s = x.s, T = PT && PT.tg[h.hoSoId], lt = luotCua(h.hoSoId).filter(function (l) { return l.tt === 'xong' && l.sc; })[0];
           return '<tr data-hs="' + esc(h.hoSoId) + '" tabindex="0"><td data-n="Học sinh"><b>' + esc(h.hoTen) + '</b><small>' + esc(h.email) + '</small></td>' +
-            '<td data-n="Lớp"><span>' + esc(h.lop) + (h.maLop ? '' : ' <span class="gv-chip xam">tự ghi</span>') + '</span></td>' +
+            '<td data-n="Lớp"><span>' + esc(h.lop) + (coLop(h) ? '' : ' <span class="gv-chip xam">lớp mở</span>') + '</span></td>' +
             '<td data-n="Đã xong"><span><b class="gv-so-xong">' + s.xong + '</b> phần</span></td><td data-n="Đang học"><span>' + s.dang + ' phần</span></td>' +
             '<td data-n="Bài cô giao"><span>' + (s.giao ? s.giaoXong + '/' + s.giao + (s.quaHan ? ' <span class="gv-chip qua">' + s.quaHan + ' quá hạn</span>' : '') : '—') + '</span></td>' +
             '<td data-n="Học gần nhất">' + truoc(s.hoat) + '</td>' +
@@ -604,7 +606,7 @@
         '<label class="rong">Ghi chú<input name="ghiChu" maxlength="200" placeholder="Lịch học, phòng…"></label>' +
         '<button type="submit" class="gv-nut chinh">Tạo lớp</button></form>' +
         '<p class="gv-trong">Bấm 📁 tên lớp để mở thư mục lớp. Học sinh vào lớp bằng cách: đăng nhập Google → tạo / sửa hồ sơ → nhập <b>mã lớp</b>. Em trong lớp chỉ vào được các bài cô đã mở cho lớp.</p></details>' +
-      (ds.length ? ds.map(theLop).join('') : '<div class="gv-the"><p class="gv-trong">Chưa có lớp nào.</p></div>');
+      ds.map(theLop).join('') + theLop(LOP.MO);
     noi.querySelector('.gv-tao-lop').addEventListener('submit', function (e) {
       e.preventDefault(); var f = e.target, n = f.querySelector('button'); n.disabled = true; n.textContent = '⏳ Đang tạo…';
       goiMC('gvLuuLop', { tenLop: f.tenLop.value, maMoi: f.maMoi.value, ghiChu: f.ghiChu.value }).then(function (d) {
@@ -669,6 +671,7 @@
     }).join('') + '<p class="gv-trong">Bật là mở ngay cho lớp (học sinh thấy sau tối đa vài phút, hoặc khi tải lại trang). Giao bài thuộc bài chưa mở thì bài đó tự mở. Thư viện, Nhập môn và mục 🌐 luôn mở cho mọi người; mục khác chỉ học viên lớp được mở mới vào được.</p>';
   }
   function quanLyLop(l) {                      // tab Quản lý
+    if (l.ao) return '<p class="gv-trong">🌐 <b>Lớp mở</b> gồm mọi tài khoản <b>chưa có mã lớp thật</b> (tự học, khách học ké, học sinh của giáo viên khác). Không cần thêm em vào đây: em đăng nhập là tự vào.</p><ul class="gv-ds-chu-y"><li>Số liệu của lớp này <b>không tính</b> vào Tổng quan, Câu hay sai, Dạng bài hay sai.</li><li>Em xem được các bài cô bật ở tab 📖 Mở bài (không bật thì chỉ thấy phần mở cho mọi người).</li><li>Cô xem em đang làm bao nhiêu câu ở tab 📡 Theo dõi.</li><li>Muốn đưa em vào lớp chính thức: mở hồ sơ em → chọn lớp hoặc ➕ Thêm học sinh ở lớp đó.</li></ul>';
     return '<div class="gv-lop-nut">' + (l.dong ? '' : '<button type="button" class="gv-nut nho chinh" data-l="them">➕ Thêm học sinh</button>') + '<button type="button" class="gv-nut nho" data-l="sua">✏️ Đổi tên</button>' +
       '<button type="button" class="gv-nut nho' + (l.dong ? '' : ' nhe') + '" data-l="dong">' + (l.dong ? '↺ Mở lại lớp' : '🔒 Đóng lớp') + '</button></div>' +
       '<p class="gv-trong">Mã lớp: <b>' + esc(l.maLop) + '</b>' + (l.ghiChu ? ' · ' + esc(l.ghiChu) : '') + (choLop(l.maLop).length ? ' · <b>' + choLop(l.maLop).length + ' email đang chờ</b> em đăng nhập' : '') + '.</p>';
@@ -729,17 +732,17 @@
     keo();
   }
   function theLop(l) {                         // mỗi lớp là một thư mục: bấm tên để mở, bên trong chia tab
-    var ds = hsTrongLop(l.maLop), mo = D.moBai.filter(function (m) { return m.maLop === l.maLop; }).length, mở = LOP_MO === l.maLop, tab = LOP_TAB[l.maLop] || 'tien-trinh';
+    var ds = hsTrongLop(l.maLop).filter(function (h) { return !l.ao || !h.laGv; }), mo = D.moBai.filter(function (m) { return m.maLop === l.maLop; }).length, mở = LOP_MO === l.maLop, tab = LOP_TAB[l.maLop] || (l.ao ? 'theo-doi' : 'tien-trinh');
     var thanh = '';
     if (mở) {
       var noiTab = { 'tien-trinh': ptLop, 'theo-doi': function (x) { return '<div class="gv-td-lop" data-ma="' + esc(x.maLop) + '"></div>'; }, 'bai-giao': bgLop, 'sai': function (x) { taiPhanTich(); return loiHtml(loiLop(x.maLop)); }, 'hoc-sinh': hsLopBang, 'mo-bai': moBaiLop, 'quan-ly': quanLyLop }[tab](l);
-      thanh = '<div class="gv-tabs gv-tabs-nho gv-tabs-lop" role="tablist">' + LOP_TABS.map(function (t) {
+      thanh = '<div class="gv-tabs gv-tabs-nho gv-tabs-lop" role="tablist">' + LOP_TABS.filter(function (t) { return !l.ao || ['theo-doi', 'hoc-sinh', 'mo-bai', 'quan-ly'].indexOf(t[0]) >= 0; }).map(function (t) {
         return '<button type="button" class="gv-tab' + (t[0] === tab ? ' on' : '') + '" data-l="tab" data-t="' + t[0] + '">' + t[1] + '</button>'; }).join('') + '</div><div class="gv-lop-than">' + noiTab + '</div>';
     }
     return '<div class="gv-the gv-lop' + (l.dong ? ' dong' : '') + (mở ? ' mo' : '') + '" data-lop="' + esc(l.maLop) + '">' +
-      '<div class="gv-lop-dau" data-l="mo" role="button" tabindex="0"><div><h3>' + (mở ? '📂 ' : '📁 ') + esc(l.tenLop) + (l.dong ? ' <span class="gv-chip xam">đã đóng</span>' : '') + '</h3>' +
+      '<div class="gv-lop-dau" data-l="mo" role="button" tabindex="0"><div><h3>' + (mở ? '📂 ' : l.ao ? '🌐 ' : '📁 ') + esc(l.tenLop) + (l.dong ? ' <span class="gv-chip xam">đã đóng</span>' : '') + '</h3>' +
         '<small>' + ds.length + ' học sinh' + (choLop(l.maLop).length ? ' · <b>' + choLop(l.maLop).length + ' email đang chờ</b>' : '') + ' · mở ' + mo + ' bài' + (l.ghiChu ? ' · ' + esc(l.ghiChu) : '') + '</small></div>' +
-        '<button type="button" class="gv-ma" data-l="chep" title="Chép mã lớp"><small>Mã lớp</small><b>' + esc(l.maLop) + '</b><span>⧉ chép</span></button></div>' + thanh + '</div>';
+        (l.ao ? '<span class="gv-chip xam">không tính thống kê</span>' : '<button type="button" class="gv-ma" data-l="chep" title="Chép mã lớp"><small>Mã lớp</small><b>' + esc(l.maLop) + '</b><span>⧉ chép</span></button>') + '</div>' + thanh + '</div>';
   }
   function bamLop(e) {
     var n = e.target.closest('[data-l]'), the = e.target.closest('[data-lop]'); if (!n || !the) return;

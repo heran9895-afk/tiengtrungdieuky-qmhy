@@ -388,7 +388,7 @@
   function chonHoSo(id) {
     ssGhi('qm-tk-da-chon', '1');
     var canTaiLai = doiChu(id);
-    TK.hoSoId = id; if (TK.lop && TK.lop.maLop !== (hoSoDang() || {}).maLop) TK.lop = null;
+    TK.hoSoId = id; if (TK.lop && (TK.lop.mo ? '' : TK.lop.maLop) !== ((hoSoDang() || {}).maLop || '')) TK.lop = null;
     luuTK(); veNut(); ganBaiLam(); veLop();
     var b = moBang('<div class="tk-ico">⏳</div><h3>Đang đồng bộ tiến độ…</h3>');
     dongBo().then(function () {
@@ -472,7 +472,7 @@
       (TK.hoSo || []).length ? manChonHoSo() : manTaoHoSo(false);
     });
   }
-  function lopDang() { var h = hoSoDang(); return h && h.maLop && TK.lop && TK.lop.maLop === h.maLop ? TK.lop : null; }
+  function lopDang() { var h = hoSoDang(); if (!h || !TK.lop) return null; if (TK.lop.mo) return h.maLop ? null : TK.lop; return h.maLop && TK.lop.maLop === h.maLop ? TK.lop : null; }   // Lớp mở (mo): em chưa có lớp thật
   // Mục của một cấp: bai-N, on-tap-1-5, tro-choi… Khoá mục "hsk1/bai-3", "h2/hsk1/tro-choi".
   // MỞ CHO MỌI NGƯỜI (Nhiên chốt 04/11/2026): Thư viện, Nhập môn (không thuộc cấp nào) và các mục dưới đây.
   // Mọi mục khác của chương trình: chỉ vào được khi cô đã mở cho lớp của hồ sơ đang chọn (tài khoản giáo viên: mở hết).
@@ -486,7 +486,7 @@
     if (TK && TK.giaoVien) return null;
     if (!TK) return 'khach';
     var h = hoSoDang(); if (!h) return 'chua-lop';
-    if (!h.maLop) return DA_HOI_LOP ? 'chua-lop' : 'cho';   // cô có thể vừa xếp em vào lớp: chờ hỏi máy chủ xong mới kết luận
+    if (!h.maLop && !(TK.lop && TK.lop.mo)) return DA_HOI_LOP ? 'chua-lop' : 'cho';   // cô có thể vừa xếp em vào lớp: chờ hỏi máy chủ xong mới kết luận
     var L = lopDang(); if (!L) return 'cho';
     if (laMucKt(muc)) return ktDuocGiao(L, muc) ? null : 'chua-giao';
     return L.moBai.indexOf(muc) >= 0 ? null : 'chua-mo';
@@ -683,7 +683,7 @@
   function apLop(L) {
     TK.lop = L || null; TK.lopLuc = Date.now(); DA_HOI_LOP = true;
     var h = hoSoDang();
-    if (h) { var ma = L ? L.maLop : ''; if (h.maLop !== ma) { h.maLop = ma; if (L) h.lop = L.tenLop; ganBaiLam(); veNut(); } }
+    if (h) { var ma = L && !L.mo ? L.maLop : ''; if (h.maLop !== ma) { h.maLop = ma; if (L && !L.mo) h.lop = L.tenLop; ganBaiLam(); veNut(); } }
     luuTK(); veLop();
   }
   function keoLop(epBuoc) {                                 // hỏi máy chủ lớp của hồ sơ (tối đa 3 phút một lần, trừ khi trang đang bị khoá)
