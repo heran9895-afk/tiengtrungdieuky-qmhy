@@ -165,11 +165,12 @@
   }
   function giaoCuaHs(h) {                  // bài lớp của em đang được giao (đã tới giờ bắt đầu); một phần giao nhiều lần: lấy hạn muộn nhất
     var m = {}, bayGio = Date.now();
-    D.giaoBai.forEach(function (g) { if (h.maLop && g.maLop === h.maLop && (!g.batDau || g.batDau <= bayGio) && (!m[g.phan] || g.hanNop > m[g.phan].hanNop)) m[g.phan] = g; });
+    D.giaoBai.forEach(function (g) { if (trongLop(h, g.maLop) && (!g.batDau || g.batDau <= bayGio) && (!m[g.phan] || g.hanNop > m[g.phan].hanNop)) m[g.phan] = g; });
     return Object.keys(m).map(function (k) { return m[k]; });
   }
   function moTuDo(khoa) { return (window.QM_MO_TU_DO || []).indexOf(khoa) >= 0; }
-  function hsTrongLop(maLop) { return D.hocSinh.filter(function (h) { return h.maLop === maLop; }); }
+  function trongLop(h, ma) { return !!ma && (h.maLop === ma || (h.lopThem || []).indexOf(ma) >= 0); }   // một em có thể thuộc nhiều lớp (lớp chính + lớp thêm)
+  function hsTrongLop(maLop) { return D.hocSinh.filter(function (h) { return trongLop(h, maLop); }); }
   function trangThaiGiao(g, h) {           // một em với một bài được giao
     var x = (TT[h.hoSoId] || {})[g.phan], bayGio = Date.now();
     if (x && x.tt === 'xong') return x.t > g.hanNop ? 'muon' : 'xong';
@@ -218,7 +219,7 @@
   }
   function phut(g) { g = Math.round(+g || 0); return g < 60 ? g + ' giây' : Math.round(g / 60) + ' phút'; }
   function tinhHs(h) { return !h.laGv && (TQ.thu || !h.thu); }
-  function dsHsTQ() { return D.hocSinh.filter(function (h) { return tinhHs(h) && (!TQ.lop || (TQ.lop === '-' ? !h.maLop : h.maLop === TQ.lop)); }); }
+  function dsHsTQ() { return D.hocSinh.filter(function (h) { return tinhHs(h) && (!TQ.lop || (TQ.lop === '-' ? !h.maLop : trongLop(h, TQ.lop))); }); }
   function hoatCuoi(h) { var t = PT && PT.tg[h.hoSoId], x = HOAT[h.hoSoId] || 0; return Math.max(x, t && t.cuoi ? t.cuoi.c : 0); }
   function luotCua(id) { return PT ? PT.luot.filter(function (l) { return l.id === id; }) : []; }   // mới nhất trước
   function canQuanTam() {
@@ -284,7 +285,7 @@
     var ml = TQ.lop && TQ.lop !== '-' ? TQ.lop : ((D.lop.filter(function (l) { return !l.dong; })[0] || {}).maLop || '');
     if (!ml) { k.innerHTML = '<p class="gv-trong">Cô chọn một lớp ở bộ lọc phía trên nhé.</p>'; return; }
     k.innerHTML = '<p class="gv-cho">⏳ Đang tải…</p>';
-    var hsLop = D.hocSinh.filter(function (h) { return h.maLop === ml; });
+    var hsLop = D.hocSinh.filter(function (h) { return trongLop(h, ml); });
     goiMC('gvDsBuoiHoc', { maLop: ml }).then(function (r) {
       var b = r.buoi || []; if (!b.length) { k.innerHTML = '<p class="gv-trong">Lớp này chưa có buổi học nào được lưu.</p>'; return; }
       k.innerHTML = b.map(function (x) {
@@ -421,7 +422,7 @@
   function locHs() {
     var tim = boDau(LOC.tim).trim();
     var ds = D.hocSinh.filter(function (h) {
-      if (LOC.lop === '-' ? h.maLop : LOC.lop && h.maLop !== LOC.lop) return false;
+      if (LOC.lop === '-' ? h.maLop : LOC.lop && !trongLop(h, LOC.lop)) return false;
       return !tim || boDau(h.hoTen + ' ' + h.email + ' ' + h.lop).indexOf(tim) >= 0;
     }).map(function (h) { return { h: h, s: soLieuHs(h) }; });
     var xep = { 'hoat-dong': function (a, b) { return b.s.hoat - a.s.hoat; }, 'ten': function (a, b) { return a.h.hoTen.split(' ').pop().localeCompare(b.h.hoTen.split(' ').pop(), 'vi') || a.h.hoTen.localeCompare(b.h.hoTen, 'vi'); },
@@ -519,6 +520,10 @@
       '<div class="gv-o-so nho">' + oSo('Đã xong', s.xong, 'phần', 'xanh') + oSo('Đang học', s.dang, 'phần', 'vang') + oSo('Bài cô giao', s.giao ? s.giaoXong + '/' + s.giao : '—', s.quaHan ? s.quaHan + ' quá hạn' : 'đã xong', s.quaHan ? 'do' : 'lam') + oSo('Học gần nhất', '', truoc(s.hoat), 'xam') + '</div>' +
       '<div class="gv-hs-lop"><label>Lớp ' + chonLopHtml(h.maLop, false, 'chuyen') + '</label><button type="button" class="gv-nut nho chinh gv-luu-lop">Chuyển lớp</button>' +
         (h.maLop ? '' : '<small>Hiện em tự ghi lớp: <b>' + esc(h.lop) + '</b></small>') + '</div>' +
+      '<div class="gv-hs-lop gv-lop-them"><b>➕ Học thêm các lớp khác</b>' + (h.laGv ? ' <small>(tài khoản giáo viên: tự thuộc TẤT CẢ lớp để cô xem giao diện học sinh)</small>' : '') + '<div class="gv-tick-ds">' +
+        D.lop.filter(function (l) { return !l.dong && l.maLop !== h.maLop; }).map(function (l) {
+          return '<label class="gv-tick"><input type="checkbox" name="lopthem" value="' + esc(l.maLop) + '"' + ((h.lopThem || []).indexOf(l.maLop) >= 0 || h.laGv ? ' checked' : '') + (h.laGv ? ' disabled' : '') + '> ' + esc(l.tenLop) + '</label>'; }).join('') +
+        '</div>' + (h.laGv ? '' : '<button type="button" class="gv-nut nho chinh gv-luu-them">Lưu các lớp thêm</button>') + '</div>' +
       (giao.length ? '<h4>📋 Bài cô giao</h4><ul class="gv-gd-hs">' + giao.map(function (g) {
         var tt = trangThaiGiao(g, h); return '<li><span>' + esc(PHAN_TEN[g.phan] || g.tenPhan) + ' <small>· hạn ' + ngayGio(g.hanNop) + '</small></span><span class="gv-chip ' + tt + '">' + NHAN_TT[tt] + '</span></li>';
       }).join('') + '</ul>' : '') +
@@ -533,6 +538,13 @@
     var nkO = b.querySelector('.gv-nk');
     (PT && PT_NGAY === TQ.ngay ? Promise.resolve() : goiMC('gvPhanTich', { ngay: TQ.ngay }).then(function (r) { PT = r; PT_NGAY = r.ngay; }))
       .then(function () { veNhatKyHs(h, nkO); }, function () { nkO.innerHTML = '<p class="gv-trong">Chưa có số liệu nhật ký (máy chủ cần cập nhật bản 2026-11-14g).</p>'; });
+    var nutThem = b.querySelector('.gv-luu-them');
+    if (nutThem) nutThem.addEventListener('click', function () {
+      var chon = [].slice.call(b.querySelectorAll('input[name=lopthem]')).filter(function (x) { return x.checked; }).map(function (x) { return x.value; });
+      var bo = [].slice.call(b.querySelectorAll('input[name=lopthem]')).filter(function (x) { return !x.checked; }).map(function (x) { return x.value; });
+      h.lopThem = chon; bao('Đã lưu các lớp thêm cho ' + h.hoTen);
+      luuNen('gvThemLop', { hoSoId: [id], maLop: chon, che: 'them' }, 'Thêm lớp').then(function () { return luuNen('gvThemLop', { hoSoId: [id], maLop: bo, che: 'bo' }, 'Bớt lớp'); }).catch(function () {});
+    });
     b.querySelector('.gv-luu-lop').addEventListener('click', function (e) {
       var ma = b.querySelector('select[name=chuyen]').value;
       apChuyenLop([id], ma); dongBang(); ve();
@@ -988,7 +1000,7 @@
     var nop = dsHs.filter(function (x) { return x.r && x.r.trangThai === 'nop'; });
     var lopHtml = lops.length ? lops.map(function (m) {
       var gs = giao.filter(function (g) { return g.maLop === m; }).sort(function (a, b) { return b.hanNop - a.hanNop; }), g = gs[0];
-      var hs = dsHs.filter(function (x) { return x.h.maLop === m; }), xong = hs.filter(function (x) { return x.r && x.r.trangThai === 'nop'; }), dang = hs.filter(function (x) { return x.r && x.r.trangThai === 'dang'; });
+      var hs = dsHs.filter(function (x) { return trongLop(x.h, m); }), xong = hs.filter(function (x) { return x.r && x.r.trangThai === 'nop'; }), dang = hs.filter(function (x) { return x.r && x.r.trangThai === 'dang'; });
       var cb = d.congBo.indexOf(m) >= 0;
       return '<div class="gv-kt-lop"><div><b>' + esc((LOP[m] || {}).tenLop || m) + '</b><small>Từ ' + ngayGio(g.batDau) + ' · hạn ' + ngayGio(g.hanNop) + (g.hanNop < bayGio ? ' (đã hết hạn)' : g.batDau > bayGio ? ' (chưa tới giờ)' : ' (đang mở)') + '</small>' +
         '<small>Đã nộp ' + xong.length + '/' + hs.length + (dang.length ? ' · đang làm ' + dang.length : '') + '</small></div>' +

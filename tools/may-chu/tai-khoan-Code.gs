@@ -43,7 +43,7 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-14j';
+var PHIEN_BAN = '2026-11-15a';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -55,7 +55,7 @@ var HAN_PHIEN = 21600;                     // phiên chơi: tiến trình giữ 
 
 var TRANG = {
   Users:     ['sub', 'email', 'hoTen', 'anh', 'taoLuc', 'lanCuoi'],
-  HoSo:      ['hoSoId', 'sub', 'email', 'hoTenHocSinh', 'lop', 'dongY', 'dongYLuc', 'taoLuc', 'maLop', 'daDocThongBaoLuc', 'taiKhoanThu'],
+  HoSo:      ['hoSoId', 'sub', 'email', 'hoTenHocSinh', 'lop', 'dongY', 'dongYLuc', 'taoLuc', 'maLop', 'daDocThongBaoLuc', 'taiKhoanThu', 'lopThem'],
   Progress:  ['sub', 'hoSoId', 'khoa', 'duLieu', 'capNhatLuc'],
   TrangThai: ['hoSoId', 'hoTenHocSinh', 'lop', 'phan', 'tenPhan', 'trangThai', 'capNhatLuc', 'moRong'],
   Visits:    ['thoiDiem', 'trang', 'sub', 'hoSoId', 'maPhien', 'thietBi'],
@@ -169,7 +169,10 @@ function doPost(e) {
       case 'gvSuaNoiDung': return traVe(coKhoa(function () { return gvSuaNoiDung(xacGV(d), d); }));
       case 'gvLuuBuoiHoc': return traVe(coKhoa(function () { return gvLuuBuoiHoc(xacGV(d), d); }));
       case 'gvDsBuoiHoc':  xacGV(d); return traVe(buoiHocDs(d.maLop, true, ''));
-      case 'buoiHocCuaToi': { var p0 = xacPhien(d), hs0 = hoSoCua(p0, d.hoSoId); return traVe(buoiHocDs(hs0.maLop, false, hs0.hoSoId)); }
+      case 'buoiHocCuaToi': { var p0 = xacPhien(d), hs0 = hoSoCua(p0, d.hoSoId), ls0 = dsLopCuaHs(hs0); if (ls0.length <= 1) return traVe(buoiHocDs(hs0.maLop, false, hs0.hoSoId));
+        var gop = []; ls0.forEach(function (m) { gop = gop.concat(buoiHocDs(m, false, hs0.hoSoId).buoi); });
+        gop.sort(function (a, b) { return b.taoLuc - a.taoLuc; }); return traVe({ ok: true, buoi: gop.slice(0, 30) }); }
+      case 'gvThemLop':  return traVe(coKhoa(function () { return gvThemLop(xacGV(d), d); }));
       default:           return traVe({ ok: false, loi: 'Lệnh không hợp lệ: ' + d.action });
     }
   } catch (x) {
@@ -264,12 +267,31 @@ function thongTinLop(maLop) {
   return { maLop: l.maLop, tenLop: l.tenLop, dong: l.dong, moBai: moBaiCua(l.maLop),
     giaoBai: giaoBaiCua(l.maLop).filter(function (g) { return !g.batDau || g.batDau <= bayGio; }) };
 }
-function lopCuaToi(p, d) { var hs = hoSoCua(p, d.hoSoId); return { ok: true, lop: thongTinLop(hs.maLop) }; }
+// Một hồ sơ có thể thuộc NHIỀU lớp (2026-11-15): lớp chính (cột maLop) + các lớp thêm (cột lopThem, cách nhau dấu phẩy).
+// Hồ sơ của tài khoản giáo viên tự động thuộc TẤT CẢ lớp đang mở (để cô xem giao diện học sinh khi giao bài).
+function dsLopCuaHs(hs) {
+  var kq = [], co = {};
+  function them(m) { m = chuanMa(m); if (m && !co[m] && lopTheoMa(m)) { co[m] = 1; kq.push(m); } }
+  them(hs.maLop);
+  String(hs.lopThem || '').split(',').forEach(them);
+  if (laGiaoVien(hs.email)) dsLop().forEach(function (l) { if (!l.dong) them(l.maLop); });
+  return kq;
+}
+function thongTinLopHs(hs) {
+  var ls = dsLopCuaHs(hs);
+  if (ls.length <= 1) return thongTinLop(ls[0] || hs.maLop);
+  var ts = ls.map(thongTinLop).filter(Boolean), mo = {}, giao = [];
+  ts.forEach(function (t) { (t.moBai || []).forEach(function (b) { mo[b] = 1; }); giao = giao.concat(t.giaoBai || []); });
+  return { maLop: chuanMa(hs.maLop) || ts[0].maLop, tenLop: ts.map(function (t) { return t.tenLop; }).join(' + '), dong: false, moBai: Object.keys(mo), giaoBai: giao,
+    dsLop: ts.map(function (t) { return { maLop: t.maLop, tenLop: t.tenLop }; }) };
+}
+function ktGiaoCuaHs(hs, muc) { var ls = dsLopCuaHs(hs); for (var i = 0; i < ls.length; i++) { var g = ktGiaoCua(ls[i], muc); if (g) return g; } return null; }
+function lopCuaToi(p, d) { var hs = hoSoCua(p, d.hoSoId); return { ok: true, lop: thongTinLopHs(hs) }; }
 
 // ---------------- Hồ sơ học sinh (một email có thể có nhiều hồ sơ) ----------------
 function dsHoSo(sub) {
   var v = bang('HoSo'), kq = [];
-  for (var i = 0; i < v.length; i++) if (String(v[i][1]) === sub) kq.push({ hoSoId: String(v[i][0]), hoTen: String(v[i][3]), lop: String(v[i][4]), maLop: String(v[i][8] || '') });
+  for (var i = 0; i < v.length; i++) if (String(v[i][1]) === sub) kq.push({ hoSoId: String(v[i][0]), hoTen: String(v[i][3]), lop: String(v[i][4]), maLop: String(v[i][8] || ''), email: String(v[i][2] || ''), lopThem: String(v[i][11] || '') });
   return kq;
 }
 function gon(s, n) { return String(s || '').replace(/\s+/g, ' ').trim().slice(0, n); }
@@ -488,7 +510,7 @@ function luuTienDo(p, d) {
     sh.getRange(sh.getLastRow() + 1, 1, dong.length, 5).setValues(dong);
   }
   ghiTrangThai(hs, moi.phan);
-  return { ok: true, duLieu: moi, lop: thongTinLop(hs.maLop) };   // kèm thông tin lớp: bài đã mở, bài được giao
+  return { ok: true, duLieu: moi, lop: thongTinLopHs(hs) };   // kèm thông tin lớp: bài đã mở, bài được giao
 }
 // Trang tính TrangThai: bảng dễ đọc cho giáo viên — em nào, phần nào, xong hay đang học, lúc nào
 function ghiTrangThai(hs, phan) {
@@ -519,7 +541,8 @@ function gvDuLieu(gv) {
   var hocSinh = bang('HoSo').filter(function (r) { return r[0]; }).map(function (r) {
     var u = users[String(r[1])] || {};
     return { hoSoId: String(r[0]), email: String(r[2] || u.email || ''), hoTen: String(r[3]), lop: String(r[4]), maLop: String(r[8] || ''),
-      taoLuc: ms(r[7]), dangNhapLuc: u.lanCuoi || 0, thu: String(r[10]) === 'x', laGv: laGiaoVien(String(r[2] || u.email || '')) };
+      taoLuc: ms(r[7]), dangNhapLuc: u.lanCuoi || 0, thu: String(r[10]) === 'x', laGv: laGiaoVien(String(r[2] || u.email || '')),
+      lopThem: String(r[11] || '').split(',').map(chuanMa).filter(Boolean) };
   });
   var trangThai = bang('TrangThai').filter(function (r) { return r[0]; }).map(function (r) {
     return { hoSoId: String(r[0]), phan: String(r[3]), tenPhan: String(r[4]), tt: String(r[5]) === 'xong' ? 'xong' : 'dang-hoc', t: ms(r[6]), mr: String(r[7]) === 'xong' ? 'xong' : String(r[7]) ? 'dang' : '' };
@@ -942,7 +965,7 @@ function ktNopDong(sh, i, b, de, hs) {     // chấm + ghi "đã nộp" cho mộ
 // Học sinh mở trang: trạng thái (được giao chưa, đã làm chưa); batDau: true → bắt đầu / làm tiếp, trả đề không có đáp án
 function ktXem(p, d, batDau) {
   var hs = hoSoCua(p, d.hoSoId), maDe = ktMa(d.maDe), muc = ktMucTuMa(maDe);
-  var giao = hs.maLop ? ktGiaoCua(hs.maLop, muc) : null, bayGio = Date.now();
+  var giao = ktGiaoCuaHs(hs, muc), bayGio = Date.now();
   var sh = trang('KiemTraBai'), v = bang('KiemTraBai'), i = ktTimBai(v, maDe, hs.hoSoId), b = i >= 0 ? ktDongBai(v[i]) : null;
   var de = ktDocDe(maDe);
   if (!de) return { ok: true, bayGio: bayGio, trangThai: 'chua-co-de' };
@@ -982,7 +1005,7 @@ function ktLuuHoacNop(p, d, nop) {
   var sh = trang('KiemTraBai'), v = bang('KiemTraBai'), i = ktTimBai(v, maDe, hs.hoSoId);
   if (i < 0) throw new Error('Bạn chưa bắt đầu bài kiểm tra');
   var b = ktDongBai(v[i]), bayGio = Date.now();
-  if (b.trangThai === 'nop') return { ok: true, daNop: true, ketQua: ktKetQuaHs(de, b, ktGiaoCua(hs.maLop, ktMucTuMa(maDe))) };
+  if (b.trangThai === 'nop') return { ok: true, daNop: true, ketQua: ktKetQuaHs(de, b, ktGiaoCuaHs(hs, ktMucTuMa(maDe))) };
   var conGio = bayGio <= b.hetGioLuc + KT_DU_GIO;
   if (conGio) {
     b.traLoi = ktGonTraLoi(de, d.traLoi);
@@ -993,7 +1016,7 @@ function ktLuuHoacNop(p, d, nop) {
   }
   if (nop || !conGio) {
     ktNopDong(sh, i, b, de, hs);
-    return { ok: true, daNop: true, treGio: !conGio, ketQua: ktKetQuaHs(de, b, ktGiaoCua(hs.maLop, ktMucTuMa(maDe))) };
+    return { ok: true, daNop: true, treGio: !conGio, ketQua: ktKetQuaHs(de, b, ktGiaoCuaHs(hs, ktMucTuMa(maDe))) };
   }
   return { ok: true, bayGio: bayGio, hetGioLuc: b.hetGioLuc };
 }
@@ -1252,4 +1275,20 @@ function gvNhatKyLop(gv, d) {
   });
   if (rows.length) sh.getRange(sh.getLastRow() + 1, 1, rows.length, NK_COT.length).setValues(rows);
   return { ok: true };
+}
+
+// Thêm / bớt lớp phụ cho hồ sơ (một học sinh học nhiều lớp). che: 'them' | 'bo'. maLop: một mã hoặc nhiều mã.
+function gvThemLop(gv, d) {
+  var ids = [].concat(d.hoSoId || []), ml = [].concat(d.maLop || []).map(chuanMa).filter(Boolean), che = d.che === 'bo' ? 'bo' : 'them';
+  ml.forEach(function (m) { if (!lopTheoMa(m)) throw new Error('Không tìm thấy lớp ' + m); });
+  var sh = trang('HoSo'), v = sh.getDataRange().getValues(), n = 0;
+  for (var i = 1; i < v.length; i++) if (ids.indexOf(String(v[i][0])) >= 0) {
+    var cur = String(v[i][11] || '').split(',').map(chuanMa).filter(Boolean), chinh = chuanMa(v[i][8]);
+    ml.forEach(function (m) {
+      if (che === 'them') { if (m !== chinh && cur.indexOf(m) < 0) cur.push(m); }
+      else cur = cur.filter(function (x) { return x !== m; });
+    });
+    sh.getRange(i + 1, 12).setValue(cur.join(',')); n++;
+  }
+  return { ok: true, soHs: n };
 }
