@@ -43,7 +43,7 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-15c';
+var PHIEN_BAN = '2026-11-15d';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -312,6 +312,7 @@ function taoHoSo(p, d) {
   var email = emailCua(p.sub), id = 'hs-' + Utilities.getUuid().slice(0, 8), bayGio = new Date();
   trang('HoSo').appendRow([id, p.sub, email, hoTen, L.lop, 'có', bayGio, bayGio, L.maLop]);
   if (L.maLop) danhDauDaNhan(email, L.maLop, id);
+  danhDauLopCho(email, id, L.maLop);
   return { ok: true, hoSoId: id, hoSo: dsHoSo(p.sub), lop: thongTinLop(L.maLop) };
 }
 function suaHoSo(p, d) {
@@ -670,6 +671,21 @@ function loiMoiCho(email) {
     var l = lopTheoMa(v[i][2]); if (l && !l.dong) return { maLop: l.maLop, tenLop: l.tenLop, hoTen: String(v[i][1]) };
   }
   return null;
+}
+function danhDauLopCho(email, hoSoId, chinh) {   // cô đã thêm email này vào NHIỀU lớp trước khi em tạo hồ sơ: lớp đầu là lớp chính, các lớp còn lại vào lopThem
+  email = chuanEmail(email);
+  var mo = trang('MoiLop'), mv = mo.getDataRange().getValues(), them = [];
+  for (var i = 1; i < mv.length; i++) if (chuanEmail(mv[i][0]) === email && !mv[i][4]) {
+    var m = chuanMa(mv[i][2]);
+    if (m && m !== chuanMa(chinh) && lopTheoMa(m) && !lopTheoMa(m).dong) { them.push(m); mo.getRange(i + 1, 5).setValue(hoSoId); }
+  }
+  if (!them.length) return;
+  var sh = trang('HoSo'), v = sh.getDataRange().getValues();
+  for (var j = 1; j < v.length; j++) if (String(v[j][0]) === hoSoId) {
+    var cur = String(v[j][11] || '').split(',').map(chuanMa).filter(Boolean);
+    them.forEach(function (m) { if (cur.indexOf(m) < 0) cur.push(m); });
+    sh.getRange(j + 1, 12).setValue(cur.join(','));
+  }
 }
 function danhDauDaNhan(email, maLop, hoSoId) {
   email = chuanEmail(email);
