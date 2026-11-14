@@ -215,7 +215,7 @@
     PT_DANG = true;
     goiMC('gvPhanTich', { ngay: TQ.ngay, ht: TQ.ht }).then(function (r) { PT = r; PT_NGAY = r.ngay; PT_HT = TQ.ht; }, function (e) {
       PT_LOI = /Lệnh không hợp lệ/i.test(String(e && e.message)) ? 'Máy chủ chưa là bản 2026-11-14g (cô dán file mới vào Apps Script) nên chưa có số liệu phân tích.' : String(e && e.message || e);
-    }).then(function () { PT_DANG = false; if (TAB === 'tong-quan' && app.querySelector('.gv-tq')) ve(); });
+    }).then(function () { PT_DANG = false; if ((TAB === 'tong-quan' && app.querySelector('.gv-tq')) || (TAB === 'lop' && app.querySelector('.gv-lop.mo') && LOP_TAB[LOP_MO] === 'sai')) ve(); });
   }
   function phut(g) { g = Math.round(+g || 0); return g < 60 ? g + ' giây' : Math.round(g / 60) + ' phút'; }
   function tinhHs(h) { return !h.laGv && (TQ.thu || !h.thu); }
@@ -262,21 +262,34 @@
   var TEN_DANG = { tm: 'Chọn thanh mẫu (phụ âm đầu)', vm: 'Chọn vận mẫu (vần)', td: 'Chọn thanh điệu', tranh: 'Nghe, chọn tranh', nghe: 'Nghe hiểu', 'doc-tranh': 'Đọc, chọn tranh', 'doc-ghep': 'Đọc, ghép', 'doc-dien': 'Đọc, điền từ', 'doc-hoi': 'Đọc, trả lời câu hỏi' };
   function tenDang(k) { return TEN_DANG[k] || k; }
   function tenBaiGon(b) { return String(b || '').replace(/\s*·\s*(?=·|$)/g, '').replace(/[\s·]+$/, ''); }
-  function loiLop() {                         // câu cả lớp hay sai (lần đầu của mỗi em), gộp theo lớp đang lọc
+  function loiLop(ma) {
+    ma = ma === undefined ? TQ.lop : ma;                         // câu cả lớp hay sai (lần đầu của mỗi em), gộp theo lớp đang lọc
     if (!PT) return { cau: [], dang: [] };
     var m = {};
     PT.cau.forEach(function (c) {
-      if (TQ.lop && c.l !== TQ.lop) return;
+      if (ma && c.l !== ma) return;
       var k = c.p + '|' + c.m, x = m[k] = m[k] || { q: c.q, a: c.a, d: c.d, b: c.b, n: 0, s: 0, c: {} };
       x.n += c.n; x.s += c.s; Object.keys(c.c).forEach(function (o) { x.c[o] = (x.c[o] || 0) + c.c[o]; });
     });
     var cau = Object.keys(m).map(function (k) { return m[k]; }).filter(function (x) { return x.n >= 3 && x.s >= 2; })
       .sort(function (a, b) { return b.s / b.n - a.s / a.n || b.s - a.s; }).slice(0, 10);
-    var ds = {}, dem = dsHsTQ();
+    var ds = {}, dem = D.hocSinh.filter(function (h) { return tinhHs(h) && (!ma || (ma === '-' ? !h.maLop : trongLop(h, ma))); });
     dem.forEach(function (h) { var H = PT.hs[h.hoSoId]; if (H) Object.keys(H.d).forEach(function (k) { var x = ds[k] = ds[k] || [0, 0]; x[0] += H.d[k][0]; x[1] += H.d[k][1]; }); });
     var dang = Object.keys(ds).filter(function (k) { return ds[k][0] >= 10 && ds[k][1] > 0; }).map(function (k) { return { t: k, n: ds[k][0], s: ds[k][1] }; })
       .sort(function (a, b) { return b.s / b.n - a.s / a.n; }).slice(0, 6);
     return { cau: cau, dang: dang };
+  }
+  function loiHtml(loi) {                      // câu hay sai + dạng hay sai (dùng ở Tổng quan và tab "Sai ở đâu" của từng lớp)
+    var ht = { 'tu-hoc': 'chỉ em tự học (không tính buổi cô dạy trên lớp)', 'lop-co-gv': 'chỉ buổi lớp có cô', '': 'cả tự học và lớp có cô' }[TQ.ht];
+    var gh = '<p class="gv-ghi"><b>Cách tính:</b> với mỗi câu, lấy <b>lần làm đầu tiên</b> của từng em (' + TQ.ngay + ' ngày gần đây), tỉ lệ sai = số em sai ÷ số em đã làm câu đó. Chỉ hiện câu có từ 3 em làm và ít nhất 2 em sai. Phạm vi: ' + ht + '; không tính tài khoản giáo viên / tài khoản thử. Em học nhiều lớp được tính ở lớp chính của em.</p>';
+    if (!PT) return '<p class="gv-trong">' + (PT_DANG ? 'Đang tải…' : 'Chưa có số liệu.') + '</p>';
+    return gh + (loi.cau.length ? '<ul class="gv-ds-chu-y gv-cau-sai">' + loi.cau.map(function (x) {
+          var nham = Object.keys(x.c).sort(function (a, b) { return x.c[b] - x.c[a]; }).slice(0, 3).map(function (k) { return '<b>' + esc(k) + '</b> (' + x.c[k] + ' lần)'; }).join(', ');
+          return '<li><div><span class="gv-chip do">' + x.s + '/' + x.n + ' em sai (' + Math.round(x.s / x.n * 100) + '%)</span> Câu: <b>' + esc(x.q) + '</b></div>' +
+            '<div>✅ Đáp án đúng: <b>' + esc(x.a) + '</b>' + (nham ? ' &nbsp;·&nbsp; ❌ Các em hay chọn nhầm: ' + nham : '') + '</div>' +
+            '<small>Dạng: ' + esc(tenDang(x.d)) + (tenBaiGon(x.b) ? ' · ' + esc(tenBaiGon(x.b)) : '') + '</small></li>'; }).join('') + '</ul>'
+          : '<p class="gv-trong">Chưa có câu nào từ 3 em làm mà nhiều em sai.</p>') +
+          (loi.dang.length ? '<h4>Dạng bài hay sai</h4><p class="gv-ghi">Tính <b>mọi lượt trả lời</b> (kể cả làm lại), dạng nào có từ 10 lượt trở lên.</p><ul class="gv-ds-chu-y">' + loi.dang.map(function (x) { return '<li><b>' + esc(tenDang(x.t)) + '</b> <span class="gv-chip vang">sai ' + Math.round(x.s / x.n * 100) + '%</span> <small>(' + x.s + ' câu sai trên ' + x.n + ' lượt trả lời)</small></li>'; }).join('') + '</ul>' : '');
   }
   function dangSaiCua(id, so) {
     var H = PT && PT.hs[id]; if (!H) return '';
@@ -335,15 +348,7 @@
             return '<li><b>' + esc(PHAN_TEN[x[0].phan] || x[0].tenPhan) + '</b> <small>' + esc((LOP[x[0].maLop] || {}).tenLop || '') + ' · hạn ' + ngayGio(x[0].hanNop) + '</small><br>' +
               x[1].map(function (h) { return '<button type="button" class="gv-ten-hs" data-hs="' + esc(h.hoSoId) + '">' + esc(h.hoTen) + '</button>'; }).join(', ') + '</li>'; }).join('') + '</ul>' : '') + '</div>' +
       '</div>' +
-      // 3. Cả lớp sai ở đâu
-      '<div class="gv-the"><div class="gv-the-dau"><h3>1️⃣ Cả lớp sai ở đâu</h3><small>Câu nhiều em trả lời sai ngay lần đầu làm (từ 3 em trở lên làm câu đó)</small></div>' +
-        (!PT ? '<p class="gv-trong">' + (PT_DANG ? 'Đang tải…' : 'Chưa có số liệu.') + '</p>' : (loi.cau.length ? '<ul class="gv-ds-chu-y gv-cau-sai">' + loi.cau.map(function (x) {
-          var nham = Object.keys(x.c).sort(function (a, b) { return x.c[b] - x.c[a]; }).slice(0, 3).map(function (k) { return '<b>' + esc(k) + '</b> (' + x.c[k] + ' lần)'; }).join(', ');
-          return '<li><div><span class="gv-chip do">' + x.s + '/' + x.n + ' em sai (' + Math.round(x.s / x.n * 100) + '%)</span> Câu: <b>' + esc(x.q) + '</b></div>' +
-            '<div>✅ Đáp án đúng: <b>' + esc(x.a) + '</b>' + (nham ? ' &nbsp;·&nbsp; ❌ Các em hay chọn nhầm: ' + nham : '') + '</div>' +
-            '<small>Dạng: ' + esc(tenDang(x.d)) + (tenBaiGon(x.b) ? ' · ' + esc(tenBaiGon(x.b)) : '') + '</small></li>'; }).join('') + '</ul>'
-          : '<p class="gv-trong">Chưa có câu nào ≥ 3 em làm mà nhiều em sai.</p>') +
-          (loi.dang.length ? '<h4>Dạng bài cả lớp hay sai</h4><ul class="gv-ds-chu-y">' + loi.dang.map(function (x) { return '<li><b>' + esc(tenDang(x.t)) + '</b> <span class="gv-chip vang">sai ' + Math.round(x.s / x.n * 100) + '%</span> <small>(' + x.s + ' câu sai trên ' + x.n + ' lượt trả lời)</small></li>'; }).join('') + '</ul>' : '')) + '</div>' +
+      '<div class="gv-the"><div class="gv-the-dau"><h3>1️⃣ Câu hay sai nhất · ' + (TQ.lop && TQ.lop !== '-' ? esc((LOP[TQ.lop] || {}).tenLop || '') : TQ.lop === '-' ? 'em chưa vào lớp' : 'gộp tất cả lớp') + '</h3></div>' + loiHtml(loi) + '</div>' +
       // 4. Hồ sơ từng em
       '<div class="gv-the"><div class="gv-the-dau"><h3>2️⃣ Hồ sơ từng em</h3><small>bấm tên để xem chi tiết</small></div>' +
         (ds.length ? '<div class="gv-cuon"><table class="gv-bang gon"><thead><tr><th>Em</th><th>Lần học gần nhất</th><th>7 ngày</th><th>Lượt gần nhất</th><th>Hay sai</th></tr></thead><tbody>' +
@@ -584,7 +589,7 @@
     noi.addEventListener('change', doiMoBai);
   }
   var LOP_TAB = {};
-  var LOP_TABS = [['tien-trinh', '📈 Tiến trình'], ['bai-giao', '📋 Bài giao'], ['hoc-sinh', '🧑‍🎓 Hồ sơ từng em'], ['mo-bai', '📖 Mở bài'], ['quan-ly', '⚙️ Quản lý']];
+  var LOP_TABS = [['tien-trinh', '📈 Tiến trình'], ['bai-giao', '📋 Bài giao'], ['sai', '❓ Câu hay sai'], ['hoc-sinh', '🧑‍🎓 Hồ sơ từng em'], ['mo-bai', '📖 Mở bài'], ['quan-ly', '⚙️ Quản lý']];
   function ptLop(l) {                          // tab Tiến trình lớp
     var ds = hsTrongLop(l.maLop).filter(tinhHs), bayGio = Date.now(), rows = tienDoLopBai(l.maLop);
     var hoc7 = ds.filter(function (h) { return (HOAT[h.hoSoId] || 0) > bayGio - 7 * 864e5; }).length;
@@ -636,7 +641,7 @@
     var ds = hsTrongLop(l.maLop), mo = D.moBai.filter(function (m) { return m.maLop === l.maLop; }).length, mở = LOP_MO === l.maLop, tab = LOP_TAB[l.maLop] || 'tien-trinh';
     var thanh = '';
     if (mở) {
-      var noiTab = { 'tien-trinh': ptLop, 'bai-giao': bgLop, 'hoc-sinh': hsLopBang, 'mo-bai': moBaiLop, 'quan-ly': quanLyLop }[tab](l);
+      var noiTab = { 'tien-trinh': ptLop, 'bai-giao': bgLop, 'sai': function (x) { taiPhanTich(); return loiHtml(loiLop(x.maLop)); }, 'hoc-sinh': hsLopBang, 'mo-bai': moBaiLop, 'quan-ly': quanLyLop }[tab](l);
       thanh = '<div class="gv-tabs gv-tabs-nho gv-tabs-lop" role="tablist">' + LOP_TABS.map(function (t) {
         return '<button type="button" class="gv-tab' + (t[0] === tab ? ' on' : '') + '" data-l="tab" data-t="' + t[0] + '">' + t[1] + '</button>'; }).join('') + '</div><div class="gv-lop-than">' + noiTab + '</div>';
     }
