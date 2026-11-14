@@ -43,7 +43,7 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-15a';
+var PHIEN_BAN = '2026-11-15b';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -274,7 +274,7 @@ function dsLopCuaHs(hs) {
   function them(m) { m = chuanMa(m); if (m && !co[m] && lopTheoMa(m)) { co[m] = 1; kq.push(m); } }
   them(hs.maLop);
   String(hs.lopThem || '').split(',').forEach(them);
-  if (laGiaoVien(hs.email)) dsLop().forEach(function (l) { if (!l.dong) them(l.maLop); });
+  if (laGiaoVien(hs.email) || laGiaoVien(emailCua(hs.sub))) dsLop().forEach(function (l) { if (!l.dong) them(l.maLop); });
   return kq;
 }
 function thongTinLopHs(hs) {
@@ -291,7 +291,7 @@ function lopCuaToi(p, d) { var hs = hoSoCua(p, d.hoSoId); return { ok: true, lop
 // ---------------- Hồ sơ học sinh (một email có thể có nhiều hồ sơ) ----------------
 function dsHoSo(sub) {
   var v = bang('HoSo'), kq = [];
-  for (var i = 0; i < v.length; i++) if (String(v[i][1]) === sub) kq.push({ hoSoId: String(v[i][0]), hoTen: String(v[i][3]), lop: String(v[i][4]), maLop: String(v[i][8] || ''), email: String(v[i][2] || ''), lopThem: String(v[i][11] || '') });
+  for (var i = 0; i < v.length; i++) if (String(v[i][1]) === sub) kq.push({ hoSoId: String(v[i][0]), sub: String(v[i][1]), hoTen: String(v[i][3]), lop: String(v[i][4]), maLop: String(v[i][8] || ''), email: String(v[i][2] || ''), lopThem: String(v[i][11] || '') });
   return kq;
 }
 function gon(s, n) { return String(s || '').replace(/\s+/g, ' ').trim().slice(0, n); }
