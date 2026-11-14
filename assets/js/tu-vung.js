@@ -29,7 +29,7 @@
     '<p class="tv-mr-note" hidden>Mục <b>Mở rộng</b>: từ và cụm từ hay gặp nằm ngoài danh sách chuẩn HSK 3.0, không chia cấp. Phiên âm theo tài liệu của cô.</p>' +
     '<div class="tv-thanh"><input type="search" class="tv-tim" placeholder="' + (MOT_KHO ? 'Tìm trong bài' : 'Tìm trong cả 9 cấp') + ': chữ Hán, pinyin, nghĩa, Hán Việt…"><span class="tv-dem"></span>' +
       (MOT_KHO ? '' : '<a class="btn solid tv-luyen" href="' + ROOT + 'thu-vien/tu-vung/luyen-tap/">✍️ Luyện tập</a>') + '</div>' +
-    '<div class="tv-che-do" role="group" aria-label="Cách xem từ vựng"><button type="button" data-cd="luoi">▦ Danh sách</button><button type="button" data-cd="the">🃏 Thẻ lật</button>' +
+    '<div class="tv-che-do" role="group" aria-label="Cách xem từ vựng" hidden><button type="button" data-cd="luoi">▦ Danh sách</button>' +
       (MOT_KHO ? '<button type="button" data-cd="bo" hidden>🀄 Thẻ bộ thủ</button>' : '') + '</div>' +
     '<nav class="tv-muc-luc" aria-label="Mục lục theo khoảng từ" hidden></nav>' +
     '<div class="tv-luoi"></div>';
@@ -104,7 +104,6 @@
   }
   // Cách xem: danh sách thẻ nhỏ hoặc thẻ lật (flashcard) từng từ; nhớ lựa chọn trên máy
   var cheDo = 'luoi';
-  try { if (localStorage.getItem('qm-tv-che-do') === 'the') cheDo = 'the'; } catch (e) {}
   function datCheDo(c) {
     cheDo = c; try { if (c !== 'bo') localStorage.setItem('qm-tv-che-do', c); } catch (e) {}
     el.querySelectorAll('.tv-che-do button').forEach(function (b) { b.classList.toggle('on', b.dataset.cd === c); b.setAttribute('aria-pressed', b.dataset.cd === c); });
@@ -113,7 +112,27 @@
   }
   // Nút ⭐ từ khó (dùng chung bộ lưu tiến độ với trang luyện tập)
   // Trang bài: xem đủ mọi từ của bài (bảng chi tiết hoặc thẻ lật) thì phần Từ vựng tính là xong (tiến độ học, quy chuẩn 12)
-  function daXem(w) { if (MOT_KHO && window.QM_PHAN && KHO[capDang]) QM_PHAN.xemTu(w.ma, KHO[capDang].length); }
+  function daXem(w) {
+    if (!MOT_KHO || !window.QM_PHAN || !KHO[capDang]) return;
+    var kho = KHO[capDang], chung = [], mr = [];
+    kho.forEach(function (u) { (nhomCua(u) === 'moRong' ? mr : chung).push(u.ma); });
+    QM_PHAN.xemTu(w.ma, nhomCua(w), chung, mr);          // xong = xem đủ từ chung; từ mở rộng ghi riêng, không bắt buộc
+  }
+  // Danh sách thẻ: từ nào hiện trên màn hình đủ ~1 giây thì tính là đã xem (không bắt buộc phải mở từng từ)
+  var quanSat = null, hen = {};
+  function theoDoiXem() {
+    if (!MOT_KHO || !('IntersectionObserver' in window)) return;
+    if (quanSat) quanSat.disconnect();
+    hen = {};
+    quanSat = new IntersectionObserver(function (ds) {
+      ds.forEach(function (e) {
+        var i = e.target.dataset.i;
+        if (e.isIntersecting && e.intersectionRatio >= 0.5) { if (!hen[i]) hen[i] = setTimeout(function () { var w = hien[+i]; if (w) daXem(w); }, 1000); }
+        else if (hen[i]) { clearTimeout(hen[i]); delete hen[i]; }
+      });
+    }, { threshold: [0.5] });
+    luoi.querySelectorAll('.tv-the').forEach(function (t) { quanSat.observe(t); });
+  }
   function nhanTu(w) { return MOT_KHO ? (coMoRong && nhomCua(w) === 'moRong' ? 'Mở rộng' : 'Từ vựng') : tenCap(w.cap); }
   function nutSao(w) {
     if (!TD) return '';
@@ -173,6 +192,7 @@
         '<div class="tv-han hanzi">' + esc(w.han) + '</div><div class="tv-py">' + TV.pyHtml(w.py) + '</div>' +
         '<div class="tv-nghia">' + esc(w.nghia) + '</div></div>';
     }).join('') + (hien.length > soHien ? '<button type="button" class="tv-them">Xem thêm ' + Math.min(MOI_TRANG, hien.length - soHien) + ' từ (còn ' + (hien.length - soHien) + ')</button>' : '');
+    theoDoiXem();
   }
   luoi.addEventListener('click', function (e) {
     var t = e.target;
@@ -281,7 +301,7 @@
     el.querySelectorAll('.tv-cap button').forEach(function (b) { b.classList.toggle('on', b.dataset.nhom === n); b.setAttribute('aria-selected', b.dataset.nhom === n); });
     if (loc) { loc = ''; tim.value = ''; }
     try { history.replaceState(null, '', location.pathname + location.search + (n === 'moRong' ? '#mo-rong' : '')); } catch (e) {}
-    if (cheDo === 'bo') { var cu = 'luoi'; try { if (localStorage.getItem('qm-tv-che-do') === 'the') cu = 'the'; } catch (e) {} datCheDo(cu); }
+    if (cheDo === 'bo') datCheDo('luoi');
     else { fc.thuTu = null; veLuoi(); }
   }
 
@@ -384,12 +404,11 @@
   tim.addEventListener('input', function () { loc = tim.value; veLuoi(); });
 
   var hashDau = location.hash;                                // nhớ đường dẫn lúc mở trang (chonCap sẽ đổi địa chỉ thành #hsk…)
-  if (/(^#|[#&])the\b/.test(hashDau)) { cheDo = 'the'; el.querySelectorAll('.tv-che-do button').forEach(function (b) { b.classList.toggle('on', b.dataset.cd === 'the'); }); }   // link "#the": mở sẵn thẻ lật
   var h = (location.hash.match(/hsk([\dMR-]+)/) || [])[1];
   chonCap(CAP.indexOf(h) >= 0 ? h : CAP[0]);
   if (MOT_KHO) TV.taiCap(CAP[0]).then(function () {
     var nb = el.querySelector('.tv-che-do [data-cd="bo"]'); if (!nb || !boThu().length) return;
-    nb.hidden = false;
+    nb.hidden = false; el.querySelector('.tv-che-do').hidden = false;      // Chỉ còn hai cách xem: Danh sách · Thẻ bộ thủ (đã bỏ thẻ lật từng từ, cô chốt 14/11/2026)
     if (/(^#|[#&])bo\b/.test(hashDau)) datCheDo('bo');
   });
 })();

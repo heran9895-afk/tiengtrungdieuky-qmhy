@@ -65,14 +65,26 @@
     var k = khoa ? khoaTuDuongDan(khoa) : TRANG_NAY; if (!k) return;
     var cu = PHAN.phan[k.khoa] || {}, moi = { tt: cu.tt === 'xong' ? 'xong' : tt, t: Date.now(), ten: (k === TRANG_NAY && tenTrangNay()) || cu.ten || tenPhan(k.phan), url: k.url };
     if (cu.xem) moi.xem = cu.xem;
+    if (cu.xemMR) moi.xemMR = cu.xemMR;
+    if (cu.mr) moi.mr = cu.mr;
     PHAN.phan[k.khoa] = moi; luuPhan();
   }
-  function xemTu(ma, tong) {                                 // Từ vựng: xem đủ mọi từ (bảng chi tiết hoặc thẻ lật) là xong
+  // Từ vựng / Ngữ pháp: "xong" khi đã xem đủ KIẾN THỨC CHUNG (dsChung = mã các mục chung). Nội dung mở rộng không bắt buộc:
+  // ghi riêng x.mr ('dang' | 'xong') để cô và học sinh thấy ai có học thêm. ma: mã mục vừa xem · nhom: 'moRong' hoặc khác (chung)
+  function xemTu(ma, nhom, dsChung, dsMR) {
     if (!TRANG_NAY) return;
-    var x = PHAN.phan[TRANG_NAY.khoa] || { tt: 'dang-hoc', t: Date.now(), url: TRANG_NAY.url, ten: tenTrangNay() };
-    var xem = x.xem || [];
-    if (xem.indexOf(ma) < 0) { xem.push(ma); x.xem = xem; PHAN.phan[TRANG_NAY.khoa] = x; }
-    if (tong && xem.length >= tong) { danhDau('xong'); delete PHAN.phan[TRANG_NAY.khoa].xem; luuPhan(); }
+    dsChung = dsChung || []; dsMR = dsMR || [];
+    var kh = TRANG_NAY.khoa, x = PHAN.phan[kh] || { tt: 'dang-hoc', t: Date.now(), url: TRANG_NAY.url, ten: tenTrangNay() };
+    var laMR = nhom === 'moRong';
+    if (laMR ? x.mr === 'xong' : x.tt === 'xong') return;     // đã xong phần này: không ghi lại nữa
+    var xem = x.xem || [], xemMR = x.xemMR || [];
+    if (laMR) { if (xemMR.indexOf(ma) >= 0 || xem.indexOf(ma) >= 0) return; xemMR.push(ma); x.xemMR = xemMR; }
+    else { if (xem.indexOf(ma) >= 0) return; xem.push(ma); x.xem = xem; }
+    PHAN.phan[kh] = x;
+    var chungXong = dsChung.length > 0 && dsChung.every(function (m) { return xem.indexOf(m) >= 0; });
+    var mrXong = dsMR.length > 0 && dsMR.every(function (m) { return xem.indexOf(m) >= 0 || xemMR.indexOf(m) >= 0; });
+    if (dsMR.length && x.mr !== 'xong') { if (mrXong) { x.mr = 'xong'; delete x.xemMR; } else if (xemMR.length) x.mr = 'dang'; }
+    if (chungXong) { danhDau('xong'); delete PHAN.phan[kh].xem; luuPhan(); }
     else luuPhan();
   }
   var cho = window.QM_PHAN && window.QM_PHAN.q || [];         // header.js đặt sẵn hàng đợi: lệnh gọi trước khi file này nạp xong
@@ -109,7 +121,7 @@
       if (!x) return;
       var s = document.createElement('span');
       s.className = 'tk-dau' + (x.tt === 'xong' ? ' xong' : '');
-      s.textContent = x.tt === 'xong' ? '✓ Đã xong' : '● Đang học';
+      s.textContent = (x.tt === 'xong' ? '✓ Đã xong' : '● Đang học') + (x.mr === 'xong' ? ' · Mở rộng ✓' : x.mr === 'dang' ? ' · Mở rộng ●' : '');
       if (a.classList.contains('card')) a.insertBefore(s, a.firstChild); else a.appendChild(s);
     });
   }
@@ -353,6 +365,11 @@
     [(a.phan || {}).phan || {}, (b.phan || {}).phan || {}].forEach(function (m) { Object.keys(m).forEach(function (k) {
       var cu = ph[k], x = m[k]; if (!cu) { ph[k] = x; return; }
       var hon = (+x.t || 0) > (+cu.t || 0) ? x : cu; ph[k] = Object.assign({}, hon, { tt: cu.tt === 'xong' || x.tt === 'xong' ? 'xong' : hon.tt, t: Math.max(+cu.t || 0, +x.t || 0) });
+      var hopXem = function (f) { return (cu[f] || []).concat(x[f] || []).filter(function (v, q, a) { return a.indexOf(v) === q; }); };
+      var xe = hopXem('xem'), xm = hopXem('xemMR'); delete ph[k].xem; delete ph[k].xemMR;
+      if (ph[k].tt !== 'xong' && xe.length) ph[k].xem = xe;
+      if ((cu.mr === 'xong' || x.mr === 'xong') ? false : xm.length) ph[k].xemMR = xm;
+      if (cu.mr === 'xong' || x.mr === 'xong') ph[k].mr = 'xong'; else if (cu.mr || x.mr) ph[k].mr = 'dang';
     }); });
     var ld = {};                                             // lượt làm dở: mỗi khoá lấy bản mới hơn (kể cả dấu xoá)
     [((a.ld || {}).ds) || {}, ((b.ld || {}).ds) || {}].forEach(function (m) { Object.keys(m).forEach(function (k) { if (!ld[k] || (+m[k].t || 0) > (+ld[k].t || 0)) ld[k] = m[k]; }); });

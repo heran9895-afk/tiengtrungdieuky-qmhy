@@ -19,10 +19,13 @@
     return L;
   }
   var MUC = [];
-  for (var i = 1; i <= 7; i++) MUC.push({ k: 'bai-' + i, ten: 'Bài ' + i, phan: phanBai(i) });
+  // Thứ tự chuẩn (cô chốt 14/11/2026): Bài 1–5 → Ôn tập tổng hợp 1–5 → Bài 6–10 → Ôn tập tổng hợp 6–10 → … (bài kiểm tra chỉ giao, không dạy)
+  function bai(i) { MUC.push({ k: 'bai-' + i, ten: 'Bài ' + i, phan: phanBai(i) }); }
+  for (var i = 1; i <= 5; i++) bai(i);
   MUC.push({ k: 'on-tap-1-5', ten: 'Ôn tập tổng hợp Bài 1–5', phan: [
     ['📚 Từ vựng', 'on-tap-1-5/tu-vung.html', 2], ['🔤 Ngữ âm', 'on-tap-1-5/ngu-am.html', 2], ['✍️ Chữ Hán', 'on-tap-1-5/chu-han.html', 2], ['📐 Ngữ pháp', 'on-tap-1-5/ngu-phap.html', 2],
     ['🎧 Nghe', 'on-tap-1-5/nghe.html', 2], ['📖 Đọc hiểu', 'on-tap-1-5/doc-hieu.html', 2], ['🌏 Dịch Việt → Trung', 'on-tap-1-5/dich.html', 3], ['🔀 Trộn tổng hợp', 'on-tap-1-5/tong-hop.html', 1]] });
+  for (var j = 6; j <= 7; j++) bai(j);
 
   var CSS = '.gvd-hang{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin-bottom:14px}' +
     '.gvd-hang label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:700;color:var(--muted,#667)}' +

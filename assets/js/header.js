@@ -97,7 +97,7 @@
     // Mục nào chưa có trang: để "sapCo: true" (menu hiện mờ "Sắp có", mọi nút/thẻ trỏ tới mục đó trên web tự khoá lại).
     // Có trang rồi: xoá "sapCo: true" là mở ở mọi nơi. "mota" là dòng mô tả hiện trên thẻ ở trang Thư viện và trang chủ.
     { ten: 'Thư viện', link: 'thu-vien/', con: [
-      { ten: 'Kho từ vựng 9 cấp',       link: 'thu-vien/tu-vung/',   ico: '📚', mota: 'Toàn bộ từ vựng HSK 3.0: tra cứu, nghe phát âm, xem thẻ lật.' },
+      { ten: 'Kho từ vựng 9 cấp',       link: 'thu-vien/tu-vung/',   ico: '📚', mota: 'Toàn bộ từ vựng HSK 3.0: tra cứu, nghe phát âm.' },
       { ten: 'Luyện từ vựng',           link: 'thu-vien/tu-vung/luyen-tap/', ico: '🧠', mota: 'Nghe chọn từ, chọn pinyin, ghép cặp, điền từ, sắp xếp câu, gõ chữ Hán theo từng cấp.' },
       { ten: 'Tiếng Trung theo chủ đề', link: 'thu-vien/chu-de/',    ico: '🗂️', mota: 'Từ vựng và mẫu câu cho từng tình huống trong đời sống, công việc.', sapCo: true },
       { ten: 'Phân biệt từ',            link: 'thu-vien/phan-biet/', ico: '⚖️', mota: 'Gỡ rối những cặp từ dễ nhầm, có ví dụ và bài luyện kèm theo.', sapCo: true },

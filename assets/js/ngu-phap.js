@@ -22,6 +22,7 @@
       return;
     }
     var g = DS[i];
+    if (window.QM_PHAN) QM_PHAN.xemTu('np' + i, '', DS.map(function (_, k) { return 'np' + k; }), []);   // xem đủ mọi điểm (kể cả nhảy bằng nút tròn số) là xong, không cần bấm "Hoàn thành"
     el.innerHTML =
       '<div class="np-nut">' + DS.map(function (x, k) { return '<button type="button" class="np-tron' + (k === i ? ' on' : '') + (k < i ? ' qua' : '') + '" data-k="' + k + '" aria-label="Điểm ' + (k + 1) + ': ' + esc(x.ten) + '">' + (k + 1) + '</button>'; }).join('') +
         (LUYEN ? '<button type="button" class="np-tron np-tron-luyen np-luyen" aria-label="Luyện ngữ pháp">🎯 Luyện</button>' : '') + '</div>' +

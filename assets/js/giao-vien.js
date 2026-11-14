@@ -629,7 +629,7 @@
         '<label>Hạn nộp<input type="datetime-local" name="hanNop" value="' + chuoiDL(han) + '" required></label>' +
         '<label>Lời nhắn cho học sinh <span class="gv-phu">(tuỳ chọn)</span><input name="ghiChu" maxlength="300" placeholder="VD: Làm trước buổi thứ Năm"></label>' +
         '<div class="gv-tom"></div><button type="submit" class="gv-nut chinh to">Giao bài</button>' +
-        '<p class="gv-trong">“Xong” = học sinh làm trọn một lượt (Bài tập, Ôn tập, Test: lượt Trộn tất cả · Từ vựng: xem đủ mọi từ · Ngữ pháp: tới màn Hoàn thành).</p></form></div></div>' +
+        '<p class="gv-trong">“Xong” = học sinh làm trọn một lượt (Bài tập, Ôn tập, Test: lượt Trộn tất cả · Từ vựng: xem đủ các từ chung (từ mở rộng không bắt buộc) · Ngữ pháp: xem đủ mọi điểm).</p></form></div></div>' +
       '</div>' +
       '<div class="gv-the"><div class="gv-the-dau"><h3>🗂 Các đợt đã giao</h3></div><div class="gv-ds-dot"></div></div>';
     veDsBai(noi); veTom(noi); veDsDot(noi);

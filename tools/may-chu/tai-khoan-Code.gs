@@ -43,7 +43,7 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-14c';
+var PHIEN_BAN = '2026-11-14d';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -56,7 +56,7 @@ var TRANG = {
   Users:     ['sub', 'email', 'hoTen', 'anh', 'taoLuc', 'lanCuoi'],
   HoSo:      ['hoSoId', 'sub', 'email', 'hoTenHocSinh', 'lop', 'dongY', 'dongYLuc', 'taoLuc', 'maLop'],
   Progress:  ['sub', 'hoSoId', 'khoa', 'duLieu', 'capNhatLuc'],
-  TrangThai: ['hoSoId', 'hoTenHocSinh', 'lop', 'phan', 'tenPhan', 'trangThai', 'capNhatLuc'],
+  TrangThai: ['hoSoId', 'hoTenHocSinh', 'lop', 'phan', 'tenPhan', 'trangThai', 'capNhatLuc', 'moRong'],
   Visits:    ['thoiDiem', 'trang', 'sub', 'hoSoId', 'maPhien', 'thietBi'],
   Lop:       ['maLop', 'tenLop', 'ghiChu', 'taoLuc', 'dong'],
   MoBai:     ['maLop', 'bai', 'tenBai', 'moLuc'],
@@ -419,8 +419,12 @@ function tron(a, b) {
     if (!cu) { kq.phan[k] = moi; return; }
     var xem = (cu.xem || []).concat(moi.xem || []).filter(function (x, i, s) { return s.indexOf(x) === i; });
     var hon = (+moi.t || 0) > (+cu.t || 0) ? moi : cu;
+    var xemMR = (cu.xemMR || []).concat(moi.xemMR || []).filter(function (x, i, s) { return s.indexOf(x) === i; });
+    var mr = cu.mr === 'xong' || moi.mr === 'xong' ? 'xong' : (cu.mr || moi.mr || '');
     kq.phan[k] = { tt: cu.tt === 'xong' || moi.tt === 'xong' ? 'xong' : hon.tt, t: Math.max(+cu.t || 0, +moi.t || 0), ten: hon.ten || cu.ten, url: hon.url || cu.url };
-    if (xem.length) kq.phan[k].xem = xem;
+    if (xem.length && kq.phan[k].tt !== 'xong') kq.phan[k].xem = xem;
+    if (xemMR.length && mr !== 'xong') kq.phan[k].xemMR = xemMR;
+    if (mr) kq.phan[k].mr = mr;           // nội dung mở rộng: 'dang' | 'xong' (không bắt buộc, chỉ để cô theo dõi)
   }); });
   var bayGio = Date.now();
   [a.luotDo || {}, b.luotDo || {}].forEach(function (m) { Object.keys(m).forEach(function (k) {
@@ -467,11 +471,11 @@ function ghiTrangThai(hs, phan) {
   var sh = trang('TrangThai'), v = sh.getDataRange().getValues(), co = {}, them = [];
   for (var i = 1; i < v.length; i++) if (String(v[i][0]) === hs.hoSoId) co[String(v[i][3])] = i + 1;
   Object.keys(phan).forEach(function (k) {
-    var x = phan[k], dong = [hs.hoSoId, hs.hoTen, hs.lop, k, x.ten || k, x.tt === 'xong' ? 'xong' : 'đang học', new Date(+x.t || Date.now())];
-    if (co[k]) { var cu = v[co[k] - 1]; if (cu[5] !== dong[5] || cu[1] !== dong[1] || cu[2] !== dong[2]) sh.getRange(co[k], 1, 1, 7).setValues([dong]); }
+    var x = phan[k], dong = [hs.hoSoId, hs.hoTen, hs.lop, k, x.ten || k, x.tt === 'xong' ? 'xong' : 'đang học', new Date(+x.t || Date.now()), x.mr === 'xong' ? 'xong' : x.mr === 'dang' ? 'đang học' : ''];
+    if (co[k]) { var cu = v[co[k] - 1]; if (cu[5] !== dong[5] || cu[1] !== dong[1] || cu[2] !== dong[2] || String(cu[7] || '') !== dong[7]) sh.getRange(co[k], 1, 1, 8).setValues([dong]); }
     else them.push(dong);
   });
-  if (them.length) sh.getRange(sh.getLastRow() + 1, 1, them.length, 7).setValues(them);   // phần mới: thêm một lượt
+  if (them.length) sh.getRange(sh.getLastRow() + 1, 1, them.length, 8).setValues(them);   // phần mới: thêm một lượt
 }
 
 // ---------------- Lượt truy cập: mỗi lần mở trang một dòng ----------------
@@ -494,7 +498,7 @@ function gvDuLieu(gv) {
       taoLuc: ms(r[7]), dangNhapLuc: u.lanCuoi || 0 };
   });
   var trangThai = bang('TrangThai').filter(function (r) { return r[0]; }).map(function (r) {
-    return { hoSoId: String(r[0]), phan: String(r[3]), tenPhan: String(r[4]), tt: String(r[5]) === 'xong' ? 'xong' : 'dang-hoc', t: ms(r[6]) };
+    return { hoSoId: String(r[0]), phan: String(r[3]), tenPhan: String(r[4]), tt: String(r[5]) === 'xong' ? 'xong' : 'dang-hoc', t: ms(r[6]), mr: String(r[7]) === 'xong' ? 'xong' : String(r[7]) ? 'dang' : '' };
   });
   var moBai = bang('MoBai').filter(function (r) { return r[0]; }).map(function (r) { return { maLop: String(r[0]), bai: String(r[1]), tenBai: String(r[2]), moLuc: ms(r[3]) }; });
   var giaoBai = bang('GiaoBai').filter(function (r) { return r[0]; }).map(function (r) {
