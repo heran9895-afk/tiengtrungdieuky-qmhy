@@ -2888,7 +2888,8 @@
    "hoi": [
     "你会包饺子吗？",
     "Nǐ huì bāo jiǎozi ma?",
-    "Bạn có biết gói sủi cảo không?"
+    "Bạn có biết gói sủi cảo không?",
+    "assets/am/nam1/4b0d01a47b.mp3"
    ],
    "dap": [
     "会，我会包饺子，也会包包子。",
@@ -3942,7 +3943,8 @@
     {
      "han": "你会包饺子吗？",
      "py": "Nǐ huì bāo jiǎozi ma?",
-     "viet": "Bạn có biết gói sủi cảo không?"
+     "viet": "Bạn có biết gói sủi cảo không?",
+     "doc": "assets/am/nam1/4b0d01a47b.mp3"
     },
     {
      "han": "会，我妈妈星期天包饺子，我也包。",
