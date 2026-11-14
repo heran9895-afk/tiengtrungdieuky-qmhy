@@ -13,6 +13,7 @@ import os, re, json, shutil, sys
 VAI = {
     (6, 'Bài khóa · Hỏi số điện thoại'): ['Achird', 'Leda', 'Achird'],
     (6, 'Bài khóa · Ngày mai đi siêu thị'): ['Achird', 'Leda', 'Achird', 'Leda'],
+    (6, 'Bài đọc thêm · Bạn tôi Lý Nguyệt'): ['Sulafat'] * 4,   # HSK 2.0 Bài 6: bài đọc một người kể
     (7, 'Bài khóa · Hẹn gặp lúc 2 giờ chiều'): ['Leda', 'Gacrux', 'Leda', 'Gacrux'],
     (7, 'Bài khóa · Xem phim hay còn việc'): ['Achird', 'Leda', 'Achird', 'Leda'],
     (7, 'Bài khóa · Đang ở đâu thế'): ['Gacrux', 'Charon', 'Gacrux', 'Gacrux', 'Charon'],
@@ -28,13 +29,18 @@ def da_that(T, c):
     return c in DA_AM_THAT
 
 
-def so_bai(cap): return int(re.sub(r'\D', '', str(cap)))
+def so_bai(cap): return int(re.search(r'bai(\d+)', str(cap)).group(1))
+
+
+def tep_bai(cap):
+    """CAP 'bai6' → data/bai/bai-6.json (HSK 3.0); 'bai6h2' → data/hsk2/bai-6.json (HSK 2.0)."""
+    return ('data/hsk2/bai-%d.json' if str(cap).endswith('h2') else 'data/bai/bai-%d.json') % so_bai(cap)
 
 
 def gom_bai(T, cap):
     if str(cap).endswith('sbt'): return gom_sbt(T, cap)
     n = so_bai(cap); R = T.CFG['repo']
-    d = json.load(open(R + 'data/bai/bai-%d.json' % n))
+    d = json.load(open(R + tep_bai(cap)))
     B = json.load(open(R + 'assets/am/ban-do.json'))
     out, by, bo = [], {}, []
 
@@ -143,6 +149,8 @@ def gom_bai(T, cap):
         if it['giong'] not in ('Sulafat',) and it['typ'] != 'chu': pass
         it['co'] = co
         it['alt'] = T.khong_dau(it['py']) if lech else ''
+    if str(cap).endswith('bao'):   # CAP 'bai5bao': chỉ các mục có chữ 包 (bổ sung chữ 包, HSK 3.0 Bài 5)
+        out = [it for it in out if '包' in it['text']]
     return out, bo
 
 
@@ -192,7 +200,7 @@ def day_len_bai(T, cap, tu, den, token, ten, email):
         for it in di:
             p = duong[it['id']]; os.makedirs(os.path.dirname(R + p), exist_ok=True); shutil.copy(it['file'], R + p); tep.append(p)
             if it['giong'] == 'Sulafat' and not any(t[0] == 'tu' for t in it['tg']): them[it['k']] = p
-        f = R + 'data/bai/bai-%d.json' % n; s = open(f, encoding='utf-8').read(); d = json.loads(s)
+        f = R + tep_bai(cap); s = open(f, encoding='utf-8').read(); d = json.loads(s)
         vt = {w['Mã']: w for w in d['tu']}
         parts = {}
         for b in bo:
@@ -217,8 +225,8 @@ def day_len_bai(T, cap, tu, den, token, ten, email):
         nhom = [tep[i:i + 1900] for i in range(0, len(tep), 1900)]
         for k, g in enumerate(nhom, 1):
             T._git('add', *g)
-            if k == len(nhom): T._git('add', 'assets/am/ban-do.json', 'data/bai/bai-%d.json' % n)
-            T._git('commit', '-q', '-m', 'Giọng Gemini Bài %d: %d file' % (n, len(di)) + (' (phần %d/%d)' % (k, len(nhom)) if len(nhom) > 1 else ''))
+            if k == len(nhom): T._git('add', 'assets/am/ban-do.json', tep_bai(cap))
+            T._git('commit', '-q', '-m', 'Giọng Gemini Bài %d%s: %d file' % (n, ' (HSK 2.0)' if str(cap).endswith('h2') else '', len(di)) + (' (phần %d/%d)' % (k, len(nhom)) if len(nhom) > 1 else ''))
         try:
             T._git('push', url, 'HEAD:' + nhanh, an=token); break
         except RuntimeError as e:

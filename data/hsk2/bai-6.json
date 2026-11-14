@@ -66,7 +66,7 @@
    "Câu 1": "A：你妈妈会说汉语吗？\nB：她不会说。",
    "Pinyin câu 1": "A: Nǐ māma huì shuō Hànyǔ ma?\nB: Tā bú huì shuō.",
    "Nghĩa câu 1": "A: Mẹ bạn biết nói tiếng Trung không?\nB: Mẹ mình không biết nói.",
-   "Đọc câu 1": "你妈妈会说汉语吗？她不会说。",
+   "Đọc câu 1": "",
    "Câu 2": "我妈妈会说汉语，也会说英语。",
    "Pinyin câu 2": "Wǒ māma huì shuō Hànyǔ, yě huì shuō Yīngyǔ.",
    "Nghĩa câu 2": "Mẹ tôi biết nói tiếng Trung, cũng biết nói tiếng Anh.",
@@ -129,7 +129,7 @@
    "Câu 1": "A：中国菜好吃吗？\nB：中国菜很好吃。",
    "Pinyin câu 1": "A: Zhōngguó cài hǎochī ma?\nB: Zhōngguó cài hěn hǎochī.",
    "Nghĩa câu 1": "A: Món Trung Quốc có ngon không?\nB: Món Trung Quốc rất ngon.",
-   "Đọc câu 1": "中国菜好吃吗？中国菜很好吃。",
+   "Đọc câu 1": "",
    "Câu 2": "越南菜很好吃。",
    "Pinyin câu 2": "Yuènán cài hěn hǎochī.",
    "Nghĩa câu 2": "Món Việt Nam rất ngon.",
@@ -154,7 +154,7 @@
    "Câu 2": "A：你会做中国菜吗？\nB：我不会做。",
    "Pinyin câu 2": "A: Nǐ huì zuò Zhōngguó cài ma?\nB: Wǒ bú huì zuò.",
    "Nghĩa câu 2": "A: Bạn biết nấu món Trung Quốc không?\nB: Mình không biết nấu.",
-   "Đọc câu 2": "你会做中国菜吗？我不会做。"
+   "Đọc câu 2": ""
   },
   {
    "Mã": "1-0409",
@@ -175,7 +175,7 @@
    "Câu 2": "A：你会写汉字吗？\nB：我会写。",
    "Pinyin câu 2": "A: Nǐ huì xiě Hànzì ma?\nB: Wǒ huì xiě.",
    "Nghĩa câu 2": "A: Bạn biết viết chữ Hán không?\nB: Mình biết viết.",
-   "Đọc câu 2": "你会写汉字吗？我会写。"
+   "Đọc câu 2": ""
   },
   {
    "Mã": "1-0137",
@@ -276,7 +276,7 @@
    "Câu 1": "A：你吃什么？\nB：我吃越南菜。",
    "Pinyin câu 1": "A: Nǐ chī shénme?\nB: Wǒ chī Yuènán cài.",
    "Nghĩa câu 1": "A: Bạn ăn gì?\nB: Mình ăn món Việt Nam.",
-   "Đọc câu 1": "你吃什么？我吃越南菜。",
+   "Đọc câu 1": "",
    "Câu 2": "我妹妹不吃中国菜。",
    "Pinyin câu 2": "Wǒ mèimei bù chī Zhōngguó cài.",
    "Nghĩa câu 2": "Em gái tôi không ăn món Trung Quốc.",

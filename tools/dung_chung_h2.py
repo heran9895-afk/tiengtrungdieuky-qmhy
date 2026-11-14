@@ -64,8 +64,7 @@ def dung(N, N_, NP, K):
              'Cụm từ': '\n'.join(f'{a} | {b}' for a, b in cum), 'Đọc từ': K.DOC_TU.get(chu, ''), '_nhom': nhom}
         for i, c in ((1, c1), (2, c2)):
             w[f'Câu {i}'], w[f'Pinyin câu {i}'], w[f'Nghĩa câu {i}'] = c[0], c[1], c[2]
-            w[f'Đọc câu {i}'] = c[4] if len(c) > 4 else (khong_nhan(c[0]) if '\n' in c[0] else '')
-            if '\n' in c[0] and len(c) > 4: w[f'Đọc câu {i}'] = khong_nhan(c[4])
+            w[f'Đọc câu {i}'] = ''     # câu A/B: Colab ghi 'đường dẫn A|đường dẫn B' sau khi thu
         w['_chang'] = chang
         tu.append(w)
     chang = []

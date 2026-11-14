@@ -103,7 +103,7 @@ def tep_cap(cap): return CFG['repo'] + 'data/tu-vung/cap-%s.json' % cap
 
 
 def gom(cap, tu, den, ep=None):
-    if str(cap).startswith('bai'):
+    if 'bai' in str(cap):
         import thu_am_bai; return thu_am_bai.gom_bai(sys.modules[__name__], cap)
     """Gom mục cần thu của mã thứ tu..den (đếm từ 1, gồm cả hai đầu). Giống gom2.py + thêm pinyin, cờ cần nghe."""
     d = json.load(open(tep_cap(cap)))
@@ -621,7 +621,7 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
         _ghi(D + 'ds.json', ds); _ghi(D + 'bo.json', bo)
         print('Gom HSK%s %d → %d: %d từ/cụm, %d chữ đa âm (ghi thẳng ô Đọc), %d câu · bỏ %d mục (了/么 riêng, đã có file)' % (
             cap, tu, den, sum(it['typ'] == 'tu' for it in ds), sum(it['typ'] == 'chu' for it in ds), sum(it['typ'] == 'cau' for it in ds), len(bo)))
-    elif str(cap).startswith('bai'): bo_sung_moi(cap, tu, den, D, ds)
+    elif 'bai' in str(cap): bo_sung_moi(cap, tu, den, D, ds)
     elif str(cap) == '2': bo_sung_moi(cap, tu, den, D, ds, REDO_HSK2)
     L = _doc(D + 'luot.json')
     if L is None:
@@ -878,7 +878,7 @@ def _git(*a, an=None):
 
 def day_len(cap, tu, den, token, ten='Nhiên (Colab)', email='heran9895@gmail.com'):
     """Đẩy mục đã đạt (máy tự kiểm đạt + cô tick Đạt) lên main. Mục còn chờ nghe / thu lại để lần sau."""
-    if str(cap).startswith('bai'):
+    if 'bai' in str(cap):
         import thu_am_bai; return thu_am_bai.day_len_bai(sys.modules[__name__], cap, tu, den, token, ten, email)
     D = thu_muc(cap, tu, den); ds = _doc(D + 'ds.json')
     R = CFG['repo']
