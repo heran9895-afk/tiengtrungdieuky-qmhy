@@ -1,0 +1,1789 @@
+{
+ "bai": "6",
+ "chuongTrinh": "HSK 2.0",
+ "ten": "第六课：我会说汉语",
+ "tenViet": "Bài 6: Tôi biết nói tiếng Trung",
+ "pinyinTen": "Dì liù kè: Wǒ huì shuō Hànyǔ",
+ "tenRieng": [
+  "李月"
+ ],
+ "maBaiTap": "h2-bai6-bai-tap",
+ "tu": [
+  {
+   "Mã": "1-0160",
+   "Chữ Hán": "会",
+   "Pinyin": "huì",
+   "Âm Hán Việt": "HỘI",
+   "Từ loại": "động từ năng nguyện",
+   "Nghĩa tiếng Việt": "biết (làm gì, nhờ học mà biết)",
+   "Cấp HSK": "1",
+   "Thuận bút": "会",
+   "Cụm từ": "会汉语 | huì Hànyǔ\n会说汉语 | huì shuō Hànyǔ\n不会说汉语 | bú huì shuō Hànyǔ",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我们会汉语。",
+   "Pinyin câu 1": "Wǒmen huì Hànyǔ.",
+   "Nghĩa câu 1": "Chúng tôi biết tiếng Trung.",
+   "Đọc câu 1": "",
+   "Câu 2": "我妈妈不会说英语。",
+   "Pinyin câu 2": "Wǒ māma bú huì shuō Yīngyǔ.",
+   "Nghĩa câu 2": "Mẹ tôi không biết nói tiếng Anh.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0349",
+   "Chữ Hán": "说",
+   "Pinyin": "shuō",
+   "Âm Hán Việt": "THUYẾT",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "nói",
+   "Cấp HSK": "1",
+   "Thuận bút": "说",
+   "Cụm từ": "说汉语 | shuō Hànyǔ\n说英语 | shuō Yīngyǔ\n说越南语 | shuō Yuènányǔ\n说什么 | shuō shénme",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "老师说汉语，我们说越南语。",
+   "Pinyin câu 1": "Lǎoshī shuō Hànyǔ, wǒmen shuō Yuènányǔ.",
+   "Nghĩa câu 1": "Cô giáo nói tiếng Trung, chúng tôi nói tiếng Việt.",
+   "Đọc câu 1": "",
+   "Câu 2": "你们说汉语吗？",
+   "Pinyin câu 2": "Nǐmen shuō Hànyǔ ma?",
+   "Nghĩa câu 2": "Các bạn nói tiếng Trung không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0224",
+   "Chữ Hán": "妈妈",
+   "Pinyin": "māma",
+   "Âm Hán Việt": "MA MA",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "mẹ",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "我妈妈 | wǒ māma\n你妈妈 | nǐ māma\n妈妈的名字 | māma de míngzi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：你妈妈会说汉语吗？\nB：她不会说。",
+   "Pinyin câu 1": "A: Nǐ māma huì shuō Hànyǔ ma?\nB: Tā bú huì shuō.",
+   "Nghĩa câu 1": "A: Mẹ bạn biết nói tiếng Trung không?\nB: Mẹ mình không biết nói.",
+   "Đọc câu 1": "你妈妈会说汉语吗？她不会说。",
+   "Câu 2": "我妈妈会说汉语，也会说英语。",
+   "Pinyin câu 2": "Wǒ māma huì shuō Hànyǔ, yě huì shuō Yīngyǔ.",
+   "Nghĩa câu 2": "Mẹ tôi biết nói tiếng Trung, cũng biết nói tiếng Anh.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0035",
+   "Chữ Hán": "菜",
+   "Pinyin": "cài",
+   "Âm Hán Việt": "THÁI",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "món ăn; rau",
+   "Cấp HSK": "1",
+   "Thuận bút": "菜",
+   "Cụm từ": "中国菜 | Zhōngguó cài\n越南菜 | Yuènán cài\n韩国菜 | Hánguó cài\n吃菜 | chī cài",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你们吃不吃韩国菜？",
+   "Pinyin câu 1": "Nǐmen chī bu chī Hánguó cài?",
+   "Nghĩa câu 1": "Các bạn có ăn món Hàn Quốc không?",
+   "Đọc câu 1": "",
+   "Câu 2": "我爸爸会做越南菜。",
+   "Pinyin câu 2": "Wǒ bàba huì zuò Yuènán cài.",
+   "Nghĩa câu 2": "Bố tôi biết nấu món Việt Nam.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0146",
+   "Chữ Hán": "很",
+   "Pinyin": "hěn",
+   "Âm Hán Việt": "NGẬN",
+   "Từ loại": "phó từ",
+   "Nghĩa tiếng Việt": "rất",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "很好 | hěn hǎo\n很大 | hěn dà\n很多 | hěn duō",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "这个字很大。",
+   "Pinyin câu 1": "Zhè ge zì hěn dà.",
+   "Nghĩa câu 1": "Chữ này rất to.",
+   "Đọc câu 1": "",
+   "Câu 2": "我妈妈的汉语很好。",
+   "Pinyin câu 2": "Wǒ māma de Hànyǔ hěn hǎo.",
+   "Nghĩa câu 2": "Tiếng Trung của mẹ tôi rất tốt.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0139",
+   "Chữ Hán": "好吃",
+   "Pinyin": "hǎochī",
+   "Âm Hán Việt": "HẢO CẬT",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "ngon (đồ ăn)",
+   "Cấp HSK": "1",
+   "Thuận bút": "吃",
+   "Cụm từ": "很好吃 | hěn hǎochī\n不好吃 | bù hǎochī\n好吃的菜 | hǎochī de cài",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：中国菜好吃吗？\nB：中国菜很好吃。",
+   "Pinyin câu 1": "A: Zhōngguó cài hǎochī ma?\nB: Zhōngguó cài hěn hǎochī.",
+   "Nghĩa câu 1": "A: Món Trung Quốc có ngon không?\nB: Món Trung Quốc rất ngon.",
+   "Đọc câu 1": "中国菜好吃吗？中国菜很好吃。",
+   "Câu 2": "越南菜很好吃。",
+   "Pinyin câu 2": "Yuènán cài hěn hǎochī.",
+   "Nghĩa câu 2": "Món Việt Nam rất ngon.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0500",
+   "Chữ Hán": "做",
+   "Pinyin": "zuò",
+   "Âm Hán Việt": "TỐ",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "làm; nấu (món ăn)",
+   "Cấp HSK": "1",
+   "Thuận bút": "做",
+   "Cụm từ": "做中国菜 | zuò Zhōngguó cài\n做越南菜 | zuò Yuènán cài\n会做 | huì zuò\n做什么 | zuò shénme",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我奶奶会做中国菜，很好吃。",
+   "Pinyin câu 1": "Wǒ nǎinai huì zuò Zhōngguó cài, hěn hǎochī.",
+   "Nghĩa câu 1": "Bà tôi biết nấu món Trung Quốc, rất ngon.",
+   "Đọc câu 1": "",
+   "Câu 2": "A：你会做中国菜吗？\nB：我不会做。",
+   "Pinyin câu 2": "A: Nǐ huì zuò Zhōngguó cài ma?\nB: Wǒ bú huì zuò.",
+   "Nghĩa câu 2": "A: Bạn biết nấu món Trung Quốc không?\nB: Mình không biết nấu.",
+   "Đọc câu 2": "你会做中国菜吗？我不会做。"
+  },
+  {
+   "Mã": "1-0409",
+   "Chữ Hán": "写",
+   "Pinyin": "xiě",
+   "Âm Hán Việt": "TẢ",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "viết",
+   "Cấp HSK": "1",
+   "Thuận bút": "写",
+   "Cụm từ": "写汉字 | xiě Hànzì\n写名字 | xiě míngzi\n会写 | huì xiě\n不会写 | bú huì xiě",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我会写我的名字。",
+   "Pinyin câu 1": "Wǒ huì xiě wǒ de míngzi.",
+   "Nghĩa câu 1": "Tôi biết viết tên của tôi.",
+   "Đọc câu 1": "",
+   "Câu 2": "A：你会写汉字吗？\nB：我会写。",
+   "Pinyin câu 2": "A: Nǐ huì xiě Hànzì ma?\nB: Wǒ huì xiě.",
+   "Nghĩa câu 2": "A: Bạn biết viết chữ Hán không?\nB: Mình biết viết.",
+   "Đọc câu 2": "你会写汉字吗？我会写。"
+  },
+  {
+   "Mã": "1-0137",
+   "Chữ Hán": "汉字",
+   "Pinyin": "Hànzì",
+   "Âm Hán Việt": "HÁN TỰ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "chữ Hán",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "三个汉字 | sān ge Hànzì\n写汉字 | xiě Hànzì\n读汉字 | dú Hànzì",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "汉字很美。",
+   "Pinyin câu 1": "Hànzì hěn měi.",
+   "Nghĩa câu 1": "Chữ Hán rất đẹp.",
+   "Đọc câu 1": "",
+   "Câu 2": "弟弟会写三个汉字：你、我、他。",
+   "Pinyin câu 2": "Dìdi huì xiě sān ge Hànzì: nǐ, wǒ, tā.",
+   "Nghĩa câu 2": "Em trai biết viết ba chữ Hán: 你, 我, 他.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0488",
+   "Chữ Hán": "字",
+   "Pinyin": "zì",
+   "Âm Hán Việt": "TỰ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "chữ",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "一个字 | yí ge zì\n这个字 | zhè ge zì\n写字 | xiě zì",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "这个字我会读，不会写。",
+   "Pinyin câu 1": "Zhè ge zì wǒ huì dú, bú huì xiě.",
+   "Nghĩa câu 1": "Chữ này tôi biết đọc, không biết viết.",
+   "Đọc câu 1": "",
+   "Câu 2": "他的名字有三个字。",
+   "Pinyin câu 2": "Tā de míngzi yǒu sān ge zì.",
+   "Nghĩa câu 2": "Tên của anh ấy có ba chữ.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0460",
+   "Chữ Hán": "怎么",
+   "Pinyin": "zěnme",
+   "Âm Hán Việt": "CHẨM MA",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "thế nào, làm sao",
+   "Cấp HSK": "1",
+   "Thuận bút": "怎",
+   "Cụm từ": "怎么读 | zěnme dú\n怎么写 | zěnme xiě\n怎么说 | zěnme shuō\n怎么做 | zěnme zuò",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "这个汉字怎么读？",
+   "Pinyin câu 1": "Zhè ge Hànzì zěnme dú?",
+   "Nghĩa câu 1": "Chữ Hán này đọc thế nào?",
+   "Đọc câu 1": "",
+   "Câu 2": "中国菜怎么做？",
+   "Pinyin câu 2": "Zhōngguó cài zěnme zuò?",
+   "Nghĩa câu 2": "Món Trung Quốc nấu thế nào?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0090",
+   "Chữ Hán": "读",
+   "Pinyin": "dú",
+   "Âm Hán Việt": "ĐỘC",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "đọc",
+   "Cấp HSK": "1",
+   "Thuận bút": "读",
+   "Cụm từ": "读汉字 | dú Hànzì\n读名字 | dú míngzi\n会读 | huì dú",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "老师读，我们也读。",
+   "Pinyin câu 1": "Lǎoshī dú, wǒmen yě dú.",
+   "Nghĩa câu 1": "Cô giáo đọc, chúng tôi cũng đọc.",
+   "Đọc câu 1": "",
+   "Câu 2": "你会读我的名字吗？",
+   "Pinyin câu 2": "Nǐ huì dú wǒ de míngzi ma?",
+   "Nghĩa câu 2": "Bạn biết đọc tên tôi không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0046",
+   "Chữ Hán": "吃",
+   "Pinyin": "chī",
+   "Âm Hán Việt": "KHIẾT",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "ăn",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "吃菜 | chī cài\n吃越南菜 | chī Yuènán cài\n不吃 | bù chī",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "A：你吃什么？\nB：我吃越南菜。",
+   "Pinyin câu 1": "A: Nǐ chī shénme?\nB: Wǒ chī Yuènán cài.",
+   "Nghĩa câu 1": "A: Bạn ăn gì?\nB: Mình ăn món Việt Nam.",
+   "Đọc câu 1": "你吃什么？我吃越南菜。",
+   "Câu 2": "我妹妹不吃中国菜。",
+   "Pinyin câu 2": "Wǒ mèimei bù chī Zhōngguó cài.",
+   "Nghĩa câu 2": "Em gái tôi không ăn món Trung Quốc.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0144",
+   "Chữ Hán": "喝",
+   "Pinyin": "hē",
+   "Âm Hán Việt": "HÁT",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "uống",
+   "Cấp HSK": "1",
+   "Thuận bút": "喝",
+   "Cụm từ": "喝什么 | hē shénme\n不喝 | bù hē",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "你喝什么？",
+   "Pinyin câu 1": "Nǐ hē shénme?",
+   "Nghĩa câu 1": "Bạn uống gì?",
+   "Đọc câu 1": "",
+   "Câu 2": "我不吃，我喝。",
+   "Pinyin câu 2": "Wǒ bù chī, wǒ hē.",
+   "Nghĩa câu 2": "Mình không ăn, mình uống.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "h26-好喝",
+   "Chữ Hán": "好喝",
+   "Pinyin": "hǎohē",
+   "Âm Hán Việt": "HẢO HÁT",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "ngon (đồ uống)",
+   "Cấp HSK": "NK",
+   "Thuận bút": "",
+   "Cụm từ": "很好喝 | hěn hǎohē\n不好喝 | bù hǎohē",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "这个很好喝。",
+   "Pinyin câu 1": "Zhè ge hěn hǎohē.",
+   "Nghĩa câu 1": "Cái này rất ngon (đồ uống).",
+   "Đọc câu 1": "",
+   "Câu 2": "这个不好喝，那个很好喝。",
+   "Pinyin câu 2": "Zhè ge bù hǎohē, nà ge hěn hǎohē.",
+   "Nghĩa câu 2": "Cái này không ngon, cái kia rất ngon (đồ uống).",
+   "Đọc câu 2": ""
+  }
+ ],
+ "boThu": [
+  {
+   "boThu": "艹",
+   "ten": "Bộ thảo",
+   "pinyin": "cǎo",
+   "nghia": "cỏ, cây cỏ, thực vật",
+   "docAm": "草字头",
+   "tenGoi": "草字头",
+   "tenGoiPinyin": "cǎozìtóu",
+   "chuChua": [
+    {
+     "hanzi": "菜",
+     "pinyin": "cài",
+     "nghia": "rau; món ăn"
+    }
+   ]
+  },
+  {
+   "boThu": "冖",
+   "ten": "Bộ mịch",
+   "pinyin": "mì",
+   "nghia": "trùm, che, phủ",
+   "docAm": "秃宝盖",
+   "tenGoi": "秃宝盖",
+   "tenGoiPinyin": "tūbǎogài",
+   "chuChua": [
+    {
+     "hanzi": "写",
+     "pinyin": "xiě",
+     "nghia": "viết"
+    }
+   ]
+  }
+ ],
+ "ghepChu": [
+  {
+   "chu": "说",
+   "phan": [
+    "讠",
+    "兑"
+   ]
+  },
+  {
+   "chu": "会",
+   "phan": [
+    "人",
+    "云"
+   ]
+  },
+  {
+   "chu": "读",
+   "phan": [
+    "讠",
+    "卖"
+   ]
+  },
+  {
+   "chu": "写",
+   "phan": [
+    "冖",
+    "与"
+   ]
+  },
+  {
+   "chu": "菜",
+   "phan": [
+    "艹",
+    "采"
+   ]
+  },
+  {
+   "chu": "吃",
+   "phan": [
+    "口",
+    "乞"
+   ]
+  },
+  {
+   "chu": "做",
+   "phan": [
+    "亻",
+    "故"
+   ]
+  }
+ ],
+ "thanhPhan": {
+  "兑": {
+   "pinyin": "duì",
+   "ten": "Đoái",
+   "nghia": "thành phần gợi âm (duì)"
+  },
+  "采": {
+   "pinyin": "cǎi",
+   "ten": "Thái",
+   "nghia": "hái, ngắt; thành phần gợi âm (cǎi)"
+  },
+  "乞": {
+   "pinyin": "qǐ",
+   "ten": "Khất",
+   "nghia": "xin; thành phần gợi âm (qǐ)"
+  },
+  "故": {
+   "pinyin": "gù",
+   "ten": "Cố",
+   "nghia": "cũ; thành phần gợi âm (gù)"
+  },
+  "与": {
+   "pinyin": "yǔ",
+   "ten": "Chữ 与",
+   "nghia": "với, cùng"
+  },
+  "讠": {
+   "pinyin": "yán",
+   "ten": "Bộ ngôn",
+   "nghia": "lời nói, nói năng"
+  },
+  "人": {
+   "pinyin": "rén",
+   "ten": "Bộ nhân",
+   "nghia": "con người"
+  },
+  "云": {
+   "pinyin": "yún",
+   "ten": "Chữ 云",
+   "nghia": "mây"
+  },
+  "卖": {
+   "pinyin": "mài",
+   "ten": "Chữ 卖",
+   "nghia": "bán"
+  },
+  "口": {
+   "pinyin": "kǒu",
+   "ten": "Bộ khẩu",
+   "nghia": "cái miệng"
+  },
+  "亻": {
+   "pinyin": "rén",
+   "ten": "Bộ nhân đứng",
+   "nghia": "chỉ con người"
+  }
+ },
+ "chang": [
+  {
+   "so": "1",
+   "ten": "Ôn tập từ vựng 1 · Nói, đọc, viết",
+   "tu": [
+    "会",
+    "说",
+    "写",
+    "汉字",
+    "字",
+    "读"
+   ],
+   "ghepChu": [
+    "说",
+    "会",
+    "读",
+    "写"
+   ]
+  },
+  {
+   "so": "2",
+   "ten": "Ôn tập từ vựng 2 · Món ăn",
+   "tu": [
+    "菜",
+    "好吃",
+    "做",
+    "吃",
+    "喝",
+    "好喝"
+   ],
+   "ghepChu": [
+    "菜",
+    "吃",
+    "做"
+   ]
+  },
+  {
+   "so": "3",
+   "ten": "Ôn tập từ vựng 3",
+   "tu": [
+    "妈妈",
+    "很",
+    "怎么"
+   ],
+   "ghepChu": []
+  }
+ ],
+ "nguPhap": [
+  {
+   "id": "hui",
+   "ten": "会 + ĐT · 不会 · 会不会",
+   "congThuc": [
+    [
+     [
+      "会",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ]
+    ],
+    [
+     [
+      "不会",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ]
+    ],
+    [
+     [
+      "会不会",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "会 là **động từ năng nguyện**, đặt **trước động từ**, nghĩa là **\"biết (làm gì)\"**, chỉ khả năng có được **nhờ học**. Phủ định **不会**; hỏi **会…吗？** hoặc **会不会…？**",
+   "y": [
+    {
+     "noiDung": "会 + ĐT: biết làm gì",
+     "cum": [
+      [
+       "会说汉语",
+       "huì shuō Hànyǔ",
+       "",
+       [
+        [
+         "会",
+         "codinh"
+        ],
+        [
+         "说汉语",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "会写汉字",
+       "huì xiě Hànzì",
+       "",
+       [
+        [
+         "会",
+         "codinh"
+        ],
+        [
+         "写汉字",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "会做中国菜",
+       "huì zuò Zhōngguó cài",
+       "",
+       [
+        [
+         "会",
+         "codinh"
+        ],
+        [
+         "做中国菜",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我奶奶会做越南菜。",
+       "Wǒ nǎinai huì zuò Yuènán cài.",
+       "",
+       [
+        [
+         "我奶奶",
+         null
+        ],
+        [
+         "会",
+         "codinh"
+        ],
+        [
+         "做越南菜",
+         "dgt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "不会 + ĐT: không biết làm gì",
+     "cum": [
+      [
+       "不会说英语",
+       "bú huì shuō Yīngyǔ",
+       "",
+       [
+        [
+         "不会",
+         "codinh"
+        ],
+        [
+         "说英语",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "不会写汉字",
+       "bú huì xiě Hànzì",
+       "",
+       [
+        [
+         "不会",
+         "codinh"
+        ],
+        [
+         "写汉字",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我不会读这个字。",
+       "Wǒ bú huì dú zhè ge zì.",
+       "",
+       [
+        [
+         "我",
+         null
+        ],
+        [
+         "不会",
+         "codinh"
+        ],
+        [
+         "读这个字",
+         "dgt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Hỏi: 会…吗？ / 会不会…？",
+     "cum": [
+      [
+       "会不会说汉语",
+       "huì bu huì shuō Hànyǔ",
+       "",
+       [
+        [
+         "会不会",
+         "codinh"
+        ],
+        [
+         "说汉语",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "会不会写汉字",
+       "huì bu huì xiě Hànzì",
+       "",
+       [
+        [
+         "会不会",
+         "codinh"
+        ],
+        [
+         "写汉字",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你会不会说英语？",
+       "Nǐ huì bu huì shuō Yīngyǔ?",
+       "",
+       [
+        [
+         "你",
+         null
+        ],
+        [
+         "会不会",
+         "codinh"
+        ],
+        [
+         "说英语",
+         "dgt"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Trả lời ngắn: **会。/ 不会。**",
+    "Phủ định dùng **不会**, không nói 没会.",
+    "不会 đọc **bú huì**; trong 会不会, 不 đọc nhẹ: **huì bu huì**.",
+    "Câu đã dùng **会不会** thì **không thêm 吗**.",
+    "会 có thể đi **thẳng với tên ngôn ngữ**: 会汉语 = 会说汉语 (biết tiếng Trung)."
+   ]
+  },
+  {
+   "id": "zenme",
+   "ten": "怎么 + ĐT",
+   "congThuc": [
+    [
+     [
+      "怎么",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "DT",
+      "dt"
+     ],
+     [
+      "怎么",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "**怎么 + ĐT** hỏi **cách thức** (\"làm thế nào, bằng cách nào\"): 怎么读? 怎么写? 怎么说? 怎么做?",
+   "y": [
+    {
+     "noiDung": "怎么 + ĐT: hỏi cách thức",
+     "cum": [
+      [
+       "怎么读",
+       "zěnme dú",
+       "",
+       [
+        [
+         "怎么",
+         "codinh"
+        ],
+        [
+         "读",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "怎么写",
+       "zěnme xiě",
+       "",
+       [
+        [
+         "怎么",
+         "codinh"
+        ],
+        [
+         "写",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "怎么说",
+       "zěnme shuō",
+       "",
+       [
+        [
+         "怎么",
+         "codinh"
+        ],
+        [
+         "说",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "怎么做",
+       "zěnme zuò",
+       "",
+       [
+        [
+         "怎么",
+         "codinh"
+        ],
+        [
+         "做",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你的名字怎么读？",
+       "Nǐ de míngzi zěnme dú?",
+       "",
+       [
+        [
+         "你的名字",
+         "dt"
+        ],
+        [
+         "怎么",
+         "codinh"
+        ],
+        [
+         "读",
+         "dgt"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "DT + 怎么 + ĐT: hỏi cách làm với một đối tượng",
+     "viDu": [
+      [
+       "越南菜怎么做？",
+       "Yuènán cài zěnme zuò?",
+       "",
+       [
+        [
+         "越南菜",
+         "dt"
+        ],
+        [
+         "怎么",
+         "codinh"
+        ],
+        [
+         "做",
+         "dgt"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**怎么 đứng trước động từ**: 怎么读, 怎么写; câu hỏi đã có 怎么 thì **không thêm 吗**.",
+    "Phân biệt: **怎么 + ĐT** hỏi **cách làm**, **什么** hỏi **cái gì**: 你说什么？(nói cái gì) ≠ 这个字怎么说？(nói như thế nào)."
+   ]
+  }
+ ],
+ "hoiDap": [
+  {
+   "hoi": [
+    "你会说汉语吗？",
+    "Nǐ huì shuō Hànyǔ ma?",
+    "Bạn biết nói tiếng Trung không?"
+   ],
+   "dap": [
+    "我会说汉语。",
+    "Wǒ huì shuō Hànyǔ.",
+    "Tôi biết nói tiếng Trung."
+   ],
+   "nhieu": [
+    [
+     "我是中国人。",
+     "Wǒ shì Zhōngguó rén.",
+     "Tôi là người Trung Quốc."
+    ],
+    [
+     "我叫李月。",
+     "Wǒ jiào Lǐ Yuè.",
+     "Tôi tên là Lý Nguyệt."
+    ],
+    [
+     "我有两个哥哥。",
+     "Wǒ yǒu liǎng ge gēge.",
+     "Tôi có hai anh trai."
+    ]
+   ],
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "你妈妈会说汉语吗？",
+    "Nǐ māma huì shuō Hànyǔ ma?",
+    "Mẹ bạn biết nói tiếng Trung không?"
+   ],
+   "dap": [
+    "她不会说。",
+    "Tā bú huì shuō.",
+    "Mẹ mình không biết nói."
+   ],
+   "nhieu": [
+    [
+     "她是老师。",
+     "Tā shì lǎoshī.",
+     "Mẹ mình là giáo viên."
+    ],
+    [
+     "她今年五十岁。",
+     "Tā jīnnián wǔshí suì.",
+     "Năm nay mẹ mình năm mươi tuổi."
+    ],
+    [
+     "她是越南人。",
+     "Tā shì Yuènán rén.",
+     "Mẹ mình là người Việt Nam."
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "中国菜好吃吗？",
+    "Zhōngguó cài hǎochī ma?",
+    "Món Trung Quốc có ngon không?"
+   ],
+   "dap": [
+    "中国菜很好吃。",
+    "Zhōngguó cài hěn hǎochī.",
+    "Món Trung Quốc rất ngon."
+   ],
+   "nhieu": [
+    [
+     "我不会做。",
+     "Wǒ bú huì zuò.",
+     "Mình không biết nấu."
+    ],
+    [
+     "我是学生。",
+     "Wǒ shì xué·shēng.",
+     "Mình là học sinh."
+    ],
+    [
+     "她会写汉字。",
+     "Tā huì xiě Hànzì.",
+     "Cô ấy biết viết chữ Hán."
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你会做中国菜吗？",
+    "Nǐ huì zuò Zhōngguó cài ma?",
+    "Bạn biết nấu món Trung Quốc không?"
+   ],
+   "dap": [
+    "我不会做。",
+    "Wǒ bú huì zuò.",
+    "Mình không biết nấu."
+   ],
+   "nhieu": [
+    [
+     "中国菜很好吃。",
+     "Zhōngguó cài hěn hǎochī.",
+     "Món Trung Quốc rất ngon."
+    ],
+    [
+     "我是越南人。",
+     "Wǒ shì Yuènán rén.",
+     "Mình là người Việt Nam."
+    ],
+    [
+     "这是我妈妈。",
+     "Zhè shì wǒ māma.",
+     "Đây là mẹ mình."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "这个字怎么写？",
+    "Zhè ge zì zěnme xiě?",
+    "Chữ này viết thế nào?"
+   ],
+   "dap": [
+    "对不起，这个字我不会写。",
+    "Duìbuqǐ, zhè ge zì wǒ bú huì xiě.",
+    "Xin lỗi, chữ này mình không biết viết."
+   ],
+   "nhieu": [
+    [
+     "不客气。",
+     "Bú kèqi.",
+     "Đừng khách sáo."
+    ],
+    [
+     "没关系。",
+     "Méi guānxi.",
+     "Không sao."
+    ],
+    [
+     "明天见。",
+     "Míngtiān jiàn.",
+     "Mai gặp."
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "这个汉字怎么读？",
+    "Zhè ge Hànzì zěnme dú?",
+    "Chữ Hán này đọc thế nào?"
+   ],
+   "dap": [
+    "这个字我会读，不会写。",
+    "Zhè ge zì wǒ huì dú, bú huì xiě.",
+    "Chữ này mình biết đọc, không biết viết."
+   ],
+   "nhieu": [
+    [
+     "我吃中国菜。",
+     "Wǒ chī Zhōngguó cài.",
+     "Mình ăn món Trung Quốc."
+    ],
+    [
+     "他是我哥哥。",
+     "Tā shì wǒ gēge.",
+     "Anh ấy là anh trai mình."
+    ],
+    [
+     "我有三个朋友。",
+     "Wǒ yǒu sān ge péngyou.",
+     "Mình có ba người bạn."
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你吃什么？",
+    "Nǐ chī shénme?",
+    "Bạn ăn gì?"
+   ],
+   "dap": [
+    "我吃越南菜。",
+    "Wǒ chī Yuènán cài.",
+    "Mình ăn món Việt Nam."
+   ],
+   "nhieu": [
+    [
+     "我会写字。",
+     "Wǒ huì xiě zì.",
+     "Mình biết viết chữ."
+    ],
+    [
+     "我会说汉语。",
+     "Wǒ huì shuō Hànyǔ.",
+     "Mình biết nói tiếng Trung."
+    ],
+    [
+     "我是学生。",
+     "Wǒ shì xué·shēng.",
+     "Mình là học sinh."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你喝什么？",
+    "Nǐ hē shénme?",
+    "Bạn uống gì?"
+   ],
+   "dap": [
+    "我不吃，我喝。",
+    "Wǒ bù chī, wǒ hē.",
+    "Mình không ăn, mình uống."
+   ],
+   "nhieu": [
+    [
+     "我吃菜。",
+     "Wǒ chī cài.",
+     "Mình ăn món ăn."
+    ],
+    [
+     "我会写字。",
+     "Wǒ huì xiě zì.",
+     "Mình biết viết chữ."
+    ],
+    [
+     "我很好。",
+     "Wǒ hěn hǎo.",
+     "Mình rất khỏe."
+    ]
+   ],
+   "chang": "2"
+  }
+ ],
+ "cauLuyen": [
+  {
+   "han": "我会说汉语。",
+   "py": "Wǒ huì shuō Hànyǔ.",
+   "viet": "Tôi biết nói tiếng Trung.",
+   "tu": [
+    "会",
+    "说"
+   ]
+  },
+  {
+   "han": "我不会说英语。",
+   "py": "Wǒ bú huì shuō Yīngyǔ.",
+   "viet": "Tôi không biết nói tiếng Anh.",
+   "tu": [
+    "会",
+    "说"
+   ]
+  },
+  {
+   "han": "你会说越南语吗？",
+   "py": "Nǐ huì shuō Yuènányǔ ma?",
+   "viet": "Bạn biết nói tiếng Việt không?",
+   "tu": [
+    "会",
+    "说"
+   ]
+  },
+  {
+   "han": "他会说韩语，也会说日语。",
+   "py": "Tā huì shuō Hányǔ, yě huì shuō Rìyǔ.",
+   "viet": "Anh ấy biết nói tiếng Hàn, cũng biết nói tiếng Nhật.",
+   "tu": [
+    "会",
+    "说"
+   ]
+  },
+  {
+   "han": "我哥哥会说英语。",
+   "py": "Wǒ gēge huì shuō Yīngyǔ.",
+   "viet": "Anh trai tôi biết nói tiếng Anh.",
+   "tu": [
+    "会",
+    "说"
+   ]
+  },
+  {
+   "han": "你姐姐会不会说汉语？",
+   "py": "Nǐ jiějie huì bu huì shuō Hànyǔ?",
+   "viet": "Chị bạn có biết nói tiếng Trung không?",
+   "tu": [
+    "会",
+    "说"
+   ]
+  },
+  {
+   "han": "她不会说，她会写。",
+   "py": "Tā bú huì shuō, tā huì xiě.",
+   "viet": "Cô ấy không biết nói, cô ấy biết viết.",
+   "tu": [
+    "会",
+    "说",
+    "写"
+   ]
+  },
+  {
+   "han": "我会读，不会写。",
+   "py": "Wǒ huì dú, bú huì xiě.",
+   "viet": "Tôi biết đọc, không biết viết.",
+   "tu": [
+    "会",
+    "写",
+    "读"
+   ]
+  },
+  {
+   "han": "你会写你的名字吗？",
+   "py": "Nǐ huì xiě nǐ de míngzi ma?",
+   "viet": "Bạn biết viết tên của bạn không?",
+   "tu": [
+    "会",
+    "写",
+    "字"
+   ]
+  },
+  {
+   "han": "我会写三个汉字。",
+   "py": "Wǒ huì xiě sān ge Hànzì.",
+   "viet": "Tôi biết viết ba chữ Hán.",
+   "tu": [
+    "会",
+    "写",
+    "汉字"
+   ]
+  },
+  {
+   "han": "这个汉字我不会写。",
+   "py": "Zhè ge Hànzì wǒ bú huì xiě.",
+   "viet": "Chữ Hán này tôi không biết viết.",
+   "tu": [
+    "会",
+    "写",
+    "汉字"
+   ]
+  },
+  {
+   "han": "那个字怎么读？",
+   "py": "Nà ge zì zěnme dú?",
+   "viet": "Chữ kia đọc thế nào?",
+   "tu": [
+    "字",
+    "怎么",
+    "读"
+   ]
+  },
+  {
+   "han": "这个字怎么写？",
+   "py": "Zhè ge zì zěnme xiě?",
+   "viet": "Chữ này viết thế nào?",
+   "tu": [
+    "写",
+    "字",
+    "怎么"
+   ]
+  },
+  {
+   "han": "你的名字怎么写？",
+   "py": "Nǐ de míngzi zěnme xiě?",
+   "viet": "Tên của bạn viết thế nào?",
+   "tu": [
+    "写",
+    "字",
+    "怎么"
+   ]
+  },
+  {
+   "han": "这个汉字怎么说？",
+   "py": "Zhè ge Hànzì zěnme shuō?",
+   "viet": "Chữ Hán này nói thế nào?",
+   "tu": [
+    "说",
+    "汉字",
+    "怎么"
+   ]
+  },
+  {
+   "han": "越南菜怎么做？",
+   "py": "Yuènán cài zěnme zuò?",
+   "viet": "Món Việt Nam nấu thế nào?",
+   "tu": [
+    "菜",
+    "做",
+    "怎么"
+   ]
+  },
+  {
+   "han": "我妈妈会做菜。",
+   "py": "Wǒ māma huì zuò cài.",
+   "viet": "Mẹ tôi biết nấu ăn.",
+   "tu": [
+    "会",
+    "妈妈",
+    "菜",
+    "做"
+   ]
+  },
+  {
+   "han": "我不会做中国菜。",
+   "py": "Wǒ bú huì zuò Zhōngguó cài.",
+   "viet": "Tôi không biết nấu món Trung Quốc.",
+   "tu": [
+    "会",
+    "菜",
+    "做"
+   ]
+  },
+  {
+   "han": "你会做越南菜吗？",
+   "py": "Nǐ huì zuò Yuènán cài ma?",
+   "viet": "Bạn biết nấu món Việt Nam không?",
+   "tu": [
+    "会",
+    "菜",
+    "做"
+   ]
+  },
+  {
+   "han": "你奶奶会不会做菜？",
+   "py": "Nǐ nǎinai huì bu huì zuò cài?",
+   "viet": "Bà bạn có biết nấu ăn không?",
+   "tu": [
+    "会",
+    "菜",
+    "做"
+   ]
+  },
+  {
+   "han": "中国菜很好吃。",
+   "py": "Zhōngguó cài hěn hǎochī.",
+   "viet": "Món Trung Quốc rất ngon.",
+   "tu": [
+    "菜",
+    "很",
+    "好吃"
+   ]
+  },
+  {
+   "han": "这个菜不好吃。",
+   "py": "Zhè ge cài bù hǎochī.",
+   "viet": "Món này không ngon.",
+   "tu": [
+    "菜",
+    "好吃"
+   ]
+  },
+  {
+   "han": "越南菜好吃吗？",
+   "py": "Yuènán cài hǎochī ma?",
+   "viet": "Món Việt Nam có ngon không?",
+   "tu": [
+    "菜",
+    "好吃"
+   ]
+  },
+  {
+   "han": "我妈妈做的菜很好吃。",
+   "py": "Wǒ māma zuò de cài hěn hǎochī.",
+   "viet": "Món mẹ tôi nấu rất ngon.",
+   "tu": [
+    "妈妈",
+    "菜",
+    "很",
+    "好吃",
+    "做"
+   ]
+  },
+  {
+   "han": "我们吃中国菜，你吃吗？",
+   "py": "Wǒmen chī Zhōngguó cài, nǐ chī ma?",
+   "viet": "Chúng mình ăn món Trung Quốc, bạn ăn không?",
+   "tu": [
+    "菜",
+    "吃"
+   ]
+  },
+  {
+   "han": "你爸爸吃不吃韩国菜？",
+   "py": "Nǐ bàba chī bu chī Hánguó cài?",
+   "viet": "Bố bạn có ăn món Hàn Quốc không?",
+   "tu": [
+    "菜",
+    "吃"
+   ]
+  },
+  {
+   "han": "你喝不喝？",
+   "py": "Nǐ hē bu hē?",
+   "viet": "Bạn có uống không?",
+   "tu": [
+    "喝"
+   ]
+  },
+  {
+   "han": "这个很好喝吗？",
+   "py": "Zhè ge hěn hǎohē ma?",
+   "viet": "Cái này có ngon không (đồ uống)?",
+   "tu": [
+    "很",
+    "好喝"
+   ]
+  },
+  {
+   "han": "这个字很大。",
+   "py": "Zhè ge zì hěn dà.",
+   "viet": "Chữ này rất to.",
+   "tu": [
+    "很",
+    "字"
+   ]
+  },
+  {
+   "han": "我的汉语不好。",
+   "py": "Wǒ de Hànyǔ bù hǎo.",
+   "viet": "Tiếng Trung của tôi không tốt.",
+   "tu": []
+  },
+  {
+   "han": "老师的汉字很好。",
+   "py": "Lǎoshī de Hànzì hěn hǎo.",
+   "viet": "Chữ Hán của cô giáo rất đẹp.",
+   "tu": [
+    "很",
+    "汉字"
+   ]
+  },
+  {
+   "han": "我的朋友会说英语。",
+   "py": "Wǒ de péngyou huì shuō Yīngyǔ.",
+   "viet": "Bạn của tôi biết nói tiếng Anh.",
+   "tu": [
+    "会",
+    "说"
+   ]
+  },
+  {
+   "han": "她是中国人，会说汉语。",
+   "py": "Tā shì Zhōngguó rén, huì shuō Hànyǔ.",
+   "viet": "Cô ấy là người Trung Quốc, biết nói tiếng Trung.",
+   "tu": [
+    "会",
+    "说"
+   ]
+  },
+  {
+   "han": "你弟弟会写汉字吗？",
+   "py": "Nǐ dìdi huì xiě Hànzì ma?",
+   "viet": "Em trai bạn biết viết chữ Hán không?",
+   "tu": [
+    "会",
+    "写",
+    "汉字"
+   ]
+  },
+  {
+   "han": "我妹妹会读，也会写。",
+   "py": "Wǒ mèimei huì dú, yě huì xiě.",
+   "viet": "Em gái tôi biết đọc, cũng biết viết.",
+   "tu": [
+    "会",
+    "写",
+    "读"
+   ]
+  },
+  {
+   "han": "他爷爷不会说汉语。",
+   "py": "Tā yéye bú huì shuō Hànyǔ.",
+   "viet": "Ông anh ấy không biết nói tiếng Trung.",
+   "tu": [
+    "会",
+    "说"
+   ]
+  },
+  {
+   "han": "你说什么？",
+   "py": "Nǐ shuō shénme?",
+   "viet": "Bạn nói gì?",
+   "tu": [
+    "说"
+   ]
+  },
+  {
+   "han": "这是什么菜？",
+   "py": "Zhè shì shénme cài?",
+   "viet": "Đây là món gì?",
+   "tu": [
+    "菜"
+   ]
+  },
+  {
+   "han": "我们也会说汉语。",
+   "py": "Wǒmen yě huì shuō Hànyǔ.",
+   "viet": "Chúng tôi cũng biết nói tiếng Trung.",
+   "tu": [
+    "会",
+    "说"
+   ]
+  }
+ ],
+ "hoiThoai": [
+  {
+   "ten": "Bài khóa 1 · Nói tiếng Trung",
+   "luot": [
+    {
+     "han": "你会说汉语吗？",
+     "py": "Nǐ huì shuō Hànyǔ ma?",
+     "viet": "Bạn biết nói tiếng Trung không?"
+    },
+    {
+     "han": "我会说汉语。",
+     "py": "Wǒ huì shuō Hànyǔ.",
+     "viet": "Mình biết nói tiếng Trung."
+    },
+    {
+     "han": "你妈妈会说汉语吗？",
+     "py": "Nǐ māma huì shuō Hànyǔ ma?",
+     "viet": "Mẹ bạn biết nói tiếng Trung không?"
+    },
+    {
+     "han": "她不会说。",
+     "py": "Tā bú huì shuō.",
+     "viet": "Mẹ mình không biết nói."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我不是中国人。",
+      "py": "Wǒ bú shì Zhōngguó rén."
+     },
+     {
+      "han": "我会写汉字。",
+      "py": "Wǒ huì xiě Hànzì."
+     },
+     {
+      "han": "我叫李月。",
+      "py": "Wǒ jiào Lǐ Yuè."
+     }
+    ],
+    "3": [
+     {
+      "han": "她是我妈妈。",
+      "py": "Tā shì wǒ māma."
+     },
+     {
+      "han": "她很好吃。",
+      "py": "Tā hěn hǎochī."
+     },
+     {
+      "han": "她会说英语。",
+      "py": "Tā huì shuō Yīngyǔ."
+     }
+    ]
+   },
+   "chang": "3"
+  },
+  {
+   "ten": "Bài khóa 2 · Món Trung Quốc",
+   "luot": [
+    {
+     "han": "中国菜好吃吗？",
+     "py": "Zhōngguó cài hǎochī ma?",
+     "viet": "Món Trung Quốc có ngon không?"
+    },
+    {
+     "han": "中国菜很好吃。",
+     "py": "Zhōngguó cài hěn hǎochī.",
+     "viet": "Món Trung Quốc rất ngon."
+    },
+    {
+     "han": "你会做中国菜吗？",
+     "py": "Nǐ huì zuò Zhōngguó cài ma?",
+     "viet": "Bạn biết nấu món Trung Quốc không?"
+    },
+    {
+     "han": "我不会做。",
+     "py": "Wǒ bú huì zuò.",
+     "viet": "Mình không biết nấu."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "中国菜不好吃。",
+      "py": "Zhōngguó cài bù hǎochī."
+     },
+     {
+      "han": "我不会写。",
+      "py": "Wǒ bú huì xiě."
+     },
+     {
+      "han": "我是中国人。",
+      "py": "Wǒ shì Zhōngguó rén."
+     }
+    ],
+    "3": [
+     {
+      "han": "我不吃。",
+      "py": "Wǒ bù chī."
+     },
+     {
+      "han": "我会说。",
+      "py": "Wǒ huì shuō."
+     },
+     {
+      "han": "我不会读。",
+      "py": "Wǒ bú huì dú."
+     }
+    ]
+   },
+   "chang": "3"
+  },
+  {
+   "ten": "Bài khóa 3 · Viết chữ Hán",
+   "luot": [
+    {
+     "han": "你会写汉字吗？",
+     "py": "Nǐ huì xiě Hànzì ma?",
+     "viet": "Bạn biết viết chữ Hán không?"
+    },
+    {
+     "han": "我会写。",
+     "py": "Wǒ huì xiě.",
+     "viet": "Mình biết viết."
+    },
+    {
+     "han": "这个字怎么写？",
+     "py": "Zhè ge zì zěnme xiě?",
+     "viet": "Chữ này viết thế nào?"
+    },
+    {
+     "han": "对不起，这个字我会读，不会写。",
+     "py": "Duìbuqǐ, zhè ge zì wǒ huì dú, bú huì xiě.",
+     "viet": "Xin lỗi, chữ này mình biết đọc, không biết viết."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我不会写。",
+      "py": "Wǒ bú huì xiě."
+     },
+     {
+      "han": "我会做菜。",
+      "py": "Wǒ huì zuò cài."
+     },
+     {
+      "han": "我是学生。",
+      "py": "Wǒ shì xué·shēng."
+     }
+    ],
+    "3": [
+     {
+      "han": "没关系，明天见。",
+      "py": "Méi guānxi, míngtiān jiàn."
+     },
+     {
+      "han": "不客气，我也很好。",
+      "py": "Bú kèqi, wǒ yě hěn hǎo."
+     },
+     {
+      "han": "对不起，我不会说汉语。",
+      "py": "Duìbuqǐ, wǒ bú huì shuō Hànyǔ."
+     }
+    ]
+   },
+   "chang": "3"
+  },
+  {
+   "ten": "Bài đọc thêm · Bạn tôi Lý Nguyệt",
+   "luot": [
+    {
+     "han": "我的好朋友叫李月，她是中国人。",
+     "py": "Wǒ de hǎo péngyou jiào Lǐ Yuè, tā shì Zhōngguó rén.",
+     "viet": "Bạn thân của tôi tên là Lý Nguyệt, cô ấy là người Trung Quốc."
+    },
+    {
+     "han": "她会说汉语，也会说英语。",
+     "py": "Tā huì shuō Hànyǔ, yě huì shuō Yīngyǔ.",
+     "viet": "Cô ấy biết nói tiếng Trung, cũng biết nói tiếng Anh."
+    },
+    {
+     "han": "她妈妈会做中国菜，中国菜很好吃。",
+     "py": "Tā māma huì zuò Zhōngguó cài, Zhōngguó cài hěn hǎochī.",
+     "viet": "Mẹ cô ấy biết nấu món Trung Quốc, món Trung Quốc rất ngon."
+    },
+    {
+     "han": "李月会写汉字，我不会写，我会读。",
+     "py": "Lǐ Yuè huì xiě Hànzì, wǒ bú huì xiě, wǒ huì dú.",
+     "viet": "Lý Nguyệt biết viết chữ Hán, tôi không biết viết, tôi biết đọc."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "她会说越南语，也会说韩语。",
+      "py": "Tā huì shuō Yuènányǔ, yě huì shuō Hányǔ."
+     },
+     {
+      "han": "她不会说汉语，会说英语。",
+      "py": "Tā bú huì shuō Hànyǔ, huì shuō Yīngyǔ."
+     },
+     {
+      "han": "她会说汉语，不会说英语。",
+      "py": "Tā huì shuō Hànyǔ, bú huì shuō Yīngyǔ."
+     }
+    ],
+    "3": [
+     {
+      "han": "我会写汉字，李月不会写。",
+      "py": "Wǒ huì xiě Hànzì, Lǐ Yuè bú huì xiě."
+     },
+     {
+      "han": "李月不会写，也不会读。",
+      "py": "Lǐ Yuè bú huì xiě, yě bú huì dú."
+     },
+     {
+      "han": "我会写，也会读。",
+      "py": "Wǒ huì xiě, yě huì dú."
+     }
+    ]
+   },
+   "chang": "3"
+  }
+ ],
+ "ctTruoc": {
+  "妈": {
+   "ma": "1-0224",
+   "han": "妈妈",
+   "bai": "Bài 5",
+   "url": "chuong-trinh-hsk-2/hsk1/bai-5/tu-vung.html"
+  },
+  "好": {
+   "ma": "1-0138",
+   "han": "好",
+   "bai": "Bài 1-2",
+   "url": "chuong-trinh-hsk-2/hsk1/bai-1-2/tu-vung.html"
+  },
+  "字": {
+   "ma": "1-0245",
+   "han": "名字",
+   "bai": "Bài 3",
+   "url": "chuong-trinh-hsk-2/hsk1/bai-3/tu-vung.html"
+  },
+  "汉": {
+   "ma": "1-0136",
+   "han": "汉语",
+   "bai": "Bài 4",
+   "url": "chuong-trinh-hsk-2/hsk1/bai-4/tu-vung.html"
+  }
+ }
+}

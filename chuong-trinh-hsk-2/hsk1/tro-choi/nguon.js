@@ -9,7 +9,8 @@
     { ma: 'bai-1-2', ten: 'Bài 1–2', diem: 'bai1-2' },
     { ma: 'bai-3',   ten: 'Bài 3',   diem: 'bai3' },
     { ma: 'bai-4',   ten: 'Bài 4',   diem: 'bai4' },
-    { ma: 'bai-5',   ten: 'Bài 5',   diem: 'bai5' }
+    { ma: 'bai-5',   ten: 'Bài 5',   diem: 'bai5' },
+    { ma: 'bai-6',   ten: 'Bài 6',   diem: 'bai6' }
   ];
   var CHUNG = { phamVi: 'h2-hsk1', tongHop: true, maDiem: 'h2', tenDiem: 'HSK 2.0 · ', tongHopDiem: 'hsk1-tong-hop-bai0', bxh: 'bang-xep-hang.html' };
   function cauHinh(thuMuc) {
