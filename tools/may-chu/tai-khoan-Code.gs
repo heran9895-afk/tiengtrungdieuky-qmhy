@@ -34,6 +34,8 @@
      học sinh chỉ nhận đề khi lớp được giao "<mục>/bai-kiem-tra" và đang trong khung giờ; máy chủ giữ giờ, tự lưu bài,
      chấm khi nộp / hết giờ; cô chấm tay câu dịch, cho làm lại, công bố đáp án. Nhớ chạy "caiDat" một lần (thêm KiemTraDe,
      KiemTraBai, KiemTraCongBo).
+   2026-11-14c: PHÒNG MỞ (học sinh nhiều lớp cùng vào một phòng): buổi học lưu kèm danh sách hồ sơ có mặt (cột dsHs, maLop = "MO"),
+     các em đó xem lại buổi học trong tài khoản dù khác lớp. Chạy "caiDat" để thêm cột dsHs.
    2026-11-14b: SỬA NỘI DUNG BÀI HỌC từ trang giáo viên (tab Bộ câu hỏi): chỗ cô sửa lưu ở trang NoiDungSua, web học sinh chồng lên tệp data/*.json khi tải.
      Lệnh mới: noiDungSua (ai cũng đọc được — là nội dung bài), gvSuaNoiDung (chỉ giáo viên). Nhớ chạy "caiDat" để tạo trang NoiDungSua.
    2026-11-14a: BUỔI HỌC TRÊN LỚP (Phòng lớp): cô bấm Kết thúc buổi → lưu bộ câu hỏi + đáp án đúng + (chỉ cô thấy) ai trả lời gì vào trang BuoiHoc;
@@ -41,7 +43,7 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-14b';
+var PHIEN_BAN = '2026-11-14c';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -65,7 +67,7 @@ var TRANG = {
   KiemTraBai: ['maDe', 'hoSoId', 'sub', 'hoTenHocSinh', 'lop', 'maLop', 'maDot', 'batDauLuc', 'hetGioLuc', 'nopLuc', 'traLoi', 'nghe', 'chamTay', 'tong', 'trangThai', 'thietBi'],
   KiemTraCongBo: ['maDe', 'maLop', 'luc'],
   NoiDungSua: ['tep', 'duongDan', 'goc', 'moi', 'suaLuc', 'nguoi'],
-  BuoiHoc:   ['maBuoi', 'taoLuc', 'maLop', 'tieuDe', 'phan', 'soCau', 'json'],
+  BuoiHoc:   ['maBuoi', 'taoLuc', 'maLop', 'tieuDe', 'phan', 'soCau', 'json', 'dsHs'],
   PhienChoi: ['maPhien', 'taoLuc', 'maLop', 'tro', 'tenTro', 'tenBai', 'muc', 'lesson', 'trang', 'ketThucLuc', 'ghiChu', 'bai']
 };
 
@@ -152,8 +154,8 @@ function doPost(e) {
       case 'noiDungSua':   return traVe(ndsDoc(d.tep));
       case 'gvSuaNoiDung': return traVe(coKhoa(function () { return gvSuaNoiDung(xacGV(d), d); }));
       case 'gvLuuBuoiHoc': return traVe(coKhoa(function () { return gvLuuBuoiHoc(xacGV(d), d); }));
-      case 'gvDsBuoiHoc':  xacGV(d); return traVe(buoiHocDs(d.maLop, true));
-      case 'buoiHocCuaToi': { var p0 = xacPhien(d), hs0 = hoSoCua(p0, d.hoSoId); return traVe(buoiHocDs(hs0.maLop, false)); }
+      case 'gvDsBuoiHoc':  xacGV(d); return traVe(buoiHocDs(d.maLop, true, ''));
+      case 'buoiHocCuaToi': { var p0 = xacPhien(d), hs0 = hoSoCua(p0, d.hoSoId); return traVe(buoiHocDs(hs0.maLop, false, hs0.hoSoId)); }
       default:           return traVe({ ok: false, loi: 'Lệnh không hợp lệ: ' + d.action });
     }
   } catch (x) {
@@ -363,21 +365,25 @@ function gvSuaNoiDung(gv, d) {
 }
 
 function gvLuuBuoiHoc(gv, d) {
-  var maLop = chuanMa(d.maLop);
-  if (!maLop || !lopTheoMa(maLop)) throw new Error('Chưa chọn lớp hợp lệ');
+  var maLop = chuanMa(d.maLop), dsHs = [].concat(d.dsHs || []).slice(0, 80).map(function (x) { return gon(x, 24); }).filter(Boolean);
+  if (maLop) { if (!lopTheoMa(maLop)) throw new Error('Chưa chọn lớp hợp lệ'); }
+  else if (dsHs.length) maLop = 'MO';                                    // phòng mở: không thuộc lớp nào, xem lại theo danh sách hồ sơ có mặt
+  else throw new Error('Chưa chọn lớp hợp lệ');
   var cau = Array.isArray(d.cau) ? d.cau.slice(0, 80) : [];
   if (!cau.length) throw new Error('Buổi học chưa có câu nào');
   var js = JSON.stringify(cau);
   while (js.length > TOI_DA_O && cau.length > 1) { cau.pop(); js = JSON.stringify(cau); }   // ô Sheet tối đa 50.000 ký tự
   var ma = 'bh' + Date.now().toString(36) + Math.floor(Math.random() * 1296).toString(36);
-  trang('BuoiHoc').appendRow([ma, new Date(), maLop, gon(d.tieuDe, 120), gon(d.phan, 120), cau.length, js]);
+  trang('BuoiHoc').appendRow([ma, new Date(), maLop, gon(d.tieuDe, 120), gon(d.phan, 120), cau.length, js, dsHs.join(',')]);
   return { ok: true, maBuoi: ma, soCau: cau.length };
 }
-function buoiHocDs(maLop, laGV) {
+function buoiHocDs(maLop, laGV, hoSoId) {
   maLop = chuanMa(maLop);
-  if (!maLop) return { ok: true, buoi: [] };
-  var ds = bang('BuoiHoc').filter(function (r) { return r[0] && String(r[2]) === maLop; })
-    .sort(function (a, b) { return ms(b[1]) - ms(a[1]); }).slice(0, 30).map(function (r) {
+  var ds = bang('BuoiHoc').filter(function (r) {
+    if (!r[0]) return false;
+    if (maLop && String(r[2]) === maLop) return true;
+    return !!hoSoId && String(r[7] || '').split(',').indexOf(hoSoId) >= 0;     // phòng mở: em có tên trong danh sách có mặt
+  }).sort(function (a, b) { return ms(b[1]) - ms(a[1]); }).slice(0, 30).map(function (r) {
       var cau = []; try { cau = JSON.parse(r[6] || '[]'); } catch (e) {}
       if (!laGV) cau = cau.map(function (c) { delete c.goi; return c; });                // học sinh không thấy ai làm gì
       return { maBuoi: String(r[0]), taoLuc: ms(r[1]), maLop: String(r[2]), tieuDe: String(r[3]), phan: String(r[4]), soCau: +r[5] || cau.length, cau: cau };

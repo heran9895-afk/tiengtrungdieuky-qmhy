@@ -10,7 +10,7 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var esc = function (s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
   var SS = 'qm-phong-lop';
-  var R = { bat: false, ma: '', khoa: '', lop: '', tenLop: '', ros: [], tt: 'bat', cau: null, log: [], dem: 0, vao: 0, hen: null, genP: 0 };
+  var R = { mo: false, bat: false, ma: '', khoa: '', lop: '', tenLop: '', ros: [], tt: 'bat', cau: null, log: [], dem: 0, vao: 0, hen: null, genP: 0 };
 
   var ROOT = (function () { var l = document.querySelector('script[src*="phong-lop-gv.js"]'); var u = l ? l.src : ''; return u.substring(0, u.indexOf('assets/js/phong-lop-gv.js')); })();
 
@@ -45,7 +45,7 @@
       return;
     }
     var c = R.cau, cho = R.tt === 'cho';
-    t.innerHTML = '<div class="gtl-hang"><span>Mã <b>' + esc(R.ma) + '</b> · ' + esc(R.tenLop) + ' · đã vào <b id="gtlVao">' + R.vao + '</b>/' + R.ros.length + '</span> <button class="phu" id="gtlMa" type="button">📱 Hiện mã cho lớp</button></div>' +
+    t.innerHTML = '<div class="gtl-hang"><span>Mã <b>' + esc(R.ma) + '</b> · ' + esc(R.tenLop) + ' · đã vào <b id="gtlVao">' + R.vao + '</b>' + (R.mo ? ' bạn' : '/' + R.ros.length) + '</span> <button class="phu" id="gtlMa" type="button">📱 Hiện mã cho lớp</button></div>' +
       (c ? '<div>Câu <b>' + c.n + '</b>: ' + (c.goi ? 'bạn <span class="ten">' + esc(c.goi.ten) + '</span> ' + (R.tt === 'cho' ? '<small>đang trả lời…</small>' : R.tt === 'dung' ? '✅ đúng' : R.tt === 'sai' ? '❌ chưa đúng' : '') : '<small>chưa gọi ai</small>') + '</div>' +
         '<div class="gtl-hang">' + (R.tt === 'dung' || R.tt === 'hien' ? '<small>Bấm “Câu tiếp ›” trên đề để sang câu sau.</small>' :
           '<button class="nut" id="gtlGoi" type="button">🎲 ' + (c.goi ? 'Gọi bạn khác' : 'Gọi tên') + '</button><button class="phu" id="gtlHien" type="button">💡 Hiện đáp án</button><button class="phu" id="gtlBo" type="button">⏭ Bỏ qua câu</button>') + '</div>' + (R.tt === 'dung' || R.tt === 'hien' ? '' : '<small>Cô cũng có thể bấm thẳng vào đáp án trên đề để tự chọn.</small>')
@@ -65,7 +65,7 @@
     layDL().then(function (D) {
       var s = $('#gtlLop'); if (!s) return;
       var cac = (D.lop || []).filter(function (l) { return !l.dong; }), mac = QS.get('lop') || '';
-      s.innerHTML = cac.map(function (l) { return '<option value="' + esc(l.maLop) + '"' + (l.maLop === mac ? ' selected' : '') + '>' + esc(l.tenLop || l.maLop) + '</option>'; }).join('') || '<option value="">(chưa có lớp)</option>';
+      s.innerHTML = cac.map(function (l) { return '<option value="' + esc(l.maLop) + '"' + (l.maLop === mac ? ' selected' : '') + '>' + esc(l.tenLop || l.maLop) + '</option>'; }).join('') + '<option value="__mo">🌐 Phòng mở (học sinh nhiều lớp)</option>';
     }).catch(function (e) { loi('Chưa tải được danh sách lớp: ' + (e.message || e)); });
   }
 
@@ -76,26 +76,27 @@
     loi('⏳ Đang mở phòng…');
     Promise.all([layDL(), QM_PHONG.tao()]).then(function (kq) {
       var D = kq[0], p = kq[1], l = (D.lop || []).filter(function (x) { return x.maLop === ma; })[0] || {};
-      var ros = (D.hocSinh || []).filter(function (h) { return h.maLop === ma; }).slice(0, 60).map(function (h) { return { id: h.hoSoId, ten: String(h.hoTen || '').replace(/\s+/g, ' ').trim() }; });
-      R.bat = true; R.ma = p.ma; R.khoa = p.khoa; R.lop = ma; R.tenLop = l.tenLop || ma; R.ros = ros; R.log = []; R.cau = null; R.tt = 'bat'; R.dem = 0;
+      var mo = ma === '__mo', ros = mo ? rongRos() : (D.hocSinh || []).filter(function (h) { return h.maLop === ma; }).slice(0, 60).map(function (h) { return { id: h.hoSoId, ten: String(h.hoTen || '').replace(/\s+/g, ' ').trim() }; });
+      R.mo = mo; R.bat = true; R.ma = p.ma; R.khoa = p.khoa; R.lop = mo ? '' : ma; R.tenLop = mo ? 'Phòng mở' : (l.tenLop || ma); R.ros = ros; R.log = []; R.cau = null; R.tt = 'bat'; R.dem = 0;
       luuSS(); dangBai(); publish(); ve(); theoDoi(); hienMa();
       // đang đứng ở một câu trắc nghiệm thì đưa luôn lên phòng
       if (khu() && khu().querySelector('.lt-dap-o')) sauVeCau();
       else { var sd = $('.lt-chon-dang'); if (sd) sd.dispatchEvent(new Event('change', { bubbles: true })); }   // đang ở câu ghép / xếp…: làm lại lượt (phòng lớp bỏ các dạng này)
     }).catch(function (e) { loi('Không mở được phòng: ' + (e.message || e)); });
   }
-  function luuSS() { try { sessionStorage.setItem(SS, JSON.stringify({ ma: R.ma, khoa: R.khoa, lop: R.lop, tenLop: R.tenLop, ros: R.ros, log: R.log })); } catch (e) {} }
+  function rongRos() { var a = []; for (var i = 0; i < 60; i++) a.push({ id: '', ten: '' }); return a; }
+  function luuSS() { try { sessionStorage.setItem(SS, JSON.stringify({ mo: R.mo, ma: R.ma, khoa: R.khoa, lop: R.lop, tenLop: R.tenLop, ros: R.ros, log: R.log })); } catch (e) {} }
   function khoiPhuc() {
     var o; try { o = JSON.parse(sessionStorage.getItem(SS) || 'null'); } catch (e) {}
     if (!o || !o.ma) return;
-    R.bat = true; R.ma = o.ma; R.khoa = o.khoa; R.lop = o.lop; R.tenLop = o.tenLop; R.ros = o.ros || []; R.log = o.log || []; R.tt = 'bat';
+    R.mo = !!o.mo; R.bat = true; R.ma = o.ma; R.khoa = o.khoa; R.lop = o.lop; R.tenLop = o.tenLop; R.ros = o.ros || []; R.log = o.log || []; R.tt = 'bat';
     theoDoi();
   }
   function hienMa() {
     var m = document.createElement('div'); m.className = 'gtl-man';
     var url = ROOT + 'lop/?ma=' + R.ma, hien = url.replace(/^https?:\/\//, '');
     m.innerHTML = '<div class="u">Quét mã hoặc vào <b>' + esc(hien.replace(/\?.*$/, '')) + '</b> và nhập mã phòng</div><div class="ma">' + esc(R.ma) + '</div><div id="gtlQr"></div>' +
-      '<div class="u">Các em đăng nhập hồ sơ của mình trước khi vào · Đã vào: <b id="gtlVao2">' + R.vao + '</b>/' + R.ros.length + '</div><button type="button">Xong, bắt đầu dạy</button>';
+      '<div class="u">Các em đăng nhập hồ sơ của mình trước khi vào · Đã vào: <b id="gtlVao2">' + R.vao + '</b>' + (R.mo ? ' bạn' : '/' + R.ros.length) + '</div><button type="button">Xong, bắt đầu dạy</button>';
     document.body.appendChild(m);
     $('button', m).onclick = function () { m.remove(); };
     var vc = function () { if (!window.QRCode) return setTimeout(vc, 300); try { new QRCode($('#gtlQr', m), { text: url, width: 220, height: 220 }); } catch (e) {} };
@@ -115,6 +116,7 @@
   function publish() {
     if (!R.bat) return;
     var c = R.cau, o = { v: 1, q: ++R.dem, tt: R.tt, r: R.ros.map(function (x) { return x.id; }), lop: R.tenLop };
+    if (R.mo) o.mo = 1;
     if (c) { o.n = c.n; o.tong = c.tong; o.kieu = c.kieu; o.html = c.html; o.goi = c.goi ? { id: c.goi.id, ten: c.goi.ten } : null; o.ma = c.ma; o.chon = c.chon; }
     QM_PHONG.ghi(R.ma, R.khoa, o);
   }
@@ -153,7 +155,7 @@
   function goiTen() {
     if (!window.QM_GOI_TEN || !QM_GOI_TEN.mo) return loi('Chưa nạp bảng Gọi tên.');
     stopCho();
-    QM_GOI_TEN.mo({ lop: R.lop, khiChon: function (hs) {
+    QM_GOI_TEN.mo({ lop: R.lop, ma: R.ma, ds: R.mo ? R.ros.filter(function (x) { return x.id; }).map(function (x) { return { hoTen: x.ten, hoSoId: x.id }; }) : null, khiChon: function (hs) {
       var c = R.cau; if (!c) return;
       var i = R.ros.map(function (x) { return x.id; }).indexOf(hs.hoSoId);
       if (i < 0) { loi('Bạn ' + hs.hoTen + ' chưa có hồ sơ trong lớp nên chưa trả lời bằng máy được. Cô gọi bạn khác nhé.'); return; }
@@ -171,7 +173,7 @@
     stopCho(); var g = R.genP, c = R.cau;
     (function hoi() {
       if (g !== R.genP || !R.bat || R.tt !== 'cho') return;
-      QM_PHONG.doc(R.ma, R.khoa, Math.max(4, R.ros.length)).then(function (o) {
+      QM_PHONG.doc(R.ma, R.khoa, (R.mo ? 60 : Math.max(4, R.ros.length))).then(function (o) {
         if (g !== R.genP) return;
         capNhatVao(o);
         var d = o.g && o.g.dap && o.g.dap[c.goi.i];
@@ -217,13 +219,18 @@
   }
 
   function capNhatVao(o) {
-    var n = 0; (o.v || []).forEach(function (m, i) { if (i < R.ros.length && m && Object.keys(m).length) n++; });
+    var n = 0;
+    if (R.mo) {                                            // Phòng mở: danh sách = các bạn đã giữ ô (id = mã hồ sơ, gửi lúc vào)
+      (o.nguoi || []).forEach(function (g, i) { if (i >= 60) return; if (g && g.hs) { R.ros[i] = { id: g.hs, ten: g.ten || '', lop: g.lop || '' }; n++; } });
+      R.vao = n; var e0 = $('#gtlVao'); if (e0) e0.textContent = n; var e3 = $('#gtlVao2'); if (e3) e3.textContent = n; return;
+    }
+    (o.v || []).forEach(function (m, i) { if (i < R.ros.length && m && Object.keys(m).length) n++; });
     R.vao = n; var e = $('#gtlVao'); if (e) e.textContent = n; var e2 = $('#gtlVao2'); if (e2) e2.textContent = n;
   }
   function theoDoi() {                                     // đếm số em đã vào phòng (chậm), khi đang chờ đáp án thì choDapAn lo
     (function lap() {
       if (!R.bat) return;
-      if (R.tt !== 'cho') QM_PHONG.doc(R.ma, R.khoa, Math.max(4, R.ros.length)).then(capNhatVao).catch(function () {});
+      if (R.tt !== 'cho') QM_PHONG.doc(R.ma, R.khoa, (R.mo ? 60 : Math.max(4, R.ros.length))).then(capNhatVao).catch(function () {});
       setTimeout(lap, 5000);
     })();
   }
@@ -232,10 +239,10 @@
   function ketThuc() {
     var c = R.cau; if (c && c.xong) chotCauTruoc();
     if (!R.log.length) { if (!confirm('Buổi này chưa có câu nào hoàn thành. Đóng phòng, không lưu?')) return; return dongPhong(); }
-    if (!confirm('Kết thúc buổi và lưu ' + R.log.length + ' câu vào lớp ' + R.tenLop + '?')) return;
+    if (!confirm('Kết thúc buổi và lưu ' + R.log.length + ' câu vào ' + (R.mo ? 'phòng mở (' + R.vao + ' bạn)' : 'lớp ' + R.tenLop) + '?')) return;
     loi('⏳ Đang lưu…');
     var tieu = (QM_LT_API.tenBai() || document.title.split('·')[0]).trim();
-    QM_TK.goi('gvLuuBuoiHoc', { maLop: R.lop, tieuDe: tieu + ' · ' + new Date().toLocaleDateString('vi-VN'), phan: document.title.split('·')[0].trim(), cau: R.log })
+    QM_TK.goi('gvLuuBuoiHoc', { maLop: R.lop, dsHs: R.mo ? R.ros.filter(function (x) { return x.id; }).map(function (x) { return x.id; }) : null, tieuDe: tieu + ' · ' + new Date().toLocaleDateString('vi-VN'), phan: document.title.split('·')[0].trim(), cau: R.log })
       .then(function (d) { loi('✅ Đã lưu ' + d.soCau + ' câu. Học sinh xem lại trong trang “Buổi học” của lớp.'); dongPhong(true); })
       .catch(function (e) { loi('Chưa lưu được: ' + (e.message || e) + '. Cô bấm Kết thúc lại nhé (dữ liệu vẫn còn).'); });
   }

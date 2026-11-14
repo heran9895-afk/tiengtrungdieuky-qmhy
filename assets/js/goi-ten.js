@@ -75,7 +75,7 @@
   }
   function doiLop(ma) {
     if (ma !== 'tay' && !S.lop.some(function (l) { return l.maLop === ma; })) ma = S.lop[0] ? S.lop[0].maLop : 'tay';
-    S.maLop = ma === 'tay' ? '' : ma; ls.set('lop', S.maLop); S.tam = []; S.chon = '';
+    S.maLop = ma === 'tay' ? '' : ma; if (ma.indexOf('__phong') !== 0) ls.set('lop', S.maLop); S.tam = []; S.chon = '';
     S.ds = ma === 'tay' ? (ls.get('tay', []) || []).slice() : S.lop.filter(function (l) { return l.maLop === ma; })[0].hs.slice();
     napLuu();
   }
@@ -167,6 +167,13 @@
 
   function moThe(autoQuay) {
     dungThe(); card.hidden = false; veTieng();
+    if (CH && CH.ds) {                               // Phòng mở: gọi trong số các bạn đang có mặt (không theo lớp)
+      var ids = {}, hs = CH.ds.map(function (x) { var t = String(x.hoTen || '').replace(/\s+/g, ' ').trim(); if (t && !ids[t]) ids[t] = x.hoSoId; return t; }).filter(Boolean);
+      var mp = '__phong' + (CH.ma || '');
+      S.lop = [{ maLop: mp, tenLop: 'Phòng này', hs: hs, ids: ids }]; S.phong = true;
+      veLopSel(); doiLop(mp); $('#gtLop', card).value = mp; veDem(); veCd(); datNut(false); hienTen('🎲', ''); if (autoQuay) quay(); return;
+    }
+    if (S.phong) { S.lop = []; S.phong = false; }
     taiLop().then(function () { veLopSel(); doiLop(S.maLop || (S.lop[0] && S.lop[0].maLop) || 'tay'); $('#gtLop', card).value = S.maLop || 'tay'; })
       .catch(function () { S.lop = []; veLopSel(); doiLop('tay'); })
       .then(function () { veDem(); veCd(); datNut(false); hienTen('🎲', ''); if (autoQuay) quay(); });

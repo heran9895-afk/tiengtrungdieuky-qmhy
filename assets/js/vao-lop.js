@@ -54,10 +54,19 @@
 
   // ---------- trong phòng ----------
   function vaoPhong(ma) {
-    var cur = null, hoSoId = QM_TK.hoSoId(), me = -1, q = -1, ngung = false, daGui = '', lop = '';
+    var cur = null, hoSoId = QM_TK.hoSoId(), me = -1, q = -1, ngung = false, daGui = '', lop = '', dangNhan = false;
     el.innerHTML = '<div class="lop-bao" id="lopBao">Đang vào phòng ' + esc(ma) + '…</div><div class="lt-bai lop-doc" id="lopDe"></div><p class="lt-luu-y"><a href="index.html">‹ Thoát phòng</a></p>';
     var bao = document.getElementById('lopBao'), de = document.getElementById('lopDe');
 
+    function nhanO() {
+      var hs = QM_TK.hoSoDang() || {}, bd = 0, k = 0, i;
+      for (i = 0; i < hoSoId.length; i++) bd = (bd * 31 + hoSoId.charCodeAt(i)) % 60;
+      return (function thu() {
+        if (k >= 60) return Promise.reject(new Error('day'));
+        var d = (bd + k++) % 60;
+        return QM_PHONG.nhan(ma, d, hs.hoTen || 'Học sinh', hs.lop || '', hoSoId).then(function () { return d; }, function (e) { if (e && e.ma === 'co-nguoi') return thu(); throw e; });
+      })();
+    }
     function hienBao(h, toi) { bao.className = 'lop-bao' + (toi ? ' toi' : ''); bao.innerHTML = h; }
     function ve(s) {
       var toi = s.goi && s.goi.id === hoSoId && s.tt === 'cho';
@@ -69,7 +78,7 @@
       else if (s.tt === 'dung') b = (s.goi && s.goi.id === hoSoId ? '🎉 Bạn trả lời đúng!' : '✅ ' + esc(s.goi ? s.goi.ten : '') + ' trả lời đúng');
       else if (s.tt === 'sai') b = (s.goi && s.goi.id === hoSoId ? '❌ Chưa đúng, cô sẽ gọi bạn khác' : '❌ ' + esc(s.goi ? s.goi.ten : '') + ' chọn chưa đúng · cô gọi bạn khác');
       else if (s.tt === 'hien') b = '💡 Cô hiện đáp án';
-      hienBao(b + (me < 0 ? '<small>Hồ sơ này không nằm trong danh sách lớp nên bạn chỉ xem.</small>' : ''), toi);
+      hienBao(b + (me === -3 ? '<small>Phòng đã đủ chỗ nên bạn chỉ xem.</small>' : me === -2 ? '<small>Hồ sơ này không nằm trong danh sách lớp nên bạn chỉ xem.</small>' : ''), toi);
       de.className = 'lt-bai ' + (toi ? 'lop-toi' : 'lop-doc'); de.innerHTML = s.html;
       if (toi && navigator.vibrate) try { navigator.vibrate(200); } catch (e) {}
     }
@@ -90,7 +99,9 @@
         var s = null; try { s = o.s ? JSON.parse(o.s) : null; } catch (e) {}
         if (!s) { hienBao('Đã vào phòng ' + esc(ma) + ' ✅<small>Chờ cô bắt đầu…</small>'); }
         else {
-          if (me < 0) { var i = (s.r || []).indexOf(hoSoId); if (i >= 0) { me = i; QM_PHONG.vao(ma, me).catch(function () {}); } else { me = -2; } }
+          if (s.mo) {                                             // Phòng mở: tự giữ một ô (bắt đầu từ ô theo mã hồ sơ, ô có người khác thì thử ô kế)
+            if (me === -1 && !dangNhan) { dangNhan = true; nhanO().then(function (d) { me = d; dangNhan = false; }).catch(function () { dangNhan = false; me = -3; }); }
+          } else if (me < 0) { var i = (s.r || []).indexOf(hoSoId); if (i >= 0) { me = i; QM_PHONG.vao(ma, me).catch(function () {}); } else { me = -2; } }
           if (s.q !== q) { q = s.q; cur = s; ve(s); }
         }
         var nhanh = s && s.tt === 'cho' && s.goi && s.goi.id === hoSoId;
