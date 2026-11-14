@@ -165,6 +165,7 @@
     L.kq.push({ stt: L.i + 1, maCau: c.ma, dang: c.dang, np: c.np, dd: c.dd, nguon: x.nguon, baiCau: x.bai,
       deBai: deBai, dapAn: dapAn, chon: chon, dung: dung ? 1 : 0, kieu: c.dang === 'xep' ? (x.che === 'go' ? 'go' : 'bam') : (c.kieu || ''), giay: Math.round((Date.now() - x.t0) / 100) / 10,
       thuTu: (x.pa || (x.kh || []).map(function (o) { return o.t; })).join(' | ') });
+    if (window.QM_NK) QM_NK.theoL(L, { phan: 'luyen-ngu-phap', bai: 'Luyện ngữ pháp' }, L.kq[L.kq.length - 1]);
   }
   function hienGiai(dung) {
     var x = L.ds[L.i], c = x.c, cd = cauDung(c), dd = DD[c.dd];
@@ -232,7 +233,7 @@
       '<div class="lt-xem-ct lnp-xem-ct" hidden>' + L.kq.map(function (k) {
         return '<div class="lt-ct ' + (k.dung ? 'dung' : 'sai') + '"><b>' + k.stt + '. ' + esc(TEN_DANG[k.kieu === 'py' ? 'py' : k.dang]) + '</b> · ' + tron(k.deBai) + '<br>Đáp án: ' + tron(k.dapAn) + (k.dung ? ' ✓' : ' · Bạn chọn: ' + tron(k.chon || '—')) + '</div>';
       }).join('') + '</div></div>';
-    amThanh(tl >= 80 ? 'xong' : 'xongVua'); guiLuot(); veDau();
+    amThanh(tl >= 80 ? 'xong' : 'xongVua'); if (window.QM_NK && L.nk) QM_NK.xongLuot(L.ma, Math.round((Date.now() - L.luc) / 1000)); guiLuot(); veDau();
   }
 
   // ---------- gửi kết quả cho nghiên cứu ----------

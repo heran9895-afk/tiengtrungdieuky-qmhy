@@ -43,18 +43,19 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-14d';
+var PHIEN_BAN = '2026-11-14e';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
 var HAN_LUOT_DO = 14 * 864e5;              // lượt làm dở giữ tối đa 14 ngày
 var TOI_DA_O = 45000;                      // một ô Sheet tối đa 50.000 ký tự
 var GIAO_HIEN_NGAY = 45;                   // học sinh thấy bài được giao trong 45 ngày sau hạn nộp
+var NK_COT = ['thoiDiem', 'hoSoId', 'hoTen', 'lop', 'maLop', 'maMay', 'hinhThuc', 'maLuot', 'nhom', 'phan', 'bai', 'stt', 'dang', 'maCau', 'deBai', 'dapAn', 'chon', 'dung', 'lanThu', 'giayDung'];
 var HAN_PHIEN = 21600;                     // phiên chơi: tiến trình giữ trong bộ nhớ đệm 6 giờ (tối đa của CacheService)
 
 var TRANG = {
   Users:     ['sub', 'email', 'hoTen', 'anh', 'taoLuc', 'lanCuoi'],
-  HoSo:      ['hoSoId', 'sub', 'email', 'hoTenHocSinh', 'lop', 'dongY', 'dongYLuc', 'taoLuc', 'maLop'],
+  HoSo:      ['hoSoId', 'sub', 'email', 'hoTenHocSinh', 'lop', 'dongY', 'dongYLuc', 'taoLuc', 'maLop', 'daDocThongBaoLuc'],
   Progress:  ['sub', 'hoSoId', 'khoa', 'duLieu', 'capNhatLuc'],
   TrangThai: ['hoSoId', 'hoTenHocSinh', 'lop', 'phan', 'tenPhan', 'trangThai', 'capNhatLuc', 'moRong'],
   Visits:    ['thoiDiem', 'trang', 'sub', 'hoSoId', 'maPhien', 'thietBi'],
@@ -68,6 +69,9 @@ var TRANG = {
   KiemTraCongBo: ['maDe', 'maLop', 'luc'],
   NoiDungSua: ['tep', 'duongDan', 'goc', 'moi', 'suaLuc', 'nguoi'],
   BuoiHoc:   ['maBuoi', 'taoLuc', 'maLop', 'tieuDe', 'phan', 'soCau', 'json', 'dsHs'],
+  // Nhật ký (2026-11-14d): mỗi LƯỢT làm một dòng (NhatKyLuot); từng CÂU ghi ở các tab NhatKy-YYYY-MM (xem NK_COT); thời gian học thực tế theo lượt truy cập
+  NhatKyLuot: ['maLuot', 'hoSoId', 'hoTen', 'lop', 'maLop', 'maMay', 'hinhThuc', 'nhomBo', 'phan', 'bai', 'maBoDe', 'maBuoi', 'lanLam', 'batDau', 'capNhat', 'soCau', 'soDung', 'giay', 'trangThai', 'thietBi'],
+  ThoiGianHoc: ['maLuotTruyCap', 'hoSoId', 'hoTen', 'lop', 'maLop', 'maMay', 'batDau', 'capNhat', 'giayThucHoc', 'cacTrang', 'thietBi'],
   PhienChoi: ['maPhien', 'taoLuc', 'maLop', 'tro', 'tenTro', 'tenBai', 'muc', 'lesson', 'trang', 'ketThucLuc', 'ghiChu', 'bai']
 };
 
@@ -78,6 +82,7 @@ function caiDat() {
   var p = PropertiesService.getScriptProperties().getProperty('CLIENT_ID');
   Logger.log(p ? 'Đã có CLIENT_ID.' : 'CHƯA có CLIENT_ID: vào Cài đặt dự án → Thuộc tính tập lệnh để thêm.');
   Logger.log('Giáo viên: ' + dsGiaoVien().join(', '));
+  try { caiSaoLuu(); Logger.log('Đã hẹn sao lưu hằng tuần (Chủ nhật 3 giờ sáng) vào thư mục "Sao luu TTDK".'); } catch (x) { Logger.log('Chưa hẹn được sao lưu: ' + x.message + ' (chạy lại caiDat và bấm Cho phép nếu Google hỏi quyền Drive).'); }
 }
 function biMat() {
   var pr = PropertiesService.getScriptProperties(), k = pr.getProperty('BI_MAT');
@@ -151,6 +156,8 @@ function doPost(e) {
       case 'gvKtCham':   return traVe(coKhoa(function () { return gvKtCham(xacGV(d), d); }));
       case 'gvKtLamLai': return traVe(coKhoa(function () { return gvKtLamLai(xacGV(d), d); }));
       case 'gvKtCongBo': return traVe(coKhoa(function () { return gvKtCongBo(xacGV(d), d); }));
+      case 'nhatKyGoi':    return traVe(nhatKyGoi(d));
+      case 'daDocThongBao': return traVe(coKhoa(function () { return daDocThongBao(xacPhien(d), d); }));
       case 'noiDungSua':   return traVe(ndsDoc(d.tep));
       case 'gvSuaNoiDung': return traVe(coKhoa(function () { return gvSuaNoiDung(xacGV(d), d); }));
       case 'gvLuuBuoiHoc': return traVe(coKhoa(function () { return gvLuuBuoiHoc(xacGV(d), d); }));
@@ -1005,4 +1012,107 @@ function gvKtCongBo(gv, d) {
   xoaDong('KiemTraCongBo', function (r) { return String(r[0]) === maDe && String(r[1]) === maL; });
   if (d.bat) trang('KiemTraCongBo').appendRow([maDe, maL, new Date()]);
   return { ok: true };
+}
+
+
+// =====================================================================
+// NHẬT KÝ TỪNG LẦN LÀM + THỜI GIAN HỌC (2026-11-14d)
+//  - nhatKyGoi: web gửi gộp (tối đa vài chục câu) mỗi ~25 giây và khi rời trang. maGoi chống ghi trùng khi gửi lại.
+//  - Từng câu: tab NhatKy-YYYY-MM (mỗi tháng một tab, tránh Sheet quá lớn). Từng lượt: NhatKyLuot (lần làm thứ mấy, xong / bỏ dở). Thời gian học: ThoiGianHoc.
+//  - Học sinh đã đăng nhập: danh tính lấy từ hồ sơ trên máy chủ (không tin tên do máy gửi). Khách chưa đăng nhập: ghi theo họ tên tự điền + mã máy.
+// =====================================================================
+function nkChuoi(s, n) { return String(s == null ? '' : s).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim().slice(0, n); }
+function nkTrangThang(luc) {
+  var ten = 'NhatKy-' + Utilities.formatDate(luc || new Date(), 'Asia/Ho_Chi_Minh', 'yyyy-MM');
+  var ss = SpreadsheetApp.getActive(), sh = ss.getSheetByName(ten);
+  if (!sh) { sh = ss.insertSheet(ten); sh.appendRow(NK_COT); sh.setFrozenRows(1); sh.getRange(1, 1, 1, NK_COT.length).setFontWeight('bold'); }
+  return sh;
+}
+function nkTimDong(sh, giaTri) {           // dòng có ô cột A đúng giá trị (tìm từ cuối lên cho nhanh); 0 = chưa có
+  var n = sh.getLastRow(); if (n < 2) return 0;
+  var v = sh.getRange(2, 1, n - 1, 1).getValues();
+  for (var i = v.length - 1; i >= 0; i--) if (String(v[i][0]) === giaTri) return i + 2;
+  return 0;
+}
+function nhatKyGoi(d) {
+  var C = CacheService.getScriptCache();
+  if (d.maGoi && C.get('nk:' + d.maGoi)) return { ok: true, trung: true };
+  var ai = { hoSoId: '', hoTen: nkChuoi(d.hoTen, 60), lop: nkChuoi(d.lop, 40), maLop: '' };
+  try {
+    var p = xacPhien(d);
+    if (d.hoSoId) { var hs = hoSoCua(p, d.hoSoId); ai = { hoSoId: hs.hoSoId, hoTen: hs.hoTen, lop: hs.lop, maLop: hs.maLop || '' }; }
+  } catch (x) { /* chưa đăng nhập: ghi theo tên tự điền */ }
+  var maMay = nkChuoi(d.maMay, 40), thietBi = nkChuoi(d.thietBi, 20);
+  var dong = (d.dong || []).slice(0, 80), luot = (d.luot || []).slice(0, 40), tgs = d.tg || {};
+  coKhoa(function () {
+    var bayGio = new Date();
+    if (dong.length) {
+      var shNK = nkTrangThang(bayGio);
+      var rows = dong.map(function (r) {
+        return [new Date(+r.t || bayGio.getTime()), ai.hoSoId, ai.hoTen, ai.lop, ai.maLop, maMay, nkChuoi(r.hinhThuc, 20) || 'tu-hoc', nkChuoi(r.maLuot, 40), nkChuoi(r.nhom, 12),
+          nkChuoi(r.phan, 60), nkChuoi(r.bai, 30), +r.stt || 0, nkChuoi(r.dang, 80), nkChuoi(r.maCau, 40), nkChuoi(r.deBai, 300), nkChuoi(r.dapAn, 200), nkChuoi(r.chon, 200),
+          r.dung ? 1 : 0, +r.lanThu || 1, +r.giayDung || 0];
+      });
+      shNK.getRange(shNK.getLastRow() + 1, 1, rows.length, NK_COT.length).setValues(rows);
+    }
+    if (luot.length) {
+      var sh = trang('NhatKyLuot'), nCot = TRANG.NhatKyLuot.length;
+      luot.forEach(function (l) {
+        var ma = nkChuoi(l.maLuot, 40); if (!ma) return;
+        var hang = nkTimDong(sh, ma), tt = l.trangThai === 'xong' ? 'xong' : 'dang';
+        if (hang) {
+          var cu = sh.getRange(hang, 1, 1, nCot).getValues()[0];
+          cu[14] = bayGio; cu[15] = Math.max(+cu[15] || 0, +l.soCau || 0); cu[16] = Math.max(+cu[16] || 0, +l.soDung || 0); cu[17] = Math.max(+cu[17] || 0, +l.giay || 0); cu[18] = (cu[18] === 'xong') ? 'xong' : tt;
+          sh.getRange(hang, 1, 1, nCot).setValues([cu]);
+        } else {
+          var lan = 1;                       // lần làm thứ mấy của em này ở phần + bộ này (cùng hình thức)
+          if (ai.hoSoId && sh.getLastRow() > 1) {
+            var vv = sh.getRange(2, 1, sh.getLastRow() - 1, 9).getValues();
+            lan = vv.filter(function (r) { return String(r[1]) === ai.hoSoId && String(r[8]) === nkChuoi(l.phan, 60) && String(r[7]) === nkChuoi(l.nhomBo, 12) && String(r[6]) === (nkChuoi(l.hinhThuc, 20) || 'tu-hoc'); }).length + 1;
+          }
+          sh.getRange(sh.getLastRow() + 1, 1, 1, nCot).setValues([[ma, ai.hoSoId, ai.hoTen, ai.lop, ai.maLop, maMay, nkChuoi(l.hinhThuc, 20) || 'tu-hoc', nkChuoi(l.nhomBo, 12), nkChuoi(l.phan, 60), nkChuoi(l.bai, 30),
+            nkChuoi(l.maBoDe, 40), nkChuoi(l.maBuoi, 40), lan, new Date(+l.batDau || bayGio.getTime()), bayGio, +l.soCau || 0, +l.soDung || 0, +l.giay || 0, tt, thietBi]]);
+        }
+      });
+    }
+    var ids = Object.keys(tgs).slice(0, 4);
+    if (ids.length) {
+      var shT = trang('ThoiGianHoc'), nT = TRANG.ThoiGianHoc.length;
+      ids.forEach(function (id) {
+        var t = tgs[id], giay = Math.max(0, Math.min(+t.giay || 0, 3600)); if (!giay) return;
+        var hang = nkTimDong(shT, nkChuoi(id, 40)), trangMoi = (t.trang || []).map(function (x) { return nkChuoi(x, 80); }).filter(Boolean);
+        if (hang) {
+          var cu = shT.getRange(hang, 1, 1, nT).getValues()[0];
+          cu[7] = bayGio; cu[8] = (+cu[8] || 0) + giay;
+          var ds = String(cu[9] || '').split(' | ').filter(Boolean); trangMoi.forEach(function (x) { if (ds.indexOf(x) < 0) ds.push(x); });
+          cu[9] = ds.slice(0, 15).join(' | ');
+          shT.getRange(hang, 1, 1, nT).setValues([cu]);
+        } else {
+          shT.getRange(shT.getLastRow() + 1, 1, 1, nT).setValues([[nkChuoi(id, 40), ai.hoSoId, ai.hoTen, ai.lop, ai.maLop, maMay, new Date(+t.batDau || bayGio.getTime()), bayGio, giay, trangMoi.slice(0, 15).join(' | '), thietBi]]);
+        }
+      });
+    }
+  });
+  if (d.maGoi) C.put('nk:' + d.maGoi, '1', 21600);
+  return { ok: true };
+}
+function daDocThongBao(p, d) {              // học sinh bấm "Đã hiểu" thông báo dùng dữ liệu học tập cho nghiên cứu
+  hoSoCua(p, d.hoSoId);
+  var sh = trang('HoSo'), v = sh.getDataRange().getValues(), c = TRANG.HoSo.indexOf('daDocThongBaoLuc') + 1;
+  for (var i = 1; i < v.length; i++) if (String(v[i][0]) === d.hoSoId) { sh.getRange(i + 1, c).setValue(new Date()); break; }
+  return { ok: true };
+}
+// Sao lưu: mỗi Chủ nhật 3 giờ sáng sao chép cả Sheet vào thư mục "Sao luu TTDK" (cạnh file này), giữ 8 bản gần nhất
+function saoLuu() {
+  var f = DriveApp.getFileById(SpreadsheetApp.getActive().getId());
+  var cha = f.getParents().hasNext() ? f.getParents().next() : DriveApp.getRootFolder();
+  var ds = cha.getFoldersByName('Sao luu TTDK'), th = ds.hasNext() ? ds.next() : cha.createFolder('Sao luu TTDK');
+  f.makeCopy(f.getName() + ' — sao lưu ' + Utilities.formatDate(new Date(), 'Asia/Ho_Chi_Minh', 'yyyy-MM-dd'), th);
+  var fs = th.getFiles(), arr = []; while (fs.hasNext()) arr.push(fs.next());
+  arr.sort(function (a, b) { return b.getDateCreated() - a.getDateCreated(); });
+  arr.slice(8).forEach(function (x) { x.setTrashed(true); });
+}
+function caiSaoLuu() {
+  ScriptApp.getProjectTriggers().forEach(function (t) { if (t.getHandlerFunction() === 'saoLuu') ScriptApp.deleteTrigger(t); });
+  ScriptApp.newTrigger('saoLuu').timeBased().onWeekDay(ScriptApp.WeekDay.SUNDAY).atHour(3).create();
 }

@@ -188,6 +188,7 @@
       '<div class="sbt-luu"></div><div class="lt-nut-kq"><button type="button" class="btn solid sbt-lai">Làm lượt mới</button></div>';
     var tln = el.querySelector('.sbt-tlnghe'); if (tln) tln.innerHTML = veTaiLieuNghe();
     amThanh(tl >= 80 ? 'xong' : 'xongVua');
+    if (window.QM_NK && L.nk) QM_NK.xongLuot(L.ma, L.giay);
     if (G) G.gui({ maLuot: L.ma, phan: 'sbt-bai' + D.bai, hoTen: L.hoTen, lop: L.lop, batDau: L.batDau, giay: L.giay, soCau: L.tong, soDung: dung, cau: L.kq },
       k.querySelector('.sbt-luu'), 'Luyện theo dạng sách bài tập Bài ' + D.bai);
   }
@@ -202,6 +203,7 @@
     var hs = hoSo(); L.hoTen = gon(hs.hoTen); L.lop = gon(hs.lop);
     L.kq.push({ stt: L.kq.length + 1, maCau: x.p.loai + (x.p.kieu ? '-' + x.p.kieu : '') + '/' + c.ma, dang: x.p.kieu || x.p.loai, nhom: x.p.ten,
       deBai: c.hien || (c.loi ? c.loi.map(function (v) { return (v.ai ? v.ai + '：' : '') + v.han; }).join(' ') : c.han + (c.hoi ? ' ★' + c.hoi.han : '')), dapAn: c.dap, chon: pc, dung: dung ? 1 : 0, thuTu: y.pa.join(' | ') });
+    if (window.QM_NK) QM_NK.theoL(L, { phan: 'sbt-bai' + D.bai, bai: 'Luyện theo dạng sách bài tập · Bài ' + D.bai }, L.kq[L.kq.length - 1]);
     amThanh(dung ? 'dung' : 'sai');
     capNhatDem();
   }

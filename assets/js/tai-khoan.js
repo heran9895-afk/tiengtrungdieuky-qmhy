@@ -91,7 +91,11 @@
   function datPhan(khoa, tt, ten, url) {                     // phần không theo mẫu bai-N (bài kiểm tra): ghi thẳng theo khoá
     var cu = PHAN.phan[khoa] || {}; PHAN.phan[khoa] = { tt: cu.tt === 'xong' ? 'xong' : tt, t: Date.now(), ten: ten || cu.ten || khoa, url: url || cu.url || '' }; luuPhan();
   }
-  window.QM_PHAN = { danhDau: danhDau, xemTu: xemTu, datPhan: datPhan, ds: function () { return PHAN.phan; } };
+  function danhDauMR() {                                    // làm trọn một lượt luyện tập Nội dung mở rộng: chỉ ghi dấu riêng, không đổi trạng thái chính
+    if (!TRANG_NAY) return; var x = PHAN.phan[TRANG_NAY.khoa]; if (!x) { danhDau('dang-hoc'); x = PHAN.phan[TRANG_NAY.khoa]; if (!x) return; }
+    x.mr = 'xong'; x.t = Date.now(); luuPhan();
+  }
+  window.QM_PHAN = { danhDau: danhDau, danhDauMR: danhDauMR, xemTu: xemTu, datPhan: datPhan, ds: function () { return PHAN.phan; } };
   cho.forEach(function (a) { window.QM_PHAN[a[0]].apply(null, a[1]); });
   if (TRANG_NAY) danhDau('dang-hoc');
 
@@ -284,7 +288,7 @@
       '<label>Mã lớp <span class="tk-phu">(cô đưa trên lớp)</span><input name="maLop" maxlength="16" autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="VD: K3HN7Q" value="' + esc(h ? h.maLop || '' : moi ? moi.maLop : '') + '"></label>' +
       '<details class="tk-tu-hoc"' + (h && !h.maLop && h.lop ? ' open' : '') + '><summary>Tự học, không có mã lớp?</summary>' +
         '<label>Lớp / nơi học <span class="tk-phu">(tự ghi)</span><input name="lop" maxlength="40" placeholder="VD: Tự học" value="' + esc(h && !h.maLop ? h.lop : '') + '"></label></details>' +
-      (sua ? '' : '<label class="tk-dong-y"><input type="checkbox" name="dongY" required><span>Mình đồng ý để web lưu họ tên, lớp, điểm và tiến độ học của mình để phục vụ việc học.</span></label>') +
+      (sua ? '' : '<label class="tk-dong-y"><input type="checkbox" name="dongY" required><span>Mình đồng ý để web lưu họ tên, lớp, điểm và tiến độ học của mình để phục vụ việc học. Dữ liệu học tập của mình (kết quả làm bài, thời gian học) được cô Nhiên dùng để theo dõi tiến độ, cải thiện bài giảng và có thể dùng cho nghiên cứu giáo dục.</span></label>') +
       '<button class="tk-btn chinh" type="submit">' + (sua ? 'Lưu' : 'Tạo hồ sơ') + '</button><p class="tk-bao" aria-live="polite"></p></form>' + (sua ? '' : DU_LIEU));
     b.querySelector('form').addEventListener('submit', function (e) {
       e.preventDefault();
@@ -586,6 +590,22 @@
       TK.tinMoi = d.tin.filter(function (t) { return t.traLoiLuc > (TK.xemTinLuc || 0); }).length; luuTK(); veNut();
     }).catch(function () {});
   }
+  // Thông báo dùng dữ liệu học tập cho theo dõi + nghiên cứu: hiện một lần cho mỗi hồ sơ trên mỗi máy, bấm "Đã hiểu" thì ghi nhận (máy chủ lưu thời điểm)
+  function thongBaoNghienCuu(lan) {
+    var h = hoSoDang(); lan = lan || 0;
+    if (!h) { if (lan < 12) setTimeout(function () { thongBaoNghienCuu(lan + 1); }, 4000); return; }
+    var kh = 'qmhy:daDocTB:' + h.hoSoId; try { if (localStorage.getItem(kh)) return; } catch (e) {}
+    if (document.querySelector('.tk-tb-nc')) return;
+    var d = document.createElement('div'); d.className = 'tk-tb-nc'; d.setAttribute('role', 'status');
+    d.style.cssText = 'position:fixed;left:12px;right:12px;bottom:12px;z-index:9998;max-width:560px;margin:0 auto;background:#fff;border:1px solid #d9c9a8;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:12px 14px;font-size:14px;line-height:1.45;color:#3b2f20';
+    d.innerHTML = '<div>📌 Dữ liệu học tập của bạn (kết quả làm bài, thời gian học) được cô Nhiên dùng để theo dõi tiến độ, cải thiện bài giảng và có thể dùng cho nghiên cứu giáo dục.</div><div style="text-align:right;margin-top:8px"><button type="button" class="btn solid" style="padding:6px 16px">Đã hiểu</button></div>';
+    d.querySelector('button').addEventListener('click', function () {
+      try { localStorage.setItem(kh, '1'); } catch (e) {}
+      d.remove(); try { goi('daDocThongBao', { hoSoId: h.hoSoId }).catch(function () {}); } catch (e) {}
+    });
+    document.body.appendChild(d);
+  }
+  setTimeout(thongBaoNghienCuu, 3500);
   function veNutNhan() {                                     // nút "💬 Nhắn cô" ở chân trang, mọi trang
     var o = document.querySelector('.sf-social'); if (!o || o.querySelector('.tk-nhan-co')) return;
     var n = document.createElement('button'); n.type = 'button'; n.className = 'tk-nhan-co'; n.innerHTML = '💬 <span>Nhắn cô</span>';
@@ -644,7 +664,7 @@
     dongBo: function () { return dongBo().catch(function () {}); }, veLop: veLop,
     // trang giáo viên dùng chung phiên đăng nhập
     giaoVien: function () { return !!(TK && TK.giaoVien) && !/[?&]xemhs=1/.test(location.search) && window.name !== 'qm-day-hs'; }, nguoiDung: function () { return TK && TK.nguoiDung || null; },
-    goi: function (a, d) { return goi(a, d); }, moTaiKhoan: moNut, phien: function () { return TK && TK.phien || ''; },
+    goi: function (a, d, k) { return goi(a, d, k); }, moTaiKhoan: moNut, phien: function () { return TK && TK.phien || ''; },
     laGiaoVien: function () { if (TK && !TK.giaoVien) { TK.giaoVien = true; luuTK(); veNut(); } } };
   var LA_TRANG_GV = /\/giao-vien\/(index\.html)?$/.test(location.pathname);
 

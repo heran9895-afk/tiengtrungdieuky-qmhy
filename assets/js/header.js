@@ -188,7 +188,7 @@
   // ================= THANH CUỐI TRANG (luôn hiện, giống header) =================
   var soDep = UNG_HO.soTK.replace(/(\d{4})(?=\d)/g, '$1 ');
   var footer =
-    '<div class="sf-end">© ' + new Date().getFullYear() + ' Tiếng Trung Diệu Kỳ · Giáo viên Nguyễn Hà Nhiên</div>' +
+    '<div class="sf-end">© ' + new Date().getFullYear() + ' Tiếng Trung Diệu Kỳ · Giáo viên Nguyễn Hà Nhiên<br><small>Dữ liệu học tập (kết quả làm bài, thời gian học) được dùng để theo dõi tiến độ, cải thiện bài giảng và có thể dùng cho nghiên cứu giáo dục.</small></div>' +
     '<footer class="sf"><div class="sf-in">' +
       '<a class="sf-brand" href="' + ROOT + 'index.html"><img src="' + ROOT + 'assets/img/logo.webp" alt="Logo 奇妙汉语">' +
         '<span class="sf-name"><b>奇妙汉语</b><small>Tiếng Trung Diệu Kỳ</small></span></a>' +
@@ -275,5 +275,6 @@
   // Tài khoản, tiến độ từng phần, lượt truy cập (quy chuẩn 12): nạp ở MỌI trang; trang chưa nạp cấu hình thì nạp cau-hinh.js trước
   var phienBan = (src.match(/\?v=[^&#]+/) || [''])[0];
   function napJs(ten, xong) { var s = document.createElement('script'); s.src = ROOT + 'assets/js/' + ten + phienBan; s.onload = s.onerror = xong || null; document.body.appendChild(s); }
-  if (typeof window.QM_TK_API === 'undefined') napJs('cau-hinh.js', function () { napJs('tai-khoan.js'); }); else napJs('tai-khoan.js');
+  var napNhatKy = function () { napJs('nhat-ky.js'); };            // nhật ký từng lần làm + thời gian học (cần QM_TK của tai-khoan.js)
+  if (typeof window.QM_TK_API === 'undefined') napJs('cau-hinh.js', function () { napJs('tai-khoan.js', napNhatKy); }); else napJs('tai-khoan.js', napNhatKy);
 })();

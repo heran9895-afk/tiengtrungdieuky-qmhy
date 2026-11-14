@@ -303,6 +303,13 @@
     var dapAn = c.dang === 'dungSai' ? (c.dung ? 'Đúng' : 'Sai') : c.dang === 'xep' ? c.dapXep[0] : c.dap;
     L.kq.push({ stt: L.i + 1, maCau: c.ma, dang: c.dang, nhom: c.nhom, tenNhom: tenNhom(c), deBai: deBai, dapAn: dapAn, chon: chon, dung: dung ? 1 : 0,
       giay: Math.round((Date.now() - x.t0) / 100) / 10, thuTu: (x.pa || (x.kh || []).map(function (o) { return o.t; })).join(' | ') });
+    if (window.QM_NK) {                                       // nhật ký từng câu (mỗi lượt có mã L.ma, dùng chung với bảng điểm lớp)
+      try {
+        var k = L.kq[L.kq.length - 1];
+        if (!L.nk) { L.nk = 1; QM_NK.batDauLuot({ maLuot: L.ma, phan: PHAN + (BAI_DOC ? '-' + BAI_DOC.ma : ''), bai: TEN + (BAI_DOC && BAI_DOC.ten ? ' · ' + BAI_DOC.ten : ''), nhomBo: 'tongHop' }); }
+        QM_NK.cau(L.ma, { stt: k.stt, dang: k.dang + (k.tenNhom ? ' · ' + k.tenNhom : ''), maCau: k.maCau, deBai: k.deBai, dapAn: k.dapAn, chon: k.chon, dung: k.dung, nhom: c.nhom === 'moRong' ? 'moRong' : 'chung', giayDung: k.giay });
+      } catch (e) {}
+    }
     luuDo();
   }
   function hienGiai(dung) {
@@ -368,6 +375,7 @@
       }).join('') + '</div></div>';
     amThanh(tl >= 80 ? 'xong' : 'xongVua');
     if (LD) LD.xoa(khoaLD(BAI_DOC));
+    if (window.QM_NK && L.nk) QM_NK.xongLuot(L.ma, L.giay);
     G.gui({ maLuot: L.ma, phan: PHAN + (BAI_DOC ? '-' + BAI_DOC.ma : ''), hoTen: L.hoTen, lop: L.lop, batDau: L.batDau, giay: L.giay, soCau: tong, soDung: dung,
       cau: L.kq.map(function (k) { var o = Object.assign({}, k); delete o.tenNhom; return o; }) }, el.querySelector('.ot-luu'), TEN);
     veDau();

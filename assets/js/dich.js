@@ -385,6 +385,7 @@
       dapAn: x.ve ? x.ve.map(function (v) { return v.vai + '：' + v.zh[0]; }).join(' | ') : x.doan ? x.doan.cau.map(function (c) { return c.zh[0]; }).join('') : x.zh[0],
       chon: x.cua || '(bỏ qua)', dung: x.khop ? 1 : 0, tuDanhGia: x.tuDanhGia || '', giay: Math.round((Date.now() - x.t0) / 100) / 10,
       thuTu: x.doan ? 'khớp ' + x.soKhop + '/' + x.doan.cau.length : x.ve ? 'khớp ' + x.soKhop + '/' + x.ve.length + ' vế' : '' });
+    if (window.QM_NK) QM_NK.theoL(L, { phan: 'dich', bai: 'Dịch Việt → Trung · ' + (CHE || '') }, L.kq[L.kq.length - 1]);
     luuDo();
   }
 
@@ -399,6 +400,7 @@
       '<div class="lt-xem-ct" hidden>' + L.kq.map(function (k) {
         return '<div class="lt-ct ' + (k.dung || k.tuDanhGia === 'dung' ? 'dung' : 'sai') + '"><b>' + k.stt + '.</b> ' + esc(k.deBai) + '<br>Đáp án: ' + tron(k.dapAn) + '<br>Bạn dịch: ' + tron(k.chon) + '</div>'; }).join('') + '</div></div>';
     if (LD) LD.xoa(khoaLD());
+    if (window.QM_NK && L.nk) QM_NK.xongLuot(L.ma, L.giay);
     G.gui({ maLuot: L.ma, phan: 'dich', che: CHE, phienBanDe: DE.phienBanDe || '', hoTen: L.hoTen, lop: L.lop, batDau: L.batDau, giay: L.giay, soCau: tong, soDung: dungY,
       cau: L.kq.map(function (k) { return Object.assign({ phienBanDe: DE.phienBanDe || '' }, k); }) }, el.querySelector('.ot-luu'), 'Dịch Việt → Trung');
     veDau();

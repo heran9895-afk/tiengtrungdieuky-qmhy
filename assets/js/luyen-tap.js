@@ -77,6 +77,7 @@
       '<label>Lớp<input type="text" class="lt-hs-lop" placeholder="VD: HSK1-K3"></label>' +
       '<p class="lt-hs-ghi">' + (BAI.onTap ? 'Bài làm từng câu được gửi về cho cô giáo để theo dõi và cải tiến bài học. Phần này không xếp hạng.' : 'Điền để lưu điểm lên Bảng xếp hạng. Không điền vẫn làm bài được, chỉ là không lưu điểm.') + '</p></div>' : '') +
     '<div class="lt-thanh" id="lt-thanh">' +
+      (BAI ? '<label class="lt-o lt-o-bo" hidden><span class="lt-o-nhan">Bộ câu hỏi</span><select class="lt-chon-bo" aria-label="Chọn bộ câu hỏi"></select></label>' : '') +
       '<label class="lt-o"><span class="lt-o-nhan">Chặng</span><select class="lt-chon-chang" aria-label="Chọn chặng"></select></label>' +
       '<label class="lt-o"><span class="lt-o-nhan">Dạng bài</span><select class="lt-chon-dang" aria-label="Chọn dạng bài"></select></label>' +
       '<button type="button" class="lt-o lt-o-py" aria-pressed="true" title="Hiện / ẩn pinyin ở đề bài"><span class="lt-o-nhan">Pinyin</span><b class="lt-py-tt"></b></button>' +
@@ -86,12 +87,17 @@
   var thanh = el.querySelector('.lt-thanh'), selChang = el.querySelector('.lt-chon-chang'), selDang = el.querySelector('.lt-chon-dang'),
       nutPy = el.querySelector('.lt-o-py'), khuTong = el.querySelector('.lt-tong'), khuBai = el.querySelector('.lt-bai');
 
-  var S = { cap: '1', chang: 0, dang: 'tron', pinyin: true, kho: [], ds: [] };
+  var S = { cap: '1', chang: 0, dang: 'tron', pinyin: true, kho: [], ds: [], bo: 'tongHop' };
+  // 3 BỘ CÂU HỎI (cô chốt 14/11/2026): Kiến thức chung · Nội dung mở rộng · Tổng hợp. Nhãn có sẵn trên từng từ (w.nhom = 'moRong' | khác).
+  // Ngữ pháp, hỏi – đáp, hội thoại, chữ ghép, ôn bài cũ thuộc Kiến thức chung; bộ Mở rộng chỉ hỏi từ mở rộng. Hoàn thành phần luyện tập = Kiến thức chung hoặc Tổng hợp.
+  function nhomTu(w) { return w && w.nhom === 'moRong' ? 'moRong' : 'chung'; }
+  var GOC = null;
   if (BAI) {
     el.querySelector('.lt-cap').hidden = true;
     var oTen = el.querySelector('.lt-hs-ten'), oLop = el.querySelector('.lt-hs-lop');
     try { var hs = JSON.parse(localStorage.getItem('qmhy:hoSo') || '{}'); oTen.value = hs.hoTen || ''; oLop.value = hs.lop || ''; } catch (e) {}
-    [oTen, oLop].forEach(function (o) { o.addEventListener('change', function () {
+    if (window.QM_NK) QM_NK.khach({ hoTen: oTen.value, lop: oLop.value });
+    [oTen, oLop].forEach(function (o) { o.addEventListener('change', function () { if (window.QM_NK) QM_NK.khach({ hoTen: oTen.value, lop: oLop.value });
       try { localStorage.setItem('qmhy:hoSo', JSON.stringify({ hoTen: oTen.value.trim(), lop: oLop.value.trim() })); } catch (e) {}
     }); });
   }
@@ -145,11 +151,28 @@
     tai.then(function (r) {
       if (S.cap !== c) return;
       S.kho = r.kho; S.ds = r.ds;
+      GOC = BAI ? { ds: r.ds, np: NP_BAI, hd: HD_BAI, ghep: GHEP_BAI } : null; S.bo = 'tongHop'; apDungBo();
       // mở sẵn chặng đầu tiên chưa thuộc hết
       S.chang = 0;
       for (var i = 0; i * CHANG < S.ds.length; i++) { if (TD.dem(S.ds.slice(i * CHANG, (i + 1) * CHANG)).thuoc < Math.min(CHANG, S.ds.length - i * CHANG)) { S.chang = i; break; } }
       veThanh(); batDau(); if (daTuongTac) giuTrongManHinh();
     }).catch(function () { khuBai.innerHTML = '<div class="tv-trong">Chưa tải được dữ liệu, bạn kiểm tra mạng rồi thử lại nhé.</div>'; });
+  }
+  function apDungBo() {
+    if (!GOC) return;
+    var chung = GOC.ds.filter(function (w) { return nhomTu(w) === 'chung'; }), mr = GOC.ds.filter(function (w) { return nhomTu(w) === 'moRong'; });
+    if (!chung.length || !mr.length) S.bo = 'tongHop';       // bài / chặng chỉ có một nhóm: không chia bộ
+    if (S.bo === 'chung') { S.ds = chung; NP_BAI = GOC.np; HD_BAI = GOC.hd; GHEP_BAI = GOC.ghep; }
+    else if (S.bo === 'moRong') { S.ds = mr; NP_BAI = []; HD_BAI = []; GHEP_BAI = []; }
+    else { S.ds = GOC.ds; NP_BAI = GOC.np; HD_BAI = GOC.hd; GHEP_BAI = GOC.ghep; }
+    var o = el.querySelector('.lt-o-bo'); if (!o) return;
+    var coCa = chung.length && mr.length;
+    o.hidden = !coCa;
+    if (coCa) {
+      var sel = o.querySelector('select');
+      sel.innerHTML = '<option value="tongHop">🔀 Tổng hợp · ' + GOC.ds.length + ' từ</option><option value="chung">🧱 Kiến thức chung · ' + chung.length + ' từ</option><option value="moRong">🌱 Nội dung mở rộng · ' + mr.length + ' từ</option>';
+      sel.value = S.bo;
+    }
   }
   // Câu ví dụ ngữ pháp → câu đặc biệt laNP. Mỗi điểm ngữ pháp là một nhóm; mỗi lượt bốc 1 câu của nhóm.
   // Điền từ: đục đúng thành phần trọng tâm (ô "codinh" / "pho" trong phần tách màu) khi nó là một từ đã học; Sắp xếp: tách khối như câu từ vựng.
@@ -312,6 +335,7 @@
     nutPy.querySelector('.lt-py-tt').textContent = S.pinyin ? 'Hiện' : 'Ẩn';
     khuBai.classList.toggle('an-py', !S.pinyin);
   }
+  if (BAI) el.querySelector('.lt-chon-bo').addEventListener('change', function () { S.bo = this.value; apDungBo(); S.chang = 0; veThanh(); batDau(); giuTrongManHinh(); });
   selChang.addEventListener('change', function () { S.chang = +selChang.value; batDau(); giuTrongManHinh(); });
   selDang.addEventListener('change', function () { S.dang = selDang.value; batDau(); giuTrongManHinh(); });
   nutPy.addEventListener('click', function () { S.pinyin = !S.pinyin; capNhatPy(); });   // chỉ ẩn/hiện, không làm lại bài
@@ -389,7 +413,7 @@
     if (BAI && !dsRieng) {                                   // bài học: thêm câu ngữ pháp (mỗi ý một câu) và hỏi – đáp
       if (S.dang === 'tron' || S.dang === 'dien' || S.dang === 'xep' || S.dang === 'dich') ds = ds.concat(bocNP());
       if (S.dang === 'tron') ds = ds.concat(tron(HD_BAI).slice(0, HD_TOI_DA));
-      if (S.dang === 'tron' && !BAI.chang) { var ov = onBaiCu(); B_ON_VONG = {}; ov.forEach(function (w) { B_ON_VONG[w.ma] = 1; }); ds = ds.concat(ov); }
+      if (S.dang === 'tron' && !BAI.chang && S.bo !== 'moRong') { var ov = onBaiCu(); B_ON_VONG = {}; ov.forEach(function (w) { B_ON_VONG[w.ma] = 1; }); ds = ds.concat(ov); }
       else if (S.dang === 'hoidap') ds = HD_BAI.slice();
     }
     ds = tron(ds);
@@ -440,7 +464,7 @@
     var i = Math.min(iTiep, B.hang.length); if (i >= B.hang.length) return;
     LD.luu(LD_KHOA, { ten: BAI.ten || 'Từ vựng', tom: 'câu ' + (i + 1) + ' / ' + B.hang.length,
       du: { hang: hang, kieu: B.kieu, i: i, dung: B.dung, sai: B.sai, daSai: Object.keys(B.daSai), ct: B.ct, chuoi: B.chuoi, chuoiMax: B.chuoiMax,
-        giay: Math.round((Date.now() - B.luc) / 1000), conLai: conLai(), cauDem: B.cauDem } });
+        giay: Math.round((Date.now() - B.luc) / 1000), conLai: conLai(), cauDem: B.cauDem, nk: B.nk || '' } });
   }
   function khoiPhucDo(e) {
     var theoMa = {}; S.kho.concat(S.ds).forEach(function (w) { theoMa[w.ma] = w; });
@@ -453,7 +477,7 @@
     if (hong || d.i >= hang.length || d.conLai <= 0) { LD.xoa(LD_KHOA); return false; }
     var daSai = {}; d.daSai.forEach(function (m) { var w = theoMa[m] || hang.filter(function (x) { return x.ma === m; })[0]; if (w) daSai[m] = w; });
     B = { goc: hang, hang: hang, i: d.i, dung: d.dung, sai: d.sai, daSai: daSai, kieu: d.kieu || [], ct: d.ct || [], chuoi: d.chuoi || 0, chuoiMax: d.chuoiMax || 0,
-          luc: Date.now() - (d.giay || 0) * 1000, dayDu: true, nhanh: true, het: Date.now() + d.conLai * 1000, cauDem: d.cauDem || {} };
+          luc: Date.now() - (d.giay || 0) * 1000, dayDu: true, nhanh: true, het: Date.now() + d.conLai * 1000, cauDem: d.cauDem || {}, nk: d.nk || '' };
     chayDongHo(); TV.dungDoc(); veCau(); return true;
   }
   function hoiLamTiep(e) {                                   // đầu lượt: còn lượt dở thì hỏi làm tiếp hay làm lượt mới
@@ -570,6 +594,13 @@
   function ghiKetQua(w, dung, tuThemKho, ct) {
     if (dung) { B.chuoi++; B.chuoiMax = Math.max(B.chuoiMax, B.chuoi); } else B.chuoi = 0;
     if (ct) B.ct.push({ stt: B.ct.length + 1, dang: ct.dang, cauHoi: ct.cauHoi, dapAn: ct.dapAn, chon: ct.chon, dung: dung });
+    if (ct && window.QM_NK) {                                // nhật ký từng câu (mọi chế độ, kể cả luyện riêng và lượt bỏ dở) — gửi về máy chủ tài khoản
+      try {
+        if (!B.nk) B.nk = QM_NK.batDauLuot({ phan: BAI ? BAI.ma : (S.cap === 'KHO' ? 'thu-vien-tu-kho' : 'thu-vien-hsk' + S.cap), bai: BAI ? (BAI.ten || '') + (BAI.tenLuot ? ' · ' + BAI.tenLuot : '') : (S.cap === 'KHO' ? 'Từ khó' : TV.tenCap(S.cap)),
+          nhomBo: S.bo || 'tongHop' });
+        QM_NK.cau(B.nk, { stt: B.ct.length, dang: ct.dang, maCau: w && w.ma ? w.ma : '', deBai: ct.cauHoi, dapAn: ct.dapAn, chon: ct.chon, dung: dung, nhom: nhomTu(w) });
+      } catch (e) {}
+    }
     if (!dacBiet(w)) TD.ghi(w, dung);
     if (dung) B.dung++; else { B.sai++; B.daSai[w.ma] = w; }
     luuDo(B.i + 1);
@@ -1185,7 +1216,8 @@
       (BAI ? '<div class="lt-xem-ct" hidden>' + B.ct.map(function (c) { return '<div class="lt-ct ' + (c.dung ? 'dung' : 'sai') + '"><b>' + c.stt + '. ' + esc(c.dang) + '</b> · ' + honHop(c.cauHoi) +
         '<br>Đáp án: ' + honHop(c.dapAn) + '' + (c.dung ? ' ✓' : ' · Bạn chọn: ' + honHop(c.chon || '—') + '') + '</div>'; }).join('') + '</div>' : '') + '</div>';
     if (BAI) guiDiem();
-    if (BAI && B.dayDu && window.QM_PHAN) QM_PHAN.danhDau('xong');   // làm trọn một lượt Trộn tất cả: phần này đã xong (tiến độ học, quy chuẩn 12)
+    if (BAI && B.dayDu && window.QM_PHAN) { if (S.bo === 'moRong') { if (QM_PHAN.danhDauMR) QM_PHAN.danhDauMR(); } else QM_PHAN.danhDau('xong'); }   // làm trọn một lượt Trộn tất cả của Kiến thức chung (hoặc Tổng hợp): phần này đã xong; Mở rộng chỉ ghi dấu riêng
+    if (window.QM_NK && B.nk) QM_NK.xongLuot(B.nk, Math.round((Date.now() - B.luc) / 1000));   // nhật ký: lượt làm trọn
     giuTrongManHinh();
   }
 
@@ -1196,11 +1228,11 @@
     if (BAI.onTap && window.QM_OTG) {                         // Ôn tập tổng hợp: mọi lượt gửi bài làm về Sheet (otLuot), không lên Bảng xếp hạng
       var hs0 = { hoTen: (el.querySelector('.lt-hs-ten').value || '').trim(), lop: (el.querySelector('.lt-hs-lop').value || '').trim() };
       QM_OTG.gui({ maLuot: QM_OTG.maLuot(), phan: BAI.onTap + (B.dayDu ? '' : '-rieng'), hoTen: hs0.hoTen, lop: hs0.lop, batDau: new Date(B.luc).toISOString(),
-        giay: B.giay, soCau: B.dung + B.sai, soDung: B.dung,
+        giay: B.giay, soCau: B.dung + B.sai, soDung: B.dung, bo: S.bo,
         cau: B.ct.map(function (c) { return { stt: c.stt, maCau: '', dang: c.dang, nhom: '', deBai: c.cauHoi, dapAn: c.dapAn, chon: c.chon, dung: c.dung ? 1 : 0 }; }) }, khu, BAI.ten);
       return;
     }
-    if (!B.dayDu) { khu.innerHTML = '<p class="lt-luu-ghi">Lượt luyện riêng (một dạng bài hoặc luyện lại từ sai) không tính lên Bảng xếp hạng. Chọn dạng <b>🔀 Trộn tất cả</b> để làm bài tính điểm.</p>'; return; }
+    if (!B.dayDu || S.bo !== 'tongHop') { khu.innerHTML = '<p class="lt-luu-ghi">Lượt luyện riêng (một dạng bài hoặc luyện lại từ sai) không tính lên Bảng xếp hạng. Chọn dạng <b>🔀 Trộn tất cả</b> để làm bài tính điểm.</p>'; return; }
     var api = window.QM_API;
     if (!api) { khu.innerHTML = '<p class="lt-luu-ghi">Bảng xếp hạng chưa được nối với Google Sheet nên kết quả chưa được lưu.</p>'; return; }
     var hoTen = (el.querySelector('.lt-hs-ten').value || '').trim(), lop = (el.querySelector('.lt-hs-lop').value || '').trim();
