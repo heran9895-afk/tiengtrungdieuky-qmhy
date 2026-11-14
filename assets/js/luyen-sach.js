@@ -203,6 +203,11 @@
     var hs = hoSo(); L.hoTen = gon(hs.hoTen); L.lop = gon(hs.lop);
     L.kq.push({ stt: L.kq.length + 1, maCau: x.p.loai + (x.p.kieu ? '-' + x.p.kieu : '') + '/' + c.ma, dang: x.p.kieu || x.p.loai, nhom: x.p.ten,
       deBai: c.hien || (c.loi ? c.loi.map(function (v) { return (v.ai ? v.ai + '：' : '') + v.han; }).join(' ') : c.han + (c.hoi ? ' ★' + c.hoi.han : '')), dapAn: c.dap, chon: pc, dung: dung ? 1 : 0, thuTu: y.pa.join(' | ') });
+    if (window.QM_LT_LOP && QM_LT_LOP.dangBat() && QM_LT_LOP.cauKhac) {               // phòng lớp: câu cô chọn tùy ý, em được gọi ghi vào nhật ký lớp
+      var kk = L.kq[L.kq.length - 1], cl = li.cloneNode(true); cl.querySelectorAll('button,select').forEach(function (b) { b.disabled = true; });
+      QM_LT_LOP.cauKhac(kk.dang, kk.maCau, '<ol class="sbt-ds">' + cl.outerHTML + '</ol>');
+      QM_LT_LOP.onGhi(dung, { dang: x.p.ten, cauHoi: kk.deBai, dapAn: kk.dapAn, chon: kk.chon });
+    }
     if (window.QM_NK) QM_NK.theoL(L, { phan: 'sbt-bai' + D.bai, bai: 'Luyện theo dạng sách bài tập · Bài ' + D.bai }, L.kq[L.kq.length - 1]);
     amThanh(dung ? 'dung' : 'sai');
     capNhatDem();
@@ -225,6 +230,8 @@
     cham(t.x, y, pc, li);
   }
 
+  window.QM_LT_API = { khu: el, roi: true, tenBai: function () { return D ? 'Luyện theo sách · Bài ' + D.bai : 'Luyện theo sách'; },
+    chu: function (html) { var d = document.createElement('div'); d.innerHTML = html; return d.textContent.trim(); }, traLoi: function () {}, B: function () { return { i: 0, hang: [{}], dap: null }; } };
   // ---------- sự kiện ----------
   el.addEventListener('click', function (e) {
     var o = e.target.closest('.sbt-o'); if (o && !o.disabled) { luuHs(); return chon(o); }

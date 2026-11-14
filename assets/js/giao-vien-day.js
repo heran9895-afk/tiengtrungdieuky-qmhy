@@ -14,7 +14,7 @@
       if (n === 3) { L.push(['⚡ Ôn tập 1', d + 'on-tap-1.html'], ['⚡ Ôn tập 2', d + 'on-tap-2.html'], ['⚡ Ôn tập 3.1', d + 'on-tap-3-1.html'], ['⚡ Ôn tập 3.2', d + 'on-tap-3-2.html']); }
       else L.push(['⚡ Ôn tập 1', d + 'on-tap-1.html'], ['⚡ Ôn tập 2', d + 'on-tap-2.html'], ['⚡ Ôn tập 3', d + 'on-tap-3.html']);
     }
-    L.push(['🎯 Bài tập', d + 'bai-tap.html', 1], ['📒 Luyện theo sách bài tập', d + 'sach-bai-tap.html', 3]);
+    L.push(['🎯 Bài tập', d + 'bai-tap.html', 1], ['📒 Luyện theo sách bài tập', d + 'sach-bai-tap.html', 1]);
     if (n > 1) L.push(['📝 Test đầu giờ', d + 'test-dau-gio.html']);
     return L;
   }
@@ -24,7 +24,7 @@
   for (var i = 1; i <= 5; i++) bai(i);
   MUC.push({ k: 'on-tap-1-5', ten: 'Ôn tập tổng hợp Bài 1–5', phan: [
     ['📚 Từ vựng', 'on-tap-1-5/tu-vung.html', 2], ['🔤 Ngữ âm', 'on-tap-1-5/ngu-am.html', 2], ['✍️ Chữ Hán', 'on-tap-1-5/chu-han.html', 2], ['📐 Ngữ pháp', 'on-tap-1-5/ngu-phap.html', 2],
-    ['🎧 Nghe', 'on-tap-1-5/nghe.html', 2], ['📖 Đọc hiểu', 'on-tap-1-5/doc-hieu.html', 2], ['🌏 Dịch Việt → Trung', 'on-tap-1-5/dich.html', 3], ['🔀 Trộn tổng hợp', 'on-tap-1-5/tong-hop.html', 1]] });
+    ['🎧 Nghe', 'on-tap-1-5/nghe.html', 2], ['📖 Đọc hiểu', 'on-tap-1-5/doc-hieu.html', 2], ['🌏 Dịch Việt → Trung', 'on-tap-1-5/dich.html', 1], ['🔀 Trộn tổng hợp', 'on-tap-1-5/tong-hop.html', 1]] });
   for (var j = 6; j <= 7; j++) bai(j);
 
   var CSS = '.gvd-hang{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:flex-end;margin-bottom:14px}' +

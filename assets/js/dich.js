@@ -99,7 +99,7 @@
 
   // ---------- màn bắt đầu ----------
   // ---------- lượt làm dở (luot-do.js): lưu sau mỗi câu + chữ đang gõ; đăng nhập thì đồng bộ qua tài khoản ----------
-  var LD = window.QM_LD, TIEN_TO = 'on-tap-1-5/dich-', HEN_LUU = null;
+  var LD = window.QM_LD, TIEN_TO = 'on-tap-' + ((String(window.QM_OT_TEP || '').match(/on-tap-(\d+-\d+)/) || [])[1] || '1-5') + '/dich-', HEN_LUU = null;
   function hoSo() { var h = window.QM_TK && QM_TK.hoSoDang && QM_TK.hoSoDang(); return h ? { hoTen: h.hoTen, lop: h.lop } : docLS(KHOA_HS, {}); }
   function khoaLD() { return TIEN_TO + (L.che === 'cau' ? 'cau' : L.nguonMa); }
   function luuDo() {
@@ -317,6 +317,7 @@
         '<p class="dc-bao" aria-live="polite"></p>' +
         '<div class="lt-nut-kq"><button type="button" class="btn dc-bo-qua">Không biết, xem đáp án</button><button type="button" class="btn solid dc-kt" disabled>Kiểm tra</button></div></div>' +
       '<div class="dc-khu-giai" aria-live="polite"></div></div>';
+    if (window.QM_LT_LOP && QM_LT_LOP.dangBat() && QM_LT_LOP.cauKhac) QM_LT_LOP.cauKhac('dich');   // phòng lớp: cô gõ bản dịch theo lời em
   }
   function kiemTraVe(boQua) {
     var x = L.ds[L.i], o = el.querySelectorAll('.dc-ve-o'), loi = false, coChu = false, bao = el.querySelector('.dc-bao');
@@ -385,10 +386,27 @@
       dapAn: x.ve ? x.ve.map(function (v) { return v.vai + '：' + v.zh[0]; }).join(' | ') : x.doan ? x.doan.cau.map(function (c) { return c.zh[0]; }).join('') : x.zh[0],
       chon: x.cua || '(bỏ qua)', dung: x.khop ? 1 : 0, tuDanhGia: x.tuDanhGia || '', giay: Math.round((Date.now() - x.t0) / 100) / 10,
       thuTu: x.doan ? 'khớp ' + x.soKhop + '/' + x.doan.cau.length : x.ve ? 'khớp ' + x.soKhop + '/' + x.ve.length + ' vế' : '' });
+    if (window.QM_LT_LOP && QM_LT_LOP.dangBat() && QM_LT_LOP.onGhi) { var k0 = L.kq[L.kq.length - 1]; QM_LT_LOP.onGhi(!!k0.dung, { dang: 'Dịch Việt → Trung', cauHoi: k0.deBai, dapAn: k0.dapAn, chon: k0.chon }); }
     if (window.QM_NK) QM_NK.theoL(L, { phan: 'dich', bai: 'Dịch Việt → Trung · ' + (CHE || '') }, L.kq[L.kq.length - 1]);
     luuDo();
   }
 
+  // Cho phong-lop-gv.js (phòng lớp): bộ đề cố định chỉ cho "Dịch câu" (hội thoại / đoạn văn: cô chọn bài rồi dạy như thường)
+  window.QM_LT_API = { khu: el, tenBai: function () { return 'Dịch Việt → Trung'; },
+    chu: function (html) { var d = document.createElement('div'); d.innerHTML = html; return d.textContent.trim(); }, traLoi: function () {},
+    B: function () { return L ? { i: L.i, hang: L.ds, dap: null } : null; },
+    batDau: function () { if (CHE === 'cau') batDau(); },
+    chotBo: function () { return L && L.che === 'cau' ? { v: 1, dang: 'dich', bo: '', hang: L.ds.map(function (x) { return x.ma; }) } : null; },
+    daLam: function (xongNay) { return L.ds.slice(0, L.i + (xongNay ? 1 : 0)).map(function (x) { return x.ma; }); },
+    bo: function () { return ''; },
+    napBo: function (plan, daLam) {
+      if (!plan || !plan.hang || !DE) return 0;
+      var theo = {}, da = {}; DE.cau.forEach(function (c) { theo[c.ma] = c; }); (daLam || []).forEach(function (m) { da[m] = 1; });
+      var ds = plan.hang.filter(function (m) { return theo[m] && !da[m]; }).map(function (m) { var c = theo[m]; return { ma: c.ma, nhom: 'cau', vi: c.vi, zh: c.zh, py: c.py, ghiChu: c.ghiChu, goiY: c.goiY, ve: c.ve }; });
+      if (!ds.length) return 0; luuHs(); var hs = hoSo();
+      L = { ds: ds, i: 0, kq: [], ma: G.maLuot(), luc: Date.now(), batDau: new Date().toISOString(), hoTen: gon(hs.hoTen), lop: gon(hs.lop), ten: 'Dịch câu', che: 'cau', nguonMa: '' };
+      veCau(); veDau(); return ds.length;
+    } };
   // ---------- kết quả ----------
   function veKetQua() {
     var tong = L.kq.length, khop = L.kq.filter(function (k) { return k.dung; }).length, dungY = L.kq.filter(function (k) { return k.dung || k.tuDanhGia === 'dung'; }).length;

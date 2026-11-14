@@ -49,7 +49,7 @@
       (c ? '<div>Câu <b>' + c.n + '</b>: ' + (c.goi ? 'bạn <span class="ten">' + esc(c.goi.ten) + '</span> ' + (R.tt === 'cho' ? '<small>đang trả lời…</small>' : R.tt === 'dung' ? '✅ đúng' : R.tt === 'sai' ? '❌ chưa đúng' : '') : '<small>chưa gọi ai</small>') + '</div>' +
         '<div class="gtl-hang">' + (R.tt === 'dung' || R.tt === 'hien' ? '<small>Bấm “Câu tiếp ›” trên đề để sang câu sau.</small>' :
           '<button class="nut" id="gtlGoi" type="button">🎲 ' + (c.goi ? 'Gọi bạn khác' : 'Gọi tên') + '</button><button class="phu" id="gtlHien" type="button">💡 Hiện đáp án</button><button class="phu" id="gtlBo" type="button">⏭ Bỏ qua câu</button>') + '</div>' + (R.tt === 'dung' || R.tt === 'hien' ? '' : '<small>Cô cũng có thể bấm thẳng vào đáp án trên đề để tự chọn.</small>')
-        : '<small>Chọn dạng bài rồi bấm bắt đầu để hiện câu đầu tiên.</small>') +
+        : (window.QM_LT_API && QM_LT_API.roi ? '<small>Bài này cô chọn câu tùy ý: bấm 🎲 Gọi tên, rồi bấm đáp án của bạn đó trên câu cô muốn hỏi.</small><div class="gtl-hang"><button class="nut" id="gtlGoi" type="button">🎲 Gọi tên</button></div>' : '<small>Chọn dạng bài rồi bấm bắt đầu để hiện câu đầu tiên.</small>')) +
       '<div class="gtl-hang"><button class="do" id="gtlKet" type="button">🏁 Kết thúc buổi</button><button class="phu" id="gtlKhongLuu" type="button">✖ Đóng phòng, không lưu</button></div><small id="gtlLoi"></small>';
     $('#gtlMa').onclick = hienMa;
     var g = $('#gtlGoi'); if (g) g.onclick = goiTen;
@@ -88,6 +88,7 @@
   function phanId() { return location.pathname.replace(/^.*hsk1\//, '').replace(/\.html$/, '').slice(0, 100); }
   function khoiBo() {
     var A = QM_LT_API;
+    if (!A.batDau || !A.chotBo) { if (khu() && khu().querySelector('.lt-dap-o')) sauVeCau(); return; }   // trang chọn câu tùy ý (sách bài tập…): không có bộ đề cố định
     function moi() {
       A.batDau(); R.plan = A.chotBo(); R.daLam0 = []; R.off = 0;
       if (!R.plan) return;
@@ -156,11 +157,14 @@
     R.cau = { i: B.i, n: R.off + B.i + 1, tong: R.off + B.hang.length, kieu: kieu, html: chup(), goi: null, lan: 0, ma: '', chon: null, tries: [], xong: false, de: deCau() };
     R.tt = 'cho-goi'; ve(); publish();
   }
-  function cauKhac(k) {                                    // ghép / xếp / bộ thủ / gõ chữ: cô thao tác theo lời em, máy tự chấm
+  function cauKhac(k, maCau, html) {                       // ghép / xếp / bộ thủ / gõ chữ / sách bài tập: cô thao tác theo lời em, máy tự chấm
     var B = QM_LT_API.B(); if (!B) return;
+    if (maCau && R.cau && R.cau.maCau === maCau) return;
     chotCauTruoc();
-    var dem = khu().querySelector('.lt-dem'), kieu = dem ? dem.textContent.split('·')[0].replace(/^[^\wÀ-ỹ]+/, '').trim() : k;
-    R.cau = { i: B.i, n: R.off + B.i + 1, tong: R.off + B.hang.length, kieu: kieu, html: chup(), goi: null, lan: 0, ma: '', chon: null, tries: [], xong: false, khac: true, de: '' };
+    var dem = khu().querySelector('.lt-dem'), kieu = dem && !maCau ? dem.textContent.split('·')[0].replace(/^[^\wÀ-ỹ]+/, '').trim() : k;
+    var n = maCau ? (R.nRoi = (R.nRoi || 0) + 1) : R.off + B.i + 1;
+    R.cau = { i: B.i, n: n, tong: maCau ? 0 : R.off + B.hang.length, kieu: kieu, html: html || chup(), goi: null, lan: 0, ma: '', chon: null, tries: [], xong: false, khac: true, de: '', maCau: maCau || '' };
+    if (R.goiSau) { R.cau.goi = R.goiSau; R.cau.lan = 1; R.goiSau = null; }
     R.tt = 'cho-goi'; ve(); publish();
   }
   function onGhi(dung, ct) {
@@ -209,9 +213,10 @@
     if (!window.QM_GOI_TEN || !QM_GOI_TEN.mo) return loi('Chưa nạp bảng Gọi tên.');
     stopCho();
     QM_GOI_TEN.mo({ lop: R.lop, ma: R.ma, ds: R.mo ? R.ros.filter(function (x) { return x.id; }).map(function (x) { return { hoTen: x.ten, hoSoId: x.id }; }) : null, khiChon: function (hs) {
-      var c = R.cau; if (!c) return;
+      var c = R.cau; if (!c && !window.QM_LT_API.roi) return;
       var i = R.ros.map(function (x) { return x.id; }).indexOf(hs.hoSoId);
       if (i < 0) { loi('Bạn ' + hs.hoTen + ' chưa có hồ sơ trong lớp nên chưa trả lời bằng máy được. Cô gọi bạn khác nhé.'); return; }
+      if (!c) { R.goiSau = { id: hs.hoSoId, ten: R.ros[i].ten, i: i }; loi('Đã gọi bạn ' + R.ros[i].ten + ' — cô bấm đáp án của bạn trên câu muốn hỏi.'); return; }
       moLai(c); c.lan++; c.goi = { id: hs.hoSoId, ten: R.ros[i].ten, i: i }; c.ma = c.i + '-' + c.lan; c.chon = null;
       if (c.khac) { R.tt = 'cho-goi'; c.html = chup(); ve(); publish(); return; }
       R.tt = 'cho'; c.html = chup(); ve(); publish(); choDapAn();

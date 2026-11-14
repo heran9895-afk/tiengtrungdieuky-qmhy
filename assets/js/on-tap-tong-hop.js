@@ -172,7 +172,7 @@
       '<p class="lt-hs-ghi">Bài làm từng câu được gửi về cho cô giáo để theo dõi và cải tiến bài học. Phần này không xếp hạng.</p></div>';
   }
   // ---------- lượt làm dở: lưu sau mỗi câu, lần sau vào làm tiếp (luot-do.js; đăng nhập thì đồng bộ qua tài khoản) ----------
-  var LD = window.QM_LD, TIEN_TO = 'on-tap-1-5/';
+  var LD = window.QM_LD, TIEN_TO = 'on-tap-' + ((String(window.QM_OT_TEP || '').match(/on-tap-(\d+-\d+)/) || [])[1] || '1-5') + '/';   // 1-5, 6-10, 11-15…
   function khoaLD(b) { return TIEN_TO + PHAN + (b ? '-' + b.ma : ''); }
   function luuDo() {
     if (!LD || !L) return;
@@ -239,9 +239,6 @@
         return '<p>' + (v.ai ? '<b class="hanzi">' + esc(v.ai) + '：</b>' : '') + '<span class="hanzi">' + esc(v.han) + '</span><i class="ot-van-py" hidden>' + esc(v.py) + '</i></p>'; }).join('') + '</div></details>';
   }
   function veCau() {
-    if (window.QM_LT_LOP && QM_LT_LOP.dangBat() && L.ds[L.i] && L.ds[L.i].c.dang === 'xep') {            // phòng lớp (3a): chỉ các dạng chọn đáp án → bỏ câu xếp
-      L.ds.splice(L.i, 1); if (L.i >= L.ds.length) return veKetQua(); return veCau();
-    }
     var x = L.ds[L.i], c = x.c, de = '', dap = '', pa;
     x.t0 = Date.now();
     var dau = '<div class="lnp-hang"><span class="lnp-ten-dang">' + TEN_DANG[c.dang] + '</span><span class="lnp-phai"><span class="lt-dem">' + (L.i + 1) + ' / ' + L.ds.length + '</span>' + nutAm() + '</span></div>' +
@@ -284,7 +281,7 @@
     el.innerHTML = veBaiDoc() + '<div class="lnp-khung ot-khung"><div class="lt-vach lt-vach-bai"><i class="thuoc" style="width:' + (L.i / L.ds.length * 100) + '%"></i></div>' +
       '<div class="lt-de lnp-de">' + dau + de + '</div>' + dap + '<div class="lnp-giai" aria-live="polite"></div></div>';
     if (c.loa && c.dang === 'chon' && (c.anDe || c.hienSau || !c.de && !c.cau)) setTimeout(function () { var b = el.querySelector('.ot-khung .tv-loa'); if (b && L && L.ds[L.i] === x) TV.doc(c.loa, b); }, 350);
-    if (window.QM_LT_LOP && QM_LT_LOP.dangBat() && (c.dang === 'chon' || c.dang === 'dungSai')) QM_LT_LOP.sauVeCau();
+    if (window.QM_LT_LOP && QM_LT_LOP.dangBat()) { if (c.dang === 'chon' || c.dang === 'dungSai') QM_LT_LOP.sauVeCau(); else if (QM_LT_LOP.cauKhac) QM_LT_LOP.cauKhac(c.dang); }
   }
   function veDongXep() {
     var x = L.ds[L.i], dong = el.querySelector('.ot-xep-dong');
@@ -310,6 +307,7 @@
         QM_NK.cau(L.ma, { stt: k.stt, dang: k.dang + (k.tenNhom ? ' · ' + k.tenNhom : ''), maCau: k.maCau, deBai: k.deBai, dapAn: k.dapAn, chon: k.chon, dung: k.dung, nhom: c.nhom === 'moRong' ? 'moRong' : 'chung', giayDung: k.giay });
       } catch (e) {}
     }
+    if (window.QM_LT_LOP && QM_LT_LOP.onGhi && QM_LT_LOP.dangBat()) { try { var kk = L.kq[L.kq.length - 1]; QM_LT_LOP.onGhi(!!dung, { dang: TEN_DANG[c.dang] || c.dang, cauHoi: kk.deBai, dapAn: kk.dapAn, chon: chon }); } catch (e) {} }
     luuDo();
   }
   function hienGiai(dung) {
@@ -418,7 +416,23 @@
   window.QM_LT_API = { khu: el, tenBai: function () { return TEN; },
     chu: function (html) { var d = document.createElement('div'); d.innerHTML = html; return d.textContent.trim(); },
     traLoi: function (o) { return traLoi(o); },
+    batDau: function () { luuHs(); if (PHAN === 'doc-hieu' && !BAI_DOC) BAI_DOC = P.bai[0]; dungLuot(); luuDo(); veCau(); veDau(); },
+    chotBo: function () { return L ? { v: 1, dang: PHAN, bo: '', bai: BAI_DOC ? BAI_DOC.ma : '', hang: L.ds.map(function (x) { return x.c.ma; }) } : null; },
+    daLam: function (xongNay) { return L.ds.slice(0, L.i + (xongNay ? 1 : 0)).map(function (x) { return x.c.ma; }); },
+    bo: function () { return ''; },
+    napBo: function (plan, daLam) {
+      if (!plan || !plan.hang || !P) return 0;
+      var theo = {}, da = {}; (daLam || []).forEach(function (m) { da[m] = 1; });
+      (P.cau || []).forEach(function (c) { theo[c.ma] = c; }); (P.bai || []).forEach(function (b) { b.cau.forEach(function (c) { theo[c.ma] = c; }); });
+      if (plan.bai && P.bai) BAI_DOC = P.bai.filter(function (b) { return b.ma === plan.bai; })[0] || BAI_DOC;
+      var ds = plan.hang.filter(function (m) { return theo[m] && !da[m]; }).map(function (m) { return { c: theo[m] }; });
+      if (!ds.length) return 0;
+      var hs = hoSo(); luuHs();
+      L = { ds: ds, i: 0, kq: [], ma: G.maLuot(), luc: Date.now(), batDau: new Date().toISOString(), hoTen: gon(hs.hoTen), lop: gon(hs.lop) };
+      veCau(); veDau(); return ds.length;
+    },
     B: function () {
+      var x0 = L && L.ds[L.i]; if (x0 && !x0.pa) return { i: L.i, hang: L.ds, dap: null };
       var x = L && L.ds[L.i]; if (!x || !x.pa) return null; var c = x.c;
       var nut = el.querySelectorAll('.lt-dap-o');
       return { i: L.i, hang: L.ds, dap: { ds: x.pa.map(function (p, k) {

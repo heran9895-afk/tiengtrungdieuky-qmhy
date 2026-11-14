@@ -480,7 +480,7 @@
   }
   // ---------- Lượt nhanh: 10 câu bốc ngẫu nhiên, mỗi dạng tối đa 3 câu, ưu tiên mỗi câu một từ khác nhau; đồng hồ đếm ngược ----------
   // ---------- Lượt làm dở (chỉ Ôn tập tổng hợp: QM_BAI_TAP.onTap + luot-do.js): lưu sau mỗi câu, lần sau vào làm tiếp ----------
-  var LD = BAI && BAI.onTap && window.QM_LD ? window.QM_LD : null, LD_KHOA = LD ? 'on-tap-1-5/' + BAI.onTap + '-luyen' : '', LD_HOI = false;
+  var LD = BAI && BAI.onTap && window.QM_LD ? window.QM_LD : null, LD_KHOA = LD ? 'on-tap-' + ((String(window.QM_OT_TEP || '').match(/on-tap-(\d+-\d+)/) || [])[1] || '1-5') + '/' + BAI.onTap + '-luyen' : '', LD_HOI = false;
   function luuDo(iTiep) {
     if (!LD || !B || !B.nhanh || B.i >= B.hang.length) return;
     var hang = [];
