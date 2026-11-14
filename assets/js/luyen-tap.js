@@ -45,7 +45,7 @@
     var hop = kho.filter(function (x) { return x.ma !== w.ma && x.han !== w.han && x.nghia && !trungNghia(x, w) && (!loc || loc(x)); });   // loại từ có chung nghĩa (北 / 北边)
     var lw = loaiChinh(w);
     var cung = tron(hop.filter(function (x) { return lw && loaiChinh(x) === lw; })), khac = tron(hop.filter(function (x) { return !(lw && loaiChinh(x) === lw); }));
-    if (khacLoai && lw) { var t = cung; cung = khac; khac = khac.length >= 3 ? [] : t; }
+    if (khacLoai && lw) { var t = cung; cung = khac; khac = (loc || khac.length >= 3) ? [] : t; }   // Điền từ ở bài học (có loc): không lùi về cùng từ loại — cùng loại thì điền được
     var chon = [], daCo = {};
     cung.concat(khac).some(function (x) {
       if (daCo[x.han] || chon.some(function (y) { return trungNghia(x, y); })) return false;
@@ -57,6 +57,7 @@
   // Nhiễu cho câu ngữ pháp (Điền) và Ghép cụm từ: chỉ lấy loại từ KHÔNG đứng được ở chỗ trống đó (chặt hơn luật "khác từ loại"):
   // D danh/đại từ · P phó từ · T trợ từ · V động từ · A tính từ. Không bao giờ dùng 们 (ghép sau đại từ thành từ đúng), 不 / 没 (đứng trước gần như mọi ĐT, TT).
   var KHONG_NHIEU = ['们', '不', '没', '没有'];
+  var DAI_TU_NGUOI = ['我', '你', '您', '他', '她', '它', '我们', '你们', '他们', '她们', '大家'], DAI_TU_HOI = ['什么', '谁', '哪', '哪儿', '哪里', '怎么', '几', '多少'], CHI_THI = ['这', '那', '哪'];
   function lopTu(x) { var l = loaiChinh(x); return l === 'danh' ? 'D' : l === 'phó từ' ? 'P' : l === 'trợ từ' ? 'T' : l === 'động từ' ? 'V' : l === 'tính từ' ? 'A' : ''; }
   function chonNhieu(kho, lops, tru, hop) {
     var kq = [], daCo = {};
@@ -244,27 +245,56 @@
     return kq;
   }
   function trongPhamVi(c) { if (!PHAM_VI) return true; return Array.from(c.han).every(function (x) { return !/[\u3400-\u9fff]/.test(x) || PHAM_VI[x]; }); }
-  // Điền từ (câu từ vựng + câu kho): nhiễu khác nhóm từ loại (quy chuẩn 06) VÀ không đứng được cạnh hai bên chỗ trống:
-  // bên trái là danh/đại từ → không lấy danh/đại từ (我们＿想你了: 老师 vẫn đúng) · chỗ trống đầu câu → không lấy phó từ (＿是我的老师: 也 vẫn đúng)
-  // bên phải là danh từ hoặc 的 → không lấy tính từ (＿朋友: 好 vẫn đúng) · ghép với chữ / từ hai bên ra từ, cụm đã học → loại
+  // Điền từ (câu từ vựng + câu kho): nhiễu khác nhóm từ loại (quy chuẩn 06) VÀ phải chắc chắn không điền được vào chỗ trống.
+  // SIẾT 15/11/2026 (cô yêu cầu mỗi câu trắc nghiệm chỉ một đáp án đúng): chỉ giữ chữ nhiễu mà câu ghép ra KHÔNG nói được; bỏ mọi chữ có thể hợp lý:
+  //  · tính từ: bỏ hết (老师好, 学好, 好朋友, 好吗 … đứng được hầu như mọi chỗ)
+  //  · động từ: chỉ lấy 吃 喝 坐 进 và chỉ khi sau nó còn từ khác (吃学生 vô nghĩa); bỏ ĐT đứng cuối cụm (他没有坐 · 我去喝), trước 吗 / 的
+  //    (các ĐT 想 去 有 是 说 请 叫 问 认识 见… ghép được với người, nơi chốn: 想妈妈, 去中国, 有学生是越南人)
+  //  · danh / đại từ: bỏ khi đứng đầu câu (chủ ngữ), sau ĐT (tân ngữ), sau danh từ, sau 的 / tính từ, trước danh từ hoặc 的; sau 很 / 太 chỉ lấy đại từ người
+  //  · phó từ: bỏ khi sau nó là ĐT, TT, phó từ (也 + ĐT điền được); 还 + danh từ (huán); sau đại từ cuối câu (我也。)
+  //  · trợ từ: 吗 chỉ nhiễu khi chỗ trống không sát dấu ？; 的 chỉ nhiễu sau phó từ / trợ từ / đầu câu; 们 chỉ nhiễu khi bên trái không phải người
+  //  · từ chưa phân lớp (喂, 没关系, 不客气) và từ nhiều lớp mà một lớp trùng đáp án (工作 = danh từ / động từ): bỏ
+  var DONG_AN_TOAN = ['吃', '喝', '坐', '进'], NGUOI_BEN_TRAI = DAI_TU_NGUOI.concat(['老师', '学生', '同学', '朋友', '男朋友', '女朋友', '爸爸', '妈妈', '爷爷', '奶奶', '姥姥', '姥爷', '哥哥', '姐姐', '弟弟', '妹妹', '男人', '女人', '男生', '女生', '人']);
   function hopLyDien(cau, w) {
     if (!BAI) return null;
-    var h = cau.han, i = h.indexOf(w.han), trai = h.slice(0, i).replace(/[，。？！、：\s]+$/, ''), phai = h.slice(i + w.han.length);
+    var h = cau.han, i = h.indexOf(w.han), traiTho = h.slice(0, i), trai = traiTho.replace(/[，。？！、：\s]+$/, ''), phai = h.slice(i + w.han.length);
     var theoHan = {}; S.kho.forEach(function (x) { if (!theoHan[x.han]) theoHan[x.han] = x; });
+    var dauCau = !trai || /[，。？！：、]\s*$/.test(traiTho);
     var tuTrai = null, tuPhai = null;
-    for (var L = Math.min(4, trai.length); L > 0 && !tuTrai; L--) tuTrai = theoHan[trai.slice(-L)] || null;
-    for (var R = Math.min(4, phai.length); R > 0 && !tuPhai; R--) tuPhai = theoHan[phai.slice(0, R)] || null;
-    var dauCau = !trai || /[，。？！：]$/.test(h.slice(0, i));
-    var lw = lopTu(w), lp = tuPhai ? lopTu(tuPhai) : '', motMinh = !phai || /^[，。！？、：]/.test(phai);
+    if (!dauCau) for (var L0 = Math.min(4, trai.length); L0 > 0 && !tuTrai; L0--) tuTrai = theoHan[trai.slice(-L0)] || null;
+    for (var R0 = Math.min(4, phai.length); R0 > 0 && !tuPhai; R0--) tuPhai = theoHan[phai.slice(0, R0)] || null;
+    var motMinh = !phai || /^[，。！？、：]/.test(phai), hoi = /[？?]/.test(h), phaiLa = !!phai && !tuPhai && !motMinh;   // phaiLa: bên phải là chữ chưa học (学, 一个, tên riêng…): không chắc nó là ĐT hay TT
+    var dapL = lopsCua(w); if (!dapL.length && lopTu(w)) dapL = [lopTu(w)];
+    var lt = tuTrai ? lopsCua(tuTrai) : [], rt = tuPhai ? lopsCua(tuPhai) : [];
+    var Lc = function (c) { return lt.indexOf(c) >= 0; }, Rc = function (c) { return rt.indexOf(c) >= 0; }, traiHan = tuTrai ? tuTrai.han : '';
     return function (x) {
-      var l = lopTu(x);
       if (KHONG_NHIEU.indexOf(x.han) >= 0) return false;
-      if (motMinh && dauCau) return l === 'P' || l === 'T';   // chỗ trống là cả một vế / lượt đáp (＿，妈妈！ · B：＿！): chỉ phó từ, trợ từ — không đứng một mình được
-      if ((lw === 'V' || lw === 'A') && (l === 'V' || l === 'A')) return false;   // vị ngữ: ĐT và TT đứng thay nhau được (你爸爸＿吗: 忙 / 进)
-      if (tuTrai && lopTu(tuTrai) === 'D' && l === 'D') return false;
-      if (dauCau && l === 'P') return false;
-      if ((lp === 'V' || lp === 'A' || lp === 'P') && l === 'P') return false;   // phó từ đứng trước ĐT, TT, phó từ khác (你＿是哪国人: 也)
-      if ((lp === 'D' || phai.charAt(0) === '的') && l === 'A') return false;
+      var cx = lopsCua(x);
+      if (!cx.length) return false;                           // chưa phân lớp (喂, 没关系, 不客气…)
+      var has = function (c) { return cx.indexOf(c) >= 0; };
+      if (dapL.some(has)) return false;                       // trùng một lớp với đáp án (kể cả từ nhiều lớp như 工作): điền được
+      if (motMinh && dauCau) return cx.length === 1 && (cx[0] === 'P' || cx[0] === 'T') && !(cx[0] === 'T' && x.han === '吗' && hoi);   // chỗ trống là cả một vế / lượt đáp (＿，妈妈！ · B：＿！)
+      if (has('A')) return false;
+      if (has('V')) {
+        if (cx.length > 1 || DONG_AN_TOAN.indexOf(x.han) < 0 || motMinh || phaiLa || Rc('T') || Rc('A') || Rc('P')) return false;   // 吃很好 nói được
+      }
+      if (has('D')) {
+        if (dauCau || Lc('V') || Lc('D') || Lc('A') || Lc('T') || Rc('D') || Rc('T') || (!tuTrai && trai)) return false;   // bên trái là chữ lạ (tên riêng…): không chắc
+        if (Lc('P') && ['很', '太'].indexOf(traiHan) >= 0 && DAI_TU_NGUOI.indexOf(x.han) < 0) return false;                  // 很男人, 很中国, 很学生, 很家 nói được: sau 很 / 太 chỉ lấy đại từ người (很你 không nói)
+        if (Lc('P') && traiHan === '还' && DAI_TU_NGUOI.indexOf(x.han) >= 0) return false;                                   // 还你 (trả lại bạn)
+      }
+      if (has('P')) {
+        if (cx.length > 1 || phaiLa || Rc('V') || Rc('A') || Rc('P')) return false;     // 他们也学中文 (学 chưa học vẫn là ĐT)
+        if (Rc('D') && (['很', '太', '还'].indexOf(x.han) >= 0)) return false;
+        if (x.han === '还' && Lc('V')) return false;                  // 想还, 去还 (huán)
+        if (Lc('P') && ['很', '太'].indexOf(traiHan) < 0) return false;
+        if (x.han === '也' && motMinh && Lc('D')) return false;
+      }
+      if (has('T')) {
+        if (x.han === '吗' && motMinh && hoi) return false;
+        if (x.han === '的' && !(dauCau || Lc('P') || Lc('T'))) return false;
+        if (x.han === '们' && ((tuTrai && NGUOI_BEN_TRAI.indexOf(traiHan) >= 0) || (!tuTrai && trai))) return false;
+      }
       var g = [trai ? trai.slice(-1) + x.han : '', phai ? x.han + phai.charAt(0) : '', tuTrai ? tuTrai.han + x.han : '', tuPhai ? x.han + tuPhai.han : ''];
       return !g.some(function (s) { return s && TU_DIEN[s]; });
     };
@@ -836,6 +866,42 @@
 
   // Ghép cụm từ: cụm = từ đang hỏi + một từ khác đã học (đứng trước hoặc sau). Nhiễu KHÁC nhóm từ loại với đáp án,
   // và ghép với từ đang hỏi KHÔNG ra một từ / cụm có thật (không có trong kho HSK 1–3, cụm từ, câu ví dụ đã học) → không có hai đáp án cùng đúng.
+  // SIẾT 15/11/2026 (cô báo ＿工作: 也 và 什么 đều ghép được): nhiễu chỉ lấy trong DANH SÁCH CHO PHÉP theo vị trí và lớp từ (nhieuChoPhep),
+  // không còn lấy "mọi từ cùng lớp". Từ nhiều lớp (工作 = danh từ / động từ) phải đúng với MỌI lớp.
+  function lopsCua(x) {                                       // các lớp từ của một từ (D danh/đại từ · V · A · P · T); "danh từ / động từ" → D + V
+    var kq = [];
+    String(x.loai || '').split('/').forEach(function (p) {
+      p = p.trim().toLowerCase();
+      var l = /^(đại từ|danh từ)/.test(p) ? 'D' : /^phó từ/.test(p) ? 'P' : /^trợ từ/.test(p) ? 'T' : /^động từ/.test(p) ? 'V' : /^tính từ/.test(p) ? 'A' : '';
+      if (l && kq.indexOf(l) < 0) kq.push(l);
+    });
+    return kq;
+  }
+  // Chữ được phép làm nhiễu quanh từ w (truoc = chỗ trống đứng TRƯỚC w). Mỗi chữ ở đây ghép với w KHÔNG ra cụm hoàn chỉnh nào:
+  //  · trước danh từ: 还 再 只 也 吗 们 (không lấy 很 太: 很男人, 很中国 nói được; không lấy 的: 的人 là một phần của "X的人"; đại từ người: bỏ 还 vì 还你 = trả lại bạn; đại từ hỏi: chỉ 吗 们 vì 还什么, 也什么 nói được)
+  //  · trước động từ thuần: 吗 的 们 (không lấy phó từ: 也 再 只 还 + ĐT là cụm đúng; không lấy 很 太: 很想, 太有)
+  //  · trước danh từ / động từ (工作): chỉ 吗 们 (也工作, 再工作, 的工作, 很工作 đều ghép được)
+  //  · trước tính từ: 吗 的 们
+  //  · sau phó từ: đại từ người + 吗 的 们 (không lấy danh từ: 很男人, 很中国 nói được; không lấy 这 那 哪: 不那么, 只这样); 还: chỉ 吗 的 们 (还我 = trả lại tôi)
+  //  · sau động từ: 们 也 只 (không lấy 还 再 太 很: 去还书, 想再, 想太多, 有很多 là đoạn đầu cụm đúng); 没有: 们 只 (没有也行)
+  //  · sau tính từ: 也 再 还 们 (không lấy 很 太 只: 对很多人好, 大只, 小只)
+  //  · sau danh từ / đại từ: 再 还 太 只 很 (không lấy 也: 我也 là câu đáp gọn); sau 这 那 哪: bỏ 只 (哪只猫)
+  function nhieuChoPhep(w, truoc) {
+    var K = lopsCua(w), h = w.han, co = function (l) { return K.indexOf(l) >= 0; };
+    if (truoc) {
+      if (co('V') && co('D')) return ['吗', '们'];
+      if (co('V')) return ['吗', '的', '们'];
+      if (co('A')) return ['吗', '的', '们'];
+      if (co('D')) return DAI_TU_HOI.indexOf(h) >= 0 ? ['吗', '们'] : DAI_TU_NGUOI.indexOf(h) >= 0 ? ['再', '只', '也', '吗', '们'] : ['还', '再', '只', '也', '吗', '们'];
+      return [];
+    }
+    if (co('P')) return (h === '还' ? [] : DAI_TU_NGUOI).concat(['吗', '的', '们']);
+    if (co('V') && co('D')) return [];                        // danh từ / động từ đứng trước chỗ trống (工作＿): chưa có ca nào, không lấy nhiễu
+    if (co('V')) return h === '没有' ? ['们', '只'] : ['们', '也', '只'];
+    if (co('A')) return ['也', '再', '还', '们'];
+    if (co('D')) return CHI_THI.indexOf(h) >= 0 ? ['再', '还', '太', '很'] : ['再', '还', '太', '只', '很'];
+    return [];
+  }
   var CUM_CACHE = {};
   function cumCua(w) {
     if (w.ma in CUM_CACHE) return CUM_CACHE[w.ma];
@@ -846,12 +912,12 @@
       var truoc = c.han.indexOf(w.han) !== 0, phan = truoc ? c.han.slice(0, c.han.length - w.han.length) : c.han.slice(w.han.length);
       if (truoc && c.han.slice(-w.han.length) !== w.han) return;
       var p = theoHan[phan]; if (!p || p.han === w.han || !c.py) return;
-      var ghep = function (x) { return truoc ? x.han + w.han : w.han + x.han; }, lw = lopTu(w), lops = [], tru = [p.han, w.han];
-      // chỗ trống SAU từ đang hỏi: sau phó từ → danh/trợ từ · sau ĐT, TT → phó từ · sau danh từ → phó từ (trừ 也: "我也" là câu đáp gọn)
-      // chỗ trống TRƯỚC từ đang hỏi: trước danh từ → phó/trợ từ · trước ĐT, TT → trợ từ (danh từ + ĐT/TT thành chủ – vị: 老师好)
-      if (!truoc) { lops = lw === 'P' ? ['D', 'T'] : lw === 'V' || lw === 'A' ? ['P'] : lw === 'D' ? ['P'] : []; if (lw === 'D') tru.push('也'); if (lw !== 'P') tru.push('的', '吗'); }
-      else { lops = lw === 'D' ? ['P', 'T'] : lw === 'V' || lw === 'A' ? ['T'] : []; if (lw === 'D') tru.push('的'); }   // "的人" dễ bị hiểu là một phần của "X的人"
-      var nhieu = chonNhieu(S.kho, lops, tru, function (x) { var g = ghep(x); return !trungNghia(x, p) && !TU_DIEN[g] && cau.indexOf(g) < 0; }).slice(0, 6);
+      var ghep = function (x) { return truoc ? x.han + w.han : w.han + x.han; }, cho = nhieuChoPhep(w, truoc), tru = [p.han, w.han], daCo = {}, nhieu = [];
+      tron(S.kho).forEach(function (x) {
+        if (cho.indexOf(x.han) < 0 || daCo[x.han] || tru.indexOf(x.han) >= 0 || !x.nghia) return;   // không xét chung nghĩa: đề chỉ hiện chữ + pinyin (吗 "không?" vẫn làm nhiễu của 不)
+        var g = ghep(x); if (TU_DIEN[g] || cau.indexOf(g) >= 0) return;
+        daCo[x.han] = 1; nhieu.push(x);
+      });
       if (nhieu.length >= 2) kq.push({ c: c, p: p, truoc: truoc, nhieuDs: nhieu });
     });
     return (CUM_CACHE[w.ma] = kq.length ? kq : null);
