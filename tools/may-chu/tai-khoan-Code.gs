@@ -43,7 +43,7 @@
      Trang tính BuoiHoc tự tạo khi dùng lần đầu (chạy "caiDat" cũng được).
    ========================================================= */
 
-var PHIEN_BAN = '2026-11-14i';
+var PHIEN_BAN = '2026-11-14j';
 var GV_MAC_DINH = 'heran9895@gmail.com';   // giáo viên mặc định khi chưa khai GIAO_VIEN
 var NGAY_PHIEN = 30;                       // phiên đăng nhập giữ 30 ngày
 var TU_MOI_DONG = 300;                     // tiến độ từng từ: chia nhiều ô, mỗi ô tối đa 300 từ (ô Sheet tối đa 50.000 ký tự)
@@ -842,7 +842,23 @@ var KT_PHAN = 'bai-kiem-tra';
 var KT_DU_GIO = 90000;                     // nộp trễ tối đa 90 giây sau khi hết giờ (mạng chậm)
 function ktMa(s) { return String(s || '').toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 40); }
 function ktMucTuMa(maDe) { return String(maDe).replace(/^(h2-)?(hsk[0-9]+)-/, function (_, h, c) { return (h ? 'h2/' : '') + c + '/'; }); }   // hsk1-kiem-tra-1-5 → hsk1/kiem-tra-1-5
+// Câu thuộc nhóm MỞ RỘNG của từng đề (cô chốt 14/11/2026: mở rộng tối đa 15% tổng điểm, còn lại là kiến thức chung).
+// Đề có sẵn nhom trong từng câu thì dùng nhom đó; chưa có thì lấy danh sách này.
+var KT_MO_RONG = { 'hsk1-kiem-tra-1-5': ['q27', 'q28', 'q32', 'q55', 'q56', 'q57'] };
+var KT_MO_RONG_TOI_DA = 0.15;
+function ktGanNhom(de) {
+  var ds = (KT_MO_RONG[de && de.maDe] || []);
+  ktDsCau(de).forEach(function (c) { if (!c.nhom) c.nhom = ds.indexOf(c.id) >= 0 ? 'moRong' : 'chung'; });
+  return de;
+}
+function ktTiLeMoRong(de) {
+  var t = 0, m = 0; ktDsCau(de).forEach(function (c) { t += +c.diem || 0; if (c.nhom === 'moRong') m += +c.diem || 0; });
+  return t ? m / t : 0;
+}
 function ktDocDe(maDe) {
+  var de = ktDocDeTho(maDe); return de ? ktGanNhom(de) : null;
+}
+function ktDocDeTho(maDe) {
   var v = bang('KiemTraDe');
   for (var i = v.length - 1; i >= 0; i--) if (String(v[i][0]) === maDe) {
     try { return JSON.parse(String(v[i][3]) + String(v[i][4]) + String(v[i][5]) + String(v[i][6])); } catch (x) { throw new Error('Đề trong Sheet bị hỏng, cô nạp lại đề nhé'); }
@@ -878,7 +894,7 @@ function ktCham(c, tl) {                   // → { d: điểm | null (chờ cô
   return { d: 0, dung: false };
 }
 function ktChamBai(de, traLoi, chamTay) {
-  var tong = 0, toiDa = 0, cho = 0, theoPhan = {}, cau = {};
+  var tong = 0, toiDa = 0, cho = 0, theoPhan = {}, cau = {}, mr = { diem: 0, toiDa: 0 };
   ktDsCau(de).forEach(function (c) {
     var k = ktCham(c, traLoi[c.id]);
     if (c.chamTay && chamTay && chamTay[c.id] != null) k = {   // câu cô chấm tay: điểm của cô thay điểm máy (kể cả câu máy đã chấm khớp)
@@ -887,10 +903,12 @@ function ktChamBai(de, traLoi, chamTay) {
     var p = theoPhan[c._phan] || (theoPhan[c._phan] = { diem: 0, toiDa: 0, dung: 0, so: 0 });
     p.toiDa += +c.diem; p.so++; toiDa += +c.diem;
     if (k.d != null) { p.diem += k.d; tong += k.d; } if (k.dung) p.dung++;
+    if (c.nhom === 'moRong') { mr.toiDa += +c.diem; if (k.d != null) mr.diem += k.d; }
     cau[c.id] = k;
   });
   Object.keys(theoPhan).forEach(function (m) { theoPhan[m].diem = Math.round(theoPhan[m].diem * 100) / 100; });
-  return { tong: Math.round(tong * 100) / 100, toiDa: toiDa, choCham: cho, phan: theoPhan, cau: cau };
+  mr.diem = Math.round(mr.diem * 100) / 100;
+  return { tong: Math.round(tong * 100) / 100, toiDa: toiDa, choCham: cho, phan: theoPhan, cau: cau, moRong: mr };
 }
 function ktGiaoCua(maLop, muc) {           // lượt giao còn hiệu lực gần nhất (đã tới giờ bắt đầu) của lớp cho bài kiểm tra
   var k = muc + '/' + KT_PHAN, bayGio = Date.now(), ds = giaoBaiCua(maLop, true).filter(function (g) { return g.phan === k && (!g.batDau || g.batDau <= bayGio); });
@@ -908,7 +926,7 @@ function ktCongBo(maDe, maLop) { return bang('KiemTraCongBo').some(function (r) 
 function ktKetQuaHs(de, b, giao) {         // điều học sinh được xem sau khi nộp
   var kq = ktChamBai(de, b.traLoi, b.chamTay);
   var xemDapAn = ktCongBo(de.maDe, b.maLop) || (giao && giao.hanNop < Date.now());
-  var o = { tong: kq.tong, toiDa: kq.toiDa, choCham: kq.choCham, nopLuc: b.nopLuc, xemDapAn: xemDapAn, hanNop: giao ? giao.hanNop : 0,
+  var o = { tong: kq.tong, toiDa: kq.toiDa, choCham: kq.choCham, moRong: kq.moRong, nopLuc: b.nopLuc, xemDapAn: xemDapAn, hanNop: giao ? giao.hanNop : 0,
     phan: (de.phan || []).map(function (p) { var x = kq.phan[p.ma] || {}; return { ma: p.ma, ten: p.ten, diem: x.diem || 0, toiDa: x.toiDa || 0, dung: x.dung || 0, so: x.so || 0 }; }) };
   if (xemDapAn) { o.de = de; o.traLoi = b.traLoi; o.cau = kq.cau; }
   return o;
@@ -989,6 +1007,8 @@ function gvKtDe(gv, d) {                   // không có json: đọc đề; có
   var loi = [];
   ktDsCau(de).forEach(function (c) { if (!c.id || !c.dang || c.dapAn == null || !(+c.diem >= 0)) loi.push(c.id || '?'); });
   if (loi.length) throw new Error('Câu thiếu mã / dạng / đáp án / điểm: ' + loi.slice(0, 10).join(', '));
+  ktGanNhom(de);
+  if (ktTiLeMoRong(de) > KT_MO_RONG_TOI_DA + 1e-9) throw new Error('Phần mở rộng chiếm ' + Math.round(ktTiLeMoRong(de) * 100) + '% tổng điểm, quá 15%. Cô giảm câu mở rộng (nhom: "moRong") rồi nạp lại nhé.');
   var s = JSON.stringify(de), phan = [s.slice(0, 45000), s.slice(45000, 90000), s.slice(90000, 135000), s.slice(135000, 180000)];
   if (s.length > 180000) throw new Error('Đề quá dài');
   trang('KiemTraDe').appendRow([maDe, String(de.phienBan || ''), new Date(), phan[0], phan[1], phan[2], phan[3], gv.email]);

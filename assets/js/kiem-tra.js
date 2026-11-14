@@ -419,6 +419,7 @@
       (k.choCham ? '<p class="kt-nhan">Còn <b>' + k.choCham + ' câu dịch / gõ</b> chờ cô chấm, điểm sẽ cập nhật sau.</p>' : '') +
       '<table class="kt-bang"><thead><tr><th>Phần</th><th>Đúng</th><th>Điểm</th></tr></thead><tbody>' + k.phan.map(function (p) {
         return '<tr><td>' + esc(p.ten) + '</td><td>' + p.dung + '/' + p.so + '</td><td><b>' + so(p.diem) + '</b> / ' + so(p.toiDa) + '</td></tr>'; }).join('') + '</tbody></table>' +
+      (k.moRong && k.moRong.toiDa > 0 ? '<p class="kt-nho">Kiến thức chung <b>' + so(Math.round((k.tong - k.moRong.diem) * 100) / 100) + ' / ' + so(k.toiDa - k.moRong.toiDa) + '</b> · Nội dung mở rộng <b>' + so(k.moRong.diem) + ' / ' + so(k.moRong.toiDa) + '</b> (tối đa 15% tổng điểm)</p>' : '') +
       (k.nopLuc ? '<p class="kt-nho">Nộp lúc ' + ngayGio(k.nopLuc) + '</p>' : '') +
       (k.xemDapAn ? '' : '<p>Đáp án và bài làm từng câu sẽ hiện ở trang này ' + (k.hanNop ? 'sau hạn nộp (<b>' + ngayGio(k.hanNop) + '</b>)' : 'khi cô công bố') + '.</p>') + '</div>';
     if (k.xemDapAn && k.de) html += xemLai(k.de, k.traLoi || {}, k.cau || {});
