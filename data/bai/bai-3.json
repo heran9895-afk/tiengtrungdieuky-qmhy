@@ -4810,8 +4810,8 @@
     "nghia": "Người này là ai?",
     "dap": "这",
     "nhieu": [
-     "那",
-     "哪"
+     "吗",
+     "的"
     ],
     "gt": "\"này\" là **这**, \"kia\" là 那, \"nào\" là 哪.",
     "sau": "这个人是我哥哥。",
@@ -4911,7 +4911,7 @@
     "dap": "哪",
     "nhieu": [
      "谁",
-     "什么"
+     "吗"
     ],
     "gt": "Hỏi quốc tịch: **哪国人**.",
     "doc": "assets/am/cau/bf03cd589e.mp3"
@@ -4974,8 +4974,8 @@
     "nghia": "Công việc của bố tôi bận quá!",
     "dap": "太",
     "nhieu": [
-     "很",
-     "还"
+     "吗",
+     "的"
     ],
     "gt": "Có **了** ở cuối → khung **太……了**.",
     "doc": "assets/am/cau/60bb3bd05b.mp3"
