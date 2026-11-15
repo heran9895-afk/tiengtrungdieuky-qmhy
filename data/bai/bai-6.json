@@ -5106,7 +5106,8 @@
     "gt": "Phủ định của 想 là **不想**.",
     "sua": "我不想去中国。",
     "pySua": "Wǒ bù xiǎng qù Zhōngguó.",
-    "nguon": "lưu ý thẻ"
+    "nguon": "lưu ý thẻ",
+    "bo": true
    },
    {
     "ma": "b6-xi-hoi-1",

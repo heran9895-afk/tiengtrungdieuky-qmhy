@@ -1128,12 +1128,23 @@
     if (t.ten) return { pinyin: t.py || '', ten: t.ten, nghia: t.nghia || '', ghiChu: t.ghiChu || '' };
     b = THANH_PHAN[p] || {}; return { pinyin: b.pinyin || '', ten: b.ten || '', nghia: b.nghia || '', ghiChu: '' };
   }
+  // Thành phần nhiễu KHÔNG được là cách tách khác cũng đúng của chữ: nằm trong chữ (去 trong 法 → loại 去 khác chữ), dạng biến thể của cùng bộ (讠/言, 氵/水, 亻/人…),
+  // hoặc là thành phần con / thành phần cha của một phần đúng (相 = 木 + 目: có 木, 目 thì không dùng 相 làm nhiễu và ngược lại)
+  var BO_TUONG_DUONG = [['讠', '言'], ['氵', '水'], ['亻', '人'], ['忄', '心'], ['扌', '手'], ['钅', '金'], ['饣', '食'], ['刂', '刀'], ['王', '玉'], ['月', '⺼', '肉'], ['艹', '艸'], ['辶', '走'], ['犭', '犬'], ['罒', '网'], ['灬', '火'], ['日', '曰'], ['口', '囗']];
+  function boGanDung(w, p) {
+    if (w.han.indexOf(p) >= 0) return true;
+    var tuong = false;
+    BO_TUONG_DUONG.forEach(function (g) { if (g.indexOf(p) >= 0 && w.phan.some(function (q) { return g.indexOf(q) >= 0; })) tuong = true; });
+    if (tuong) return true;
+    var con = function (x, y) { var m = /[（(]([^）)]*)[）)]/.exec(moTaPhan(x).nghia || ''); return !!m && m[1].indexOf(y) >= 0; };   // x gồm y
+    return w.phan.some(function (q) { return con(q, p) || con(p, q); });
+  }
   function veBo(w) {
     var tatCa = {};
     GHEP_BAI.forEach(function (g) { g.phan.forEach(function (p) { tatCa[p] = 1; }); });
     Object.keys(BO_THU).forEach(function (p) { tatCa[p] = 1; });
     if (!BAI) Object.keys(CT.tp).forEach(function (p) { tatCa[p] = 1; });
-    var nhieu = tron(Object.keys(tatCa).filter(function (p) { return w.phan.indexOf(p) < 0; })).slice(0, Math.max(3, 6 - w.phan.length));
+    var nhieu = tron(Object.keys(tatCa).filter(function (p) { return w.phan.indexOf(p) < 0 && !boGanDung(w, p); })).slice(0, Math.max(3, 6 - w.phan.length));
     var o = B.bo && B.bo.i === B.i ? B.bo.o : tron(w.phan.concat(nhieu));
     B.bo = { i: B.i, o: o, chon: [] };
     khuBai.innerHTML = dauCau(w, 'bo') +

@@ -4627,7 +4627,10 @@
      "vnDanhTu",
      "ngayThang"
     ],
-    "doc": "assets/am/cau/bfd34886ff.mp3"
+    "doc": "assets/am/cau/bfd34886ff.mp3",
+    "khac": [
+     "今天星期日，九月八号。"
+    ]
    },
    {
     "ma": "b5-vn-pd-1",
