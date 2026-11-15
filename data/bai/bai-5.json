@@ -4494,7 +4494,7 @@
     "nghia": "Hôm nay thứ hai.",
     "dap": "一",
     "nhieu": [
-     "七",
+     "号",
      "零"
     ],
     "gt": "**星期一 = thứ hai** (lệch một số so với tiếng Việt).",
@@ -4524,7 +4524,7 @@
     "nghia": "Mai chủ nhật, chúng tôi không đi làm.",
     "dap": "天",
     "nhieu": [
-     "七",
+     "吗",
      "号"
     ],
     "gt": "Chủ nhật là **星期天 / 星期日**.",
@@ -4793,7 +4793,7 @@
     "dap": "两天",
     "nhieu": [
      "两号",
-     "星期二"
+     "吗"
     ],
     "gt": "Khoảng thời gian (**两天**) đứng **sau động từ**.",
     "doc": "assets/am/cau/3dc1c5b997.mp3"
@@ -4822,7 +4822,7 @@
     "nghia": "Tôi biết nói tiếng Việt và tiếng Trung.",
     "dap": "会",
     "nhieu": [
-     "是",
+     "吗",
      "很"
     ],
     "gt": "\"biết (nói)\" là **会 + ĐT**.",
@@ -5037,8 +5037,8 @@
     "nghia": "Tôi biết nấu vài món.",
     "dap": "一些",
     "nhieu": [
-     "多少",
-     "几"
+     "吗",
+     "很"
     ],
     "gt": "\"một vài\" là **一些 + DT**.",
     "doc": "assets/am/cau/2e12137bda.mp3"
@@ -5072,8 +5072,8 @@
     "nghia": "Những cái bánh mì này rất ngon.",
     "dap": "这些",
     "nhieu": [
-     "多少",
-     "什么"
+     "吗",
+     "的"
     ],
     "gt": "\"những … này\" là **这些 + DT**.",
     "doc": "assets/am/cau/1ded4cd592.mp3"
@@ -5141,7 +5141,7 @@
     "nghia": "Đây là những người bạn mới của tôi.",
     "dap": "这些",
     "nhieu": [
-     "一些",
+     "吗",
      "几"
     ],
     "gt": "这些 đứng một mình làm chủ ngữ; 一些 không đứng một mình như vậy.",
@@ -5157,8 +5157,8 @@
     "nghia": "Máy tính của bạn mới thật!",
     "dap": "真",
     "nhieu": [
-     "太",
-     "是"
+     "吗",
+     "的"
     ],
     "gt": "Cảm thán, không có 了 ở cuối → **真 + TT**.",
     "doc": "assets/am/cau/16ecf39a2d.mp3"
@@ -5191,7 +5191,7 @@
     "nghia": "Tôi thật sự thích học tiếng Trung!",
     "dap": "真",
     "nhieu": [
-     "是",
+     "吗",
      "有"
     ],
     "gt": "**真 + ĐT tâm lý**: 真喜欢.",

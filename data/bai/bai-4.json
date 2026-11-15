@@ -5286,7 +5286,7 @@
     "nghia": "Cô ấy có 23 học sinh.",
     "dap": "二十三",
     "nhieu": [
-     "三十二",
+     "三二",
      "两十三"
     ],
     "gt": "Đọc theo thứ tự viết: 2 chục 3 → **二十三**; hàng chục dùng 二.",
@@ -5303,7 +5303,7 @@
     "nghia": "Mẹ tôi năm nay 45 tuổi.",
     "dap": "四十五",
     "nhieu": [
-     "五十四",
+     "五四",
      "四五"
     ],
     "gt": "45 = 4 chục 5 → **四十五**.",
@@ -5423,7 +5423,7 @@
     "dap": "两",
     "nhieu": [
      "二十",
-     "几"
+     "吗"
     ],
     "gt": "2000 thường nói **两千**.",
     "goiY": "2000",
@@ -5682,7 +5682,7 @@
     "dap": "二",
     "nhieu": [
      "两",
-     "几"
+     "吗"
     ],
     "gt": "Thứ tự dùng **第二**, không nói 第两.",
     "doc": "assets/am/cau/a06f33e91e.mp3"
@@ -5759,7 +5759,7 @@
     "nghia": "Nhà bạn có mấy người?",
     "dap": "多少",
     "nhieu": [
-     "几",
+     "吗",
      "什么"
     ],
     "gt": "Câu trả lời là số lớn (120) → hỏi bằng **多少**; **几** hỏi số nhỏ (thường dưới 10).",
@@ -5933,7 +5933,7 @@
     "nghia": "Năm nay bạn bao nhiêu tuổi? (hỏi bạn cùng lớp)",
     "dap": "多大",
     "nhieu": [
-     "多大年纪",
+     "吗",
      "多少"
     ],
     "gt": "Hỏi người cùng lứa dùng **多大**.",
@@ -6000,7 +6000,7 @@
     "nghia": "Mẹ tôi năm nay 45 tuổi.",
     "dap": "今年",
     "nhieu": [
-     "是",
+     "吗",
      "有"
     ],
     "gt": "Nói tuổi **không cần 是**: CN + (今年) + số + 岁.",
@@ -6218,7 +6218,7 @@
     "nghia": "Cô ấy có bao nhiêu học sinh?",
     "dap": "多少",
     "nhieu": [
-     "几",
+     "吗",
      "什么"
     ],
     "gt": "Câu trả lời là 20, số lớn → hỏi bằng **多少**.",
@@ -6268,7 +6268,7 @@
     "nghia": "Con trai chị mấy tuổi?",
     "dap": "几岁",
     "nhieu": [
-     "多大年纪",
+     "吗",
      "多少"
     ],
     "gt": "Cậu bé 5 tuổi là trẻ nhỏ → hỏi **几岁**.",
@@ -6285,7 +6285,7 @@
     "nghia": "Con gái chị bao nhiêu tuổi?",
     "dap": "多大",
     "nhieu": [
-     "多大年纪",
+     "吗",
      "多少"
     ],
     "gt": "Cô bé 12 tuổi → hỏi **多大**; 多大年纪 dùng cho người cao tuổi.",

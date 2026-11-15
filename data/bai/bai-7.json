@@ -4916,7 +4916,7 @@
     "dap": "刻",
     "nhieu": [
      "半",
-     "分"
+     "吗"
     ],
     "gt": "**一刻** = 15 phút."
    },
@@ -5025,7 +5025,7 @@
     "nghia": "Chúng tôi 10 giờ 10 phút vào học.",
     "dap": "十",
     "nhieu": [
-     "零",
+     "吗",
      "半"
     ],
     "gt": "Đúng **10 phút** nói **十分**, không bỏ 分."
@@ -5054,7 +5054,7 @@
     "dap": "两",
     "nhieu": [
      "二",
-     "几"
+     "吗"
     ],
     "gt": "**2 giờ** nói **两点**."
    },
@@ -5068,8 +5068,8 @@
     "nghia": "Phía trước siêu thị là nhà hàng.",
     "dap": "前",
     "nhieu": [
-     "后",
-     "里"
+     "吗",
+     "很"
     ],
     "gt": "**前** = trước."
    },
@@ -5093,7 +5093,7 @@
     "nghia": "Trước khi ăn cơm tôi muốn uống một cốc nước.",
     "dap": "前",
     "nhieu": [
-     "后",
+     "吗",
      "呢"
     ],
     "gt": "Cụm động từ + **前** = trước khi…"
@@ -5126,7 +5126,7 @@
     "nghia": "Mười phút nữa tôi đến nhà bạn.",
     "dap": "后",
     "nhieu": [
-     "前",
+     "吗",
      "里"
     ],
     "gt": "Khoảng thời gian + **后** = … nữa."
@@ -5164,7 +5164,7 @@
     "nghia": "Tan học xong chúng ta đi xem phim.",
     "dap": "后",
     "nhieu": [
-     "前",
+     "吗",
      "吧"
     ],
     "gt": "**后** đứng sau cụm động từ."
@@ -5213,7 +5213,7 @@
     "nghia": "Trưa nay bạn ăn cơm rồi phải không?",
     "dap": "吧",
     "nhieu": [
-     "呢",
+     "很",
      "后"
     ],
     "gt": "**吧？** = phỏng đoán."
@@ -5251,8 +5251,8 @@
     "nghia": "Bạn muốn đi siêu thị mua ít sữa không?",
     "dap": "吗",
     "nhieu": [
-     "吧",
-     "呢"
+     "很",
+     "的"
     ],
     "gt": "Hỏi có / không dùng **吗**; đề nghị hoặc phỏng đoán dùng **吧**."
    },
@@ -5267,7 +5267,7 @@
     "dap": "呢",
     "nhieu": [
      "吗",
-     "吧"
+     "很"
     ],
     "gt": "**呢** cuối câu trần thuật: nhấn mạnh sự thật."
    },
@@ -5301,7 +5301,7 @@
     "dap": "呢",
     "nhieu": [
      "吗",
-     "吧"
+     "的"
     ],
     "gt": "**呢** nhấn mạnh trạng thái đang diễn ra."
    },
@@ -5326,7 +5326,7 @@
     "dap": "呢",
     "nhieu": [
      "吗",
-     "吧"
+     "的"
     ],
     "gt": "Câu trần thuật nhấn mạnh sự thật dùng **呢**."
    },
@@ -5485,8 +5485,8 @@
     "nghia": "Trong nhà hàng có rất nhiều người.",
     "dap": "里",
     "nhieu": [
-     "前",
-     "后"
+     "吗",
+     "很"
     ],
     "gt": "**里** = trong."
    },
@@ -5540,7 +5540,7 @@
     "nghia": "Anh trai tôi không ở nhà.",
     "dap": "不",
     "nhieu": [
-     "没",
+     "吗",
      "很"
     ],
     "gt": "Phủ định là **不在**."
@@ -5630,7 +5630,7 @@
     "nghia": "Tôi không ăn cơm ở nhà.",
     "dap": "不",
     "nhieu": [
-     "没",
+     "的",
      "吗"
     ],
     "gt": "**不** đặt **trước 在**."
