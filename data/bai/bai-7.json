@@ -4336,12 +4336,12 @@
    "nhieu": {
     "1": [
      {
-      "han": "我不想看电影。",
-      "py": "Wǒ bù xiǎng kàn diànyǐng."
+      "han": "我是学生。",
+      "py": "Wǒ shì xuésheng."
      },
      {
-      "han": "电影很好看。",
-      "py": "Diànyǐng hěn hǎokàn."
+      "han": "我在学校。",
+      "py": "Wǒ zài xuéxiào."
      },
      {
       "han": "我在医院。",
@@ -4403,8 +4403,8 @@
     ],
     "2": [
      {
-      "han": "我在医院里。",
-      "py": "Wǒ zài yīyuàn li."
+      "han": "我是学生。",
+      "py": "Wǒ shì xuésheng."
      },
      {
       "han": "明天我有课。",
@@ -4510,8 +4510,8 @@
    "nhieu": {
     "1": [
      {
-      "han": "我很喜欢看电影。",
-      "py": "Wǒ hěn xǐhuan kàn diànyǐng."
+      "han": "我是学生。",
+      "py": "Wǒ shì xuésheng."
      },
      {
       "han": "电影院很大。",
@@ -4524,16 +4524,16 @@
     ],
     "3": [
      {
-      "han": "明天我想去超市。",
-      "py": "Míngtiān wǒ xiǎng qù chāoshì."
+      "han": "我是学生。",
+      "py": "Wǒ shì xuésheng."
      },
      {
-      "han": "明天是星期六。",
-      "py": "Míngtiān shì xīngqīliù."
+      "han": "我在学校。",
+      "py": "Wǒ zài xuéxiào."
      },
      {
-      "han": "我很想去。",
-      "py": "Wǒ hěn xiǎng qù."
+      "han": "现在八点。",
+      "py": "Xiànzài bā diǎn."
      }
     ]
    },
@@ -4577,12 +4577,12 @@
    "nhieu": {
     "1": [
      {
-      "han": "我在医院里呢。",
-      "py": "Wǒ zài yīyuàn li ne."
+      "han": "我是学生。",
+      "py": "Wǒ shì xuésheng."
      },
      {
-      "han": "我不在家。",
-      "py": "Wǒ bú zài jiā."
+      "han": "我很忙。",
+      "py": "Wǒ hěn máng."
      },
      {
       "han": "我想去电影院。",

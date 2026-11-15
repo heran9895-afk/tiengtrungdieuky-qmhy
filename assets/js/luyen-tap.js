@@ -35,6 +35,12 @@
   function gonNghia(s) { return String(s).normalize('NFC').replace(/[^\p{L}\p{N} ]/gu, ' ').replace(/\s+/g, ' ').trim(); }   // GIỮ dấu tiếng Việt: "chờ" ≠ "chỗ", "đại sư" ≠ "đại sứ"
   // Hai từ trùng nghĩa nếu có chung ít nhất một cụm nghĩa (北 "phương bắc" và 北边 "phía bắc, phương bắc")
   function trungNghia(a, b) { var cb = cumNghia(b); return cumNghia(a).some(function (x) { return cb.indexOf(x) >= 0; }); }
+  // "Gần nghĩa" (chặt hơn trungNghia, CHỈ để chọn đáp án nhiễu): chữ này nằm trong chữ kia (做 / 做饭, 国 / 中国, 请 / 请问) hoặc một cụm nghĩa chứa trọn cụm nghĩa kia ("đi làm" ⊃ "làm", "anh ấy" ⊃ "anh")
+  function ganNghia(a, b) {
+    if (trungNghia(a, b) || (a.han && b.han && (a.han.indexOf(b.han) >= 0 || b.han.indexOf(a.han) >= 0))) return true;
+    var ca = cumNghia(a), cb = cumNghia(b);
+    return ca.some(function (x) { return cb.some(function (y) { return (' ' + x + ' ').indexOf(' ' + y + ' ') >= 0 || (' ' + y + ' ').indexOf(' ' + x + ' ') >= 0; }); });
+  }
   // 3 đáp án nhiễu: cùng cấp, ưu tiên cùng từ loại; không trùng chữ, không trùng nghĩa chính
   function loaiChinh(w) {                                    // "đại từ / danh từ tập hợp" → nhóm "danh"; đại từ và danh từ cùng đứng được ở vị trí chủ ngữ, tân ngữ
     var l = String(w.loai || '').split(/[\/,;(]/)[0].trim().toLowerCase();
@@ -42,13 +48,13 @@
   }
   // khacLoai = true (dạng Điền từ): nhiễu phải KHÁC từ loại, vì cùng từ loại thì điền vào chỗ trống cũng hợp ngữ pháp (我 / 你 / 我们)
   function dapAnNhieu(w, kho, khacLoai, loc) {
-    var hop = kho.filter(function (x) { return x.ma !== w.ma && x.han !== w.han && x.nghia && !trungNghia(x, w) && (!loc || loc(x)); });   // loại từ có chung nghĩa (北 / 北边)
+    var hop = kho.filter(function (x) { return x.ma !== w.ma && x.han !== w.han && x.nghia && !ganNghia(x, w) && (!loc || loc(x)); });   // loại từ có chung nghĩa (北 / 北边)
     var lw = loaiChinh(w);
     var cung = tron(hop.filter(function (x) { return lw && loaiChinh(x) === lw; })), khac = tron(hop.filter(function (x) { return !(lw && loaiChinh(x) === lw); }));
     if (khacLoai && lw) { var t = cung; cung = khac; khac = (loc || khac.length >= 3) ? [] : t; }   // Điền từ ở bài học (có loc): không lùi về cùng từ loại — cùng loại thì điền được
     var chon = [], daCo = {};
     cung.concat(khac).some(function (x) {
-      if (daCo[x.han] || chon.some(function (y) { return trungNghia(x, y); })) return false;
+      if (daCo[x.han] || chon.some(function (y) { return ganNghia(x, y); })) return false;
       daCo[x.han] = 1; chon.push(x); return chon.length === 3;
     });
     return chon;
@@ -577,7 +583,7 @@
       }
       else if (k === 'ghep') {
         var nhom = [];
-        tron(S.ds).forEach(function (w) { if (nhom.length < 4 && !nhom.some(function (x) { return x.han === w.han || pyGon(x.py) === pyGon(w.py) || trungNghia(x, w); })) nhom.push(w); });
+        tron(S.ds).forEach(function (w) { if (nhom.length < 4 && !nhom.some(function (x) { return x.han === w.han || pyGon(x.py) === pyGon(w.py) || ganNghia(x, w); })) nhom.push(w); });
         if (nhom.length < 3) { dem[k] = 99; continue; }
         muc = { ma: 'ghep:' + hang.length, han: nhom.map(function (w) { return w.han; }).join(' · '), laGhep: true, ghepDs: nhom };
       } else { var w = tuKe(k); if (!w) { dem[k] = 99; continue; } muc = w; }
@@ -702,10 +708,15 @@
   Object.keys(TONE).forEach(function (k) { DAU[TONE[k][0] + TONE[k][1]] = k; });
   function pyGon(py) { return String(py || '').toLowerCase().replace(/[\s·'’-]/g, ''); }
   // Đổi thanh điệu: giữ nguyên âm, thay dấu thanh ở một âm tiết → ra các phương án "gần đúng" để luyện tai, luyện mắt
-  function bienThePy(py) {
+  // Cách đọc khác CÓ THẬT của cùng chữ (biến điệu 不 bù/bú, 一 yī/yí/yì, hoặc từ đồng tự 好 hào, 看 kān…): không được làm nhiễu vì cũng đúng
+  var DOC_KHAC = { '不': [['bù', 'bú']], '一': [['yī', 'yí'], ['yī', 'yì'], ['yí', 'yì'], ['yí', 'yī'], ['yì', 'yī'], ['yì', 'yí']], '好': [['hǎo', 'hào']], '少': [['shǎo', 'shào']], '看': [['kàn', 'kān']],
+    '会': [['huì', 'kuài']], '还': [['hái', 'huán']], '了': [['le', 'liǎo']], '地': [['dì', 'de']], '得': [['de', 'dé'], ['de', 'děi']], '的': [['de', 'dí'], ['de', 'dì']], '都': [['dōu', 'dū']], '行': [['xíng', 'háng']], '长': [['cháng', 'zhǎng']], '为': [['wèi', 'wéi']], '数': [['shù', 'shǔ']], '重': [['zhòng', 'chóng']] };
+  function bienThePy(py, han) {
     var ch = Array.from(py), vt = [];
     ch.forEach(function (c, i) { if (TONE[c]) vt.push(i); });
     var kq = [], daCo = {}; daCo[py] = 1;
+    Array.from(han || '').forEach(function (c) { (DOC_KHAC[c] || []).forEach(function (kc) {
+      var i = -1; while ((i = py.indexOf(kc[0], i + 1)) >= 0) daCo[py.slice(0, i) + kc[1] + py.slice(i + kc[0].length)] = 1; }); });
     tron(vt).forEach(function (i) {
       var goc = TONE[ch[i]];
       tron([1, 2, 3, 4].filter(function (t) { return t !== goc[1]; })).forEach(function (t) {
@@ -952,7 +963,7 @@
       de: function (w) { return '<div class="lt-de-chu"><span class="hanzi">' + esc(w.han) + '</span></div><div class="lt-de-phu">' + esc(w.nghia) + '</div>'; },
       hoi: function () { return 'Chọn phiên âm đúng (chú ý thanh điệu)'; },
       dap: function (w) {
-        var bt = bienThePy(w.py).slice(0, 3);
+        var bt = bienThePy(w.py, w.han).slice(0, 3);
         if (bt.length < 3) dapAnNhieu(w, S.kho).some(function (x) { if (bt.indexOf(x.py) < 0 && x.py !== w.py) bt.push(x.py); return bt.length === 3; });
         return [dA(w.py, TV.pyHtml(w.py), 1)].concat(bt.map(function (p) { return dA(p, TV.pyHtml(p)); }));
       },
