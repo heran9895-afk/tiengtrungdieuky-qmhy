@@ -687,7 +687,7 @@ def _chay_cac_luot(cap, tu, den, D, L, by, ds, dot, gioi_han_luot):
         nl = sum(1 for it in its if it['loi'])
         print('   ✂ %s: %d vùng / %d dòng%s · đạt %d · lỗi %d' % (b['ten'], meta['vung'], meta['dong'],
               ' (thừa %d vùng)' % meta['thua'] if meta['thua'] else '', len(its) - nl, nl))
-        if nl > 0.4 * len(its):   # chốt an toàn: Gemini đọc bất thường (đọc cả Style, bỏ dòng…) → dừng, khỏi tốn tiền
+        if len(its) >= 8 and nl > 0.4 * len(its):   # chốt an toàn: Gemini đọc bất thường (đọc cả Style, bỏ dòng…) → dừng, khỏi tốn tiền (lượt nhỏ < 8 dòng: 1 lỗi không phải bất thường, để tự thu lại)
             print('\n⛔ Lượt %s lỗi %d/%d dòng — Gemini đọc bất thường. Dừng lại để khỏi tốn tiền.\n'
                   '   Bác gửi bên soạn đoạn chữ này + file %s để xem.' % (b['ten'], nl, len(its), wav))
             print('   Máy nghe được ở các vùng đầu:', [v[2] for v in meta['ds_vung'][:6]])
