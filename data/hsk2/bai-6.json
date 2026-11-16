@@ -1088,9 +1088,9 @@
     "assets/am/nam1/59822db178.mp3"
    ],
    "dap": [
-    "这个字我会读，不会写。",
-    "Zhè ge zì wǒ huì dú, bú huì xiě.",
-    "Chữ này mình biết đọc, không biết viết."
+    "我不会读这个字。",
+    "Wǒ bú huì dú zhè ge zì.",
+    "Mình không biết đọc chữ này."
    ],
    "nhieu": [
     [
@@ -1144,34 +1144,34 @@
   },
   {
    "hoi": [
-    "你喝什么？",
-    "Nǐ hē shénme?",
-    "Bạn uống gì?",
-    "assets/am/nam1/fc1bdabe42.mp3"
+    "你会写汉字吗？",
+    "Nǐ huì xiě Hànzì ma?",
+    "Bạn biết viết chữ Hán không?",
+    "assets/am/nam1/ea1d5f720d.mp3"
    ],
    "dap": [
-    "我不吃，我喝。",
-    "Wǒ bù chī, wǒ hē.",
-    "Mình không ăn, mình uống."
+    "我会读，不会写。",
+    "Wǒ huì dú, bú huì xiě.",
+    "Mình biết đọc, không biết viết."
    ],
    "nhieu": [
     [
-     "我吃菜。",
-     "Wǒ chī cài.",
-     "Mình ăn món ăn."
+     "我叫李月。",
+     "Wǒ jiào Lǐ Yuè.",
+     "Mình tên là Lý Nguyệt."
     ],
     [
-     "我会写字。",
-     "Wǒ huì xiě zì.",
-     "Mình biết viết chữ."
+     "我是学生。",
+     "Wǒ shì xué·shēng.",
+     "Mình là học sinh."
     ],
     [
-     "我很好。",
-     "Wǒ hěn hǎo.",
-     "Mình rất khỏe."
+     "我吃中国菜。",
+     "Wǒ chī Zhōngguó cài.",
+     "Mình ăn món Trung Quốc."
     ]
    ],
-   "chang": "2"
+   "chang": "1"
   }
  ],
  "cauLuyen": [
@@ -1590,8 +1590,8 @@
       "py": "Tā shì wǒ māma."
      },
      {
-      "han": "她很好吃。",
-      "py": "Tā hěn hǎochī."
+      "han": "她叫李月。",
+      "py": "Tā jiào Lǐ Yuè."
      },
      {
       "han": "她会说英语。",
@@ -1630,8 +1630,8 @@
    "nhieu": {
     "1": [
      {
-      "han": "中国菜不好吃。",
-      "py": "Zhōngguó cài bù hǎochī."
+      "han": "我是越南人。",
+      "py": "Wǒ shì Yuènán rén."
      },
      {
       "han": "我不会写。",
@@ -1688,8 +1688,8 @@
    "nhieu": {
     "1": [
      {
-      "han": "我不会写。",
-      "py": "Wǒ bú huì xiě."
+      "han": "我叫李月。",
+      "py": "Wǒ jiào Lǐ Yuè."
      },
      {
       "han": "我会做菜。",
@@ -1741,36 +1741,7 @@
      "viet": "Lý Nguyệt biết viết chữ Hán, tôi không biết viết, tôi biết đọc."
     }
    ],
-   "nhieu": {
-    "1": [
-     {
-      "han": "她会说越南语，也会说韩语。",
-      "py": "Tā huì shuō Yuènányǔ, yě huì shuō Hányǔ."
-     },
-     {
-      "han": "她不会说汉语，会说英语。",
-      "py": "Tā bú huì shuō Hànyǔ, huì shuō Yīngyǔ."
-     },
-     {
-      "han": "她会说汉语，不会说英语。",
-      "py": "Tā huì shuō Hànyǔ, bú huì shuō Yīngyǔ."
-     }
-    ],
-    "3": [
-     {
-      "han": "我会写汉字，李月不会写。",
-      "py": "Wǒ huì xiě Hànzì, Lǐ Yuè bú huì xiě."
-     },
-     {
-      "han": "李月不会写，也不会读。",
-      "py": "Lǐ Yuè bú huì xiě, yě bú huì dú."
-     },
-     {
-      "han": "我会写，也会读。",
-      "py": "Wǒ huì xiě, yě huì dú."
-     }
-    ]
-   },
+   "nhieu": {},
    "chang": "3"
   }
  ],
