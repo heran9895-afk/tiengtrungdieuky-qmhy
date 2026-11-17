@@ -36,6 +36,13 @@ REDO_HSK2 = {'吹头发', '头发', '她的头发又黑又常。', '她的头发
              '洗头发', '洗完澡要吹头发。', '短头发', '长头发', '黄头发', '黑头发'}
 
 
+class _EpChu:
+    """Khóa nào CHỨA một trong các chuỗi này thì thu lại dù đã có file (bác Nhiên báo 18/11/2026: 编辑 đọc biānjī, cần biānjí)."""
+    def __init__(self, *chu): self.chu = chu
+    def __contains__(self, k): return any(c in k for c in self.chu)
+REDO_HSK5 = _EpChu('编辑')
+
+
 def chuan(s):  # giống chuanAm() trong assets/js/tu-vung-chung.js
     s = re.sub(r'\s+', '', str(s or ''))
     s = re.sub(r'(^|[。！？])[A-Z一-鿿]{1,4}[：:]', r'\1', s)
@@ -183,7 +190,9 @@ LUAT = ("Tone sandhi: two third tones -> the first becomes second tone; 一 is y
         "Neutral tones: 的 了 吗 呢 吧 们 子 个(ge) 着(zhe) are light and short; reduplicated kinship words have a neutral second syllable "
         "(妈妈 māma, 哥哥 gēge); also 什么 shénme, 名字 míngzi, 朋友 péngyou, 认识 rènshi, 喜欢 xǐhuan, 休息 xiūxi, 没关系 méi guānxi, "
         "头发 tóufa (发 is a short light neutral tone, NEVER fà); 头 after 里/外/前/后/上/下 is neutral tou; 对不起 duìbuqǐ, 客气 kèqi, 谢谢 xièxie, 东西 dōngxi (thing), 地方 dìfang, 衣服 yīfu, 知道 zhīdao, 告诉 gàosu. "
-        "常常 is chángcháng (both full second tones, never neutral). 多 in 多大 / 多高 / 多长 / 多久 is FIRST tone duō, never duó.")
+        "常常 is chángcháng (both full second tones, never neutral). 多 in 多大 / 多高 / 多长 / 多久 is FIRST tone duō, never duó. "
+        "编辑 is biānjí (辑 is a full second tone jí, NEVER jī). 一只 / 一支 with 只 as a measure word is yì zhī (first tone), never zhǐ. "
+        "那 (as in 那家, 那个, 那天, 那种, 那样) is always nà (4th tone), NEVER nèi. 广 is guǎng (3rd tone); 强迫 is qiǎngpò (强 is 3rd tone qiǎng, 迫 is pò, never bō).")
 ER = ("ERHUA: 儿 written after another character is NOT a separate syllable ér. Merge it into the previous syllable as a retroflex r-ending, "
       "curling the tongue at the end of that syllable, and stop cleanly right after the r, with no added vowel "
       "(哪儿 nǎr, 这儿 zhèr, 一点儿 yìdiǎnr, 玩儿 wánr, 一会儿 yíhuìr). Only 儿子 érzi, 女儿 nǚ'ér, 婴儿, 儿童, 儿科 keep a full ér syllable.")
@@ -617,7 +626,7 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
     t0 = time.time()
     ds = _doc(D + 'ds.json')
     if ds is None:
-        ds, bo = gom(cap, tu, den, REDO_HSK2 if str(cap) == '2' else None)
+        ds, bo = gom(cap, tu, den, REDO_HSK2 if str(cap) == '2' else REDO_HSK5 if str(cap) == '5' else None)
         _ghi(D + 'ds.json', ds); _ghi(D + 'bo.json', bo)
         print('Gom HSK%s %d → %d: %d từ/cụm, %d chữ đa âm (ghi thẳng ô Đọc), %d câu · bỏ %d mục (了/么 riêng, đã có file)' % (
             cap, tu, den, sum(it['typ'] == 'tu' for it in ds), sum(it['typ'] == 'chu' for it in ds), sum(it['typ'] == 'cau' for it in ds), len(bo)))
