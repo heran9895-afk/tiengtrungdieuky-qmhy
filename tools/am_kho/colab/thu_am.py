@@ -15,7 +15,7 @@ thì chạy lại ô là làm tiếp: lượt đã có file wav thì không gọ
   mp3/tu|cau/…     file đã cắt, nén (chờ đẩy lên web)
 Thư mục làm việc còn có nhat_ky.csv: mỗi lần gọi Gemini một dòng (số giây âm thanh, ước tiền).
 """
-import os, re, json, time, wave, base64, hashlib, subprocess, difflib, csv, datetime, shutil, unicodedata, sys
+import collections, os, re, json, time, wave, base64, hashlib, subprocess, difflib, csv, datetime, shutil, unicodedata, sys
 
 CFG = dict(repo=None, work=None, asr=None, key=None, model=None, voice='Sulafat',
            usd_gio=0.81,        # giá ~0,81 USD / giờ âm thanh tới 31/12/2026 (gấp đôi từ 1/1/2027)
@@ -620,6 +620,21 @@ def bo_sung_moi(cap, tu, den, D, ds, ep=None):
     print('Bổ sung %d mục mới vào bài đã thu: %s' % (len(moi), ' '.join(it['text'] for it in moi[:12])))
 
 
+def tach_hai_am(ds):
+    """Chữ lẻ có hai cách đọc trong kho (谁 shéi/shuí, 熟 shú/shóu): thu MỖI cách đọc một file, web phát lần lượt cả hai
+    (Đọc từ = 'a.mp3|b.mp3'). Mục cũ giữ cách đọc đầu; thêm một mục mới cho cách đọc thứ hai. Trả về danh sách mục mới."""
+    moi = []
+    for it in list(ds):
+        if it.get('typ') != 'chu' or not it.get('o') or '/' not in (it.get('py') or '') or it.get('nhom'): continue
+        ps = [x.strip() for x in it['py'].split('/') if x.strip()]
+        if len(ps) != 2: continue
+        it['nhom'] = it['o'][0] + '|' + it['o'][1]; it['nhom_n'] = 2; it['bien'] = 0; it['py'] = ps[0]
+        n = {k: it[k] for k in ('k', 'text', 'typ', 'thu', 'src', 'o', 'co', 'nhom', 'nhom_n') if k in it}
+        n.update(id=it['id'] + '|2', ten=md10(it['id'] + '|2'), py=ps[1], bien=1, trang='cho', alt='')
+        ds.append(n); moi.append(n)
+    return moi
+
+
 def chay_dot(cap, tu, den, gioi_han_luot=None):
     """Gom → chia lượt → gọi Gemini → cắt, kiểm → tự thu lại mục lỗi. Chạy lại được bất cứ lúc nào."""
     D = thu_muc(cap, tu, den); os.makedirs(D + 'ketqua', exist_ok=True)
@@ -633,6 +648,12 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
     elif 'bai' in str(cap): bo_sung_moi(cap, tu, den, D, ds)
     elif str(cap) == '2': bo_sung_moi(cap, tu, den, D, ds, REDO_HSK2)
     L = _doc(D + 'luot.json')
+    moi_am = tach_hai_am(ds)
+    if moi_am and L is not None:
+        Lm = chia_luot(moi_am)
+        for i, bl in enumerate(Lm): bl['ten'] = 'l%02d' % (len(L) + i + 1)
+        L.extend(Lm); _ghi(D + 'luot.json', L); _ghi(D + 'ds.json', ds)
+        print('Chữ có hai cách đọc: thêm lượt cho cách đọc thứ hai của %s' % ' '.join(it['text'] for it in moi_am))
     if L is None:
         L = chia_luot(ds); _ghi(D + 'luot.json', L)
     print('%d mục · %d lượt: %s' % (len(ds), len(L), ', '.join('%s(%s %s %d)' % (b['ten'], b['typ'], b.get('giong', ''), len(b['dong'])) for b in L)))
@@ -893,6 +914,9 @@ def day_len(cap, tu, den, token, ten='Nhiên (Colab)', email='heran9895@gmail.co
     R = CFG['repo']
     di = [it for it in ds if it.get('file') and not it.get('da_day') and not can_nghe(it) and it.get('quyet') != 'thu_lai']
     cho = [it for it in ds if not it.get('da_day') and it not in di]
+    dem = collections.Counter(it['nhom'] for it in di if it.get('nhom'))
+    di = [it for it in di if not it.get('nhom') or dem[it['nhom']] >= it['nhom_n']]   # chữ hai âm: đủ cả hai file mới đẩy
+    cho = [it for it in ds if not it.get('da_day') and it not in di]
     if not di: print('Không có mục mới để đẩy. Còn chờ: %d' % len(cho)); return
     url = 'https://x-access-token:%s@github.com/%s.git' % (token, CFG['kho'])
     _git('config', 'user.name', ten); _git('config', 'user.email', email)
@@ -902,12 +926,14 @@ def day_len(cap, tu, den, token, ten='Nhiên (Colab)', email='heran9895@gmail.co
         for it in di:
             p = 'assets/am/%s/%s.mp3' % (it['thu'], it['ten'])
             shutil.copy(it['file'], R + p); tep.append(p)
-            if it.get('o'): o_cap.append((it['o'], p))
+            if it.get('o'): o_cap.append((it['o'], p, it.get('bien', 0)))
             else: them[it['k']] = p
         if o_cap:
             f = tep_cap(cap); s = open(f).read(); d = json.loads(s)
             vt = {w['Mã']: w for w in d}
-            for (ma, o), p in o_cap: vt[ma][o] = p
+            gom_o = {}
+            for (ma, o), p, bi in sorted(o_cap, key=lambda x: x[2]): gom_o.setdefault((ma, o), []).append(p)
+            for (ma, o), ps in gom_o.items(): vt[ma][o] = '|'.join(ps)   # hai cách đọc: 'a.mp3|b.mp3' (web phát lần lượt)
             out = json.dumps(d, ensure_ascii=False, indent=1) if s.startswith('[\n') else json.dumps(d, ensure_ascii=False, separators=(',', ':'))
             open(f, 'w').write(out + ('\n' if s.endswith('\n') else ''))
         sys.path.insert(0, R + 'tools'); import importlib, ban_do_am; importlib.reload(ban_do_am)
