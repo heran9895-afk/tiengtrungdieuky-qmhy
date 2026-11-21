@@ -758,10 +758,72 @@ def _chuan_toc_do(mp3, text):
     return round(toc, 2), round(he, 2)
 
 
+# Câu có hai chỗ đọc khó "cãi nhau" trong cùng một lượt (sửa chỗ này thì hỏng chỗ kia): tách thành các đoạn,
+# thu riêng từng đoạn (mỗi đoạn kèm ghi chú riêng) rồi ghép lại, nghỉ ngắn giữa các đoạn. Khóa = chữ gốc của câu.
+# Mỗi đoạn: (chữ, pinyin, ghi chú cho Gemini). Chữ 那 trong đoạn tự đổi thành 纳 (chỉ đọc nà).
+TACH = {
+    '端午节那天，街头到处都是出行的人。': [
+        ('端午节那天，', 'Duānwǔ Jié nà tiān,', ''),
+        ('街头到处都是出行的人。', 'jiētóu dàochù dōu shì chūxíng de rén.', '街头 = jiētóu (first tone jiē, 头 light; NOT jiétóu)'),
+    ],
+}
+TACH_K = {chuan(k): v for k, v in TACH.items()}
+GAP_TACH = 0.16   # giây nghỉ giữa các đoạn khi ghép
+
+
+def thu_lai_tach(D, it, dot):
+    """Thu lại một câu theo từng đoạn (TACH), ghép thành một file mp3. Trả về số giây Gemini."""
+    parts = TACH_K[it['k']]
+    pit = [dict(text=p[0].replace('那', '纳'), py=p[1], typ='cau') for p in parts]
+    st = tao_style(pit, 'cau', giong=it.get('giong', 'Sulafat')).replace(
+        'Pronunciation of the lines, in the same order:', 'The list is read twice (two rounds). Pronunciation of the lines of each round, in order:')
+    st += '\nEach line is one piece of the same sentence; read each piece on its own, exactly as written.'
+    gc = [(q['text'], p[2]) for q, p in zip(pit, parts) if p[2]]
+    if gc: st += '\nTeacher notes (follow exactly): ' + '; '.join('%s: %s' % x for x in gc)
+    lan = it.get('lan', 0) + 1
+    ten = 'r-%s-%d-t' % (it['ten'], lan)
+    wav = D + 'wav/%s.wav' % ten
+    dong = [q['text'] for q in pit] * 2
+    g = 0
+    if not os.path.exists(wav): g = goi_tts(st, dong, wav, dot, ten, giong=it.get('giong'))
+    it['lan'] = lan
+    n = len(pit)
+    ids = ['%s#%d_%d' % (it['id'], v, j) for v in range(2) for j in range(n)]
+    tep = ['%s_%d_%d' % (it['ten'], v, j) for v in range(2) for j in range(n)]
+    res, meta = cat_luot(wav, dong, ids, [''] * len(dong), D + 'tam/%s/' % ten, tep)
+    chon = []
+    for j in range(n):
+        ung = [res[ids[v * n + j]] for v in range(2) if res.get(ids[v * n + j], {}).get('tam')]
+        if not ung: break
+        chon.append(sorted(ung, key=lambda r: (len(r['loi']), -r['r']))[0])
+    if len(chon) < n:
+        it['loi'] = ['thiếu đoạn khi thu theo từng đoạn']; it['trang'] = 'loi'
+        return g
+    ra = D + 'tam/%s/%s_ghep.mp3' % (ten, it['ten'])
+    cmd = ['ffmpeg', '-v', 'error', '-y']
+    for c in chon[:1]: cmd += ['-i', c['tam']]
+    for c in chon[1:]: cmd += ['-f', 'lavfi', '-t', str(GAP_TACH), '-i', 'anullsrc=r=%d:cl=mono' % SR, '-i', c['tam']]
+    k = sum(1 for a in cmd if a == '-i')
+    fc = ''.join('[%d:a]aformat=sample_rates=%d:channel_layouts=mono[a%d];' % (i, SR, i) for i in range(k))
+    fc += ''.join('[a%d]' % i for i in range(k)) + 'concat=n=%d:v=0:a=1' % k
+    cmd += ['-filter_complex', fc, '-ac', '1', '-ar', str(SR), '-b:a', '48k', ra]
+    subprocess.run(cmd, check=True)
+    t = _chuan_toc_do(ra, it['text'])
+    if t: print('   ⏩ %s: đọc chậm (%.1f chữ/giây) → tăng tốc ×%.2f' % (it['text'], t[0], t[1]))
+    _nhan_ket_qua(D, it, dict(r=min(c['r'] for c in chon), asr=' + '.join(c['asr'] for c in chon),
+                              loi=[l for c in chon for l in c['loi']], dai=sum(c['dai'] for c in chon), tam=ra))
+    return g
+
+
 def thu_lai_nhom(D, its, dot, ep=False):
     """Thu lại NHIỀU mục trong MỘT lần gọi (đỡ tốn hạn mức 100 lần/ngày): mỗi mục đọc 2 lần (danh sách lặp 2 vòng),
     Style chỉ nói về các mục đó (+ ghi chú của cô). Mỗi mục chọn bản tốt hơn. its: cùng loại, cùng giọng, ≤ 12 mục."""
     for it in its: it['text'] = gon(it['text'])   # mục đã gom từ trước vẫn còn "……" ở đầu
+    tach = [it for it in its if it.get('k') in TACH_K]
+    if tach:
+        g0 = sum(thu_lai_tach(D, it, dot) for it in tach)   # giây Gemini của các câu tách
+        its = [it for it in its if it.get('k') not in TACH_K]
+        if not its: return g0
     it0 = its[0]; typ = 'chu' if it0['typ'] == 'chu' else it0['typ']; giong = it0.get('giong', 'Sulafat')
     st = tao_style(its, typ, giong=giong).replace('Pronunciation of the lines, in the same order:',
                                                     'The list is read twice (two rounds). Pronunciation of the lines of each round, in order:')
@@ -778,8 +840,8 @@ def thu_lai_nhom(D, its, dot, ep=False):
     ten = 'r-%s-%d-n%d' % (it0['ten'], lan, len(its))
     wav = D + 'wav/%s.wav' % ten
     dong = [it['text'] for it in its] * 2
-    g = 0
-    if not os.path.exists(wav): g = goi_tts(st, dong, wav, dot, ten, giong=it0.get('giong'))
+    g = g0 if tach else 0
+    if not os.path.exists(wav): g += goi_tts(st, dong, wav, dot, ten, giong=it0.get('giong'))
     for it in its: it['lan'] = it.get('lan', 0) + 1
     ids = ['%s#%d' % (it['id'], v) for v in range(2) for it in its]
     res, meta = cat_luot(wav, dong, ids, [it['alt'] for it in its] * 2, D + 'tam/%s/' % ten,
