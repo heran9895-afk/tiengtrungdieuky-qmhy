@@ -155,7 +155,7 @@ def gom(cap, tu, den, ep=None):
             if doc.startswith('assets/'): bo.append((ma + ' câu%d' % i, 'đã có file')); continue
             o = [ma, 'Đọc câu %d' % i] if doc == '-' else None
             add(c if doc == '-' else pick(doc, c), w.get('Pinyin câu %d' % i), 'cau', ma + ' câu%d' % i, o)
-    # cờ "cô cần nghe" (nhận dạng không kiểm được thanh điệu, 儿化)
+    # cờ "cô cần nghe" (nhận dạng không kiểm được thanh điệu). 儿化 không còn là cờ (bác Nhiên 22/11/2026: Gemini gần như không đọc sai 儿)
     for it in out:
         co = []
         dk = chu_doc_khac(it['py'] and it['text'])
@@ -165,7 +165,6 @@ def gom(cap, tu, den, ep=None):
                     khong_dau(r) == khong_dau(it['py']) and r != it['py'] for r in cac_am(c)): dk = [c]
         lech = it['typ'] == 'chu' or (it['py'] and '儿' not in it['text'] and khong_dau(it['py']) != ''.join(py_asr(it['text'])))
         if dk: co.append('đa âm ' + ''.join(dk))
-        if re.search(r'.儿', it['text']): co.append('儿化')
         if '头发' in it['text']: co.append('头发 tóufa')
         if ten_rieng(it['py'], it['typ']): co.append('tên riêng')
         it['co'] = co
@@ -918,7 +917,7 @@ def bang_nghe(cap, tu, den, tat_ca=False):
     D = thu_muc(cap, tu, den); ds = _doc(D + 'ds.json')
     hien = [it for it in ds if (tat_ca or can_nghe(it) or it.get('quyet') == 'thu_lai') and it.get('file')]
     thieu = [it for it in ds if not it.get('file')]
-    display(HTML('<b>%d mục cần nghe</b> (đa âm, 儿化, tên riêng, máy khớp thấp). Bấm ▶ nghe, rồi chọn <b>Đạt</b> hoặc <b>Thu lại</b> '
+    display(HTML('<b>%d mục cần nghe</b> (đa âm, tên riêng, máy khớp thấp). Bấm ▶ nghe, rồi chọn <b>Đạt</b> hoặc <b>Thu lại</b> '
                  '(có thể ghi cách đọc đúng vào ô ghi chú, vd. <i>长 = zhǎng</i>). Lựa chọn tự lưu.%s' % (
                      len(hien), '<br>⚠ %d mục chưa có file (thiếu): %s' % (len(thieu), '、'.join(it['text'] for it in thieu)) if thieu else '')))
 
