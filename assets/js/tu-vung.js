@@ -193,12 +193,11 @@
         // đúng chữ Hán đưa lên đầu, rồi đến từ bắt đầu bằng chữ cần tìm; giữ thứ tự cấp
         hien = hien.map(function (w, j) { return [w.han === q ? 0 : w.han.indexOf(q) === 0 ? 1 : 2, j, w]; })
           .sort(function (a, b) { return a[0] - b[0] || a[1] - b[1]; }).map(function (x) { return x[2]; });
-        // câu ví dụ có chứa chữ cần tìm (chữ Hán, pinyin hoặc nghĩa tiếng Việt của câu); bỏ câu trùng
+        // câu ví dụ có chứa chữ Hán cần tìm (gõ pinyin / tiếng Việt thì không tìm câu); bỏ câu trùng
         var thay = {}; soCau = 10; cauTim = [];
-        tatCa.forEach(function (w) { (w.cau || []).forEach(function (c) {
-          if (c._t === undefined) c._t = boDau([c.han, c.py, c.viet].join(' '));
-          if (c._t.indexOf(k) < 0 || thay[c.han]) return;
-          thay[c.han] = 1; cauTim.push({ c: c, w: w, h: c.han.indexOf(q) >= 0 ? 0 : 1 });
+        if (/[\u3400-\u9fff]/.test(q)) tatCa.forEach(function (w) { (w.cau || []).forEach(function (c) {   // chỉ tìm câu theo chữ Hán
+          if (c.han.indexOf(q) < 0 || thay[c.han]) return;
+          thay[c.han] = 1; cauTim.push({ c: c, w: w, h: 0 });
         }); });
         cauTim = cauTim.map(function (x, j) { return [x.h, j, x]; }).sort(function (a, b) { return a[0] - b[0] || a[1] - b[1]; }).map(function (x) { return x[2]; });
       }
