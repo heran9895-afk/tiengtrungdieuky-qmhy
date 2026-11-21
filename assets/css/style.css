@@ -933,3 +933,13 @@ body::after{content:"";position:fixed;left:50%;top:56%;width:min(72vw,560px);asp
 .lt-so-loi-ds{list-style:none;margin:4px 0 10px;padding:0}
 .lt-so-loi-ds li{padding:6px 10px;border-left:3px solid #c0392b;background:rgba(192,57,43,.06);border-radius:6px;margin-bottom:4px;font-size:14px}
 .lt-so-loi-ds small{color:#7a6a55}
+
+/* Kho từ vựng: câu ví dụ chứa từ đang tìm */
+.tv-cau-tim{grid-column:1/-1;margin-top:18px;border-top:2px dashed #f0d9cf;padding-top:14px}
+.tv-cau-tim-dau{font-weight:800;color:var(--red);margin-bottom:8px}.tv-cau-tim-dau span{color:var(--muted);font-weight:700;font-size:13px}
+.tv-cau-tim-ds{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.tv-cau-tim-ds li{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid #f0d9cf;border-radius:14px;padding:10px 12px}
+.tv-cau-tim-nd .hanzi{font-size:20px;line-height:1.5}.tv-cau-tim-nd mark{background:#ffe9a8;color:inherit;border-radius:4px;padding:0 2px}
+.tv-cau-tim-nd .tv-cau-py{color:var(--muted);font-size:14px}.tv-cau-tim-nd .tv-cau-viet{font-size:14px}
+.tv-cau-tu{margin-top:4px;font-size:12px;color:var(--muted)}
+.tv-trong-nho{padding:16px 10px}

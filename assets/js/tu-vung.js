@@ -14,7 +14,7 @@
   var el = document.getElementById('kho-tu-vung');
   if (!el) return;
 
-  var capDang = '1', ds = [], loc = '', hien = [], soHien = MOI_TRANG, luotTim = 0;
+  var capDang = '1', ds = [], loc = '', hien = [], soHien = MOI_TRANG, luotTim = 0, cauTim = [], soCau = 10;
   // Trang bài học: 2 tab Từ vựng (词语表, _nhom "tuVung") / Từ vựng mở rộng (_nhom "moRong"); ô tìm vẫn tìm trong cả bài
   var NHOM = [['tuVung', 'Từ vựng'], ['moRong', 'Từ vựng mở rộng']];
   var nhomDang = MOT_KHO && /(^#|[#&])mo-rong\b/.test(location.hash) ? 'moRong' : 'tuVung', coMoRong = false;
@@ -158,6 +158,22 @@
     fc.thuTu = null; veLuoi();
   });
 
+  // Mục "Câu ví dụ chứa …" hiện dưới lưới từ khi đang tìm kiếm (ở chế độ lưới / danh sách)
+  function veCauTim() {
+    if (!cauTim.length) return '';
+    var q = loc.trim();
+    var h = '<div class="tv-cau-tim"><div class="tv-cau-tim-dau">Câu ví dụ có chứa “' + esc(q) + '” <span>(' + cauTim.length + ' câu)</span></div><ol class="tv-cau-tim-ds">';
+    h += cauTim.slice(0, soCau).map(function (x) {
+      var c = x.c, w = x.w, han = esc(c.han), qe = esc(q);
+      if (qe && han.indexOf(qe) >= 0) han = han.split(qe).join('<mark>' + qe + '</mark>');
+      return '<li>' + nutLoa(c.han, false, c.doc) + '<div class="tv-cau-tim-nd"><div class="hanzi">' + han + '</div>' +
+        (c.py ? '<div class="tv-cau-py">' + esc(c.py) + '</div>' : '') + (c.viet ? '<div class="tv-cau-viet">' + esc(c.viet) + '</div>' : '') +
+        '<div class="tv-cau-tu">Từ: <b class="hanzi">' + esc(w.han) + '</b> · ' + esc(nhanTu(w)) + '</div></div></li>';
+    }).join('') + '</ol>';
+    if (cauTim.length > soCau) h += '<button type="button" class="tv-them tv-them-cau">Xem thêm ' + Math.min(20, cauTim.length - soCau) + ' câu (còn ' + (cauTim.length - soCau) + ')</button>';
+    return h + '</div>';
+  }
+
   function veLuoi(them) {
     var k = boDau(loc);
     if (!them) {
@@ -177,11 +193,21 @@
         // đúng chữ Hán đưa lên đầu, rồi đến từ bắt đầu bằng chữ cần tìm; giữ thứ tự cấp
         hien = hien.map(function (w, j) { return [w.han === q ? 0 : w.han.indexOf(q) === 0 ? 1 : 2, j, w]; })
           .sort(function (a, b) { return a[0] - b[0] || a[1] - b[1]; }).map(function (x) { return x[2]; });
+        // câu ví dụ có chứa chữ cần tìm (chữ Hán, pinyin hoặc nghĩa tiếng Việt của câu); bỏ câu trùng
+        var thay = {}; soCau = 10; cauTim = [];
+        tatCa.forEach(function (w) { (w.cau || []).forEach(function (c) {
+          if (c._t === undefined) c._t = boDau([c.han, c.py, c.viet].join(' '));
+          if (c._t.indexOf(k) < 0 || thay[c.han]) return;
+          thay[c.han] = 1; cauTim.push({ c: c, w: w, h: c.han.indexOf(q) >= 0 ? 0 : 1 });
+        }); });
+        cauTim = cauTim.map(function (x, j) { return [x.h, j, x]; }).sort(function (a, b) { return a[0] - b[0] || a[1] - b[1]; }).map(function (x) { return x[2]; });
       }
     }
-    dem.textContent = k && !MOT_KHO ? hien.length + ' từ · cả 9 cấp' : khoang && !k ? hien.length + ' từ · mục ' + (khoang[0] + 1) + '–' + khoang[1] + ' / ' + ds.length : hien.length + ' từ';
+    if (!k) cauTim = [];
+    dem.textContent = k && !MOT_KHO ? hien.length + ' từ' + (cauTim.length ? ' · ' + cauTim.length + ' câu' : '') + ' · cả 9 cấp' : khoang && !k ? hien.length + ' từ · mục ' + (khoang[0] + 1) + '–' + khoang[1] + ' / ' + ds.length : hien.length + ' từ';
     if (!k && !ds.length) { luoi.innerHTML = '<div class="tv-trong">Cấp này đang được cô cập nhật, bạn quay lại sau nhé! 🌱</div>'; return; }
-    if (!hien.length) { luoi.innerHTML = '<div class="tv-trong">Không tìm thấy từ nào phù hợp.</div>'; return; }
+    if (!hien.length && !cauTim.length) { luoi.innerHTML = '<div class="tv-trong">Không tìm thấy từ nào phù hợp.</div>'; return; }
+    if (!hien.length) { luoi.classList.remove('tv-luoi-the'); luoi.innerHTML = '<div class="tv-trong tv-trong-nho">Không có từ nào khớp, nhưng có câu ví dụ chứa “' + esc(loc.trim()) + '”:</div>' + veCauTim(); return; }
     luoi.classList.toggle('tv-luoi-the', cheDo === 'the' || cheDo === 'bo');   // chế độ thẻ: một thẻ chiếm cả bề ngang, không chia cột
     if (cheDo === 'bo' && boThu().length) { if (!them) fc.thuTu = null; return veThe(); }
     if (cheDo === 'the') { if (!them) fc.thuTu = null; return veThe(); }
@@ -191,11 +217,12 @@
         (TD && TD.laKho(w.ma) ? '<span class="tv-sao-nho" title="Từ khó">★</span>' : '') +
         '<div class="tv-han hanzi">' + esc(w.han) + '</div><div class="tv-py">' + TV.pyHtml(w.py) + '</div>' +
         '<div class="tv-nghia">' + esc(w.nghia) + '</div></div>';
-    }).join('') + (hien.length > soHien ? '<button type="button" class="tv-them">Xem thêm ' + Math.min(MOI_TRANG, hien.length - soHien) + ' từ (còn ' + (hien.length - soHien) + ')</button>' : '');
+    }).join('') + (hien.length > soHien ? '<button type="button" class="tv-them">Xem thêm ' + Math.min(MOI_TRANG, hien.length - soHien) + ' từ (còn ' + (hien.length - soHien) + ')</button>' : '') + veCauTim();
     theoDoiXem();
   }
   luoi.addEventListener('click', function (e) {
     var t = e.target;
+    if (t.closest('.tv-them-cau')) { soCau += 20; veLuoi(true); return; }
     if (t.closest('.tv-them')) { soHien += MOI_TRANG; veLuoi(true); return; }
     if (t.closest('.tv-loa')) return;
     var sao = t.closest('.tv-sao');
