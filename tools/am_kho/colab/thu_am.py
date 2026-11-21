@@ -763,7 +763,7 @@ def _chuan_toc_do(mp3, text):
 # Mỗi đoạn: (chữ, pinyin, ghi chú cho Gemini). Chữ 那 trong đoạn tự đổi thành 纳 (chỉ đọc nà).
 TACH = {
     '端午节那天，街头到处都是出行的人。': [
-        ('端午节那天，', 'Duānwǔ Jié nà tiān,', ''),
+        ('端午节那天，', 'Duānwǔ Jié nà tiān,', '纳天 = nà tiān (4th tone nà, NOT nèi tiān)'),
         ('街头到处都是出行的人。', 'jiētóu dàochù dōu shì chūxíng de rén.', '街头 = jiētóu (first tone jiē, 头 light; NOT jiétóu)'),
     ],
 }
