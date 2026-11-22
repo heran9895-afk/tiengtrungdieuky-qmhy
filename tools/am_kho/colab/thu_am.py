@@ -60,11 +60,14 @@ def md10(s): return hashlib.md5(s.encode()).hexdigest()[:10]
 _CHU_PY = 'a-zA-ZāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜüÜ'
 
 
-def thay_am(text, py=''):
+NA_THAY = ('捺', '呐', '衲', '那', '纳')   # chữ gửi Gemini thay 那, xoay vòng mỗi lần thu lại (Gemini đọc nèi tùy câu, chữ nào đúng cũng thay đổi theo câu)
+
+
+def thay_am(text, py='', na='捺'):
     """Thay chữ Gemini hay đọc sai bằng chữ cùng âm mà Gemini đọc chắc (khóa file không đổi).
     那 → 捺 (nà, tránh nèi; cả chữ đứng riêng; Nhiên nghe thử 23/11/2026: 纳 và 钠 đọc sai, 捺 呐 衲 đúng); 挨: theo pinyin của mục, ái (挨打 挨饿 挨骂) → 癌, āi (挨着 挨家挨户) → 哀.
     Mục có cả hai âm thì giữ 挨 (cô nghe)."""
-    t = str(text).replace('那', '捺')
+    t = str(text).replace('那', na)
     if '挨' in t:
         p = unicodedata.normalize('NFC', py or '')
         a2 = re.search(r'(?<![%s])ái' % _CHU_PY, p); a1 = re.search(r'(?<![%s])āi' % _CHU_PY, p)
@@ -834,6 +837,11 @@ def thu_lai_nhom(D, its, dot, ep=False):
     """Thu lại NHIỀU mục trong MỘT lần gọi (đỡ tốn hạn mức 100 lần/ngày): mỗi mục đọc 2 lần (danh sách lặp 2 vòng),
     Style chỉ nói về các mục đó (+ ghi chú của cô). Mỗi mục chọn bản tốt hơn. its: cùng loại, cùng giọng, ≤ 12 mục."""
     for it in its: it['text'] = gon(it['text'])   # mục đã gom từ trước vẫn còn "……" ở đầu
+    for it in its:   # câu / từ có 那: mỗi lần thu lại đổi sang chữ thay khác (捺 → 呐 → 衲 → 那 → 纳), vì chữ đúng ở câu này có thể sai ở câu khác
+        if '那' in it.get('k', ''):
+            it.setdefault('goc', it['text'].replace('捺', '那'))
+            c = NA_THAY[(it.get('lan', 0) + 1) % len(NA_THAY)]
+            it['text'] = gon(thay_am(it['goc'], it.get('py', ''), c)); it['na'] = c
     tach = [it for it in its if it.get('k') in TACH_K]
     if tach:
         g0 = sum(thu_lai_tach(D, it, dot) for it in tach)   # giây Gemini của các câu tách
