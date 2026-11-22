@@ -5,7 +5,7 @@
    Nạp sau tu-vung-chung.js (đọc, nút loa) và on-tap-gui.js (gửi bài làm về Sheet).
    Mỗi câu (item): ma, nhom, dang ('chon' | 'dungSai' | 'xep'), hoi, de, cau, sau, goiY, tu, loa, anDe,
      dap, nhieu, pa ('han' | 'py' | 'vi' | 'cau'), dung, sua, khoi, dapXep, cauDung, py, giai, but, hienSau
-   Một lượt: bốc ngẫu nhiên theo nhóm (mỗi nhóm tối đa "tran" câu). Ngữ pháp: mỗi thẻ Bài 2–5 một câu + "soMoi" câu tổng hợp.
+   Một lượt (trừ Trộn tổng hợp): làm TOÀN BỘ câu của phần, xáo ngẫu nhiên (cô chốt 23/11/2026). Trộn tổng hợp: bốc ngẫu nhiên soCau câu từ cả 6 phần.
    Đọc hiểu: chọn một bài đọc, làm hết câu hỏi của bài đó. Không lên Bảng xếp hạng.
    ========================================================= */
 (function () {
@@ -142,19 +142,15 @@
     if (PHAN === 'tong-hop') ds = dungLuotTron();
     else if (PHAN === 'doc-hieu') ds = BAI_DOC.cau.slice();
     else if (PHAN === 'ngu-phap') {
-      var theo = {}, moi = [];
-      P.cau.forEach(function (c) { if (c.nguon === 'moi') moi.push(c); else (theo[c.nhom] || (theo[c.nhom] = [])).push(c); });
-      Object.keys(theo).forEach(function (k) { ds.push(tron1(theo[k])[0]); });
-      ds = ds.concat(tron1(moi).slice(0, P.soMoi || 6));
-      ds = tron1(ds);
+      ds = tron1(P.cau.slice());                                // làm TOÀN BỘ câu của phần (cô chốt 23/11/2026)
       for (var k = 1; k < ds.length; k++) if (ds[k].nhom === ds[k - 1].nhom) { var j = (k + 3) % ds.length, t = ds[k]; ds[k] = ds[j]; ds[j] = t; }
     } else {
       var nhom = {}, thu = [];
       P.cau.forEach(function (c) { if (!nhom[c.nhom]) { nhom[c.nhom] = []; thu.push(c.nhom); } nhom[c.nhom].push(c); });
       thu.forEach(function (k) { nhom[k] = tron1(nhom[k]); });
-      var tran = P.tran || 4, vong = 0;
-      while (ds.length < P.soCau && vong < tran) {             // xoay vòng các nhóm: rải đều, mỗi nhóm tối đa "tran" câu
-        tron1(thu).forEach(function (k) { if (ds.length < P.soCau && nhom[k][vong]) ds.push(nhom[k][vong]); });
+      var tong = P.cau.length, vong = 0;
+      while (ds.length < tong && vong < tong) {                // xoay vòng các nhóm cho rải đều, lấy HẾT câu (cô chốt 23/11/2026)
+        tron1(thu).forEach(function (k) { if (nhom[k][vong]) ds.push(nhom[k][vong]); });
         vong++;
       }
       ds = tron1(ds);
@@ -213,14 +209,11 @@
           return '<button type="button" class="ot-chon-bai" data-k="' + k + '"><b>' + esc(b.ten) + '</b><span>' + b.cau.length + ' câu hỏi</span></button>'; }).join('') + '</div></div>';
       return;
     }
-    var so = PHAN === 'ngu-phap' ? Object.keys(P.tenNhom).length + (P.soMoi || 6) : P.soCau;
-    if (PHAN === 'ngu-phap') {
-      var coNhom = {}; P.cau.forEach(function (c) { if (c.nguon !== 'moi') coNhom[c.nhom] = 1; }); so = Object.keys(coNhom).length + (P.soMoi || 6);
-    }
+    var so = PHAN === 'tong-hop' ? P.soCau : P.cau.length;
     var nhom = []; P.cau.forEach(function (c) { var t = (P.tenNhom || {})[c.nhom]; if (t && nhom.indexOf(t) < 0 && PHAN !== 'ngu-phap') nhom.push(t); });
     if (PHAN === 'tong-hop') nhom = PHAN_GOC.map(function (p) { return p[1]; });
     el.innerHTML = '<div class="lnp-dau card"><div class="sec-kicker">' + esc(el.dataset.kicker || '复习') + '</div><h2 class="lnp-tieu-de">' + esc(el.dataset.tieuDe || TEN) + '</h2>' +
-      '<p class="lnp-mo-ta">Mỗi lượt <b>' + so + ' câu</b> bốc ngẫu nhiên' + (moTa ? ': ' + moTa : '') + '. Lượt sau đổi câu.</p>' +
+      '<p class="lnp-mo-ta">' + (PHAN === 'tong-hop' ? 'Mỗi lượt <b>' + so + ' câu</b> bốc ngẫu nhiên' + (moTa ? ': ' + moTa : '') + '. Lượt sau đổi câu.' : 'Mỗi lượt làm <b>toàn bộ ' + so + ' câu</b>' + (moTa ? ': ' + moTa : '') + '. Thứ tự xáo ngẫu nhiên mỗi lượt.') + '</p>' +
       (nhom.length ? '<p class="lnp-dang">' + nhom.map(function (t) { return '<span>' + tron(t) + '</span>'; }).join('') + '</p>' : '') +
       oLamTiep() + oHocSinh() + '<div class="lt-nut-kq"><button type="button" class="btn ' + (LD && LD.doc(khoaLD()) ? '' : 'solid ') + 'ot-bat-dau">' + (LD && LD.doc(khoaLD()) ? 'Bắt đầu lượt mới ›' : 'Bắt đầu ›') + '</button></div>' +
       (LD ? '<p class="lt-hs-ghi ot-ghi-luu">💾 Bài đang làm tự lưu sau mỗi câu. Thoát ra giữa chừng, lần sau vào bấm <b>▶ Làm tiếp</b>' + (window.QM_TK && QM_TK.hoSoId && QM_TK.hoSoId() ? ' (cả trên máy khác, vì bạn đã đăng nhập)' : '; đăng nhập Google để làm tiếp được trên máy khác') + '.</p>' : '') + '</div>';
