@@ -1045,3 +1045,33 @@ def tong_tien():
     g = sum(float(r['giay_am']) for r in nk); usd = g / 3600 * CFG['usd_gio']
     print('Tổng: %d lần gọi · %.1f giờ âm thanh · ước %.2f USD ≈ %s đ (giá %.2f USD/giờ)' % (
         len(nk), g / 3600, usd, format(round(usd * CFG['vnd_usd']), ',').replace(',', '.'), CFG['usd_gio']))
+
+
+# ============ Thử nghiệm: chữ thay 那 nào Gemini đọc đúng nà? ============
+def thu_nghiem_na(cac=('那', '纳', '呐', '钠', '捺', '衲', 'nà')):
+    """Gọi Gemini MỘT lượt: hai câu có 那, mỗi câu thay 那 bằng từng chữ trong `cac`. Cô nghe rồi báo chữ nào đọc đúng nà.
+    Dùng ở Colab: ô mới chứa T.thu_nghiem_na() (sau khi chạy ô 2). Không đụng kho, không tính vào trần 80 của kho."""
+    from IPython.display import Audio, display
+    D = CFG['work'] + 'thu_nghiem_na/'; os.makedirs(D, exist_ok=True)
+    mau = [('端午节%s天，街头到处都是出行的人。', 'Duānwǔ Jié nà tiān, jiētóu dàochù dōu shì chūxíng de rén.'),
+           ('我们去的%s天刚好赶上端午节，大街上很热闹。', 'Wǒmen qù de nà tiān gānghǎo gǎnshàng Duānwǔ Jié, dàjiē shang hěn rènao.')]
+    pit, nhan = [], []
+    for x in cac:
+        for m, py in mau:
+            pit.append(dict(text=m % x, py=py, typ='cau')); nhan.append(x)
+    dong = [it['text'] for it in pit]
+    wav = D + 'thu.wav'
+    if not os.path.exists(wav): goi_tts(tao_style(pit, 'cau'), dong, wav, 'thunghiem', 'na')
+    ids = ['t%02d' % i for i in range(len(dong))]
+    try:
+        res, _ = cat_luot(wav, dong, ids, [''] * len(dong), D + 'cat/', ids)
+        ok = all(res.get(i, {}).get('tam') for i in ids)
+    except Exception as e:
+        print('Không cắt được từng câu (%s), phát nguyên lượt bên dưới.' % e); ok = False
+    if ok:
+        for i, it, x in zip(ids, pit, nhan):
+            print('%s · chữ thay: %s · %s' % (i, x, it['text'])); display(Audio(res[i]['tam']))
+    else:
+        for k, (x, it) in enumerate(zip(nhan, pit)): print('Dòng %d · chữ thay: %s · %s' % (k + 1, x, it['text']))
+        display(Audio(wav))
+    print('Nghe xong bác báo chữ nào đọc đúng nà (4th tone), tui đổi quy tắc rồi thu lại các mục có 那.')
