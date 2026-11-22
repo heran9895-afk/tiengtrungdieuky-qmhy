@@ -288,7 +288,7 @@
       '<label>Mã lớp <span class="tk-phu">(cô đưa trên lớp)</span><input name="maLop" maxlength="16" autocapitalize="characters" autocomplete="off" spellcheck="false" placeholder="VD: K3HN7Q" value="' + esc(h ? h.maLop || '' : moi ? moi.maLop : '') + '"></label>' +
       '<details class="tk-tu-hoc"' + (h && !h.maLop && h.lop ? ' open' : '') + '><summary>Tự học, không có mã lớp?</summary>' +
         '<label>Lớp / nơi học <span class="tk-phu">(tự ghi)</span><input name="lop" maxlength="40" placeholder="VD: Tự học" value="' + esc(h && !h.maLop ? h.lop : '') + '"></label></details>' +
-      (sua ? '' : '<label class="tk-dong-y"><input type="checkbox" name="dongY" required><span>Mình đồng ý để web lưu họ tên, lớp, điểm và tiến độ học của mình để phục vụ việc học. Dữ liệu học tập của mình (kết quả làm bài, thời gian học) được cô Nhiên dùng để theo dõi tiến độ, cải thiện bài giảng và có thể dùng cho nghiên cứu giáo dục.</span></label>') +
+      (sua ? '' : '<label class="tk-dong-y"><input type="checkbox" name="dongY" required><span>Mình đồng ý để web lưu họ tên, lớp, điểm và tiến độ học của mình để phục vụ việc học. Dữ liệu học tập của mình (kết quả làm bài, thời gian học) được giáo viên dùng để theo dõi tiến độ, cải thiện bài giảng và có thể dùng cho nghiên cứu giáo dục.</span></label>') +
       '<button class="tk-btn chinh" type="submit">' + (sua ? 'Lưu' : 'Tạo hồ sơ') + '</button><p class="tk-bao" aria-live="polite"></p></form>' + (sua ? '' : DU_LIEU));
     b.querySelector('form').addEventListener('submit', function (e) {
       e.preventDefault();
@@ -598,7 +598,7 @@
     if (document.querySelector('.tk-tb-nc')) return;
     var d = document.createElement('div'); d.className = 'tk-tb-nc'; d.setAttribute('role', 'status');
     d.style.cssText = 'position:fixed;left:12px;right:12px;bottom:12px;z-index:9998;max-width:560px;margin:0 auto;background:#fff;border:1px solid #d9c9a8;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.18);padding:12px 14px;font-size:14px;line-height:1.45;color:#3b2f20';
-    d.innerHTML = '<div>📌 Dữ liệu học tập của bạn (kết quả làm bài, thời gian học) được cô Nhiên dùng để theo dõi tiến độ, cải thiện bài giảng và có thể dùng cho nghiên cứu giáo dục.</div><div style="text-align:right;margin-top:8px"><button type="button" class="btn solid" style="padding:6px 16px">Đã hiểu</button></div>';
+    d.innerHTML = '<div>📌 Dữ liệu học tập của bạn (kết quả làm bài, thời gian học) được giáo viên dùng để theo dõi tiến độ, cải thiện bài giảng và có thể dùng cho nghiên cứu giáo dục.</div><div style="text-align:right;margin-top:8px"><button type="button" class="btn solid" style="padding:6px 16px">Đã hiểu</button></div>';
     d.querySelector('button').addEventListener('click', function () {
       try { localStorage.setItem(kh, '1'); } catch (e) {}
       d.remove(); try { goi('daDocThongBao', { hoSoId: h.hoSoId }).catch(function () {}); } catch (e) {}
