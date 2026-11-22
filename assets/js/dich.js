@@ -2,7 +2,7 @@
    ÔN TẬP TỔNG HỢP BÀI 1–5 — BÀI DỊCH VIỆT → TRUNG
    <div id="dich"></div>; window.QM_OT_TEP = data/bai/on-tap-1-5.json (khoá "dich" = bộ đề gốc).
    Bộ đề đang dùng: bản cô lưu mới nhất trên máy chủ điểm (GET ?action=baiDich); máy chủ lỗi thì dùng bộ đề gốc.
-   Ba cách luyện: Dịch câu (bốc ngẫu nhiên soCauMoiLuot câu) · Dịch hội thoại · Dịch đoạn văn.
+   Ba cách luyện: Dịch câu (làm toàn bộ ngân hàng câu, xáo thứ tự mỗi lượt) · Dịch hội thoại · Dịch đoạn văn.
    Chấm: so bài gõ với đáp án chính + các cách dịch chấp nhận (bỏ khoảng trắng; 。 hay ！ cuối câu như nhau; bỏ dấu —).
    Không khớp: hiện đáp án, học sinh tự đánh giá "dịch đúng ý" / "dịch sai". Không tính điểm, không lên Bảng xếp hạng;
    bài làm từng câu gửi về Sheet (on-tap-gui.js, phan 'dich').
@@ -168,7 +168,7 @@
       '</div><div class="dc-gv"><button type="button" class="btn dc-mo-gv">🔒 Chế độ giáo viên</button></div><div class="dc-khu-gv"></div>';
   }
   function moTaChe() {
-    if (CHE === 'cau') return '<p class="lnp-mo-ta">Mỗi lượt <b>' + Math.min(DE.soCauMoiLuot || 20, DE.cau.length) + ' câu</b> bốc ngẫu nhiên trong ' + DE.cau.length + ' câu, lượt sau đổi câu.</p>' +
+    if (CHE === 'cau') return '<p class="lnp-mo-ta">Mỗi lượt làm <b>toàn bộ ' + DE.cau.length + ' câu</b>, thứ tự xáo ngẫu nhiên mỗi lượt.</p>' +
       '<div class="lt-nut-kq"><button type="button" class="btn solid dc-bat-dau">Bắt đầu ›</button></div>';
     var ds = DE[CHE] || [];
     return '<div class="dc-chon">' + ds.map(function (h, k) {
@@ -181,7 +181,7 @@
   function batDau(k) {
     luuHs();
     var hs = hoSo(), ds = [];
-    if (CHE === 'cau') ds = tron1(DE.cau).slice(0, DE.soCauMoiLuot || 20).map(function (c) { return { ma: c.ma, nhom: 'cau', vi: c.vi, zh: c.zh, py: c.py, ghiChu: c.ghiChu, goiY: c.goiY, ve: c.ve }; });
+    if (CHE === 'cau') ds = tron1(DE.cau).map(function (c) { return { ma: c.ma, nhom: 'cau', vi: c.vi, zh: c.zh, py: c.py, ghiChu: c.ghiChu, goiY: c.goiY, ve: c.ve }; });
     else if (CHE === 'hoiThoai') { var h = DE.hoiThoai[k]; ds = h.luot.map(function (l, i) { return { ma: h.ma + '-' + (i + 1), nhom: h.ma, ai: l.ai, vi: l.vi, zh: l.zh, py: l.py, goiY: l.goiY, ht: h, i: i }; }); }
     else { var d = DE.doanVan[k]; ds = [{ ma: d.ma, nhom: d.ma, doan: d, vi: d.cau.map(function (c) { return c.vi; }).join(' '), zh: [], py: '' }]; }
     L = { ds: ds, i: 0, kq: [], ma: G.maLuot(), luc: Date.now(), batDau: new Date().toISOString(), hoTen: gon(hs.hoTen), lop: gon(hs.lop),
@@ -492,7 +492,6 @@
       (tb ? '<p class="dc-thong-bao ' + (loi ? 'loi' : 'ok') + '">' + esc(tb) + '</p>' : '') +
       '<div class="dc-che">' + [['cau', 'Dịch câu (' + SUA.cau.length + ')'], ['hoiThoai', 'Hội thoại (' + SUA.hoiThoai.length + ')'], ['doanVan', 'Đoạn văn (' + SUA.doanVan.length + ')']].map(function (t) {
         return '<button type="button" data-tab="' + t[0] + '"' + (TAB === t[0] ? ' class="on"' : '') + '>' + t[1] + '</button>'; }).join('') + '</div>' +
-      (TAB === 'cau' ? '<div class="dc-sua-hang"><label>Số câu mỗi lượt <input type="text" data-f="soCauMoiLuot" value="' + esc(SUA.soCauMoiLuot || 20) + '" size="3"></label></div>' : '') +
       '<div class="dc-ds-sua">' + ds.map(function (c, k) { return TAB === 'cau' ? veMucCau(c, k) : veMucNhom(c, k, TAB === 'hoiThoai'); }).join('') + '</div>' +
       '<button type="button" class="btn dc-them">+ Thêm ' + (TAB === 'cau' ? 'câu' : TAB === 'hoiThoai' ? 'hội thoại' : 'đoạn văn') + '</button>' +
       (TAB === 'cau' ? ' <button type="button" class="btn dc-them dc-them-ab">+ Thêm câu hỏi – đáp A/B</button>' : '') +
@@ -503,7 +502,6 @@
   }
   function docForm() {                                          // chép nội dung ô nhập của tab đang mở vào SUA
     var khu = el.querySelector('.dc-khu-gv'); if (!SUA || !khu.querySelector('.dc-ds-sua')) return;
-    var so = khu.querySelector('[data-f="soCauMoiLuot"]'); if (so) SUA.soCauMoiLuot = Math.max(1, parseInt(so.value, 10) || 20);
     function dong(t) { return String(t || '').split(/\n+/).map(function (x) { return x.trim(); }).filter(Boolean); }
     khu.querySelectorAll('.dc-ds-sua > .dc-muc').forEach(function (m) {
       var k = +m.dataset.k, it = SUA[TAB][k];
