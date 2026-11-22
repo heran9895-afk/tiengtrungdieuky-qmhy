@@ -62,9 +62,9 @@ _CHU_PY = 'a-zA-ZāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜüÜ'
 
 def thay_am(text, py=''):
     """Thay chữ Gemini hay đọc sai bằng chữ cùng âm mà Gemini đọc chắc (khóa file không đổi).
-    那 → 纳 (nà, tránh nèi; cả chữ đứng riêng); 挨: theo pinyin của mục, ái (挨打 挨饿 挨骂) → 癌, āi (挨着 挨家挨户) → 哀.
+    那 → 捺 (nà, tránh nèi; cả chữ đứng riêng; Nhiên nghe thử 23/11/2026: 纳 và 钠 đọc sai, 捺 呐 衲 đúng); 挨: theo pinyin của mục, ái (挨打 挨饿 挨骂) → 癌, āi (挨着 挨家挨户) → 哀.
     Mục có cả hai âm thì giữ 挨 (cô nghe)."""
-    t = str(text).replace('那', '纳')
+    t = str(text).replace('那', '捺')
     if '挨' in t:
         p = unicodedata.normalize('NFC', py or '')
         a2 = re.search(r'(?<![%s])ái' % _CHU_PY, p); a1 = re.search(r'(?<![%s])āi' % _CHU_PY, p)
@@ -149,7 +149,7 @@ def gom(cap, tu, den, ep=None):
         if not o and k in B and k not in (ep or ()): return
         if not k or id_ in seen: return
         seen.add(id_)
-        text = thay_am(text, py)   # 那 → 纳 (chỉ đọc nà), 挨 → 癌 (ái) / 哀 (āi); khóa file vẫn theo chữ gốc
+        text = thay_am(text, py)   # 那 → 捺 (chỉ đọc nà), 挨 → 癌 (ái) / 哀 (āi); khóa file vẫn theo chữ gốc
         it = dict(id=id_, k=k, text=gon(text), py=(py or '').replace('·', '').strip(), typ=typ, thu='cau' if typ == 'cau' else 'tu',
                   src=src, ten=md10(id_ if o else k), o=o, trang='cho')
         out.append(it)
@@ -775,10 +775,10 @@ def _chuan_toc_do(mp3, text):
 
 # Câu có hai chỗ đọc khó "cãi nhau" trong cùng một lượt (sửa chỗ này thì hỏng chỗ kia): tách thành các đoạn,
 # thu riêng từng đoạn (mỗi đoạn kèm ghi chú riêng) rồi ghép lại, nghỉ ngắn giữa các đoạn. Khóa = chữ gốc của câu.
-# Mỗi đoạn: (chữ, pinyin, ghi chú cho Gemini). Chữ 那 trong đoạn tự đổi thành 纳 (chỉ đọc nà).
+# Mỗi đoạn: (chữ, pinyin, ghi chú cho Gemini). Chữ 那 trong đoạn tự đổi thành 捺 (chỉ đọc nà).
 TACH = {
     '端午节那天，街头到处都是出行的人。': [
-        ('端午节那天，', 'Duānwǔ Jié nà tiān,', '纳天 = nà tiān (4th tone nà, NOT nèi tiān)'),
+        ('端午节那天，', 'Duānwǔ Jié nà tiān,', '捺天 = nà tiān (4th tone nà, NOT nèi tiān)'),
         ('街头到处都是出行的人。', 'jiētóu dàochù dōu shì chūxíng de rén.', '街头 = jiētóu (first tone jiē, 头 light; NOT jiétóu)'),
     ],
 }
@@ -789,7 +789,7 @@ GAP_TACH = 0.16   # giây nghỉ giữa các đoạn khi ghép
 def thu_lai_tach(D, it, dot):
     """Thu lại một câu theo từng đoạn (TACH), ghép thành một file mp3. Trả về số giây Gemini."""
     parts = TACH_K[it['k']]
-    pit = [dict(text=p[0].replace('那', '纳'), py=p[1], typ='cau') for p in parts]
+    pit = [dict(text=p[0].replace('那', '捺'), py=p[1], typ='cau') for p in parts]
     st = tao_style(pit, 'cau', giong=it.get('giong', 'Sulafat')).replace(
         'Pronunciation of the lines, in the same order:', 'The list is read twice (two rounds). Pronunciation of the lines of each round, in order:')
     st += '\nEach line is one piece of the same sentence; read each piece on its own, exactly as written.'
