@@ -14,6 +14,7 @@
   var esc = TV.esc, P = null, L = null, BAI_DOC = null;
   var TEN_DANG = { chon: '🎯 Chọn đáp án đúng', dungSai: '✅ Đúng hay sai', xep: '🧭 Xếp câu, thêm dấu câu' };
   var DAU_CAU = ['，', '。', '？', '！'];
+  var TRAN_CAU = 200;                                              // máy chủ điểm ghi tối đa 200 câu mỗi lượt
 
   // ---------- âm thanh hiệu ứng (như Luyện ngữ pháp) ----------
   var AM = { bat: true, ctx: null };
@@ -212,7 +213,40 @@
       '<p class="lnp-mo-ta">' + (so >= P.cau.length && PHAN !== 'tong-hop' ? 'Mỗi lượt làm <b>toàn bộ ' + so + ' câu</b>' + (moTa ? ': ' + moTa : '') + '. Thứ tự xáo ngẫu nhiên mỗi lượt.' : 'Mỗi lượt <b>' + so + ' câu</b> bốc ngẫu nhiên' + (moTa ? ': ' + moTa : '') + '. Lượt sau đổi câu.') + '</p>' +
       (nhom.length ? '<p class="lnp-dang">' + nhom.map(function (t) { return '<span>' + tron(t) + '</span>'; }).join('') + '</p>' : '') +
       oLamTiep() + oHocSinh() + '<div class="lt-nut-kq"><button type="button" class="btn ' + (LD && LD.doc(khoaLD()) ? '' : 'solid ') + 'ot-bat-dau">' + (LD && LD.doc(khoaLD()) ? 'Bắt đầu lượt mới ›' : 'Bắt đầu ›') + '</button></div>' +
+      (window.QM_API ? '<div class="ot-gv"><button type="button" class="ot-gv-mo">🔒 Chế độ giáo viên</button><div class="ot-gv-khu"></div></div>' : '') +
       (LD ? '<p class="lt-hs-ghi ot-ghi-luu">💾 Bài đang làm tự lưu sau mỗi câu. Thoát ra giữa chừng, lần sau vào bấm <b>▶ Làm tiếp</b>' + (window.QM_TK && QM_TK.hoSoId && QM_TK.hoSoId() ? ' (cả trên máy khác, vì bạn đã đăng nhập)' : '; đăng nhập Google để làm tiếp được trên máy khác') + '.</p>' : '') + '</div>';
+  }
+
+  // ---------- 🔒 giáo viên: chọn số câu mỗi lượt ----------
+  function goiMc(p) {
+    return fetch(window.QM_API, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(p) })
+      .then(function (r) { return r.json(); }).then(function (d) { if (!d || !d.ok) throw new Error((d && d.loi) || 'Máy chủ không nhận'); return d; });
+  }
+  function veGv(tb, loi) {
+    var khu = el.querySelector('.ot-gv-khu'); if (!khu) return;
+    var tong = P.cau ? P.cau.length : 0, hienTai = Math.min(P.soCau || tong, TRAN_CAU);
+    khu.innerHTML = '<div class="ot-gv-hop"><b>🔒 Giáo viên: số câu mỗi lượt</b>' +
+      (PHAN === 'tong-hop' ? '' : '<p class="lt-hs-ghi">Phần này có <b>' + tong + '</b> câu. Điền số nhỏ hơn thì mỗi lượt bốc ngẫu nhiên, rải đều các nhóm; điền từ ' + tong + ' trở lên thì làm hết.</p>') +
+      '<div class="ot-gv-hang"><label>Mật khẩu <input type="password" class="ot-gv-mk" autocomplete="off"></label>' +
+      '<label>Số câu <input type="number" class="ot-gv-so" min="1" max="' + TRAN_CAU + '" value="' + hienTai + '"></label>' +
+      '<button type="button" class="btn solid ot-gv-luu">Lưu</button></div>' +
+      '<p class="lt-hs-ghi">Tối đa ' + TRAN_CAU + ' câu mỗi lượt. Lưu xong, học sinh mở (hoặc tải lại) trang sẽ thấy số mới.</p>' +
+      (tb ? '<p class="ot-gv-tb' + (loi ? ' loi' : '') + '">' + esc(tb) + '</p>' : '') + '</div>';
+  }
+  function luuCauHinh() {
+    var mk = el.querySelector('.ot-gv-mk').value, n = parseInt(el.querySelector('.ot-gv-so').value, 10), nut = el.querySelector('.ot-gv-luu');
+    if (!mk) return veGv('Nhập mật khẩu giáo viên nhé.', true);
+    if (!(n >= 1 && n <= TRAN_CAU)) return veGv('Số câu từ 1 đến ' + TRAN_CAU + '.', true);
+    nut.disabled = true; nut.textContent = '⏳ Đang lưu…';
+    goiMc({ action: 'baiDichKiem', matKhau: mk }).then(function () {
+      return fetch(window.QM_API + '?action=baiDich').then(function (r) { return r.json(); });
+    }).then(function (s) {
+      var de = s && s.ok && s.deBai ? s.deBai : JSON.parse(JSON.stringify(DE_GOC.dich || {}));
+      delete de.phienBanDe;
+      de.cauHinhOnTap = Object.assign({}, de.cauHinhOnTap || {}); de.cauHinhOnTap[PHAN] = n;
+      return goiMc({ action: 'baiDichLuu', matKhau: mk, deBai: de }).then(function () { CH = de.cauHinhOnTap; });
+    }).then(function () { apCauHinh(); veBatDau(); var k = el.querySelector('.ot-gv-khu'); if (k) { veGv('✅ Đã lưu: mỗi lượt ' + P.soCau + ' câu.'); } })
+      .catch(function (e) { veGv('Chưa lưu được: ' + e.message, true); });
   }
   function luuHs() {
     var t = el.querySelector('.ot-ten'), l = el.querySelector('.ot-lop'); if (!t) return;
@@ -375,6 +409,8 @@
     if (t.closest('.ot-am')) { AM.bat = !AM.bat; try { localStorage.setItem('qm-am-hieu-ung', AM.bat ? '1' : '0'); } catch (er) {} if (!AM.bat) TV.dungDoc();
       el.querySelectorAll('.ot-am').forEach(function (b) { b.outerHTML = nutAm(); }); amThanh('cham'); return; }
     if (t.closest('.ot-hien-py')) { var an = el.querySelector('.ot-van-py').hidden; el.querySelectorAll('.ot-van-py').forEach(function (p) { p.hidden = !an; }); t.closest('.ot-hien-py').textContent = an ? 'Ẩn pinyin' : 'Hiện pinyin'; return; }
+    if (t.closest('.ot-gv-mo')) { var kg = el.querySelector('.ot-gv-khu'); if (kg.innerHTML) kg.innerHTML = ''; else veGv(); return; }
+    if (t.closest('.ot-gv-luu')) { luuCauHinh(); return; }
     var lt = t.closest('.ot-ld-tiep'); if (lt) { luuHs(); if (khoiPhuc(lt.dataset.bai)) { amThanh('batDau'); veCau(); veDau(); } else veBatDau(); return; }
     var lb = t.closest('.ot-ld-bo'); if (lb) { var bb = lb.dataset.bai ? P.bai.filter(function (x) { return x.ma === lb.dataset.bai; })[0] : null; if (LD) LD.xoa(khoaLD(bb)); veBatDau(); return; }
     var cb = t.closest('.ot-chon-bai'); if (cb) { luuHs(); if (LD && LD.doc(khoaLD(P.bai[+cb.dataset.k])) && khoiPhuc(P.bai[+cb.dataset.k].ma)) { amThanh('batDau'); veCau(); veDau(); return; }
@@ -432,8 +468,20 @@
 
   // ---------- nạp dữ liệu ----------
   el.innerHTML = '<div class="tv-trong">Đang tải bài ôn tập…</div>';
+  var DE_GOC = null, DE_MC = null, CH = {};                       // CH: số câu mỗi lượt do giáo viên chọn (lưu cùng bản đề Bài dịch trên máy chủ điểm)
+  function napCauHinh() {
+    if (!window.QM_API) return Promise.resolve();
+    var hoan = new Promise(function (_, tu) { setTimeout(function () { tu(new Error('het-gio')); }, 4000); });
+    return Promise.race([fetch(window.QM_API + '?action=baiDich').then(function (r) { return r.json(); }), hoan]).then(function (s) {
+      if (s && s.ok && s.deBai) { DE_MC = s.deBai; CH = s.deBai.cauHinhOnTap || {}; }
+    }).catch(function () {});
+  }
+  function apCauHinh() { var n = parseInt(CH[PHAN], 10); if (n >= 1 && n <= TRAN_CAU && PHAN !== 'doc-hieu') P.soCau = n; }
   fetch(window.QM_OT_TEP).then(function (r) { if (!r.ok) throw r; return r.json(); }).then(function (d) {
+    DE_GOC = d;
+    return napCauHinh().then(function () {
     P = PHAN === 'tong-hop' ? tongHop(d) : d.phan[PHAN]; if (!P) throw new Error('Không có phần ' + PHAN);
-    veBatDau();
+    apCauHinh(); veBatDau();
+    });
   }).catch(function () { el.innerHTML = '<div class="tv-trong">Chưa tải được bài ôn tập, bạn kiểm tra mạng rồi thử lại nhé.</div>'; });
 })();

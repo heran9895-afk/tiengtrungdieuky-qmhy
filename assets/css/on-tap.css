@@ -156,3 +156,13 @@
 .ot-theo-phan li{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 12px;border:1.5px solid var(--line);border-radius:12px;background:#fffaf0;font-size:14.5px}
 .ot-theo-phan li.dung{border-color:var(--ok);background:var(--ok-bg)}
 .ot-theo-phan b{font-size:16px}
+
+/* Chế độ giáo viên: chọn số câu mỗi lượt */
+.ot-gv{margin-top:14px;text-align:center}
+.ot-gv-mo{background:none;border:none;color:var(--muted,#8a7f6e);font:inherit;font-size:13.5px;cursor:pointer;text-decoration:underline;padding:4px 8px}
+.ot-gv-hop{background:#fff7e0;border:1.5px solid var(--gold);border-radius:14px;padding:12px 14px;margin-top:8px;text-align:left;font-size:14.5px;line-height:1.5}
+.ot-gv-hang{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;margin:8px 0}
+.ot-gv-hang label{display:flex;flex-direction:column;gap:3px;font-size:13.5px}
+.ot-gv-hang input{padding:7px 10px;border:1.5px solid #d9cfb8;border-radius:10px;font:inherit;width:140px}
+.ot-gv-hang input.ot-gv-so{width:90px}
+.ot-gv-tb{margin:6px 0 0;font-weight:600;color:#1d7a46}.ot-gv-tb.loi{color:#c0392b}
