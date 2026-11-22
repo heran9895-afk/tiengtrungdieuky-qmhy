@@ -40,7 +40,7 @@ class _EpChu:
     """Khóa nào CHỨA một trong các chuỗi này thì thu lại dù đã có file (bác Nhiên báo 18/11/2026: 编辑 đọc biānjī, cần biānjí)."""
     def __init__(self, *chu): self.chu = chu
     def __contains__(self, k): return any(c in k for c in self.chu)
-REDO_HSK5 = _EpChu('编辑', '那')
+REDO_HSK5 = _EpChu('编辑', '那', '挨')
 REDO_NA = _EpChu('那')   # cấp 1–4: thu lại mọi từ/cụm/câu có 那 (Gemini đọc nèi, cần nà); dùng DEN mới để sổ gom lại
 
 
@@ -55,6 +55,22 @@ def gon(s):
     return re.sub(r'([。？！，])\1+', r'\1', re.sub(r'^[…⋯.·\s]+', '', str(s).strip()))
 def han(s): return ''.join(re.findall(r'[一-鿿]', s or ''))
 def md10(s): return hashlib.md5(s.encode()).hexdigest()[:10]
+
+
+_CHU_PY = 'a-zA-ZāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜüÜ'
+
+
+def thay_am(text, py=''):
+    """Thay chữ Gemini hay đọc sai bằng chữ cùng âm mà Gemini đọc chắc (khóa file không đổi).
+    那 → 纳 (nà, tránh nèi; cả chữ đứng riêng); 挨: theo pinyin của mục, ái (挨打 挨饿 挨骂) → 癌, āi (挨着 挨家挨户) → 哀.
+    Mục có cả hai âm thì giữ 挨 (cô nghe)."""
+    t = str(text).replace('那', '纳')
+    if '挨' in t:
+        p = unicodedata.normalize('NFC', py or '')
+        a2 = re.search(r'(?<![%s])ái' % _CHU_PY, p); a1 = re.search(r'(?<![%s])āi' % _CHU_PY, p)
+        if a2 and not a1: t = t.replace('挨', '癌')
+        elif a1 and not a2: t = t.replace('挨', '哀')
+    return t
 
 
 def khong_dau(p):
@@ -133,7 +149,7 @@ def gom(cap, tu, den, ep=None):
         if not o and k in B and k not in (ep or ()): return
         if not k or id_ in seen: return
         seen.add(id_)
-        if len(han(k)) > 1 and '那' in text: text = text.replace('那', '纳')   # Gemini hay đọc 那 thành nèi; 纳 chỉ đọc nà (khóa file vẫn theo chữ gốc 那)
+        text = thay_am(text, py)   # 那 → 纳 (chỉ đọc nà), 挨 → 癌 (ái) / 哀 (āi); khóa file vẫn theo chữ gốc
         it = dict(id=id_, k=k, text=gon(text), py=(py or '').replace('·', '').strip(), typ=typ, thu='cau' if typ == 'cau' else 'tu',
                   src=src, ten=md10(id_ if o else k), o=o, trang='cho')
         out.append(it)
