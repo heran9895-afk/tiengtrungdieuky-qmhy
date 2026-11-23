@@ -9,7 +9,7 @@ import json, os, re, sys
 GOC = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MAU = os.path.join(GOC, 'chuong-trinh-hsk', 'hsk1', 'bai-5')
 SO = {1: '一', 2: '二', 3: '三', 4: '四', 5: '五', 6: '六', 7: '七', 8: '八', 9: '九'}
-V = '20261111a'                                           # đổi khi sửa data để trình duyệt nạp lại
+V = '20261124a'                                           # đổi khi sửa data để trình duyệt nạp lại
 TRANG = ['index', 'tu-vung', 'ngu-phap', 'on-tap-1', 'on-tap-2', 'on-tap-3', 'bai-tap', 'test-dau-gio']
 # Mô tả ngắn từng điểm ngữ pháp trên thẻ ở trang bài (sửa cho khớp bài)
 NP_MOTA = {
@@ -17,6 +17,10 @@ NP_MOTA = {
      'cách đọc số điện thoại, 给……打电话, 想, 哪些 / 些, 非常, 怎么 / 怎么样, câu liên động, lượng từ'),
  7: ('Cách nói giờ · <span class="hanzi">前 / 后</span> · <span class="hanzi">吧 · 呢</span> · vị trí phó từ và từ chỉ thời gian · <span class="hanzi">在</span> + nơi chốn · <span class="hanzi">在</span> + nơi chốn + ĐT · lượng từ',
      'cách nói giờ, 前 / 后, 吧, 呢, vị trí phó từ và từ chỉ thời gian, 在 + nơi chốn, 在 + nơi chốn + ĐT, lượng từ'),
+ 8: ('Từ chỉ phương vị <span class="hanzi">上 · 下 · 里 · 外 · 前 · 后 (+面)</span> · lượng từ <span class="hanzi">只 · 张 · 所</span> · <span class="hanzi">没(有) · 还没</span>, phân biệt <span class="hanzi">不</span> và <span class="hanzi">没</span> · bổ ngữ kết quả · <span class="hanzi">能</span>',
+     'từ chỉ phương vị, lượng từ 只 / 张 / 所, 没(有) / 还没, phân biệt 不 và 没, bổ ngữ kết quả, 能'),
+ 9: ('<span class="hanzi">……边</span> · câu tồn hiện · lượng từ <span class="hanzi">家 · 本 · 把 · 首</span> · <span class="hanzi">这 / 那 / 哪</span> + lượng từ · <span class="hanzi">第</span> + số · thời gian + <span class="hanzi">在</span> + nơi chốn · <span class="hanzi">和</span>',
+     '……边, câu tồn hiện, lượng từ 家 / 本 / 把 / 首, 这 / 那 / 哪 + lượng từ, 第 + số, thời gian + 在 + nơi chốn, 和'),
 }
 
 

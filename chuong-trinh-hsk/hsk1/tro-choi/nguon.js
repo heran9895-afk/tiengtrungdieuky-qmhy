@@ -4,7 +4,7 @@
    Chém chữ Hán và Đỉnh luyện chữ cần thêm file data/bai/tro-choi/<ma>.json (dựng bằng tools/tro_choi_du_lieu.py hsk3).
    ========================================================= */
 (function () {
-  var V = '?v=20261029f', D = '../../../data/bai/';
+  var V = '?v=20261124a', D = '../../../data/bai/';
   var BAI = [
     { ma: 'bai-1', ten: 'Bài 1', diem: 'bai1' },
     { ma: 'bai-2', ten: 'Bài 2', diem: 'bai2' },
@@ -12,7 +12,9 @@
     { ma: 'bai-4', ten: 'Bài 4', diem: 'bai4' },
     { ma: 'bai-5', ten: 'Bài 5', diem: 'bai5' },
     { ma: 'bai-6', ten: 'Bài 6', diem: 'bai6' },
-    { ma: 'bai-7', ten: 'Bài 7', diem: 'bai7' }
+    { ma: 'bai-7', ten: 'Bài 7', diem: 'bai7' },
+    { ma: 'bai-8', ten: 'Bài 8', diem: 'bai8' },
+    { ma: 'bai-9', ten: 'Bài 9', diem: 'bai9' }
   ];
   var CHUNG = { phamVi: 'h3-hsk1', tongHop: true, maDiem: '', tenDiem: 'HSK 3.0 · ', tongHopDiem: 'hsk1-tong-hop-bai0', bxh: 'bang-xep-hang.html' };   // mã điểm HSK 3.0 không có tiền tố, như Bài tập 3.0
   function cauHinh(thuMuc) {

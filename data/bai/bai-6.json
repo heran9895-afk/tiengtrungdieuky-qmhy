@@ -4657,17 +4657,17 @@
   }
  ],
  "ctTruoc": {
-  "天": {
-   "ma": "1-0181",
-   "han": "今天",
-   "bai": "Bài 5",
-   "url": "chuong-trinh-hsk/hsk1/bai-5/tu-vung.html"
-  },
   "明": {
    "ma": "1-0247",
    "han": "明年",
    "bai": "Bài 4",
    "url": "chuong-trinh-hsk/hsk1/bai-4/tu-vung.html"
+  },
+  "天": {
+   "ma": "1-0181",
+   "han": "今天",
+   "bai": "Bài 5",
+   "url": "chuong-trinh-hsk/hsk1/bai-5/tu-vung.html"
   },
   "哪": {
    "ma": "1-0250",

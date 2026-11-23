@@ -1,0 +1,4679 @@
+{
+ "bai": 9,
+ "ten": "第九课：我明天上午在学校学习",
+ "tenViet": "Bài 9: Sáng mai tôi học ở trường",
+ "pinyinTen": "Dì jiǔ kè: Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí",
+ "tenRieng": [],
+ "maBaiTap": "bai9-bai-tap",
+ "tu": [
+  {
+   "Mã": "1-0292",
+   "Chữ Hán": "前边",
+   "Pinyin": "qiánbian",
+   "Âm Hán Việt": "TIỀN BIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "phía trước, đằng trước",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "学校前边 | xuéxiào qiánbian\n在前边 | zài qiánbian\n前边有 | qiánbian yǒu",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "学校前边有一家电影院。",
+   "Pinyin câu 1": "Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn.",
+   "Nghĩa câu 1": "Phía trước trường có một rạp chiếu phim.",
+   "Đọc câu 1": "",
+   "Câu 2": "我家前边是一家书店。",
+   "Pinyin câu 2": "Wǒ jiā qiánbian shì yì jiā shūdiàn.",
+   "Nghĩa câu 2": "Phía trước nhà tôi là một hiệu sách.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0024",
+   "Chữ Hán": "边",
+   "Pinyin": "bian",
+   "Âm Hán Việt": "BIÊN",
+   "Từ loại": "hậu tố",
+   "Nghĩa tiếng Việt": "phía, bên (hậu tố chỉ phương vị)",
+   "Cấp HSK": "2",
+   "Thuận bút": "",
+   "Cụm từ": "前边 | qiánbian\n后边 | hòubian\n外边 | wàibian",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "医院在学校后边。",
+   "Pinyin câu 1": "Yīyuàn zài xuéxiào hòubian.",
+   "Nghĩa câu 1": "Bệnh viện ở phía sau trường.",
+   "Đọc câu 1": "",
+   "Câu 2": "学校后边是医院。",
+   "Pinyin câu 2": "Xuéxiào hòubian shì yīyuàn.",
+   "Nghĩa câu 2": "Phía sau trường là bệnh viện.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0169",
+   "Chữ Hán": "家",
+   "Pinyin": "jiā",
+   "Âm Hán Việt": "GIA",
+   "Từ loại": "lượng từ",
+   "Nghĩa tiếng Việt": "nhà, cửa hàng… (lượng từ)",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "一家电影院 | yì jiā diànyǐngyuàn\n一家超市 | yì jiā chāoshì\n这家饭店 | zhè jiā fàndiàn",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "这家饭店的菜真好吃！",
+   "Pinyin câu 1": "Zhè jiā fàndiàn de cài zhēn hǎochī!",
+   "Nghĩa câu 1": "Món ăn của nhà hàng này ngon thật!",
+   "Đọc câu 1": "",
+   "Câu 2": "A：你家前边有超市吗？\nB：有，有两家超市，还有一家商店。",
+   "Pinyin câu 2": "A: Nǐ jiā qiánbian yǒu chāoshì ma?\nB: Yǒu, yǒu liǎng jiā chāoshì, hái yǒu yì jiā shāngdiàn.",
+   "Nghĩa câu 2": "A: Phía trước nhà bạn có siêu thị không?\nB: Có, có hai siêu thị và một cửa hàng.",
+   "Đọc câu 2": "你家前边有超市吗？有，有两家超市，还有一家商店。"
+  },
+  {
+   "Mã": "bai9-那个",
+   "Chữ Hán": "那个",
+   "Pinyin": "nàge",
+   "Âm Hán Việt": "NA CÁ",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "cái kia, cái đó, người kia",
+   "Cấp HSK": "NK",
+   "Thuận bút": "",
+   "Cụm từ": "那个人 | nàge rén\n那个老师 | nàge lǎoshī\n那个医生 | nàge yīshēng",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：那个人是谁？\nB：是我们的老师。",
+   "Pinyin câu 1": "A: Nàge rén shì shéi?\nB: Shì wǒmen de lǎoshī.",
+   "Nghĩa câu 1": "A: Người kia là ai?\nB: Là thầy cô của chúng tôi.",
+   "Đọc câu 1": "那个人是谁？是我们的老师。",
+   "Câu 2": "那个医生是我的同事。",
+   "Pinyin câu 2": "Nàge yīshēng shì wǒ de tóngshì.",
+   "Nghĩa câu 2": "Bác sĩ kia là đồng nghiệp của tôi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0368",
+   "Chữ Hán": "外边",
+   "Pinyin": "wàibian",
+   "Âm Hán Việt": "NGOẠI BIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bên ngoài, phía ngoài",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "学校外边 | xuéxiào wàibian\n在外边 | zài wàibian\n外边有 | wàibian yǒu",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我们七点在电影院外边见，好吗？",
+   "Pinyin câu 1": "Wǒmen qī diǎn zài diànyǐngyuàn wàibian jiàn, hǎo ma?",
+   "Nghĩa câu 1": "Bảy giờ chúng ta gặp ở bên ngoài rạp chiếu phim, được không?",
+   "Đọc câu 1": "",
+   "Câu 2": "我家外边有一家超市。",
+   "Pinyin câu 2": "Wǒ jiā wàibian yǒu yì jiā chāoshì.",
+   "Nghĩa câu 2": "Bên ngoài nhà tôi có một siêu thị.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "2-0659",
+   "Chữ Hán": "椅子",
+   "Pinyin": "yǐzi",
+   "Âm Hán Việt": "Ỷ TỬ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "cái ghế",
+   "Cấp HSK": "2",
+   "Thuận bút": "椅",
+   "Cụm từ": "一把椅子 | yì bǎ yǐzi\n桌子和椅子 | zhuōzi hé yǐzi\n椅子上 | yǐzi shang",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "椅子在桌子左边，上边有一本书。",
+   "Pinyin câu 1": "Yǐzi zài zhuōzi zuǒbian, shàngbian yǒu yì běn shū.",
+   "Nghĩa câu 1": "Cái ghế ở bên trái cái bàn, bên trên có một quyển sách.",
+   "Đọc câu 1": "",
+   "Câu 2": "A：你的手机在哪儿？\nB：在椅子上。",
+   "Pinyin câu 2": "A: Nǐ de shǒujī zài nǎr?\nB: Zài yǐzi shang.",
+   "Nghĩa câu 2": "A: Điện thoại của bạn ở đâu?\nB: Ở trên ghế.",
+   "Đọc câu 2": "你的手机在哪儿？在椅子上。"
+  },
+  {
+   "Mã": "1-0315",
+   "Chữ Hán": "上",
+   "Pinyin": "shang",
+   "Âm Hán Việt": "THƯỢNG",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "trên, ở trên",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "桌子上 | zhuōzi shang\n椅子上 | yǐzi shang\n书上 | shū shang",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "椅子上有一本中文书。",
+   "Pinyin câu 1": "Yǐzi shang yǒu yì běn Zhōngwén shū.",
+   "Nghĩa câu 1": "Trên ghế có một quyển sách tiếng Trung.",
+   "Đọc câu 1": "",
+   "Câu 2": "我的手机在桌子上。",
+   "Pinyin câu 2": "Wǒ de shǒujī zài zhuōzi shang.",
+   "Nghĩa câu 2": "Điện thoại của tôi ở trên bàn.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0022",
+   "Chữ Hán": "本",
+   "Pinyin": "běn",
+   "Âm Hán Việt": "BẢN",
+   "Từ loại": "lượng từ",
+   "Nghĩa tiếng Việt": "quyển, cuốn",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "一本书 | yì běn shū\n这本书 | zhè běn shū\n两本中文书 | liǎng běn Zhōngwén shū",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：这本书是谁的？\nB：是我的。",
+   "Pinyin câu 1": "A: Zhè běn shū shì shéi de?\nB: Shì wǒ de.",
+   "Nghĩa câu 1": "A: Quyển sách này của ai?\nB: Của tôi.",
+   "Đọc câu 1": "这本书是谁的？是我的。",
+   "Câu 2": "我有两本中文书。",
+   "Pinyin câu 2": "Wǒ yǒu liǎng běn Zhōngwén shū.",
+   "Nghĩa câu 2": "Tôi có hai quyển sách tiếng Trung.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0341",
+   "Chữ Hán": "书",
+   "Pinyin": "shū",
+   "Âm Hán Việt": "THƯ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "sách",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "看书 | kàn shū\n中文书 | Zhōngwén shū\n书店 | shūdiàn",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我的书在桌子上。",
+   "Pinyin câu 1": "Wǒ de shū zài zhuōzi shang.",
+   "Nghĩa câu 1": "Sách của tôi ở trên bàn.",
+   "Đọc câu 1": "",
+   "Câu 2": "他在书店买了三本书。",
+   "Pinyin câu 2": "Tā zài shūdiàn mǎi le sān běn shū.",
+   "Nghĩa câu 2": "Anh ấy đã mua ba quyển sách ở hiệu sách.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0254",
+   "Chữ Hán": "那",
+   "Pinyin": "nà",
+   "Âm Hán Việt": "NA",
+   "Từ loại": "đại từ",
+   "Nghĩa tiếng Việt": "kia, đó",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "那本书 | nà běn shū\n那家书店 | nà jiā shūdiàn\n那边 | nàbian",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我们晚上去那家电影院看电影吧。",
+   "Pinyin câu 1": "Wǒmen wǎnshang qù nà jiā diànyǐngyuàn kàn diànyǐng ba.",
+   "Nghĩa câu 1": "Tối nay chúng ta đến rạp chiếu phim kia xem phim nhé.",
+   "Đọc câu 1": "",
+   "Câu 2": "那是谁的书？",
+   "Pinyin câu 2": "Nà shì shéi de shū?",
+   "Nghĩa câu 2": "Đó là sách của ai?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0075",
+   "Chữ Hán": "第",
+   "Pinyin": "dì",
+   "Âm Hán Việt": "ĐỆ",
+   "Từ loại": "tiền tố",
+   "Nghĩa tiếng Việt": "thứ (số thứ tự)",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "第一 | dì-yī\n第一个 | dì-yī ge\n第二本书 | dì-èr běn shū",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "这是我的第二本中文书。",
+   "Pinyin câu 1": "Zhè shì wǒ de dì-èr běn Zhōngwén shū.",
+   "Nghĩa câu 1": "Đây là quyển sách tiếng Trung thứ hai của tôi.",
+   "Đọc câu 1": "",
+   "Câu 2": "A：你是第几个？\nB：我是第三个。",
+   "Pinyin câu 2": "A: Nǐ shì dì-jǐ ge?\nB: Wǒ shì dì-sān ge.",
+   "Nghĩa câu 2": "A: Bạn là người thứ mấy?\nB: Tôi là người thứ ba.",
+   "Đọc câu 2": "你是第几个？我是第三个。"
+  },
+  {
+   "Mã": "1-0420",
+   "Chữ Hán": "学习",
+   "Pinyin": "xuéxí",
+   "Âm Hán Việt": "HỌC TẬP",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "học, học tập",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "学习汉语 | xuéxí Hànyǔ\n学习中文 | xuéxí Zhōngwén\n在学校学习 | zài xuéxiào xuéxí",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我明天上午在学校学习。",
+   "Pinyin câu 1": "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.",
+   "Nghĩa câu 1": "Sáng mai tôi học ở trường.",
+   "Đọc câu 1": "",
+   "Câu 2": "A：你晚上在家里学习吗？\nB：不，我在学校学习。",
+   "Pinyin câu 2": "A: Nǐ wǎnshang zài jiā li xuéxí ma?\nB: Bù, wǒ zài xuéxiào xuéxí.",
+   "Nghĩa câu 2": "A: Buổi tối bạn học ở nhà à?\nB: Không, tôi học ở trường.",
+   "Đọc câu 2": "你晚上在家里学习吗？不，我在学校学习。"
+  },
+  {
+   "Mã": "1-0500",
+   "Chữ Hán": "做",
+   "Pinyin": "zuò",
+   "Âm Hán Việt": "TỐ",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "làm",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "做饭 | zuò fàn\n做菜 | zuò cài\n做什么 | zuò shénme",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "明天星期六，你做什么？",
+   "Pinyin câu 1": "Míngtiān Xīngqīliù, nǐ zuò shénme?",
+   "Nghĩa câu 1": "Ngày mai thứ bảy, bạn làm gì?",
+   "Đọc câu 1": "",
+   "Câu 2": "饭做好了，大家吃吧。",
+   "Pinyin câu 2": "Fàn zuòhǎo le, dàjiā chī ba.",
+   "Nghĩa câu 2": "Cơm nấu xong rồi, mọi người ăn đi.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0007",
+   "Chữ Hán": "白天",
+   "Pinyin": "báitiān",
+   "Âm Hán Việt": "BẠCH THIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "ban ngày",
+   "Cấp HSK": "1",
+   "Thuận bút": "白",
+   "Cụm từ": "今天白天 | jīntiān báitiān\n明天白天 | míngtiān báitiān\n白天上班 | báitiān shàngbān",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我白天上班，晚上在家学习汉语。",
+   "Pinyin câu 1": "Wǒ báitiān shàngbān, wǎnshang zài jiā xuéxí Hànyǔ.",
+   "Nghĩa câu 1": "Ban ngày tôi đi làm, buổi tối học tiếng Trung ở nhà.",
+   "Đọc câu 1": "",
+   "Câu 2": "A：你白天在哪儿？\nB：我白天在医院工作。",
+   "Pinyin câu 2": "A: Nǐ báitiān zài nǎr?\nB: Wǒ báitiān zài yīyuàn gōngzuò.",
+   "Nghĩa câu 2": "A: Ban ngày bạn ở đâu?\nB: Ban ngày tôi làm việc ở bệnh viện.",
+   "Đọc câu 2": "你白天在哪儿？我白天在医院工作。"
+  },
+  {
+   "Mã": "1-0091",
+   "Chữ Hán": "读书",
+   "Pinyin": "dú∥shū",
+   "Âm Hán Việt": "ĐỘC THƯ",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "đọc sách, đi học",
+   "Cấp HSK": "1",
+   "Thuận bút": "读",
+   "Cụm từ": "在家里读书 | zài jiā li dúshū\n喜欢读书 | xǐhuan dúshū\n读好书 | dú hǎo shū",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我白天在家里读书，不去学校。",
+   "Pinyin câu 1": "Wǒ báitiān zài jiā li dúshū, bú qù xuéxiào.",
+   "Nghĩa câu 1": "Ban ngày tôi đọc sách ở nhà, không đến trường.",
+   "Đọc câu 1": "",
+   "Câu 2": "A：你喜欢读什么书？\nB：我喜欢读好书。",
+   "Pinyin câu 2": "A: Nǐ xǐhuan dú shénme shū?\nB: Wǒ xǐhuan dú hǎo shū.",
+   "Nghĩa câu 2": "A: Bạn thích đọc sách gì?\nB: Tôi thích đọc sách hay.",
+   "Đọc câu 2": "你喜欢读什么书？我喜欢读好书。"
+  },
+  {
+   "Mã": "1-0145",
+   "Chữ Hán": "和",
+   "Pinyin": "hé",
+   "Âm Hán Việt": "HÒA",
+   "Từ loại": "giới từ, liên từ",
+   "Nghĩa tiếng Việt": "với, cùng; và",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "和朋友 | hé péngyou\n和妈妈 | hé māma\n桌子和椅子 | zhuōzi hé yǐzi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "晚上我和朋友们去看电影。",
+   "Pinyin câu 1": "Wǎnshang wǒ hé péngyoumen qù kàn diànyǐng.",
+   "Nghĩa câu 1": "Buổi tối tôi cùng các bạn đi xem phim.",
+   "Đọc câu 1": "",
+   "Câu 2": "我和妈妈在家里做饭。",
+   "Pinyin câu 2": "Wǒ hé māma zài jiā li zuò fàn.",
+   "Nghĩa câu 2": "Tôi cùng mẹ nấu cơm ở nhà.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0284",
+   "Chữ Hán": "朋友",
+   "Pinyin": "péngyou",
+   "Âm Hán Việt": "BẰNG HỮU",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bạn, bạn bè",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "好朋友 | hǎo péngyou\n朋友们 | péngyoumen\n我的朋友 | wǒ de péngyou",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "他有不少中国朋友。",
+   "Pinyin câu 1": "Tā yǒu bù shǎo Zhōngguó péngyou.",
+   "Nghĩa câu 1": "Anh ấy có không ít bạn người Trung Quốc.",
+   "Đọc câu 1": "",
+   "Câu 2": "这个小朋友是老师的孩子。",
+   "Pinyin câu 2": "Zhè ge xiǎo péngyou shì lǎoshī de háizi.",
+   "Nghĩa câu 2": "Bé này là con của cô giáo.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0040",
+   "Chữ Hán": "唱",
+   "Pinyin": "chàng",
+   "Âm Hán Việt": "XƯỚNG",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "hát",
+   "Cấp HSK": "1",
+   "Thuận bút": "唱",
+   "Cụm từ": "唱歌 | chàng gē\n唱中文歌 | chàng Zhōngwén gē\n唱几首歌 | chàng jǐ shǒu gē",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "晚上我们去外边唱歌吧。",
+   "Pinyin câu 1": "Wǎnshang wǒmen qù wàibian chàng gē ba.",
+   "Nghĩa câu 1": "Buổi tối chúng ta ra ngoài hát nhé.",
+   "Đọc câu 1": "",
+   "Câu 2": "老师请他们唱几首中文歌。",
+   "Pinyin câu 2": "Lǎoshī qǐng tāmen chàng jǐ shǒu Zhōngwén gē.",
+   "Nghĩa câu 2": "Cô giáo mời họ hát vài bài hát tiếng Trung.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0119",
+   "Chữ Hán": "歌",
+   "Pinyin": "gē",
+   "Âm Hán Việt": "CA",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bài hát",
+   "Cấp HSK": "1",
+   "Thuận bút": "歌",
+   "Cụm từ": "中文歌 | Zhōngwén gē\n越南歌 | Yuènán gē\n一首歌 | yì shǒu gē",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：你喜欢唱歌吗？\nB：很喜欢。",
+   "Pinyin câu 1": "A: Nǐ xǐhuan chàng gē ma?\nB: Hěn xǐhuan.",
+   "Nghĩa câu 1": "A: Bạn có thích hát không?\nB: Rất thích.",
+   "Đọc câu 1": "你喜欢唱歌吗？很喜欢。",
+   "Câu 2": "我喜欢听中文歌。",
+   "Pinyin câu 2": "Wǒ xǐhuan tīng Zhōngwén gē.",
+   "Nghĩa câu 2": "Tôi thích nghe bài hát tiếng Trung.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0141",
+   "Chữ Hán": "好听",
+   "Pinyin": "hǎotīng",
+   "Âm Hán Việt": "HẢO THÍNH",
+   "Từ loại": "tính từ",
+   "Nghĩa tiếng Việt": "hay, dễ nghe",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "很好听 | hěn hǎotīng\n不好听 | bù hǎotīng\n好听的歌 | hǎotīng de gē",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "你唱歌很好听。",
+   "Pinyin câu 1": "Nǐ chàng gē hěn hǎotīng.",
+   "Nghĩa câu 1": "Bạn hát rất hay.",
+   "Đọc câu 1": "",
+   "Câu 2": "A：他唱歌好听吗？\nB：不太好听。",
+   "Pinyin câu 2": "A: Tā chàng gē hǎotīng ma?\nB: Bú tài hǎotīng.",
+   "Nghĩa câu 2": "A: Anh ấy hát có hay không?\nB: Không hay lắm.",
+   "Đọc câu 2": "他唱歌好听吗？不太好听。"
+  },
+  {
+   "Mã": "1-0080",
+   "Chữ Hán": "电视",
+   "Pinyin": "diànshì",
+   "Âm Hán Việt": "ĐIỆN THỊ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "ti vi, truyền hình",
+   "Cấp HSK": "1",
+   "Thuận bút": "视",
+   "Cụm từ": "看电视 | kàn diànshì\n新电视 | xīn diànshì\n买电视 | mǎi diànshì",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "昨天他们在超市买一台新电视。",
+   "Pinyin câu 1": "Zuótiān tāmen zài chāoshì mǎi yì tái xīn diànshì.",
+   "Nghĩa câu 1": "Hôm qua họ mua một chiếc ti vi mới ở siêu thị.",
+   "Đọc câu 1": "",
+   "Câu 2": "A：你喜欢看电视吗？\nB：喜欢。",
+   "Pinyin câu 2": "A: Nǐ xǐhuan kàn diànshì ma?\nB: Xǐhuan.",
+   "Nghĩa câu 2": "A: Bạn có thích xem ti vi không?\nB: Thích.",
+   "Đọc câu 2": "你喜欢看电视吗？喜欢。"
+  },
+  {
+   "Mã": "2-0196",
+   "Chữ Hán": "狗",
+   "Pinyin": "gǒu",
+   "Âm Hán Việt": "CẨU",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "con chó",
+   "Cấp HSK": "2",
+   "Thuận bút": "",
+   "Cụm từ": "小狗 | xiǎo gǒu\n大狗 | dà gǒu\n一只狗 | yì zhī gǒu",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "他们家有一只狗和两只猫。",
+   "Pinyin câu 1": "Tāmen jiā yǒu yì zhī gǒu hé liǎng zhī māo.",
+   "Nghĩa câu 1": "Nhà họ có một con chó và hai con mèo.",
+   "Đọc câu 1": "",
+   "Câu 2": "我家有一只大狗。",
+   "Pinyin câu 2": "Wǒ jiā yǒu yì zhī dà gǒu.",
+   "Nghĩa câu 2": "Nhà tôi có một con chó lớn.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "bai9-玩",
+   "Chữ Hán": "玩",
+   "Pinyin": "wán",
+   "Âm Hán Việt": "NGOẠN",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "chơi",
+   "Cấp HSK": "NK",
+   "Thuận bút": "玩",
+   "Cụm từ": "和小狗玩 | hé xiǎo gǒu wán\n去外边玩 | qù wàibian wán\n去朋友家玩 | qù péngyou jiā wán",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "孩子们和小狗玩。",
+   "Pinyin câu 1": "Háizimen hé xiǎo gǒu wán.",
+   "Nghĩa câu 1": "Bọn trẻ chơi với chú chó nhỏ.",
+   "Đọc câu 1": "",
+   "Câu 2": "A：星期六你做什么？\nB：我去朋友家玩。",
+   "Pinyin câu 2": "A: Xīngqīliù nǐ zuò shénme?\nB: Wǒ qù péngyou jiā wán.",
+   "Nghĩa câu 2": "A: Thứ bảy bạn làm gì?\nB: Tôi đến nhà bạn chơi.",
+   "Đọc câu 2": "星期六你做什么？我去朋友家玩。"
+  },
+  {
+   "Mã": "1-0497",
+   "Chữ Hán": "左边",
+   "Pinyin": "zuǒbian",
+   "Âm Hán Việt": "TẢ BIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bên trái",
+   "Cấp HSK": "1",
+   "Thuận bút": "左",
+   "Cụm từ": "桌子左边 | zhuōzi zuǒbian\n在左边 | zài zuǒbian\n左边有 | zuǒbian yǒu",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "饭店左边是一所学校。",
+   "Pinyin câu 1": "Fàndiàn zuǒbian shì yì suǒ xuéxiào.",
+   "Nghĩa câu 1": "Bên trái nhà hàng là một ngôi trường.",
+   "Đọc câu 1": "",
+   "Câu 2": "医院左边有一家书店。",
+   "Pinyin câu 2": "Yīyuàn zuǒbian yǒu yì jiā shūdiàn.",
+   "Nghĩa câu 2": "Bên trái bệnh viện có một hiệu sách.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0448",
+   "Chữ Hán": "右边",
+   "Pinyin": "yòubian",
+   "Âm Hán Việt": "HỮU BIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bên phải",
+   "Cấp HSK": "1",
+   "Thuận bút": "右",
+   "Cụm từ": "桌子右边 | zhuōzi yòubian\n在右边 | zài yòubian\n右边有 | yòubian yǒu",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "医院的右边是超市。",
+   "Pinyin câu 1": "Yīyuàn de yòubian shì chāoshì.",
+   "Nghĩa câu 1": "Bên phải bệnh viện là siêu thị.",
+   "Đọc câu 1": "",
+   "Câu 2": "我家右边有一家小店。",
+   "Pinyin câu 2": "Wǒ jiā yòubian yǒu yì jiā xiǎo diàn.",
+   "Nghĩa câu 2": "Bên phải nhà tôi có một cửa hàng nhỏ.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0214",
+   "Chữ Hán": "里边",
+   "Pinyin": "lǐbian",
+   "Âm Hán Việt": "LÝ BIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bên trong",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "超市里边 | chāoshì lǐbian\n在里边 | zài lǐbian\n里边有 | lǐbian yǒu",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我在超市里边呢。",
+   "Pinyin câu 1": "Wǒ zài chāoshì lǐbian ne.",
+   "Nghĩa câu 1": "Tôi đang ở bên trong siêu thị đây.",
+   "Đọc câu 1": "",
+   "Câu 2": "房间里边有一张桌子。",
+   "Pinyin câu 2": "Fángjiān lǐbian yǒu yì zhāng zhuōzi.",
+   "Nghĩa câu 2": "Bên trong phòng có một cái bàn.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0317",
+   "Chữ Hán": "上边",
+   "Pinyin": "shàngbian",
+   "Âm Hán Việt": "THƯỢNG BIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "phía trên, bên trên",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "桌子上边 | zhuōzi shàngbian\n在上边 | zài shàngbian\n上边有 | shàngbian yǒu",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "书在桌子上边。",
+   "Pinyin câu 1": "Shū zài zhuōzi shàngbian.",
+   "Nghĩa câu 1": "Sách ở phía trên bàn.",
+   "Đọc câu 1": "",
+   "Câu 2": "椅子上边有一只小猫。",
+   "Pinyin câu 2": "Yǐzi shàngbian yǒu yì zhī xiǎo māo.",
+   "Nghĩa câu 2": "Phía trên ghế có một con mèo nhỏ.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0391",
+   "Chữ Hán": "下边",
+   "Pinyin": "xiàbian",
+   "Âm Hán Việt": "HẠ BIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "phía dưới, bên dưới",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "桌子下边 | zhuōzi xiàbian\n在下边 | zài xiàbian\n下边有 | xiàbian yǒu",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "小猫在椅子下边。",
+   "Pinyin câu 1": "Xiǎo māo zài yǐzi xiàbian.",
+   "Nghĩa câu 1": "Con mèo nhỏ ở phía dưới ghế.",
+   "Đọc câu 1": "",
+   "Câu 2": "你的书在下边。",
+   "Pinyin câu 2": "Nǐ de shū zài xiàbian.",
+   "Nghĩa câu 2": "Sách của bạn ở phía dưới.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0148",
+   "Chữ Hán": "后边",
+   "Pinyin": "hòubian",
+   "Âm Hán Việt": "HẬU BIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "phía sau, đằng sau",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "学校后边 | xuéxiào hòubian\n在后边 | zài hòubian\n后边是 | hòubian shì",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我家后边是学校。",
+   "Pinyin câu 1": "Wǒ jiā hòubian shì xuéxiào.",
+   "Nghĩa câu 1": "Phía sau nhà tôi là trường học.",
+   "Đọc câu 1": "",
+   "Câu 2": "医院在书店后边。",
+   "Pinyin câu 2": "Yīyuàn zài shūdiàn hòubian.",
+   "Nghĩa câu 2": "Bệnh viện ở phía sau hiệu sách.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0255",
+   "Chữ Hán": "那边",
+   "Pinyin": "nàbian",
+   "Âm Hán Việt": "NA BIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "bên kia, chỗ kia",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "去那边 | qù nàbian\n在那边 | zài nàbian\n那边有 | nàbian yǒu",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "那边有超市和饭店。",
+   "Pinyin câu 1": "Nàbian yǒu chāoshì hé fàndiàn.",
+   "Nghĩa câu 1": "Bên kia có siêu thị và nhà hàng.",
+   "Đọc câu 1": "",
+   "Câu 2": "我们去那边买东西吧。",
+   "Pinyin câu 2": "Wǒmen qù nàbian mǎi dōngxi ba.",
+   "Nghĩa câu 2": "Chúng ta sang bên kia mua đồ nhé.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "3-0006",
+   "Chữ Hán": "把",
+   "Pinyin": "bǎ",
+   "Âm Hán Việt": "BẢ",
+   "Từ loại": "lượng từ",
+   "Nghĩa tiếng Việt": "cái (ghế, dao…)",
+   "Cấp HSK": "3",
+   "Thuận bút": "把",
+   "Cụm từ": "一把椅子 | yì bǎ yǐzi\n这把椅子 | zhè bǎ yǐzi\n几把椅子 | jǐ bǎ yǐzi",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "今天他们在商店买几把新椅子。",
+   "Pinyin câu 1": "Jīntiān tāmen zài shāngdiàn mǎi jǐ bǎ xīn yǐzi.",
+   "Nghĩa câu 1": "Hôm nay họ mua vài chiếc ghế mới ở cửa hàng.",
+   "Đọc câu 1": "",
+   "Câu 2": "房间里有一张桌子和两把椅子。",
+   "Pinyin câu 2": "Fángjiān li yǒu yì zhāng zhuōzi hé liǎng bǎ yǐzi.",
+   "Nghĩa câu 2": "Trong phòng có một cái bàn và hai cái ghế.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "4-0660",
+   "Chữ Hán": "首",
+   "Pinyin": "shǒu",
+   "Âm Hán Việt": "THỦ",
+   "Từ loại": "lượng từ",
+   "Nghĩa tiếng Việt": "bài (hát, thơ)",
+   "Cấp HSK": "4",
+   "Thuận bút": "首",
+   "Cụm từ": "一首歌 | yì shǒu gē\n这首歌 | zhè shǒu gē\n几首歌 | jǐ shǒu gē",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "这首歌很好听。",
+   "Pinyin câu 1": "Zhè shǒu gē hěn hǎotīng.",
+   "Nghĩa câu 1": "Bài hát này rất hay.",
+   "Đọc câu 1": "",
+   "Câu 2": "我会唱一首中文歌。",
+   "Pinyin câu 2": "Wǒ huì chàng yì shǒu Zhōngwén gē.",
+   "Nghĩa câu 2": "Tôi biết hát một bài hát tiếng Trung.",
+   "Đọc câu 2": ""
+  }
+ ],
+ "boThu": [],
+ "thanhPhan": {},
+ "ghepChu": [],
+ "chang": [
+  {
+   "so": 1,
+   "ten": "Ôn tập từ vựng 1",
+   "tu": [
+    "前边",
+    "边",
+    "外边",
+    "左边",
+    "右边",
+    "里边",
+    "上边",
+    "下边",
+    "后边",
+    "那边"
+   ],
+   "ghepChu": []
+  },
+  {
+   "so": 2,
+   "ten": "Ôn tập từ vựng 2",
+   "tu": [
+    "家",
+    "那个",
+    "椅子",
+    "上",
+    "本",
+    "书",
+    "那",
+    "第",
+    "把"
+   ],
+   "ghepChu": []
+  },
+  {
+   "so": 3,
+   "ten": "Ôn tập từ vựng 3",
+   "tu": [
+    "学习",
+    "做",
+    "白天",
+    "读书",
+    "和",
+    "朋友",
+    "唱",
+    "歌",
+    "好听",
+    "电视",
+    "狗",
+    "玩",
+    "首"
+   ],
+   "ghepChu": []
+  }
+ ],
+ "nguPhap": [
+  {
+   "id": "bian",
+   "ten": "Từ chỉ phương vị + 边: 前边 · 后边 · 左边 · 右边 · 里边 · 外边 · 上边 · 下边",
+   "congThuc": [
+    [
+     [
+      "DT (+的)",
+      "dt"
+     ],
+     [
+      "前 / 后 / 左 / 右 / 里 / 外 / 上 / 下",
+      "codinh"
+     ],
+     [
+      "边",
+      "codinh"
+     ]
+    ]
+   ],
+   "giaiThich": "**边** ghép sau **từ chỉ phương vị** tạo thành **前边, 后边, 左边, 右边, 里边, 外边, 上边, 下边**. Đặt sau danh từ chỉ nơi chốn hoặc vật: **学校后边** (phía sau trường), **桌子左边** (bên trái bàn). Công thức: **A (的) + ……边** = \"phía … của A\". **边** và **面** dùng thay nhau: 前边 = 前面. Chỉ nơi xa người nói dùng **那边** (bên kia).",
+   "y": [
+    {
+     "noiDung": "DT + 前 / 后 / 左 / 右 / 里 / 外 / 上 / 下 + 边",
+     "cum": [
+      [
+       "学校前边",
+       "xuéxiào qiánbian",
+       "",
+       [
+        [
+         "学校",
+         null
+        ],
+        [
+         "前边",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "医院后边",
+       "yīyuàn hòubian",
+       "",
+       [
+        [
+         "医院",
+         null
+        ],
+        [
+         "后边",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "桌子左边",
+       "zhuōzi zuǒbian",
+       "",
+       [
+        [
+         "桌子",
+         null
+        ],
+        [
+         "左边",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "桌子右边",
+       "zhuōzi yòubian",
+       "",
+       [
+        [
+         "桌子",
+         null
+        ],
+        [
+         "右边",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "超市里边",
+       "chāoshì lǐbian",
+       "",
+       [
+        [
+         "超市",
+         null
+        ],
+        [
+         "里边",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "学校后边有一家超市。",
+       "Xuéxiào hòubian yǒu yì jiā chāoshì.",
+       "",
+       [
+        [
+         "学校",
+         null
+        ],
+        [
+         "后边",
+         "codinh"
+        ],
+        [
+         "有一家超市。",
+         null
+        ]
+       ]
+      ],
+      [
+       "书在桌子上边。",
+       "Shū zài zhuōzi shàngbian.",
+       "",
+       [
+        [
+         "书在桌子",
+         null
+        ],
+        [
+         "上边",
+         "codinh"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "DT + 的 + ……边",
+     "cum": [
+      [
+       "医院的右边",
+       "yīyuàn de yòubian",
+       "",
+       [
+        [
+         "医院",
+         null
+        ],
+        [
+         "的",
+         "codinh"
+        ],
+        [
+         "右边",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "饭店的外边",
+       "fàndiàn de wàibian",
+       "",
+       [
+        [
+         "饭店",
+         null
+        ],
+        [
+         "的",
+         "codinh"
+        ],
+        [
+         "外边",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "电影院的前边是一家饭店。",
+       "Diànyǐngyuàn de qiánbian shì yì jiā fàndiàn.",
+       "",
+       [
+        [
+         "电影院",
+         null
+        ],
+        [
+         "的",
+         "codinh"
+        ],
+        [
+         "前边",
+         "codinh"
+        ],
+        [
+         "是一家饭店。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "那边: bên kia",
+     "cum": [
+      [
+       "去那边",
+       "qù nàbian",
+       "",
+       [
+        [
+         "去",
+         null
+        ],
+        [
+         "那边",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "在那边",
+       "zài nàbian",
+       "",
+       [
+        [
+         "在",
+         null
+        ],
+        [
+         "那边",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "那边有超市和饭店。",
+       "Nàbian yǒu chāoshì hé fàndiàn.",
+       "",
+       [
+        [
+         "那边",
+         "codinh"
+        ],
+        [
+         "有超市和饭店。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**边** đọc **nhẹ** (bian) khi đứng sau: 前边 (qiánbian), 后边 (hòubian).",
+    "**……边** và **……面** nghĩa như nhau: 前边 = 前面, 后边 = 后面.",
+    "**里边, 外边** chỉ **bên trong, bên ngoài**: 超市里边 = 超市里面."
+   ]
+  },
+  {
+   "id": "cunxian",
+   "ten": "Câu tồn hiện: nơi chốn + 有 / 是 + người, vật",
+   "congThuc": [
+    [
+     [
+      "N",
+      "dt"
+     ],
+     [
+      "在",
+      "codinh"
+     ],
+     [
+      "Nơi chốn",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "Nơi chốn",
+      "dt"
+     ],
+     [
+      "有 / 是",
+      "codinh"
+     ],
+     [
+      "(Số + LT) + N",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "Có hai cách nói cùng một vị trí. **N + 在 + nơi chốn**: nói người, vật **ở đâu** (医院在学校后边). **Nơi chốn + 有 / 是 + (Số + LT) + N**: nói **ở nơi đó có gì** (学校后边是医院). Đây là **câu tồn hiện**, biểu thị người hoặc vật **tồn tại** ở một nơi hay vị trí nào đó, thường có **有** hoặc **是**. Phủ định: **没有** (có → không có), **不是** (là → không phải là).",
+   "y": [
+    {
+     "noiDung": "N + 在 + nơi chốn",
+     "cum": [
+      [
+       "医院在学校后边",
+       "yīyuàn zài xuéxiào hòubian",
+       "",
+       [
+        [
+         "医院",
+         "dt"
+        ],
+        [
+         "在",
+         "codinh"
+        ],
+        [
+         "学校后边",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "医院在学校后边。",
+       "Yīyuàn zài xuéxiào hòubian.",
+       "",
+       [
+        [
+         "医院",
+         "dt"
+        ],
+        [
+         "在",
+         "codinh"
+        ],
+        [
+         "学校后边。",
+         null
+        ]
+       ]
+      ],
+      [
+       "我的手机在椅子上。",
+       "Wǒ de shǒujī zài yǐzi shang.",
+       "",
+       [
+        [
+         "我的手机",
+         "dt"
+        ],
+        [
+         "在",
+         "codinh"
+        ],
+        [
+         "椅子上。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Nơi chốn + 是 / 有 + N",
+     "cum": [],
+     "viDu": [
+      [
+       "学校后边是医院。",
+       "Xuéxiào hòubian shì yīyuàn.",
+       "",
+       [
+        [
+         "学校后边",
+         null
+        ],
+        [
+         "是",
+         "codinh"
+        ],
+        [
+         "医院。",
+         null
+        ]
+       ]
+      ],
+      [
+       "饭店左边有一所学校。",
+       "Fàndiàn zuǒbian yǒu yì suǒ xuéxiào.",
+       "",
+       [
+        [
+         "饭店左边",
+         null
+        ],
+        [
+         "有",
+         "codinh"
+        ],
+        [
+         "一所学校。",
+         null
+        ]
+       ]
+      ],
+      [
+       "电影院的右边是学校和饭店。",
+       "Diànyǐngyuàn de yòubian shì xuéxiào hé fàndiàn.",
+       "",
+       [
+        [
+         "电影院的右边是学校和饭店。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "有 + Số + LT + N: chưa xác định, liệt kê",
+     "cum": [
+      [
+       "有一本书",
+       "yǒu yì běn shū",
+       "",
+       [
+        [
+         "有",
+         "codinh"
+        ],
+        [
+         "一本书",
+         null
+        ]
+       ]
+      ],
+      [
+       "有两把椅子",
+       "yǒu liǎng bǎ yǐzi",
+       "",
+       [
+        [
+         "有",
+         "codinh"
+        ],
+        [
+         "两把椅子",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "桌子上有一本书。",
+       "Zhuōzi shang yǒu yì běn shū.",
+       "",
+       [
+        [
+         "桌子上",
+         null
+        ],
+        [
+         "有",
+         "codinh"
+        ],
+        [
+         "一本书。",
+         null
+        ]
+       ]
+      ],
+      [
+       "房间里有一张桌子和两把椅子。",
+       "Fángjiān li yǒu yì zhāng zhuōzi hé liǎng bǎ yǐzi.",
+       "",
+       [
+        [
+         "房间里",
+         null
+        ],
+        [
+         "有",
+         "codinh"
+        ],
+        [
+         "一张桌子和两把椅子。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Phủ định: 没有 · 不是",
+     "cum": [
+      [
+       "没有椅子",
+       "méiyǒu yǐzi",
+       "",
+       [
+        [
+         "没有",
+         "codinh"
+        ],
+        [
+         "椅子",
+         null
+        ]
+       ]
+      ],
+      [
+       "不是学校",
+       "bú shì xuéxiào",
+       "",
+       [
+        [
+         "不是",
+         "codinh"
+        ],
+        [
+         "学校",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "桌子上没有书。",
+       "Zhuōzi shang méiyǒu shū.",
+       "",
+       [
+        [
+         "桌子上",
+         null
+        ],
+        [
+         "没有",
+         "codinh"
+        ],
+        [
+         "书。",
+         null
+        ]
+       ]
+      ],
+      [
+       "学校后边不是医院。",
+       "Xuéxiào hòubian bú shì yīyuàn.",
+       "",
+       [
+        [
+         "学校后边",
+         null
+        ],
+        [
+         "不是",
+         "codinh"
+        ],
+        [
+         "医院。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**在** nói người, vật **xác định** ở đâu: 我的手机在椅子上. **有 / 是** đặt **nơi chốn lên đầu**: 椅子上有一本书.",
+    "**是** chỉ ra vật **duy nhất, xác định**: 学校后边是医院. **有** nói **có** (một hoặc vài vật, thường kèm số lượng): 桌子上有一本书.",
+    "Phủ định của **有** là **没有**, của **是** là **不是**: 桌子上没有书, 学校后边不是医院."
+   ]
+  },
+  {
+   "id": "liangci2",
+   "ten": "Lượng từ: 家 · 本 · 把 · 首",
+   "congThuc": [
+    [
+     [
+      "Số / 这 / 那 / 几",
+      "st"
+     ],
+     [
+      "家 / 本 / 把 / 首",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "**家** cho cửa hàng, nhà hàng, bệnh viện… (一家超市), **本** cho sách (一本书), **把** cho vật có tay cầm, như cái ghế (一把椅子), **首** cho bài hát (一首歌). Công thức: **Số / 这 / 那 / 几 + lượng từ + danh từ**.",
+   "y": [
+    {
+     "noiDung": "家: cửa hàng, nhà hàng, rạp phim",
+     "cum": [
+      [
+       "一家电影院",
+       "yì jiā diànyǐngyuàn",
+       "",
+       [
+        [
+         "一",
+         null
+        ],
+        [
+         "家",
+         "codinh"
+        ],
+        [
+         "电影院",
+         null
+        ]
+       ]
+      ],
+      [
+       "这家饭店",
+       "zhè jiā fàndiàn",
+       "",
+       [
+        [
+         "这",
+         null
+        ],
+        [
+         "家",
+         "codinh"
+        ],
+        [
+         "饭店",
+         null
+        ]
+       ]
+      ],
+      [
+       "那家书店",
+       "nà jiā shūdiàn",
+       "",
+       [
+        [
+         "那",
+         null
+        ],
+        [
+         "家",
+         "codinh"
+        ],
+        [
+         "书店",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "学校前边有一家电影院。",
+       "Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn.",
+       "",
+       [
+        [
+         "学校前边有一",
+         null
+        ],
+        [
+         "家",
+         "codinh"
+        ],
+        [
+         "电影院。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "本: sách",
+     "cum": [
+      [
+       "一本书",
+       "yì běn shū",
+       "",
+       [
+        [
+         "一",
+         null
+        ],
+        [
+         "本",
+         "codinh"
+        ],
+        [
+         "书",
+         null
+        ]
+       ]
+      ],
+      [
+       "这本书",
+       "zhè běn shū",
+       "",
+       [
+        [
+         "这",
+         null
+        ],
+        [
+         "本",
+         "codinh"
+        ],
+        [
+         "书",
+         null
+        ]
+       ]
+      ],
+      [
+       "两本中文书",
+       "liǎng běn Zhōngwén shū",
+       "",
+       [
+        [
+         "两",
+         null
+        ],
+        [
+         "本",
+         "codinh"
+        ],
+        [
+         "中文书",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "这本书是我同学的书。",
+       "Zhè běn shū shì wǒ tóngxué de shū.",
+       "",
+       [
+        [
+         "这",
+         null
+        ],
+        [
+         "本",
+         "codinh"
+        ],
+        [
+         "书是我同学的书。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "把: ghế",
+     "cum": [
+      [
+       "一把椅子",
+       "yì bǎ yǐzi",
+       "",
+       [
+        [
+         "一",
+         null
+        ],
+        [
+         "把",
+         "codinh"
+        ],
+        [
+         "椅子",
+         null
+        ]
+       ]
+      ],
+      [
+       "这把椅子",
+       "zhè bǎ yǐzi",
+       "",
+       [
+        [
+         "这",
+         null
+        ],
+        [
+         "把",
+         "codinh"
+        ],
+        [
+         "椅子",
+         null
+        ]
+       ]
+      ],
+      [
+       "几把椅子",
+       "jǐ bǎ yǐzi",
+       "",
+       [
+        [
+         "几",
+         null
+        ],
+        [
+         "把",
+         "codinh"
+        ],
+        [
+         "椅子",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "房间里有两把椅子。",
+       "Fángjiān li yǒu liǎng bǎ yǐzi.",
+       "",
+       [
+        [
+         "房间里有两",
+         null
+        ],
+        [
+         "把",
+         "codinh"
+        ],
+        [
+         "椅子。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "首: bài hát",
+     "cum": [
+      [
+       "一首歌",
+       "yì shǒu gē",
+       "",
+       [
+        [
+         "一",
+         null
+        ],
+        [
+         "首",
+         "codinh"
+        ],
+        [
+         "歌",
+         null
+        ]
+       ]
+      ],
+      [
+       "这首歌",
+       "zhè shǒu gē",
+       "",
+       [
+        [
+         "这",
+         null
+        ],
+        [
+         "首",
+         "codinh"
+        ],
+        [
+         "歌",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "老师请他们唱几首中文歌。",
+       "Lǎoshī qǐng tāmen chàng jǐ shǒu Zhōngwén gē.",
+       "",
+       [
+        [
+         "老师请他们唱几",
+         null
+        ],
+        [
+         "首",
+         "codinh"
+        ],
+        [
+         "中文歌。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**家** làm lượng từ chỉ nơi kinh doanh, bệnh viện; làm danh từ là **nhà**: 我家, 在家.",
+    "**两** đứng trước lượng từ (không nói 二本): 两本书, 两把椅子.",
+    "Mỗi danh từ có lượng từ riêng: sách → **本**, ghế → **把**, bài hát → **首**, siêu thị → **家**."
+   ]
+  },
+  {
+   "id": "zhishi",
+   "ten": "Đại từ chỉ định: 这 / 那 / 哪 + (Số) + lượng từ + DT",
+   "congThuc": [
+    [
+     [
+      "这 / 那 / 哪",
+      "codinh"
+     ],
+     [
+      "(Số)",
+      "st"
+     ],
+     [
+      "LT",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "**这** là \"này\", **那** là \"kia, đó\", **哪** là \"nào\". Đứng trước **lượng từ + danh từ**: **那个人** (người kia), **那本书** (quyển sách đó), **那家书店** (hiệu sách kia). Số từ **一** thường bỏ. **那个** vừa là \"cái kia\" vừa dùng thay cho cả danh từ khi đã rõ. Chỉ nơi chốn dùng **那边** (bên kia).",
+   "y": [
+    {
+     "noiDung": "那 + LT + DT",
+     "cum": [
+      [
+       "那个人",
+       "nàge rén",
+       "",
+       [
+        [
+         "那个",
+         "codinh"
+        ],
+        [
+         "人",
+         null
+        ]
+       ]
+      ],
+      [
+       "那本书",
+       "nà běn shū",
+       "",
+       [
+        [
+         "那",
+         "codinh"
+        ],
+        [
+         "本书",
+         null
+        ]
+       ]
+      ],
+      [
+       "那家书店",
+       "nà jiā shūdiàn",
+       "",
+       [
+        [
+         "那",
+         "codinh"
+        ],
+        [
+         "家书店",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "那个老师是中国人。",
+       "Nàge lǎoshī shì Zhōngguó rén.",
+       "",
+       [
+        [
+         "那个",
+         "codinh"
+        ],
+        [
+         "老师是中国人。",
+         null
+        ]
+       ]
+      ],
+      [
+       "我们去那家书店买书吧。",
+       "Wǒmen qù nà jiā shūdiàn mǎi shū ba.",
+       "",
+       [
+        [
+         "我们去",
+         null
+        ],
+        [
+         "那",
+         "codinh"
+        ],
+        [
+         "家书店买书吧。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "这 + LT + DT",
+     "cum": [
+      [
+       "这个人",
+       "zhège rén",
+       "",
+       [
+        [
+         "这个",
+         "codinh"
+        ],
+        [
+         "人",
+         null
+        ]
+       ]
+      ],
+      [
+       "这本书",
+       "zhè běn shū",
+       "",
+       [
+        [
+         "这",
+         "codinh"
+        ],
+        [
+         "本书",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "这本书是我的。",
+       "Zhè běn shū shì wǒ de.",
+       "",
+       [
+        [
+         "这",
+         "codinh"
+        ],
+        [
+         "本书是我的。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "哪 + LT + DT: hỏi lựa chọn",
+     "cum": [
+      [
+       "哪个人",
+       "nǎge rén",
+       "",
+       [
+        [
+         "哪个",
+         "codinh"
+        ],
+        [
+         "人",
+         null
+        ]
+       ]
+      ],
+      [
+       "哪本书",
+       "nǎ běn shū",
+       "",
+       [
+        [
+         "哪",
+         "codinh"
+        ],
+        [
+         "本书",
+         null
+        ]
+       ]
+      ],
+      [
+       "哪家饭店",
+       "nǎ jiā fàndiàn",
+       "",
+       [
+        [
+         "哪",
+         "codinh"
+        ],
+        [
+         "家饭店",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你想去哪家饭店？",
+       "Nǐ xiǎng qù nǎ jiā fàndiàn?",
+       "",
+       [
+        [
+         "你想去",
+         null
+        ],
+        [
+         "哪",
+         "codinh"
+        ],
+        [
+         "家饭店？",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**这个** đọc zhège, **那个** đọc nàge, **哪个** đọc nǎge (khi nói nhanh còn đọc zhèi, nèi, něi).",
+    "**这 / 那 / 哪 + lượng từ + danh từ**; không nói 这书, mà nói 这本书.",
+    "**哪** hỏi chọn lựa, đứng trước lượng từ: 哪本书？ (quyển sách nào?)."
+   ]
+  },
+  {
+   "id": "di",
+   "ten": "Số thứ tự: 第 + Số + lượng từ + DT",
+   "congThuc": [
+    [
+     [
+      "第",
+      "codinh"
+     ],
+     [
+      "Số",
+      "st"
+     ],
+     [
+      "(LT)",
+      "codinh"
+     ],
+     [
+      "(DT)",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "**第** đặt **trước số từ** để tạo **số thứ tự**: **第一** (thứ nhất), **第二** (thứ hai), **第三** (thứ ba). Công thức: **第 + Số + lượng từ + danh từ** = \"… thứ …\": **第二本书** (quyển sách thứ hai). Hỏi thứ tự dùng **第几**.",
+   "y": [
+    {
+     "noiDung": "第 + Số",
+     "cum": [
+      [
+       "第一",
+       "dì-yī",
+       "",
+       [
+        [
+         "第一",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "第二",
+       "dì-èr",
+       "",
+       [
+        [
+         "第二",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "第三",
+       "dì-sān",
+       "",
+       [
+        [
+         "第三",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我是第三个。",
+       "Wǒ shì dì-sān ge.",
+       "",
+       [
+        [
+         "我是",
+         null
+        ],
+        [
+         "第三",
+         "codinh"
+        ],
+        [
+         "个。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "第 + Số + lượng từ + DT",
+     "cum": [
+      [
+       "第一个学生",
+       "dì-yī ge xuésheng",
+       "",
+       [
+        [
+         "第一个",
+         "codinh"
+        ],
+        [
+         "学生",
+         null
+        ]
+       ]
+      ],
+      [
+       "第二本书",
+       "dì-èr běn shū",
+       "",
+       [
+        [
+         "第二本",
+         "codinh"
+        ],
+        [
+         "书",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "这是我的第二本中文书。",
+       "Zhè shì wǒ de dì-èr běn Zhōngwén shū.",
+       "",
+       [
+        [
+         "这是我的",
+         null
+        ],
+        [
+         "第二本",
+         "codinh"
+        ],
+        [
+         "中文书。",
+         null
+        ]
+       ]
+      ],
+      [
+       "他的第一个女朋友是法国人。",
+       "Tā de dì-yī ge nǚ péngyou shì Fǎguó rén.",
+       "",
+       [
+        [
+         "他的",
+         null
+        ],
+        [
+         "第一个",
+         "codinh"
+        ],
+        [
+         "女朋友是法国人。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Hỏi thứ tự: 第几",
+     "cum": [
+      [
+       "第几个",
+       "dì-jǐ ge",
+       "",
+       [
+        [
+         "第几",
+         "codinh"
+        ],
+        [
+         "个",
+         null
+        ]
+       ]
+      ],
+      [
+       "第几本",
+       "dì-jǐ běn",
+       "",
+       [
+        [
+         "第几",
+         "codinh"
+        ],
+        [
+         "本",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "A：你是第几个？\nB：我是第三个。",
+       "A: Nǐ shì dì-jǐ ge?\nB: Wǒ shì dì-sān ge.",
+       "",
+       [
+        [
+         "A：你是",
+         null
+        ],
+        [
+         "第几",
+         "codinh"
+        ],
+        [
+         "个？\nB：我是第三个。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**第** luôn đứng **trước số từ**: 第一, 第二; viết hay đọc đều nối bằng gạch ngang trong phiên âm: dì-yī.",
+    "Số thứ tự dùng **二** (không dùng 两): **第二** (dì-èr), không nói 第两.",
+    "Hỏi thứ tự: **第几 + lượng từ**; hỏi số lượng là **几 + lượng từ** (几本书 = mấy quyển sách)."
+   ]
+  },
+  {
+   "id": "zhuangyu",
+   "ten": "Thời gian + 在 + nơi chốn + ĐT",
+   "congThuc": [
+    [
+     [
+      "S",
+      "dt"
+     ],
+     [
+      "Thời gian",
+      "dt"
+     ],
+     [
+      "在",
+      "codinh"
+     ],
+     [
+      "Nơi chốn",
+      "dt"
+     ],
+     [
+      "ĐT (+ O)",
+      "dgt"
+     ]
+    ],
+    [
+     [
+      "Thời gian",
+      "dt"
+     ],
+     [
+      "S",
+      "dt"
+     ],
+     [
+      "在",
+      "codinh"
+     ],
+     [
+      "Nơi chốn",
+      "dt"
+     ],
+     [
+      "ĐT (+ O)",
+      "dgt"
+     ]
+    ]
+   ],
+   "giaiThich": "Khi **từ chỉ thời gian** và **từ chỉ nơi chốn** cùng làm **trạng ngữ**, từ chỉ thời gian đứng **trước** từ chỉ nơi chốn: **S + thời gian + 在 + nơi chốn + ĐT**. Thời gian cũng có thể đứng **đầu câu**, trước chủ ngữ.",
+   "y": [
+    {
+     "noiDung": "S + Thời gian + 在 + Nơi chốn + ĐT",
+     "cum": [
+      [
+       "七点在电影院外边见",
+       "qī diǎn zài diànyǐngyuàn wàibian jiàn",
+       "",
+       [
+        [
+         "七点",
+         "codinh"
+        ],
+        [
+         "在电影院外边见",
+         null
+        ]
+       ]
+      ],
+      [
+       "明天上午在学校学习",
+       "míngtiān shàngwǔ zài xuéxiào xuéxí",
+       "",
+       [
+        [
+         "明天上午",
+         "codinh"
+        ],
+        [
+         "在学校学习",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我们七点在电影院外边见。",
+       "Wǒmen qī diǎn zài diànyǐngyuàn wàibian jiàn.",
+       "",
+       [
+        [
+         "我们",
+         null
+        ],
+        [
+         "七点",
+         "codinh"
+        ],
+        [
+         "在电影院外边见。",
+         null
+        ]
+       ]
+      ],
+      [
+       "我明天上午在学校学习。",
+       "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.",
+       "",
+       [
+        [
+         "我",
+         null
+        ],
+        [
+         "明天上午",
+         "codinh"
+        ],
+        [
+         "在学校学习。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Thời gian + S + 在 + Nơi chốn + ĐT",
+     "cum": [],
+     "viDu": [
+      [
+       "明天中午陈天中在学校吃午饭。",
+       "Míngtiān zhōngwǔ Chén Tiānzhōng zài xuéxiào chī wǔfàn.",
+       "",
+       [
+        [
+         "明天中午",
+         "codinh"
+        ],
+        [
+         "陈天中在学校吃午饭。",
+         null
+        ]
+       ]
+      ],
+      [
+       "白天他在医院工作。",
+       "Báitiān tā zài yīyuàn gōngzuò.",
+       "",
+       [
+        [
+         "白天",
+         "codinh"
+        ],
+        [
+         "他在医院工作。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**Thời gian đứng trước nơi chốn**: 我明天上午在学校学习, không nói 我在学校明天上午学习.",
+    "Cả hai đều đứng **trước động từ**: thời gian + 在 + nơi chốn + ĐT.",
+    "Thời gian có thể đứng **đầu câu** hoặc **sau chủ ngữ**, nơi chốn luôn đứng **ngay trước động từ**."
+   ]
+  },
+  {
+   "id": "he",
+   "ten": "和: liên từ \"và\" · giới từ \"cùng với\"",
+   "congThuc": [
+    [
+     [
+      "A",
+      "dt"
+     ],
+     [
+      "和",
+      "codinh"
+     ],
+     [
+      "B",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "S",
+      "dt"
+     ],
+     [
+      "和",
+      "codinh"
+     ],
+     [
+      "người",
+      "dt"
+     ],
+     [
+      "ĐT (+ O)",
+      "dgt"
+     ]
+    ]
+   ],
+   "giaiThich": "**和** có hai cách dùng. **(1) Liên từ**, nối hai danh từ: **A 和 B** = \"A và B\" (桌子和椅子). **(2) Giới từ**, nghĩa **\"cùng với\"**: **S + 和 + người + ĐT** (我和朋友们去外边唱歌), **和** đứng **trước động từ**.",
+   "y": [
+    {
+     "noiDung": "A 和 B: A và B",
+     "cum": [
+      [
+       "桌子和椅子",
+       "zhuōzi hé yǐzi",
+       "",
+       [
+        [
+         "桌子",
+         null
+        ],
+        [
+         "和",
+         "codinh"
+        ],
+        [
+         "椅子",
+         null
+        ]
+       ]
+      ],
+      [
+       "米饭和菜",
+       "mǐfàn hé cài",
+       "",
+       [
+        [
+         "米饭",
+         null
+        ],
+        [
+         "和",
+         "codinh"
+        ],
+        [
+         "菜",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "房间里有桌子和椅子。",
+       "Fángjiān li yǒu zhuōzi hé yǐzi.",
+       "",
+       [
+        [
+         "房间里有桌子",
+         null
+        ],
+        [
+         "和",
+         "codinh"
+        ],
+        [
+         "椅子。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "S + 和 + người + ĐT: cùng với…",
+     "cum": [
+      [
+       "和朋友玩",
+       "hé péngyou wán",
+       "",
+       [
+        [
+         "和",
+         "codinh"
+        ],
+        [
+         "朋友玩",
+         null
+        ]
+       ]
+      ],
+      [
+       "和妈妈做饭",
+       "hé māma zuò fàn",
+       "",
+       [
+        [
+         "和",
+         "codinh"
+        ],
+        [
+         "妈妈做饭",
+         null
+        ]
+       ]
+      ],
+      [
+       "和小狗玩",
+       "hé xiǎo gǒu wán",
+       "",
+       [
+        [
+         "和",
+         "codinh"
+        ],
+        [
+         "小狗玩",
+         null
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "晚上我和朋友们去外边唱歌。",
+       "Wǎnshang wǒ hé péngyoumen qù wàibian chàng gē.",
+       "",
+       [
+        [
+         "晚上我",
+         null
+        ],
+        [
+         "和",
+         "codinh"
+        ],
+        [
+         "朋友们去外边唱歌。",
+         null
+        ]
+       ]
+      ],
+      [
+       "孩子们和小狗玩。",
+       "Háizimen hé xiǎo gǒu wán.",
+       "",
+       [
+        [
+         "孩子们",
+         null
+        ],
+        [
+         "和",
+         "codinh"
+        ],
+        [
+         "小狗玩。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**和** làm giới từ đứng **trước động từ**: 我和朋友去 (tôi cùng bạn đi), khác tiếng Việt \"đi cùng bạn\".",
+    "**和** chỉ nối **danh từ** (hoặc đại từ), không nối hai câu, hai động từ.",
+    "Phủ định đặt **不 / 没** **trước 和**: 我不和他去 (tôi không đi cùng anh ấy)."
+   ]
+  }
+ ],
+ "hoiDap": [
+  {
+   "hoi": [
+    "你家前边有什么？",
+    "Nǐ jiā qiánbian yǒu shénme?",
+    "Phía trước nhà bạn có gì?"
+   ],
+   "dap": [
+    "我家前边有一家超市。",
+    "Wǒ jiā qiánbian yǒu yì jiā chāoshì.",
+    "Phía trước nhà mình có một siêu thị."
+   ],
+   "nhieu": [
+    [
+     "我家在学校后边。",
+     "Wǒ jiā zài xuéxiào hòubian.",
+     ""
+    ],
+    [
+     "我家有三个房间。",
+     "Wǒ jiā yǒu sān ge fángjiān.",
+     ""
+    ],
+    [
+     "超市很大。",
+     "Chāoshì hěn dà.",
+     ""
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你的书在哪儿？",
+    "Nǐ de shū zài nǎr?",
+    "Sách của bạn ở đâu?"
+   ],
+   "dap": [
+    "在椅子上。",
+    "Zài yǐzi shang.",
+    "Ở trên ghế."
+   ],
+   "nhieu": [
+    [
+     "我的书很好看。",
+     "Wǒ de shū hěn hǎokàn.",
+     ""
+    ],
+    [
+     "我有两本书。",
+     "Wǒ yǒu liǎng běn shū.",
+     ""
+    ],
+    [
+     "我想买一本书。",
+     "Wǒ xiǎng mǎi yì běn shū.",
+     ""
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "明天上午你在哪儿学习？",
+    "Míngtiān shàngwǔ nǐ zài nǎr xuéxí?",
+    "Sáng mai bạn học ở đâu?"
+   ],
+   "dap": [
+    "我在学校学习。",
+    "Wǒ zài xuéxiào xuéxí.",
+    "Mình học ở trường."
+   ],
+   "nhieu": [
+    [
+     "我喜欢学习汉语。",
+     "Wǒ xǐhuan xuéxí Hànyǔ.",
+     ""
+    ],
+    [
+     "明天星期六。",
+     "Míngtiān xīngqīliù.",
+     ""
+    ],
+    [
+     "学校很大。",
+     "Xuéxiào hěn dà.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "星期六你做什么？",
+    "Xīngqīliù nǐ zuò shénme?",
+    "Thứ bảy bạn làm gì?"
+   ],
+   "dap": [
+    "我去朋友家玩。",
+    "Wǒ qù péngyou jiā wán.",
+    "Mình đến nhà bạn chơi."
+   ],
+   "nhieu": [
+    [
+     "星期六我很忙。",
+     "Xīngqīliù wǒ hěn máng.",
+     ""
+    ],
+    [
+     "朋友家很大。",
+     "Péngyou jiā hěn dà.",
+     ""
+    ],
+    [
+     "我喜欢星期六。",
+     "Wǒ xǐhuan xīngqīliù.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你喜欢唱歌吗？",
+    "Nǐ xǐhuan chàng gē ma?",
+    "Bạn có thích hát không?"
+   ],
+   "dap": [
+    "很喜欢。",
+    "Hěn xǐhuan.",
+    "Rất thích."
+   ],
+   "nhieu": [
+    [
+     "我会说汉语。",
+     "Wǒ huì shuō Hànyǔ.",
+     ""
+    ],
+    [
+     "这首歌是中文歌。",
+     "Zhè shǒu gē shì Zhōngwén gē.",
+     ""
+    ],
+    [
+     "他唱歌很好听。",
+     "Tā chàng gē hěn hǎotīng.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你白天在哪儿？",
+    "Nǐ báitiān zài nǎr?",
+    "Ban ngày bạn ở đâu?"
+   ],
+   "dap": [
+    "我白天在医院工作。",
+    "Wǒ báitiān zài yīyuàn gōngzuò.",
+    "Ban ngày mình làm việc ở bệnh viện."
+   ],
+   "nhieu": [
+    [
+     "我白天很忙。",
+     "Wǒ báitiān hěn máng.",
+     ""
+    ],
+    [
+     "我喜欢看电视。",
+     "Wǒ xǐhuan kàn diànshì.",
+     ""
+    ],
+    [
+     "医院在学校后边。",
+     "Yīyuàn zài xuéxiào hòubian.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "这本书是谁的？",
+    "Zhè běn shū shì shéi de?",
+    "Quyển sách này của ai?"
+   ],
+   "dap": [
+    "是我同学的。",
+    "Shì wǒ tóngxué de.",
+    "Của bạn học mình."
+   ],
+   "nhieu": [
+    [
+     "这本书很好看。",
+     "Zhè běn shū hěn hǎokàn.",
+     ""
+    ],
+    [
+     "我有两本书。",
+     "Wǒ yǒu liǎng běn shū.",
+     ""
+    ],
+    [
+     "书店在学校里。",
+     "Shūdiàn zài xuéxiào li.",
+     ""
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你是第几个？",
+    "Nǐ shì dì-jǐ ge?",
+    "Bạn là người thứ mấy?"
+   ],
+   "dap": [
+    "我是第二个。",
+    "Wǒ shì dì-èr ge.",
+    "Mình là người thứ hai."
+   ],
+   "nhieu": [
+    [
+     "我是学生。",
+     "Wǒ shì xuésheng.",
+     ""
+    ],
+    [
+     "我有两个哥哥。",
+     "Wǒ yǒu liǎng ge gēge.",
+     ""
+    ],
+    [
+     "我们学校很大。",
+     "Wǒmen xuéxiào hěn dà.",
+     ""
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你和谁去唱歌？",
+    "Nǐ hé shéi qù chàng gē?",
+    "Bạn đi hát cùng ai?"
+   ],
+   "dap": [
+    "我和朋友们去。",
+    "Wǒ hé péngyoumen qù.",
+    "Mình đi cùng các bạn."
+   ],
+   "nhieu": [
+    [
+     "我喜欢唱歌。",
+     "Wǒ xǐhuan chàng gē.",
+     ""
+    ],
+    [
+     "他唱歌很好听。",
+     "Tā chàng gē hěn hǎotīng.",
+     ""
+    ],
+    [
+     "外边有一家饭店。",
+     "Wàibian yǒu yì jiā fàndiàn.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "桌子上有什么？",
+    "Zhuōzi shang yǒu shénme?",
+    "Trên bàn có gì?"
+   ],
+   "dap": [
+    "桌子上有一台电脑和一本书。",
+    "Zhuōzi shang yǒu yì tái diànnǎo hé yì běn shū.",
+    "Trên bàn có một cái máy tính và một quyển sách."
+   ],
+   "nhieu": [
+    [
+     "桌子很新。",
+     "Zhuōzi hěn xīn.",
+     ""
+    ],
+    [
+     "我的房间里有桌子。",
+     "Wǒ de fángjiān li yǒu zhuōzi.",
+     ""
+    ],
+    [
+     "书在椅子上。",
+     "Shū zài yǐzi shang.",
+     ""
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "学校前边有什么？",
+    "Xuéxiào qiánbian yǒu shénme?",
+    "Phía trước trường có gì?"
+   ],
+   "dap": [
+    "学校前边有一家电影院。",
+    "Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn.",
+    "Phía trước trường có một rạp chiếu phim."
+   ],
+   "nhieu": [
+    [
+     "学校很大。",
+     "Xuéxiào hěn dà.",
+     ""
+    ],
+    [
+     "学校后边是医院。",
+     "Xuéxiào hòubian shì yīyuàn.",
+     ""
+    ],
+    [
+     "我在学校学习。",
+     "Wǒ zài xuéxiào xuéxí.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "他们几点在哪儿见？",
+    "Tāmen jǐ diǎn zài nǎr jiàn?",
+    "Họ gặp nhau lúc mấy giờ, ở đâu?"
+   ],
+   "dap": [
+    "他们七点在电影院外边见。",
+    "Tāmen qī diǎn zài diànyǐngyuàn wàibian jiàn.",
+    "Bảy giờ họ gặp nhau ở bên ngoài rạp chiếu phim."
+   ],
+   "nhieu": [
+    [
+     "他们晚上看电影。",
+     "Tāmen wǎnshang kàn diànyǐng.",
+     ""
+    ],
+    [
+     "他们是朋友。",
+     "Tāmen shì péngyou.",
+     ""
+    ],
+    [
+     "电影院很大。",
+     "Diànyǐngyuàn hěn dà.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "椅子上的书是谁的？",
+    "Yǐzi shang de shū shì shéi de?",
+    "Quyển sách trên ghế là của ai?"
+   ],
+   "dap": [
+    "是陈天中的。",
+    "Shì Chén Tiānzhōng de.",
+    "Của Trần Thiên Trung."
+   ],
+   "nhieu": [
+    [
+     "书在椅子上。",
+     "Shū zài yǐzi shang.",
+     ""
+    ],
+    [
+     "那是一本中文书。",
+     "Nà shì yì běn Zhōngwén shū.",
+     ""
+    ],
+    [
+     "他有两本书。",
+     "Tā yǒu liǎng běn shū.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "陈天中明天上午在哪儿学习？",
+    "Chén Tiānzhōng míngtiān shàngwǔ zài nǎr xuéxí?",
+    "Sáng mai Trần Thiên Trung học ở đâu?"
+   ],
+   "dap": [
+    "他明天上午在学校学习。",
+    "Tā míngtiān shàngwǔ zài xuéxiào xuéxí.",
+    "Sáng mai anh ấy học ở trường."
+   ],
+   "nhieu": [
+    [
+     "他喜欢学习汉语。",
+     "Tā xǐhuan xuéxí Hànyǔ.",
+     ""
+    ],
+    [
+     "他明天有课。",
+     "Tā míngtiān yǒu kè.",
+     ""
+    ],
+    [
+     "学校很大。",
+     "Xuéxiào hěn dà.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "杨同乐星期六做什么？",
+    "Yáng Tónglè Xīngqīliù zuò shénme?",
+    "Thứ bảy Dương Đồng Lạc làm gì?"
+   ],
+   "dap": [
+    "他白天在家里读书，晚上和朋友们去外边唱歌。",
+    "Tā báitiān zài jiā li dúshū, wǎnshang hé péngyoumen qù wàibian chàng gē.",
+    "Ban ngày anh ấy đọc sách ở nhà, buổi tối cùng các bạn ra ngoài hát."
+   ],
+   "nhieu": [
+    [
+     "他喜欢唱歌。",
+     "Tā xǐhuan chàng gē.",
+     ""
+    ],
+    [
+     "他星期六很忙。",
+     "Tā Xīngqīliù hěn máng.",
+     ""
+    ],
+    [
+     "他在学校学习。",
+     "Tā zài xuéxiào xuéxí.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "王一雪星期六做什么？",
+    "Wáng Yīxuě Xīngqīliù zuò shénme?",
+    "Thứ bảy Vương Nhất Tuyết làm gì?"
+   ],
+   "dap": [
+    "她在家里做饭、看电视，和孩子们、小狗玩。",
+    "Tā zài jiā li zuò fàn, kàn diànshì, hé háizimen, xiǎo gǒu wán.",
+    "Cô ấy nấu cơm, xem ti vi ở nhà, chơi cùng bọn trẻ và chú chó nhỏ."
+   ],
+   "nhieu": [
+    [
+     "她有两个孩子。",
+     "Tā yǒu liǎng ge háizi.",
+     ""
+    ],
+    [
+     "她喜欢小狗。",
+     "Tā xǐhuan xiǎo gǒu.",
+     ""
+    ],
+    [
+     "她在学校工作。",
+     "Tā zài xuéxiào gōngzuò.",
+     ""
+    ]
+   ],
+   "nguon": "baiKhoa",
+   "chang": "3"
+  }
+ ],
+ "cauLuyen": [
+  {
+   "han": "学校右边是一家书店。",
+   "py": "Xuéxiào yòubian shì yì jiā shūdiàn.",
+   "viet": "Bên phải trường là một hiệu sách.",
+   "tu": [
+    "家",
+    "书",
+    "右边"
+   ],
+   "np": "bian"
+  },
+  {
+   "han": "超市在医院的左边。",
+   "py": "Chāoshì zài yīyuàn de zuǒbian.",
+   "viet": "Siêu thị ở bên trái bệnh viện.",
+   "tu": [
+    "左边"
+   ],
+   "np": "bian"
+  },
+  {
+   "han": "你家外边有什么？",
+   "py": "Nǐ jiā wàibian yǒu shénme?",
+   "viet": "Bên ngoài nhà bạn có gì?",
+   "tu": [
+    "家",
+    "外边"
+   ],
+   "np": "bian"
+  },
+  {
+   "han": "书店里边有很多人。",
+   "py": "Shūdiàn lǐbian yǒu hěn duō rén.",
+   "viet": "Bên trong hiệu sách có rất nhiều người.",
+   "tu": [
+    "书",
+    "里边"
+   ],
+   "np": "bian"
+  },
+  {
+   "han": "小猫在桌子下边。",
+   "py": "Xiǎo māo zài zhuōzi xiàbian.",
+   "viet": "Con mèo nhỏ ở phía dưới bàn.",
+   "tu": [
+    "下边"
+   ],
+   "np": "bian"
+  },
+  {
+   "han": "你的手机在椅子上边吗？",
+   "py": "Nǐ de shǒujī zài yǐzi shàngbian ma?",
+   "viet": "Điện thoại của bạn ở phía trên ghế à?",
+   "tu": [
+    "椅子",
+    "上边"
+   ],
+   "np": "bian"
+  },
+  {
+   "han": "那边是学校，前边是医院。",
+   "py": "Nàbian shì xuéxiào, qiánbian shì yīyuàn.",
+   "viet": "Bên kia là trường học, phía trước là bệnh viện.",
+   "tu": [
+    "前边",
+    "边",
+    "那边"
+   ],
+   "np": "bian"
+  },
+  {
+   "han": "我家前边有一所学校。",
+   "py": "Wǒ jiā qiánbian yǒu yì suǒ xuéxiào.",
+   "viet": "Phía trước nhà tôi có một ngôi trường.",
+   "tu": [
+    "前边",
+    "家"
+   ],
+   "np": "cunxian"
+  },
+  {
+   "han": "桌子上没有手机。",
+   "py": "Zhuōzi shang méiyǒu shǒujī.",
+   "viet": "Trên bàn không có điện thoại.",
+   "tu": [
+    "上"
+   ],
+   "np": "cunxian"
+  },
+  {
+   "han": "书店后边是饭店。",
+   "py": "Shūdiàn hòubian shì fàndiàn.",
+   "viet": "Phía sau hiệu sách là nhà hàng.",
+   "tu": [
+    "书",
+    "后边"
+   ],
+   "np": "cunxian"
+  },
+  {
+   "han": "你的书在椅子上。",
+   "py": "Nǐ de shū zài yǐzi shang.",
+   "viet": "Sách của bạn ở trên ghế.",
+   "tu": [
+    "椅子",
+    "上",
+    "书"
+   ],
+   "np": "cunxian"
+  },
+  {
+   "han": "学校里有一家书店，没有饭店。",
+   "py": "Xuéxiào li yǒu yì jiā shūdiàn, méiyǒu fàndiàn.",
+   "viet": "Trong trường có một hiệu sách, không có nhà hàng.",
+   "tu": [
+    "家",
+    "书"
+   ],
+   "np": "cunxian"
+  },
+  {
+   "han": "椅子上有一只小猫。",
+   "py": "Yǐzi shang yǒu yì zhī xiǎo māo.",
+   "viet": "Trên ghế có một con mèo nhỏ.",
+   "tu": [
+    "椅子",
+    "上"
+   ],
+   "np": "cunxian"
+  },
+  {
+   "han": "你家前边是什么？",
+   "py": "Nǐ jiā qiánbian shì shénme?",
+   "viet": "Phía trước nhà bạn là gì?",
+   "tu": [
+    "前边",
+    "家"
+   ],
+   "np": "cunxian"
+  },
+  {
+   "han": "超市在我家后边。",
+   "py": "Chāoshì zài wǒ jiā hòubian.",
+   "viet": "Siêu thị ở phía sau nhà tôi.",
+   "tu": [
+    "家",
+    "后边"
+   ],
+   "np": "cunxian"
+  },
+  {
+   "han": "我想买两本中文书。",
+   "py": "Wǒ xiǎng mǎi liǎng běn Zhōngwén shū.",
+   "viet": "Tôi muốn mua hai quyển sách tiếng Trung.",
+   "tu": [
+    "本",
+    "书"
+   ],
+   "np": "liangci2"
+  },
+  {
+   "han": "这家超市非常大。",
+   "py": "Zhè jiā chāoshì fēicháng dà.",
+   "viet": "Siêu thị này vô cùng lớn.",
+   "tu": [
+    "家"
+   ],
+   "np": "liangci2"
+  },
+  {
+   "han": "他买了一把新椅子。",
+   "py": "Tā mǎi le yì bǎ xīn yǐzi.",
+   "viet": "Anh ấy đã mua một chiếc ghế mới.",
+   "tu": [
+    "椅子",
+    "把"
+   ],
+   "np": "liangci2"
+  },
+  {
+   "han": "我会唱三首中文歌。",
+   "py": "Wǒ huì chàng sān shǒu Zhōngwén gē.",
+   "viet": "Tôi biết hát ba bài hát tiếng Trung.",
+   "tu": [
+    "唱",
+    "歌",
+    "首"
+   ],
+   "np": "liangci2"
+  },
+  {
+   "han": "那个学生是我同学。",
+   "py": "Nàge xuésheng shì wǒ tóngxué.",
+   "viet": "Học sinh kia là bạn học của tôi.",
+   "tu": [
+    "那个"
+   ],
+   "np": "zhishi"
+  },
+  {
+   "han": "这个人是谁？",
+   "py": "Zhè ge rén shì shéi?",
+   "viet": "Người này là ai?",
+   "tu": [],
+   "np": "zhishi"
+  },
+  {
+   "han": "你喜欢哪本书？",
+   "py": "Nǐ xǐhuan nǎ běn shū?",
+   "viet": "Bạn thích quyển sách nào?",
+   "tu": [
+    "本",
+    "书"
+   ],
+   "np": "zhishi"
+  },
+  {
+   "han": "哪个医生是你爸爸？",
+   "py": "Nǎ ge yīshēng shì nǐ bàba?",
+   "viet": "Bác sĩ nào là bố bạn?",
+   "tu": [],
+   "np": "zhishi"
+  },
+  {
+   "han": "我想去那家书店买书。",
+   "py": "Wǒ xiǎng qù nà jiā shūdiàn mǎi shū.",
+   "viet": "Tôi muốn đến hiệu sách kia mua sách.",
+   "tu": [
+    "家",
+    "书",
+    "那"
+   ],
+   "np": "zhishi"
+  },
+  {
+   "han": "他是第一个学生。",
+   "py": "Tā shì dì-yī ge xuésheng.",
+   "viet": "Anh ấy là học sinh thứ nhất.",
+   "tu": [
+    "第"
+   ],
+   "np": "di"
+  },
+  {
+   "han": "这是第三本书。",
+   "py": "Zhè shì dì-sān běn shū.",
+   "viet": "Đây là quyển sách thứ ba.",
+   "tu": [
+    "本",
+    "书",
+    "第"
+   ],
+   "np": "di"
+  },
+  {
+   "han": "我的朋友是第二个。",
+   "py": "Wǒ de péngyou shì dì-èr ge.",
+   "viet": "Bạn tôi là người thứ hai.",
+   "tu": [
+    "第",
+    "朋友"
+   ],
+   "np": "di"
+  },
+  {
+   "han": "你是第几个学生？",
+   "py": "Nǐ shì dì-jǐ ge xuésheng?",
+   "viet": "Bạn là học sinh thứ mấy?",
+   "tu": [
+    "第"
+   ],
+   "np": "di"
+  },
+  {
+   "han": "明天下午我在家学习。",
+   "py": "Míngtiān xiàwǔ wǒ zài jiā xuéxí.",
+   "viet": "Chiều mai tôi học ở nhà.",
+   "tu": [
+    "家",
+    "学习"
+   ],
+   "np": "zhuangyu"
+  },
+  {
+   "han": "他今天晚上在朋友家吃饭。",
+   "py": "Tā jīntiān wǎnshang zài péngyou jiā chī fàn.",
+   "viet": "Tối nay anh ấy ăn cơm ở nhà bạn.",
+   "tu": [
+    "家",
+    "上",
+    "朋友"
+   ],
+   "np": "zhuangyu"
+  },
+  {
+   "han": "爸爸白天在学校工作。",
+   "py": "Bàba báitiān zài xuéxiào gōngzuò.",
+   "viet": "Ban ngày bố làm việc ở trường.",
+   "tu": [
+    "白天"
+   ],
+   "np": "zhuangyu"
+  },
+  {
+   "han": "我们晚上七点在书店前见。",
+   "py": "Wǒmen wǎnshang qī diǎn zài shūdiàn qián jiàn.",
+   "viet": "Bảy giờ tối chúng ta gặp ở trước hiệu sách.",
+   "tu": [
+    "上",
+    "书"
+   ],
+   "np": "zhuangyu"
+  },
+  {
+   "han": "明天上午十点你在哪儿？",
+   "py": "Míngtiān shàngwǔ shí diǎn nǐ zài nǎr?",
+   "viet": "Sáng mai 10 giờ bạn ở đâu?",
+   "tu": [
+    "上"
+   ],
+   "np": "zhuangyu"
+  },
+  {
+   "han": "我和哥哥去书店。",
+   "py": "Wǒ hé gēge qù shūdiàn.",
+   "viet": "Tôi cùng anh trai đến hiệu sách.",
+   "tu": [
+    "书",
+    "和"
+   ],
+   "np": "he"
+  },
+  {
+   "han": "妈妈和我在家看电视。",
+   "py": "Māma hé wǒ zài jiā kàn diànshì.",
+   "viet": "Mẹ và tôi xem ti vi ở nhà.",
+   "tu": [
+    "家",
+    "和",
+    "电视"
+   ],
+   "np": "he"
+  },
+  {
+   "han": "你和谁去唱歌？",
+   "py": "Nǐ hé shéi qù chàng gē?",
+   "viet": "Bạn đi hát cùng ai?",
+   "tu": [
+    "和",
+    "唱",
+    "歌"
+   ],
+   "np": "he"
+  },
+  {
+   "han": "他和朋友们在外边玩。",
+   "py": "Tā hé péngyoumen zài wàibian wán.",
+   "viet": "Anh ấy chơi cùng các bạn ở bên ngoài.",
+   "tu": [
+    "外边",
+    "和",
+    "朋友",
+    "玩"
+   ],
+   "np": "he"
+  },
+  {
+   "han": "我家有一只猫和一只狗。",
+   "py": "Wǒ jiā yǒu yì zhī māo hé yì zhī gǒu.",
+   "viet": "Nhà tôi có một con mèo và một con chó.",
+   "tu": [
+    "家",
+    "和",
+    "狗"
+   ],
+   "np": "he"
+  },
+  {
+   "han": "你晚上做什么？",
+   "py": "Nǐ wǎnshang zuò shénme?",
+   "viet": "Buổi tối bạn làm gì?",
+   "tu": [
+    "上",
+    "做"
+   ]
+  },
+  {
+   "han": "你家前边有什么？",
+   "py": "Nǐ jiā qiánbian yǒu shénme?",
+   "viet": "Phía trước nhà bạn có gì?",
+   "tu": [
+    "前边",
+    "家"
+   ],
+   "np": "cunxian"
+  },
+  {
+   "han": "你晚上在家里看电视吗？",
+   "py": "Nǐ wǎnshang zài jiā li kàn diànshì ma?",
+   "viet": "Buổi tối bạn xem ti vi ở nhà à?",
+   "tu": [
+    "家",
+    "上",
+    "电视"
+   ],
+   "np": "zhuangyu"
+  },
+  {
+   "han": "你明天上午在哪儿学习？",
+   "py": "Nǐ míngtiān shàngwǔ zài nǎr xuéxí?",
+   "viet": "Sáng mai bạn học ở đâu?",
+   "tu": [
+    "上",
+    "学习"
+   ],
+   "np": "zhuangyu"
+  },
+  {
+   "han": "你家有狗吗？",
+   "py": "Nǐ jiā yǒu gǒu ma?",
+   "viet": "Nhà bạn có chó không?",
+   "tu": [
+    "家",
+    "狗"
+   ]
+  },
+  {
+   "han": "我们晚上去那个电影院看电影吧。",
+   "py": "Wǒmen wǎnshang qù nàge diànyǐngyuàn kàn diànyǐng ba.",
+   "viet": "Tối nay chúng ta đến rạp chiếu phim đó xem phim nhé.",
+   "tu": [
+    "那个",
+    "上"
+   ],
+   "nguon": "baiKhoa",
+   "np": "zhishi"
+  },
+  {
+   "han": "好！我们七点在电影院外边见，好吗？",
+   "py": "Hǎo! Wǒmen qī diǎn zài diànyǐngyuàn wàibian jiàn, hǎo ma?",
+   "viet": "Được! Bảy giờ chúng ta gặp ở bên ngoài rạp chiếu phim, được không?",
+   "tu": [
+    "外边"
+   ],
+   "nguon": "baiKhoa",
+   "np": "zhuangyu"
+  },
+  {
+   "han": "好的，晚上七点见！",
+   "py": "Hǎo de, wǎnshang qī diǎn jiàn!",
+   "viet": "Được, bảy giờ tối gặp nhé!",
+   "tu": [
+    "上"
+   ],
+   "nguon": "baiKhoa"
+  },
+  {
+   "han": "椅子上有一本中文书，那是谁的书？",
+   "py": "Yǐzi shang yǒu yì běn Zhōngwén shū, nà shì shéi de shū?",
+   "viet": "Trên ghế có một quyển sách tiếng Trung, đó là sách của ai?",
+   "tu": [
+    "椅子",
+    "上",
+    "本",
+    "书",
+    "那"
+   ],
+   "nguon": "baiKhoa",
+   "np": "cunxian"
+  },
+  {
+   "han": "是我的书，谢谢。",
+   "py": "Shì wǒ de shū, xièxie.",
+   "viet": "Là sách của mình, cảm ơn bạn.",
+   "tu": [
+    "书"
+   ],
+   "nguon": "baiKhoa"
+  },
+  {
+   "han": "不客气。你明天上午在哪儿？",
+   "py": "Bú kèqi. Nǐ míngtiān shàngwǔ zài nǎr?",
+   "viet": "Không có gì. Sáng mai bạn ở đâu?",
+   "tu": [
+    "上"
+   ],
+   "nguon": "baiKhoa",
+   "np": "zhuangyu"
+  },
+  {
+   "han": "我白天在家里读书，晚上和朋友们去外边唱歌。",
+   "py": "Wǒ báitiān zài jiā li dúshū, wǎnshang hé péngyoumen qù wàibian chàng gē.",
+   "viet": "Ban ngày mình đọc sách ở nhà, buổi tối cùng các bạn ra ngoài hát.",
+   "tu": [
+    "家",
+    "外边",
+    "上",
+    "白天",
+    "读书",
+    "和",
+    "朋友",
+    "唱",
+    "歌"
+   ],
+   "nguon": "baiKhoa",
+   "np": "he"
+  },
+  {
+   "han": "谢谢！您星期六做什么？",
+   "py": "Xièxie! Nín Xīngqīliù zuò shénme?",
+   "viet": "Cảm ơn! Cô thứ bảy làm gì ạ?",
+   "tu": [
+    "做"
+   ],
+   "nguon": "baiKhoa"
+  },
+  {
+   "han": "我在家里做饭、看电视，和孩子们、小狗玩。",
+   "py": "Wǒ zài jiā li zuò fàn, kàn diànshì, hé háizimen, xiǎo gǒu wán.",
+   "viet": "Tôi nấu cơm, xem ti vi ở nhà, chơi cùng bọn trẻ và chú chó nhỏ.",
+   "tu": [
+    "家",
+    "做",
+    "和",
+    "电视",
+    "狗",
+    "玩"
+   ],
+   "nguon": "baiKhoa",
+   "np": "he"
+  },
+  {
+   "han": "椅子上的书是陈天中的。",
+   "py": "Yǐzi shang de shū shì Chén Tiānzhōng de.",
+   "viet": "Quyển sách trên ghế là của Trần Thiên Trung.",
+   "tu": [
+    "椅子",
+    "上",
+    "书"
+   ],
+   "nguon": "baiKhoa",
+   "np": "cunxian"
+  },
+  {
+   "han": "杨同乐白天在家里读书。",
+   "py": "Yáng Tónglè báitiān zài jiā li dúshū.",
+   "viet": "Ban ngày Dương Đồng Lạc đọc sách ở nhà.",
+   "tu": [
+    "家",
+    "白天",
+    "读书"
+   ],
+   "nguon": "baiKhoa",
+   "np": "zhuangyu"
+  }
+ ],
+ "hoiThoai": [
+  {
+   "ten": "Hỏi hiệu sách ở đâu",
+   "luot": [
+    {
+     "han": "请问，这儿有书店吗？",
+     "py": "Qǐngwèn, zhèr yǒu shūdiàn ma?",
+     "viet": "Xin hỏi, ở đây có hiệu sách không?"
+    },
+    {
+     "han": "有，学校后边有一家书店。",
+     "py": "Yǒu, xuéxiào hòubian yǒu yì jiā shūdiàn.",
+     "viet": "Có, phía sau trường có một hiệu sách."
+    },
+    {
+     "han": "好，我现在去那家书店。",
+     "py": "Hǎo, wǒ xiànzài qù nà jiā shūdiàn.",
+     "viet": "Được, bây giờ tôi đến hiệu sách đó."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我想买一本书。",
+      "py": "Wǒ xiǎng mǎi yì běn shū."
+     },
+     {
+      "han": "这儿很大。",
+      "py": "Zhèr hěn dà."
+     },
+     {
+      "han": "书店很漂亮。",
+      "py": "Shūdiàn hěn piàoliang."
+     }
+    ],
+    "2": [
+     {
+      "han": "书店很大。",
+      "py": "Shūdiàn hěn dà."
+     },
+     {
+      "han": "我在学校学习。",
+      "py": "Wǒ zài xuéxiào xuéxí."
+     },
+     {
+      "han": "我想看电视。",
+      "py": "Wǒ xiǎng kàn diànshì."
+     }
+    ]
+   },
+   "chang": "2"
+  },
+  {
+   "ten": "Cuối tuần làm gì",
+   "luot": [
+    {
+     "han": "星期六你做什么？",
+     "py": "Xīngqīliù nǐ zuò shénme?",
+     "viet": "Thứ bảy bạn làm gì?"
+    },
+    {
+     "han": "我白天在家读书，晚上和朋友们去外边唱歌。",
+     "py": "Wǒ báitiān zài jiā dúshū, wǎnshang hé péngyoumen qù wàibian chàng gē.",
+     "viet": "Ban ngày mình đọc sách ở nhà, buổi tối cùng các bạn ra ngoài hát."
+    },
+    {
+     "han": "你唱歌好听吗？",
+     "py": "Nǐ chàng gē hǎotīng ma?",
+     "viet": "Bạn hát có hay không?"
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我喜欢星期六。",
+      "py": "Wǒ xǐhuan xīngqīliù."
+     },
+     {
+      "han": "我星期六很忙。",
+      "py": "Wǒ xīngqīliù hěn máng."
+     },
+     {
+      "han": "我在学校。",
+      "py": "Wǒ zài xuéxiào."
+     }
+    ],
+    "2": [
+     {
+      "han": "我有三个朋友。",
+      "py": "Wǒ yǒu sān ge péngyou."
+     },
+     {
+      "han": "外边很大。",
+      "py": "Wàibian hěn dà."
+     },
+     {
+      "han": "我想吃米饭。",
+      "py": "Wǒ xiǎng chī mǐfàn."
+     }
+    ]
+   },
+   "chang": "3"
+  },
+  {
+   "ten": "Nhà bạn có chó không",
+   "luot": [
+    {
+     "han": "你家有狗吗？",
+     "py": "Nǐ jiā yǒu gǒu ma?",
+     "viet": "Nhà bạn có chó không?"
+    },
+    {
+     "han": "有，我家有一只小狗。",
+     "py": "Yǒu, wǒ jiā yǒu yì zhī xiǎo gǒu.",
+     "viet": "Có, nhà mình có một con chó nhỏ."
+    },
+    {
+     "han": "你晚上和小狗玩吗？",
+     "py": "Nǐ wǎnshang hé xiǎo gǒu wán ma?",
+     "viet": "Buổi tối bạn có chơi với chó không?"
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我家前边有超市。",
+      "py": "Wǒ jiā qiánbian yǒu chāoshì."
+     },
+     {
+      "han": "狗很大。",
+      "py": "Gǒu hěn dà."
+     },
+     {
+      "han": "我想买电视。",
+      "py": "Wǒ xiǎng mǎi diànshì."
+     }
+    ],
+    "2": [
+     {
+      "han": "狗是我的朋友。",
+      "py": "Gǒu shì wǒ de péngyou."
+     },
+     {
+      "han": "我想去书店。",
+      "py": "Wǒ xiǎng qù shūdiàn."
+     },
+     {
+      "han": "我家有三个房间。",
+      "py": "Wǒ jiā yǒu sān ge fángjiān."
+     }
+    ]
+   },
+   "chang": "3"
+  },
+  {
+   "ten": "Bài khóa · Hẹn xem phim",
+   "luot": [
+    {
+     "han": "学校前边有一家电影院。",
+     "py": "Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn.",
+     "viet": "Phía trước trường có một rạp chiếu phim."
+    },
+    {
+     "han": "对。我们晚上去那个电影院看电影吧。",
+     "py": "Duì. Wǒmen wǎnshang qù nàge diànyǐngyuàn kàn diànyǐng ba.",
+     "viet": "Đúng. Tối nay chúng ta đến rạp đó xem phim nhé."
+    },
+    {
+     "han": "好！我们七点在电影院外边见，好吗？",
+     "py": "Hǎo! Wǒmen qī diǎn zài diànyǐngyuàn wàibian jiàn, hǎo ma?",
+     "viet": "Được! Bảy giờ chúng ta gặp ở bên ngoài rạp, được không?"
+    },
+    {
+     "han": "好的，晚上七点见！",
+     "py": "Hǎo de, wǎnshang qī diǎn jiàn!",
+     "viet": "Được, bảy giờ tối gặp nhé!"
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "电影院很大。",
+      "py": "Diànyǐngyuàn hěn dà."
+     },
+     {
+      "han": "我想买新手机。",
+      "py": "Wǒ xiǎng mǎi xīn shǒujī."
+     },
+     {
+      "han": "学校后边是医院。",
+      "py": "Xuéxiào hòubian shì yīyuàn."
+     }
+    ],
+    "3": [
+     {
+      "han": "我喜欢看电影。",
+      "py": "Wǒ xǐhuan kàn diànyǐng."
+     },
+     {
+      "han": "电影很好看。",
+      "py": "Diànyǐng hěn hǎokàn."
+     },
+     {
+      "han": "我在家看电视。",
+      "py": "Wǒ zài jiā kàn diànshì."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "2"
+  },
+  {
+   "ten": "Bài khóa · Quyển sách của ai",
+   "luot": [
+    {
+     "han": "椅子上有一本中文书，那是谁的书？",
+     "py": "Yǐzi shang yǒu yì běn Zhōngwén shū, nà shì shéi de shū?",
+     "viet": "Trên ghế có một quyển sách tiếng Trung, đó là sách của ai?"
+    },
+    {
+     "han": "是我的书，谢谢。这是我的第二本中文书。",
+     "py": "Shì wǒ de shū, xièxie. Zhè shì wǒ de dì-èr běn Zhōngwén shū.",
+     "viet": "Là sách của mình, cảm ơn bạn. Đây là quyển sách tiếng Trung thứ hai của mình."
+    },
+    {
+     "han": "不客气。你明天上午在哪儿？",
+     "py": "Bú kèqi. Nǐ míngtiān shàngwǔ zài nǎr?",
+     "viet": "Không có gì. Sáng mai bạn ở đâu?"
+    },
+    {
+     "han": "我明天上午在学校学习。",
+     "py": "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.",
+     "viet": "Sáng mai mình học ở trường."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "书在椅子上。",
+      "py": "Shū zài yǐzi shang."
+     },
+     {
+      "han": "那是一本新书。",
+      "py": "Nà shì yì běn xīn shū."
+     },
+     {
+      "han": "我有两把椅子。",
+      "py": "Wǒ yǒu liǎng bǎ yǐzi."
+     }
+    ],
+    "3": [
+     {
+      "han": "我明天很忙。",
+      "py": "Wǒ míngtiān hěn máng."
+     },
+     {
+      "han": "学校很大。",
+      "py": "Xuéxiào hěn dà."
+     },
+     {
+      "han": "我喜欢学习汉语。",
+      "py": "Wǒ xǐhuan xuéxí Hànyǔ."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "3"
+  },
+  {
+   "ten": "Bài khóa · Thứ bảy làm gì",
+   "luot": [
+    {
+     "han": "明天星期六，你做什么？",
+     "py": "Míngtiān Xīngqīliù, nǐ zuò shénme?",
+     "viet": "Ngày mai thứ bảy, bạn làm gì?"
+    },
+    {
+     "han": "我白天在家里读书，晚上和朋友们去外边唱歌。",
+     "py": "Wǒ báitiān zài jiā li dúshū, wǎnshang hé péngyoumen qù wàibian chàng gē.",
+     "viet": "Ban ngày mình đọc sách ở nhà, buổi tối cùng các bạn ra ngoài hát."
+    },
+    {
+     "han": "你唱歌很好听。",
+     "py": "Nǐ chàng gē hěn hǎotīng.",
+     "viet": "Bạn hát rất hay."
+    },
+    {
+     "han": "谢谢！您星期六做什么？",
+     "py": "Xièxie! Nín Xīngqīliù zuò shénme?",
+     "viet": "Cảm ơn! Cô thứ bảy làm gì ạ?"
+    },
+    {
+     "han": "我在家里做饭、看电视，和孩子们、小狗玩。",
+     "py": "Wǒ zài jiā li zuò fàn, kàn diànshì, hé háizimen, xiǎo gǒu wán.",
+     "viet": "Tôi nấu cơm, xem ti vi ở nhà, chơi cùng bọn trẻ và chú chó nhỏ."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "星期六我很忙。",
+      "py": "Xīngqīliù wǒ hěn máng."
+     },
+     {
+      "han": "我喜欢星期六。",
+      "py": "Wǒ xǐhuan xīngqīliù."
+     },
+     {
+      "han": "我在学校学习。",
+      "py": "Wǒ zài xuéxiào xuéxí."
+     }
+    ],
+    "3": [
+     {
+      "han": "我也想唱歌。",
+      "py": "Wǒ yě xiǎng chàng gē."
+     },
+     {
+      "han": "我是你的朋友。",
+      "py": "Wǒ shì nǐ de péngyou."
+     },
+     {
+      "han": "我不喜欢读书。",
+      "py": "Wǒ bù xǐhuan dúshū."
+     }
+    ],
+    "4": [
+     {
+      "han": "我在学校工作。",
+      "py": "Wǒ zài xuéxiào gōngzuò."
+     },
+     {
+      "han": "我喜欢星期六。",
+      "py": "Wǒ xǐhuan xīngqīliù."
+     },
+     {
+      "han": "我们去外边玩。",
+      "py": "Wǒmen qù wàibian wán."
+     }
+    ]
+   },
+   "nguon": "baiKhoa",
+   "chang": "3"
+  }
+ ],
+ "nguPhapLuyen": {
+  "phienBan": "2026-10-29a",
+  "dacDiem": [
+   {
+    "ma": "bi-dd",
+    "np": "bian",
+    "ten": "DT + 前 / 后 / 左 / 右 / 里 / 外 / 上 / 下 + 边",
+    "nguon": "y1-L1"
+   },
+   {
+    "ma": "bi-de",
+    "np": "bian",
+    "ten": "DT + 的 + ……边 · ……边 = ……面",
+    "nguon": "y2-L2"
+   },
+   {
+    "ma": "bi-na",
+    "np": "bian",
+    "ten": "那边: bên kia",
+    "nguon": "y3"
+   },
+   {
+    "ma": "cx-zai",
+    "np": "cunxian",
+    "ten": "N + 在 + nơi chốn",
+    "nguon": "y1"
+   },
+   {
+    "ma": "cx-shi",
+    "np": "cunxian",
+    "ten": "Nơi chốn + 是 + N",
+    "nguon": "y2-L2"
+   },
+   {
+    "ma": "cx-you",
+    "np": "cunxian",
+    "ten": "Nơi chốn + 有 + Số + LT + N",
+    "nguon": "y3-L2"
+   },
+   {
+    "ma": "cx-pd",
+    "np": "cunxian",
+    "ten": "Phủ định: 没有 · 不是",
+    "nguon": "y4-L3"
+   },
+   {
+    "ma": "lc2-jia",
+    "np": "liangci2",
+    "ten": "家: cửa hàng, nhà hàng",
+    "nguon": "y1-L1"
+   },
+   {
+    "ma": "lc2-ben",
+    "np": "liangci2",
+    "ten": "本: sách",
+    "nguon": "y2"
+   },
+   {
+    "ma": "lc2-ba",
+    "np": "liangci2",
+    "ten": "把: ghế",
+    "nguon": "y3"
+   },
+   {
+    "ma": "lc2-shou",
+    "np": "liangci2",
+    "ten": "首: bài hát",
+    "nguon": "y4"
+   },
+   {
+    "ma": "zs-na",
+    "np": "zhishi",
+    "ten": "那 + LT + DT",
+    "nguon": "y1"
+   },
+   {
+    "ma": "zs-zhe",
+    "np": "zhishi",
+    "ten": "这 + LT + DT",
+    "nguon": "y2-L2"
+   },
+   {
+    "ma": "zs-ji",
+    "np": "zhishi",
+    "ten": "哪 + LT + DT: hỏi lựa chọn",
+    "nguon": "y3-L3"
+   },
+   {
+    "ma": "di-sh",
+    "np": "di",
+    "ten": "第 + Số",
+    "nguon": "y1-L2"
+   },
+   {
+    "ma": "di-lt",
+    "np": "di",
+    "ten": "第 + Số + LT + DT",
+    "nguon": "y2"
+   },
+   {
+    "ma": "di-ji",
+    "np": "di",
+    "ten": "Hỏi thứ tự: 第几",
+    "nguon": "y3-L3"
+   },
+   {
+    "ma": "zy-1",
+    "np": "zhuangyu",
+    "ten": "S + thời gian + 在 + nơi chốn + ĐT",
+    "nguon": "y1-L1"
+   },
+   {
+    "ma": "zy-2",
+    "np": "zhuangyu",
+    "ten": "Thời gian đứng đầu câu; thời gian trước nơi chốn",
+    "nguon": "y2-L3"
+   },
+   {
+    "ma": "he-lc",
+    "np": "he",
+    "ten": "A 和 B: A và B",
+    "nguon": "y1-L2"
+   },
+   {
+    "ma": "he-gt",
+    "np": "he",
+    "ten": "S + 和 + người + ĐT: cùng với…",
+    "nguon": "y2-L1"
+   },
+   {
+    "ma": "he-pd",
+    "np": "he",
+    "ten": "Phủ định đặt trước 和",
+    "nguon": "L3"
+   }
+  ],
+  "cau": [
+   {
+    "ma": "b9-bi-dd-1",
+    "np": "bian",
+    "dang": "chon",
+    "dd": "bi-dd",
+    "cau": "学校＿边是医院。",
+    "py": "Xuéxiào hòubian shì yīyuàn.",
+    "nghia": "Phía sau trường là bệnh viện.",
+    "dap": "后",
+    "nhieu": [
+     "第",
+     "很"
+    ],
+    "gt": "Phía sau: **后边**."
+   },
+   {
+    "ma": "b9-bi-dd-2",
+    "np": "bian",
+    "dang": "chon",
+    "dd": "bi-dd",
+    "cau": "桌子＿边有一本书。",
+    "py": "Zhuōzi zuǒbian yǒu yì běn shū.",
+    "nghia": "Bên trái bàn có một quyển sách.",
+    "dap": "左",
+    "nhieu": [
+     "很",
+     "第"
+    ],
+    "gt": "Bên trái: **左边**."
+   },
+   {
+    "ma": "b9-bi-dd-3",
+    "np": "bian",
+    "dang": "xep",
+    "dd": "bi-dd",
+    "cau": "医院在学校后边。",
+    "py": "Yīyuàn zài xuéxiào hòubian.",
+    "nghia": "Bệnh viện ở phía sau trường.",
+    "khoi": [
+     "医院",
+     "在",
+     "学校后边"
+    ],
+    "npPhu": [
+     "bian"
+    ]
+   },
+   {
+    "ma": "b9-bi-de-1",
+    "np": "bian",
+    "dang": "dungSai",
+    "dd": "bi-de",
+    "cau": "医院的右边是超市。",
+    "py": "Yīyuàn de yòubian shì chāoshì.",
+    "dung": true,
+    "gt": "A 的 + ……边: phía … của A."
+   },
+   {
+    "ma": "b9-bi-de-2",
+    "np": "bian",
+    "dang": "dungSai",
+    "dd": "bi-de",
+    "cau": "电影院的前边是一家饭店。",
+    "py": "Diànyǐngyuàn de qiánbian shì yì jiā fàndiàn.",
+    "dung": true,
+    "gt": "**前边** = **前面**."
+   },
+   {
+    "ma": "b9-bi-na-1",
+    "np": "bian",
+    "dang": "chon",
+    "dd": "bi-na",
+    "cau": "＿边有超市和饭店。",
+    "py": "Nàbian yǒu chāoshì hé fàndiàn.",
+    "nghia": "Bên kia có siêu thị và nhà hàng.",
+    "dap": "那",
+    "nhieu": [
+     "很",
+     "第"
+    ],
+    "gt": "**那边** = bên kia."
+   },
+   {
+    "ma": "b9-bi-na-2",
+    "np": "bian",
+    "dang": "hoi",
+    "dd": "bi-na",
+    "dap": "那边有一家书店。",
+    "pyDap": "Nàbian yǒu yì jiā shūdiàn.",
+    "hoi": "书店在哪儿？",
+    "pyHoi": "Shūdiàn zài nǎr?",
+    "nhieu": [
+     "你想买什么书？",
+     "书店大吗？"
+    ],
+    "gt": "Chỉ chỗ xa: **那边**."
+   },
+   {
+    "ma": "b9-cx-zai-1",
+    "np": "cunxian",
+    "dang": "chon",
+    "dd": "cx-zai",
+    "cau": "医院＿学校后边。",
+    "py": "Yīyuàn zài xuéxiào hòubian.",
+    "nghia": "Bệnh viện ở phía sau trường.",
+    "dap": "在",
+    "nhieu": [
+     "有",
+     "很"
+    ],
+    "gt": "**N + 在 + nơi chốn**."
+   },
+   {
+    "ma": "b9-cx-zai-2",
+    "np": "cunxian",
+    "dang": "dungSai",
+    "dd": "cx-zai",
+    "cau": "我的书在椅子上。",
+    "py": "Wǒ de shū zài yǐzi shang.",
+    "dung": true,
+    "gt": "**在**: vật xác định ở đâu."
+   },
+   {
+    "ma": "b9-cx-shi-1",
+    "np": "cunxian",
+    "dang": "chon",
+    "dd": "cx-shi",
+    "cau": "学校后边＿医院。",
+    "py": "Xuéxiào hòubian shì yīyuàn.",
+    "nghia": "Phía sau trường là bệnh viện.",
+    "dap": "是",
+    "nhieu": [
+     "在",
+     "很"
+    ],
+    "gt": "**Nơi chốn + 是 + N**."
+   },
+   {
+    "ma": "b9-cx-shi-2",
+    "np": "cunxian",
+    "dang": "dungSai",
+    "dd": "cx-shi",
+    "cau": "书店前边是一家超市。",
+    "py": "Shūdiàn qiánbian shì yì jiā chāoshì.",
+    "dung": true,
+    "gt": "Câu tồn hiện: nơi chốn + **是**."
+   },
+   {
+    "ma": "b9-cx-you-1",
+    "np": "cunxian",
+    "dang": "chon",
+    "dd": "cx-you",
+    "cau": "桌子上＿一本书和一台电脑。",
+    "py": "Zhuōzi shang yǒu yì běn shū hé yì tái diànnǎo.",
+    "nghia": "Trên bàn có một quyển sách và một cái máy tính.",
+    "dap": "有",
+    "nhieu": [
+     "在",
+     "很"
+    ],
+    "gt": "Liệt kê, có số lượng dùng **有**."
+   },
+   {
+    "ma": "b9-cx-you-2",
+    "np": "cunxian",
+    "dang": "dungSai",
+    "dd": "cx-you",
+    "cau": "一本书在桌子上。",
+    "py": "Yì běn shū zài zhuōzi shang.",
+    "dung": false,
+    "gt": "Vật chưa xác định, có số lượng: đặt nơi chốn đầu câu với **有**.",
+    "sua": "桌子上有一本书。",
+    "pySua": "Zhuōzi shang yǒu yì běn shū.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b9-cx-pd-1",
+    "np": "cunxian",
+    "dang": "chon",
+    "dd": "cx-pd",
+    "cau": "桌子上＿有手机。",
+    "py": "Zhuōzi shang méiyǒu shǒujī.",
+    "nghia": "Trên bàn không có điện thoại.",
+    "dap": "没",
+    "nhieu": [
+     "不",
+     "很"
+    ],
+    "gt": "Phủ định của **有** là **没有**."
+   },
+   {
+    "ma": "b9-cx-pd-2",
+    "np": "cunxian",
+    "dang": "dungSai",
+    "dd": "cx-pd",
+    "cau": "学校后边不有医院。",
+    "py": "Xuéxiào hòubian bù yǒu yīyuàn.",
+    "dung": false,
+    "gt": "**有** phủ định bằng **没有**.",
+    "sua": "学校后边没有医院。",
+    "pySua": "Xuéxiào hòubian méiyǒu yīyuàn.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b9-lc2-jia-1",
+    "np": "liangci2",
+    "dang": "chon",
+    "dd": "lc2-jia",
+    "cau": "学校前边有一＿书店。",
+    "py": "Xuéxiào qiánbian yǒu yì jiā shūdiàn.",
+    "nghia": "Phía trước trường có một hiệu sách.",
+    "dap": "家",
+    "nhieu": [
+     "本",
+     "把"
+    ],
+    "gt": "Cửa hàng dùng **家**."
+   },
+   {
+    "ma": "b9-lc2-jia-2",
+    "np": "liangci2",
+    "dang": "dungSai",
+    "dd": "lc2-jia",
+    "cau": "这家饭店的菜真好吃！",
+    "py": "Zhè jiā fàndiàn de cài zhēn hǎochī!",
+    "dung": true,
+    "gt": "Nhà hàng dùng **家**."
+   },
+   {
+    "ma": "b9-lc2-ben-1",
+    "np": "liangci2",
+    "dang": "chon",
+    "dd": "lc2-ben",
+    "cau": "我有两＿中文书。",
+    "py": "Wǒ yǒu liǎng běn Zhōngwén shū.",
+    "nghia": "Tôi có hai quyển sách tiếng Trung.",
+    "dap": "本",
+    "nhieu": [
+     "家",
+     "把"
+    ],
+    "gt": "Sách dùng **本**."
+   },
+   {
+    "ma": "b9-lc2-ben-2",
+    "np": "liangci2",
+    "dang": "dungSai",
+    "dd": "lc2-ben",
+    "cau": "我想买一个书。",
+    "py": "Wǒ xiǎng mǎi yí ge shū.",
+    "dung": false,
+    "gt": "Sách dùng **本**.",
+    "sua": "我想买一本书。",
+    "pySua": "Wǒ xiǎng mǎi yì běn shū.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b9-lc2-ba-1",
+    "np": "liangci2",
+    "dang": "chon",
+    "dd": "lc2-ba",
+    "cau": "房间里有两＿椅子。",
+    "py": "Fángjiān li yǒu liǎng bǎ yǐzi.",
+    "nghia": "Trong phòng có hai cái ghế.",
+    "dap": "把",
+    "nhieu": [
+     "本",
+     "家"
+    ],
+    "gt": "Ghế dùng **把**."
+   },
+   {
+    "ma": "b9-lc2-ba-2",
+    "np": "liangci2",
+    "dang": "dungSai",
+    "dd": "lc2-ba",
+    "cau": "这把椅子很新。",
+    "py": "Zhè bǎ yǐzi hěn xīn.",
+    "dung": true,
+    "gt": "Ghế dùng **把**."
+   },
+   {
+    "ma": "b9-lc2-shou-1",
+    "np": "liangci2",
+    "dang": "chon",
+    "dd": "lc2-shou",
+    "cau": "我会唱一＿中文歌。",
+    "py": "Wǒ huì chàng yì shǒu Zhōngwén gē.",
+    "nghia": "Tôi biết hát một bài hát tiếng Trung.",
+    "dap": "首",
+    "nhieu": [
+     "本",
+     "家"
+    ],
+    "gt": "Bài hát dùng **首**."
+   },
+   {
+    "ma": "b9-lc2-shou-2",
+    "np": "liangci2",
+    "dang": "dungSai",
+    "dd": "lc2-shou",
+    "cau": "这首歌很好听。",
+    "py": "Zhè shǒu gē hěn hǎotīng.",
+    "dung": true,
+    "gt": "Bài hát dùng **首**."
+   },
+   {
+    "ma": "b9-zs-na-1",
+    "np": "zhishi",
+    "dang": "chon",
+    "dd": "zs-na",
+    "cau": "我想去＿家书店买书。",
+    "py": "Wǒ xiǎng qù nà jiā shūdiàn mǎi shū.",
+    "nghia": "Tôi muốn đến hiệu sách kia mua sách.",
+    "dap": "那",
+    "nhieu": [
+     "很",
+     "第"
+    ],
+    "gt": "**那 + 家 + DT** = hiệu sách kia."
+   },
+   {
+    "ma": "b9-zs-na-2",
+    "np": "zhishi",
+    "dang": "hoi",
+    "dd": "zs-na",
+    "dap": "是我们的老师。",
+    "pyDap": "Shì wǒmen de lǎoshī.",
+    "hoi": "那个人是谁？",
+    "pyHoi": "Nàge rén shì shéi?",
+    "nhieu": [
+     "你是老师吗？",
+     "这个人有几个孩子？"
+    ],
+    "gt": "Hỏi người kia dùng **那个**."
+   },
+   {
+    "ma": "b9-zs-zhe-1",
+    "np": "zhishi",
+    "dang": "chon",
+    "dd": "zs-zhe",
+    "cau": "＿本书是我的。",
+    "py": "Zhè běn shū shì wǒ de.",
+    "nghia": "Quyển sách này là của tôi.",
+    "dap": "这",
+    "nhieu": [
+     "很",
+     "第"
+    ],
+    "gt": "**这 + 本 + 书**."
+   },
+   {
+    "ma": "b9-zs-zhe-2",
+    "np": "zhishi",
+    "dang": "dungSai",
+    "dd": "zs-zhe",
+    "cau": "这个人是我同学。",
+    "py": "Zhè ge rén shì wǒ tóngxué.",
+    "dung": true,
+    "gt": "**这个** = người này."
+   },
+   {
+    "ma": "b9-zs-ji-1",
+    "np": "zhishi",
+    "dang": "chon",
+    "dd": "zs-ji",
+    "cau": "你喜欢＿本书？",
+    "py": "Nǐ xǐhuan nǎ běn shū?",
+    "nghia": "Bạn thích quyển sách nào?",
+    "dap": "哪",
+    "nhieu": [
+     "第",
+     "很"
+    ],
+    "gt": "Hỏi \"… nào\" dùng **哪 + LT + DT**."
+   },
+   {
+    "ma": "b9-zs-ji-2",
+    "np": "zhishi",
+    "dang": "dungSai",
+    "dd": "zs-ji",
+    "cau": "你想去哪家饭店？",
+    "py": "Nǐ xiǎng qù nǎ jiā fàndiàn?",
+    "dung": true,
+    "gt": "**哪家** = nhà hàng nào."
+   },
+   {
+    "ma": "b9-di-sh-1",
+    "np": "di",
+    "dang": "chon",
+    "dd": "di-sh",
+    "cau": "我是＿三个。",
+    "py": "Wǒ shì dì-sān ge.",
+    "nghia": "Tôi là người thứ ba.",
+    "dap": "第",
+    "nhieu": [
+     "很",
+     "不"
+    ],
+    "gt": "**第 + Số**."
+   },
+   {
+    "ma": "b9-di-sh-2",
+    "np": "di",
+    "dang": "dungSai",
+    "dd": "di-sh",
+    "cau": "他是第一个学生。",
+    "py": "Tā shì dì-yī ge xuésheng.",
+    "dung": true,
+    "gt": "**第一个** = người thứ nhất."
+   },
+   {
+    "ma": "b9-di-lt-1",
+    "np": "di",
+    "dang": "chon",
+    "dd": "di-lt",
+    "cau": "这是我的第＿本中文书。",
+    "py": "Zhè shì wǒ de dì-èr běn Zhōngwén shū.",
+    "nghia": "Đây là quyển sách tiếng Trung thứ hai của tôi.",
+    "dap": "二",
+    "nhieu": [
+     "两",
+     "很"
+    ],
+    "gt": "Số thứ tự dùng **二**."
+   },
+   {
+    "ma": "b9-di-lt-2",
+    "np": "di",
+    "dang": "xep",
+    "dd": "di-lt",
+    "cau": "这是第三本书。",
+    "py": "Zhè shì dì-sān běn shū.",
+    "nghia": "Đây là quyển sách thứ ba.",
+    "khoi": [
+     "这是",
+     "第三本",
+     "书"
+    ],
+    "npPhu": [
+     "di"
+    ]
+   },
+   {
+    "ma": "b9-di-ji-1",
+    "np": "di",
+    "dang": "hoi",
+    "dd": "di-ji",
+    "dap": "我是第三个。",
+    "pyDap": "Wǒ shì dì-sān ge.",
+    "hoi": "你是第几个？",
+    "pyHoi": "Nǐ shì dì-jǐ ge?",
+    "nhieu": [
+     "你是学生吗？",
+     "你有几个朋友？"
+    ],
+    "gt": "Hỏi thứ tự: **第几**."
+   },
+   {
+    "ma": "b9-di-ji-2",
+    "np": "di",
+    "dang": "chon",
+    "dd": "di-ji",
+    "cau": "你是第＿个学生？",
+    "py": "Nǐ shì dì-jǐ ge xuésheng?",
+    "nghia": "Bạn là học sinh thứ mấy?",
+    "dap": "几",
+    "nhieu": [
+     "很",
+     "不"
+    ],
+    "gt": "Hỏi thứ tự: **第几**."
+   },
+   {
+    "ma": "b9-zy-1-1",
+    "np": "zhuangyu",
+    "dang": "chon",
+    "dd": "zy-1",
+    "cau": "我明天上午＿学校学习。",
+    "py": "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.",
+    "nghia": "Sáng mai tôi học ở trường.",
+    "dap": "在",
+    "nhieu": [
+     "有",
+     "很"
+    ],
+    "gt": "Thời gian + **在 + nơi chốn** + ĐT."
+   },
+   {
+    "ma": "b9-zy-1-2",
+    "np": "zhuangyu",
+    "dang": "xep",
+    "dd": "zy-1",
+    "cau": "我们七点在电影院外边见。",
+    "py": "Wǒmen qī diǎn zài diànyǐngyuàn wàibian jiàn.",
+    "nghia": "Bảy giờ chúng ta gặp ở bên ngoài rạp phim.",
+    "khoi": [
+     "我们",
+     "七点",
+     "在电影院外边",
+     "见"
+    ],
+    "npPhu": [
+     "zhuangyu"
+    ]
+   },
+   {
+    "ma": "b9-zy-2-1",
+    "np": "zhuangyu",
+    "dang": "dungSai",
+    "dd": "zy-2",
+    "cau": "明天中午陈天中在学校吃午饭。",
+    "py": "Míngtiān zhōngwǔ Chén Tiānzhōng zài xuéxiào chī wǔfàn.",
+    "dung": true,
+    "gt": "Thời gian có thể đứng đầu câu."
+   },
+   {
+    "ma": "b9-zy-2-2",
+    "np": "zhuangyu",
+    "dang": "dungSai",
+    "dd": "zy-2",
+    "cau": "我在学校明天上午学习。",
+    "py": "Wǒ zài xuéxiào míngtiān shàngwǔ xuéxí.",
+    "dung": false,
+    "gt": "Thời gian đứng **trước** nơi chốn.",
+    "sua": "我明天上午在学校学习。",
+    "pySua": "Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.",
+    "nguon": "lưu ý thẻ"
+   },
+   {
+    "ma": "b9-he-lc-1",
+    "np": "he",
+    "dang": "chon",
+    "dd": "he-lc",
+    "cau": "房间里有桌子＿椅子。",
+    "py": "Fángjiān li yǒu zhuōzi hé yǐzi.",
+    "nghia": "Trong phòng có bàn và ghế.",
+    "dap": "和",
+    "nhieu": [
+     "在",
+     "很"
+    ],
+    "gt": "**和** nối hai danh từ."
+   },
+   {
+    "ma": "b9-he-lc-2",
+    "np": "he",
+    "dang": "dungSai",
+    "dd": "he-lc",
+    "cau": "我家有一只猫和一只狗。",
+    "py": "Wǒ jiā yǒu yì zhī māo hé yì zhī gǒu.",
+    "dung": true,
+    "gt": "**和** nối hai danh từ."
+   },
+   {
+    "ma": "b9-he-gt-1",
+    "np": "he",
+    "dang": "chon",
+    "dd": "he-gt",
+    "cau": "晚上我＿朋友们去外边唱歌。",
+    "py": "Wǎnshang wǒ hé péngyoumen qù wàibian chàng gē.",
+    "nghia": "Buổi tối tôi cùng các bạn ra ngoài hát.",
+    "dap": "和",
+    "nhieu": [
+     "在",
+     "很"
+    ],
+    "gt": "**和 + người + ĐT**: cùng với."
+   },
+   {
+    "ma": "b9-he-gt-2",
+    "np": "he",
+    "dang": "xep",
+    "dd": "he-gt",
+    "cau": "孩子们和小狗玩。",
+    "py": "Háizimen hé xiǎo gǒu wán.",
+    "nghia": "Bọn trẻ chơi với chú chó nhỏ.",
+    "khoi": [
+     "孩子们",
+     "和小狗",
+     "玩"
+    ],
+    "npPhu": [
+     "he"
+    ]
+   },
+   {
+    "ma": "b9-he-pd-1",
+    "np": "he",
+    "dang": "dungSai",
+    "dd": "he-pd",
+    "cau": "我不和朋友去。",
+    "py": "Wǒ bù hé péngyou qù.",
+    "dung": true,
+    "gt": "**不** đứng trước **和**."
+   },
+   {
+    "ma": "b9-he-pd-2",
+    "np": "he",
+    "dang": "dungSai",
+    "dd": "he-pd",
+    "cau": "我不和妈妈在家做饭。",
+    "py": "Wǒ bù hé māma zài jiā zuò fàn.",
+    "dung": true,
+    "gt": "**不** đặt trước **和**."
+   }
+  ]
+ },
+ "ctTruoc": {
+  "边": {
+   "ma": "1-0255",
+   "han": "那边",
+   "bai": "Bài 6",
+   "url": "chuong-trinh-hsk/hsk1/bai-6/tu-vung.html"
+  },
+  "家": {
+   "ma": "2-0093",
+   "han": "大家",
+   "bai": "Bài 1",
+   "url": "chuong-trinh-hsk/hsk1/bai-1/tu-vung.html"
+  },
+  "第": {
+   "ma": "1-0075",
+   "han": "第",
+   "bai": "Bài 4",
+   "url": "chuong-trinh-hsk/hsk1/bai-4/tu-vung.html"
+  },
+  "天": {
+   "ma": "1-0181",
+   "han": "今天",
+   "bai": "Bài 5",
+   "url": "chuong-trinh-hsk/hsk1/bai-5/tu-vung.html"
+  },
+  "和": {
+   "ma": "1-0145",
+   "han": "和",
+   "bai": "Bài 4",
+   "url": "chuong-trinh-hsk/hsk1/bai-4/tu-vung.html"
+  },
+  "朋": {
+   "ma": "1-0279",
+   "han": "女朋友",
+   "bai": "Bài 3",
+   "url": "chuong-trinh-hsk/hsk1/bai-3/tu-vung.html"
+  },
+  "好": {
+   "ma": "1-0138",
+   "han": "好",
+   "bai": "Bài 1",
+   "url": "chuong-trinh-hsk/hsk1/bai-1/tu-vung.html"
+  },
+  "狗": {
+   "ma": "2-0196",
+   "han": "狗",
+   "bai": "Bài 1",
+   "url": "chuong-trinh-hsk/hsk1/bai-1/tu-vung.html"
+  }
+ }
+}

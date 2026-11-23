@@ -38,11 +38,11 @@ def dung(N, N_, NP, K):
         for w in doc(f'data/bai/bai-{n}.json')['tu']: daCo |= set(han(w.get('Thuận bút') or ''))
     tu, loi = [], []
     for (chu, py, loai, nghia, nhom, chang, cum, c1, c2) in N_.TU:
-        x = tim(kho, chu, py.replace('∥', '').replace('·', ''))
+        x = tim(kho, chu, py.replace('∥', '').replace('·', '')) or getattr(N_, 'NGOAI_KHUNG', {}).get(chu)
         if not x: loi.append(f'không có trong kho: {chu}')
         tb = ''.join(c for c in dict.fromkeys(chu) if c not in daCo); daCo |= set(chu)
         w = {'Mã': x['Mã'] if x else '', 'Chữ Hán': chu, 'Pinyin': py, 'Âm Hán Việt': (x or {}).get('Âm Hán Việt', ''),
-             'Từ loại': loai, 'Nghĩa tiếng Việt': nghia, 'Cấp HSK': (x['Mã'].split('-')[0] if x else ''), 'Thuận bút': tb,
+             'Từ loại': loai, 'Nghĩa tiếng Việt': nghia, 'Cấp HSK': (x.get('cap') or x['Mã'].split('-')[0] if x else ''), 'Thuận bút': tb,
              'Cụm từ': '\n'.join(f'{a} | {b}' for a, b in cum), 'Đọc từ': K.DOC_TU.get(chu, ''), '_nhom': nhom}
         for i, c in ((1, c1), (2, c2)):
             w[f'Câu {i}'], w[f'Pinyin câu {i}'], w[f'Nghĩa câu {i}'] = c[0], c[1], c[2]

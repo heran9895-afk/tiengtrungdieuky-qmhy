@@ -14,14 +14,16 @@ import json, os, re, sys, unicodedata, importlib.util
 GOC = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PHIEN_BAN = '2026-10-29a'
 # Vốn chữ theo sổ tích lũy (Project claude/so-tich-luy.json, chuHanMoi từng bài) — bài mới nhớ thêm dòng
-TEN_RIENG = '小语王一飞陈天中安妮白家月李文王一雪刘明杨同乐小明'
+TEN_RIENG = '小语王一飞陈天中安妮白家月李文王一雪刘明杨同乐小明胡'
 CHU = {1: "一三不个五们你八再吃同喝大天好学客家小师很您明气汉狗猫王生老见语谢飞",
        2: "中么也事什俄关兴十口只叫名国坐女妮子字安对我文斯日是月本李没爱白系罗美英认识说请起进门问陈高",
        3: "了人他作做南去友吗哥哪喂太奶她妈妹姐姥工弟忙想有朋法泰爷爸男的谁越还这那雪",
        4: "〇七万丈两乐九二亿今位儿公六几刘千呢和四多夫妻婆孩少岁年杨百第米纪零",
        5: "号星期休息会饭面条饺些菜下班新电脑真看喜欢它昨道包上旧台听",
        6: "手机话超市买东西牛晚边非常怎出租车店打给码里韩卖走商碗早午茶水样自行辆摩托动马共汽地铁骑开",
-       7: "点半现在分吧影院医钟后杯时间刻差前节交校书部件外病习课"}
+       7: "点半现在分吧影院医钟后杯时间刻差前节交校书部件外病习课",
+       8: "房桌漂亮能到张所",
+       9: "椅把读唱歌视玩左右首"}
 NGUON = {'luuY': 'lưu ý thẻ', 'quyChuan': 'quy chuẩn 05', 'deXuat': 'cô duyệt 29/10/2026'}
 
 
@@ -29,7 +31,7 @@ def nap(tep):
     sp = importlib.util.spec_from_file_location('kho', os.path.join(GOC, 'tools', 'np_luyen', tep))
     m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m); return m
 
-KHO = [nap('kho_bai2_4.py'), nap('kho_bai5.py'), nap('kho_bai6.py'), nap('kho_bai7.py')]
+KHO = [nap('kho_bai2_4.py'), nap('kho_bai5.py'), nap('kho_bai6.py'), nap('kho_bai7.py'), nap('kho_bai8.py'), nap('kho_bai9.py')]
 
 
 def strip(p):

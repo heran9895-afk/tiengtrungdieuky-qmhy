@@ -1758,17 +1758,17 @@
    "bai": "Bài 1-2",
    "url": "chuong-trinh-hsk-2/hsk1/bai-1-2/tu-vung.html"
   },
-  "字": {
-   "ma": "1-0245",
-   "han": "名字",
-   "bai": "Bài 3",
-   "url": "chuong-trinh-hsk-2/hsk1/bai-3/tu-vung.html"
-  },
   "汉": {
    "ma": "1-0136",
    "han": "汉语",
    "bai": "Bài 4",
    "url": "chuong-trinh-hsk-2/hsk1/bai-4/tu-vung.html"
+  },
+  "字": {
+   "ma": "1-0245",
+   "han": "名字",
+   "bai": "Bài 3",
+   "url": "chuong-trinh-hsk-2/hsk1/bai-3/tu-vung.html"
   }
  }
 }

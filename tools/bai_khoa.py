@@ -16,7 +16,7 @@ GOC = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(GOC, 'tools'))
 from ngu_phap_luyen import CHU, strip, han   # vốn chữ theo sổ tích lũy, so pinyin
 
-TEN_RIENG = '小语王一飞陈天中安妮白家月李文王一雪刘明杨同乐小明'
+TEN_RIENG = '小语王一飞陈天中安妮白家月李文王一雪刘明杨同乐小明胡'
 
 # ---------- Kho câu luyện: [chữ Hán, pinyin, nghĩa, np] ----------
 CAU = {
@@ -102,6 +102,36 @@ CAU = {
  ['我八点去医院上班，我晚上六点半下班。', 'Wǒ bā diǎn qù yīyuàn shàngbān, wǒ wǎnshang liù diǎn bàn xiàbān.', 'Mình 8 giờ đến bệnh viện làm việc, 6 rưỡi tối tan làm.', 'gio'],
  ['好的，你去店里买些菜吧。', 'Hǎo de, nǐ qù diàn li mǎi xiē cài ba.', 'Được, bạn vào tiệm mua ít rau đi.', 'ba'],
  ['好，我十分钟后去。', 'Hǎo, wǒ shí fēnzhōng hòu qù.', 'Được, 10 phút nữa mình đi.', 'qianhou'],
+],
+8: [
+ ['我没看见，它在哪儿呢？', 'Wǒ méi kànjiàn, tā zài nǎr ne?', 'Mình không nhìn thấy, nó ở đâu thế?', 'jieguo'],
+ ['这只小猫真漂亮！', 'Zhè zhī xiǎo māo zhēn piàoliang!', 'Con mèo nhỏ này xinh thật!', 'liangci'],
+ ['我们在哪儿见呢？', 'Wǒmen zài nǎr jiàn ne?', 'Chúng ta gặp nhau ở đâu thế?', ''],
+ ['在学校书店前见吧。', 'Zài xuéxiào shūdiàn qián jiàn ba.', 'Gặp nhau ở trước hiệu sách của trường nhé.', 'fangwei'],
+ ['好的。下午两点你能到吗？', 'Hǎo de. Xiàwǔ liǎng diǎn nǐ néng dào ma?', 'Được. Hai giờ chiều bạn có thể đến không?', 'neng'],
+ ['我能到。我在学校吃午饭。', 'Wǒ néng dào. Wǒ zài xuéxiào chī wǔfàn.', 'Mình có thể đến. Mình ăn trưa ở trường.', 'neng'],
+ ['小胡，还没吃饭呢？', 'Xiǎo Hú, hái méi chī fàn ne?', 'Tiểu Hồ, vẫn chưa ăn cơm à?', 'mei'],
+ ['没吃呢。', 'Méi chī ne.', 'Chưa ăn đấy.', 'mei'],
+ ['大医院病人多，医生非常忙。', 'Dà yīyuàn bìngrén duō, yīshēng fēicháng máng.', 'Bệnh viện lớn bệnh nhân đông, bác sĩ vô cùng bận.', ''],
+ ['是的。我爸爸也在医院工作，他也非常忙。', 'Shì de. Wǒ bàba yě zài yīyuàn gōngzuò, tā yě fēicháng máng.', 'Đúng vậy. Bố mình cũng làm việc ở bệnh viện, ông cũng vô cùng bận.', ''],
+ ['你家有两个医生？', 'Nǐ jiā yǒu liǎng ge yīshēng?', 'Nhà bạn có hai bác sĩ à?', ''],
+ ['胡医生还没吃饭。', 'Hú yīshēng hái méi chī fàn.', 'Bác sĩ Hồ vẫn chưa ăn cơm.', 'mei'],
+ ['大医院里病人很多。', 'Dà yīyuàn li bìngrén hěn duō.', 'Trong bệnh viện lớn bệnh nhân rất đông.', ''],
+ ['他家有两个医生。', 'Tā jiā yǒu liǎng ge yīshēng.', 'Nhà ông ấy có hai bác sĩ.', ''],
+],
+9: [
+ ['我们晚上去那个电影院看电影吧。', 'Wǒmen wǎnshang qù nàge diànyǐngyuàn kàn diànyǐng ba.', 'Tối nay chúng ta đến rạp chiếu phim đó xem phim nhé.', 'zhishi'],
+ ['好！我们七点在电影院外边见，好吗？', 'Hǎo! Wǒmen qī diǎn zài diànyǐngyuàn wàibian jiàn, hǎo ma?', 'Được! Bảy giờ chúng ta gặp ở bên ngoài rạp chiếu phim, được không?', 'zhuangyu'],
+ ['好的，晚上七点见！', 'Hǎo de, wǎnshang qī diǎn jiàn!', 'Được, bảy giờ tối gặp nhé!', ''],
+ ['椅子上有一本中文书，那是谁的书？', 'Yǐzi shang yǒu yì běn Zhōngwén shū, nà shì shéi de shū?', 'Trên ghế có một quyển sách tiếng Trung, đó là sách của ai?', 'cunxian'],
+ ['是我的书，谢谢。', 'Shì wǒ de shū, xièxie.', 'Là sách của mình, cảm ơn bạn.', ''],
+ ['不客气。你明天上午在哪儿？', 'Bú kèqi. Nǐ míngtiān shàngwǔ zài nǎr?', 'Không có gì. Sáng mai bạn ở đâu?', 'zhuangyu'],
+ ['明天星期六，你做什么？', 'Míngtiān Xīngqīliù, nǐ zuò shénme?', 'Ngày mai thứ bảy, bạn làm gì?', ''],
+ ['我白天在家里读书，晚上和朋友们去外边唱歌。', 'Wǒ báitiān zài jiā li dúshū, wǎnshang hé péngyoumen qù wàibian chàng gē.', 'Ban ngày mình đọc sách ở nhà, buổi tối cùng các bạn ra ngoài hát.', 'he'],
+ ['谢谢！您星期六做什么？', 'Xièxie! Nín Xīngqīliù zuò shénme?', 'Cảm ơn! Cô thứ bảy làm gì ạ?', ''],
+ ['我在家里做饭、看电视，和孩子们、小狗玩。', 'Wǒ zài jiā li zuò fàn, kàn diànshì, hé háizimen, xiǎo gǒu wán.', 'Tôi nấu cơm, xem ti vi ở nhà, chơi cùng bọn trẻ và chú chó nhỏ.', 'he'],
+ ['椅子上的书是陈天中的。', 'Yǐzi shang de shū shì Chén Tiānzhōng de.', 'Quyển sách trên ghế là của Trần Thiên Trung.', 'cunxian'],
+ ['杨同乐白天在家里读书。', 'Yáng Tónglè báitiān zài jiā li dúshū.', 'Ban ngày Dương Đồng Lạc đọc sách ở nhà.', 'zhuangyu'],
 ],
 }
 # Câu cũ đề xuất bỏ khỏi kho câu luyện (không tự nhiên / thiếu ngữ cảnh), thay bằng câu bài khóa ở trên
@@ -195,6 +225,34 @@ HD = {
       nhieu=[L('她早上八点上班。', 'Tā zǎoshang bā diǎn shàngbān.'), L('她在家里。', 'Tā zài jiā li.'), L('她很忙。', 'Tā hěn máng.')]),
  dict(hoi=L('刘明十分钟后去做什么？', 'Liú Míng shí fēnzhōng hòu qù zuò shénme?', 'Mười phút nữa Lưu Minh đi làm gì?'), dap=L('他去店里买菜。', 'Tā qù diàn li mǎi cài.', 'Anh ấy vào tiệm mua rau.'),
       nhieu=[L('他去医院上班。', 'Tā qù yīyuàn shàngbān.'), L('他在家里做饭。', 'Tā zài jiā li zuò fàn.'), L('他想去看电影。', 'Tā xiǎng qù kàn diànyǐng.')]),
+],
+8: [
+ dict(hoi=L('大医院里病人多吗？', 'Dà yīyuàn li bìngrén duō ma?', 'Trong bệnh viện lớn bệnh nhân có đông không?'), dap=L('大医院里病人很多。', 'Dà yīyuàn li bìngrén hěn duō.', 'Trong bệnh viện lớn bệnh nhân rất đông.'),
+      nhieu=[L('医院很漂亮。', 'Yīyuàn hěn piàoliang.'), L('医生是我爸爸。', 'Yīshēng shì wǒ bàba.'), L('我想去医院。', 'Wǒ xiǎng qù yīyuàn.')]),
+ dict(hoi=L('胡医生的爸爸在哪儿工作？', 'Hú yīshēng de bàba zài nǎr gōngzuò?', 'Bố của bác sĩ Hồ làm việc ở đâu?'), dap=L('他也在医院工作。', 'Tā yě zài yīyuàn gōngzuò.', 'Ông ấy cũng làm việc ở bệnh viện.'),
+      nhieu=[L('他是胡医生的同事。', 'Tā shì Hú yīshēng de tóngshì.'), L('他在学校学习。', 'Tā zài xuéxiào xuéxí.'), L('他很喜欢吃米饭。', 'Tā hěn xǐhuan chī mǐfàn.')]),
+ dict(hoi=L('胡医生的爸爸工作忙吗？', 'Hú yīshēng de bàba gōngzuò máng ma?', 'Bố của bác sĩ Hồ làm việc có bận không?'), dap=L('他非常忙。', 'Tā fēicháng máng.', 'Ông ấy vô cùng bận.'),
+      nhieu=[L('他有两个孩子。', 'Tā yǒu liǎng ge háizi.'), L('他今天休息。', 'Tā jīntiān xiūxi.'), L('他是我哥哥。', 'Tā shì wǒ gēge.')]),
+ dict(hoi=L('胡医生家有几个医生？', 'Hú yīshēng jiā yǒu jǐ ge yīshēng?', 'Nhà bác sĩ Hồ có mấy bác sĩ?'), dap=L('他家有两个医生。', 'Tā jiā yǒu liǎng ge yīshēng.', 'Nhà ông ấy có hai bác sĩ.'),
+      nhieu=[L('他家有三个房间。', 'Tā jiā yǒu sān ge fángjiān.'), L('他家在医院后边。', 'Tā jiā zài yīyuàn hòubian.'), L('他家有一只小猫。', 'Tā jiā yǒu yì zhī xiǎo māo.')]),
+ dict(hoi=L('小猫在哪儿？', 'Xiǎo māo zài nǎr?', 'Con mèo nhỏ ở đâu?'), dap=L('它在桌子下呢。', 'Tā zài zhuōzi xià ne.', 'Nó ở dưới bàn đấy.'),
+      nhieu=[L('小猫很漂亮。', 'Xiǎo māo hěn piàoliang.'), L('我没有小猫。', 'Wǒ méiyǒu xiǎo māo.'), L('桌子是新的。', 'Zhuōzi shì xīn de.')]),
+ dict(hoi=L('白家月和李文在哪儿见？', 'Bái Jiāyuè hé Lǐ Wén zài nǎr jiàn?', 'Bạch Gia Nguyệt và Lý Văn gặp nhau ở đâu?'), dap=L('她们在学校书店前见。', 'Tāmen zài xuéxiào shūdiàn qián jiàn.', 'Họ gặp nhau ở trước hiệu sách của trường.'),
+      nhieu=[L('她们是同学。', 'Tāmen shì tóngxué.'), L('她们在书店买书。', 'Tāmen zài shūdiàn mǎi shū.'), L('她们下午有课。', 'Tāmen xiàwǔ yǒu kè.')]),
+],
+9: [
+ dict(hoi=L('学校前边有什么？', 'Xuéxiào qiánbian yǒu shénme?', 'Phía trước trường có gì?'), dap=L('学校前边有一家电影院。', 'Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn.', 'Phía trước trường có một rạp chiếu phim.'),
+      nhieu=[L('学校很大。', 'Xuéxiào hěn dà.'), L('学校后边是医院。', 'Xuéxiào hòubian shì yīyuàn.'), L('我在学校学习。', 'Wǒ zài xuéxiào xuéxí.')]),
+ dict(hoi=L('他们几点在哪儿见？', 'Tāmen jǐ diǎn zài nǎr jiàn?', 'Họ gặp nhau lúc mấy giờ, ở đâu?'), dap=L('他们七点在电影院外边见。', 'Tāmen qī diǎn zài diànyǐngyuàn wàibian jiàn.', 'Bảy giờ họ gặp nhau ở bên ngoài rạp chiếu phim.'),
+      nhieu=[L('他们晚上看电影。', 'Tāmen wǎnshang kàn diànyǐng.'), L('他们是朋友。', 'Tāmen shì péngyou.'), L('电影院很大。', 'Diànyǐngyuàn hěn dà.')]),
+ dict(hoi=L('椅子上的书是谁的？', 'Yǐzi shang de shū shì shéi de?', 'Quyển sách trên ghế là của ai?'), dap=L('是陈天中的。', 'Shì Chén Tiānzhōng de.', 'Của Trần Thiên Trung.'),
+      nhieu=[L('书在椅子上。', 'Shū zài yǐzi shang.'), L('那是一本中文书。', 'Nà shì yì běn Zhōngwén shū.'), L('他有两本书。', 'Tā yǒu liǎng běn shū.')]),
+ dict(hoi=L('陈天中明天上午在哪儿学习？', 'Chén Tiānzhōng míngtiān shàngwǔ zài nǎr xuéxí?', 'Sáng mai Trần Thiên Trung học ở đâu?'), dap=L('他明天上午在学校学习。', 'Tā míngtiān shàngwǔ zài xuéxiào xuéxí.', 'Sáng mai anh ấy học ở trường.'),
+      nhieu=[L('他喜欢学习汉语。', 'Tā xǐhuan xuéxí Hànyǔ.'), L('他明天有课。', 'Tā míngtiān yǒu kè.'), L('学校很大。', 'Xuéxiào hěn dà.')]),
+ dict(hoi=L('杨同乐星期六做什么？', 'Yáng Tónglè Xīngqīliù zuò shénme?', 'Thứ bảy Dương Đồng Lạc làm gì?'), dap=L('他白天在家里读书，晚上和朋友们去外边唱歌。', 'Tā báitiān zài jiā li dúshū, wǎnshang hé péngyoumen qù wàibian chàng gē.', 'Ban ngày anh ấy đọc sách ở nhà, buổi tối cùng các bạn ra ngoài hát.'),
+      nhieu=[L('他喜欢唱歌。', 'Tā xǐhuan chàng gē.'), L('他星期六很忙。', 'Tā Xīngqīliù hěn máng.'), L('他在学校学习。', 'Tā zài xuéxiào xuéxí.')]),
+ dict(hoi=L('王一雪星期六做什么？', 'Wáng Yīxuě Xīngqīliù zuò shénme?', 'Thứ bảy Vương Nhất Tuyết làm gì?'), dap=L('她在家里做饭、看电视，和孩子们、小狗玩。', 'Tā zài jiā li zuò fàn, kàn diànshì, hé háizimen, xiǎo gǒu wán.', 'Cô ấy nấu cơm, xem ti vi ở nhà, chơi cùng bọn trẻ và chú chó nhỏ.'),
+      nhieu=[L('她有两个孩子。', 'Tā yǒu liǎng ge háizi.'), L('她喜欢小狗。', 'Tā xǐhuan xiǎo gǒu.'), L('她在学校工作。', 'Tā zài xuéxiào gōngzuò.')]),
 ],
 }
 
@@ -298,6 +356,37 @@ HT = {
       nhieu={1: [L('我在医院里呢。', 'Wǒ zài yīyuàn li ne.'), L('我不在家。', 'Wǒ bú zài jiā.'), L('我想去电影院。', 'Wǒ xiǎng qù diànyǐngyuàn.')],
              3: [L('我想吃饺子。', 'Wǒ xiǎng chī jiǎozi.'), L('我晚上还上课呢。', 'Wǒ wǎnshang hái shàngkè ne.'), L('我不想去。', 'Wǒ bù xiǎng qù.')]}),
 ],
+8: [
+ dict(ten='Bài khóa · Con mèo ở đâu', luot=[L('房间外有一只小猫。', 'Fángjiān wài yǒu yì zhī xiǎo māo.', 'Bên ngoài phòng có một con mèo nhỏ.'), L('我没看见，它在哪儿呢？', 'Wǒ méi kànjiàn, tā zài nǎr ne?', 'Mình không thấy, nó ở đâu thế?'),
+      L('它在桌子下呢。', 'Tā zài zhuōzi xià ne.', 'Nó ở dưới bàn đấy.'), L('这只小猫真漂亮！', 'Zhè zhī xiǎo māo zhēn piàoliang!', 'Con mèo nhỏ này xinh thật!')],
+      nhieu={1: [L('我很喜欢小猫。', 'Wǒ hěn xǐhuan xiǎo māo.'), L('房间很大。', 'Fángjiān hěn dà.'), L('我有一只小狗。', 'Wǒ yǒu yì zhī xiǎo gǒu.')],
+             3: [L('桌子很新。', 'Zhuōzi hěn xīn.'), L('我想买一只猫。', 'Wǒ xiǎng mǎi yì zhī māo.'), L('小猫在房间外。', 'Xiǎo māo zài fángjiān wài.')]}),
+ dict(ten='Bài khóa · Hẹn ở hiệu sách', luot=[L('我们在哪儿见呢？', 'Wǒmen zài nǎr jiàn ne?', 'Chúng ta gặp nhau ở đâu thế?'), L('在学校书店前见吧。', 'Zài xuéxiào shūdiàn qián jiàn ba.', 'Gặp ở trước hiệu sách của trường nhé.'),
+      L('好的。下午两点你能到吗？', 'Hǎo de. Xiàwǔ liǎng diǎn nǐ néng dào ma?', 'Được. Hai giờ chiều bạn có thể đến không?'), L('我能到。我在学校吃午饭。', 'Wǒ néng dào. Wǒ zài xuéxiào chī wǔfàn.', 'Mình có thể đến. Mình ăn trưa ở trường.')],
+      nhieu={1: [L('书店很大。', 'Shūdiàn hěn dà.'), L('我在学校学习。', 'Wǒ zài xuéxiào xuéxí.'), L('我想买一本书。', 'Wǒ xiǎng mǎi yì běn shū.')],
+             3: [L('我下午没有时间。', 'Wǒ xiàwǔ méiyǒu shíjiān.'), L('我有一张新桌子。', 'Wǒ yǒu yì zhāng xīn zhuōzi.'), L('午饭很好吃。', 'Wǔfàn hěn hǎochī.')]}),
+ dict(ten='Bài khóa · Bác sĩ Hồ chưa ăn cơm', luot=[L('小胡，还没吃饭呢？', 'Xiǎo Hú, hái méi chī fàn ne?', 'Tiểu Hồ, vẫn chưa ăn cơm à?'), L('没吃呢。', 'Méi chī ne.', 'Chưa ăn đấy.'),
+      L('大医院病人多，医生非常忙。', 'Dà yīyuàn bìngrén duō, yīshēng fēicháng máng.', 'Bệnh viện lớn bệnh nhân đông, bác sĩ vô cùng bận.'), L('是的。我爸爸也在医院工作，他也非常忙。', 'Shì de. Wǒ bàba yě zài yīyuàn gōngzuò, tā yě fēicháng máng.', 'Đúng vậy. Bố mình cũng làm việc ở bệnh viện, ông cũng vô cùng bận.'),
+      L('你家有两个医生？', 'Nǐ jiā yǒu liǎng ge yīshēng?', 'Nhà bạn có hai bác sĩ à?'), L('对。', 'Duì.', 'Đúng.')],
+      nhieu={3: [L('我爸爸很喜欢工作。', 'Wǒ bàba hěn xǐhuan gōngzuò.'), L('我们医院很漂亮。', 'Wǒmen yīyuàn hěn piàoliang.'), L('我家有两个房间。', 'Wǒ jiā yǒu liǎng ge fángjiān.')],
+             5: [L('不是。', 'Bú shì.'), L('我没吃饭。', 'Wǒ méi chī fàn.'), L('我不工作。', 'Wǒ bù gōngzuò.')]}),
+],
+9: [
+ dict(ten='Bài khóa · Hẹn xem phim', luot=[L('学校前边有一家电影院。', 'Xuéxiào qiánbian yǒu yì jiā diànyǐngyuàn.', 'Phía trước trường có một rạp chiếu phim.'), L('对。我们晚上去那个电影院看电影吧。', 'Duì. Wǒmen wǎnshang qù nàge diànyǐngyuàn kàn diànyǐng ba.', 'Đúng. Tối nay chúng ta đến rạp đó xem phim nhé.'),
+      L('好！我们七点在电影院外边见，好吗？', 'Hǎo! Wǒmen qī diǎn zài diànyǐngyuàn wàibian jiàn, hǎo ma?', 'Được! Bảy giờ chúng ta gặp ở bên ngoài rạp, được không?'), L('好的，晚上七点见！', 'Hǎo de, wǎnshang qī diǎn jiàn!', 'Được, bảy giờ tối gặp nhé!')],
+      nhieu={1: [L('电影院很大。', 'Diànyǐngyuàn hěn dà.'), L('我想买新手机。', 'Wǒ xiǎng mǎi xīn shǒujī.'), L('学校后边是医院。', 'Xuéxiào hòubian shì yīyuàn.')],
+             3: [L('我喜欢看电影。', 'Wǒ xǐhuan kàn diànyǐng.'), L('电影很好看。', 'Diànyǐng hěn hǎokàn.'), L('我在家看电视。', 'Wǒ zài jiā kàn diànshì.')]}),
+ dict(ten='Bài khóa · Quyển sách của ai', luot=[L('椅子上有一本中文书，那是谁的书？', 'Yǐzi shang yǒu yì běn Zhōngwén shū, nà shì shéi de shū?', 'Trên ghế có một quyển sách tiếng Trung, đó là sách của ai?'), L('是我的书，谢谢。这是我的第二本中文书。', 'Shì wǒ de shū, xièxie. Zhè shì wǒ de dì-èr běn Zhōngwén shū.', 'Là sách của mình, cảm ơn bạn. Đây là quyển sách tiếng Trung thứ hai của mình.'),
+      L('不客气。你明天上午在哪儿？', 'Bú kèqi. Nǐ míngtiān shàngwǔ zài nǎr?', 'Không có gì. Sáng mai bạn ở đâu?'), L('我明天上午在学校学习。', 'Wǒ míngtiān shàngwǔ zài xuéxiào xuéxí.', 'Sáng mai mình học ở trường.')],
+      nhieu={1: [L('书在椅子上。', 'Shū zài yǐzi shang.'), L('那是一本新书。', 'Nà shì yì běn xīn shū.'), L('我有两把椅子。', 'Wǒ yǒu liǎng bǎ yǐzi.')],
+             3: [L('我明天很忙。', 'Wǒ míngtiān hěn máng.'), L('学校很大。', 'Xuéxiào hěn dà.'), L('我喜欢学习汉语。', 'Wǒ xǐhuan xuéxí Hànyǔ.')]}),
+ dict(ten='Bài khóa · Thứ bảy làm gì', luot=[L('明天星期六，你做什么？', 'Míngtiān Xīngqīliù, nǐ zuò shénme?', 'Ngày mai thứ bảy, bạn làm gì?'), L('我白天在家里读书，晚上和朋友们去外边唱歌。', 'Wǒ báitiān zài jiā li dúshū, wǎnshang hé péngyoumen qù wàibian chàng gē.', 'Ban ngày mình đọc sách ở nhà, buổi tối cùng các bạn ra ngoài hát.'),
+      L('你唱歌很好听。', 'Nǐ chàng gē hěn hǎotīng.', 'Bạn hát rất hay.'), L('谢谢！您星期六做什么？', 'Xièxie! Nín Xīngqīliù zuò shénme?', 'Cảm ơn! Cô thứ bảy làm gì ạ?'),
+      L('我在家里做饭、看电视，和孩子们、小狗玩。', 'Wǒ zài jiā li zuò fàn, kàn diànshì, hé háizimen, xiǎo gǒu wán.', 'Tôi nấu cơm, xem ti vi ở nhà, chơi cùng bọn trẻ và chú chó nhỏ.')],
+      nhieu={1: [L('星期六我很忙。', 'Xīngqīliù wǒ hěn máng.'), L('我喜欢星期六。', 'Wǒ xǐhuan xīngqīliù.'), L('我在学校学习。', 'Wǒ zài xuéxiào xuéxí.')],
+             3: [L('我也想唱歌。', 'Wǒ yě xiǎng chàng gē.'), L('我是你的朋友。', 'Wǒ shì nǐ de péngyou.'), L('我不喜欢读书。', 'Wǒ bù xǐhuan dúshū.')],
+             4: [L('我在学校工作。', 'Wǒ zài xuéxiào gōngzuò.'), L('我喜欢星期六。', 'Wǒ xǐhuan xīngqīliù.'), L('我们去外边玩。', 'Wǒmen qù wàibian wán.')]}),
+],
 }
 
 
@@ -339,7 +428,7 @@ def gop(chi=None):
     # chi = danh sách bài cần ghi (python3 tools/bai_khoa.py gop 6 7); bỏ trống = mọi bài. Bài đã có giọng đọc (doc) thì CHỈ ghi lại khi cần,
     # vì ghi lại xoá trường doc đã ánh xạ giọng.
     if kiem(): sys.exit('Còn lỗi, chưa ghi.')
-    for n in (chi or (1, 2, 3, 4, 5, 6, 7)):
+    for n in (chi or (1, 2, 3, 4, 5, 6, 7, 8, 9)):
         tep = os.path.join(GOC, 'data', 'bai', f'bai-{n}.json')
         d = json.load(open(tep, encoding='utf-8'))
         tuBai = [w['Chữ Hán'] for w in d['tu']]
