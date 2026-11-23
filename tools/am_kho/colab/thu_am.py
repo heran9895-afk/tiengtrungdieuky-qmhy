@@ -146,7 +146,8 @@ def gom(cap, tu, den, ep=None):
         text = (text or '').strip()
         if not text or text.startswith('assets/') or text == '-': bo.append((src, text)); return
         k = chuan(text)
-        if k in ('了', '么', '了。', '么。'): bo.append((src, text + ' (đứng riêng, để giọng máy)')); return
+        # 了 đứng riêng không còn bị bỏ: Nhiên muốn thử thu (24/11/2026); sổ gắn cờ đa âm để cô nghe
+        if k in ('么', '了。', '么。'): bo.append((src, text + ' (đứng riêng, để giọng máy)')); return
         if o_chu and len(han(k)) == 1 and da_am(han(k)): o, typ = o or o_chu, 'chu'   # chữ đa âm một chữ: ghi thẳng ô Đọc (§8)
         id_ = (k + '|' + khong_dau(py)) if o else k
         if not o and k in B and k not in (ep or ()): return
