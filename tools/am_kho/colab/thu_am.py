@@ -784,6 +784,10 @@ TACH = {
         ('端午节那天，', 'Duānwǔ Jié nà tiān,', '捺天 = nà tiān (4th tone nà, NOT nèi tiān)'),
         ('街头到处都是出行的人。', 'jiētóu dàochù dōu shì chūxíng de rén.', '街头 = jiētóu (first tone jiē, 头 light; NOT jiétóu)'),
     ],
+    '那条胡同儿留下了我很多童年的记忆。': [   # Nhiên 24/11/2026: thu cả câu thì 儿 không cong, ghi chú 儿 thì 那 đọc nèi → tách 那条 / phần còn lại
+        ('那条', 'Nà tiáo', '捺条 = nà tiáo (4th tone nà, NOT nèi tiáo)'),
+        ('胡同儿留下了我很多童年的记忆。', 'hútòngr liúxiàle wǒ hěn duō tóngnián de jìyì.', '胡同儿 = hútòngr: pronounce the final 儿 as a clear r-colored ending (erhua), the tongue curls: tóngr'),
+    ],
 }
 TACH_K = {chuan(k): v for k, v in TACH.items()}
 GAP_TACH = 0.16   # giây nghỉ giữa các đoạn khi ghép
