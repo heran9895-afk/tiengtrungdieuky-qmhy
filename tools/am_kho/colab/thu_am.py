@@ -43,6 +43,9 @@ class _EpChu:
 REDO_HSK5 = _EpChu('编辑', '那', '挨')
 REDO_NA = _EpChu('那')   # cấp 1–4: thu lại mọi từ/cụm/câu có 那 (Gemini đọc nèi, cần nà); dùng DEN mới để sổ gom lại
 
+# Nhiên báo 24/11/2026: các mục có 那 này nghe vẫn đọc nèi → thu lại đúng các mục này và gắn cờ cho cô nghe (ô 4). Khóa theo chuan().
+NA_SAI_24 = '门口那辆白色的车是谁的？ 你收到我的那封信了吗？ 我想买那件红色的大衣。 那会儿的事 那会儿我还在上小学。 那会儿我还在上高中。 那时候我们都很年轻。 那时候我还在上高中，不认识他。 那样 那样做 那样的人 你别那样大声说话，大家都在看你。 你刚才提到的那本书在哪儿？ 这件衬衣比那件衬衫便宜。 那个穿红衣服的姑娘是我妹妹。 那边着火了，快报告保安！ 我们和那家公司建立了合作关系。 那位老太太每天都来公园。 那个老头儿是我父亲的朋友。 那个年代的生活很困难。 直到现在，我还记得那一天。 那些年家里很穷，一家人常常挨饿受冻。 半决赛那天，体育馆门口的安检排起了长队。 那家公司经营不好，已经到了破产的边缘。 自从那次失败以后，他便不再相信别人了。 那个时期，本地的经济十分昌盛，人们的生活很幸福。 这把球拍是那位球星用过的，非常有收藏价值。 这篇文章太长了，把开头那段去掉吧。 这篇文章太常了，把开头那段去掉吧。'.split()
+
 
 def chuan(s):  # giống chuanAm() trong assets/js/tu-vung-chung.js
     s = re.sub(r'\s+', '', str(s or ''))
@@ -129,6 +132,10 @@ def ten_rieng(py, typ):
 def tep_cap(cap): return CFG['repo'] + 'data/tu-vung/cap-%s.json' % cap
 
 
+NA_SAI_K = {chuan(t) for t in NA_SAI_24}
+REDO_NA24 = NA_SAI_K
+
+
 def gom(cap, tu, den, ep=None):
     if 'bai' in str(cap):
         import thu_am_bai; return thu_am_bai.gom_bai(sys.modules[__name__], cap)
@@ -160,7 +167,7 @@ def gom(cap, tu, den, ep=None):
 
     for w in d[tu - 1:den]:
         ma = w['Mã']; doc = (w.get('Đọc từ') or '').strip()
-        if doc.startswith('assets/'): bo.append((ma + ' từ', 'đã có file'))
+        if doc.startswith('assets/') and chuan(w['Chữ Hán']) not in (ep or ()): bo.append((ma + ' từ', 'đã có file'))
         else:
             o = [ma, 'Đọc từ'] if doc == '-' else None
             add(w['Chữ Hán'] if doc == '-' else pick(doc, w['Chữ Hán']), w.get('Pinyin'), 'tu', ma + ' từ', o, [ma, 'Đọc từ'])
@@ -187,6 +194,7 @@ def gom(cap, tu, den, ep=None):
         if dk: co.append('đa âm ' + ''.join(dk))
         if '头发' in it['text']: co.append('头发 tóufa')
         if ten_rieng(it['py'], it['typ']): co.append('tên riêng')
+        if it['k'] in NA_SAI_K: co.append('那 cô báo sai: nghe lại')
         it['co'] = co
         it['alt'] = khong_dau(it['py']) if lech else ''   # pypinyin đọc khác kho → nhận dạng đối chiếu theo pinyin của kho
     return out, bo
@@ -662,7 +670,7 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
     t0 = time.time()
     ds = _doc(D + 'ds.json')
     if ds is None:
-        ds, bo = gom(cap, tu, den, None)   # 24/11/2026: các đợt thu lại 那/编辑/挨 (REDO_*) đã xong hết; không ép thu lại nữa, chỉ gom mục chưa có file
+        ds, bo = gom(cap, tu, den, REDO_NA24)   # 24/11/2026: chỉ ép thu lại các mục cô báo sai (NA_SAI_24); còn lại chỉ gom mục chưa có file
         _ghi(D + 'ds.json', ds); _ghi(D + 'bo.json', bo)
         print('Gom HSK%s %d → %d: %d từ/cụm, %d chữ đa âm (ghi thẳng ô Đọc), %d câu · bỏ %d mục (了/么 riêng, đã có file)' % (
             cap, tu, den, sum(it['typ'] == 'tu' for it in ds), sum(it['typ'] == 'chu' for it in ds), sum(it['typ'] == 'cau' for it in ds), len(bo)))
