@@ -791,6 +791,9 @@ TACH = {
 }
 TACH_K = {chuan(k): v for k, v in TACH.items()}
 GAP_TACH = 0.16   # giây nghỉ giữa các đoạn khi ghép
+# Câu tách giữa một cụm (không có dấu phẩy): cắt lặng thừa ở cuối đoạn trước / đầu đoạn sau, nghỉ rất ngắn (Nhiên 24/11/2026: nghỉ sau 条 quá lâu)
+GAP_RIENG = {chuan('那条胡同儿留下了我很多童年的记忆。'): 0.03}
+CAT_LANG = 'silenceremove=start_periods=1:start_silence=0.02:start_threshold=-42dB:detection=peak,areverse,silenceremove=start_periods=1:start_silence=0.02:start_threshold=-42dB:detection=peak,areverse'
 
 
 def thu_lai_tach(D, it, dot):
@@ -824,9 +827,11 @@ def thu_lai_tach(D, it, dot):
     ra = D + 'tam/%s/%s_ghep.mp3' % (ten, it['ten'])
     cmd = ['ffmpeg', '-v', 'error', '-y']
     for c in chon[:1]: cmd += ['-i', c['tam']]
-    for c in chon[1:]: cmd += ['-f', 'lavfi', '-t', str(GAP_TACH), '-i', 'anullsrc=r=%d:cl=mono' % SR, '-i', c['tam']]
+    gap = GAP_RIENG.get(it['k'], GAP_TACH); cat = it['k'] in GAP_RIENG
+    for c in chon[1:]: cmd += ['-f', 'lavfi', '-t', str(gap), '-i', 'anullsrc=r=%d:cl=mono' % SR, '-i', c['tam']]
     k = sum(1 for a in cmd if a == '-i')
-    fc = ''.join('[%d:a]aformat=sample_rates=%d:channel_layouts=mono[a%d];' % (i, SR, i) for i in range(k))
+    # khi cat: chỉ cắt lặng ở các đoạn tiếng (đầu vào chẵn: 0, 2, 4…), không đụng đoạn lặng giả
+    fc = ''.join('[%d:a]%saformat=sample_rates=%d:channel_layouts=mono[a%d];' % (i, (CAT_LANG + ',') if (cat and i % 2 == 0) else '', SR, i) for i in range(k))
     fc += ''.join('[a%d]' % i for i in range(k)) + 'concat=n=%d:v=0:a=1' % k
     cmd += ['-filter_complex', fc, '-ac', '1', '-ar', str(SR), '-b:a', '48k', ra]
     subprocess.run(cmd, check=True)
