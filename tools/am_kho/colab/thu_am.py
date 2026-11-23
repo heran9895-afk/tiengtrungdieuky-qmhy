@@ -132,6 +132,8 @@ def ten_rieng(py, typ):
 def tep_cap(cap): return CFG['repo'] + 'data/tu-vung/cap-%s.json' % cap
 
 
+NHI_BO = {'那个老头儿是我父亲的朋友。'}   # câu hiển thị có 儿 nhưng thu theo ô Đọc (bỏ 儿)
+NA_SAI_24 += ['那个老头是我父亲的朋友。']
 NA_SAI_K = {chuan(t) for t in NA_SAI_24}
 REDO_NA24 = NA_SAI_K
 
@@ -145,6 +147,7 @@ def gom(cap, tu, den, ep=None):
     out, seen, bo = [], set(), []
 
     def pick(doc, hien):  # chữ có 儿 đọc theo chữ hiển thị (quy chuẩn 14 §3.2)
+        if hien in NHI_BO: return doc   # Nhiên 24/11/2026: 头儿 cong lưỡi sai → thu theo ô Đọc (không 儿)
         if '儿' in (hien or '') and doc != '-': return hien
         return doc or hien
 
