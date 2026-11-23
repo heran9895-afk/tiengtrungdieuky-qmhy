@@ -784,16 +784,13 @@ TACH = {
         ('端午节那天，', 'Duānwǔ Jié nà tiān,', '捺天 = nà tiān (4th tone nà, NOT nèi tiān)'),
         ('街头到处都是出行的人。', 'jiētóu dàochù dōu shì chūxíng de rén.', '街头 = jiētóu (first tone jiē, 头 light; NOT jiétóu)'),
     ],
-    '那条胡同儿留下了我很多童年的记忆。': [   # Nhiên 24/11/2026: thu cả câu thì 儿 không cong, ghi chú 儿 thì 那 đọc nèi → tách 那条 / phần còn lại
-        ('那条', 'Nà tiáo', '捺条 = nà tiáo (4th tone nà, NOT nèi tiáo)'),
-        ('胡同儿留下了我很多童年的记忆。', 'hútòngr liúxiàle wǒ hěn duō tóngnián de jìyì.', '胡同儿 = hútòngr: pronounce the final 儿 as a clear r-colored ending (erhua), the tongue curls: tóngr'),
-    ],
 }
 TACH_K = {chuan(k): v for k, v in TACH.items()}
 GAP_TACH = 0.16   # giây nghỉ giữa các đoạn khi ghép
-# Câu tách giữa một cụm (không có dấu phẩy): cắt lặng thừa ở cuối đoạn trước / đầu đoạn sau, nghỉ rất ngắn (Nhiên 24/11/2026: nghỉ sau 条 quá lâu)
-GAP_RIENG = {chuan('那条胡同儿留下了我很多童年的记忆。'): 0.03}
-CAT_LANG = 'silenceremove=start_periods=1:start_silence=0.02:start_threshold=-42dB:detection=peak,areverse,silenceremove=start_periods=1:start_silence=0.02:start_threshold=-42dB:detection=peak,areverse'
+# Câu bỏ 儿 khi thu (Nhiên 24/11/2026: 胡同儿 cong lưỡi chưa rõ, ghi chú 儿 lại làm 那 đọc sai → đọc 胡同 không儿 cho nhanh); khóa file vẫn theo câu có 儿
+KHONG_NHI = {chuan('那条胡同儿留下了我很多童年的记忆。')}
+GAP_RIENG = {}
+CAT_LANG = ''
 
 
 def thu_lai_tach(D, it, dot):
@@ -846,6 +843,8 @@ def thu_lai_nhom(D, its, dot, ep=False):
     """Thu lại NHIỀU mục trong MỘT lần gọi (đỡ tốn hạn mức 100 lần/ngày): mỗi mục đọc 2 lần (danh sách lặp 2 vòng),
     Style chỉ nói về các mục đó (+ ghi chú của cô). Mỗi mục chọn bản tốt hơn. its: cùng loại, cùng giọng, ≤ 12 mục."""
     for it in its: it['text'] = gon(it['text'])   # mục đã gom từ trước vẫn còn "……" ở đầu
+    for it in its:
+        if it.get('k') in KHONG_NHI: it['text'] = it['text'].replace('儿', ''); it['py'] = (it.get('py') or '').replace('tòngr', 'tòng')
     for it in its:   # câu / từ có 那: mỗi lần thu lại đổi sang chữ thay khác (捺 → 呐 → 衲 → 那 → 纳), vì chữ đúng ở câu này có thể sai ở câu khác
         if '那' in it.get('k', ''):
             it.setdefault('goc', it['text'].replace('捺', '那'))
