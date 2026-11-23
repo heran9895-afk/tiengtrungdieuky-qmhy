@@ -27,7 +27,7 @@
    "Câu 2": "A：你家有几个房间？\nB：我家有三个房间。",
    "Pinyin câu 2": "A: Nǐ jiā yǒu jǐ ge fángjiān?\nB: Wǒ jiā yǒu sān ge fángjiān.",
    "Nghĩa câu 2": "A: Nhà bạn có mấy phòng?\nB: Nhà tôi có ba phòng.",
-   "Đọc câu 2": "你家有几个房间？我家有三个房间。"
+   "Đọc câu 2": "assets/am/nam1/98d43b3d4e.mp3|assets/am/cau/c054dc7e2a.mp3"
   },
   {
    "Mã": "1-0487",
@@ -48,7 +48,7 @@
    "Câu 2": "A：这张桌子是谁的？\nB：是我哥哥的。",
    "Pinyin câu 2": "A: Zhè zhāng zhuōzi shì shéi de?\nB: Shì wǒ gēge de.",
    "Nghĩa câu 2": "A: Cái bàn này của ai?\nB: Của anh trai tôi.",
-   "Đọc câu 2": "这张桌子是谁的？是我哥哥的。"
+   "Đọc câu 2": "assets/am/nam1/5889c78baa.mp3|assets/am/cau/901ce8b61d.mp3"
   },
   {
    "Mã": "1-0367",
@@ -174,7 +174,7 @@
    "Câu 2": "A：他的女朋友漂亮吗？\nB：很漂亮。",
    "Pinyin câu 2": "A: Tā de nǚ péngyou piàoliang ma?\nB: Hěn piàoliang.",
    "Nghĩa câu 2": "A: Bạn gái anh ấy có xinh không?\nB: Rất xinh.",
-   "Đọc câu 2": "他的女朋友漂亮吗？很漂亮。"
+   "Đọc câu 2": "assets/am/nam1/d7a348cffe.mp3|assets/am/cau/3705610868.mp3"
   },
   {
    "Mã": "1-0232",
@@ -186,7 +186,7 @@
    "Cấp HSK": "1",
    "Thuận bút": "",
    "Cụm từ": "没事 | méi shì\n没去 | méi qù\n还没买 | hái méi mǎi",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/03351bea7d.mp3",
    "_nhom": "tuVung",
    "Câu 1": "昨天我没去超市。",
    "Pinyin câu 1": "Zuótiān wǒ méi qù chāoshì.",
@@ -237,7 +237,7 @@
    "Câu 2": "A：你中午在哪儿吃饭？\nB：我在学校吃午饭。",
    "Pinyin câu 2": "A: Nǐ zhōngwǔ zài nǎr chī fàn?\nB: Wǒ zài xuéxiào chī wǔfàn.",
    "Nghĩa câu 2": "A: Trưa bạn ăn cơm ở đâu?\nB: Tôi ăn trưa ở trường.",
-   "Đọc câu 2": "你中午在哪儿吃饭？我在学校吃午饭。"
+   "Đọc câu 2": "assets/am/nam1/2dbfd66c6f.mp3|assets/am/cau/b2e1b0b179.mp3"
   },
   {
    "Mã": "1-0421",
@@ -258,7 +258,7 @@
    "Câu 2": "A：你们学校有多少个学生？\nB：有两千个学生。",
    "Pinyin câu 2": "A: Nǐmen xuéxiào yǒu duōshao ge xuésheng?\nB: Yǒu liǎng qiān ge xuésheng.",
    "Nghĩa câu 2": "A: Trường các bạn có bao nhiêu học sinh?\nB: Có hai nghìn học sinh.",
-   "Đọc câu 2": "你们学校有多少个学生？有两千个学生。"
+   "Đọc câu 2": "assets/am/nam1/f4ccb92fdc.mp3|assets/am/cau/8bdc8eb258.mp3"
   },
   {
    "Mã": "1-0343",
@@ -279,7 +279,7 @@
    "Câu 2": "A：书店在哪儿？\nB：书店在学校里。",
    "Pinyin câu 2": "A: Shūdiàn zài nǎr?\nB: Shūdiàn zài xuéxiào li.",
    "Nghĩa câu 2": "A: Hiệu sách ở đâu?\nB: Hiệu sách ở trong trường.",
-   "Đọc câu 2": "书店在哪儿？书店在学校里。"
+   "Đọc câu 2": "assets/am/nam1/782299dbd4.mp3|assets/am/cau/430319619f.mp3"
   },
   {
    "Mã": "1-0291",
@@ -317,7 +317,7 @@
    "Câu 1": "A：你午饭吃什么？\nB：我吃米饭和菜。",
    "Pinyin câu 1": "A: Nǐ wǔfàn chī shénme?\nB: Wǒ chī mǐfàn hé cài.",
    "Nghĩa câu 1": "A: Bữa trưa bạn ăn gì?\nB: Tôi ăn cơm và rau.",
-   "Đọc câu 1": "你午饭吃什么？我吃米饭和菜。",
+   "Đọc câu 1": "assets/am/nam1/b4bd216a20.mp3|assets/am/cau/33d2b66564.mp3",
    "Câu 2": "今天妈妈没做午饭，我们去饭店吃饭吧。",
    "Pinyin câu 2": "Jīntiān māma méi zuò wǔfàn, wǒmen qù fàndiàn chī fàn ba.",
    "Nghĩa câu 2": "Hôm nay mẹ không nấu cơm trưa, chúng ta đến nhà hàng ăn nhé.",
@@ -363,7 +363,7 @@
    "Câu 2": "A：我能在这里吃午饭吗？\nB：不能。",
    "Pinyin câu 2": "A: Wǒ néng zài zhèlǐ chī wǔfàn ma?\nB: Bù néng.",
    "Nghĩa câu 2": "A: Tôi có thể ăn trưa ở đây không?\nB: Không được.",
-   "Đọc câu 2": "我能在这里吃午饭吗？不能。"
+   "Đọc câu 2": "assets/am/nam1/f24bf5dc38.mp3|assets/am/cau/dfde44c007.mp3"
   },
   {
    "Mã": "1-0064",
@@ -380,7 +380,7 @@
    "Câu 1": "A：你几点到学校？\nB：我七点半到。",
    "Pinyin câu 1": "A: Nǐ jǐ diǎn dào xuéxiào?\nB: Wǒ qī diǎn bàn dào.",
    "Nghĩa câu 1": "A: Mấy giờ bạn đến trường?\nB: 7 rưỡi tôi đến.",
-   "Đọc câu 1": "你几点到学校？我七点半到。",
+   "Đọc câu 1": "assets/am/nam1/616a657c22.mp3|assets/am/cau/b0286e3533.mp3",
    "Câu 2": "我们十分钟后能到书店。",
    "Pinyin câu 2": "Wǒmen shí fēnzhōng hòu néng dào shūdiàn.",
    "Nghĩa câu 2": "Mười phút nữa chúng tôi có thể đến hiệu sách.",
@@ -468,7 +468,7 @@
    "Câu 2": "A：你认识胡医生吗？\nB：认识，他是我的同事。",
    "Pinyin câu 2": "A: Nǐ rènshi Hú yīshēng ma?\nB: Rènshi, tā shì wǒ de tóngshì.",
    "Nghĩa câu 2": "A: Bạn có quen bác sĩ Hồ không?\nB: Quen, ông ấy là đồng nghiệp của tôi.",
-   "Đọc câu 2": "你认识胡医生吗？认识，他是我的同事。"
+   "Đọc câu 2": "assets/am/nam1/c354798331.mp3|assets/am/cau/2de4f74bc6.mp3"
   },
   {
    "Mã": "1-0124",
@@ -485,7 +485,7 @@
    "Câu 1": "A：你妈妈在哪儿工作？\nB：她在学校工作，她是老师。",
    "Pinyin câu 1": "A: Nǐ māma zài nǎr gōngzuò?\nB: Tā zài xuéxiào gōngzuò, tā shì lǎoshī.",
    "Nghĩa câu 1": "A: Mẹ bạn làm việc ở đâu?\nB: Mẹ tôi làm việc ở trường, mẹ là giáo viên.",
-   "Đọc câu 1": "你妈妈在哪儿工作？她在学校工作，她是老师。",
+   "Đọc câu 1": "assets/am/nam1/8bd5c1f20c.mp3|assets/am/cau/2761ea23fa.mp3",
    "Câu 2": "哥哥今天不工作，他在家休息。",
    "Pinyin câu 2": "Gēge jīntiān bù gōngzuò, tā zài jiā xiūxi.",
    "Nghĩa câu 2": "Hôm nay anh trai không làm việc, anh ở nhà nghỉ ngơi.",
@@ -2796,7 +2796,8 @@
    "hoi": [
     "你家有几个房间？",
     "Nǐ jiā yǒu jǐ ge fángjiān?",
-    "Nhà bạn có mấy phòng?"
+    "Nhà bạn có mấy phòng?",
+    "assets/am/nam1/98d43b3d4e.mp3"
    ],
    "dap": [
     "我家有三个房间。",
@@ -2826,7 +2827,8 @@
    "hoi": [
     "你的手机在哪儿？",
     "Nǐ de shǒujī zài nǎr?",
-    "Điện thoại của bạn ở đâu?"
+    "Điện thoại của bạn ở đâu?",
+    "assets/am/nam1/a1b2c9097d.mp3"
    ],
    "dap": [
     "我的手机在桌子上。",
@@ -2856,7 +2858,8 @@
    "hoi": [
     "你家有猫吗？",
     "Nǐ jiā yǒu māo ma?",
-    "Nhà bạn có mèo không?"
+    "Nhà bạn có mèo không?",
+    "assets/am/nam1/c94c74c417.mp3"
    ],
    "dap": [
     "有，我家有一只小猫。",
@@ -2886,7 +2889,8 @@
    "hoi": [
     "你看见我的手机了吗？",
     "Nǐ kànjiàn wǒ de shǒujī le ma?",
-    "Bạn có nhìn thấy điện thoại của mình không?"
+    "Bạn có nhìn thấy điện thoại của mình không?",
+    "assets/am/nam1/9ef50eb68a.mp3"
    ],
    "dap": [
     "我没看见。",
@@ -2916,7 +2920,8 @@
    "hoi": [
     "你妈妈在哪儿工作？",
     "Nǐ māma zài nǎr gōngzuò?",
-    "Mẹ bạn làm việc ở đâu?"
+    "Mẹ bạn làm việc ở đâu?",
+    "assets/am/nam1/8bd5c1f20c.mp3"
    ],
    "dap": [
     "她在学校工作。",
@@ -2946,7 +2951,8 @@
    "hoi": [
     "你中午在哪儿吃午饭？",
     "Nǐ zhōngwǔ zài nǎr chī wǔfàn?",
-    "Trưa bạn ăn cơm ở đâu?"
+    "Trưa bạn ăn cơm ở đâu?",
+    "assets/am/nam1/57f82ea8c7.mp3"
    ],
    "dap": [
     "我在学校吃午饭。",
@@ -2976,7 +2982,8 @@
    "hoi": [
     "你昨天去学校了吗？",
     "Nǐ zuótiān qù xuéxiào le ma?",
-    "Hôm qua bạn có đến trường không?"
+    "Hôm qua bạn có đến trường không?",
+    "assets/am/nam1/c5857d0dfb.mp3"
    ],
    "dap": [
     "我昨天没去学校。",
@@ -3006,7 +3013,8 @@
    "hoi": [
     "明天上午你能去书店吗？",
     "Míngtiān shàngwǔ nǐ néng qù shūdiàn ma?",
-    "Sáng mai bạn có thể đến hiệu sách không?"
+    "Sáng mai bạn có thể đến hiệu sách không?",
+    "assets/am/nam1/c86400e0aa.mp3"
    ],
    "dap": [
     "对不起，我有课，不能去。",
@@ -3036,7 +3044,8 @@
    "hoi": [
     "你吃午饭了没有？",
     "Nǐ chī wǔfàn le méiyǒu?",
-    "Bạn ăn trưa chưa?"
+    "Bạn ăn trưa chưa?",
+    "assets/am/nam1/5ff8444f2a.mp3"
    ],
    "dap": [
     "还没吃呢。",
@@ -3066,7 +3075,8 @@
    "hoi": [
     "医生的工作忙吗？",
     "Yīshēng de gōngzuò máng ma?",
-    "Công việc của bác sĩ có bận không?"
+    "Công việc của bác sĩ có bận không?",
+    "assets/am/nam1/18a28fc9fe.mp3"
    ],
    "dap": [
     "很忙，病人非常多。",
@@ -3096,7 +3106,8 @@
    "hoi": [
     "大医院里病人多吗？",
     "Dà yīyuàn li bìngrén duō ma?",
-    "Trong bệnh viện lớn bệnh nhân có đông không?"
+    "Trong bệnh viện lớn bệnh nhân có đông không?",
+    "assets/am/nam1/e81849bebd.mp3"
    ],
    "dap": [
     "大医院里病人很多。",
@@ -3127,7 +3138,8 @@
    "hoi": [
     "胡医生的爸爸在哪儿工作？",
     "Hú yīshēng de bàba zài nǎr gōngzuò?",
-    "Bố của bác sĩ Hồ làm việc ở đâu?"
+    "Bố của bác sĩ Hồ làm việc ở đâu?",
+    "assets/am/nam1/fbbf48e96c.mp3"
    ],
    "dap": [
     "他也在医院工作。",
@@ -3158,7 +3170,8 @@
    "hoi": [
     "胡医生的爸爸工作忙吗？",
     "Hú yīshēng de bàba gōngzuò máng ma?",
-    "Bố của bác sĩ Hồ làm việc có bận không?"
+    "Bố của bác sĩ Hồ làm việc có bận không?",
+    "assets/am/nam1/892a40ba4b.mp3"
    ],
    "dap": [
     "他非常忙。",
@@ -3189,7 +3202,8 @@
    "hoi": [
     "胡医生家有几个医生？",
     "Hú yīshēng jiā yǒu jǐ ge yīshēng?",
-    "Nhà bác sĩ Hồ có mấy bác sĩ?"
+    "Nhà bác sĩ Hồ có mấy bác sĩ?",
+    "assets/am/nam1/59a7fd2e7f.mp3"
    ],
    "dap": [
     "他家有两个医生。",
@@ -3220,7 +3234,8 @@
    "hoi": [
     "小猫在哪儿？",
     "Xiǎo māo zài nǎr?",
-    "Con mèo nhỏ ở đâu?"
+    "Con mèo nhỏ ở đâu?",
+    "assets/am/nam1/1996fdf28a.mp3"
    ],
    "dap": [
     "它在桌子下呢。",
@@ -3251,7 +3266,8 @@
    "hoi": [
     "白家月和李文在哪儿见？",
     "Bái Jiāyuè hé Lǐ Wén zài nǎr jiàn?",
-    "Bạch Gia Nguyệt và Lý Văn gặp nhau ở đâu?"
+    "Bạch Gia Nguyệt và Lý Văn gặp nhau ở đâu?",
+    "assets/am/nam1/3329e97d68.mp3"
    ],
    "dap": [
     "她们在学校书店前见。",
@@ -3843,7 +3859,8 @@
     {
      "han": "你看见我的小猫了吗？",
      "py": "Nǐ kànjiàn wǒ de xiǎo māo le ma?",
-     "viet": "Bạn có nhìn thấy con mèo của mình không?"
+     "viet": "Bạn có nhìn thấy con mèo của mình không?",
+     "doc": "assets/am/nam1/b27dfa6c06.mp3"
     },
     {
      "han": "没看见。它在房间里吗？",
@@ -3853,7 +3870,8 @@
     {
      "han": "不在房间里，它在桌子下呢！",
      "py": "Bú zài fángjiān li, tā zài zhuōzi xià ne!",
-     "viet": "Không ở trong phòng, nó ở dưới bàn đấy!"
+     "viet": "Không ở trong phòng, nó ở dưới bàn đấy!",
+     "doc": "assets/am/nam1/9d35a1d656.mp3"
     }
    ],
    "nhieu": {
@@ -3894,7 +3912,8 @@
     {
      "han": "明天上午你能去书店吗？",
      "py": "Míngtiān shàngwǔ nǐ néng qù shūdiàn ma?",
-     "viet": "Sáng mai bạn có thể đến hiệu sách không?"
+     "viet": "Sáng mai bạn có thể đến hiệu sách không?",
+     "doc": "assets/am/nam1/c86400e0aa.mp3"
     },
     {
      "han": "能，几点在哪儿见？",
@@ -3904,7 +3923,8 @@
     {
      "han": "九点在学校书店前见吧。",
      "py": "Jiǔ diǎn zài xuéxiào shūdiàn qián jiàn ba.",
-     "viet": "9 giờ gặp ở trước hiệu sách của trường nhé."
+     "viet": "9 giờ gặp ở trước hiệu sách của trường nhé.",
+     "doc": "assets/am/nam1/385072c660.mp3"
     }
    ],
    "nhieu": {
@@ -3945,7 +3965,8 @@
     {
      "han": "你爸爸在哪儿工作？",
      "py": "Nǐ bàba zài nǎr gōngzuò?",
-     "viet": "Bố bạn làm việc ở đâu?"
+     "viet": "Bố bạn làm việc ở đâu?",
+     "doc": "assets/am/nam1/795e732d8e.mp3"
     },
     {
      "han": "他在大医院工作。",
@@ -3955,7 +3976,8 @@
     {
      "han": "他是医生吗？",
      "py": "Tā shì yīshēng ma?",
-     "viet": "Bố bạn là bác sĩ à?"
+     "viet": "Bố bạn là bác sĩ à?",
+     "doc": "assets/am/nam1/dff10dcc43.mp3"
     }
    ],
    "nhieu": {
@@ -3996,7 +4018,8 @@
     {
      "han": "房间外有一只小猫。",
      "py": "Fángjiān wài yǒu yì zhī xiǎo māo.",
-     "viet": "Bên ngoài phòng có một con mèo nhỏ."
+     "viet": "Bên ngoài phòng có một con mèo nhỏ.",
+     "doc": "assets/am/nam1/e2122c7f91.mp3"
     },
     {
      "han": "我没看见，它在哪儿呢？",
@@ -4006,7 +4029,8 @@
     {
      "han": "它在桌子下呢。",
      "py": "Tā zài zhuōzi xià ne.",
-     "viet": "Nó ở dưới bàn đấy."
+     "viet": "Nó ở dưới bàn đấy.",
+     "doc": "assets/am/nam1/45a022a07a.mp3"
     },
     {
      "han": "这只小猫真漂亮！",
@@ -4053,7 +4077,8 @@
     {
      "han": "我们在哪儿见呢？",
      "py": "Wǒmen zài nǎr jiàn ne?",
-     "viet": "Chúng ta gặp nhau ở đâu thế?"
+     "viet": "Chúng ta gặp nhau ở đâu thế?",
+     "doc": "assets/am/nam1/7f40f9db0a.mp3"
     },
     {
      "han": "在学校书店前见吧。",
@@ -4063,7 +4088,8 @@
     {
      "han": "好的。下午两点你能到吗？",
      "py": "Hǎo de. Xiàwǔ liǎng diǎn nǐ néng dào ma?",
-     "viet": "Được. Hai giờ chiều bạn có thể đến không?"
+     "viet": "Được. Hai giờ chiều bạn có thể đến không?",
+     "doc": "assets/am/nam1/7cbd3f130a.mp3"
     },
     {
      "han": "我能到。我在学校吃午饭。",
@@ -4110,7 +4136,8 @@
     {
      "han": "小胡，还没吃饭呢？",
      "py": "Xiǎo Hú, hái méi chī fàn ne?",
-     "viet": "Tiểu Hồ, vẫn chưa ăn cơm à?"
+     "viet": "Tiểu Hồ, vẫn chưa ăn cơm à?",
+     "doc": "assets/am/nam1/955156135f.mp3"
     },
     {
      "han": "没吃呢。",
@@ -4120,7 +4147,8 @@
     {
      "han": "大医院病人多，医生非常忙。",
      "py": "Dà yīyuàn bìngrén duō, yīshēng fēicháng máng.",
-     "viet": "Bệnh viện lớn bệnh nhân đông, bác sĩ vô cùng bận."
+     "viet": "Bệnh viện lớn bệnh nhân đông, bác sĩ vô cùng bận.",
+     "doc": "assets/am/nam1/eec177fbf6.mp3"
     },
     {
      "han": "是的。我爸爸也在医院工作，他也非常忙。",
@@ -4130,7 +4158,8 @@
     {
      "han": "你家有两个医生？",
      "py": "Nǐ jiā yǒu liǎng ge yīshēng?",
-     "viet": "Nhà bạn có hai bác sĩ à?"
+     "viet": "Nhà bạn có hai bác sĩ à?",
+     "doc": "assets/am/nam1/12dca98562.mp3"
     },
     {
      "han": "对。",
