@@ -857,7 +857,7 @@ def thu_lai_nhom(D, its, dot, ep=False):
     for it in its:   # câu / từ có 那: mỗi lần thu lại đổi sang chữ thay khác (捺 → 呐 → 衲 → 那 → 纳), vì chữ đúng ở câu này có thể sai ở câu khác
         if '那' in it.get('k', ''):
             it.setdefault('goc', re.sub('[衲呐捺纳]', '那', it['text']))
-            c = NA_THAY[(it.get('lan', 0) + 1) % len(NA_THAY)]
+            c = '衲' if it.get('k') in GHI_CHU_SAN else NA_THAY[(it.get('lan', 0) + 1) % len(NA_THAY)]   # 老头儿: 衲 đã đúng nà, chỉ thu lại phần 儿 (không xoay chữ)
             it['text'] = gon(thay_am(it['goc'], it.get('py', ''), c)); it['na'] = c
     tach = [it for it in its if it.get('k') in TACH_K]
     if tach:
