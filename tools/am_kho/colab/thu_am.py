@@ -662,7 +662,7 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
     t0 = time.time()
     ds = _doc(D + 'ds.json')
     if ds is None:
-        ds, bo = gom(cap, tu, den, REDO_HSK5 if str(cap) in ('5', '6') else REDO_NA if str(cap) in ('1', '2', '3', '4') else None)
+        ds, bo = gom(cap, tu, den, None)   # 24/11/2026: các đợt thu lại 那/编辑/挨 (REDO_*) đã xong hết; không ép thu lại nữa, chỉ gom mục chưa có file
         _ghi(D + 'ds.json', ds); _ghi(D + 'bo.json', bo)
         print('Gom HSK%s %d → %d: %d từ/cụm, %d chữ đa âm (ghi thẳng ô Đọc), %d câu · bỏ %d mục (了/么 riêng, đã có file)' % (
             cap, tu, den, sum(it['typ'] == 'tu' for it in ds), sum(it['typ'] == 'chu' for it in ds), sum(it['typ'] == 'cau' for it in ds), len(bo)))
