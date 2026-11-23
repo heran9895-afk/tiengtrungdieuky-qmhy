@@ -63,10 +63,10 @@ def md10(s): return hashlib.md5(s.encode()).hexdigest()[:10]
 _CHU_PY = 'a-zA-ZāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜüÜ'
 
 
-NA_THAY = ('捺', '呐', '衲', '那', '纳')   # chữ gửi Gemini thay 那, xoay vòng mỗi lần thu lại (Gemini đọc nèi tùy câu, chữ nào đúng cũng thay đổi theo câu)
+NA_THAY = ('衲', '呐', '捺', '那', '纳')   # chữ gửi Gemini thay 那, xoay vòng mỗi lần thu lại (Gemini đọc nèi tùy câu, chữ nào đúng cũng thay đổi theo câu)
 
 
-def thay_am(text, py='', na='捺'):
+def thay_am(text, py='', na='衲'):   # 24/11/2026: Nhiên thấy 衲 đạt nhiều nhất → dùng 衲 trước, thu lại mới xoay sang 呐 → 捺 → 那 → 纳
     """Thay chữ Gemini hay đọc sai bằng chữ cùng âm mà Gemini đọc chắc (khóa file không đổi).
     那 → 捺 (nà, tránh nèi; cả chữ đứng riêng; Nhiên nghe thử 23/11/2026: 纳 và 钠 đọc sai, 捺 呐 衲 đúng); 挨: theo pinyin của mục, ái (挨打 挨饿 挨骂) → 癌, āi (挨着 挨家挨户) → 哀.
     Mục có cả hai âm thì giữ 挨 (cô nghe)."""
@@ -852,7 +852,7 @@ def thu_lai_nhom(D, its, dot, ep=False):
     for it in its: it['text'] = gon(it['text'])   # mục đã gom từ trước vẫn còn "……" ở đầu
     for it in its:   # câu / từ có 那: mỗi lần thu lại đổi sang chữ thay khác (捺 → 呐 → 衲 → 那 → 纳), vì chữ đúng ở câu này có thể sai ở câu khác
         if '那' in it.get('k', ''):
-            it.setdefault('goc', it['text'].replace('捺', '那'))
+            it.setdefault('goc', re.sub('[衲呐捺纳]', '那', it['text']))
             c = NA_THAY[(it.get('lan', 0) + 1) % len(NA_THAY)]
             it['text'] = gon(thay_am(it['goc'], it.get('py', ''), c)); it['na'] = c
     tach = [it for it in its if it.get('k') in TACH_K]
