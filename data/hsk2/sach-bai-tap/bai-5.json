@@ -460,8 +460,8 @@
      "loi": [
       {
        "ai": "",
-       "han": "我家有四口人，有爸爸、妈妈、姐姐和我。",
-       "py": "Wǒ jiā yǒu sì kǒu rén, yǒu bàba, māma, jiějie hé wǒ."
+       "han": "我家有四口人，有爸爸、妈妈、姐姐，还有我。",
+       "py": "Wǒ jiā yǒu sì kǒu rén, yǒu bàba, māma, jiějie, hái yǒu wǒ."
       },
       {
        "ai": "问",

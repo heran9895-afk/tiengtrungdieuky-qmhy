@@ -199,7 +199,7 @@ BAI.append({'bai': 5, 'ten': '她女儿今年二十岁', 'tenViet': 'Con gái c�
    n3('n3-4', '你 有 男朋友 吗？', '有，这 是 我 男朋友。', 'D', 'A: Bạn có bạn trai chưa? — B: Có, đây là bạn trai của tôi.')],
    anh=anh([BO, OB, SN, VC])),
  phan(P_N4, 'nghe', [
-   n4('n4-1', '我 家 有 四 口 人，有 爸爸、妈妈、姐姐 和 我。', '他 家 有 几 口 人？', ['三 口 人', '四 口 人', '五 口 人'], 'B', 'Nhà tôi có bốn người, có bố, mẹ, chị gái và tôi. — Hỏi: Nhà anh ấy có mấy người? — Bốn người'),
+   n4('n4-1', '我 家 有 四 口 人，有 爸爸、妈妈、姐姐，还 有 我。', '他 家 有 几 口 人？', ['三 口 人', '四 口 人', '五 口 人'], 'B', 'Nhà tôi có bốn người, có bố, mẹ, chị gái và tôi. — Hỏi: Nhà anh ấy có mấy người? — Bốn người'),
    n4('n4-2', '我 哥哥 今年 二十 岁，我 妹妹 八 岁。', '他 妹妹 今年 几 岁？', ['二十 岁', '八 岁', '十八 岁'], 'B', 'Anh trai tôi năm nay 20 tuổi, em gái tôi 8 tuổi. — Hỏi: Em gái anh ấy năm nay mấy tuổi? — 8 tuổi'),
    n4('n4-3', '我 有 两 个 弟弟，没有 妹妹。', '他 有 几 个 弟弟？', ['一 个', '两 个', '三 个'], 'B', 'Tôi có hai em trai, không có em gái. — Hỏi: Anh ấy có mấy em trai? — Hai'),
    n4('n4-4', '今年 我 二十 岁，明年 我 二十一 岁。', '他 明年 多 大？', ['二十 岁', '二十一 岁', '十一 岁'], 'B', 'Năm nay tôi 20 tuổi, sang năm tôi 21 tuổi. — Hỏi: Sang năm anh ấy bao nhiêu tuổi? — 21 tuổi')]),
