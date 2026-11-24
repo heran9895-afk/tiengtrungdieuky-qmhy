@@ -357,7 +357,8 @@
       }
      ],
      "dap": "B",
-     "vi": "A: Bạn biết viết chữ Hán không? — B: Biết, tôi biết viết."
+     "vi": "A: Bạn biết viết chữ Hán không? — B: Biết, tôi biết viết.",
+     "doc": "assets/am/nam1/89310af294.mp3|assets/am/cau/155d423546.mp3"
     },
     {
      "ma": "n3-2",
@@ -374,7 +375,8 @@
       }
      ],
      "dap": "C",
-     "vi": "A: Mẹ bạn có biết nấu ăn không? — B: Biết, món mẹ nấu rất ngon."
+     "vi": "A: Mẹ bạn có biết nấu ăn không? — B: Biết, món mẹ nấu rất ngon.",
+     "doc": "assets/am/nam1/6876567775.mp3|assets/am/cau/82843da476.mp3"
     },
     {
      "ma": "n3-3",
@@ -391,7 +393,8 @@
       }
      ],
      "dap": "D",
-     "vi": "A: Cái này có ngon không (đồ uống)? — B: Ngon lắm!"
+     "vi": "A: Cái này có ngon không (đồ uống)? — B: Ngon lắm!",
+     "doc": "assets/am/nam1/82b569f248.mp3|assets/am/cau/2356d6baf1.mp3"
     },
     {
      "ma": "n3-4",
@@ -408,7 +411,8 @@
       }
      ],
      "dap": "E",
-     "vi": "A: Cái này có ngon không (đồ ăn)? — B: Ngon lắm!"
+     "vi": "A: Cái này có ngon không (đồ ăn)? — B: Ngon lắm!",
+     "doc": "assets/am/nam1/a20ec23e8e.mp3|assets/am/cau/040ac1c6e0.mp3"
     }
    ]
   },
@@ -485,7 +489,8 @@
       }
      ],
      "dap": "A",
-     "vi": "Mẹ tôi biết nấu món Trung Quốc, món rất ngon. — Hỏi: Mẹ anh ấy biết nấu món gì? — Món Trung Quốc"
+     "vi": "Mẹ tôi biết nấu món Trung Quốc, món rất ngon. — Hỏi: Mẹ anh ấy biết nấu món gì? — Món Trung Quốc",
+     "doc": "assets/am/nam1/355e0f9fa3.mp3|assets/am/cau/35d8bbb556.mp3"
     },
     {
      "ma": "n4-2",
@@ -519,7 +524,8 @@
       }
      ],
      "dap": "B",
-     "vi": "Tôi biết nói tiếng Trung, không biết nói tiếng Nhật. — Hỏi: Anh ấy không biết nói gì? — Tiếng Nhật"
+     "vi": "Tôi biết nói tiếng Trung, không biết nói tiếng Nhật. — Hỏi: Anh ấy không biết nói gì? — Tiếng Nhật",
+     "doc": "assets/am/nam1/71c1205f95.mp3|assets/am/cau/8ca94de8b5.mp3"
     },
     {
      "ma": "n4-3",
@@ -553,7 +559,8 @@
       }
      ],
      "dap": "B",
-     "vi": "Chữ này tôi biết đọc, không biết viết. — Hỏi: Anh ấy không biết gì? — Viết"
+     "vi": "Chữ này tôi biết đọc, không biết viết. — Hỏi: Anh ấy không biết gì? — Viết",
+     "doc": "assets/am/nam1/7ab9ab655b.mp3|assets/am/cau/4be62ad9e7.mp3"
     },
     {
      "ma": "n4-4",
@@ -587,7 +594,8 @@
       }
      ],
      "dap": "A",
-     "vi": "Món này rất ngon, món kia không ngon. — Hỏi: Món nào ngon? — Món này"
+     "vi": "Món này rất ngon, món kia không ngon. — Hỏi: Món nào ngon? — Món này",
+     "doc": "assets/am/nam1/41283ce942.mp3|assets/am/cau/8238c387d7.mp3"
     }
    ]
   },
