@@ -460,8 +460,8 @@
      "loi": [
       {
        "ai": "",
-       "han": "我家有四口人，有爸爸、妈妈、姐姐，还有我。",
-       "py": "Wǒ jiā yǒu sì kǒu rén, yǒu bàba, māma, jiějie, hái yǒu wǒ."
+       "han": "我家有四口人，有我、爸爸、妈妈、姐姐。",
+       "py": "Wǒ jiā yǒu sì kǒu rén, yǒu wǒ, bàba, māma, jiějie."
       },
       {
        "ai": "问",
@@ -487,7 +487,7 @@
       }
      ],
      "dap": "B",
-     "vi": "Nhà tôi có bốn người, có bố, mẹ, chị gái và tôi. — Hỏi: Nhà anh ấy có mấy người? — Bốn người"
+     "vi": "Nhà tôi có bốn người, có tôi, bố, mẹ, chị gái. — Hỏi: Nhà anh ấy có mấy người? — Bốn người"
     },
     {
      "ma": "n4-2",
