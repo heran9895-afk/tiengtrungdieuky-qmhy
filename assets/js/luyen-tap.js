@@ -1030,6 +1030,14 @@
       if (DANG[k].dungDuoc && !DANG[k].dungDuoc(w)) return;
       for (var n = 0; n < tl[k]; n++) tui.push(k);
     });
+    // Lượt Trộn dài (từ 12 câu): ĐỦ MỌI DẠNG trong lượt (Nhiên chốt 24/11/2026). Dạng nào chưa xuất hiện thì được ưu tiên bốc; xác suất tăng dần
+    // theo số câu còn lại để các dạng rải đều, không dồn đầu lượt; Ghép cặp (cần ≥ 4 từ còn lại) bắt buộc bốc trước khi còn ≤ 11 từ.
+    if (!NHANH && S.dang === 'tron' && B.hang.length >= 12 && tui.length) {
+      var dung = {}; for (var j = 0; j < i; j++) if (B.kieu[j]) dung[B.kieu[j]] = 1;
+      var chua = tui.filter(function (k, x, a) { return a.indexOf(k) === x && !dung[k]; }), con = B.hang.length - i;
+      if (chua.length && (chua.indexOf('ghep') >= 0 && con <= 11 || Math.random() < chua.length / Math.max(chua.length, con - 4)))
+        return chua.indexOf('ghep') >= 0 && con <= 11 ? 'ghep' : chua[Math.floor(Math.random() * chua.length)];
+    }
     return tui[Math.floor(Math.random() * tui.length)] || 'chu';
   }
 
