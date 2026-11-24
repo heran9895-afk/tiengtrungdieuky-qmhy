@@ -35,7 +35,7 @@ def so_bai(cap): return int(re.search(r'bai(\d+)', str(cap)).group(1))
 
 def tep_bai(cap):
     """CAP 'bai6' → data/bai/bai-6.json (HSK 3.0); 'bai6h2' → data/hsk2/bai-6.json (HSK 2.0)."""
-    return ('data/hsk2/bai-%d.json' if str(cap).endswith('h2') else 'data/bai/bai-%d.json') % so_bai(cap)
+    return ('data/hsk2/bai-%d.json' if str(cap).endswith(('h2', 'h2sbt')) else 'data/bai/bai-%d.json') % so_bai(cap)
 
 
 def gom_bai(T, cap):
