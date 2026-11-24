@@ -82,12 +82,12 @@
    "Cấp HSK": "1",
    "Thuận bút": "号",
    "Cụm từ": "几号 | jǐ hào\n九月一号 | jiǔ yuè yī hào\n三月二号 | sān yuè èr hào",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/6a32763b19.mp3",
    "_nhom": "tuVung",
    "Câu 1": "A：大卫的生日是几月几号？\nB：他的生日是三月二号。",
    "Pinyin câu 1": "A: Dàwèi de shēngrì shì jǐ yuè jǐ hào?\nB: Tā de shēngrì shì sān yuè èr hào.",
    "Nghĩa câu 1": "A: Sinh nhật của David là ngày mấy tháng mấy?\nB: Sinh nhật anh ấy là ngày 2 tháng 3.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/nam1/ff87613185.mp3|assets/am/cau/8cedeb759d.mp3",
    "Câu 2": "今天九月一号。",
    "Pinyin câu 2": "Jīntiān jiǔ yuè yī hào.",
    "Nghĩa câu 2": "Hôm nay là ngày 1 tháng 9.",
@@ -192,7 +192,7 @@
    "Câu 1": "A：明天你去哪儿？\nB：我去朋友家。",
    "Pinyin câu 1": "A: Míngtiān nǐ qù nǎr?\nB: Wǒ qù péngyou jiā.",
    "Nghĩa câu 1": "A: Ngày mai bạn đi đâu?\nB: Mình đến nhà bạn.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/nam1/22684721e5.mp3|assets/am/cau/4784700b30.mp3",
    "Câu 2": "我妈妈不去中国，她去美国。",
    "Pinyin câu 2": "Wǒ māma bú qù Zhōngguó, tā qù Měiguó.",
    "Nghĩa câu 2": "Mẹ tôi không đi Trung Quốc, bà đi Mỹ.",
@@ -213,7 +213,7 @@
    "Câu 1": "A：你去学校吗？\nB：明天星期六，我不去学校。",
    "Pinyin câu 1": "A: Nǐ qù xuéxiào ma?\nB: Míngtiān xīngqīliù, wǒ bú qù xuéxiào.",
    "Nghĩa câu 1": "A: Bạn có đến trường không?\nB: Ngày mai thứ Bảy, mình không đến trường.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/nam1/740efdbe44.mp3|assets/am/cau/3e95b57606.mp3",
    "Câu 2": "我的学校很大。",
    "Pinyin câu 2": "Wǒ de xuéxiào hěn dà.",
    "Nghĩa câu 2": "Trường của tôi rất to.",
@@ -229,12 +229,12 @@
    "Cấp HSK": "1",
    "Thuận bút": "看",
    "Cụm từ": "看书 | kàn shū\n看朋友 | kàn péngyou\n看什么 | kàn shénme",
-   "Đọc từ": "",
+   "Đọc từ": "assets/am/tu/a5d7fb86a4.mp3",
    "_nhom": "tuVung",
    "Câu 1": "A：你看什么？\nB：我看汉语书。",
    "Pinyin câu 1": "A: Nǐ kàn shénme?\nB: Wǒ kàn Hànyǔ shū.",
    "Nghĩa câu 1": "A: Bạn đọc gì thế?\nB: Mình đọc sách tiếng Trung.",
-   "Đọc câu 1": "",
+   "Đọc câu 1": "assets/am/nam1/cb52068d50.mp3|assets/am/cau/992f99e554.mp3",
    "Câu 2": "我去朋友家看书。",
    "Pinyin câu 2": "Wǒ qù péngyou jiā kàn shū.",
    "Nghĩa câu 2": "Tôi đến nhà bạn đọc sách.",
@@ -1234,7 +1234,8 @@
    "hoi": [
     "今天几月几号？",
     "Jīntiān jǐ yuè jǐ hào?",
-    "Hôm nay là ngày mấy tháng mấy?"
+    "Hôm nay là ngày mấy tháng mấy?",
+    "assets/am/nam1/a621de3fb7.mp3"
    ],
    "dap": [
     "今天九月一号。",
@@ -1264,7 +1265,8 @@
    "hoi": [
     "今天星期几？",
     "Jīntiān xīngqī jǐ?",
-    "Hôm nay là thứ mấy?"
+    "Hôm nay là thứ mấy?",
+    "assets/am/nam1/0a4fcb894a.mp3"
    ],
    "dap": [
     "今天星期三。",
@@ -1294,7 +1296,8 @@
    "hoi": [
     "明天你去哪儿？",
     "Míngtiān nǐ qù nǎr?",
-    "Ngày mai bạn đi đâu?"
+    "Ngày mai bạn đi đâu?",
+    "assets/am/nam1/22684721e5.mp3"
    ],
    "dap": [
     "我去朋友家。",
@@ -1324,7 +1327,8 @@
    "hoi": [
     "你去学校做什么？",
     "Nǐ qù xuéxiào zuò shénme?",
-    "Bạn đến trường làm gì?"
+    "Bạn đến trường làm gì?",
+    "assets/am/nam1/f25efee2a0.mp3"
    ],
    "dap": [
     "我去学校看书。",
@@ -1354,7 +1358,8 @@
    "hoi": [
     "你看什么？",
     "Nǐ kàn shénme?",
-    "Bạn đọc gì thế?"
+    "Bạn đọc gì thế?",
+    "assets/am/nam1/cb52068d50.mp3"
    ],
    "dap": [
     "我看汉语书。",
@@ -1384,7 +1389,8 @@
    "hoi": [
     "昨天是几月几号？",
     "Zuótiān shì jǐ yuè jǐ hào?",
-    "Hôm qua là ngày mấy tháng mấy?"
+    "Hôm qua là ngày mấy tháng mấy?",
+    "assets/am/nam1/71337e2c89.mp3"
    ],
    "dap": [
     "昨天是八月三十一号。",
@@ -1414,7 +1420,8 @@
    "hoi": [
     "明天星期六，你去学校吗？",
     "Míngtiān xīngqīliù, nǐ qù xuéxiào ma?",
-    "Ngày mai thứ Bảy, bạn có đến trường không?"
+    "Ngày mai thứ Bảy, bạn có đến trường không?",
+    "assets/am/nam1/58d4b9d41b.mp3"
    ],
    "dap": [
     "我不去学校。",
@@ -1444,7 +1451,8 @@
    "hoi": [
     "大卫的生日是几月几号？",
     "Dàwèi de shēngrì shì jǐ yuè jǐ hào?",
-    "Sinh nhật của David là ngày mấy tháng mấy?"
+    "Sinh nhật của David là ngày mấy tháng mấy?",
+    "assets/am/nam1/ff87613185.mp3"
    ],
    "dap": [
     "他的生日是三月二号。",
@@ -1474,7 +1482,8 @@
    "hoi": [
     "三月二号星期几？",
     "Sān yuè èr hào xīngqī jǐ?",
-    "Ngày 2 tháng 3 là thứ mấy?"
+    "Ngày 2 tháng 3 là thứ mấy?",
+    "assets/am/nam1/3909291297.mp3"
    ],
    "dap": [
     "三月二号星期三。",
@@ -1869,7 +1878,8 @@
     {
      "han": "请问，今天几号？",
      "py": "Qǐngwèn, jīntiān jǐ hào?",
-     "viet": "Xin hỏi, hôm nay là ngày mấy?"
+     "viet": "Xin hỏi, hôm nay là ngày mấy?",
+     "doc": "assets/am/nam1/99605f9e56.mp3"
     },
     {
      "han": "今天九月一号。",
@@ -1879,7 +1889,8 @@
     {
      "han": "今天星期几？",
      "py": "Jīntiān xīngqī jǐ?",
-     "viet": "Hôm nay là thứ mấy?"
+     "viet": "Hôm nay là thứ mấy?",
+     "doc": "assets/am/nam1/0a4fcb894a.mp3"
     },
     {
      "han": "星期三。",
@@ -1925,7 +1936,8 @@
     {
      "han": "昨天是几月几号？",
      "py": "Zuótiān shì jǐ yuè jǐ hào?",
-     "viet": "Hôm qua là ngày mấy tháng mấy?"
+     "viet": "Hôm qua là ngày mấy tháng mấy?",
+     "doc": "assets/am/nam1/71337e2c89.mp3"
     },
     {
      "han": "昨天是八月三十一号，星期二。",
@@ -1935,7 +1947,8 @@
     {
      "han": "明天呢？",
      "py": "Míngtiān ne?",
-     "viet": "Còn ngày mai?"
+     "viet": "Còn ngày mai?",
+     "doc": "assets/am/nam1/b11106c87d.mp3"
     },
     {
      "han": "明天是九月二号，星期四。",
@@ -1981,7 +1994,8 @@
     {
      "han": "明天星期六，你去学校吗？",
      "py": "Míngtiān xīngqīliù, nǐ qù xuéxiào ma?",
-     "viet": "Ngày mai thứ Bảy, bạn có đến trường không?"
+     "viet": "Ngày mai thứ Bảy, bạn có đến trường không?",
+     "doc": "assets/am/nam1/58d4b9d41b.mp3"
     },
     {
      "han": "我去学校。",
@@ -1991,7 +2005,8 @@
     {
      "han": "你去学校做什么？",
      "py": "Nǐ qù xuéxiào zuò shénme?",
-     "viet": "Bạn đến trường làm gì?"
+     "viet": "Bạn đến trường làm gì?",
+     "doc": "assets/am/nam1/f25efee2a0.mp3"
     },
     {
      "han": "我去学校看书。",
