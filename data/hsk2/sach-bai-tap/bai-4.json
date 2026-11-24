@@ -393,7 +393,8 @@
       }
      ],
      "dap": "D",
-     "vi": "A: Bạn có học tiếng Trung không? — B: Có, tôi học tiếng Trung."
+     "vi": "A: Bạn có học tiếng Trung không? — B: Có, tôi học tiếng Trung.",
+     "doc": "assets/am/nam1/d357b570bd.mp3|assets/am/cau/0195f1e272.mp3"
     },
     {
      "ma": "n3-4",
@@ -410,7 +411,8 @@
       }
      ],
      "dap": "E",
-     "vi": "A: Anh ấy là ai? — B: Anh ấy là giáo viên của tôi."
+     "vi": "A: Anh ấy là ai? — B: Anh ấy là giáo viên của tôi.",
+     "doc": "assets/am/nam1/42f6cdb2be.mp3|assets/am/cau/18a4e95e49.mp3"
     }
    ]
   },
@@ -487,7 +489,8 @@
       }
      ],
      "dap": "A",
-     "vi": "Cô ấy là giáo viên tiếng Trung của tôi, cô ấy là người Trung Quốc. — Hỏi: Cô ấy là người nước nào? — Trung Quốc"
+     "vi": "Cô ấy là giáo viên tiếng Trung của tôi, cô ấy là người Trung Quốc. — Hỏi: Cô ấy là người nước nào? — Trung Quốc",
+     "doc": "assets/am/nam1/c91ee3cd58.mp3|assets/am/cau/5befe1ab3c.mp3"
     },
     {
      "ma": "n4-2",
@@ -521,7 +524,8 @@
       }
      ],
      "dap": "A",
-     "vi": "Anh ấy là bạn học của tôi, tên Đại Vệ, là người Mỹ. — Hỏi: Anh ấy tên gì? — Đại Vệ"
+     "vi": "Anh ấy là bạn học của tôi, tên Đại Vệ, là người Mỹ. — Hỏi: Anh ấy tên gì? — Đại Vệ",
+     "doc": "assets/am/nam1/01b43a0993.mp3|assets/am/cau/42ecc8ba16.mp3"
     },
     {
      "ma": "n4-3",
@@ -555,7 +559,8 @@
       }
      ],
      "dap": "B",
-     "vi": "Tôi học tiếng Trung, cũng học tiếng Anh, không học tiếng Nhật. — Hỏi: Anh ấy không học gì? — Tiếng Nhật"
+     "vi": "Tôi học tiếng Trung, cũng học tiếng Anh, không học tiếng Nhật. — Hỏi: Anh ấy không học gì? — Tiếng Nhật",
+     "doc": "assets/am/nam1/8d1490e33c.mp3|assets/am/cau/0e05e40796.mp3"
     },
     {
      "ma": "n4-4",
@@ -589,7 +594,8 @@
       }
      ],
      "dap": "A",
-     "vi": "Lý Nguyệt là bạn của tôi, Đại Vệ là bạn học của tôi. — Hỏi: Ai là bạn của anh ấy? — Lý Nguyệt"
+     "vi": "Lý Nguyệt là bạn của tôi, Đại Vệ là bạn học của tôi. — Hỏi: Ai là bạn của anh ấy? — Lý Nguyệt",
+     "doc": "assets/am/nam1/68af04bbb4.mp3|assets/am/cau/202fbf83b0.mp3"
     }
    ]
   },
