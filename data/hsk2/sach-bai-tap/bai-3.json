@@ -352,7 +352,8 @@
       }
      ],
      "dap": "B",
-     "vi": "A: Anh ấy là giáo viên à? — B: Vâng, anh ấy là giáo viên."
+     "vi": "A: Anh ấy là giáo viên à? — B: Vâng, anh ấy là giáo viên.",
+     "doc": "assets/am/nam1/5ed337feaf.mp3|assets/am/cau/26a57506d4.mp3"
     },
     {
      "ma": "n3-2",
@@ -369,7 +370,8 @@
       }
      ],
      "dap": "C",
-     "vi": "A: Lý Nguyệt, tạm biệt! — B: Tạm biệt!"
+     "vi": "A: Lý Nguyệt, tạm biệt! — B: Tạm biệt!",
+     "doc": "assets/am/nam1/2975706d05.mp3|assets/am/bai-1/cau/c21.mp3"
     },
     {
      "ma": "n3-3",
@@ -386,7 +388,8 @@
       }
      ],
      "dap": "D",
-     "vi": "A: Các bạn là bạn học à? — B: Vâng, chúng mình là bạn học."
+     "vi": "A: Các bạn là bạn học à? — B: Vâng, chúng mình là bạn học.",
+     "doc": "assets/am/nam1/078a9cd55a.mp3|assets/am/cau/adcfa28865.mp3"
     }
    ]
   },
@@ -463,7 +466,8 @@
       }
      ],
      "dap": "B",
-     "vi": "Tôi tên Lý Nguyệt, tôi là người Việt Nam. — Hỏi: Lý Nguyệt là người Trung Quốc à? — Không phải"
+     "vi": "Tôi tên Lý Nguyệt, tôi là người Việt Nam. — Hỏi: Lý Nguyệt là người Trung Quốc à? — Không phải",
+     "doc": "assets/am/nam1/70d957e682.mp3|assets/am/cau/dedd69d96f.mp3"
     },
     {
      "ma": "n4-2",
@@ -497,7 +501,8 @@
       }
      ],
      "dap": "B",
-     "vi": "Tôi tên Đại Vệ, anh ấy tên Tiểu Minh. — Hỏi: Anh ấy tên gì? — Tiểu Minh"
+     "vi": "Tôi tên Đại Vệ, anh ấy tên Tiểu Minh. — Hỏi: Anh ấy tên gì? — Tiểu Minh",
+     "doc": "assets/am/nam1/115220a4ab.mp3|assets/am/cau/42ecc8ba16.mp3"
     },
     {
      "ma": "n4-3",
@@ -531,7 +536,8 @@
       }
      ],
      "dap": "B",
-     "vi": "Tôi là người Mỹ, anh ấy là người Anh. — Hỏi: Anh ấy là người Mỹ à? — Không phải"
+     "vi": "Tôi là người Mỹ, anh ấy là người Anh. — Hỏi: Anh ấy là người Mỹ à? — Không phải",
+     "doc": "assets/am/nam1/058890cc6f.mp3|assets/am/cau/f69841fb34.mp3"
     },
     {
      "ma": "n4-4",
@@ -565,7 +571,8 @@
       }
      ],
      "dap": "B",
-     "vi": "Chúng tôi ba người, tôi là giáo viên, họ là học sinh. — Hỏi: Họ là ai? — Học sinh"
+     "vi": "Chúng tôi ba người, tôi là giáo viên, họ là học sinh. — Hỏi: Họ là ai? — Học sinh",
+     "doc": "assets/am/nam1/df0208c1d4.mp3|assets/am/cau/7b80c92979.mp3"
     }
    ]
   },
