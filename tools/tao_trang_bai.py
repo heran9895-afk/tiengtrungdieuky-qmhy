@@ -61,6 +61,11 @@ def tao(N):
             s = re.sub(r'<p>\d+ từ trong 词语表 và \d+ từ mở rộng', f'<p>{nTu} từ trong 词语表 và {nMr} từ mở rộng', s)
             s = re.sub(r'<p>\d+ điểm: .*?, có cụm từ, câu ví dụ và luyện tập\.</p>',
                        f'<p>{len(d["nguPhap"])} điểm: {mota_html}, có cụm từ, câu ví dụ và luyện tập.</p>', s, flags=re.S)
+            if not d.get('boThu'):     # bài không có thẻ bộ thủ (Bài 7, 8, 9): bỏ thẻ và đánh số lại
+                s = re.sub(r'\s*<a class="card" href="tu-vung\.html#bo">.*?</a>', '', s, count=1, flags=re.S)
+                for a, b in (('3. Ngữ pháp', '2. Ngữ pháp'), ('4. Ôn tập từ vựng', '3. Ôn tập từ vựng'), ('5. Bài tập', '4. Bài tập')):
+                    s = s.replace(a, b)
+                s = s.replace('từ vựng, thẻ bộ thủ, ngữ pháp', 'từ vựng, ngữ pháp')
             # chưa có Luyện theo dạng sách bài tập cho bài này
             s = re.sub(r'\s*<a class="card" href="sach-bai-tap\.html">.*?</a>', '', s, flags=re.S)
             s = s.replace('7. Bảng xếp hạng', '6. Bảng xếp hạng')
