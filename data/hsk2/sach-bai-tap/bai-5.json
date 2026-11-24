@@ -375,7 +375,8 @@
       }
      ],
      "dap": "C",
-     "vi": "A: Họ là ông bà nội của bạn à? — B: Vâng, họ là ông bà nội của tôi."
+     "vi": "A: Họ là ông bà nội của bạn à? — B: Vâng, họ là ông bà nội của tôi.",
+     "doc": "assets/am/nam1/7ef4d10a8b.mp3|assets/am/cau/b73dfa9d6c.mp3"
     },
     {
      "ma": "n3-3",
@@ -410,7 +411,8 @@
       }
      ],
      "dap": "E",
-     "vi": "A: Bạn có bạn trai chưa? — B: Có, đây là bạn trai của tôi."
+     "vi": "A: Bạn có bạn trai chưa? — B: Có, đây là bạn trai của tôi.",
+     "doc": "assets/am/nam1/cb5dccc39a.mp3|assets/am/cau/3b73688c8a.mp3"
     }
    ]
   },
@@ -487,7 +489,8 @@
       }
      ],
      "dap": "B",
-     "vi": "Nhà tôi có bốn người: bố, mẹ, chị gái và tôi. — Hỏi: Nhà anh ấy có mấy người? — Bốn người"
+     "vi": "Nhà tôi có bốn người: bố, mẹ, chị gái và tôi. — Hỏi: Nhà anh ấy có mấy người? — Bốn người",
+     "doc": "assets/am/nam1/d62e0de048.mp3|assets/am/cau/34aa35b694.mp3"
     },
     {
      "ma": "n4-2",
@@ -521,7 +524,8 @@
       }
      ],
      "dap": "B",
-     "vi": "Anh trai tôi năm nay 20 tuổi, em gái tôi 8 tuổi. — Hỏi: Em gái anh ấy năm nay mấy tuổi? — 8 tuổi"
+     "vi": "Anh trai tôi năm nay 20 tuổi, em gái tôi 8 tuổi. — Hỏi: Em gái anh ấy năm nay mấy tuổi? — 8 tuổi",
+     "doc": "assets/am/nam1/0685ce1aa7.mp3|assets/am/cau/34399d4faa.mp3"
     },
     {
      "ma": "n4-3",
@@ -555,7 +559,8 @@
       }
      ],
      "dap": "B",
-     "vi": "Tôi có hai em trai, không có em gái. — Hỏi: Anh ấy có mấy em trai? — Hai"
+     "vi": "Tôi có hai em trai, không có em gái. — Hỏi: Anh ấy có mấy em trai? — Hai",
+     "doc": "assets/am/nam1/15e146dbfb.mp3|assets/am/cau/2027675eff.mp3"
     },
     {
      "ma": "n4-4",
@@ -589,7 +594,8 @@
       }
      ],
      "dap": "B",
-     "vi": "Năm nay tôi 20 tuổi, sang năm tôi 21 tuổi. — Hỏi: Sang năm anh ấy bao nhiêu tuổi? — 21 tuổi"
+     "vi": "Năm nay tôi 20 tuổi, sang năm tôi 21 tuổi. — Hỏi: Sang năm anh ấy bao nhiêu tuổi? — 21 tuổi",
+     "doc": "assets/am/nam1/5a4e5ecd24.mp3|assets/am/cau/f94ca410f5.mp3"
     }
    ]
   },
