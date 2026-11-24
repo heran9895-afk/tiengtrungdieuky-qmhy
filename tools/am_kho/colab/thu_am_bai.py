@@ -14,6 +14,7 @@ VAI = {
     (6, 'Bài khóa · Hỏi số điện thoại'): ['Achird', 'Leda', 'Achird'],
     (6, 'Bài khóa · Ngày mai đi siêu thị'): ['Achird', 'Leda', 'Achird', 'Leda'],
     (6, 'Bài đọc thêm · Bạn tôi Lý Nguyệt'): ['Sulafat'] * 4,   # HSK 2.0 Bài 6: bài đọc một người kể
+    (7, 'Bài đọc thêm · Tiểu Nguyệt'): ['Sulafat'] * 4,   # HSK 2.0 Bài 7: bài đọc một người kể
     (7, 'Bài khóa · Hẹn gặp lúc 2 giờ chiều'): ['Leda', 'Gacrux', 'Leda', 'Gacrux'],
     (7, 'Bài khóa · Xem phim hay còn việc'): ['Achird', 'Leda', 'Achird', 'Leda'],
     (7, 'Bài khóa · Đang ở đâu thế'): ['Gacrux', 'Charon', 'Gacrux', 'Gacrux', 'Charon'],
@@ -161,7 +162,12 @@ def gom_sbt(T, cap):
     """CAP = 'bai6sbt' / 'bai7sbt': lời nghe của Sách bài tập (tools/sach_bai_tap/noi_dung.py) chưa có file giọng Gemini."""
     n = so_bai(cap); R = T.CFG['repo']
     sys.path.insert(0, R + 'tools/sach_bai_tap')
-    import importlib, noi_dung; importlib.reload(noi_dung)
+    import importlib
+    if str(cap).endswith('h2sbt'):      # CAP = 'bai3h2sbt'…'bai7h2sbt': Sách bài tập HSK 2.0 (tools/sach_bai_tap/noi_dung_h2.py)
+        import noi_dung_h2 as noi_dung
+    else:
+        import noi_dung
+    importlib.reload(noi_dung)
     B = json.load(open(R + 'assets/am/ban-do.json'))
     out, by = [], {}
     bai = [b for b in noi_dung.BAI if b['bai'] == n][0]

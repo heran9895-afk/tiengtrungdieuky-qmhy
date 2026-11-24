@@ -1,0 +1,868 @@
+{
+ "bai": 7,
+ "ten": "今天几号",
+ "tenViet": "Hôm nay ngày mấy",
+ "phienBan": "2026-11-24a",
+ "phan": [
+  {
+   "ten": "Nghe, chọn âm tiết",
+   "zh": "听录音，选择听到的音节",
+   "hd": "Bấm loa nghe âm tiết, chọn âm tiết vừa nghe.",
+   "loai": "am",
+   "cau": [
+    {
+     "ma": "at-qing3",
+     "loa": "assets/am/py/qing3.mp3",
+     "py": "qǐng",
+     "hien": "",
+     "dap": "qǐng",
+     "nhieu": [
+      "qǐn",
+      "qiǎng",
+      "jǐng"
+     ]
+    },
+    {
+     "ma": "at-wen4",
+     "loa": "assets/am/py/wen4.mp3",
+     "py": "wèn",
+     "hien": "",
+     "dap": "wèn",
+     "nhieu": [
+      "wén",
+      "wàn",
+      "wèng"
+     ]
+    },
+    {
+     "ma": "at-hao4",
+     "loa": "assets/am/py/hao4.mp3",
+     "py": "hào",
+     "hien": "",
+     "dap": "hào",
+     "nhieu": [
+      "hǎo",
+      "gào",
+      "hòu"
+     ]
+    },
+    {
+     "ma": "at-yue4",
+     "loa": "assets/am/py/yue4.mp3",
+     "py": "yuè",
+     "hien": "",
+     "dap": "yuè",
+     "nhieu": [
+      "yuē",
+      "yè",
+      "yuàn"
+     ]
+    },
+    {
+     "ma": "at-xing1",
+     "loa": "assets/am/py/xing1.mp3",
+     "py": "xīng",
+     "hien": "",
+     "dap": "xīng",
+     "nhieu": [
+      "xīn",
+      "xiāng",
+      "qīng"
+     ]
+    },
+    {
+     "ma": "at-qi1",
+     "loa": "assets/am/py/qi1.mp3",
+     "py": "qī",
+     "hien": "",
+     "dap": "qī",
+     "nhieu": [
+      "qí",
+      "jī",
+      "xī"
+     ]
+    },
+    {
+     "ma": "at-qu4",
+     "loa": "assets/am/py/qu4.mp3",
+     "py": "qù",
+     "hien": "",
+     "dap": "qù",
+     "nhieu": [
+      "qǔ",
+      "xù",
+      "jù"
+     ]
+    },
+    {
+     "ma": "at-kan4",
+     "loa": "assets/am/py/kan4.mp3",
+     "py": "kàn",
+     "hien": "",
+     "dap": "kàn",
+     "nhieu": [
+      "kǎn",
+      "gàn",
+      "hàn"
+     ]
+    },
+    {
+     "ma": "at-shu1",
+     "loa": "assets/am/py/shu1.mp3",
+     "py": "shū",
+     "hien": "",
+     "dap": "shū",
+     "nhieu": [
+      "sū",
+      "zhū",
+      "shú"
+     ]
+    },
+    {
+     "ma": "at-xiao4",
+     "loa": "assets/am/py/xiao4.mp3",
+     "py": "xiào",
+     "hien": "",
+     "dap": "xiào",
+     "nhieu": [
+      "xiǎo",
+      "jiào",
+      "qiào"
+     ]
+    }
+   ],
+   "kieu": "at"
+  },
+  {
+   "ten": "Nghe, chọn tranh đúng",
+   "zh": "听力 · 第一部分：听短语，选择图片",
+   "hd": "Bấm loa nghe cụm từ, chọn tranh đúng trong ba tranh.",
+   "loai": "nghe",
+   "vd": {
+    "loi": [
+     {
+      "ai": "",
+      "han": "三个苹果",
+      "py": "sān ge píngguǒ"
+     }
+    ],
+    "anh": [
+     {
+      "k": "A",
+      "src": "assets/img/sach-bai-tap/vd-sach.webp",
+      "alt": "Chồng sách"
+     },
+     {
+      "k": "B",
+      "src": "assets/img/sach-bai-tap/b5-may-tinh.webp",
+      "alt": "Máy tính xách tay"
+     },
+     {
+      "k": "C",
+      "src": "assets/img/sach-bai-tap/vd-tao.webp",
+      "alt": "Ba quả táo"
+     }
+    ],
+    "dap": "C",
+    "vi": "ba quả táo",
+    "ma": "vd",
+    "doc": "assets/am/cau/e908d3f25b.mp3"
+   },
+   "cau": [
+    {
+     "ma": "n1-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "去学校",
+       "py": "Qù xuéxiào"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b7-truong.webp",
+       "alt": "Trường học"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b7-sach.webp",
+       "alt": "Những cuốn sách mở"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b4-thay-giao.webp",
+       "alt": "Một thầy giáo viết bảng"
+      }
+     ],
+     "dap": "A",
+     "vi": "đi đến trường",
+     "doc": "assets/am/tu/a09dbe8f5d.mp3"
+    },
+    {
+     "ma": "n1-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "看书",
+       "py": "Kàn shū"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/vd-doc-sach.webp",
+       "alt": "Một cô gái đang đọc sách"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b7-truong.webp",
+       "alt": "Trường học"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b3-truongthanh.webp",
+       "alt": "Vạn Lý Trường Thành"
+      }
+     ],
+     "dap": "A",
+     "vi": "đọc sách",
+     "doc": "assets/am/tu/e3ccf0942c.mp3"
+    },
+    {
+     "ma": "n1-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "书",
+       "py": "Shū"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b7-sach.webp",
+       "alt": "Những cuốn sách mở"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b7-truong.webp",
+       "alt": "Trường học"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b5-nau-an.webp",
+       "alt": "Người phụ nữ đang nấu ăn"
+      }
+     ],
+     "dap": "A",
+     "vi": "sách",
+     "doc": "assets/am/tu/2f3703e427.mp3"
+    },
+    {
+     "ma": "n1-4",
+     "loi": [
+      {
+       "ai": "",
+       "han": "老师",
+       "py": "Lǎoshī"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b7-truong.webp",
+       "alt": "Trường học"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b7-sach.webp",
+       "alt": "Những cuốn sách mở"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b4-thay-giao.webp",
+       "alt": "Một thầy giáo viết bảng"
+      }
+     ],
+     "dap": "C",
+     "vi": "giáo viên",
+     "doc": "assets/am/bai-1/tu/1-0209.mp3"
+    }
+   ]
+  },
+  {
+   "ten": "Nghe hội thoại, chọn tranh",
+   "zh": "听力 · 第三部分：听对话，选择最匹配的图片",
+   "hd": "Bấm loa nghe hội thoại, chọn tranh phù hợp.",
+   "loai": "tranh",
+   "anh": [
+    {
+     "k": "A",
+     "src": "assets/img/sach-bai-tap/b2-bat-tay.webp",
+     "alt": "Hai người bắt tay"
+    },
+    {
+     "k": "B",
+     "src": "assets/img/sach-bai-tap/b7-truong.webp",
+     "alt": "Trường học"
+    },
+    {
+     "k": "C",
+     "src": "assets/img/sach-bai-tap/vd-doc-sach.webp",
+     "alt": "Một cô gái đang đọc sách"
+    },
+    {
+     "k": "D",
+     "src": "assets/img/sach-bai-tap/b7-sach.webp",
+     "alt": "Những cuốn sách mở"
+    }
+   ],
+   "vd": {
+    "loi": [
+     {
+      "ai": "女",
+      "han": "你好！",
+      "py": "Nǐ hǎo!"
+     },
+     {
+      "ai": "男",
+      "han": "你好！很高兴认识你。",
+      "py": "Nǐ hǎo! Hěn gāoxìng rènshi nǐ."
+     }
+    ],
+    "dap": "A",
+    "vi": "Nữ: Xin chào! — Nam: Xin chào! Rất vui được gặp bạn.",
+    "ma": "vd",
+    "doc": "assets/am/bai-1/cau/c23.mp3|assets/am/nam1/af0a2d6718.mp3"
+   },
+   "cau": [
+    {
+     "ma": "n3-1",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "你去学校吗？",
+       "py": "Nǐ qù xuéxiào ma?"
+      },
+      {
+       "ai": "B",
+       "han": "去，我去学校。",
+       "py": "Qù, wǒ qù xuéxiào."
+      }
+     ],
+     "dap": "B",
+     "vi": "A: Bạn có đi học không? — B: Có, mình đi đến trường."
+    },
+    {
+     "ma": "n3-2",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "你看什么？",
+       "py": "Nǐ kàn shénme?"
+      },
+      {
+       "ai": "B",
+       "han": "我看书。",
+       "py": "Wǒ kàn shū."
+      }
+     ],
+     "dap": "C",
+     "vi": "A: Bạn đang xem gì thế? — B: Mình đọc sách."
+    },
+    {
+     "ma": "n3-3",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "请问，这是你的书吗？",
+       "py": "Qǐngwèn, zhè shì nǐ de shū ma?"
+      },
+      {
+       "ai": "B",
+       "han": "是，这是我的书。",
+       "py": "Shì, zhè shì wǒ de shū."
+      }
+     ],
+     "dap": "D",
+     "vi": "A: Xin hỏi, đây là sách của bạn à? — B: Vâng, đây là sách của tôi."
+    }
+   ]
+  },
+  {
+   "ten": "Nghe câu và câu hỏi, chọn đáp án",
+   "zh": "听力 · 第四部分：听句子和问题，选择正确答案",
+   "hd": "Bấm loa nghe một câu và câu hỏi, chọn đáp án đúng.",
+   "loai": "nghe",
+   "vd": {
+    "loi": [
+     {
+      "ai": "",
+      "han": "下午我去超市，我想买一些水果。",
+      "py": "Xiàwǔ wǒ qù chāoshì, wǒ xiǎng mǎi yìxiē shuǐguǒ."
+     },
+     {
+      "ai": "问",
+      "han": "说话人下午去哪里？",
+      "py": "Shuōhuàrén xiàwǔ qù nǎlǐ?"
+     }
+    ],
+    "pa": [
+     {
+      "k": "A",
+      "han": "超市",
+      "py": "chāoshì"
+     },
+     {
+      "k": "B",
+      "han": "医院",
+      "py": "yīyuàn"
+     },
+     {
+      "k": "C",
+      "han": "学校",
+      "py": "xuéxiào"
+     }
+    ],
+    "dap": "A",
+    "vi": "Buổi chiều tôi đi siêu thị, tôi muốn mua một ít trái cây. — Hỏi: Buổi chiều người nói đi đâu? — siêu thị",
+    "ma": "vd",
+    "doc": "assets/am/nam1/bc4175663c.mp3|assets/am/cau/be61d5db09.mp3"
+   },
+   "cau": [
+    {
+     "ma": "n4-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "今天是十月二十三号，星期五。",
+       "py": "Jīntiān shì shí yuè èrshísān hào, xīngqīwǔ."
+      },
+      {
+       "ai": "问",
+       "han": "今天星期几？",
+       "py": "Jīntiān xīngqī jǐ?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "星期四",
+       "py": "xīngqīsì"
+      },
+      {
+       "k": "B",
+       "han": "星期五",
+       "py": "xīngqīwǔ"
+      },
+      {
+       "k": "C",
+       "han": "星期六",
+       "py": "xīngqīliù"
+      }
+     ],
+     "dap": "B",
+     "vi": "Hôm nay là ngày 23 tháng 10, thứ Sáu. — Hỏi: Hôm nay thứ mấy? — Thứ Sáu"
+    },
+    {
+     "ma": "n4-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "明天是星期六，我去学校看书。",
+       "py": "Míngtiān shì xīngqīliù, wǒ qù xuéxiào kàn shū."
+      },
+      {
+       "ai": "问",
+       "han": "他明天做什么？",
+       "py": "Tā míngtiān zuò shénme?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "看书",
+       "py": "kàn shū"
+      },
+      {
+       "k": "B",
+       "han": "学汉语",
+       "py": "xué Hànyǔ"
+      },
+      {
+       "k": "C",
+       "han": "去中国",
+       "py": "qù Zhōngguó"
+      }
+     ],
+     "dap": "A",
+     "vi": "Ngày mai là thứ Bảy, tôi đến trường đọc sách. — Hỏi: Ngày mai anh ấy làm gì? — Đọc sách"
+    },
+    {
+     "ma": "n4-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "昨天是五月六号，今天是五月七号。",
+       "py": "Zuótiān shì wǔ yuè liù hào, jīntiān shì wǔ yuè qī hào."
+      },
+      {
+       "ai": "问",
+       "han": "今天几号？",
+       "py": "Jīntiān jǐ hào?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "五月六号",
+       "py": "wǔ yuè liù hào"
+      },
+      {
+       "k": "B",
+       "han": "五月七号",
+       "py": "wǔ yuè qī hào"
+      },
+      {
+       "k": "C",
+       "han": "五月八号",
+       "py": "wǔ yuè bā hào"
+      }
+     ],
+     "dap": "B",
+     "vi": "Hôm qua là mùng 6 tháng 5, hôm nay là mùng 7 tháng 5. — Hỏi: Hôm nay ngày mấy? — Mùng 7 tháng 5"
+    },
+    {
+     "ma": "n4-4",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我是大学生，我哥哥是中学生，我妹妹是小学生。",
+       "py": "Wǒ shì dàxuésheng, wǒ gēge shì zhōngxuésheng, wǒ mèimei shì xiǎoxuésheng."
+      },
+      {
+       "ai": "问",
+       "han": "他哥哥是什么学生？",
+       "py": "Tā gēge shì shénme xuésheng?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "大学生",
+       "py": "dàxuésheng"
+      },
+      {
+       "k": "B",
+       "han": "中学生",
+       "py": "zhōngxuésheng"
+      },
+      {
+       "k": "C",
+       "han": "小学生",
+       "py": "xiǎoxuésheng"
+      }
+     ],
+     "dap": "B",
+     "vi": "Tôi là sinh viên đại học, anh trai tôi là học sinh cấp hai, em gái tôi là học sinh tiểu học. — Hỏi: Anh trai anh ấy là học sinh gì? — Cấp hai"
+    }
+   ]
+  },
+  {
+   "ten": "Đọc câu, chọn tranh",
+   "zh": "阅读 · 第一部分：选择与句子最匹配的图片",
+   "hd": "Đọc câu, chọn tranh phù hợp nhất.",
+   "loai": "doc-tranh",
+   "anh": [
+    {
+     "k": "A",
+     "src": "assets/img/sach-bai-tap/vd-doc-sach.webp",
+     "alt": "Một cô gái đang đọc sách"
+    },
+    {
+     "k": "B",
+     "src": "assets/img/sach-bai-tap/b7-truong.webp",
+     "alt": "Trường học"
+    },
+    {
+     "k": "C",
+     "src": "assets/img/sach-bai-tap/b2-bat-tay.webp",
+     "alt": "Hai người bắt tay"
+    },
+    {
+     "k": "D",
+     "src": "assets/img/sach-bai-tap/b3-truongthanh.webp",
+     "alt": "Vạn Lý Trường Thành"
+    },
+    {
+     "k": "E",
+     "src": "assets/img/sach-bai-tap/b4-thay-giao.webp",
+     "alt": "Một thầy giáo viết bảng"
+    },
+    {
+     "k": "F",
+     "src": "assets/img/sach-bai-tap/b2-tambiet.webp",
+     "alt": "Một bạn nữ vẫy tay chào"
+    }
+   ],
+   "vd": {
+    "han": "我很喜欢这本书。",
+    "py": "Wǒ hěn xǐhuan zhè běn shū.",
+    "dap": "A",
+    "vi": "Tôi rất thích cuốn sách này.",
+    "ma": "vd"
+   },
+   "cau": [
+    {
+     "ma": "d1-1",
+     "han": "我去学校。",
+     "py": "Wǒ qù xuéxiào.",
+     "dap": "B",
+     "vi": ""
+    },
+    {
+     "ma": "d1-2",
+     "han": "你好，我叫李月。",
+     "py": "Nǐ hǎo, wǒ jiào Lǐ Yuè.",
+     "dap": "C",
+     "vi": ""
+    },
+    {
+     "ma": "d1-3",
+     "han": "我们去中国。",
+     "py": "Wǒmen qù Zhōngguó.",
+     "dap": "D",
+     "vi": ""
+    },
+    {
+     "ma": "d1-4",
+     "han": "他是我的老师。",
+     "py": "Tā shì wǒ de lǎoshī.",
+     "dap": "E",
+     "vi": ""
+    },
+    {
+     "ma": "d1-5",
+     "han": "李月，再见！",
+     "py": "Lǐ Yuè, zàijiàn!",
+     "dap": "F",
+     "vi": ""
+    }
+   ]
+  },
+  {
+   "ten": "Nối câu hỏi với câu trả lời",
+   "zh": "阅读 · 第二部分：匹配句子",
+   "hd": "Đọc câu hỏi, chọn câu trả lời phù hợp trong khung.",
+   "loai": "doc-ghep",
+   "luaChon": [
+    {
+     "k": "A",
+     "han": "好的，谢谢！",
+     "py": "Hǎo de, xièxie!"
+    },
+    {
+     "k": "B",
+     "han": "今天五月二十号。",
+     "py": "Jīntiān wǔ yuè èrshí hào."
+    },
+    {
+     "k": "C",
+     "han": "今天星期三。",
+     "py": "Jīntiān xīngqīsān."
+    },
+    {
+     "k": "D",
+     "han": "去，我明天去学校。",
+     "py": "Qù, wǒ míngtiān qù xuéxiào."
+    },
+    {
+     "k": "E",
+     "han": "我叫李月。",
+     "py": "Wǒ jiào Lǐ Yuè."
+    },
+    {
+     "k": "F",
+     "han": "我看汉语书。",
+     "py": "Wǒ kàn Hànyǔ shū."
+    }
+   ],
+   "vd": {
+    "han": "你喝水吗？",
+    "py": "Nǐ hē shuǐ ma?",
+    "dap": "A",
+    "vi": "Bạn có uống nước không? — Vâng, cảm ơn!",
+    "ma": "vd"
+   },
+   "cau": [
+    {
+     "ma": "d2-1",
+     "han": "今天几号？",
+     "py": "Jīntiān jǐ hào?",
+     "dap": "B",
+     "vi": ""
+    },
+    {
+     "ma": "d2-2",
+     "han": "今天星期几？",
+     "py": "Jīntiān xīngqī jǐ?",
+     "dap": "C",
+     "vi": ""
+    },
+    {
+     "ma": "d2-3",
+     "han": "明天你去学校吗？",
+     "py": "Míngtiān nǐ qù xuéxiào ma?",
+     "dap": "D",
+     "vi": ""
+    },
+    {
+     "ma": "d2-4",
+     "han": "请问，你叫什么名字？",
+     "py": "Qǐngwèn, nǐ jiào shénme míngzi?",
+     "dap": "E",
+     "vi": ""
+    },
+    {
+     "ma": "d2-5",
+     "han": "你看什么书？",
+     "py": "Nǐ kàn shénme shū?",
+     "dap": "F",
+     "vi": ""
+    }
+   ]
+  },
+  {
+   "ten": "Chọn từ điền vào chỗ trống (1)",
+   "zh": "阅读 · 第三部分：选词填空",
+   "hd": "Chọn từ trong khung điền vào chỗ trống. Mỗi từ dùng một lần.",
+   "loai": "doc-dien",
+   "luaChon": [
+    {
+     "k": "A",
+     "han": "名字",
+     "py": "míngzi"
+    },
+    {
+     "k": "B",
+     "han": "月",
+     "py": "yuè"
+    },
+    {
+     "k": "C",
+     "han": "号",
+     "py": "hào"
+    },
+    {
+     "k": "D",
+     "han": "星期",
+     "py": "xīngqī"
+    },
+    {
+     "k": "E",
+     "han": "天",
+     "py": "tiān"
+    }
+   ],
+   "vd": {
+    "han": "你叫什么（　）？",
+    "py": "Nǐ jiào shénme (　)?",
+    "dap": "A",
+    "vi": "Bạn tên là gì?",
+    "ma": "vd"
+   },
+   "cau": [
+    {
+     "ma": "d3a-1",
+     "han": "今天是五（　）七号。",
+     "py": "Jīntiān shì wǔ (　) qī hào.",
+     "dap": "B",
+     "vi": ""
+    },
+    {
+     "ma": "d3a-2",
+     "han": "今天是五月八（　）。",
+     "py": "Jīntiān shì wǔ yuè bā (　).",
+     "dap": "C",
+     "vi": ""
+    },
+    {
+     "ma": "d3a-3",
+     "han": "今天（　）几？",
+     "py": "Jīntiān (　) jǐ?",
+     "dap": "D",
+     "vi": ""
+    },
+    {
+     "ma": "d3a-4",
+     "han": "明（　）我去学校。",
+     "py": "Míng (　) wǒ qù xuéxiào.",
+     "dap": "E",
+     "vi": ""
+    }
+   ]
+  },
+  {
+   "ten": "Chọn từ điền vào chỗ trống (2)",
+   "zh": "阅读 · 第三部分：选词填空",
+   "hd": "Chọn từ trong khung điền vào chỗ trống. Mỗi từ dùng một lần.",
+   "loai": "doc-dien",
+   "luaChon": [
+    {
+     "k": "A",
+     "han": "请",
+     "py": "qǐng"
+    },
+    {
+     "k": "B",
+     "han": "问",
+     "py": "wèn"
+    },
+    {
+     "k": "C",
+     "han": "去",
+     "py": "qù"
+    },
+    {
+     "k": "D",
+     "han": "看",
+     "py": "kàn"
+    }
+   ],
+   "cau": [
+    {
+     "ma": "d3b-1",
+     "han": "（　）问，这是你的书吗？",
+     "py": "(　) wèn, zhè shì nǐ de shū ma?",
+     "dap": "A",
+     "vi": ""
+    },
+    {
+     "ma": "d3b-2",
+     "han": "请（　），你叫什么名字？",
+     "py": "Qǐng (　), nǐ jiào shénme míngzi?",
+     "dap": "B",
+     "vi": ""
+    },
+    {
+     "ma": "d3b-3",
+     "han": "我明天（　）学校。",
+     "py": "Wǒ míngtiān (　) xuéxiào.",
+     "dap": "C",
+     "vi": ""
+    },
+    {
+     "ma": "d3b-4",
+     "han": "我明天（　）书。",
+     "py": "Wǒ míngtiān (　) shū.",
+     "dap": "D",
+     "vi": ""
+    }
+   ]
+  }
+ ],
+ "nhan": "HSK 2.0 · Bài 7",
+ "maPhan": "h2-sbt-bai7",
+ "ct": "hsk2"
+}

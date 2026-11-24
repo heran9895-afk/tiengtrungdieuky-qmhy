@@ -1,0 +1,2070 @@
+{
+ "bai": "7",
+ "chuongTrinh": "HSK 2.0",
+ "ten": "第七课：今天几号",
+ "tenViet": "Bài 7: Hôm nay ngày mấy",
+ "pinyinTen": "Dì qī kè: Jīntiān jǐ hào",
+ "tenRieng": [
+  "小月"
+ ],
+ "maBaiTap": "h2-bai7-bai-tap",
+ "tu": [
+  {
+   "Mã": "1-0181",
+   "Chữ Hán": "今天",
+   "Pinyin": "jīntiān",
+   "Âm Hán Việt": "KIM THIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "hôm nay",
+   "Cấp HSK": "1",
+   "Thuận bút": "天",
+   "Cụm từ": "今天几号 | jīntiān jǐ hào\n今天星期几 | jīntiān xīngqī jǐ\n今天不去 | jīntiān bú qù",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "今天几月几号？",
+   "Pinyin câu 1": "Jīntiān jǐ yuè jǐ hào?",
+   "Nghĩa câu 1": "Hôm nay là ngày mấy tháng mấy?",
+   "Đọc câu 1": "",
+   "Câu 2": "今天我妈妈做中国菜。",
+   "Pinyin câu 2": "Jīntiān wǒ māma zuò Zhōngguó cài.",
+   "Nghĩa câu 2": "Hôm nay mẹ tôi nấu món Trung Quốc.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0495",
+   "Chữ Hán": "昨天",
+   "Pinyin": "zuótiān",
+   "Âm Hán Việt": "TẠC THIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "hôm qua",
+   "Cấp HSK": "1",
+   "Thuận bút": "昨",
+   "Cụm từ": "昨天星期几 | zuótiān xīngqī jǐ\n昨天几号 | zuótiān jǐ hào\n昨天不去 | zuótiān bú qù",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "昨天星期几？",
+   "Pinyin câu 1": "Zuótiān xīngqī jǐ?",
+   "Nghĩa câu 1": "Hôm qua là thứ mấy?",
+   "Đọc câu 1": "",
+   "Câu 2": "昨天是八月三十一号，星期二。",
+   "Pinyin câu 2": "Zuótiān shì bā yuè sānshíyī hào, xīngqī èr.",
+   "Nghĩa câu 2": "Hôm qua là ngày 31 tháng 8, thứ Ba.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0248",
+   "Chữ Hán": "明天",
+   "Pinyin": "míngtiān",
+   "Âm Hán Việt": "MINH THIÊN",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "ngày mai",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "明天星期几 | míngtiān xīngqī jǐ\n明天几号 | míngtiān jǐ hào\n明天不去 | míngtiān bú qù",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "明天星期三。",
+   "Pinyin câu 1": "Míngtiān xīngqī sān.",
+   "Nghĩa câu 1": "Ngày mai là thứ Tư.",
+   "Đọc câu 1": "",
+   "Câu 2": "明天是九月二号，星期四。",
+   "Pinyin câu 2": "Míngtiān shì jiǔ yuè èr hào, xīngqī sì.",
+   "Nghĩa câu 2": "Ngày mai là ngày 2 tháng 9, thứ Năm.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0143",
+   "Chữ Hán": "号",
+   "Pinyin": "hào",
+   "Âm Hán Việt": "HIỆU",
+   "Từ loại": "danh từ, lượng từ",
+   "Nghĩa tiếng Việt": "ngày (trong tháng); số",
+   "Cấp HSK": "1",
+   "Thuận bút": "号",
+   "Cụm từ": "几号 | jǐ hào\n九月一号 | jiǔ yuè yī hào\n三月二号 | sān yuè èr hào",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：大卫的生日是几月几号？\nB：他的生日是三月二号。",
+   "Pinyin câu 1": "A: Dàwèi de shēngrì shì jǐ yuè jǐ hào?\nB: Tā de shēngrì shì sān yuè èr hào.",
+   "Nghĩa câu 1": "A: Sinh nhật của David là ngày mấy tháng mấy?\nB: Sinh nhật anh ấy là ngày 2 tháng 3.",
+   "Đọc câu 1": "",
+   "Câu 2": "今天九月一号。",
+   "Pinyin câu 2": "Jīntiān jiǔ yuè yī hào.",
+   "Nghĩa câu 2": "Hôm nay là ngày 1 tháng 9.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0452",
+   "Chữ Hán": "月",
+   "Pinyin": "yuè",
+   "Âm Hán Việt": "NGUYỆT",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "tháng; mặt trăng",
+   "Cấp HSK": "1",
+   "Thuận bút": "月",
+   "Cụm từ": "几月 | jǐ yuè\n三月 | sān yuè\n两个月 | liǎng ge yuè\n这个月 | zhè ge yuè",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "一年有十二个月。",
+   "Pinyin câu 1": "Yì nián yǒu shí'èr ge yuè.",
+   "Nghĩa câu 1": "Một năm có mười hai tháng.",
+   "Đọc câu 1": "",
+   "Câu 2": "他去中国七个月。",
+   "Pinyin câu 2": "Tā qù Zhōngguó qī ge yuè.",
+   "Nghĩa câu 2": "Anh ấy đi Trung Quốc bảy tháng.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0413",
+   "Chữ Hán": "星期",
+   "Pinyin": "xīngqī",
+   "Âm Hán Việt": "TINH KỲ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "tuần; thứ",
+   "Cấp HSK": "1",
+   "Thuận bút": "星期",
+   "Cụm từ": "星期几 | xīngqī jǐ\n星期六 | xīngqī liù\n星期天 | xīngqītiān\n这个星期 | zhè ge xīngqī",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "这个星期六我们学汉语。",
+   "Pinyin câu 1": "Zhè ge xīngqīliù wǒmen xué Hànyǔ.",
+   "Nghĩa câu 1": "Thứ Bảy tuần này chúng tôi học tiếng Trung.",
+   "Đọc câu 1": "",
+   "Câu 2": "星期天妈妈做中国菜。",
+   "Pinyin câu 2": "Xīngqītiān māma zuò Zhōngguó cài.",
+   "Nghĩa câu 2": "Chủ nhật mẹ nấu món Trung Quốc.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0296",
+   "Chữ Hán": "请",
+   "Pinyin": "qǐng",
+   "Âm Hán Việt": "THỈNH",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "mời; xin",
+   "Cấp HSK": "1",
+   "Thuận bút": "请",
+   "Cụm từ": "请问 | qǐngwèn\n请说 | qǐng shuō\n请读 | qǐng dú",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "请问，你叫什么名字？",
+   "Pinyin câu 1": "Qǐngwèn, nǐ jiào shénme míngzi?",
+   "Nghĩa câu 1": "Xin hỏi, bạn tên là gì?",
+   "Đọc câu 1": "",
+   "Câu 2": "老师说：请读这个字。",
+   "Pinyin câu 2": "Lǎoshī shuō: qǐng dú zhè ge zì.",
+   "Nghĩa câu 2": "Cô giáo nói: Mời đọc chữ này.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0379",
+   "Chữ Hán": "问",
+   "Pinyin": "wèn",
+   "Âm Hán Việt": "VẤN",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "hỏi",
+   "Cấp HSK": "1",
+   "Thuận bút": "问",
+   "Cụm từ": "问老师 | wèn lǎoshī\n问朋友 | wèn péngyou\n问名字 | wèn míngzi",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我问老师：这个字怎么读？",
+   "Pinyin câu 1": "Wǒ wèn lǎoshī: zhè ge zì zěnme dú?",
+   "Nghĩa câu 1": "Tôi hỏi cô giáo: Chữ này đọc thế nào?",
+   "Đọc câu 1": "",
+   "Câu 2": "她问我：你会说汉语吗？",
+   "Pinyin câu 2": "Tā wèn wǒ: nǐ huì shuō Hànyǔ ma?",
+   "Nghĩa câu 2": "Cô ấy hỏi tôi: Bạn biết nói tiếng Trung không?",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0302",
+   "Chữ Hán": "去",
+   "Pinyin": "qù",
+   "Âm Hán Việt": "KHỨ",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "đi",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "去中国 | qù Zhōngguó\n去朋友家 | qù péngyou jiā\n不去 | bú qù\n去哪儿 | qù nǎr",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：明天你去哪儿？\nB：我去朋友家。",
+   "Pinyin câu 1": "A: Míngtiān nǐ qù nǎr?\nB: Wǒ qù péngyou jiā.",
+   "Nghĩa câu 1": "A: Ngày mai bạn đi đâu?\nB: Mình đến nhà bạn.",
+   "Đọc câu 1": "",
+   "Câu 2": "我妈妈不去中国，她去美国。",
+   "Pinyin câu 2": "Wǒ māma bú qù Zhōngguó, tā qù Měiguó.",
+   "Nghĩa câu 2": "Mẹ tôi không đi Trung Quốc, bà đi Mỹ.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0421",
+   "Chữ Hán": "学校",
+   "Pinyin": "xuéxiào",
+   "Âm Hán Việt": "HỌC HIỆU",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "trường học",
+   "Cấp HSK": "1",
+   "Thuận bút": "校",
+   "Cụm từ": "去学校 | qù xuéxiào\n我的学校 | wǒ de xuéxiào\n学校的老师 | xuéxiào de lǎoshī",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：你去学校吗？\nB：明天星期六，我不去学校。",
+   "Pinyin câu 1": "A: Nǐ qù xuéxiào ma?\nB: Míngtiān xīngqīliù, wǒ bú qù xuéxiào.",
+   "Nghĩa câu 1": "A: Bạn có đến trường không?\nB: Ngày mai thứ Bảy, mình không đến trường.",
+   "Đọc câu 1": "",
+   "Câu 2": "我的学校很大。",
+   "Pinyin câu 2": "Wǒ de xuéxiào hěn dà.",
+   "Nghĩa câu 2": "Trường của tôi rất to.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0192",
+   "Chữ Hán": "看",
+   "Pinyin": "kàn",
+   "Âm Hán Việt": "KHÁN",
+   "Từ loại": "động từ",
+   "Nghĩa tiếng Việt": "nhìn, xem, đọc",
+   "Cấp HSK": "1",
+   "Thuận bút": "看",
+   "Cụm từ": "看书 | kàn shū\n看朋友 | kàn péngyou\n看什么 | kàn shénme",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "A：你看什么？\nB：我看汉语书。",
+   "Pinyin câu 1": "A: Nǐ kàn shénme?\nB: Wǒ kàn Hànyǔ shū.",
+   "Nghĩa câu 1": "A: Bạn đọc gì thế?\nB: Mình đọc sách tiếng Trung.",
+   "Đọc câu 1": "",
+   "Câu 2": "我去朋友家看书。",
+   "Pinyin câu 2": "Wǒ qù péngyou jiā kàn shū.",
+   "Nghĩa câu 2": "Tôi đến nhà bạn đọc sách.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0341",
+   "Chữ Hán": "书",
+   "Pinyin": "shū",
+   "Âm Hán Việt": "THƯ",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "sách",
+   "Cấp HSK": "1",
+   "Thuận bút": "书",
+   "Cụm từ": "汉语书 | Hànyǔ shū\n中国书 | Zhōngguó shū\n一本书 | yì běn shū",
+   "Đọc từ": "",
+   "_nhom": "tuVung",
+   "Câu 1": "我有三本汉语书。",
+   "Pinyin câu 1": "Wǒ yǒu sān běn Hànyǔ shū.",
+   "Nghĩa câu 1": "Tôi có ba quyển sách tiếng Trung.",
+   "Đọc câu 1": "",
+   "Câu 2": "这本书很好。",
+   "Pinyin câu 2": "Zhè běn shū hěn hǎo.",
+   "Nghĩa câu 2": "Quyển sách này rất hay.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0359",
+   "Chữ Hán": "天",
+   "Pinyin": "tiān",
+   "Âm Hán Việt": "THIÊN",
+   "Từ loại": "danh từ, lượng từ",
+   "Nghĩa tiếng Việt": "ngày (khoảng thời gian); trời",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "一天 | yì tiān\n几天 | jǐ tiān\n十五天 | shíwǔ tiān",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "一个月有多少天？",
+   "Pinyin câu 1": "Yí ge yuè yǒu duōshao tiān?",
+   "Nghĩa câu 1": "Một tháng có bao nhiêu ngày?",
+   "Đọc câu 1": "",
+   "Câu 2": "他去中国十五天。",
+   "Pinyin câu 2": "Tā qù Zhōngguó shíwǔ tiān.",
+   "Nghĩa câu 2": "Anh ấy đi Trung Quốc mười lăm ngày.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0062",
+   "Chữ Hán": "大学",
+   "Pinyin": "dàxué",
+   "Âm Hán Việt": "ĐẠI HỌC",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "đại học",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "大学生 | dàxuéshēng\n我的大学 | wǒ de dàxué\n去大学 | qù dàxué",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我哥哥是大学生。",
+   "Pinyin câu 1": "Wǒ gēge shì dàxuéshēng.",
+   "Nghĩa câu 1": "Anh trai tôi là sinh viên đại học.",
+   "Đọc câu 1": "",
+   "Câu 2": "我的大学很大。",
+   "Pinyin câu 2": "Wǒ de dàxué hěn dà.",
+   "Nghĩa câu 2": "Trường đại học của tôi rất to.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0481",
+   "Chữ Hán": "中学",
+   "Pinyin": "zhōngxué",
+   "Âm Hán Việt": "TRUNG HỌC",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "trung học",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "中学生 | zhōngxuéshēng\n我的中学 | wǒ de zhōngxué\n去中学 | qù zhōngxué",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我们的中学不大。",
+   "Pinyin câu 1": "Wǒmen de zhōngxué bú dà.",
+   "Nghĩa câu 1": "Trường trung học của chúng tôi không to.",
+   "Đọc câu 1": "",
+   "Câu 2": "我妹妹是中学生。",
+   "Pinyin câu 2": "Wǒ mèimei shì zhōngxuéshēng.",
+   "Nghĩa câu 2": "Em gái tôi là học sinh trung học.",
+   "Đọc câu 2": ""
+  },
+  {
+   "Mã": "1-0406",
+   "Chữ Hán": "小学",
+   "Pinyin": "xiǎoxué",
+   "Âm Hán Việt": "TIỂU HỌC",
+   "Từ loại": "danh từ",
+   "Nghĩa tiếng Việt": "tiểu học",
+   "Cấp HSK": "1",
+   "Thuận bút": "",
+   "Cụm từ": "小学生 | xiǎoxuéshēng\n我的小学 | wǒ de xiǎoxué\n去小学 | qù xiǎoxué",
+   "Đọc từ": "",
+   "_nhom": "moRong",
+   "Câu 1": "我弟弟是小学生。",
+   "Pinyin câu 1": "Wǒ dìdi shì xiǎoxuéshēng.",
+   "Nghĩa câu 1": "Em trai tôi là học sinh tiểu học.",
+   "Đọc câu 1": "",
+   "Câu 2": "小学的老师是我妈妈。",
+   "Pinyin câu 2": "Xiǎoxué de lǎoshī shì wǒ māma.",
+   "Nghĩa câu 2": "Cô giáo trường tiểu học là mẹ tôi.",
+   "Đọc câu 2": ""
+  }
+ ],
+ "boThu": [
+  {
+   "boThu": "目",
+   "ten": "Bộ mục",
+   "pinyin": "mù",
+   "nghia": "mắt",
+   "docAm": "目",
+   "chuChua": [
+    {
+     "hanzi": "看",
+     "pinyin": "kàn",
+     "nghia": "nhìn, xem, đọc"
+    }
+   ]
+  },
+  {
+   "boThu": "厶",
+   "ten": "Bộ khư",
+   "pinyin": "sī",
+   "nghia": "riêng",
+   "docAm": "厶",
+   "chuChua": [
+    {
+     "hanzi": "去",
+     "pinyin": "qù",
+     "nghia": "đi"
+    }
+   ]
+  }
+ ],
+ "ghepChu": [
+  {
+   "chu": "去",
+   "phan": [
+    "土",
+    "厶"
+   ]
+  },
+  {
+   "chu": "校",
+   "phan": [
+    "木",
+    "交"
+   ]
+  },
+  {
+   "chu": "看",
+   "phan": [
+    "手",
+    "目"
+   ]
+  }
+ ],
+ "thanhPhan": {
+  "土": {
+   "pinyin": "tǔ",
+   "ten": "Bộ Thổ",
+   "nghia": "đất"
+  },
+  "木": {
+   "pinyin": "mù",
+   "ten": "Bộ mộc",
+   "nghia": "cây cối"
+  },
+  "交": {
+   "pinyin": "jiāo",
+   "ten": "Chữ 交",
+   "nghia": "nộp, giao; kết (bạn)"
+  },
+  "手": {
+   "pinyin": "shǒu",
+   "ten": "Bộ thủ",
+   "nghia": "tay"
+  }
+ },
+ "chang": [
+  {
+   "so": "1",
+   "ten": "Ôn tập từ vựng 1 · Ngày tháng",
+   "tu": [
+    "今天",
+    "昨天",
+    "明天",
+    "号",
+    "月",
+    "星期",
+    "天"
+   ],
+   "ghepChu": []
+  },
+  {
+   "so": "2",
+   "ten": "Ôn tập từ vựng 2 · Đi và hỏi",
+   "tu": [
+    "请",
+    "问",
+    "去",
+    "学校"
+   ],
+   "ghepChu": [
+    "去",
+    "校"
+   ]
+  },
+  {
+   "so": "3",
+   "ten": "Ôn tập từ vựng 3 · Trường học, sách",
+   "tu": [
+    "看",
+    "书",
+    "大学",
+    "中学",
+    "小学"
+   ],
+   "ghepChu": [
+    "看"
+   ]
+  }
+ ],
+ "nguPhap": [
+  {
+   "id": "ngay-thang",
+   "ten": "Ngày, tháng, thứ · 几月几号 · 星期几",
+   "congThuc": [
+    [
+     [
+      "几",
+      "codinh"
+     ],
+     [
+      "月",
+      "codinh"
+     ],
+     [
+      "几",
+      "codinh"
+     ],
+     [
+      "号",
+      "codinh"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "星期",
+      "codinh"
+     ],
+     [
+      "几",
+      "codinh"
+     ],
+     [
+      "？",
+      "codinh"
+     ]
+    ],
+    [
+     [
+      "星期",
+      "codinh"
+     ],
+     [
+      "一/二/三/四/五/六/天",
+      "st"
+     ]
+    ]
+   ],
+   "giaiThich": "Thời gian trong tiếng Trung nói **từ lớn đến nhỏ**: năm – tháng – ngày – thứ. Ngày dùng **số + 号** (văn nói; viết có thể dùng **日**). Hỏi ngày: **几月几号？** Hỏi thứ: **星期几？** Thứ Hai đến thứ Bảy: **星期一 … 星期六**; Chủ nhật: **星期天** (hoặc **星期日**).",
+   "y": [
+    {
+     "noiDung": "Hỏi ngày tháng: 几月几号？",
+     "cum": [
+      [
+       "几月几号",
+       "jǐ yuè jǐ hào",
+       "",
+       [
+        [
+         "几",
+         "codinh"
+        ],
+        [
+         "月",
+         "codinh"
+        ],
+        [
+         "几",
+         "codinh"
+        ],
+        [
+         "号",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "九月一号",
+       "jiǔ yuè yī hào",
+       "",
+       [
+        [
+         "九",
+         "st"
+        ],
+        [
+         "月",
+         "codinh"
+        ],
+        [
+         "一",
+         "st"
+        ],
+        [
+         "号",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "三月二号",
+       "sān yuè èr hào",
+       "",
+       [
+        [
+         "三",
+         "st"
+        ],
+        [
+         "月",
+         "codinh"
+        ],
+        [
+         "二",
+         "st"
+        ],
+        [
+         "号",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "明天几月几号？",
+       "Míngtiān jǐ yuè jǐ hào?",
+       "",
+       [
+        [
+         "明天",
+         "dt"
+        ],
+        [
+         "几",
+         "codinh"
+        ],
+        [
+         "月",
+         "codinh"
+        ],
+        [
+         "几",
+         "codinh"
+        ],
+        [
+         "号",
+         "codinh"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Hỏi thứ: 星期几？",
+     "cum": [
+      [
+       "星期几",
+       "xīngqī jǐ",
+       "",
+       [
+        [
+         "星期",
+         "codinh"
+        ],
+        [
+         "几",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "星期六",
+       "xīngqī liù",
+       "",
+       [
+        [
+         "星期",
+         "codinh"
+        ],
+        [
+         "六",
+         "st"
+        ]
+       ]
+      ],
+      [
+       "星期天",
+       "xīngqītiān",
+       "",
+       [
+        [
+         "星期",
+         "codinh"
+        ],
+        [
+         "天",
+         "st"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "昨天星期几？",
+       "Zuótiān xīngqī jǐ?",
+       "",
+       [
+        [
+         "昨天",
+         "dt"
+        ],
+        [
+         "星期",
+         "codinh"
+        ],
+        [
+         "几",
+         "codinh"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Khoảng thời gian: số + 年 / 个月 / 天 (đứng sau động từ)",
+     "cum": [
+      [
+       "两年",
+       "liǎng nián",
+       "",
+       [
+        [
+         "两",
+         "st"
+        ],
+        [
+         "年",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "七个月",
+       "qī ge yuè",
+       "",
+       [
+        [
+         "七",
+         "st"
+        ],
+        [
+         "个月",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "十五天",
+       "shíwǔ tiān",
+       "",
+       [
+        [
+         "十五",
+         "st"
+        ],
+        [
+         "天",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "他去中国七个月。",
+       "Tā qù Zhōngguó qī ge yuè.",
+       "",
+       [
+        [
+         "他",
+         null
+        ],
+        [
+         "去中国",
+         "dgt"
+        ],
+        [
+         "七个月",
+         "st"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Hỏi ngày dùng **几**, không dùng 什么: 几月几号 (không nói 什么月).",
+    "Chỉ **thời điểm** (今天, 明天, 星期六, 九月一号…) đứng **trước động từ**; **khoảng thời gian** (七个月, 十五天) đứng **sau động từ**.",
+    "Nói năm: **去年 · 今年 · 明年**; nói tháng: **这个月**.",
+    "Thứ Hai đến thứ Bảy dùng **星期 + số**; chỉ Chủ nhật mới dùng **星期天 / 星期日**."
+   ]
+  },
+  {
+   "id": "vi-ngu-danh-tu",
+   "ten": "Câu vị ngữ danh từ",
+   "congThuc": [
+    [
+     [
+      "Chủ ngữ",
+      "dt"
+     ],
+     [
+      "DT / số từ",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "Chủ ngữ",
+      "dt"
+     ],
+     [
+      "不是",
+      "codinh"
+     ],
+     [
+      "DT",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "Câu **vị ngữ danh từ** có **danh từ, cụm danh từ hay số lượng từ** làm vị ngữ, **không cần 是**. Thường dùng để nói **thời gian, ngày tháng, thứ, tuổi**. Phủ định **bắt buộc có 是**: **不是**.",
+   "y": [
+    {
+     "noiDung": "Danh từ làm vị ngữ: nói thứ, ngày, tuổi (không cần 是)",
+     "cum": [
+      [
+       "明天星期三",
+       "míngtiān xīngqī sān",
+       "",
+       [
+        [
+         "明天",
+         "dt"
+        ],
+        [
+         "星期三",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "今天九月一号",
+       "jīntiān jiǔ yuè yī hào",
+       "",
+       [
+        [
+         "今天",
+         "dt"
+        ],
+        [
+         "九月一号",
+         "codinh"
+        ]
+       ]
+      ],
+      [
+       "我哥哥二十岁",
+       "wǒ gēge èrshí suì",
+       "",
+       [
+        [
+         "我哥哥",
+         "dt"
+        ],
+        [
+         "二十岁",
+         "codinh"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "明天星期六。",
+       "Míngtiān xīngqīliù.",
+       "",
+       [
+        [
+         "明天",
+         "dt"
+        ],
+        [
+         "星期六",
+         "codinh"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Phủ định: 不是 (không nói 不星期三)",
+     "cum": [
+      [
+       "不是星期三",
+       "bú shì xīngqī sān",
+       "",
+       [
+        [
+         "不是",
+         "codinh"
+        ],
+        [
+         "星期三",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "不是九月一号",
+       "bú shì jiǔ yuè yī hào",
+       "",
+       [
+        [
+         "不是",
+         "codinh"
+        ],
+        [
+         "九月一号",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "今天不是星期三。",
+       "Jīntiān bú shì xīngqī sān.",
+       "",
+       [
+        [
+         "今天",
+         "dt"
+        ],
+        [
+         "不是",
+         "codinh"
+        ],
+        [
+         "星期三",
+         "dt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "Khẳng định thường **bỏ 是**: 今天九月一号。 Thêm 是 khi muốn nhấn mạnh: 今天是九月一号。",
+    "Phủ định **phải có 不是**: 今天不是九月一号 (không nói 今天不九月一号).",
+    "Hỏi bằng 几: **几月几号？ 星期几？ 几岁？**"
+   ]
+  },
+  {
+   "id": "lien-dong",
+   "ten": "去 + nơi chốn · Câu liên động",
+   "congThuc": [
+    [
+     [
+      "S",
+      "dt"
+     ],
+     [
+      "去",
+      "codinh"
+     ],
+     [
+      "nơi chốn",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "S",
+      "dt"
+     ],
+     [
+      "去",
+      "codinh"
+     ],
+     [
+      "nơi chốn",
+      "dt"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ],
+     [
+      "(O)",
+      "dt"
+     ]
+    ],
+    [
+     [
+      "S",
+      "dt"
+     ],
+     [
+      "去",
+      "codinh"
+     ],
+     [
+      "ĐT",
+      "dgt"
+     ],
+     [
+      "(O)",
+      "dt"
+     ]
+    ]
+   ],
+   "giaiThich": "**去 + nơi chốn** = đi đâu: 去学校, 去朋友家. **Câu liên động** có **hai động từ trở lên**, động từ thứ hai thường chỉ **mục đích** của động từ thứ nhất: **去 + nơi chốn + ĐT (+ tân ngữ)** = đi đâu để làm gì. Có thể **lược nơi chốn** sau 去.",
+   "y": [
+    {
+     "noiDung": "去 + nơi chốn: đi đâu; hỏi 去哪儿？",
+     "cum": [
+      [
+       "去中国",
+       "qù Zhōngguó",
+       "",
+       [
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "中国",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "去朋友家",
+       "qù péngyou jiā",
+       "",
+       [
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "朋友家",
+         "dt"
+        ]
+       ]
+      ],
+      [
+       "去哪儿",
+       "qù nǎr",
+       "",
+       [
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "哪儿",
+         "dt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "明天你去哪儿？",
+       "Míngtiān nǐ qù nǎr?",
+       "",
+       [
+        [
+         "明天你",
+         null
+        ],
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "哪儿",
+         "dt"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "去 + nơi chốn + ĐT: đi đâu để làm gì",
+     "cum": [
+      [
+       "去学校看书",
+       "qù xuéxiào kàn shū",
+       "",
+       [
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "学校",
+         "dt"
+        ],
+        [
+         "看书",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "去朋友家看书",
+       "qù péngyou jiā kàn shū",
+       "",
+       [
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "朋友家",
+         "dt"
+        ],
+        [
+         "看书",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "你去学校做什么？",
+       "Nǐ qù xuéxiào zuò shénme?",
+       "",
+       [
+        [
+         "你",
+         null
+        ],
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "学校",
+         "dt"
+        ],
+        [
+         "做什么",
+         "dgt"
+        ],
+        [
+         "？",
+         "codinh"
+        ]
+       ]
+      ]
+     ]
+    },
+    {
+     "noiDung": "Lược nơi chốn: 去 + ĐT",
+     "cum": [
+      [
+       "去看书",
+       "qù kàn shū",
+       "",
+       [
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "看书",
+         "dgt"
+        ]
+       ]
+      ],
+      [
+       "去看朋友",
+       "qù kàn péngyou",
+       "",
+       [
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "看朋友",
+         "dgt"
+        ]
+       ]
+      ]
+     ],
+     "viDu": [
+      [
+       "我去看朋友。",
+       "Wǒ qù kàn péngyou.",
+       "",
+       [
+        [
+         "我",
+         null
+        ],
+        [
+         "去",
+         "codinh"
+        ],
+        [
+         "看朋友",
+         "dgt"
+        ],
+        [
+         "。",
+         null
+        ]
+       ]
+      ]
+     ]
+    }
+   ],
+   "luuY": [
+    "**去哪儿？** hỏi nơi đến; **去……做什么？** hỏi mục đích. Hai câu hỏi này **không thêm 吗**.",
+    "Thứ tự không đổi: **去 → nơi chốn → động từ**: 我去学校看书 (không nói 我看书去学校).",
+    "Phủ định đặt **不** trước 去: 我不去学校."
+   ]
+  }
+ ],
+ "hoiDap": [
+  {
+   "hoi": [
+    "今天几月几号？",
+    "Jīntiān jǐ yuè jǐ hào?",
+    "Hôm nay là ngày mấy tháng mấy?"
+   ],
+   "dap": [
+    "今天九月一号。",
+    "Jīntiān jiǔ yuè yī hào.",
+    "Hôm nay là ngày 1 tháng 9."
+   ],
+   "nhieu": [
+    [
+     "今天星期三。",
+     "Jīntiān xīngqī sān.",
+     "Hôm nay là thứ Tư."
+    ],
+    [
+     "我今年二十岁。",
+     "Wǒ jīnnián èrshí suì.",
+     "Năm nay tôi 20 tuổi."
+    ],
+    [
+     "我去学校。",
+     "Wǒ qù xuéxiào.",
+     "Mình đến trường."
+    ]
+   ],
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "今天星期几？",
+    "Jīntiān xīngqī jǐ?",
+    "Hôm nay là thứ mấy?"
+   ],
+   "dap": [
+    "今天星期三。",
+    "Jīntiān xīngqī sān.",
+    "Hôm nay là thứ Tư."
+   ],
+   "nhieu": [
+    [
+     "今天九月一号。",
+     "Jīntiān jiǔ yuè yī hào.",
+     "Hôm nay là ngày 1 tháng 9."
+    ],
+    [
+     "我是学生。",
+     "Wǒ shì xuésheng.",
+     "Mình là học sinh."
+    ],
+    [
+     "明天不去。",
+     "Míngtiān bú qù.",
+     "Ngày mai mình không đi."
+    ]
+   ],
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "明天你去哪儿？",
+    "Míngtiān nǐ qù nǎr?",
+    "Ngày mai bạn đi đâu?"
+   ],
+   "dap": [
+    "我去朋友家。",
+    "Wǒ qù péngyou jiā.",
+    "Mình đến nhà bạn."
+   ],
+   "nhieu": [
+    [
+     "明天星期六。",
+     "Míngtiān xīngqīliù.",
+     "Ngày mai là thứ Bảy."
+    ],
+    [
+     "我有两本书。",
+     "Wǒ yǒu liǎng běn shū.",
+     "Mình có hai quyển sách."
+    ],
+    [
+     "我会说汉语。",
+     "Wǒ huì shuō Hànyǔ.",
+     "Mình biết nói tiếng Trung."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "你去学校做什么？",
+    "Nǐ qù xuéxiào zuò shénme?",
+    "Bạn đến trường làm gì?"
+   ],
+   "dap": [
+    "我去学校看书。",
+    "Wǒ qù xuéxiào kàn shū.",
+    "Mình đến trường đọc sách."
+   ],
+   "nhieu": [
+    [
+     "我是大学生。",
+     "Wǒ shì dàxuéshēng.",
+     "Mình là sinh viên đại học."
+    ],
+    [
+     "今天星期六。",
+     "Jīntiān xīngqīliù.",
+     "Hôm nay là thứ Bảy."
+    ],
+    [
+     "我的学校很大。",
+     "Wǒ de xuéxiào hěn dà.",
+     "Trường mình rất to."
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "你看什么？",
+    "Nǐ kàn shénme?",
+    "Bạn đọc gì thế?"
+   ],
+   "dap": [
+    "我看汉语书。",
+    "Wǒ kàn Hànyǔ shū.",
+    "Mình đọc sách tiếng Trung."
+   ],
+   "nhieu": [
+    [
+     "我去中国。",
+     "Wǒ qù Zhōngguó.",
+     "Mình đi Trung Quốc."
+    ],
+    [
+     "我叫小月。",
+     "Wǒ jiào Xiǎo Yuè.",
+     "Mình tên là Tiểu Nguyệt."
+    ],
+    [
+     "我不去学校。",
+     "Wǒ bú qù xuéxiào.",
+     "Mình không đến trường."
+    ]
+   ],
+   "chang": "3"
+  },
+  {
+   "hoi": [
+    "昨天是几月几号？",
+    "Zuótiān shì jǐ yuè jǐ hào?",
+    "Hôm qua là ngày mấy tháng mấy?"
+   ],
+   "dap": [
+    "昨天是八月三十一号。",
+    "Zuótiān shì bā yuè sānshíyī hào.",
+    "Hôm qua là ngày 31 tháng 8."
+   ],
+   "nhieu": [
+    [
+     "昨天星期二。",
+     "Zuótiān xīngqī èr.",
+     "Hôm qua là thứ Ba."
+    ],
+    [
+     "我哥哥三十一岁。",
+     "Wǒ gēge sānshíyī suì.",
+     "Anh trai mình 31 tuổi."
+    ],
+    [
+     "明天不去学校。",
+     "Míngtiān bú qù xuéxiào.",
+     "Ngày mai mình không đến trường."
+    ]
+   ],
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "明天星期六，你去学校吗？",
+    "Míngtiān xīngqīliù, nǐ qù xuéxiào ma?",
+    "Ngày mai thứ Bảy, bạn có đến trường không?"
+   ],
+   "dap": [
+    "我不去学校。",
+    "Wǒ bú qù xuéxiào.",
+    "Mình không đến trường."
+   ],
+   "nhieu": [
+    [
+     "明天是我的生日。",
+     "Míngtiān shì wǒ de shēngrì.",
+     "Ngày mai là sinh nhật mình."
+    ],
+    [
+     "我看汉语书。",
+     "Wǒ kàn Hànyǔ shū.",
+     "Mình đọc sách tiếng Trung."
+    ],
+    [
+     "我是小学生。",
+     "Wǒ shì xiǎoxuéshēng.",
+     "Mình là học sinh tiểu học."
+    ]
+   ],
+   "chang": "2"
+  },
+  {
+   "hoi": [
+    "大卫的生日是几月几号？",
+    "Dàwèi de shēngrì shì jǐ yuè jǐ hào?",
+    "Sinh nhật của David là ngày mấy tháng mấy?"
+   ],
+   "dap": [
+    "他的生日是三月二号。",
+    "Tā de shēngrì shì sān yuè èr hào.",
+    "Sinh nhật anh ấy là ngày 2 tháng 3."
+   ],
+   "nhieu": [
+    [
+     "他是美国人。",
+     "Tā shì Měiguó rén.",
+     "Anh ấy là người Mỹ."
+    ],
+    [
+     "他今年二十岁。",
+     "Tā jīnnián èrshí suì.",
+     "Năm nay anh ấy 20 tuổi."
+    ],
+    [
+     "他会说汉语。",
+     "Tā huì shuō Hànyǔ.",
+     "Anh ấy biết nói tiếng Trung."
+    ]
+   ],
+   "chang": "1"
+  },
+  {
+   "hoi": [
+    "三月二号星期几？",
+    "Sān yuè èr hào xīngqī jǐ?",
+    "Ngày 2 tháng 3 là thứ mấy?"
+   ],
+   "dap": [
+    "三月二号星期三。",
+    "Sān yuè èr hào xīngqī sān.",
+    "Ngày 2 tháng 3 là thứ Tư."
+   ],
+   "nhieu": [
+    [
+     "三月二号不去学校。",
+     "Sān yuè èr hào bú qù xuéxiào.",
+     "Ngày 2 tháng 3 mình không đến trường."
+    ],
+    [
+     "我的生日是三月。",
+     "Wǒ de shēngrì shì sān yuè.",
+     "Sinh nhật mình là tháng 3."
+    ],
+    [
+     "明天是三月二号。",
+     "Míngtiān shì sān yuè èr hào.",
+     "Ngày mai là ngày 2 tháng 3."
+    ]
+   ],
+   "chang": "1"
+  }
+ ],
+ "cauLuyen": [
+  {
+   "han": "今天九月一号。",
+   "py": "Jīntiān jiǔ yuè yī hào.",
+   "viet": "Hôm nay là ngày 1 tháng 9.",
+   "tu": [
+    "今天",
+    "号",
+    "月"
+   ]
+  },
+  {
+   "han": "今天是十月五号，星期六。",
+   "py": "Jīntiān shì shí yuè wǔ hào, xīngqī liù.",
+   "viet": "Hôm nay là ngày 5 tháng 10, thứ Bảy.",
+   "tu": [
+    "今天",
+    "号",
+    "月",
+    "星期"
+   ]
+  },
+  {
+   "han": "今天星期几？",
+   "py": "Jīntiān xīngqī jǐ?",
+   "viet": "Hôm nay là thứ mấy?",
+   "tu": [
+    "今天",
+    "星期"
+   ]
+  },
+  {
+   "han": "昨天几月几号？",
+   "py": "Zuótiān jǐ yuè jǐ hào?",
+   "viet": "Hôm qua là ngày mấy tháng mấy?",
+   "tu": [
+    "昨天",
+    "号",
+    "月"
+   ]
+  },
+  {
+   "han": "明天几号？",
+   "py": "Míngtiān jǐ hào?",
+   "viet": "Ngày mai là ngày mấy?",
+   "tu": [
+    "明天",
+    "号"
+   ]
+  },
+  {
+   "han": "明天是星期日。",
+   "py": "Míngtiān shì xīngqīrì.",
+   "viet": "Ngày mai là Chủ nhật.",
+   "tu": [
+    "明天",
+    "星期"
+   ]
+  },
+  {
+   "han": "今天不是星期三。",
+   "py": "Jīntiān bú shì xīngqī sān.",
+   "viet": "Hôm nay không phải thứ Tư.",
+   "tu": [
+    "今天",
+    "星期"
+   ]
+  },
+  {
+   "han": "明天不是我的生日。",
+   "py": "Míngtiān bú shì wǒ de shēngrì.",
+   "viet": "Ngày mai không phải sinh nhật của tôi.",
+   "tu": [
+    "明天"
+   ]
+  },
+  {
+   "han": "我的生日是三月五号。",
+   "py": "Wǒ de shēngrì shì sān yuè wǔ hào.",
+   "viet": "Sinh nhật của tôi là ngày 5 tháng 3.",
+   "tu": [
+    "号",
+    "月"
+   ]
+  },
+  {
+   "han": "你的生日是几月几号？",
+   "py": "Nǐ de shēngrì shì jǐ yuè jǐ hào?",
+   "viet": "Sinh nhật của bạn là ngày mấy tháng mấy?",
+   "tu": [
+    "号",
+    "月"
+   ]
+  },
+  {
+   "han": "三月二号星期几？",
+   "py": "Sān yuè èr hào xīngqī jǐ?",
+   "viet": "Ngày 2 tháng 3 là thứ mấy?",
+   "tu": [
+    "号",
+    "月",
+    "星期"
+   ]
+  },
+  {
+   "han": "一年有几个月？",
+   "py": "Yì nián yǒu jǐ ge yuè?",
+   "viet": "Một năm có mấy tháng?",
+   "tu": [
+    "月"
+   ]
+  },
+  {
+   "han": "今年是哪一年？",
+   "py": "Jīnnián shì nǎ yì nián?",
+   "viet": "Năm nay là năm nào?",
+   "tu": []
+  },
+  {
+   "han": "我哥哥今年二十岁。",
+   "py": "Wǒ gēge jīnnián èrshí suì.",
+   "viet": "Năm nay anh trai tôi 20 tuổi.",
+   "tu": []
+  },
+  {
+   "han": "我去中国十五天。",
+   "py": "Wǒ qù Zhōngguó shíwǔ tiān.",
+   "viet": "Tôi đi Trung Quốc mười lăm ngày.",
+   "tu": [
+    "去",
+    "天"
+   ]
+  },
+  {
+   "han": "这个星期六我去朋友家。",
+   "py": "Zhè ge xīngqīliù wǒ qù péngyou jiā.",
+   "viet": "Thứ Bảy tuần này tôi đến nhà bạn.",
+   "tu": [
+    "星期",
+    "去"
+   ]
+  },
+  {
+   "han": "星期天你去哪儿？",
+   "py": "Xīngqītiān nǐ qù nǎr?",
+   "viet": "Chủ nhật bạn đi đâu?",
+   "tu": [
+    "星期",
+    "去",
+    "天"
+   ]
+  },
+  {
+   "han": "明天你去学校吗？",
+   "py": "Míngtiān nǐ qù xuéxiào ma?",
+   "viet": "Ngày mai bạn có đến trường không?",
+   "tu": [
+    "明天",
+    "去",
+    "学校"
+   ]
+  },
+  {
+   "han": "我不去学校，我去朋友家。",
+   "py": "Wǒ bú qù xuéxiào, wǒ qù péngyou jiā.",
+   "viet": "Tôi không đến trường, tôi đến nhà bạn.",
+   "tu": [
+    "去",
+    "学校"
+   ]
+  },
+  {
+   "han": "我去学校看书。",
+   "py": "Wǒ qù xuéxiào kàn shū.",
+   "viet": "Tôi đến trường đọc sách.",
+   "tu": [
+    "去",
+    "学校",
+    "看",
+    "书"
+   ]
+  },
+  {
+   "han": "你去学校做什么？",
+   "py": "Nǐ qù xuéxiào zuò shénme?",
+   "viet": "Bạn đến trường làm gì?",
+   "tu": [
+    "去",
+    "学校"
+   ]
+  },
+  {
+   "han": "我妈妈去中国看朋友。",
+   "py": "Wǒ māma qù Zhōngguó kàn péngyou.",
+   "viet": "Mẹ tôi đi Trung Quốc thăm bạn.",
+   "tu": [
+    "去",
+    "看"
+   ]
+  },
+  {
+   "han": "你去朋友家做什么？",
+   "py": "Nǐ qù péngyou jiā zuò shénme?",
+   "viet": "Bạn đến nhà bạn làm gì?",
+   "tu": [
+    "去"
+   ]
+  },
+  {
+   "han": "我们星期六不去学校。",
+   "py": "Wǒmen xīngqīliù bú qù xuéxiào.",
+   "viet": "Thứ Bảy chúng tôi không đến trường.",
+   "tu": [
+    "星期",
+    "去",
+    "学校"
+   ]
+  },
+  {
+   "han": "他们今年去韩国。",
+   "py": "Tāmen jīnnián qù Hánguó.",
+   "viet": "Năm nay họ đi Hàn Quốc.",
+   "tu": [
+    "去"
+   ]
+  },
+  {
+   "han": "请问，你去哪儿？",
+   "py": "Qǐngwèn, nǐ qù nǎr?",
+   "viet": "Xin hỏi, bạn đi đâu?",
+   "tu": [
+    "请",
+    "问",
+    "去"
+   ]
+  },
+  {
+   "han": "请问，这是你的书吗？",
+   "py": "Qǐngwèn, zhè shì nǐ de shū ma?",
+   "viet": "Xin hỏi, đây là sách của bạn à?",
+   "tu": [
+    "请",
+    "问",
+    "书"
+   ]
+  },
+  {
+   "han": "请问，你是中国人吗？",
+   "py": "Qǐngwèn, nǐ shì Zhōngguó rén ma?",
+   "viet": "Xin hỏi, bạn là người Trung Quốc à?",
+   "tu": [
+    "请",
+    "问"
+   ]
+  },
+  {
+   "han": "我问朋友：你叫什么名字？",
+   "py": "Wǒ wèn péngyou: nǐ jiào shénme míngzi?",
+   "viet": "Tôi hỏi bạn: Bạn tên là gì?",
+   "tu": [
+    "问"
+   ]
+  },
+  {
+   "han": "你看什么书？",
+   "py": "Nǐ kàn shénme shū?",
+   "viet": "Bạn đọc sách gì?",
+   "tu": [
+    "看",
+    "书"
+   ]
+  },
+  {
+   "han": "我看中国书。",
+   "py": "Wǒ kàn Zhōngguó shū.",
+   "viet": "Tôi đọc sách Trung Quốc.",
+   "tu": [
+    "看",
+    "书"
+   ]
+  },
+  {
+   "han": "我有一本汉语书。",
+   "py": "Wǒ yǒu yì běn Hànyǔ shū.",
+   "viet": "Tôi có một quyển sách tiếng Trung.",
+   "tu": [
+    "书"
+   ]
+  },
+  {
+   "han": "你有几本书？",
+   "py": "Nǐ yǒu jǐ běn shū?",
+   "viet": "Bạn có mấy quyển sách?",
+   "tu": [
+    "书"
+   ]
+  },
+  {
+   "han": "我的学校不大。",
+   "py": "Wǒ de xuéxiào bú dà.",
+   "viet": "Trường của tôi không to.",
+   "tu": [
+    "学校"
+   ]
+  },
+  {
+   "han": "学校的老师会说汉语。",
+   "py": "Xuéxiào de lǎoshī huì shuō Hànyǔ.",
+   "viet": "Cô giáo ở trường biết nói tiếng Trung.",
+   "tu": [
+    "学校"
+   ]
+  },
+  {
+   "han": "我姐姐是大学生。",
+   "py": "Wǒ jiějie shì dàxuéshēng.",
+   "viet": "Chị gái tôi là sinh viên đại học.",
+   "tu": [
+    "大学"
+   ]
+  },
+  {
+   "han": "你弟弟是中学生吗？",
+   "py": "Nǐ dìdi shì zhōngxuéshēng ma?",
+   "viet": "Em trai bạn là học sinh trung học à?",
+   "tu": [
+    "中学"
+   ]
+  },
+  {
+   "han": "我妹妹是小学生。",
+   "py": "Wǒ mèimei shì xiǎoxuéshēng.",
+   "viet": "Em gái tôi là học sinh tiểu học.",
+   "tu": [
+    "小学"
+   ]
+  },
+  {
+   "han": "星期天我不看书。",
+   "py": "Xīngqītiān wǒ bú kàn shū.",
+   "viet": "Chủ nhật tôi không đọc sách.",
+   "tu": [
+    "星期",
+    "看",
+    "书",
+    "天"
+   ]
+  },
+  {
+   "han": "昨天我去朋友家，今天我去学校。",
+   "py": "Zuótiān wǒ qù péngyou jiā, jīntiān wǒ qù xuéxiào.",
+   "viet": "Hôm qua tôi đến nhà bạn, hôm nay tôi đến trường.",
+   "tu": [
+    "今天",
+    "昨天",
+    "去",
+    "学校",
+    "天"
+   ]
+  }
+ ],
+ "hoiThoai": [
+  {
+   "ten": "Bài khóa 1 · Hôm nay ngày mấy",
+   "luot": [
+    {
+     "han": "请问，今天几号？",
+     "py": "Qǐngwèn, jīntiān jǐ hào?",
+     "viet": "Xin hỏi, hôm nay là ngày mấy?"
+    },
+    {
+     "han": "今天九月一号。",
+     "py": "Jīntiān jiǔ yuè yī hào.",
+     "viet": "Hôm nay là ngày 1 tháng 9."
+    },
+    {
+     "han": "今天星期几？",
+     "py": "Jīntiān xīngqī jǐ?",
+     "viet": "Hôm nay là thứ mấy?"
+    },
+    {
+     "han": "星期三。",
+     "py": "Xīngqī sān.",
+     "viet": "Thứ Tư."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "今天十月一号。",
+      "py": "Jīntiān shí yuè yī hào."
+     },
+     {
+      "han": "今天星期三。",
+      "py": "Jīntiān xīngqī sān."
+     },
+     {
+      "han": "我是学生。",
+      "py": "Wǒ shì xuésheng."
+     }
+    ],
+    "3": [
+     {
+      "han": "九月一号。",
+      "py": "Jiǔ yuè yī hào."
+     },
+     {
+      "han": "星期六。",
+      "py": "Xīngqī liù."
+     },
+     {
+      "han": "不是星期三。",
+      "py": "Bú shì xīngqī sān."
+     }
+    ]
+   },
+   "chang": "2"
+  },
+  {
+   "ten": "Bài khóa 2 · Hôm qua, ngày mai",
+   "luot": [
+    {
+     "han": "昨天是几月几号？",
+     "py": "Zuótiān shì jǐ yuè jǐ hào?",
+     "viet": "Hôm qua là ngày mấy tháng mấy?"
+    },
+    {
+     "han": "昨天是八月三十一号，星期二。",
+     "py": "Zuótiān shì bā yuè sānshíyī hào, xīngqī èr.",
+     "viet": "Hôm qua là ngày 31 tháng 8, thứ Ba."
+    },
+    {
+     "han": "明天呢？",
+     "py": "Míngtiān ne?",
+     "viet": "Còn ngày mai?"
+    },
+    {
+     "han": "明天是九月二号，星期四。",
+     "py": "Míngtiān shì jiǔ yuè èr hào, xīngqī sì.",
+     "viet": "Ngày mai là ngày 2 tháng 9, thứ Năm."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "昨天是八月三十号，星期一。",
+      "py": "Zuótiān shì bā yuè sānshí hào, xīngqī yī."
+     },
+     {
+      "han": "昨天是九月二号，星期四。",
+      "py": "Zuótiān shì jiǔ yuè èr hào, xīngqī sì."
+     },
+     {
+      "han": "昨天不去学校。",
+      "py": "Zuótiān bú qù xuéxiào."
+     }
+    ],
+    "3": [
+     {
+      "han": "明天是九月三号，星期五。",
+      "py": "Míngtiān shì jiǔ yuè sān hào, xīngqī wǔ."
+     },
+     {
+      "han": "明天是八月三十一号，星期二。",
+      "py": "Míngtiān shì bā yuè sānshíyī hào, xīngqī èr."
+     },
+     {
+      "han": "明天我不去学校。",
+      "py": "Míngtiān wǒ bú qù xuéxiào."
+     }
+    ]
+   },
+   "chang": "1"
+  },
+  {
+   "ten": "Bài khóa 3 · Đi học đọc sách",
+   "luot": [
+    {
+     "han": "明天星期六，你去学校吗？",
+     "py": "Míngtiān xīngqīliù, nǐ qù xuéxiào ma?",
+     "viet": "Ngày mai thứ Bảy, bạn có đến trường không?"
+    },
+    {
+     "han": "我去学校。",
+     "py": "Wǒ qù xuéxiào.",
+     "viet": "Mình đến trường."
+    },
+    {
+     "han": "你去学校做什么？",
+     "py": "Nǐ qù xuéxiào zuò shénme?",
+     "viet": "Bạn đến trường làm gì?"
+    },
+    {
+     "han": "我去学校看书。",
+     "py": "Wǒ qù xuéxiào kàn shū.",
+     "viet": "Mình đến trường đọc sách."
+    }
+   ],
+   "nhieu": {
+    "1": [
+     {
+      "han": "我不去学校。",
+      "py": "Wǒ bú qù xuéxiào."
+     },
+     {
+      "han": "我去朋友家。",
+      "py": "Wǒ qù péngyou jiā."
+     },
+     {
+      "han": "我是大学生。",
+      "py": "Wǒ shì dàxuéshēng."
+     }
+    ],
+    "3": [
+     {
+      "han": "我去学校看朋友。",
+      "py": "Wǒ qù xuéxiào kàn péngyou."
+     },
+     {
+      "han": "我去朋友家。",
+      "py": "Wǒ qù péngyou jiā."
+     },
+     {
+      "han": "我不去学校。",
+      "py": "Wǒ bú qù xuéxiào."
+     }
+    ]
+   },
+   "chang": "3"
+  },
+  {
+   "ten": "Bài đọc thêm · Tiểu Nguyệt",
+   "luot": [
+    {
+     "han": "我叫小月，是学生。今天十月五号，星期六。",
+     "py": "Wǒ jiào Xiǎo Yuè, shì xuésheng. Jīntiān shí yuè wǔ hào, xīngqī liù.",
+     "viet": "Tôi tên là Tiểu Nguyệt, là học sinh. Hôm nay là ngày 5 tháng 10, thứ Bảy."
+    },
+    {
+     "han": "今天我不去学校，我去朋友家。",
+     "py": "Jīntiān wǒ bú qù xuéxiào, wǒ qù péngyou jiā.",
+     "viet": "Hôm nay tôi không đến trường, tôi đến nhà bạn."
+    },
+    {
+     "han": "我朋友的妈妈会做中国菜，很好吃。",
+     "py": "Wǒ péngyou de māma huì zuò Zhōngguó cài, hěn hǎochī.",
+     "viet": "Mẹ của bạn tôi biết nấu món Trung Quốc, rất ngon."
+    },
+    {
+     "han": "明天星期日，我去学校看书。",
+     "py": "Míngtiān xīngqīrì, wǒ qù xuéxiào kàn shū.",
+     "viet": "Ngày mai Chủ nhật, tôi đến trường đọc sách."
+    }
+   ],
+   "nhieu": {},
+   "chang": "3"
+  }
+ ],
+ "ctTruoc": {
+  "明": {
+   "ma": "1-0247",
+   "han": "明年",
+   "bai": "Bài 5",
+   "url": "chuong-trinh-hsk-2/hsk1/bai-5/tu-vung.html"
+  }
+ }
+}

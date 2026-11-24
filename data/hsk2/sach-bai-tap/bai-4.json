@@ -1,0 +1,892 @@
+{
+ "bai": 4,
+ "ten": "她是我的汉语老师",
+ "tenViet": "Cô ấy là giáo viên tiếng Trung của tôi",
+ "phienBan": "2026-11-24a",
+ "phan": [
+  {
+   "ten": "Nghe, chọn âm tiết",
+   "zh": "听录音，选择听到的音节",
+   "hd": "Bấm loa nghe âm tiết, chọn âm tiết vừa nghe.",
+   "loai": "am",
+   "cau": [
+    {
+     "ma": "at-ta1",
+     "loa": "assets/am/py/ta1.mp3",
+     "py": "tā",
+     "hien": "",
+     "dap": "tā",
+     "nhieu": [
+      "dā",
+      "kā",
+      "tá"
+     ]
+    },
+    {
+     "ma": "at-shei2",
+     "loa": "assets/am/py/shei2.mp3",
+     "py": "shéi",
+     "hien": "",
+     "dap": "shéi",
+     "nhieu": [
+      "shuí",
+      "zhéi",
+      "shěi"
+     ]
+    },
+    {
+     "ma": "at-na3",
+     "loa": "assets/am/py/na3.mp3",
+     "py": "nǎ",
+     "hien": "",
+     "dap": "nǎ",
+     "nhieu": [
+      "lǎ",
+      "nǔ",
+      "nà"
+     ]
+    },
+    {
+     "ma": "at-han4",
+     "loa": "assets/am/py/han4.mp3",
+     "py": "hàn",
+     "hien": "",
+     "dap": "hàn",
+     "nhieu": [
+      "hán",
+      "hàng",
+      "huàn"
+     ]
+    },
+    {
+     "ma": "at-yu3",
+     "loa": "assets/am/py/yu3.mp3",
+     "py": "yǔ",
+     "hien": "",
+     "dap": "yǔ",
+     "nhieu": [
+      "yù",
+      "yǐ",
+      "qǔ"
+     ]
+    },
+    {
+     "ma": "at-peng2",
+     "loa": "assets/am/py/peng2.mp3",
+     "py": "péng",
+     "hien": "",
+     "dap": "péng",
+     "nhieu": [
+      "béng",
+      "pén",
+      "féng"
+     ]
+    },
+    {
+     "ma": "at-you3",
+     "loa": "assets/am/py/you3.mp3",
+     "py": "yǒu",
+     "hien": "",
+     "dap": "yǒu",
+     "nhieu": [
+      "yǔ",
+      "yòu",
+      "xiǔ"
+     ]
+    },
+    {
+     "ma": "at-xue2",
+     "loa": "assets/am/py/xue2.mp3",
+     "py": "xué",
+     "hien": "",
+     "dap": "xué",
+     "nhieu": [
+      "xié",
+      "xuè",
+      "qué"
+     ]
+    },
+    {
+     "ma": "at-tong2",
+     "loa": "assets/am/py/tong2.mp3",
+     "py": "tóng",
+     "hien": "",
+     "dap": "tóng",
+     "nhieu": [
+      "dóng",
+      "táng",
+      "tǒng"
+     ]
+    },
+    {
+     "ma": "at-wen2",
+     "loa": "assets/am/py/wen2.mp3",
+     "py": "wén",
+     "hien": "",
+     "dap": "wén",
+     "nhieu": [
+      "wèn",
+      "wéng",
+      "mén"
+     ]
+    }
+   ],
+   "kieu": "at"
+  },
+  {
+   "ten": "Nghe, chọn tranh đúng",
+   "zh": "听力 · 第一部分：听短语，选择图片",
+   "hd": "Bấm loa nghe cụm từ, chọn tranh đúng trong ba tranh.",
+   "loai": "nghe",
+   "vd": {
+    "loi": [
+     {
+      "ai": "",
+      "han": "三个苹果",
+      "py": "sān ge píngguǒ"
+     }
+    ],
+    "anh": [
+     {
+      "k": "A",
+      "src": "assets/img/sach-bai-tap/vd-sach.webp",
+      "alt": "Chồng sách"
+     },
+     {
+      "k": "B",
+      "src": "assets/img/sach-bai-tap/b5-may-tinh.webp",
+      "alt": "Máy tính xách tay"
+     },
+     {
+      "k": "C",
+      "src": "assets/img/sach-bai-tap/vd-tao.webp",
+      "alt": "Ba quả táo"
+     }
+    ],
+    "dap": "C",
+    "vi": "ba quả táo",
+    "ma": "vd",
+    "doc": "assets/am/cau/e908d3f25b.mp3"
+   },
+   "cau": [
+    {
+     "ma": "n1-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "学汉语",
+       "py": "Xué Hànyǔ"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b3-bang-chu.webp",
+       "alt": "Bảng đen viết chữ Hán"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b3-dienthoai.webp",
+       "alt": "Người đàn ông vừa nghe điện thoại vừa ghi chép"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b3-truongthanh.webp",
+       "alt": "Vạn Lý Trường Thành"
+      }
+     ],
+     "dap": "A",
+     "vi": "học tiếng Trung",
+     "doc": "assets/am/tu/d66c42d9d3.mp3"
+    },
+    {
+     "ma": "n1-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "好朋友",
+       "py": "Hǎo péngyou"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b1-chao.webp",
+       "alt": "Hai bạn vẫy tay chào qua máy tính bảng"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b4-thay-giao.webp",
+       "alt": "Một thầy giáo viết bảng"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b3-truongthanh.webp",
+       "alt": "Vạn Lý Trường Thành"
+      }
+     ],
+     "dap": "A",
+     "vi": "bạn tốt",
+     "doc": "assets/am/tu/4c0229fa34.mp3"
+    },
+    {
+     "ma": "n1-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我的老师",
+       "py": "Wǒ de lǎoshī"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b3-truongthanh.webp",
+       "alt": "Vạn Lý Trường Thành"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b3-dienthoai.webp",
+       "alt": "Người đàn ông vừa nghe điện thoại vừa ghi chép"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b4-thay-giao.webp",
+       "alt": "Một thầy giáo viết bảng"
+      }
+     ],
+     "dap": "C",
+     "vi": "giáo viên của tôi",
+     "doc": "assets/am/tu/85cdd653db.mp3"
+    },
+    {
+     "ma": "n1-4",
+     "loi": [
+      {
+       "ai": "",
+       "han": "同学们",
+       "py": "Tóngxuémen"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b3-truongthanh.webp",
+       "alt": "Vạn Lý Trường Thành"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b2-gioithieu.webp",
+       "alt": "Các bạn học sinh đứng cạnh nhau"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b3-dienthoai.webp",
+       "alt": "Người đàn ông vừa nghe điện thoại vừa ghi chép"
+      }
+     ],
+     "dap": "B",
+     "vi": "các bạn học",
+     "doc": "assets/am/tu/03576a39a3.mp3"
+    }
+   ]
+  },
+  {
+   "ten": "Nghe hội thoại, chọn tranh",
+   "zh": "听力 · 第三部分：听对话，选择最匹配的图片",
+   "hd": "Bấm loa nghe hội thoại, chọn tranh phù hợp.",
+   "loai": "tranh",
+   "anh": [
+    {
+     "k": "A",
+     "src": "assets/img/sach-bai-tap/b2-bat-tay.webp",
+     "alt": "Hai người bắt tay"
+    },
+    {
+     "k": "B",
+     "src": "assets/img/sach-bai-tap/b3-truongthanh.webp",
+     "alt": "Vạn Lý Trường Thành"
+    },
+    {
+     "k": "C",
+     "src": "assets/img/sach-bai-tap/b1-chao.webp",
+     "alt": "Hai bạn vẫy tay chào qua máy tính bảng"
+    },
+    {
+     "k": "D",
+     "src": "assets/img/sach-bai-tap/b3-bang-chu.webp",
+     "alt": "Bảng đen viết chữ Hán"
+    },
+    {
+     "k": "E",
+     "src": "assets/img/sach-bai-tap/b4-thay-giao.webp",
+     "alt": "Một thầy giáo viết bảng"
+    }
+   ],
+   "vd": {
+    "loi": [
+     {
+      "ai": "女",
+      "han": "你好！",
+      "py": "Nǐ hǎo!"
+     },
+     {
+      "ai": "男",
+      "han": "你好！很高兴认识你。",
+      "py": "Nǐ hǎo! Hěn gāoxìng rènshi nǐ."
+     }
+    ],
+    "dap": "A",
+    "vi": "Nữ: Xin chào! — Nam: Xin chào! Rất vui được gặp bạn.",
+    "ma": "vd",
+    "doc": "assets/am/bai-1/cau/c23.mp3|assets/am/nam1/af0a2d6718.mp3"
+   },
+   "cau": [
+    {
+     "ma": "n3-1",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "你是哪国人？",
+       "py": "Nǐ shì nǎ guó rén?"
+      },
+      {
+       "ai": "B",
+       "han": "我是中国人。",
+       "py": "Wǒ shì Zhōngguó rén."
+      }
+     ],
+     "dap": "B",
+     "vi": "A: Bạn là người nước nào? — B: Tôi là người Trung Quốc.",
+     "doc": "assets/am/nam1/c1a9246f49.mp3|assets/am/cau/24adef1380.mp3"
+    },
+    {
+     "ma": "n3-2",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "她是谁？",
+       "py": "Tā shì shéi?"
+      },
+      {
+       "ai": "B",
+       "han": "她是我的朋友。",
+       "py": "Tā shì wǒ de péngyou."
+      }
+     ],
+     "dap": "C",
+     "vi": "A: Cô ấy là ai? — B: Cô ấy là bạn của tôi.",
+     "doc": "assets/am/nam1/1bae105976.mp3|assets/am/cau/0782c1e1c6.mp3"
+    },
+    {
+     "ma": "n3-3",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "你学汉语吗？",
+       "py": "Nǐ xué Hànyǔ ma?"
+      },
+      {
+       "ai": "B",
+       "han": "学，我学汉语。",
+       "py": "Xué, wǒ xué Hànyǔ."
+      }
+     ],
+     "dap": "D",
+     "vi": "A: Bạn có học tiếng Trung không? — B: Có, tôi học tiếng Trung."
+    },
+    {
+     "ma": "n3-4",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "他是谁？",
+       "py": "Tā shì shéi?"
+      },
+      {
+       "ai": "B",
+       "han": "他是我的老师。",
+       "py": "Tā shì wǒ de lǎoshī."
+      }
+     ],
+     "dap": "E",
+     "vi": "A: Anh ấy là ai? — B: Anh ấy là giáo viên của tôi."
+    }
+   ]
+  },
+  {
+   "ten": "Nghe câu và câu hỏi, chọn đáp án",
+   "zh": "听力 · 第四部分：听句子和问题，选择正确答案",
+   "hd": "Bấm loa nghe một câu và câu hỏi, chọn đáp án đúng.",
+   "loai": "nghe",
+   "vd": {
+    "loi": [
+     {
+      "ai": "",
+      "han": "下午我去超市，我想买一些水果。",
+      "py": "Xiàwǔ wǒ qù chāoshì, wǒ xiǎng mǎi yìxiē shuǐguǒ."
+     },
+     {
+      "ai": "问",
+      "han": "说话人下午去哪里？",
+      "py": "Shuōhuàrén xiàwǔ qù nǎlǐ?"
+     }
+    ],
+    "pa": [
+     {
+      "k": "A",
+      "han": "超市",
+      "py": "chāoshì"
+     },
+     {
+      "k": "B",
+      "han": "医院",
+      "py": "yīyuàn"
+     },
+     {
+      "k": "C",
+      "han": "学校",
+      "py": "xuéxiào"
+     }
+    ],
+    "dap": "A",
+    "vi": "Buổi chiều tôi đi siêu thị, tôi muốn mua một ít trái cây. — Hỏi: Buổi chiều người nói đi đâu? — siêu thị",
+    "ma": "vd",
+    "doc": "assets/am/nam1/bc4175663c.mp3|assets/am/cau/be61d5db09.mp3"
+   },
+   "cau": [
+    {
+     "ma": "n4-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "她是我的汉语老师，她是中国人。",
+       "py": "Tā shì wǒ de Hànyǔ lǎoshī, tā shì Zhōngguó rén."
+      },
+      {
+       "ai": "问",
+       "han": "她是哪国人？",
+       "py": "Tā shì nǎ guó rén?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "中国人",
+       "py": "Zhōngguó rén"
+      },
+      {
+       "k": "B",
+       "han": "美国人",
+       "py": "Měiguó rén"
+      },
+      {
+       "k": "C",
+       "han": "越南人",
+       "py": "Yuènán rén"
+      }
+     ],
+     "dap": "A",
+     "vi": "Cô ấy là giáo viên tiếng Trung của tôi, cô ấy là người Trung Quốc. — Hỏi: Cô ấy là người nước nào? — Trung Quốc"
+    },
+    {
+     "ma": "n4-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "他是我的同学，他叫大卫，是美国人。",
+       "py": "Tā shì wǒ de tóngxué, tā jiào Dàwèi, shì Měiguó rén."
+      },
+      {
+       "ai": "问",
+       "han": "他叫什么名字？",
+       "py": "Tā jiào shénme míngzi?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "大卫",
+       "py": "Dàwèi"
+      },
+      {
+       "k": "B",
+       "han": "小明",
+       "py": "Xiǎomíng"
+      },
+      {
+       "k": "C",
+       "han": "李月",
+       "py": "Lǐ Yuè"
+      }
+     ],
+     "dap": "A",
+     "vi": "Anh ấy là bạn học của tôi, tên Đại Vệ, là người Mỹ. — Hỏi: Anh ấy tên gì? — Đại Vệ"
+    },
+    {
+     "ma": "n4-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我学汉语，也学英语，不学日语。",
+       "py": "Wǒ xué Hànyǔ, yě xué Yīngyǔ, bù xué Rìyǔ."
+      },
+      {
+       "ai": "问",
+       "han": "他不学什么？",
+       "py": "Tā bù xué shénme?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "汉语",
+       "py": "Hànyǔ"
+      },
+      {
+       "k": "B",
+       "han": "日语",
+       "py": "Rìyǔ"
+      },
+      {
+       "k": "C",
+       "han": "英语",
+       "py": "Yīngyǔ"
+      }
+     ],
+     "dap": "B",
+     "vi": "Tôi học tiếng Trung, cũng học tiếng Anh, không học tiếng Nhật. — Hỏi: Anh ấy không học gì? — Tiếng Nhật"
+    },
+    {
+     "ma": "n4-4",
+     "loi": [
+      {
+       "ai": "",
+       "han": "李月是我的朋友，大卫是我的同学。",
+       "py": "Lǐ Yuè shì wǒ de péngyou, Dàwèi shì wǒ de tóngxué."
+      },
+      {
+       "ai": "问",
+       "han": "谁是他的朋友？",
+       "py": "Shéi shì tā de péngyou?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "李月",
+       "py": "Lǐ Yuè"
+      },
+      {
+       "k": "B",
+       "han": "大卫",
+       "py": "Dàwèi"
+      },
+      {
+       "k": "C",
+       "han": "小明",
+       "py": "Xiǎomíng"
+      }
+     ],
+     "dap": "A",
+     "vi": "Lý Nguyệt là bạn của tôi, Đại Vệ là bạn học của tôi. — Hỏi: Ai là bạn của anh ấy? — Lý Nguyệt"
+    }
+   ]
+  },
+  {
+   "ten": "Đọc câu, chọn tranh",
+   "zh": "阅读 · 第一部分：选择与句子最匹配的图片",
+   "hd": "Đọc câu, chọn tranh phù hợp nhất.",
+   "loai": "doc-tranh",
+   "anh": [
+    {
+     "k": "A",
+     "src": "assets/img/sach-bai-tap/vd-doc-sach.webp",
+     "alt": "Một cô gái đang đọc sách"
+    },
+    {
+     "k": "B",
+     "src": "assets/img/sach-bai-tap/b4-thay-giao.webp",
+     "alt": "Một thầy giáo viết bảng"
+    },
+    {
+     "k": "C",
+     "src": "assets/img/sach-bai-tap/b3-bang-chu.webp",
+     "alt": "Bảng đen viết chữ Hán"
+    },
+    {
+     "k": "D",
+     "src": "assets/img/sach-bai-tap/b1-chao.webp",
+     "alt": "Hai bạn vẫy tay chào qua máy tính bảng"
+    },
+    {
+     "k": "E",
+     "src": "assets/img/sach-bai-tap/b2-gioithieu.webp",
+     "alt": "Các bạn học sinh đứng cạnh nhau"
+    },
+    {
+     "k": "F",
+     "src": "assets/img/sach-bai-tap/b3-truongthanh.webp",
+     "alt": "Vạn Lý Trường Thành"
+    }
+   ],
+   "vd": {
+    "han": "我很喜欢这本书。",
+    "py": "Wǒ hěn xǐhuan zhè běn shū.",
+    "dap": "A",
+    "vi": "Tôi rất thích cuốn sách này.",
+    "ma": "vd"
+   },
+   "cau": [
+    {
+     "ma": "d1-1",
+     "han": "他是我的老师。",
+     "py": "Tā shì wǒ de lǎoshī.",
+     "dap": "B",
+     "vi": ""
+    },
+    {
+     "ma": "d1-2",
+     "han": "我学汉语。",
+     "py": "Wǒ xué Hànyǔ.",
+     "dap": "C",
+     "vi": ""
+    },
+    {
+     "ma": "d1-3",
+     "han": "我们是好朋友。",
+     "py": "Wǒmen shì hǎo péngyou.",
+     "dap": "D",
+     "vi": ""
+    },
+    {
+     "ma": "d1-4",
+     "han": "她们是我的同学。",
+     "py": "Tāmen shì wǒ de tóngxué.",
+     "dap": "E",
+     "vi": ""
+    },
+    {
+     "ma": "d1-5",
+     "han": "中国很大。",
+     "py": "Zhōngguó hěn dà.",
+     "dap": "F",
+     "vi": ""
+    }
+   ]
+  },
+  {
+   "ten": "Nối câu hỏi với câu trả lời",
+   "zh": "阅读 · 第二部分：匹配句子",
+   "hd": "Đọc câu hỏi, chọn câu trả lời phù hợp trong khung.",
+   "loai": "doc-ghep",
+   "luaChon": [
+    {
+     "k": "A",
+     "han": "好的，谢谢！",
+     "py": "Hǎo de, xièxie!"
+    },
+    {
+     "k": "B",
+     "han": "我是越南人。",
+     "py": "Wǒ shì Yuènán rén."
+    },
+    {
+     "k": "C",
+     "han": "他是我的同学。",
+     "py": "Tā shì wǒ de tóngxué."
+    },
+    {
+     "k": "D",
+     "han": "我学汉语。",
+     "py": "Wǒ xué Hànyǔ."
+    },
+    {
+     "k": "E",
+     "han": "是，她是中国人。",
+     "py": "Shì, tā shì Zhōngguó rén."
+    },
+    {
+     "k": "F",
+     "han": "我也是学生。",
+     "py": "Wǒ yě shì xuésheng."
+    }
+   ],
+   "vd": {
+    "han": "你喝水吗？",
+    "py": "Nǐ hē shuǐ ma?",
+    "dap": "A",
+    "vi": "Bạn có uống nước không? — Vâng, cảm ơn!",
+    "ma": "vd"
+   },
+   "cau": [
+    {
+     "ma": "d2-1",
+     "han": "你是哪国人？",
+     "py": "Nǐ shì nǎ guó rén?",
+     "dap": "B",
+     "vi": ""
+    },
+    {
+     "ma": "d2-2",
+     "han": "他是谁？",
+     "py": "Tā shì shéi?",
+     "dap": "C",
+     "vi": ""
+    },
+    {
+     "ma": "d2-3",
+     "han": "你学什么？",
+     "py": "Nǐ xué shénme?",
+     "dap": "D",
+     "vi": ""
+    },
+    {
+     "ma": "d2-4",
+     "han": "你的老师是中国人吗？",
+     "py": "Nǐ de lǎoshī shì Zhōngguó rén ma?",
+     "dap": "E",
+     "vi": ""
+    },
+    {
+     "ma": "d2-5",
+     "han": "我是学生，你呢？",
+     "py": "Wǒ shì xuésheng, nǐ ne?",
+     "dap": "F",
+     "vi": ""
+    }
+   ]
+  },
+  {
+   "ten": "Chọn từ điền vào chỗ trống (1)",
+   "zh": "阅读 · 第三部分：选词填空",
+   "hd": "Chọn từ trong khung điền vào chỗ trống. Mỗi từ dùng một lần.",
+   "loai": "doc-dien",
+   "luaChon": [
+    {
+     "k": "A",
+     "han": "名字",
+     "py": "míngzi"
+    },
+    {
+     "k": "B",
+     "han": "谁",
+     "py": "shéi"
+    },
+    {
+     "k": "C",
+     "han": "哪",
+     "py": "nǎ"
+    },
+    {
+     "k": "D",
+     "han": "的",
+     "py": "de"
+    },
+    {
+     "k": "E",
+     "han": "呢",
+     "py": "ne"
+    }
+   ],
+   "vd": {
+    "han": "你叫什么（　）？",
+    "py": "Nǐ jiào shénme (　)?",
+    "dap": "A",
+    "vi": "Bạn tên là gì?",
+    "ma": "vd"
+   },
+   "cau": [
+    {
+     "ma": "d3a-1",
+     "han": "他是（　）？他是我同学。",
+     "py": "Tā shì (　)? Tā shì wǒ tóngxué.",
+     "dap": "B",
+     "vi": ""
+    },
+    {
+     "ma": "d3a-2",
+     "han": "你是（　）国人？",
+     "py": "Nǐ shì (　) guó rén?",
+     "dap": "C",
+     "vi": ""
+    },
+    {
+     "ma": "d3a-3",
+     "han": "她是我（　）汉语老师。",
+     "py": "Tā shì wǒ (　) Hànyǔ lǎoshī.",
+     "dap": "D",
+     "vi": ""
+    },
+    {
+     "ma": "d3a-4",
+     "han": "我学汉语，你（　）？",
+     "py": "Wǒ xué Hànyǔ, nǐ (　)?",
+     "dap": "E",
+     "vi": ""
+    }
+   ]
+  },
+  {
+   "ten": "Chọn từ điền vào chỗ trống (2)",
+   "zh": "阅读 · 第三部分：选词填空",
+   "hd": "Chọn từ trong khung điền vào chỗ trống. Mỗi từ dùng một lần.",
+   "loai": "doc-dien",
+   "luaChon": [
+    {
+     "k": "A",
+     "han": "学",
+     "py": "xué"
+    },
+    {
+     "k": "B",
+     "han": "朋友",
+     "py": "péngyou"
+    },
+    {
+     "k": "C",
+     "han": "也",
+     "py": "yě"
+    },
+    {
+     "k": "D",
+     "han": "国",
+     "py": "guó"
+    }
+   ],
+   "cau": [
+    {
+     "ma": "d3b-1",
+     "han": "我是学生，我（　）汉语。",
+     "py": "Wǒ shì xuésheng, wǒ (　) Hànyǔ.",
+     "dap": "A",
+     "vi": ""
+    },
+    {
+     "ma": "d3b-2",
+     "han": "他是我的好（　）。",
+     "py": "Tā shì wǒ de hǎo (　).",
+     "dap": "B",
+     "vi": ""
+    },
+    {
+     "ma": "d3b-3",
+     "han": "我学汉语，他（　）学汉语。",
+     "py": "Wǒ xué Hànyǔ, tā (　) xué Hànyǔ.",
+     "dap": "C",
+     "vi": ""
+    },
+    {
+     "ma": "d3b-4",
+     "han": "我是越南人，他是中（　）人。",
+     "py": "Wǒ shì Yuènán rén, tā shì zhōng (　) rén.",
+     "dap": "D",
+     "vi": ""
+    }
+   ]
+  }
+ ],
+ "nhan": "HSK 2.0 · Bài 4",
+ "maPhan": "h2-sbt-bai4",
+ "ct": "hsk2"
+}

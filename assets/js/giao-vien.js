@@ -283,7 +283,8 @@
   }
   function viTriCau(x) {                       // câu này nằm ở đâu: bài nào, trang nào, phần nào + liên kết mở trang
     var p = String(x.p || ''), m, bai = tenBaiGon(x.b), tr = '', url = '';
-    if ((m = p.match(/^sbt-bai(\d+)/))) { bai = 'Sách bài tập · Bài ' + m[1]; url = 'chuong-trinh-hsk/hsk1/bai-' + m[1] + '/sach-bai-tap.html'; }
+    if ((m = p.match(/^h2-sbt-bai(\d+)/))) { bai = 'HSK 2.0 · Sách bài tập · Bài ' + m[1]; url = 'chuong-trinh-hsk-2/hsk1/bai-' + m[1] + '/sach-bai-tap.html'; }
+    else if ((m = p.match(/^sbt-bai(\d+)/))) { bai = 'Sách bài tập · Bài ' + m[1]; url = 'chuong-trinh-hsk/hsk1/bai-' + m[1] + '/sach-bai-tap.html'; }
     else if ((m = p.match(/^bai(\d+)-bai-tap$/))) { tr = 'Bài tập'; url = 'chuong-trinh-hsk/hsk1/bai-' + m[1] + '/bai-tap.html'; }
     else if (p === 'dich') tr = 'Dịch Việt → Trung';
     else if (p === 'luyen-ngu-phap') tr = 'Luyện ngữ pháp';
@@ -679,7 +680,8 @@
   // ---- Theo dõi lớp trực tiếp: mỗi em đã làm bao nhiêu câu, đúng / sai (chỉ phần em tự làm) ----
   var TD = { moc: {}, chon: {}, tuDong: {}, data: {} };
   function tenLamBai(p, b) {
-    var m = String(p || '').match(/^sbt-bai(\d+)/); if (m) return 'Sách bài tập · Bài ' + m[1];
+    var m = String(p || '').match(/^h2-sbt-bai(\d+)/); if (m) return 'HSK 2.0 · Sách bài tập · Bài ' + m[1];
+    m = String(p || '').match(/^sbt-bai(\d+)/); if (m) return 'Sách bài tập · Bài ' + m[1];
     var g = tenBaiGon(b), tr = /bai-tap$/.test(p || '') ? ' · Bài tập' : p === 'dich' ? ' · Dịch' : '';
     return (g || p || '—') + tr;
   }

@@ -1,5 +1,5 @@
 /* =========================================================
-   LUYỆN THEO DẠNG SÁCH BÀI TẬP (HSK 3.0 · HSK 1)
+   LUYỆN THEO DẠNG SÁCH BÀI TẬP (HSK 3.0 và HSK 2.0 · HSK 1)
    Câu soạn mới theo dạng bài của sách bài tập (không chép đề sách). Dữ liệu: data/bai/sach-bai-tap/bai-N.json
    (tạo bằng tools/sach_bai_tap/dung.py). Trình bày như sách: từng Phần, cả phần hiện một lượt, bấm chọn là chấm ngay.
    Phần loai 'am' (kieu tm | vm | td): nghe âm tiết, chọn thanh mẫu / vận mẫu / thanh điệu.
@@ -189,8 +189,8 @@
     var tln = el.querySelector('.sbt-tlnghe'); if (tln) tln.innerHTML = veTaiLieuNghe();
     amThanh(tl >= 80 ? 'xong' : 'xongVua');
     if (window.QM_NK && L.nk) QM_NK.xongLuot(L.ma, L.giay);
-    if (G) G.gui({ maLuot: L.ma, phan: 'sbt-bai' + D.bai, hoTen: L.hoTen, lop: L.lop, batDau: L.batDau, giay: L.giay, soCau: L.tong, soDung: dung, cau: L.kq },
-      k.querySelector('.sbt-luu'), 'Luyện theo dạng sách bài tập Bài ' + D.bai);
+    if (G) G.gui({ maLuot: L.ma, phan: D.maPhan || ('sbt-bai' + D.bai), hoTen: L.hoTen, lop: L.lop, batDau: L.batDau, giay: L.giay, soCau: L.tong, soDung: dung, cau: L.kq },
+      k.querySelector('.sbt-luu'), 'Luyện theo dạng sách bài tập ' + (D.nhan || 'Bài ' + D.bai));
   }
 
   // ---------- chấm ----------
@@ -208,7 +208,7 @@
       QM_LT_LOP.cauKhac(kk.dang, kk.maCau, '<ol class="sbt-ds">' + cl.outerHTML + '</ol>');
       QM_LT_LOP.onGhi(dung, { dang: x.p.ten, cauHoi: kk.deBai, dapAn: kk.dapAn, chon: kk.chon });
     }
-    if (window.QM_NK) QM_NK.theoL(L, { phan: 'sbt-bai' + D.bai, bai: 'Luyện theo dạng sách bài tập · Bài ' + D.bai }, L.kq[L.kq.length - 1]);
+    if (window.QM_NK) QM_NK.theoL(L, { phan: D.maPhan || ('sbt-bai' + D.bai), bai: 'Luyện theo dạng sách bài tập · ' + (D.nhan || 'Bài ' + D.bai) }, L.kq[L.kq.length - 1]);
     amThanh(dung ? 'dung' : 'sai');
     capNhatDem();
   }

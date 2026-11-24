@@ -22,7 +22,7 @@ CT_TRINH = (sys.argv[1] if len(sys.argv) > 1 else 'hsk2')
 if CT_TRINH == 'hsk3':
     THU_MUC, BAI = 'data/bai', sorted([f[:-5] for f in os.listdir(os.path.join(GOC, 'data/bai')) if re.match(r'bai-\d+\.json$', f)], key=lambda x: int(x.split('-')[1]))
 else:
-    THU_MUC, BAI = 'data/hsk2', ['bai-1-2', 'bai-3', 'bai-4', 'bai-5', 'bai-6']
+    THU_MUC, BAI = 'data/hsk2', ['bai-1-2', 'bai-3', 'bai-4', 'bai-5', 'bai-6', 'bai-7']
 random.seed(13)
 
 def doc(p): return json.load(open(os.path.join(GOC, p), encoding='utf-8'))
