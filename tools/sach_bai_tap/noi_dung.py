@@ -321,7 +321,7 @@ NGHE[7] = [
 # ---------------- Bài 8–9: soạn 24/11/2026 (đoạn đọc thêm 小明 / 小南 dùng làm dạng Đọc câu, chọn đáp án) ----------------
 BAI += [
  {'bai': 8, 'ten': '我爸爸也在医院工作', 'tenViet': 'Bố tôi cũng làm việc ở bệnh viện', 'phienBan': '2026-11-24a', 'phan': [
-  phan(P_AT, 'at', [('fang2', ['fang1', 'fan2', 'fang3']), ('zhuo1', ['zhuo2', 'zhou1', 'zhuo4']), ('piao4', ['piao2', 'pian4', 'biao4']), ('liang4', ['liang3', 'lian4', 'liang2']),
+  phan(P_AT, 'at', [('fang2', ['fang1', 'fan2', 'fang3']), ('zhuo1', ['zhuo2', 'zhou1', 'zhuo4']), ('piao4', ['piao2', 'pian4', 'biao4']), ('ban4', ['ban1', 'ban3', 'pan4']),
                     ('neng2', ['neng3', 'nen2', 'leng2']), ('zhang1', ['zhang3', 'zhan1', 'chang1']), ('suo3', ['suo1', 'shuo3', 'sou3']), ('dao4', ['dao3', 'tao4', 'dou4']),
                     ('mao1', ['mao2', 'miao1', 'mou1']), ('zhi1', ['zhi2', 'zi1', 'chi1'])]),
   phan(P_D1, 'doc-tranh', [
