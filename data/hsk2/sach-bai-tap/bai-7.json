@@ -352,7 +352,8 @@
       }
      ],
      "dap": "B",
-     "vi": "A: Bạn có đi học không? — B: Có, mình đi đến trường."
+     "vi": "A: Bạn có đi học không? — B: Có, mình đi đến trường.",
+     "doc": "assets/am/nam1/3279e37dcf.mp3|assets/am/cau/83e97c057b.mp3"
     },
     {
      "ma": "n3-2",
@@ -369,7 +370,8 @@
       }
      ],
      "dap": "C",
-     "vi": "A: Bạn đang xem gì thế? — B: Mình đọc sách."
+     "vi": "A: Bạn đang xem gì thế? — B: Mình đọc sách.",
+     "doc": "assets/am/nam1/1537b4d13b.mp3|assets/am/cau/c8154f500e.mp3"
     },
     {
      "ma": "n3-3",
@@ -386,7 +388,8 @@
       }
      ],
      "dap": "D",
-     "vi": "A: Xin hỏi, đây là sách của bạn à? — B: Vâng, đây là sách của tôi."
+     "vi": "A: Xin hỏi, đây là sách của bạn à? — B: Vâng, đây là sách của tôi.",
+     "doc": "assets/am/nam1/4834e6eb5d.mp3|assets/am/cau/e71e11ae99.mp3"
     }
    ]
   },
@@ -463,7 +466,8 @@
       }
      ],
      "dap": "B",
-     "vi": "Hôm nay là ngày 23 tháng 10, thứ Sáu. — Hỏi: Hôm nay thứ mấy? — Thứ Sáu"
+     "vi": "Hôm nay là ngày 23 tháng 10, thứ Sáu. — Hỏi: Hôm nay thứ mấy? — Thứ Sáu",
+     "doc": "assets/am/nam1/1183073df2.mp3|assets/am/cau/8edc304656.mp3"
     },
     {
      "ma": "n4-2",
@@ -497,7 +501,8 @@
       }
      ],
      "dap": "A",
-     "vi": "Ngày mai là thứ Bảy, tôi đến trường đọc sách. — Hỏi: Ngày mai anh ấy làm gì? — Đọc sách"
+     "vi": "Ngày mai là thứ Bảy, tôi đến trường đọc sách. — Hỏi: Ngày mai anh ấy làm gì? — Đọc sách",
+     "doc": "assets/am/nam1/bf7acc89c6.mp3|assets/am/cau/e281cff20e.mp3"
     },
     {
      "ma": "n4-3",
@@ -531,7 +536,8 @@
       }
      ],
      "dap": "B",
-     "vi": "Hôm qua là mùng 6 tháng 5, hôm nay là mùng 7 tháng 5. — Hỏi: Hôm nay ngày mấy? — Mùng 7 tháng 5"
+     "vi": "Hôm qua là mùng 6 tháng 5, hôm nay là mùng 7 tháng 5. — Hỏi: Hôm nay ngày mấy? — Mùng 7 tháng 5",
+     "doc": "assets/am/nam1/b446fb53d5.mp3|assets/am/cau/0aeb8a0ed9.mp3"
     },
     {
      "ma": "n4-4",
@@ -565,7 +571,8 @@
       }
      ],
      "dap": "B",
-     "vi": "Tôi là sinh viên đại học, anh trai tôi là học sinh cấp hai, em gái tôi là học sinh tiểu học. — Hỏi: Anh trai anh ấy là học sinh gì? — Cấp hai"
+     "vi": "Tôi là sinh viên đại học, anh trai tôi là học sinh cấp hai, em gái tôi là học sinh tiểu học. — Hỏi: Anh trai anh ấy là học sinh gì? — Cấp hai",
+     "doc": "assets/am/nam1/c47d7f6ab0.mp3|assets/am/cau/9e6e413e36.mp3"
     }
    ]
   },
