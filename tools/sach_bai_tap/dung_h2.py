@@ -32,7 +32,7 @@ def chu_trong(d):
             if o['han'] != '好的，谢谢！': yield p['ten'], o['han']      # 例如 của sách (đã cho dùng)
 
 def kiem_chu(n, d):
-    ok = von(n); loi = []
+    ok = von(n) | set('和'); loi = []      # 和: cô Nhiên chốt dùng trong câu nghe Bài 5 (24/11/2026), chưa dạy ở thẻ từ
     for ten, t in chu_trong(d):
         for ch in t:
             if '一' <= ch <= '鿿' and ch not in ok: loi.append('chữ ngoài vốn Bài %d: %s trong "%s" (%s)' % (n, ch, t, ten))
