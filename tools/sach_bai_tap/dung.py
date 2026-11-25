@@ -154,7 +154,7 @@ def dung_thi(bai, d):
         gvd = (goc[i].get('vd') or {}).get('giong')
         for c in ([phan[i]['vd']] if phan[i].get('vd') else []) + phan[i]['cau']:
             gs = (gvd if c.get('ma') == 'vd' else raw.get(c['ma'])) or ['nu1'] * len(c['loi'])
-            cu = c.pop('doc', '').split('|')
+            cu = [x for x in c.pop('doc', '').split('|') if x]
             c.pop('giong', None)
             c['am'] = cu if len(cu) == len(c['loi']) else [duong_am(v['han'], g) for v, g in zip(c['loi'], gs)]
     return {'bai': bai['bai'], 'ten': bai['ten'], 'tenViet': bai['tenViet'], 'phienBan': '2026-11-25a', 'phan': phan}
@@ -172,6 +172,9 @@ def kiem_thi(e):
             ds = [c['dap'] for c in p['cau']] + ([p['vd']['dap']] if p.get('vd') else [])
             if len(set(ds)) != len(ds): loi.append('thi: hai câu trùng đáp án phần %d' % (i + 1))
         if len({c['ma'] for c in p['cau']}) != len(p['cau']): loi.append('thi: trùng mã phần %d' % (i + 1))
+    for p in e['phan'][:4]:
+        for c in ([p['vd']] if p.get('vd') else []) + p['cau']:
+            if len(c['am']) != len(c['loi']) or not all(c['am']): loi.append('thiếu đường dẫn giọng ' + str(c.get('ma')))
     return loi
 
 if __name__ == '__main__':

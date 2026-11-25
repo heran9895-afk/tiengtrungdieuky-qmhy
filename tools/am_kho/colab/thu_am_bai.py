@@ -49,7 +49,7 @@ def gom_thi(T):
         for p in d['phan'][:4]:
             for c in ([p['vd']] if p.get('vd') else []) + p['cau']:
                 for l, f in zip(c['loi'], c['am']):
-                    if os.path.exists(R + f): continue
+                    if os.path.isfile(R + f): continue
                     thu, ten = f.split('/')[-2], f.split('/')[-1][:-4]
                     giong = {'nam1': 'Achird'}.get(thu, 'Sulafat'); k = T.chuan(l['han']); id_ = k + '|' + giong
                     if id_ in by: continue

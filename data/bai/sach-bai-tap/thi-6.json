@@ -167,7 +167,7 @@
      "dap": "C",
      "vi": "đi tàu điện ngầm",
      "am": [
-      ""
+      "assets/am/tu/4711bf70a4.mp3"
      ]
     },
     {
@@ -199,7 +199,7 @@
      "dap": "B",
      "vi": "gọi điện thoại",
      "am": [
-      ""
+      "assets/am/tu/575345386c.mp3"
      ]
     }
    ]
@@ -367,7 +367,7 @@
      "dap": "A",
      "vi": "Bạn muốn uống gì?",
      "am": [
-      ""
+      "assets/am/cau/7b27b514a2.mp3"
      ]
     },
     {
@@ -399,7 +399,7 @@
      "dap": "B",
      "vi": "Bữa sáng bạn muốn ăn gì?",
      "am": [
-      ""
+      "assets/am/cau/d370d1d9c8.mp3"
      ]
     }
    ]
