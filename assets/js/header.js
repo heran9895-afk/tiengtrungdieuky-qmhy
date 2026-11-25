@@ -166,7 +166,7 @@
       '<div class="slogan-block">' +
         '<div class="slogan-wrap"><span class="slogan-deco">❧</span><span class="slogan-main">奇妙汉语，学语言悟人生</span><span class="slogan-deco flip">❧</span></div>' +
         '<div class="slogan-line"><div class="slogan-line-bar"></div><div class="slogan-line-dot"></div><div class="slogan-line-bar"></div></div>' +
-        '<div class="slogan-teacher"><span class="teacher-badge">Giáo viên</span><div class="teacher-sep"></div><span class="teacher-name">Nguyễn Hà Nhiên</span></div>' +
+        '<div class="slogan-teacher"><span class="teacher-badge">Giáo viên</span><div class="teacher-sep"></div><span class="teacher-name">ThS. Nguyễn Hà Nhiên</span></div>' +
       '</div>' +
       '<div class="contact-block">' +
         '<a class="contact-btn btn-zalo" href="' + ZALO + '" target="_blank" rel="noopener"><div class="btn-icon">Z</div><div class="btn-label"><small>Liên hệ qua</small>Zalo: 0973754714</div></a>' +
@@ -188,7 +188,7 @@
   // ================= THANH CUỐI TRANG (luôn hiện, giống header) =================
   var soDep = UNG_HO.soTK.replace(/(\d{4})(?=\d)/g, '$1 ');
   var footer =
-    '<div class="sf-end">© ' + new Date().getFullYear() + ' Tiếng Trung Diệu Kỳ · Giáo viên Nguyễn Hà Nhiên<br><small>Dữ liệu học tập (kết quả làm bài, thời gian học) được dùng để theo dõi tiến độ, cải thiện bài giảng và có thể dùng cho nghiên cứu giáo dục.</small></div>' +
+    '<div class="sf-end">© ' + new Date().getFullYear() + ' Tiếng Trung Diệu Kỳ · Giáo viên: ThS. Nguyễn Hà Nhiên<br><small>Dữ liệu học tập (kết quả làm bài, thời gian học) được dùng để theo dõi tiến độ, cải thiện bài giảng và có thể dùng cho nghiên cứu giáo dục.</small></div>' +
     '<footer class="sf"><div class="sf-in">' +
       '<a class="sf-brand" href="' + ROOT + 'index.html"><img src="' + ROOT + 'assets/img/logo.webp" alt="Logo 奇妙汉语">' +
         '<span class="sf-name"><b>奇妙汉语</b><small>Tiếng Trung Diệu Kỳ</small></span></a>' +
