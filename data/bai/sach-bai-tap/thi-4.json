@@ -1,0 +1,1232 @@
+{
+ "bai": 4,
+ "ten": "我有两个孩子",
+ "tenViet": "Tôi có hai đứa con",
+ "phienBan": "2026-11-25a",
+ "phan": [
+  {
+   "ten": "Nghe, chọn tranh đúng",
+   "zh": "听力 · 第一部分：听短语，选择图片",
+   "hd": "Bấm loa nghe cụm từ, chọn tranh đúng trong ba tranh.",
+   "loai": "nghe",
+   "vd": {
+    "loi": [
+     {
+      "ai": "",
+      "han": "三个苹果",
+      "py": "sān ge píngguǒ"
+     }
+    ],
+    "anh": [
+     {
+      "k": "A",
+      "src": "assets/img/sach-bai-tap/vd-sach.webp",
+      "alt": "Chồng sách"
+     },
+     {
+      "k": "B",
+      "src": "assets/img/sach-bai-tap/b5-may-tinh.webp",
+      "alt": "Máy tính xách tay"
+     },
+     {
+      "k": "C",
+      "src": "assets/img/sach-bai-tap/vd-tao.webp",
+      "alt": "Ba quả táo"
+     }
+    ],
+    "dap": "C",
+    "vi": "ba quả táo",
+    "ma": "vd",
+    "am": [
+     "assets/am/cau/e908d3f25b.mp3"
+    ]
+   },
+   "cau": [
+    {
+     "ma": "n1-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "两个孩子",
+       "py": "liǎng ge háizi"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b4-em-be.webp",
+       "alt": "Một em bé"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b4-hai-be.webp",
+       "alt": "Hai đứa trẻ"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b4-ong-ba.webp",
+       "alt": "Hai ông bà"
+      }
+     ],
+     "dap": "B",
+     "vi": "hai đứa trẻ",
+     "am": [
+      "assets/am/tu/cc8fe5fb1c.mp3"
+     ]
+    },
+    {
+     "ma": "n1-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我女儿",
+       "py": "wǒ nǚ'ér"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b4-be-trai.webp",
+       "alt": "Một bé trai"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b4-dong-nghiep.webp",
+       "alt": "Hai người ở văn phòng"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b4-be-gai.webp",
+       "alt": "Một bé gái"
+      }
+     ],
+     "dap": "C",
+     "vi": "con gái tôi",
+     "am": [
+      "assets/am/tu/2178a40b21.mp3"
+     ]
+    },
+    {
+     "ma": "n1-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "三口人",
+       "py": "sān kǒu rén"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b4-ba-nguoi.webp",
+       "alt": "Bố, mẹ và con gái"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b4-hai-be.webp",
+       "alt": "Hai đứa trẻ"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b4-em-be.webp",
+       "alt": "Một em bé"
+      }
+     ],
+     "dap": "A",
+     "vi": "ba người",
+     "am": [
+      "assets/am/tu/33ce33a37a.mp3"
+     ]
+    },
+    {
+     "ma": "n1-4",
+     "loi": [
+      {
+       "ai": "",
+       "han": "爷爷和奶奶",
+       "py": "yéye hé nǎinai"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b4-ong-ba.webp",
+       "alt": "Hai ông bà"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b4-vo-chong.webp",
+       "alt": "Một đôi vợ chồng"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b4-hai-be.webp",
+       "alt": "Hai đứa trẻ"
+      }
+     ],
+     "dap": "A",
+     "vi": "ông nội và bà nội",
+     "am": [
+      ""
+     ]
+    },
+    {
+     "ma": "n1-5",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我们老师",
+       "py": "wǒmen lǎoshī"
+      }
+     ],
+     "anh": [
+      {
+       "k": "A",
+       "src": "assets/img/sach-bai-tap/b4-be-trai.webp",
+       "alt": "Một bé trai đang cười"
+      },
+      {
+       "k": "B",
+       "src": "assets/img/sach-bai-tap/b4-dong-nghiep.webp",
+       "alt": "Hai người làm việc ở văn phòng"
+      },
+      {
+       "k": "C",
+       "src": "assets/img/sach-bai-tap/b4-thay-giao.webp",
+       "alt": "Thầy giáo đứng trên lớp"
+      }
+     ],
+     "dap": "C",
+     "vi": "thầy giáo của chúng tôi",
+     "am": [
+      ""
+     ]
+    }
+   ]
+  },
+  {
+   "ten": "Nghe câu hỏi, chọn câu trả lời",
+   "zh": "听力 · 第二部分：听问题，选择正确回答",
+   "hd": "Bấm loa nghe câu hỏi, chọn câu trả lời đúng.",
+   "loai": "nghe",
+   "vd": {
+    "loi": [
+     {
+      "ai": "",
+      "han": "今天天气怎么样？",
+      "py": "Jīntiān tiānqì zěnmeyàng?"
+     }
+    ],
+    "pa": [
+     {
+      "k": "A",
+      "han": "非常热",
+      "py": "fēicháng rè"
+     },
+     {
+      "k": "B",
+      "han": "很好听",
+      "py": "hěn hǎotīng"
+     },
+     {
+      "k": "C",
+      "han": "在喝水",
+      "py": "zài hē shuǐ"
+     }
+    ],
+    "dap": "A",
+    "vi": "Hôm nay thời tiết thế nào? — rất nóng",
+    "ma": "vd",
+    "am": [
+     "assets/am/cau/f334af875b.mp3"
+    ]
+   },
+   "cau": [
+    {
+     "ma": "n2-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "你家有几口人？",
+       "py": "Nǐ jiā yǒu jǐ kǒu rén?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "五岁",
+       "py": "wǔ suì"
+      },
+      {
+       "k": "B",
+       "han": "四口人",
+       "py": "sì kǒu rén"
+      },
+      {
+       "k": "C",
+       "han": "两个",
+       "py": "liǎng ge"
+      }
+     ],
+     "dap": "B",
+     "vi": "Nhà bạn có mấy người?",
+     "am": [
+      "assets/am/cau/1aef7c8693.mp3"
+     ]
+    },
+    {
+     "ma": "n2-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "你女儿今年多大？",
+       "py": "Nǐ nǚ'ér jīnnián duō dà?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "八岁",
+       "py": "bā suì"
+      },
+      {
+       "k": "B",
+       "han": "三个",
+       "py": "sān ge"
+      },
+      {
+       "k": "C",
+       "han": "一百",
+       "py": "yìbǎi"
+      }
+     ],
+     "dap": "A",
+     "vi": "Con gái bạn năm nay bao nhiêu tuổi?",
+     "am": [
+      "assets/am/cau/9de6857630.mp3"
+     ]
+    },
+    {
+     "ma": "n2-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "你有没有妹妹？",
+       "py": "Nǐ yǒu méiyǒu mèimei?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "有，我有一个妹妹。",
+       "py": "Yǒu, wǒ yǒu yí ge mèimei."
+      },
+      {
+       "k": "B",
+       "han": "他是我哥哥。",
+       "py": "Tā shì wǒ gēge."
+      },
+      {
+       "k": "C",
+       "han": "我今年二十岁。",
+       "py": "Wǒ jīnnián èrshí suì."
+      }
+     ],
+     "dap": "A",
+     "vi": "Bạn có em gái không?",
+     "am": [
+      "assets/am/cau/417c01d176.mp3"
+     ]
+    },
+    {
+     "ma": "n2-4",
+     "loi": [
+      {
+       "ai": "",
+       "han": "你叫什么名字？",
+       "py": "Nǐ jiào shénme míngzi?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "我叫李文。",
+       "py": "Wǒ jiào Lǐ Wén."
+      },
+      {
+       "k": "B",
+       "han": "我是中国人。",
+       "py": "Wǒ shì Zhōngguórén."
+      },
+      {
+       "k": "C",
+       "han": "我很好。",
+       "py": "Wǒ hěn hǎo."
+      }
+     ],
+     "dap": "A",
+     "vi": "Bạn tên là gì?",
+     "am": [
+      ""
+     ]
+    },
+    {
+     "ma": "n2-5",
+     "loi": [
+      {
+       "ai": "",
+       "han": "你爸爸做什么工作？",
+       "py": "Nǐ bàba zuò shénme gōngzuò?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "他今年四十岁。",
+       "py": "Tā jīnnián sìshí suì."
+      },
+      {
+       "k": "B",
+       "han": "他是中国人。",
+       "py": "Tā shì Zhōngguórén."
+      },
+      {
+       "k": "C",
+       "han": "他是老师。",
+       "py": "Tā shì lǎoshī."
+      }
+     ],
+     "dap": "C",
+     "vi": "Bố bạn làm nghề gì?",
+     "am": [
+      ""
+     ]
+    }
+   ]
+  },
+  {
+   "ten": "Nghe hội thoại, chọn tranh",
+   "zh": "听力 · 第三部分：听对话，选择最匹配的图片",
+   "hd": "Bấm loa nghe hội thoại, chọn tranh phù hợp.",
+   "loai": "tranh",
+   "anh": [
+    {
+     "k": "A",
+     "src": "assets/img/sach-bai-tap/b2-bat-tay.webp",
+     "alt": "Hai người bắt tay"
+    },
+    {
+     "k": "B",
+     "src": "assets/img/sach-bai-tap/b4-ong-ba.webp",
+     "alt": "Hai ông bà"
+    },
+    {
+     "k": "C",
+     "src": "assets/img/sach-bai-tap/b4-be-gai.webp",
+     "alt": "Một bé gái"
+    },
+    {
+     "k": "D",
+     "src": "assets/img/sach-bai-tap/b4-thay-giao.webp",
+     "alt": "Một thầy giáo đứng trên lớp"
+    },
+    {
+     "k": "E",
+     "src": "assets/img/sach-bai-tap/b4-be-trai.webp",
+     "alt": "Một bé trai đang cười"
+    },
+    {
+     "k": "F",
+     "src": "assets/img/sach-bai-tap/b4-vo-chong.webp",
+     "alt": "Một đôi vợ chồng"
+    }
+   ],
+   "vd": {
+    "loi": [
+     {
+      "ai": "女",
+      "han": "你好！",
+      "py": "Nǐ hǎo!"
+     },
+     {
+      "ai": "男",
+      "han": "你好！很高兴认识你。",
+      "py": "Nǐ hǎo! Hěn gāoxìng rènshi nǐ."
+     }
+    ],
+    "dap": "A",
+    "vi": "Nữ: Xin chào! — Nam: Xin chào! Rất vui được gặp bạn.",
+    "ma": "vd",
+    "am": [
+     "assets/am/bai-1/cau/c23.mp3",
+     "assets/am/nam1/af0a2d6718.mp3"
+    ]
+   },
+   "cau": [
+    {
+     "ma": "n3-1",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "这是你女儿吗？",
+       "py": "Zhè shì nǐ nǚ'ér ma?"
+      },
+      {
+       "ai": "B",
+       "han": "对，她今年六岁。",
+       "py": "Duì, tā jīnnián liù suì."
+      }
+     ],
+     "dap": "C",
+     "vi": "A: Đây là con gái chị à? — B: Đúng, năm nay cháu sáu tuổi.",
+     "am": [
+      "assets/am/nam1/0c012fa2b2.mp3",
+      "assets/am/cau/f50b714ff2.mp3"
+     ]
+    },
+    {
+     "ma": "n3-2",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "你老公做什么工作？",
+       "py": "Nǐ lǎogōng zuò shénme gōngzuò?"
+      },
+      {
+       "ai": "B",
+       "han": "他是老师。",
+       "py": "Tā shì lǎoshī."
+      }
+     ],
+     "dap": "D",
+     "vi": "A: Chồng chị làm nghề gì? — B: Anh ấy là giáo viên.",
+     "am": [
+      "assets/am/nam1/750a84f8f7.mp3",
+      "assets/am/cau/7c4453d05f.mp3"
+     ]
+    },
+    {
+     "ma": "n3-3",
+     "loi": [
+      {
+       "ai": "A",
+       "han": "他们是谁？",
+       "py": "Tāmen shì shéi?"
+      },
+      {
+       "ai": "B",
+       "han": "他们是我爷爷、奶奶。",
+       "py": "Tāmen shì wǒ yéye, nǎinai."
+      }
+     ],
+     "dap": "B",
+     "vi": "A: Họ là ai? — B: Họ là ông bà nội của tôi.",
+     "am": [
+      "assets/am/nam1/39d05129f4.mp3",
+      "assets/am/cau/e0c543829e.mp3"
+     ]
+    },
+    {
+     "ma": "n3-4",
+     "loi": [
+      {
+       "ai": "男",
+       "han": "你有儿子吗？",
+       "py": "Nǐ yǒu érzi ma?"
+      },
+      {
+       "ai": "女",
+       "han": "有，我儿子今年两岁。",
+       "py": "Yǒu, wǒ érzi jīnnián liǎng suì."
+      }
+     ],
+     "dap": "E",
+     "vi": "Nam: Chị có con trai không? — Nữ: Có, con trai tôi năm nay hai tuổi.",
+     "am": [
+      "assets/am/nam1/1cf300a370.mp3",
+      "assets/am/cau/93c8d45b14.mp3"
+     ]
+    },
+    {
+     "ma": "n3-5",
+     "loi": [
+      {
+       "ai": "男",
+       "han": "这是谁？",
+       "py": "Zhè shì shéi?"
+      },
+      {
+       "ai": "女",
+       "han": "这是我和我老公。",
+       "py": "Zhè shì wǒ hé wǒ lǎogōng."
+      }
+     ],
+     "dap": "F",
+     "vi": "Nam: Đây là ai? — Nữ: Đây là tôi và chồng tôi.",
+     "am": [
+      "assets/am/nam1/793ff684c9.mp3",
+      "assets/am/cau/4eefd89d0f.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "ten": "Nghe câu và câu hỏi, chọn đáp án",
+   "zh": "听力 · 第四部分：听句子和问题，选择正确答案",
+   "hd": "Bấm loa nghe một câu và câu hỏi, chọn đáp án đúng.",
+   "loai": "nghe",
+   "vd": {
+    "loi": [
+     {
+      "ai": "",
+      "han": "下午我去超市，我想买一些水果。",
+      "py": "Xiàwǔ wǒ qù chāoshì, wǒ xiǎng mǎi yìxiē shuǐguǒ."
+     },
+     {
+      "ai": "问",
+      "han": "说话人下午去哪里？",
+      "py": "Shuōhuàrén xiàwǔ qù nǎlǐ?"
+     }
+    ],
+    "pa": [
+     {
+      "k": "A",
+      "han": "超市",
+      "py": "chāoshì"
+     },
+     {
+      "k": "B",
+      "han": "医院",
+      "py": "yīyuàn"
+     },
+     {
+      "k": "C",
+      "han": "学校",
+      "py": "xuéxiào"
+     }
+    ],
+    "dap": "A",
+    "vi": "Buổi chiều tôi đi siêu thị, tôi muốn mua một ít trái cây. — Hỏi: Buổi chiều người nói đi đâu? — siêu thị",
+    "ma": "vd",
+    "am": [
+     "assets/am/nam1/bc4175663c.mp3",
+     "assets/am/cau/be61d5db09.mp3"
+    ]
+   },
+   "cau": [
+    {
+     "ma": "n4-1",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我有两个哥哥，没有姐姐。",
+       "py": "Wǒ yǒu liǎng ge gēge, méiyǒu jiějie."
+      },
+      {
+       "ai": "问",
+       "han": "他有几个哥哥？",
+       "py": "Tā yǒu jǐ ge gēge?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "一个",
+       "py": "yí ge"
+      },
+      {
+       "k": "B",
+       "han": "两个",
+       "py": "liǎng ge"
+      },
+      {
+       "k": "C",
+       "han": "三个",
+       "py": "sān ge"
+      }
+     ],
+     "dap": "B",
+     "vi": "Tôi có hai anh trai, không có chị gái. — Hỏi: Anh ấy có mấy anh trai?",
+     "am": [
+      "assets/am/nam1/d0249607aa.mp3",
+      "assets/am/cau/62eaac3af6.mp3"
+     ]
+    },
+    {
+     "ma": "n4-2",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我有一个儿子和一个女儿。",
+       "py": "Wǒ yǒu yí ge érzi hé yí ge nǚ'ér."
+      },
+      {
+       "ai": "问",
+       "han": "他有几个孩子？",
+       "py": "Tā yǒu jǐ ge háizi?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "一个",
+       "py": "yí ge"
+      },
+      {
+       "k": "B",
+       "han": "两个",
+       "py": "liǎng ge"
+      },
+      {
+       "k": "C",
+       "han": "三个",
+       "py": "sān ge"
+      }
+     ],
+     "dap": "B",
+     "vi": "Tôi có một con trai và một con gái. — Hỏi: Anh ấy có mấy đứa con?",
+     "am": [
+      "assets/am/nam1/25c7b5e8a9.mp3",
+      "assets/am/cau/0c12cc4aa9.mp3"
+     ]
+    },
+    {
+     "ma": "n4-3",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我爷爷今年八十岁，奶奶七十八岁。",
+       "py": "Wǒ yéye jīnnián bāshí suì, nǎinai qīshíbā suì."
+      },
+      {
+       "ai": "问",
+       "han": "他奶奶今年多大年纪？",
+       "py": "Tā nǎinai jīnnián duō dà niánjì?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "七十八岁",
+       "py": "qīshíbā suì"
+      },
+      {
+       "k": "B",
+       "han": "八十岁",
+       "py": "bāshí suì"
+      },
+      {
+       "k": "C",
+       "han": "十八岁",
+       "py": "shíbā suì"
+      }
+     ],
+     "dap": "A",
+     "vi": "Ông tôi năm nay 80 tuổi, bà 78 tuổi. — Hỏi: Bà anh ấy năm nay bao nhiêu tuổi?",
+     "am": [
+      "assets/am/nam1/7cae9ff65d.mp3",
+      "assets/am/cau/4b4fc82841.mp3"
+     ]
+    },
+    {
+     "ma": "n4-4",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我姐姐是老师，我是学生。",
+       "py": "Wǒ jiějie shì lǎoshī, wǒ shì xué·shēng."
+      },
+      {
+       "ai": "问",
+       "han": "他姐姐做什么工作？",
+       "py": "Tā jiějie zuò shénme gōngzuò?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "老师",
+       "py": "lǎoshī"
+      },
+      {
+       "k": "B",
+       "han": "学生",
+       "py": "xué·shēng"
+      },
+      {
+       "k": "C",
+       "han": "没有工作",
+       "py": "méiyǒu gōngzuò"
+      }
+     ],
+     "dap": "A",
+     "vi": "Chị gái tôi là giáo viên, tôi là học sinh. — Hỏi: Chị gái anh ấy làm nghề gì?",
+     "am": [
+      "assets/am/nam1/2a20003c71.mp3",
+      "assets/am/cau/77455cfeed.mp3"
+     ]
+    },
+    {
+     "ma": "n4-5",
+     "loi": [
+      {
+       "ai": "",
+       "han": "我儿子今年九岁，明年他十岁。",
+       "py": "Wǒ érzi jīnnián jiǔ suì, míngnián tā shí suì."
+      },
+      {
+       "ai": "问",
+       "han": "他儿子明年几岁？",
+       "py": "Tā érzi míngnián jǐ suì?"
+      }
+     ],
+     "pa": [
+      {
+       "k": "A",
+       "han": "九岁",
+       "py": "jiǔ suì"
+      },
+      {
+       "k": "B",
+       "han": "十岁",
+       "py": "shí suì"
+      },
+      {
+       "k": "C",
+       "han": "十九岁",
+       "py": "shíjiǔ suì"
+      }
+     ],
+     "dap": "B",
+     "vi": "Con trai tôi năm nay chín tuổi, sang năm cháu mười tuổi. — Hỏi: Sang năm con trai anh ấy mấy tuổi?",
+     "am": [
+      "assets/am/nam1/30d1c6f0cf.mp3",
+      "assets/am/cau/a1add81d72.mp3"
+     ]
+    }
+   ]
+  },
+  {
+   "ten": "Đọc câu, chọn tranh",
+   "zh": "阅读 · 第一部分：选择与句子最匹配的图片",
+   "hd": "Đọc câu, chọn tranh phù hợp nhất.",
+   "loai": "doc-tranh",
+   "anh": [
+    {
+     "k": "A",
+     "src": "assets/img/sach-bai-tap/vd-doc-sach.webp",
+     "alt": "Một cô gái đang đọc sách"
+    },
+    {
+     "k": "B",
+     "src": "assets/img/sach-bai-tap/b4-ba-nguoi.webp",
+     "alt": "Bố, mẹ và con gái ngồi ăn"
+    },
+    {
+     "k": "C",
+     "src": "assets/img/sach-bai-tap/b4-be-gai.webp",
+     "alt": "Một bé gái đang cười"
+    },
+    {
+     "k": "D",
+     "src": "assets/img/sach-bai-tap/b4-dong-nghiep.webp",
+     "alt": "Hai người làm việc cạnh nhau ở văn phòng"
+    },
+    {
+     "k": "E",
+     "src": "assets/img/sach-bai-tap/b4-vo-chong.webp",
+     "alt": "Một đôi vợ chồng"
+    },
+    {
+     "k": "F",
+     "src": "assets/img/sach-bai-tap/b4-bo-hai-con.webp",
+     "alt": "Một người bố với hai đứa con"
+    }
+   ],
+   "vd": {
+    "han": "我很喜欢这本书。",
+    "py": "Wǒ hěn xǐhuan zhè běn shū.",
+    "dap": "A",
+    "vi": "Tôi rất thích cuốn sách này.",
+    "ma": "vd"
+   },
+   "cau": [
+    {
+     "ma": "d1-1",
+     "han": "我家有三口人：爸爸、妈妈和我。",
+     "py": "Wǒ jiā yǒu sān kǒu rén: bàba, māma hé wǒ.",
+     "dap": "B",
+     "vi": "Nhà tôi có ba người: bố, mẹ và tôi."
+    },
+    {
+     "ma": "d1-2",
+     "han": "我女儿今年五岁。",
+     "py": "Wǒ nǚ'ér jīnnián wǔ suì.",
+     "dap": "C",
+     "vi": "Con gái tôi năm nay năm tuổi."
+    },
+    {
+     "ma": "d1-3",
+     "han": "他是我同事。",
+     "py": "Tā shì wǒ tóngshì.",
+     "dap": "D",
+     "vi": "Anh ấy là đồng nghiệp của tôi."
+    },
+    {
+     "ma": "d1-4",
+     "han": "这是我老公，我们很好。",
+     "py": "Zhè shì wǒ lǎogōng, wǒmen hěn hǎo.",
+     "dap": "E",
+     "vi": "Đây là chồng tôi, chúng tôi rất tốt."
+    },
+    {
+     "ma": "d1-5",
+     "han": "他有两个孩子。",
+     "py": "Tā yǒu liǎng ge háizi.",
+     "dap": "F",
+     "vi": "Anh ấy có hai đứa con."
+    }
+   ]
+  },
+  {
+   "ten": "Nối câu hỏi với câu trả lời",
+   "zh": "阅读 · 第二部分：匹配句子",
+   "hd": "Đọc câu hỏi, chọn câu trả lời phù hợp trong khung.",
+   "loai": "doc-ghep",
+   "luaChon": [
+    {
+     "k": "A",
+     "han": "好的，谢谢！",
+     "py": "Hǎo de, xièxie!"
+    },
+    {
+     "k": "B",
+     "han": "我今年二十岁。",
+     "py": "Wǒ jīnnián èrshí suì."
+    },
+    {
+     "k": "C",
+     "han": "我有一个儿子。",
+     "py": "Wǒ yǒu yí ge érzi."
+    },
+    {
+     "k": "D",
+     "han": "我家有五口人。",
+     "py": "Wǒ jiā yǒu wǔ kǒu rén."
+    },
+    {
+     "k": "E",
+     "han": "没有，我有两个妹妹。",
+     "py": "Méiyǒu, wǒ yǒu liǎng ge mèimei."
+    },
+    {
+     "k": "F",
+     "han": "他是我同事。",
+     "py": "Tā shì wǒ tóngshì."
+    }
+   ],
+   "vd": {
+    "han": "你喝水吗？",
+    "py": "Nǐ hē shuǐ ma?",
+    "dap": "A",
+    "vi": "Bạn có uống nước không? — Vâng, cảm ơn!",
+    "ma": "vd"
+   },
+   "cau": [
+    {
+     "ma": "d2-1",
+     "han": "你家有几口人？",
+     "py": "Nǐ jiā yǒu jǐ kǒu rén?",
+     "dap": "D",
+     "vi": "Nhà bạn có mấy người?"
+    },
+    {
+     "ma": "d2-2",
+     "han": "你今年多大？",
+     "py": "Nǐ jīnnián duō dà?",
+     "dap": "B",
+     "vi": "Năm nay bạn bao nhiêu tuổi?"
+    },
+    {
+     "ma": "d2-3",
+     "han": "你有哥哥吗？",
+     "py": "Nǐ yǒu gēge ma?",
+     "dap": "E",
+     "vi": "Bạn có anh trai không?"
+    },
+    {
+     "ma": "d2-4",
+     "han": "你有几个孩子？",
+     "py": "Nǐ yǒu jǐ ge háizi?",
+     "dap": "C",
+     "vi": "Bạn có mấy đứa con?"
+    },
+    {
+     "ma": "d2-5",
+     "han": "他是谁？",
+     "py": "Tā shì shéi?",
+     "dap": "F",
+     "vi": "Anh ấy là ai?"
+    }
+   ]
+  },
+  {
+   "ten": "Chọn từ điền vào chỗ trống",
+   "zh": "阅读 · 第三部分：选词填空",
+   "hd": "Chọn từ trong khung điền vào chỗ trống. Mỗi từ dùng một lần.",
+   "loai": "doc-dien",
+   "luaChon": [
+    {
+     "k": "A",
+     "han": "名字",
+     "py": "míngzi"
+    },
+    {
+     "k": "B",
+     "han": "两",
+     "py": "liǎng"
+    },
+    {
+     "k": "C",
+     "han": "多少",
+     "py": "duōshao"
+    },
+    {
+     "k": "D",
+     "han": "岁",
+     "py": "suì"
+    },
+    {
+     "k": "E",
+     "han": "呢",
+     "py": "ne"
+    },
+    {
+     "k": "F",
+     "han": "个",
+     "py": "gè"
+    }
+   ],
+   "vd": {
+    "han": "你叫什么（　）？",
+    "py": "Nǐ jiào shénme (　)?",
+    "dap": "A",
+    "vi": "Bạn tên là gì?",
+    "ma": "vd"
+   },
+   "cau": [
+    {
+     "ma": "d3-1",
+     "han": "我有（　）个哥哥。",
+     "py": "Wǒ yǒu (　) ge gēge.",
+     "dap": "B",
+     "vi": "Tôi có hai anh trai."
+    },
+    {
+     "ma": "d3-2",
+     "han": "中国有（　）人？",
+     "py": "Zhōngguó yǒu (　) rén?",
+     "dap": "C",
+     "vi": "Trung Quốc có bao nhiêu người?"
+    },
+    {
+     "ma": "d3-3",
+     "han": "我儿子今年五（　）。",
+     "py": "Wǒ érzi jīnnián wǔ (　).",
+     "dap": "D",
+     "vi": "Con trai tôi năm nay năm tuổi."
+    },
+    {
+     "ma": "d3-4",
+     "han": "我很好，你（　）？",
+     "py": "Wǒ hěn hǎo, nǐ (　)?",
+     "dap": "E",
+     "vi": "Tôi rất khỏe, còn bạn?"
+    },
+    {
+     "ma": "d3-5",
+     "han": "我有一（　）妹妹。",
+     "py": "Wǒ yǒu yí (　) mèimei.",
+     "dap": "F",
+     "vi": "Tôi có một em gái."
+    }
+   ]
+  },
+  {
+   "ten": "Đọc câu, chọn đáp án đúng",
+   "zh": "阅读 · 第四部分：选择正确答案",
+   "hd": "Đọc câu và câu hỏi ★, chọn đáp án đúng.",
+   "loai": "doc-hoi",
+   "vd": {
+    "han": "请问现在几点了？",
+    "py": "Qǐngwèn xiànzài jǐ diǎn le?",
+    "hoi": {
+     "han": "说话人想知道什么？",
+     "py": "Shuōhuàrén xiǎng zhīdào shénme?"
+    },
+    "pa": [
+     {
+      "k": "A",
+      "han": "时间",
+      "py": "shíjiān"
+     },
+     {
+      "k": "B",
+      "han": "名字",
+      "py": "míngzi"
+     },
+     {
+      "k": "C",
+      "han": "房间号",
+      "py": "fángjiānhào"
+     }
+    ],
+    "dap": "A",
+    "vi": "Xin hỏi bây giờ là mấy giờ rồi? — Hỏi: Người nói muốn biết điều gì? — thời gian",
+    "ma": "vd"
+   },
+   "cau": [
+    {
+     "ma": "d4-1",
+     "han": "安妮家有爸爸、妈妈、姐姐和她。",
+     "py": "Ānnī jiā yǒu bàba, māma, jiějie hé tā.",
+     "dap": "B",
+     "vi": "Nhà Annie có bố, mẹ, chị gái và cô ấy.",
+     "hoi": {
+      "han": "安妮家有：",
+      "py": "Ānnī jiā yǒu:"
+     },
+     "pa": [
+      {
+       "k": "A",
+       "han": "三口人",
+       "py": "sān kǒu rén"
+      },
+      {
+       "k": "B",
+       "han": "四口人",
+       "py": "sì kǒu rén"
+      },
+      {
+       "k": "C",
+       "han": "五口人",
+       "py": "wǔ kǒu rén"
+      }
+     ]
+    },
+    {
+     "ma": "d4-2",
+     "han": "我是王一雪，刘明是我丈夫。",
+     "py": "Wǒ shì Wáng Yīxuě, Liú Míng shì wǒ zhàngfu.",
+     "dap": "B",
+     "vi": "Tôi là Vương Nhất Tuyết, Lưu Minh là chồng tôi.",
+     "hoi": {
+      "han": "刘明是王一雪的：",
+      "py": "Liú Míng shì Wáng Yīxuě de:"
+     },
+     "pa": [
+      {
+       "k": "A",
+       "han": "哥哥",
+       "py": "gēge"
+      },
+      {
+       "k": "B",
+       "han": "老公",
+       "py": "lǎogōng"
+      },
+      {
+       "k": "C",
+       "han": "儿子",
+       "py": "érzi"
+      }
+     ]
+    },
+    {
+     "ma": "d4-3",
+     "han": "杨同乐没有哥哥，他有一个妹妹。",
+     "py": "Yáng Tónglè méiyǒu gēge, tā yǒu yí ge mèimei.",
+     "dap": "C",
+     "vi": "Dương Đồng Lạc không có anh trai, anh ấy có một em gái.",
+     "hoi": {
+      "han": "杨同乐有：",
+      "py": "Yáng Tónglè yǒu:"
+     },
+     "pa": [
+      {
+       "k": "A",
+       "han": "哥哥",
+       "py": "gēge"
+      },
+      {
+       "k": "B",
+       "han": "姐姐",
+       "py": "jiějie"
+      },
+      {
+       "k": "C",
+       "han": "妹妹",
+       "py": "mèimei"
+      }
+     ]
+    },
+    {
+     "ma": "d4-4",
+     "han": "小明今年五岁，他姐姐十二岁。",
+     "py": "Xiǎomíng jīnnián wǔ suì, tā jiějie shí'èr suì.",
+     "dap": "C",
+     "vi": "Tiểu Minh năm nay năm tuổi, chị gái cậu ấy mười hai tuổi.",
+     "hoi": {
+      "han": "小明的姐姐今年：",
+      "py": "Xiǎomíng de jiějie jīnnián:"
+     },
+     "pa": [
+      {
+       "k": "A",
+       "han": "五岁",
+       "py": "wǔ suì"
+      },
+      {
+       "k": "B",
+       "han": "十岁",
+       "py": "shí suì"
+      },
+      {
+       "k": "C",
+       "han": "十二岁",
+       "py": "shí'èr suì"
+      }
+     ]
+    },
+    {
+     "ma": "d4-5",
+     "han": "李文的妈妈今年四十五岁，爸爸今年四十七岁。",
+     "py": "Lǐ Wén de māma jīnnián sìshíwǔ suì, bàba jīnnián sìshíqī suì.",
+     "hoi": {
+      "han": "李文的妈妈今年：",
+      "py": "Lǐ Wén de māma jīnnián:"
+     },
+     "pa": [
+      {
+       "k": "A",
+       "han": "四十五岁",
+       "py": "sìshíwǔ suì"
+      },
+      {
+       "k": "B",
+       "han": "四十七岁",
+       "py": "sìshíqī suì"
+      },
+      {
+       "k": "C",
+       "han": "五十七岁",
+       "py": "wǔshíqī suì"
+      }
+     ],
+     "dap": "A",
+     "vi": "Mẹ Lý Văn năm nay 45 tuổi, bố năm nay 47 tuổi."
+    }
+   ]
+  }
+ ]
+}

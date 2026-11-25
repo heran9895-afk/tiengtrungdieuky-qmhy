@@ -134,12 +134,59 @@ def kiem(bai, d):
             if not os.path.exists(os.path.join(GOC, a['src'])): loi.append('thiếu ảnh ' + a['src'])
     return loi
 
+def duong_am(han, g):
+    """File giọng của MỘT lời (có thể chưa thu: trang thi thử tự đọc bằng giọng máy khi chưa có file)."""
+    k = chuan(han); h = hashlib.md5(k.encode()).hexdigest()[:10]
+    return (BAN_DO.get(k) or 'assets/am/cau/%s.mp3' % h) if g == 'nu1' else 'assets/am/%s/%s.mp3' % (g, h)
+
+def dung_thi(bai, d):
+    """Đề "Thi thử trên máy" 40 câu = 8 phần của sách bài tập (bỏ ngữ âm) + câu bổ sung trong noi_dung_thi.py."""
+    from noi_dung_thi import THEM, an
+    them = THEM[bai['bai']]
+    goc = [p for p in bai['phan'] if p['loai'] not in ('tm', 'vm', 'td', 'at')]
+    phan = json.loads(json.dumps([p for p in d['phan'] if p['loai'] != 'am'], ensure_ascii=False))
+    assert len(phan) == 8, 'Bài %d phải có 8 phần nghe + đọc' % bai['bai']
+    for i, khoa in ((0, 'n1'), (1, 'n2'), (2, 'n3'), (3, 'n4'), (7, 'd4')):
+        phan[i]['cau'] += json.loads(json.dumps(them[khoa], ensure_ascii=False))
+    phan[2]['anh'] += [an(t, 'EF'[i]) for i, t in enumerate(them['anh3'])]
+    for i in range(4):                                        # phần nghe: gắn đường dẫn file giọng cho từng lời
+        raw = {c['ma']: c.get('giong') for c in ([goc[i]['vd']] if goc[i].get('vd') else []) + goc[i]['cau'] + them['n%d' % (i + 1)] if 'ma' in c}
+        gvd = (goc[i].get('vd') or {}).get('giong')
+        for c in ([phan[i]['vd']] if phan[i].get('vd') else []) + phan[i]['cau']:
+            gs = (gvd if c.get('ma') == 'vd' else raw.get(c['ma'])) or ['nu1'] * len(c['loi'])
+            cu = c.pop('doc', '').split('|')
+            c.pop('giong', None)
+            c['am'] = cu if len(cu) == len(c['loi']) else [duong_am(v['han'], g) for v, g in zip(c['loi'], gs)]
+    return {'bai': bai['bai'], 'ten': bai['ten'], 'tenViet': bai['tenViet'], 'phienBan': '2026-11-25a', 'phan': phan}
+
+def kiem_thi(e):
+    loi = []
+    for i, p in enumerate(e['phan']):
+        if len(p['cau']) != 5: loi.append('thi: phần %d có %d câu' % (i + 1, len(p['cau'])))
+        for c in p['cau'] + ([p['vd']] if p.get('vd') else []):
+            ks = [a['k'] for a in (c.get('pa') or c.get('anh') or p.get('anh') or p.get('luaChon'))]
+            if c['dap'] not in ks or len(set(ks)) != len(ks): loi.append('thi: đáp án lạ %s phần %d' % (c.get('ma'), i + 1))
+            for a in c.get('anh', []) + p.get('anh', []):
+                if not os.path.exists(os.path.join(GOC, a['src'])): loi.append('thi: thiếu ảnh ' + a['src'])
+        if p['loai'] in ('tranh', 'doc-tranh', 'doc-ghep', 'doc-dien'):
+            ds = [c['dap'] for c in p['cau']] + ([p['vd']['dap']] if p.get('vd') else [])
+            if len(set(ds)) != len(ds): loi.append('thi: hai câu trùng đáp án phần %d' % (i + 1))
+        if len({c['ma'] for c in p['cau']}) != len(p['cau']): loi.append('thi: trùng mã phần %d' % (i + 1))
+    return loi
+
 if __name__ == '__main__':
     lenh = sys.argv[1] if len(sys.argv) > 1 else 'kiem'
     tong = []
     for b in BAI:
         d = dung(b); l = kiem(b, d); tong += l
         print('Bài %d: %s' % (b['bai'], ', '.join('%s %d câu' % (p['ten'], len(p['cau'])) for p in d['phan'])))
+        if 4 <= b['bai'] <= 9:
+            e = dung_thi(b, d); le = kiem_thi(e); tong += le; l = l + le
+            if lenh == 'ghi':
+                with open(os.path.join(GOC, 'data/bai/sach-bai-tap/thi-%d.json' % b['bai']), 'w', encoding='utf-8') as f:
+                    json.dump(e, f, ensure_ascii=False, indent=1)
+            thieu = sorted({u for p in e['phan'][:4] for c in p['cau'] for u in c['am'] if not os.path.exists(os.path.join(GOC, u))})
+            print('  thi thử: %d câu · %d file giọng chưa thu' % (sum(len(p['cau']) for p in e['phan']), len(thieu)))
         for x in l: print('  ⚠', x)
         if lenh == 'ghi':
             os.makedirs(os.path.join(GOC, 'data/bai/sach-bai-tap'), exist_ok=True)

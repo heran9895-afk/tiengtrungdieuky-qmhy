@@ -30,7 +30,9 @@ def da_that(T, c):
     return c in DA_AM_THAT
 
 
-def so_bai(cap): return int(re.search(r'bai(\d+)', str(cap)).group(1))
+def so_bai(cap):   # 'baithisbt' (thi thử trên máy, gom Bài 4–9 một lượt) tính là Bài 4 cho bước đẩy
+    if str(cap) == 'baithisbt': return 4
+    return int(re.search(r'bai(\d+)', str(cap)).group(1))
 
 
 def tep_bai(cap):
@@ -38,7 +40,27 @@ def tep_bai(cap):
     return ('data/hsk2/bai-%d.json' if str(cap).endswith(('h2', 'h2sbt')) else 'data/bai/bai-%d.json') % so_bai(cap)
 
 
+def gom_thi(T):
+    """CAP = 'baithisbt': mọi lời nghe của đề "Thi thử trên máy" HSK 3.0 Bài 4–9 chưa có file giọng.
+    Đường dẫn file lấy đúng như đề đang trỏ tới (data/bai/sach-bai-tap/thi-N.json, ô 'am')."""
+    R = T.CFG['repo']; out, by = [], {}
+    for n in range(4, 10):
+        d = json.load(open(R + 'data/bai/sach-bai-tap/thi-%d.json' % n))
+        for p in d['phan'][:4]:
+            for c in ([p['vd']] if p.get('vd') else []) + p['cau']:
+                for l, f in zip(c['loi'], c['am']):
+                    if os.path.exists(R + f): continue
+                    thu, ten = f.split('/')[-2], f.split('/')[-1][:-4]
+                    giong = {'nam1': 'Achird'}.get(thu, 'Sulafat'); k = T.chuan(l['han']); id_ = k + '|' + giong
+                    if id_ in by: continue
+                    it = dict(id=id_, k=k, text=T.gon(l['han']), py=(l.get('py') or '').replace('·', '').strip(), typ='cau', thu=thu,
+                              src='Thi thử Bài %d · %s' % (n, p['ten']), ten=ten, o=None, trang='cho', giong=giong, tg=[], co=[], alt='')
+                    by[id_] = it; out.append(it)
+    return out, []
+
+
 def gom_bai(T, cap):
+    if str(cap) == 'baithisbt': return gom_thi(T)
     if str(cap).endswith('sbt'): return gom_sbt(T, cap)
     n = so_bai(cap); R = T.CFG['repo']
     d = json.load(open(R + tep_bai(cap)))
@@ -232,7 +254,7 @@ def day_len_bai(T, cap, tu, den, token, ten, email):
         for k, g in enumerate(nhom, 1):
             T._git('add', *g)
             if k == len(nhom): T._git('add', 'assets/am/ban-do.json', tep_bai(cap))
-            T._git('commit', '-q', '-m', 'Giọng Gemini Bài %d%s: %d file' % (n, ' (HSK 2.0)' if str(cap).endswith('h2') else '', len(di)) + (' (phần %d/%d)' % (k, len(nhom)) if len(nhom) > 1 else ''))
+            T._git('commit', '-q', '-m', ('Giọng Gemini Thi thử trên máy Bài 4–9: %d file' % len(di) if str(cap) == 'baithisbt' else 'Giọng Gemini Bài %d%s: %d file' % (n, ' (HSK 2.0)' if str(cap).endswith('h2') else '', len(di))) + (' (phần %d/%d)' % (k, len(nhom)) if len(nhom) > 1 else ''))
         try:
             T._git('push', url, 'HEAD:' + nhanh, an=token); break
         except RuntimeError as e:
