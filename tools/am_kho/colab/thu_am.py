@@ -135,7 +135,11 @@ def tep_cap(cap): return CFG['repo'] + 'data/tu-vung/cap-%s.json' % cap
 # Ghi chú cách đọc gửi sẵn cho Gemini ngay lần thu đầu (khóa = chuan(chữ thu)). 老头儿 là từ chủ đề của thẻ 3-0431 nên phải giữ 儿 (Nhiên 24/11/2026).
 GHI_CHU_SAN = {'那个老头儿是我父亲的朋友。': '老头儿 is lǎotóur: the 儿 only adds an r-colouring to tóu, so say ONE syllable "tóur" (tóu with a retroflex r at the end); never a separate "ér" syllable and never drop the r.'}
 NA_SAI_K = {chuan(t) for t in NA_SAI_24}
-REDO_NA24 = NA_SAI_K
+# Nhiên báo 25/11/2026: 挨 trong câu này nghe ra āi, uốn / ghép file cũ không tự nhiên → thu lại cả câu (chạy cấp 6, TU 2, DEN 2)
+AI_SAI_K = chuan('他上课迟到了，癌了老师一顿批评。')
+GHI_CHU_SAN[AI_SAI_K] = ('癌 here is ái, a clear RISING second tone (never first tone āi). Say "áile" smoothly as one word: '
+                         '了 is a short, light neutral le joined directly to ái, with no pause or break between them.')
+REDO_NA24 = NA_SAI_K | {AI_SAI_K}
 
 
 def gom(cap, tu, den, ep=None):
@@ -197,6 +201,7 @@ def gom(cap, tu, den, ep=None):
         if '头发' in it['text']: co.append('头发 tóufa')
         if ten_rieng(it['py'], it['typ']): co.append('tên riêng')
         if it['k'] in NA_SAI_K: co.append('那 cô báo sai: nghe lại')
+        if it['k'] == AI_SAI_K: co.append('挨 ái + 了: nghe lại')
         it['co'] = co
         it['alt'] = khong_dau(it['py']) if lech else ''   # pypinyin đọc khác kho → nhận dạng đối chiếu theo pinyin của kho
     return out, bo
