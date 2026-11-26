@@ -1063,7 +1063,9 @@ def bang_nghe(cap, tu, den, tat_ca=False):
     NHOM = collections.OrderedDict()
     NHOM['vua'] = ('Bản mới vừa thu lại (ô 5 lần gần nhất)', [it for it in co_file if moi_nhat and it.get('dot_thu') == moi_nhat and can_nghe(it) and it.get('quyet') != 'thu_lai'])
     vua = {id(it) for it in NHOM['vua'][1]}
-    NHOM['chua'] = ('Chưa nghe lần nào (máy không tự kiểm được)', [it for it in co_file if can_nghe(it) and it.get('quyet') != 'thu_lai' and id(it) not in vua])
+    chua = [it for it in co_file if can_nghe(it) and it.get('quyet') != 'thu_lai' and id(it) not in vua]
+    chua.sort(key=lambda it: 0 if it.get('loi') else 1)   # mục máy thấy lỗi (khớp thấp, cụt…) lên trước; chỉ "đa âm" để sau
+    NHOM['chua'] = ('Chưa nghe lần nào (lỗi trước, đa âm sau)', chua)
     NHOM['cho'] = ('Đã chọn Thu lại, chờ chạy ô 5', [it for it in co_file if it.get('quyet') == 'thu_lai'])
     if tat_ca: NHOM['het'] = ('Tất cả mục có file', co_file)
     thieu = [it for it in ds if not it.get('file') and it.get('trang') != 'chan']
@@ -1090,10 +1092,18 @@ def bang_nghe(cap, tu, den, tat_ca=False):
 
         def doi_gc(ch, it=it): it['ghi_chu'] = ch['new']; luu()
         tb.observe(doi, 'value'); gc.observe(doi_gc, 'value')
+        nut_trang.append(tb)
         return W.VBox([nh, au, W.HBox([tb, gc])], layout=W.Layout(border='1px solid #ddd', padding='6px', margin='4px 0'))
 
     # 27/11/2026: Colab chỉ nhúng được một lượng âm thanh có hạn trong một ô; quá ~80 mục thì các nút ▶ sau hiện 0:00, không phát.
     # → chia trang (mỗi trang MOI_TRANG mục), đổi trang thì xóa trang cũ khỏi ô.
+    nut_trang = []
+    dat_het = W.Button(description='✓ Đạt hết mục "Chưa chọn" ở trang này', layout=W.Layout(width='320px'), button_style='success')
+
+    def bam_dat_het(_):
+        for tb in nut_trang:
+            if tb.value is None: tb.value = 'dat'
+    dat_het.on_click(bam_dat_het)
     MOI_TRANG = 40
     so_trang = max(1, -(-len(hien) // MOI_TRANG))
     st = {'hien': hien, 'so': so_trang}
@@ -1104,6 +1114,7 @@ def bang_nghe(cap, tu, den, tat_ca=False):
 
     def ve(p):
         hien, so_trang = st['hien'], st['so']
+        nut_trang.clear()
         vung.clear_output(wait=True)
         a = (p - 1) * MOI_TRANG
         nhan.value = '&nbsp; <b>trang %d / %d</b> (mục %d–%d / %d)' % (p, so_trang, a + 1, min(a + MOI_TRANG, len(hien)), len(hien))
@@ -1121,7 +1132,7 @@ def bang_nghe(cap, tu, den, tat_ca=False):
         if o_trang.value != 1: o_trang.value = 1
         else: ve(1)
     chon.observe(doi_nhom, 'value')
-    display(chon, W.HBox([lui, toi, o_trang, nhan]), vung)
+    display(chon, W.HBox([lui, toi, o_trang, nhan]), W.HTML('<i>Nghe lướt cả trang, mục nào sai bấm <b>Thu lại</b>, xong bấm nút xanh để cho các mục còn lại Đạt.</i>'), dat_het, vung)
     ve(1)
 
 
