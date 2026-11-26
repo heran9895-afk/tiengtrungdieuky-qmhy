@@ -295,7 +295,11 @@ def chia_luot(ds):
     for gi in ['Sulafat'] + sorted({it.get('giong', 'Sulafat') for it in ds} - {'Sulafat'}):
       for typ in ('tu', 'chu', 'cau'):
         L = [it for it in ds if it['typ'] == typ and it.get('giong', 'Sulafat') == gi]
-        for b in chia(L, CFG['max_chu'] if typ == 'chu' else CFG['max_dong']):
+        n = CFG['max_chu'] if typ == 'chu' else CFG['max_dong']
+        if typ == 'cau' and L:   # câu dài (HSK 7–9 ~22 chữ/câu): giữ tổng chữ mỗi lượt ~ mức HSK6 (44 × ~17 chữ), đỡ Gemini đọc sót / lệch cuối lượt
+            tb = sum(len(han(it['text'])) for it in L) / len(L)
+            n = max(20, min(n, int(CFG.get('chu_luot_cau', 780) // max(tb, 1))))
+        for b in chia(L, n):
             ten = 'l%02d' % (len(out) + 1)
             out.append(dict(ten=ten, typ=typ, giong=gi, ids=[it['id'] for it in b], dong=[it['text'] for it in b], style=tao_style(b, typ, giong=gi)))
     return out
