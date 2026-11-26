@@ -581,6 +581,23 @@ def cat_luot(wav, dong, ids, alt, ra_dir, ten_tep):
         a = max(0, vung[j][0] - 0.12); b = min(dur, vung[j + k - 1][1] + 0.15)
         if i + 1 in kq: b = min(b, vung[kq[i + 1][0]][0] - 0.02)
         if i - 1 in kq: a = max(a, vung[kq[i - 1][0] + kq[i - 1][1] - 1][1] + 0.02)
+        # 27/11/2026: chữ cuối đọc nhỏ dần (公司董事, 妒忌, 点子…) rơi dưới ngưỡng -40 dB nên bị coi là lặng → cụt chữ cuối.
+        # Tìm phần đuôi còn tiếng (ngưỡng thấp hơn) trước dòng sau; máy nghe đoạn nối dài khớp hơn thì lấy.
+        lim = min(dur, b + 0.7, (vung[kq[i + 1][0]][0] - 0.05) if i + 1 in kq else dur)
+        if lim > b + 0.05:
+            ww = int(0.01 * SR); seg = x[int(a * SR):int(lim * SR)]; kk = len(seg) // ww
+            if kk > 5:
+                db = 20 * np.log10(np.sqrt((seg[:kk * ww].reshape(kk, ww) ** 2).mean(1)) + 1e-9)
+                tre = db.max() - 55; f0 = int((b - a) / 0.01); het = f0; lang = 0
+                for f in range(max(0, f0 - 15), kk):
+                    if db[f] > tre: het, lang = f + 1, 0
+                    elif f >= f0:
+                        lang += 1
+                        if lang > 15: break
+                b_dai = min(lim, a + het * 0.01 + 0.08)
+                if b_dai > b + 0.05:
+                    t2 = _nhan(seg16(a, b_dai)); r2 = r_dong(i, t2)
+                    if r2 > r + 0.02: b, r, txt = b_dai, r2, t2
         b0, b = b, _bo_nhieu_cuoi(x, a, b)   # bỏ vệt nhiễu rè Gemini thêm cuối câu
         nc = max(1, len(han(re.sub(r'(?<=.)儿', '', l))))
         if b < b0 - 0.01:
@@ -604,6 +621,8 @@ def cat_luot(wav, dong, ids, alt, ra_dir, ten_tep):
             if d > 1.4: loi.append('âm tiết dài %.1f s' % d)
         else:
             if r < 0.9: loi.append('khớp thấp %.2f' % r)
+            elif P[i] and txt and P[i][-1] not in long(''.join(asr_py(txt)))[-(len(P[i][-1]) + 4):]:
+                loi.append('có thể mất chữ cuối (máy nghe: %s)' % txt)
             if d / nc > 0.75: loi.append('dài bất thường %.1f s' % d)
             elif d / nc < 0.17: loi.append('ngắn bất thường %.1f s' % d)
         res[ids[i]] = dict(r=round(r, 3), asr=txt, dai=round(d, 2), tam=dich, loi=loi)
@@ -728,7 +747,7 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
     bao_cao(cap, tu, den, giay_moi=giay, giay_chay=time.time() - t0)
 
 
-PB_CAT = 4   # 4: cắt lại mọi lượt, mục nào bản mới dài hơn (không còn cụt chữ cuối) thì thay + đẩy lại (27/11/2026) · 3: không để bước bỏ nhiễu cuối cắt mất âm xì cuối từ (27/11/2026) · 2: 2: bỏ vùng thừa rẻ (sửa lỗi dồn nhiều câu vào một dòng, 13/11/2026)
+PB_CAT = 5   # 5: nối phần đuôi đọc nhỏ (chữ cuối dưới -40 dB) + báo 'mất chữ cuối' (27/11/2026) · 4: 4: cắt lại mọi lượt, mục nào bản mới dài hơn (không còn cụt chữ cuối) thì thay + đẩy lại (27/11/2026) · 3: không để bước bỏ nhiễu cuối cắt mất âm xì cuối từ (27/11/2026) · 2: 2: bỏ vùng thừa rẻ (sửa lỗi dồn nhiều câu vào một dòng, 13/11/2026)
 
 
 def cat_lai(D, b, by, ds, kf, wav):
@@ -737,7 +756,7 @@ def cat_lai(D, b, by, ds, kf, wav):
     if kq['meta'].get('pb', 1) >= PB_CAT or not os.path.exists(wav): return
     its = [by[i] for i in b['ids'] if i in by]
     loi = [it for it in its if it.get('loi') and not it.get('da_day') and it.get('quyet') != 'dat']
-    if kq['meta'].get('pb', 1) < 4:
+    if kq['meta'].get('pb', 1) < 5:
         # 27/11/2026: bản cắt cũ cắt cụt âm xì cuối từ (妒忌, 点子, 公司董事…) mà máy vẫn chấm đạt → cắt lại cả lượt;
         # mục có bản mới dài hơn rõ, máy nghe không kém hơn thì thay file (kể cả đã đẩy: đánh dấu đẩy lại ở ô 6)
         res, meta = cat_luot(wav, b['dong'], b['ids'], [by[i]['alt'] for i in b['ids']], D + 'tam/%s/' % b['ten'], [by[i]['ten'] for i in b['ids']])
@@ -750,6 +769,9 @@ def cat_lai(D, b, by, ds, kf, wav):
                 _nhan_ket_qua(D, it, r); it['lan'] = 0
                 if da_nghe or it.get('quyet') == 'thu_lai': it['quyet'] = None   # file đổi: mục cô cần nghe thì nghe lại
                 thay.append(it['text'])
+            elif any('mất chữ cuối' in l for l in r['loi']) and it.get('quyet') != 'dat':
+                it['loi'] = r['loi']; it['trang'] = 'loi'; it['lan'] = 0   # cắt lại vẫn cụt → để ô 3 tự thu lại (tốn ít lượt)
+                thay.append(it['text'] + ' (thu lại)')
         if thay: print('   ✂ cắt lại %s (không tốn lượt): %d mục hết cụt — %s' % (b['ten'], len(thay), '、'.join(thay[:8]) + ('…' if len(thay) > 8 else '')))
         loi = []
     if loi:
