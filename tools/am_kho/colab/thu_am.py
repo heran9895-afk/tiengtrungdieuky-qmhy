@@ -1001,7 +1001,8 @@ def bang_nghe(cap, tu, den, tat_ca=False):
                      len(hien), '<br>⚠ %d mục chưa có file (thiếu): %s' % (len(thieu), '、'.join(it['text'] for it in thieu)) if thieu else '')))
 
     def luu(): _ghi(D + 'ds.json', ds)
-    for n, it in enumerate(hien, 1):
+
+    def the(n, it):
         ly_do = ', '.join((it.get('co') or []) + (it.get('loi') or []))
         nh = W.HTML('<div style="font-size:15px;line-height:1.5"><b>%d.</b> <span style="font-size:22px">%s</span> &nbsp; <i>%s</i><br>'
                     '<span style="color:#b45309">%s</span> <span style="color:#888">· máy nghe: %s · khớp %.2f</span></div>' % (
@@ -1015,7 +1016,31 @@ def bang_nghe(cap, tu, den, tat_ca=False):
 
         def doi_gc(ch, it=it): it['ghi_chu'] = ch['new']; luu()
         tb.observe(doi, 'value'); gc.observe(doi_gc, 'value')
-        display(W.VBox([nh, au, W.HBox([tb, gc])], layout=W.Layout(border='1px solid #ddd', padding='6px', margin='4px 0')))
+        return W.VBox([nh, au, W.HBox([tb, gc])], layout=W.Layout(border='1px solid #ddd', padding='6px', margin='4px 0'))
+
+    # 27/11/2026: Colab chỉ nhúng được một lượng âm thanh có hạn trong một ô; quá ~80 mục thì các nút ▶ sau hiện 0:00, không phát.
+    # → chia trang (mỗi trang MOI_TRANG mục), đổi trang thì xóa trang cũ khỏi ô.
+    MOI_TRANG = 40
+    so_trang = max(1, -(-len(hien) // MOI_TRANG))
+    vung = W.Output()
+    nhan = W.HTML()
+    lui, toi = W.Button(description='◀ Trang trước'), W.Button(description='Trang sau ▶')
+    o_trang = W.BoundedIntText(value=1, min=1, max=so_trang, description='Trang', layout=W.Layout(width='160px'))
+
+    def ve(p):
+        vung.clear_output(wait=True)
+        a = (p - 1) * MOI_TRANG
+        nhan.value = '&nbsp; <b>trang %d / %d</b> (mục %d–%d / %d)' % (p, so_trang, a + 1, min(a + MOI_TRANG, len(hien)), len(hien))
+        with vung:
+            for n, it in enumerate(hien[a:a + MOI_TRANG], a + 1): display(the(n, it))
+            if p < so_trang: display(HTML('<i>Nghe xong trang này thì bấm <b>Trang sau ▶</b> ở đầu ô.</i>'))
+        lui.disabled, toi.disabled = p <= 1, p >= so_trang
+
+    o_trang.observe(lambda ch: ve(ch['new']), 'value')
+    lui.on_click(lambda _: setattr(o_trang, 'value', o_trang.value - 1))
+    toi.on_click(lambda _: setattr(o_trang, 'value', o_trang.value + 1))
+    display(W.HBox([lui, toi, o_trang, nhan]), vung)
+    ve(1)
 
 
 def thu_lai_da_chon(cap, tu, den):
