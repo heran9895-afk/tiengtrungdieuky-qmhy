@@ -1057,11 +1057,22 @@ def bang_nghe(cap, tu, den, tat_ca=False):
     import ipywidgets as W
     from IPython.display import display, Audio, HTML
     D = thu_muc(cap, tu, den); ds = _doc(D + 'ds.json')
-    hien = [it for it in ds if (tat_ca or can_nghe(it) or it.get('quyet') == 'thu_lai') and it.get('file')]
-    thieu = [it for it in ds if not it.get('file')]
-    display(HTML('<b>%d mục cần nghe</b> (đa âm, tên riêng, máy khớp thấp). Bấm ▶ nghe, rồi chọn <b>Đạt</b> hoặc <b>Thu lại</b> '
-                 '(có thể ghi cách đọc đúng vào ô ghi chú, vd. <i>长 = zhǎng</i>). Lựa chọn tự lưu.%s' % (
-                     len(hien), '<br>⚠ %d mục chưa có file (thiếu): %s' % (len(thieu), '、'.join(it['text'] for it in thieu)) if thieu else '')))
+    co_file = [it for it in ds if it.get('file')]
+    # 27/11/2026: chia nhóm cố định để danh sách không "mọc thêm" giữa chừng (Nhiên thấy khó chịu)
+    moi_nhat = max((it.get('dot_thu', '') for it in co_file), default='')
+    NHOM = collections.OrderedDict()
+    NHOM['vua'] = ('Bản mới vừa thu lại (ô 5 lần gần nhất)', [it for it in co_file if moi_nhat and it.get('dot_thu') == moi_nhat and can_nghe(it) and it.get('quyet') != 'thu_lai'])
+    vua = {id(it) for it in NHOM['vua'][1]}
+    NHOM['chua'] = ('Chưa nghe lần nào (máy không tự kiểm được)', [it for it in co_file if can_nghe(it) and it.get('quyet') != 'thu_lai' and id(it) not in vua])
+    NHOM['cho'] = ('Đã chọn Thu lại, chờ chạy ô 5', [it for it in co_file if it.get('quyet') == 'thu_lai'])
+    if tat_ca: NHOM['het'] = ('Tất cả mục có file', co_file)
+    thieu = [it for it in ds if not it.get('file') and it.get('trang') != 'chan']
+    display(HTML('Bấm ▶ nghe, rồi chọn <b>Đạt</b> hoặc <b>Thu lại</b> (có thể ghi cách đọc đúng vào ô ghi chú). Lựa chọn tự lưu. '
+                 'Danh sách mỗi nhóm <b>giữ nguyên</b> tới khi chạy lại ô này; mục mới (do ô 3 / ô 5 vừa thu) chỉ hiện ở lần chạy sau, trong nhóm riêng.%s' % (
+                     '<br><span style="color:#888">Còn %d mục chưa thu (ô 3 sẽ thu tiếp).</span>' % len(thieu) if thieu else '')))
+    chon = W.Dropdown(options=[('%s: %d mục' % (ten, len(L)), k) for k, (ten, L) in NHOM.items()],
+                      value='vua' if NHOM['vua'][1] else 'chua', description='Xem', layout=W.Layout(width='520px'))
+    hien = NHOM[chon.value][1]
 
     def luu(): _ghi(D + 'ds.json', ds)
 
@@ -1085,12 +1096,14 @@ def bang_nghe(cap, tu, den, tat_ca=False):
     # → chia trang (mỗi trang MOI_TRANG mục), đổi trang thì xóa trang cũ khỏi ô.
     MOI_TRANG = 40
     so_trang = max(1, -(-len(hien) // MOI_TRANG))
+    st = {'hien': hien, 'so': so_trang}
     vung = W.Output()
     nhan = W.HTML()
     lui, toi = W.Button(description='◀ Trang trước'), W.Button(description='Trang sau ▶')
     o_trang = W.BoundedIntText(value=1, min=1, max=so_trang, description='Trang', layout=W.Layout(width='160px'))
 
     def ve(p):
+        hien, so_trang = st['hien'], st['so']
         vung.clear_output(wait=True)
         a = (p - 1) * MOI_TRANG
         nhan.value = '&nbsp; <b>trang %d / %d</b> (mục %d–%d / %d)' % (p, so_trang, a + 1, min(a + MOI_TRANG, len(hien)), len(hien))
@@ -1102,7 +1115,13 @@ def bang_nghe(cap, tu, den, tat_ca=False):
     o_trang.observe(lambda ch: ve(ch['new']), 'value')
     lui.on_click(lambda _: setattr(o_trang, 'value', o_trang.value - 1))
     toi.on_click(lambda _: setattr(o_trang, 'value', o_trang.value + 1))
-    display(W.HBox([lui, toi, o_trang, nhan]), vung)
+    def doi_nhom(ch):
+        st['hien'] = NHOM[ch['new']][1]; st['so'] = max(1, -(-len(st['hien']) // MOI_TRANG))
+        o_trang.max = st['so']
+        if o_trang.value != 1: o_trang.value = 1
+        else: ve(1)
+    chon.observe(doi_nhom, 'value')
+    display(chon, W.HBox([lui, toi, o_trang, nhan]), vung)
     ve(1)
 
 
@@ -1123,6 +1142,8 @@ def thu_lai_da_chon(cap, tu, den):
             it['ep79'] = can_v; it['quyet'] = 'thu_lai'; it['ghi_chu'] = ''   # ghi chú cũ không có tác dụng; chữ cùng âm đã đổi ở khâu gửi
             if 'cô báo sai / cụt: nghe lại' not in (it.get('co') or []): it['co'] = (it.get('co') or []) + ['cô báo sai / cụt: nghe lại']
     can = [it for it in ds if it.get('quyet') == 'thu_lai']
+    lan_thu = time.strftime('%Y-%m-%d %H:%M:%S')
+    for it in can: it['dot_thu'] = lan_thu   # ô 4 gom các mục của lần thu lại này vào nhóm "Bản mới vừa thu lại"
     nh = _nhom(can, 8)
     print('Thu lại %d mục bác chọn, gộp %d lần gọi…' % (len(can), len(nh)))
     try:
