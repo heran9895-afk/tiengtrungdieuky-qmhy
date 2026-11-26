@@ -346,6 +346,7 @@ GIONG_TA = {'Sulafat': 'female', 'Achird': 'male', 'Iapetus': 'male', 'Charon': 
 DONG_AM_GUI = [('卑鄙', '卑比'),            # bēibǐ (Gemini đọc bēibī)
                ('本分', '本奋'),            # běnfèn: Gemini đọc běnfēn, gửi 本份 vẫn sai → 奋 (chỉ đọc fèn), 27/11/2026
                ('处置', '楚置'), ('处境', '楚境'), ('处方', '楚方'), ('惩处', '惩楚'), ('查处', '查楚'),   # 处 chǔ (Gemini đọc chù)
+               ('池塘', '迟塘'),                                                                     # 池 chí (Gemini đọc qí)
                ('盛饭', '成饭'), ('盛汤', '成汤'), ('盛了', '成了'), ('盛不下', '成不下'),               # 盛 chéng (Gemini đọc shèng)
                ('剥橘子', '包橘子'), ('剥花生', '包花生'), ('剥虾', '包虾'), ('剥得', '包得')]   # 剥 bāo (Gemini đọc bō); 剥夺/剥削 giữ bō
 # Mục HSK 7–9 phải thu lại (thu ở ô 5 cùng các mục cô chọn): chữ cuối bị cụt mà cắt lại không cứu được, và các mục có chữ trên
@@ -353,7 +354,7 @@ EP_79 = {'非得去', '遏制', '妒忌', '大款', '蠢事', '点子', '赏赐'
          '财政赤字', '公司董事', '担任董事', '房间布局', '敦厚老实', '模样标致'}
 EP_79_CHUA = ('卑鄙', '本分', '剥橘子', '剥花生', '剥虾')
 # lần 2 (27/11/2026 3 giờ): 本分 gửi 本份 vẫn sai; thêm 处 chǔ, 盛 chéng. Mục có các chữ này thu lại thêm một lần.
-EP_79_CHUA_2 = ('本分', '处置', '处境', '处方', '惩处', '查处', '盛饭', '盛汤', '盛了', '盛不下')
+EP_79_CHUA_2 = ('池塘', '本分', '处置', '处境', '处方', '惩处', '查处', '盛饭', '盛汤', '盛了', '盛不下')
 
 
 def doc_tts(t):
@@ -1097,43 +1098,44 @@ def bang_nghe(cap, tu, den, tat_ca=False):
 
     # 27/11/2026: Colab chỉ nhúng được một lượng âm thanh có hạn trong một ô; quá ~80 mục thì các nút ▶ sau hiện 0:00, không phát.
     # → chia trang (mỗi trang MOI_TRANG mục), đổi trang thì xóa trang cũ khỏi ô.
-    nut_trang = []
-    dat_het = W.Button(description='✓ Đạt hết mục "Chưa chọn" ở trang này', layout=W.Layout(width='320px'), button_style='success')
-
-    def bam_dat_het(_):
-        for tb in nut_trang:
-            if tb.value is None: tb.value = 'dat'
-    dat_het.on_click(bam_dat_het)
-    MOI_TRANG = 40
-    so_trang = max(1, -(-len(hien) // MOI_TRANG))
-    st = {'hien': hien, 'so': so_trang}
+    # 27/11/2026: nghe TỪNG MỤC, tự chuyển sang mục sau khi bấm Đạt / Thu lại, tự phát — không phải cuộn, không giới hạn số mục
+    st = {'hien': hien, 'i': 0}
     vung = W.Output()
-    nhan = W.HTML()
-    lui, toi = W.Button(description='◀ Trang trước'), W.Button(description='Trang sau ▶')
-    o_trang = W.BoundedIntText(value=1, min=1, max=so_trang, description='Trang', layout=W.Layout(width='160px'))
 
-    def ve(p):
-        hien, so_trang = st['hien'], st['so']
-        nut_trang.clear()
+    def ve():
+        L, i = st['hien'], st['i']
         vung.clear_output(wait=True)
-        a = (p - 1) * MOI_TRANG
-        nhan.value = '&nbsp; <b>trang %d / %d</b> (mục %d–%d / %d)' % (p, so_trang, a + 1, min(a + MOI_TRANG, len(hien)), len(hien))
         with vung:
-            for n, it in enumerate(hien[a:a + MOI_TRANG], a + 1): display(the(n, it))
-            if p < so_trang: display(HTML('<i>Nghe xong trang này thì bấm <b>Trang sau ▶</b> ở đầu ô.</i>'))
-        lui.disabled, toi.disabled = p <= 1, p >= so_trang
+            if not L: display(HTML('<b>Nhóm này không có mục nào.</b>')); return
+            if i >= len(L):
+                display(HTML('<b>✔ Đã nghe hết %d mục của nhóm này.</b> Có mục chọn Thu lại thì chạy ô 5; xong thì chạy ô 6 để đẩy lên web.' % len(L))); return
+            it = L[i]
+            ly_do = ', '.join((it.get('co') or []) + (it.get('loi') or []))
+            display(HTML('<div style="font-size:15px;line-height:1.6"><b>Mục %d / %d</b> &nbsp; <span style="color:#888">(đã chọn: %s)</span><br>'
+                         '<span style="font-size:30px">%s</span> &nbsp; <i style="font-size:18px">%s</i><br>'
+                         '<span style="color:#b45309">%s</span> <span style="color:#888">· máy nghe: %s · khớp %.2f</span></div>' % (
+                             i + 1, len(L), {'dat': 'Đạt', 'thu_lai': 'Thu lại'}.get(it.get('quyet'), 'chưa'),
+                             it['text'], it['py'], ly_do or '—', it.get('asr', ''), it.get('r', 0))))
+            display(Audio(it['file'], autoplay=True))
+            gc = W.Text(value=it.get('ghi_chu', ''), placeholder='ghi chú cách đọc (khi Thu lại), vd. 池 = chí', layout=W.Layout(width='420px'))
+            b_dat = W.Button(description='✓ Đạt → mục sau', button_style='success', layout=W.Layout(width='180px'))
+            b_lai = W.Button(description='↻ Thu lại → mục sau', button_style='warning', layout=W.Layout(width='180px'))
+            b_truoc = W.Button(description='◀ Mục trước', layout=W.Layout(width='120px'))
+            b_bo = W.Button(description='Bỏ qua ▶', layout=W.Layout(width='120px'))
 
-    o_trang.observe(lambda ch: ve(ch['new']), 'value')
-    lui.on_click(lambda _: setattr(o_trang, 'value', o_trang.value - 1))
-    toi.on_click(lambda _: setattr(o_trang, 'value', o_trang.value + 1))
+            def chon_(q):
+                it['quyet'] = q; it['ghi_chu'] = gc.value.strip(); luu(); st['i'] += 1; ve()
+            b_dat.on_click(lambda _: chon_('dat'))
+            b_lai.on_click(lambda _: chon_('thu_lai'))
+            b_bo.on_click(lambda _: (st.__setitem__('i', st['i'] + 1), ve()))
+            b_truoc.on_click(lambda _: (st.__setitem__('i', max(0, st['i'] - 1)), ve()))
+            display(W.HBox([b_dat, b_lai, gc]), W.HBox([b_truoc, b_bo]))
+
     def doi_nhom(ch):
-        st['hien'] = NHOM[ch['new']][1]; st['so'] = max(1, -(-len(st['hien']) // MOI_TRANG))
-        o_trang.max = st['so']
-        if o_trang.value != 1: o_trang.value = 1
-        else: ve(1)
+        st['hien'] = NHOM[ch['new']][1]; st['i'] = 0; ve()
     chon.observe(doi_nhom, 'value')
-    display(chon, W.HBox([lui, toi, o_trang, nhan]), W.HTML('<i>Nghe lướt cả trang, mục nào sai bấm <b>Thu lại</b>, xong bấm nút xanh để cho các mục còn lại Đạt.</i>'), dat_het, vung)
-    ve(1)
+    display(chon, W.HTML('<i>Mỗi lần hiện một mục, tự phát tiếng. Bấm <b>Đạt</b> hoặc <b>Thu lại</b> là sang mục sau (không phải cuộn).</i>'), vung)
+    ve()
 
 
 def thu_lai_da_chon(cap, tu, den):
