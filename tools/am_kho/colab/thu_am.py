@@ -789,6 +789,11 @@ def cat_lai(D, b, by, ds, kf, wav):
 
 def _chay_cac_luot(cap, tu, den, D, L, by, ds, dot, gioi_han_luot):
     giay = 0
+    # 27/11/2026: cắt lại các lượt đã có file TRƯỚC khi gọi Gemini (trước đây gặp lượt chưa thu → hết hạn mức → dừng, chưa kịp cắt lại)
+    cu = [b for b in L if os.path.exists(D + 'wav/%s.wav' % b['ten']) and os.path.exists(D + 'ketqua/%s.json' % b['ten'])
+          and _doc(D + 'ketqua/%s.json' % b['ten'])['meta'].get('pb', 1) < PB_CAT]
+    if cu: print('Cắt lại %d lượt đã thu bằng cách cắt mới (không gọi Gemini, không tốn tiền)…' % len(cu))
+    for b in cu: cat_lai(D, b, by, ds, D + 'ketqua/%s.json' % b['ten'], D + 'wav/%s.wav' % b['ten'])
     k = 0
     while k < len(L) and (gioi_han_luot is None or k < gioi_han_luot):
         b = L[k]; k += 1
