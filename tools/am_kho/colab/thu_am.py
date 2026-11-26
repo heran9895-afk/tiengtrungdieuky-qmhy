@@ -728,7 +728,7 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
     bao_cao(cap, tu, den, giay_moi=giay, giay_chay=time.time() - t0)
 
 
-PB_CAT = 3   # 3: không để bước bỏ nhiễu cuối cắt mất âm xì cuối từ (27/11/2026) · 2: 2: bỏ vùng thừa rẻ (sửa lỗi dồn nhiều câu vào một dòng, 13/11/2026)
+PB_CAT = 4   # 4: cắt lại mọi lượt, mục nào bản mới dài hơn (không còn cụt chữ cuối) thì thay + đẩy lại (27/11/2026) · 3: không để bước bỏ nhiễu cuối cắt mất âm xì cuối từ (27/11/2026) · 2: 2: bỏ vùng thừa rẻ (sửa lỗi dồn nhiều câu vào một dòng, 13/11/2026)
 
 
 def cat_lai(D, b, by, ds, kf, wav):
@@ -737,6 +737,21 @@ def cat_lai(D, b, by, ds, kf, wav):
     if kq['meta'].get('pb', 1) >= PB_CAT or not os.path.exists(wav): return
     its = [by[i] for i in b['ids'] if i in by]
     loi = [it for it in its if it.get('loi') and not it.get('da_day') and it.get('quyet') != 'dat']
+    if kq['meta'].get('pb', 1) < 4:
+        # 27/11/2026: bản cắt cũ cắt cụt âm xì cuối từ (妒忌, 点子, 公司董事…) mà máy vẫn chấm đạt → cắt lại cả lượt;
+        # mục có bản mới dài hơn rõ, máy nghe không kém hơn thì thay file (kể cả đã đẩy: đánh dấu đẩy lại ở ô 6)
+        res, meta = cat_luot(wav, b['dong'], b['ids'], [by[i]['alt'] for i in b['ids']], D + 'tam/%s/' % b['ten'], [by[i]['ten'] for i in b['ids']])
+        thay = []
+        for it in its:
+            r = res.get(it['id']) or {}
+            if not r.get('tam') or it.get('dai') is None: continue
+            if r['dai'] > it['dai'] + 0.06 and r.get('r', 0) >= it.get('r', 0) - 0.02 and len(r['loi']) <= len(it.get('loi') or []):
+                da_nghe = it.get('quyet') == 'dat' and it.get('co')
+                _nhan_ket_qua(D, it, r); it['lan'] = 0
+                if da_nghe or it.get('quyet') == 'thu_lai': it['quyet'] = None   # file đổi: mục cô cần nghe thì nghe lại
+                thay.append(it['text'])
+        if thay: print('   ✂ cắt lại %s (không tốn lượt): %d mục hết cụt — %s' % (b['ten'], len(thay), '、'.join(thay[:8]) + ('…' if len(thay) > 8 else '')))
+        loi = []
     if loi:
         res, meta = cat_luot(wav, b['dong'], b['ids'], [by[i]['alt'] for i in b['ids']], D + 'tam/%s/' % b['ten'], [by[i]['ten'] for i in b['ids']])
         sua = 0
