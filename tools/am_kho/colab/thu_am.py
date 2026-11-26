@@ -382,6 +382,10 @@ def goi_tts(style, dong, wav, dot, luot, kieu=None, giong=None):
     finally: CFG['voice'] = v0
 
 
+class BiChan(RuntimeError):
+    """Google chặn lời gửi (400 prohibited_content: từ nhạy cảm như ma túy, cờ bạc, súng…). Lượt sẽ được chia đôi để tìm đúng mục bị chặn."""
+
+
 class HetHanMuc(RuntimeError):
     """Hết hạn mức số lần gọi Gemini trong ngày (Tier 1: 100 lần/ngày/model; đặt lại lúc 0 giờ giờ Mỹ Thái Bình Dương ≈ 15 giờ VN)."""
 
@@ -407,6 +411,8 @@ def _goi_tts(style, dong, wav, dot, luot, kieu=None):
             ra = r.headers.get('Retry-After')
             if ra and ra.isdigit(): time.sleep(min(int(ra), 300))
             continue
+        if r.status_code == 400 and re.search(r'prohibited_content|Input blocked|PROHIBITED', r.text):
+            raise BiChan(r.text[:300])
         if r.status_code != 200:
             raise RuntimeError('Gemini báo lỗi %d: %s' % (r.status_code, r.text[:800]))
         j = r.json()
@@ -742,11 +748,28 @@ def cat_lai(D, b, by, ds, kf, wav):
 
 def _chay_cac_luot(cap, tu, den, D, L, by, ds, dot, gioi_han_luot):
     giay = 0
-    for b in L[:gioi_han_luot]:
+    k = 0
+    while k < len(L) and (gioi_han_luot is None or k < gioi_han_luot):
+        b = L[k]; k += 1
         wav = D + 'wav/%s.wav' % b['ten']
         if not os.path.exists(wav):
             print('▶ %s: gọi Gemini (%d dòng)…' % (b['ten'], len(b['dong'])), end=' ', flush=True)
-            t1 = time.time(); g = goi_tts(b['style'], b['dong'], wav, dot, b['ten'], giong=b.get('giong')); giay += g
+            t1 = time.time()
+            try: g = goi_tts(b['style'], b['dong'], wav, dot, b['ten'], giong=b.get('giong'))
+            except BiChan:
+                # 26/11/2026 (HSK 7–9): Google chặn cả lượt vì một từ nhạy cảm → chia đôi lượt, tới khi còn đúng mục bị chặn thì bỏ mục đó
+                k -= 1; L.pop(k)
+                if len(b['ids']) == 1:
+                    it = by[b['ids'][0]]; it['trang'] = 'chan'
+                    print('⛔ Google chặn mục này (từ nhạy cảm) → bỏ qua, web giữ giọng máy: %s' % it['text'])
+                else:
+                    h = len(b['ids']) // 2
+                    for j, (ids, dong) in enumerate(((b['ids'][:h], b['dong'][:h]), (b['ids'][h:], b['dong'][h:]))):
+                        L.insert(k + j, dict(b, ten=b['ten'] + 'ab'[j], ids=ids, dong=dong,
+                                             style=tao_style([by[i] for i in ids], b['typ'], giong=b.get('giong', 'Sulafat'))))
+                    print('⛔ Google chặn lượt (có từ nhạy cảm) → chia đôi thành %sa, %sb' % (b['ten'], b['ten']))
+                _ghi(D + 'luot.json', L); _ghi(D + 'ds.json', ds); continue
+            giay += g
             print('%.0f s âm thanh, %.0f s chờ' % (g, time.time() - t1))
         kf = D + 'ketqua/%s.json' % b['ten']
         if os.path.exists(kf):
@@ -927,7 +950,11 @@ def thu_lai_tu_dong(cap, tu, den, ds=None):
         nh = _nhom(can)
         print('↻ Tự thu lại %d mục lỗi, gộp %d lần gọi (vòng %d)…' % (len(can), len(nh), vong + 1))
         for its in nh:
-            g += thu_lai_nhom(D, its, dot); _ghi(D + 'ds.json', ds)
+            try: g += thu_lai_nhom(D, its, dot)
+            except BiChan:   # nhóm thu lại có từ nhạy cảm: thôi thu lại các mục này (để cô nghe ở ô 4)
+                for it in its: it['lan'] = CFG['so_lan_thu_lai']
+                print('   ⛔ Google chặn nhóm thu lại (từ nhạy cảm): %s' % '、'.join(it['text'] for it in its))
+            _ghi(D + 'ds.json', ds)
             for it in its: print('   %s %s · %s' % ('✓' if not it['loi'] else '✗', it['text'], ', '.join(it['loi']) or 'đạt'))
     return g
 
@@ -957,6 +984,8 @@ def bao_cao(cap, tu, den, giay_moi=0, giay_chay=0):
     print('Mục: %d · cắt đạt: %d · máy tự kiểm đạt, không cần nghe: %d · bác cần nghe: %d (còn lỗi sau thu lại: %d)' % (
         len(ds), xong, bc['dat_tu_dong'], len(nghe), bc['con_loi']))
     print('Gemini: %d lần gọi · %.1f phút âm thanh · ước %.3f USD ≈ %s đ' % (len(nk), g / 60, usd, format(bc['vnd'], ',').replace(',', '.')))
+    chan = [it['text'] for it in ds if it.get('trang') == 'chan']
+    if chan: print('Google chặn %d mục (từ nhạy cảm, web giữ giọng máy): %s' % (len(chan), '、'.join(chan)))
     if giay_chay: print('Thời gian chạy lần này: %.1f phút' % (giay_chay / 60))
 
 
