@@ -342,12 +342,24 @@ GIONG_DIR = {'Sulafat': None, 'Achird': 'nam1', 'Iapetus': 'nam2', 'Charon': 'na
 GIONG_TA = {'Sulafat': 'female', 'Achird': 'male', 'Iapetus': 'male', 'Charon': 'male', 'Puck': 'male', 'Leda': 'female', 'Gacrux': 'female', 'Despina': 'female'}
 
 
+# Nhiên báo 27/11/2026 (HSK 7–9): ghi chú cách đọc vẫn không sửa được → gửi chữ cùng âm (chỉ ở khâu đọc, web giữ chữ gốc)
+DONG_AM_GUI = [('卑鄙', '卑比'),            # bēibǐ (Gemini đọc bēibī)
+               ('本分', '本份'),            # běnfèn (Gemini đọc běnfēn)
+               ('剥橘子', '包橘子'), ('剥花生', '包花生'), ('剥虾', '包虾'), ('剥得', '包得')]   # 剥 bāo (Gemini đọc bō); 剥夺/剥削 giữ bō
+# Mục HSK 7–9 phải thu lại (thu ở ô 5 cùng các mục cô chọn): chữ cuối bị cụt mà cắt lại không cứu được, và các mục có chữ trên
+EP_79 = {'非得去', '遏制', '妒忌', '大款', '蠢事', '点子', '赏赐', '感到胆怯', '沉着冷静', '毫不胆怯', '出点子', '好点子',
+         '财政赤字', '公司董事', '担任董事', '房间布局', '敦厚老实', '模样标致'}
+EP_79_CHUA = ('卑鄙', '本分', '剥橘子', '剥花生', '剥虾')
+
+
 def doc_tts(t):
     """Chữ GỬI cho Gemini (chỉ ở khâu đọc; dữ liệu/hiển thị trên web giữ nguyên).
     - Dãy số điện thoại / số khẩn cấp: 一 đọc yāo -> viết 幺 (Gemini hay đọc 一 thành yī dù Style dặn).
     - 广 đứng một mình (bộ thủ) đọc yǎn -> gửi 眼 (cùng âm yǎn)."""
     t = str(t)
     if han(t) == '广' and len(t.strip()) <= 2: return '眼'
+    if han(t) == '剥' and len(t.strip()) <= 2: return '包'   # 79-0093 剥 bāo
+    for a, b in DONG_AM_GUI: t = t.replace(a, b)
     def doi(m):
         g = m.group(0)
         return g.replace('一', '幺') if ('〇' in g or '零' in g or '一一' in g) else g
@@ -1096,6 +1108,12 @@ def thu_lai_da_chon(cap, tu, den):
     for it in ds:
         if it.get('file') and not it.get('tts2') and it.get('text') not in DA_SUA and doc_tts(it['text']) != it['text'] and it.get('quyet') != 'thu_lai':
             it['quyet'] = 'thu_lai'; it['ghi_chu'] = it.get('ghi_chu') or ''
+    if str(cap) == '7-9':
+        for it in ds:
+            if it.get('ep79') or not it.get('file'): continue
+            if it['k'].rstrip('。') in EP_79 or (it['k'] in EP_79) or any(c in it['k'] for c in EP_79_CHUA) or it['k'] == '剥':
+                it['ep79'] = 1; it['quyet'] = 'thu_lai'; it['ghi_chu'] = ''   # ghi chú cũ không có tác dụng; chữ cùng âm đã đổi ở khâu gửi
+                it['co'] = (it.get('co') or []) + ['cô báo sai / cụt: nghe lại']
     can = [it for it in ds if it.get('quyet') == 'thu_lai']
     nh = _nhom(can, 8)
     print('Thu lại %d mục bác chọn, gộp %d lần gọi…' % (len(can), len(nh)))
