@@ -581,7 +581,12 @@ def cat_luot(wav, dong, ids, alt, ra_dir, ten_tep):
         a = max(0, vung[j][0] - 0.12); b = min(dur, vung[j + k - 1][1] + 0.15)
         if i + 1 in kq: b = min(b, vung[kq[i + 1][0]][0] - 0.02)
         if i - 1 in kq: a = max(a, vung[kq[i - 1][0] + kq[i - 1][1] - 1][1] + 0.02)
-        b = _bo_nhieu_cuoi(x, a, b)   # bỏ vệt nhiễu rè Gemini thêm cuối câu
+        b0, b = b, _bo_nhieu_cuoi(x, a, b)   # bỏ vệt nhiễu rè Gemini thêm cuối câu
+        nc = max(1, len(han(re.sub(r'(?<=.)儿', '', l))))
+        if b < b0 - 0.01:
+            # 27/11/2026: âm xì của q/j/x/s/c… (不景气 qì) giống vệt nhiễu → bị cắt mất cuối từ. Cắt xong mà quá ngắn
+            # hoặc máy nghe đoạn đã cắt kém hơn đoạn đủ thì giữ nguyên đoạn đủ.
+            if (b - a) / nc < 0.2 or r_dong(i, _nhan(seg16(a, b))) < r - 0.05: b = b0
         d = b - a
         tmp = ra_dir + '_c.wav'
         dich = ra_dir + ten_tep[i] + '.mp3'
@@ -590,7 +595,6 @@ def cat_luot(wav, dong, ids, alt, ra_dir, ten_tep):
                         '-ar', str(SR), tmp], check=True)
         subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', tmp, '-af', 'atrim=end=%.3f' % (d + 0.05), '-ac', '1', '-ar', str(SR), '-b:a', '48k', dich], check=True)
         loi = []
-        nc = max(1, len(han(re.sub(r'(?<=.)儿', '', l))))
         if nc == 1:   # chữ lẻ: lặp đoạn 3 lần cho máy nghe (quet2.py); đạt một trong hai cách kiểm là được
             seg = seg16(a, b); g = np.zeros(int(0.17 * 16000), np.float32)
             t3 = _nhan(np.concatenate([seg, g, seg, g, seg]))
@@ -724,7 +728,7 @@ def chay_dot(cap, tu, den, gioi_han_luot=None):
     bao_cao(cap, tu, den, giay_moi=giay, giay_chay=time.time() - t0)
 
 
-PB_CAT = 2   # 2: bỏ vùng thừa rẻ (sửa lỗi dồn nhiều câu vào một dòng, 13/11/2026)
+PB_CAT = 3   # 3: không để bước bỏ nhiễu cuối cắt mất âm xì cuối từ (27/11/2026) · 2: 2: bỏ vùng thừa rẻ (sửa lỗi dồn nhiều câu vào một dòng, 13/11/2026)
 
 
 def cat_lai(D, b, by, ds, kf, wav):
